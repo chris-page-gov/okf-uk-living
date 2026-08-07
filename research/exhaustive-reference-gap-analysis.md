@@ -60,14 +60,15 @@ which are original project descriptions rather than copied source text.
 
 ## Live URL observation
 
-On 2026-08-07 a read-only request followed redirects for all 168 unique URLs
-across the inventory, three slice registers and rights evidence. Of those, 164
+On 2026-08-07 a read-only request followed redirects for all 174 unique URLs
+across the inventory, three slice registers and rights evidence. Of those, 170
 returned HTTP 2xx. Cardiff Council's two registered service routes and its
 rights-evidence page returned HTTP 403 to the automated client, as did the NHS
 inform service directory; their browser-facing identities are retained and
 their access limitations are not treated as evidence that the sources do not
-exist. No response content was retained, and deterministic local validation
-remains offline.
+exist. The four new ONS/NHS identifier pages and both new rights-evidence pages
+returned HTTP 200. No response content was retained, and deterministic local
+validation remains offline.
 
 ## Rights boundary
 
