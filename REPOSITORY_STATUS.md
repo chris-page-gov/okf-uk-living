@@ -6,9 +6,10 @@
 - Domain profile: required next gate; not yet approved
 - Acquisition: disabled
 - Deterministic local generation: enabled for authored Markdown
-- CI: scaffolded but disabled
-- Remote creation, push and publication: not performed
+- Evaluation: local `uv` environment only
+- CI: scaffolded but disabled; pull requests do not run remote checks
+- Remote: private GitHub repository created after explicit owner authorization
+- GitHub Pages: disabled; updates require a separate explicit owner request
 - Public bundle URL: none
-- Next gate: review the scaffold and research brief, record the initialization
-  commit, then complete the domain profile and three vertical-slice fixtures on
-  a feature branch
+- Next gate: approve the domain profile, then complete the three versioned
+  vertical-slice fixture contracts on a focused feature branch

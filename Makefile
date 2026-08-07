@@ -1,11 +1,17 @@
-.PHONY: build check test
+.PHONY: build check test validate
 
 build:
-	python3 scripts/build_okf_bundle.py
+	uv run --locked python scripts/build_okf_bundle.py
 
 check:
-	python3 scripts/build_okf_bundle.py --check
-	python3 scripts/check_okf.py
+	uv run --locked python scripts/build_okf_bundle.py --check
+	uv run --locked python scripts/check_okf.py
 
 test:
-	python3 -m unittest discover -s tests
+	uv run --locked python -m unittest discover -s tests
+
+validate:
+	uv run --locked python scripts/build_okf_bundle.py
+	uv run --locked python scripts/build_okf_bundle.py --check
+	uv run --locked python scripts/check_okf.py
+	uv run --locked python -m unittest discover -s tests

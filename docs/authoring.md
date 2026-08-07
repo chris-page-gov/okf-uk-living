@@ -51,13 +51,14 @@ identity or legal relationships.
 
 ## Build and check
 
-Install `requirements-okf.txt`, then run:
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The
+locked project environment is created automatically when these commands run:
 
 ```sh
-python3 scripts/build_okf_bundle.py
-python3 scripts/build_okf_bundle.py --check
-python3 scripts/check_okf.py
-python3 -m unittest discover -s tests
+uv run --locked python scripts/build_okf_bundle.py
+uv run --locked python scripts/build_okf_bundle.py --check
+uv run --locked python scripts/check_okf.py
+uv run --locked python -m unittest discover -s tests
 ```
 
 `okf-bundle.json` is reproducible output. Never patch it directly.
