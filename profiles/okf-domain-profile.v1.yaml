@@ -1,0 +1,333 @@
+profile_version: okf-domain-profile.v1
+status: approved
+observed_at: "2026-08-07"
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
+  authorized_actions:
+    - bounded_source_family_registration
+    - implementation_of_three_vertical_slices
+  blocked_actions:
+    - broad_source_acquisition
+    - production_vocabulary_assertions
+    - corpus_expansion_beyond_three_slices
+    - public_bundle_publication
+
+collection:
+  id: okf-uk-living
+  title: A Life in the UK
+  purpose: >-
+    Explain public services, rights, responsibilities and life events from a
+    citizen perspective while teaching how data becomes information,
+    knowledge and an ontology.
+  in_scope:
+    - citizen needs, public services, service episodes and outcomes
+    - jurisdiction, authority, evidence, time, redress and provenance
+    - official, normalized, inferred and editorial-example assertion status
+    - synthetic learning journeys across UK, national and local boundaries
+  out_of_scope:
+    - personalized eligibility, medical or legal decisions
+    - real personal dossiers or production case management
+    - unsupported equivalence across jurisdictions or source identities
+    - broad life-course acquisition before the three slices are reviewed
+  denominators:
+    - id: initial-vertical-slices
+      target: 3
+      coverage: missed rubbish collection; learning to drive and enforcement; death and bereavement
+    - id: uk-nations
+      target: 4
+      coverage: England, Scotland, Wales and Northern Ireland
+    - id: future-service-families
+      target_range: 250-400
+      status: deferred_until_slice_review
+    - id: future-competency-questions
+      target_minimum: 100
+      status: deferred_until_slice_review
+
+users:
+  - id: citizen-learner
+    need: Understand an everyday route and the concepts and relationships behind it.
+  - id: service-navigator
+    need: Find the responsible route, evidence, deadline and redress boundary.
+  - id: ontology-author
+    need: Add sourced concepts without erasing identity, jurisdiction or uncertainty.
+  - id: reviewer
+    need: Audit coverage, provenance, rights, limitations and generated assertions.
+
+tasks:
+  - id: explain-route
+    description: Explain an ordinary or exception journey in plain language.
+  - id: compare-jurisdictions
+    description: Identify what is shared, different or unknown across UK jurisdictions.
+  - id: trace-authority
+    description: Trace a claim to its source identity, observation time and derivation.
+  - id: find-redress
+    description: Locate review, appeal, complaint or escalation routes without deciding a case.
+  - id: inspect-graph
+    description: Traverse services, actors, evidence, rules, outcomes and dependencies.
+
+authority:
+  boundary: >-
+    The bundle is educational and navigational. It describes sourced routes and
+    hands users to current authoritative services; it never becomes the
+    authority for an individual decision.
+  source_classes:
+    - id: authoritative-primary
+      examples: legislation, responsible public body, official service guidance
+    - id: authoritative-devolved
+      examples: national government, national health service and justice bodies
+    - id: authoritative-local
+      examples: the responsible council or statutory local provider
+    - id: delivery-dependent-private
+      examples: compulsory insurer, bank, funeral director or contracted operator
+    - id: mapping-reference
+      examples: standards, vocabularies and coverage catalogues
+  identity_rule: Similar labels never establish that two services, actors, rules or jurisdictions are identical.
+
+terminology:
+  - id: life-event
+    label: Life event
+    definition: A change or occurrence that can create one or more citizen needs.
+  - id: situation
+    label: Situation
+    definition: A circumstance that can affect routes at multiple life stages.
+  - id: user-need
+    label: User need
+    definition: The outcome a person is trying to achieve or problem they need to resolve.
+  - id: public-service
+    label: Public service
+    definition: A governed capability offered to achieve a public outcome.
+  - id: service-episode
+    label: Service episode
+    definition: A bounded interaction such as applying, reporting, paying or appealing.
+  - id: evidence
+    label: Evidence
+    definition: A document, fact or artefact requested or produced during an episode.
+  - id: redress
+    label: Redress
+    definition: Review, appeal, complaint, tribunal or ombudsman route.
+  - id: provenance
+    label: Provenance
+    definition: Source identity, observation time, derivation and limitations for an assertion.
+
+semantic_model:
+  central_path:
+    - life-event-or-situation
+    - user-need
+    - public-service
+    - service-episode
+    - outcome
+  supporting_concepts:
+    - person-role
+    - provider
+    - jurisdiction
+    - rule
+    - requirement
+    - evidence
+    - channel
+    - cost-or-transfer
+    - decision-or-artefact
+    - redress
+    - time-constraint
+    - source
+  relationship_rule: Every material edge must retain assertion status and supporting evidence or be explicitly marked unsupported.
+
+standards:
+  - id: okf
+    version: "0.2"
+    role: core authored Markdown and bundle conventions
+    applicability: selected
+  - id: cpsv-ap
+    version: "3.2.0"
+    role: mapping reference for public service, event, evidence, rule, channel, cost and output
+    applicability: planned_mapping_not_claimed_conformance
+  - id: open-referral-uk
+    version: observed-2026-08-07
+    role: mapping reference for local service, organisation, location, schedule, cost and required document detail
+    applicability: planned_mapping_not_claimed_conformance
+  - id: skos
+    version: w3c-recommendation
+    role: controlled concepts and broader or narrower navigation
+    applicability: planned
+  - id: owl-rdfs
+    version: owl-2
+    role: governed class and relationship semantics
+    applicability: planned
+  - id: prov-o
+    version: w3c-recommendation
+    role: derivation and provenance
+    applicability: planned
+  - id: shacl
+    version: w3c-recommendation
+    role: publication shapes and validation reports
+    applicability: planned
+
+rights:
+  repository_code: unresolved
+  repository_documentation: unresolved
+  acquired_sources: require_source_family_decision
+  linked_references: links_and_summaries_only
+  redistribution_allowed: false
+  publication_allowed: false
+  rule: Absence of a recorded rights decision blocks redistribution and publication.
+
+privacy:
+  real_personal_data_allowed: false
+  synthetic_personas_required: true
+  production_case_management_allowed: false
+  sensitive_inference_allowed: false
+
+assertion_policy:
+  statuses:
+    official: Directly supported by an identified authoritative source within its stated scope.
+    normalized: A documented local representation or mapping derived from identified sources.
+    inferred: A generated relationship with explicit derivation that is never presented as official.
+    editorial-example: Synthetic or explanatory material clearly separated from sourced claims.
+  unknown_rule: Unknown, unavailable and not yet researched are never encoded as false.
+
+jurisdictions:
+  required:
+    - uk-wide
+    - england
+    - scotland
+    - wales
+    - northern-ireland
+    - local
+  rule: GOV.UK routing does not establish uniform UK applicability; national and local variants require their own evidence.
+
+freshness:
+  observed_at_required: true
+  source_identity_required: true
+  review_policy_required_per_source_family: true
+  stale_assertion_policy: retain_observation_and_label_limitation
+  silent_refresh_allowed: false
+
+validation:
+  required_commands:
+    - uv run --locked python scripts/build_okf_bundle.py
+    - uv run --locked python scripts/build_okf_bundle.py --check
+    - uv run --locked python scripts/check_okf.py
+    - uv run --locked python scripts/check_contracts.py
+    - uv run --locked python -m unittest discover -s tests
+  fixture_contract: vertical-slice-fixture.v1
+  release_validation_required: true
+  local_only_until_publication_request: true
+
+constraints:
+  - authored Markdown and source files are the source of truth
+  - generated outputs are rebuilt and never patched by hand
+  - acquisition stays disabled until profile and rights review
+  - no personalized eligibility, legal or medical decisions
+  - no real personal data
+  - no unsupported jurisdictional or identity equivalence
+  - no public bundle link before exact deployed browser verification
+
+gaps:
+  - id: licence-decisions
+    status: open
+    blocks: redistribution and publication
+  - id: explorer-consumer-inventory
+    status: partial
+    blocks: final compatibility lock
+  - id: source-family-register
+    status: empty
+    blocks: official production assertions
+  - id: ontology-predicate-registry
+    status: planned
+    blocks: governed semantic edge publication
+  - id: shacl-shapes
+    status: planned
+    blocks: claimed SHACL conformance
+
+decisions:
+  - id: three-slices-first
+    assertion_status: editorial-example
+    decision: Implement and review three vertical slices before broad corpus expansion.
+  - id: local-assurance-default
+    assertion_status: editorial-example
+    decision: Run evaluation locally until the owner explicitly requests publication.
+  - id: pages-manual-only
+    assertion_status: editorial-example
+    decision: GitHub Pages updates require an explicit owner request and frozen candidate.
+  - id: linked-reference-first
+    assertion_status: editorial-example
+    decision: Link and summarize references until source-family rights permit acquisition or redistribution.
+
+evidence:
+  - id: research-overview
+    resource: research/overview.md
+    observed_at: "2026-08-07"
+    role: project scope and initial synthesis
+  - id: govuk-services
+    resource: https://www.gov.uk/browse
+    observed_at: "2026-08-07"
+    role: coverage reference, not world ontology
+  - id: cpsv-ap-320
+    resource: https://semiceu.github.io/CPSV-AP/releases/3.2.0/
+    observed_at: "2026-08-07"
+    role: semantic mapping reference
+  - id: open-referral-uk
+    resource: https://www.gov.uk/government/publications/open-standards-for-government/record-and-share-information-about-public-services-in-local-authorities
+    observed_at: "2026-08-07"
+    role: local-service mapping reference
+
+consumer_lock:
+  consumer: OKF Explorer small bundle
+  schema: okf-explorer-bundle.v0
+  okf_version: "0.2"
+  corpus_id: okf-uk-living
+  root: index.md
+  bundle: okf-bundle.json
+  invariants:
+    - path-based node identifiers remain stable
+    - ordinary browser-compatible Markdown links remain resolvable
+    - compatibility relationships retain source and target identity
+    - generated output remains deterministic for the same authored source
+  status: provisional_pending_actual_consumer_inventory
+
+dependency_graph:
+  nodes:
+    - domain-profile
+    - rights-decisions
+    - consumer-lock
+    - fixture-contracts
+    - source-register
+    - vertical-slices
+    - ontology-registry
+    - evaluation
+    - frozen-candidate
+    - github-pages
+    - browser-verification
+  edges:
+    - from: domain-profile
+      to: fixture-contracts
+      kind: governs
+    - from: rights-decisions
+      to: source-register
+      kind: authorizes
+    - from: consumer-lock
+      to: vertical-slices
+      kind: constrains
+    - from: fixture-contracts
+      to: vertical-slices
+      kind: accepts
+    - from: source-register
+      to: vertical-slices
+      kind: evidences
+    - from: vertical-slices
+      to: ontology-registry
+      kind: exercises
+    - from: vertical-slices
+      to: evaluation
+      kind: supplies
+    - from: evaluation
+      to: frozen-candidate
+      kind: gates
+    - from: frozen-candidate
+      to: github-pages
+      kind: promotes_without_rebuild
+    - from: github-pages
+      to: browser-verification
+      kind: requires

@@ -11,11 +11,19 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Pull-request publication-status template and explicit manual GitHub Pages
   gate.
 - Locked `uv` project environment and local-only validation commands.
+- Draft `okf-domain-profile.v1` machine contract and human review handoff.
+- Three synthetic vertical-slice fixture contracts covering ordinary and
+  exception journeys for rubbish collection, driving enforcement and death.
+- Executable profile and fixture-contract validation with unit tests.
 
 ### Changed
 
+- Recorded owner approval of `okf-domain-profile.v1` and the three fixture
+  contracts, authorizing bounded source registration and slice implementation.
 - Connected the explicitly authorized private GitHub repository while keeping
   remote CI and GitHub Pages disabled.
+- Recorded the private-plan branch-protection limitation while retaining the
+  sole-developer PR-only policy for `main`.
 
 ## [0.0.0] - 2026-08-07
 

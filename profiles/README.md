@@ -1,10 +1,12 @@
 # Profiles
 
-The first implementation phase will create and validate an
-`okf-domain-profile.v1` handoff containing the collection scope, authorities,
-users, tasks, terminology, semantic model, standards, rights, privacy,
-validation, constraints, gaps, decisions, evidence, consumer lock and
-dependency graph.
+The first implementation phase has produced an approved
+[`okf-domain-profile.v1` review handoff](okf-domain-profile.v1.md) and its
+[machine-readable contract](okf-domain-profile.v1.yaml). They contain the
+collection scope, authorities, users, tasks, terminology, semantic model,
+standards, rights, privacy, validation, constraints, gaps, decisions, evidence,
+consumer lock and dependency graph.
 
-Until that profile is reviewed and approved, this repository remains a
-research and implementation scaffold.
+The owner approved the profile and three fixture contracts on 2026-08-07.
+Bounded source-family registration and slice implementation may proceed; broad
+acquisition and publication stay disabled.

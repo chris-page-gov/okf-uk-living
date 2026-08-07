@@ -13,6 +13,11 @@ GitHub Pages deployment runs unless the owner explicitly requests publication.
 5. Review and merge without updating GitHub Pages unless the owner has made a
    separate, explicit publication request.
 
+Changes to `main` remain pull-request-only by project policy. Server-side
+branch protection is deferred while the private repository plan does not
+provide it; the repository must not be made public merely to obtain that
+feature because public visibility is a separate owner decision.
+
 ## Lockstep documentation
 
 Documentation changes ship in the same pull request as the change they
@@ -32,14 +37,16 @@ to a later pull request.
 
 ## Near-term delivery units
 
-1. Approve `okf-domain-profile.v1`, including consumer compatibility,
-   assertion status, jurisdiction, freshness, rights and validation policy.
-2. Define the three versioned vertical-slice fixture contracts.
-3. Implement and validate the missed-rubbish-collection slice.
-4. Implement and validate the learning-to-drive and enforcement slice.
-5. Implement and validate the death, Tell Us Once and estate-administration
+The owner approved `okf-domain-profile.v1` and the three fixture contracts on
+2026-08-07. The active delivery sequence is now:
+
+1. Register the bounded source families for missed rubbish collection.
+2. Implement and validate the missed-rubbish-collection slice.
+3. Implement and validate the learning-to-drive and enforcement slice.
+4. Implement and validate the death, Tell Us Once and estate-administration
    slice.
-6. Review the three slices before broader source acquisition or corpus growth.
+5. Review the three implemented slices before broader source acquisition or
+   corpus growth.
 
 ## GitHub Pages publication
 

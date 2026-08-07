@@ -1,0 +1,198 @@
+fixture_version: vertical-slice-fixture.v1
+id: death-bereavement-estate
+title: Death, bereavement and estate administration
+status: approved
+assertion_status: editorial-example
+profile: okf-domain-profile.v1
+synthetic: true
+purpose: Test dependent services, data sharing, national exceptions, authority to administer an estate and private notifications.
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
+
+scope:
+  included:
+    - medical certification or coroner boundary and death registration
+    - Tell Us Once availability and Northern Ireland exception
+    - funeral, benefits and public-body notification dependencies
+    - probate, confirmation or jurisdictional equivalent and estate administration
+    - required private-sector notifications and debts
+  excluded:
+    - legal advice about a real estate, will, tax liability or beneficiary
+    - assuming one estate process or Tell Us Once route applies across the UK
+
+dimensions:
+  - ordinary_path
+  - exception_path
+  - evidence
+  - rule
+  - time
+  - jurisdiction
+  - authority
+  - private_sector_dependencies
+  - redress
+  - provenance
+
+jurisdictions:
+  - id: england
+    expectation: Registration, notification and estate routes are independently evidenced.
+  - id: scotland
+    expectation: Registration and confirmation terminology and authority remain distinct.
+  - id: wales
+    expectation: Shared and nation-specific routes are identified with evidence.
+  - id: northern-ireland
+    expectation: Absence of Tell Us Once and estate-administration equivalents are explicitly sourced.
+
+actors:
+  - id: synthetic-representative
+    role: informant_or_person-handling-estate
+    authority_assertion: editorial-example
+  - id: certifying-or-coroner-body
+    role: medical-certification_or_investigation
+    authority_assertion: pending_source
+  - id: registration-authority
+    role: death-registration
+    authority_assertion: pending_source
+  - id: notification-service
+    role: public-body-notification_or_manual-boundary
+    authority_assertion: pending_source
+  - id: court-or-estate-authority
+    role: grant_confirmation_or_equivalent
+    authority_assertion: pending_source
+  - id: tax-authority
+    role: tax_information_or_transfer
+    authority_assertion: pending_source
+
+journeys:
+  ordinary:
+    entry_state: A synthetic representative needs to complete the first public steps after a death and administer the estate.
+    outcome: Required public outputs, authority boundaries and remaining notifications are traceable.
+    steps:
+      - id: establish-certification-route
+        interaction: distinguish expected medical certification and coroner or equivalent involvement
+        provider_role: certifying-or-coroner-body
+        evidence: [synthetic-death-context, certification-or-referral-output]
+        rule: certification, referral and investigation rules remain pending source acquisition
+        time: statutory and operational timing retained only when sourced
+        outcome: registration-input-or-investigation-boundary
+        redress: correction or official-help route
+        assertion_status: editorial-example
+      - id: register-death
+        interaction: use the jurisdiction-appropriate registration service
+        provider_role: registration-authority
+        evidence: [certification-or-referral-output, synthetic-informant-context]
+        rule: jurisdictional registration and informant rules remain pending source acquisition
+        time: registration timing and exceptions independently sourced
+        outcome: registration-output-and-certificates
+        redress: correction, delayed registration or registrar guidance
+        assertion_status: editorial-example
+      - id: notify-public-bodies
+        interaction: use Tell Us Once where officially available or record the jurisdictional alternative
+        provider_role: notification-service
+        evidence: [registration-output, synthetic-reference-details]
+        rule: availability, access and included-body rules remain pending source acquisition
+        time: availability, access and action timing retained
+        outcome: notified-bodies-and-uncovered-bodies
+        redress: service support and manual-notification fallback
+        assertion_status: editorial-example
+      - id: obtain-estate-authority
+        interaction: identify probate, confirmation or other jurisdictional authority and intestacy branch
+        provider_role: court-or-estate-authority
+        evidence: [death-certificate, synthetic-will-status, estate-context]
+        rule: probate, confirmation, intestacy and authority rules remain pending source acquisition
+        time: application, tax and validity dependencies sourced by jurisdiction
+        outcome: grant-confirmation-equivalent-or-limitation
+        redress: correction, caveat or court route only where officially supported
+        assertion_status: editorial-example
+      - id: administer-estate
+        interaction: trace assets, debts, tax, distributions and closure without deciding a real estate
+        provider_role: synthetic-representative-and-relevant-bodies
+        evidence: [estate-authority-output, asset-and-debt-inventory]
+        rule: asset, debt, tax and distribution rules remain pending source acquisition
+        time: sourced deadlines and retention periods remain attached to their authority
+        outcome: synthetic-administration-checklist
+        redress: professional or official guidance handoff
+        assertion_status: editorial-example
+  exception:
+    entry_state: Tell Us Once is unavailable, not offered or does not cover a required body, including the Northern Ireland boundary.
+    outcome: Manual public and private notifications are explicit and no unsupported data-sharing claim is made.
+    steps:
+      - id: establish-notification-boundary
+        interaction: record availability, jurisdiction and bodies included or excluded
+        provider_role: registration-authority-or-notification-service
+        evidence: [jurisdiction, registration-output, current-service-source]
+        rule: notification-service coverage rules remain pending source acquisition
+        time: observation time is mandatory because coverage can change
+        outcome: covered-and-uncovered-body-list
+        redress: official support route or manual fallback
+        assertion_status: editorial-example
+      - id: notify-bodies-individually
+        interaction: follow separately evidenced routes for each required public or private body
+        provider_role: synthetic-representative
+        evidence: [death-certificate-or-accepted-alternative, account-or-reference-context]
+        rule: each body's accepted evidence and notification rule remains independently sourced
+        time: each body retains its own deadline and observation time
+        outcome: notification-ledger-with-unresolved-items
+        redress: body-specific correction, complaint or escalation
+        assertion_status: editorial-example
+      - id: resolve-estate-exception
+        interaction: distinguish no will, disputed authority, insolvent estate or cross-jurisdiction property without deciding the case
+        provider_role: court-or-estate-authority
+        evidence: [synthetic-exception-context, official-jurisdiction-guidance]
+        rule: disputed, intestate, insolvent and cross-jurisdiction rules remain pending source acquisition
+        time: case-specific deadlines require official or professional handoff
+        outcome: appropriate-route-or-explicit-legal-boundary
+        redress: court, professional advice or official guidance route
+        assertion_status: editorial-example
+
+private_sector_dependencies:
+  - id: funeral-director-or-cremation-provider
+    required: conditional
+    boundary: Private delivery and public registration or burial and cremation authority remain distinct.
+  - id: bank-insurer-pension-or-utility
+    required: conditional_notification
+    boundary: Tell Us Once coverage is never assumed for a private organisation.
+  - id: solicitor-or-probate-practitioner
+    required: optional_or_case_dependent
+    boundary: The bundle may identify professional help but does not recommend a provider or give legal advice.
+
+redress:
+  - route: registration correction or registrar guidance
+    authority_status: pending_source_by_jurisdiction
+  - route: notification-service support or body-specific complaint
+    authority_status: pending_source
+  - route: court process or professional legal handoff
+    authority_status: pending_source_and_case_specific
+
+source_requirements:
+  acquisition_status: authorized_not_started
+  required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
+  candidate_families: [national death-registration guidance, coroner or equivalent guidance, Tell Us Once, Northern Ireland notification guidance, probate or confirmation authorities, tax authority, selected private notification guidance]
+
+known_unknowns:
+  - exact registration and certification differences selected for each nation
+  - current Tell Us Once availability, included bodies and access route by place
+  - estate thresholds, forms, tax dependencies, deadlines and redress routes
+  - which private organisations accept which evidence and through which channel
+
+competency_questions:
+  - id: death-cq-1
+    question: Which output from certification or investigation enables death registration in this jurisdiction?
+    expected: ordered output, authority, jurisdiction, source and timing
+  - id: death-cq-2
+    question: Which bodies can be notified through Tell Us Once and which require separate contact?
+    expected: observed service coverage, exclusions, jurisdiction and manual routes
+  - id: death-cq-3
+    question: What authorizes the synthetic representative to administer the estate?
+    expected: will or intestacy context, jurisdictional grant or equivalent and limitations
+  - id: death-cq-4
+    question: Where are private providers necessary but not public authorities?
+    expected: dependency role, evidence boundary and uncovered notifications
+
+acceptance:
+  - service outputs become traceable evidence for later episodes
+  - Tell Us Once availability and exclusions are observed facts, not universal assumptions
+  - Northern Ireland and Scottish estate terminology and authority remain distinct
+  - no output gives personalized legal, tax or beneficiary advice

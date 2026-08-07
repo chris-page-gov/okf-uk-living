@@ -41,6 +41,7 @@ If OKF Markdown changes, run:
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
+uv run --locked python scripts/check_contracts.py
 uv run --locked python -m unittest discover -s tests
 ```
 

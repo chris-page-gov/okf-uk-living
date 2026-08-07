@@ -1,0 +1,188 @@
+fixture_version: vertical-slice-fixture.v1
+id: learning-to-drive-speeding
+title: Learning to drive through a speeding exception
+status: approved
+assertion_status: editorial-example
+profile: okf-domain-profile.v1
+synthetic: true
+purpose: Test a composed licensing journey, compulsory private dependencies, enforcement, deadlines and redress.
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
+
+scope:
+  included:
+    - provisional entitlement, learning, tests and licensing outcome
+    - vehicle, supervision and insurance dependencies where supported
+    - speeding notice, driver identification, disposal or court branch
+    - separate Great Britain and Northern Ireland authority boundaries
+  excluded:
+    - personalized fitness-to-drive or offence advice
+    - predicting liability, penalty, course eligibility or court outcome
+    - parking enforcement, which remains a future alternative fixture
+
+dimensions:
+  - ordinary_path
+  - exception_path
+  - evidence
+  - rule
+  - time
+  - jurisdiction
+  - authority
+  - private_sector_dependencies
+  - redress
+  - provenance
+
+jurisdictions:
+  - id: england
+    expectation: Great Britain licensing and England enforcement sources are distinguished.
+  - id: scotland
+    expectation: Great Britain licensing and Scottish justice or enforcement sources are distinguished.
+  - id: wales
+    expectation: Great Britain licensing and Welsh service context are distinguished.
+  - id: northern-ireland
+    expectation: Licensing, police and court routes are independently sourced and not inferred from Great Britain.
+
+actors:
+  - id: synthetic-learner-driver
+    role: applicant_learner_or_driver
+    authority_assertion: editorial-example
+  - id: licensing-authority-gb
+    role: great-britain-driver-licensing-authority
+    authority_assertion: pending_source
+  - id: licensing-authority-ni
+    role: northern-ireland-driver-licensing-authority
+    authority_assertion: pending_source
+  - id: test-provider
+    role: theory_and_practical_test_provider
+    authority_assertion: pending_source
+  - id: police-or-enforcement-body
+    role: speeding-enforcement-authority
+    authority_assertion: pending_source
+  - id: court
+    role: adjudication-and-redress
+    authority_assertion: pending_source
+
+journeys:
+  ordinary:
+    entry_state: A synthetic learner wants lawful permission and competence to drive a selected vehicle category.
+    outcome: The learner receives the evidenced licensing outcome or an explicit unresolved boundary.
+    steps:
+      - id: obtain-provisional-entitlement
+        interaction: use the jurisdiction-appropriate licensing route
+        provider_role: licensing-authority
+        evidence: [synthetic-identity-context, category-requirements-pending-source]
+        rule: jurisdictional entitlement and application rules remain pending source acquisition
+        time: application and validity timing retained only when sourced
+        outcome: provisional-entitlement-or-reasoned-refusal
+        redress: correction, review or fresh application route where evidenced
+        assertion_status: editorial-example
+      - id: learn-and-practise
+        interaction: meet sourced supervision, vehicle and insurance conditions
+        provider_role: learner_and_optional-instructor
+        evidence: [provisional-entitlement, supervision-evidence, insurance-evidence]
+        rule: supervision, vehicle and insurance conditions remain pending source acquisition
+        time: entitlement and insurance validity checked at the episode time
+        outcome: practice-episode-completed
+        redress: explain unmet condition without deciding legality
+        assertion_status: editorial-example
+      - id: complete-tests
+        interaction: book and take jurisdiction-appropriate theory and practical stages
+        provider_role: test-provider
+        evidence: [provisional-entitlement, booking-reference, test-output]
+        rule: test eligibility, ordering and conduct rules remain pending source acquisition
+        time: booking, validity and retake rules must be sourced
+        outcome: pass-fail-or-reschedule-output
+        redress: complaint or appeal boundary where supported
+        assertion_status: editorial-example
+      - id: receive-licensing-outcome
+        interaction: record the licence or next official step after the test output
+        provider_role: licensing-authority
+        evidence: [test-output, provisional-entitlement]
+        rule: licence issue and entitlement rules remain pending source acquisition
+        time: issue and validity timing retained
+        outcome: full-entitlement-or-next-step
+        redress: licensing correction or review route
+        assertion_status: editorial-example
+  exception:
+    entry_state: The synthetic driver or registered keeper receives a speeding-related notice.
+    outcome: The correct jurisdictional response or court route is explained without deciding liability.
+    steps:
+      - id: identify-notice-and-authority
+        interaction: distinguish notice type, issuer, recipient role and jurisdiction
+        provider_role: police-or-enforcement-body
+        evidence: [synthetic-notice, issuer-identity, alleged-event-context]
+        rule: notice authority, recipient duties and alleged offence basis remain pending source acquisition
+        time: every response deadline must come from the notice and current official source
+        outcome: notice-and-response-duty-classified
+        redress: correction route for identity or notice errors
+        assertion_status: editorial-example
+      - id: identify-driver
+        interaction: explain the evidenced information request and response channel
+        provider_role: notice-recipient-and-enforcement-body
+        evidence: [synthetic-notice, keeper-context, driver-context]
+        rule: driver-information duty and response requirements remain pending source acquisition
+        time: response timestamp and sourced deadline retained
+        outcome: response-record-or-unresolved-boundary
+        redress: official advice or legal-help handoff for disputed circumstances
+        assertion_status: editorial-example
+      - id: follow-disposal-or-court-route
+        interaction: distinguish offered disposal, prosecution and court branches without predicting eligibility or outcome
+        provider_role: enforcement-body-or-court
+        evidence: [response-record, subsequent-official-notice]
+        rule: disposal, prosecution, plea and appeal rules remain pending source acquisition
+        time: acceptance, plea, hearing and appeal timing independently sourced
+        outcome: route-and-next-step-recorded
+        redress: court process or appeal only where evidenced
+        assertion_status: editorial-example
+
+private_sector_dependencies:
+  - id: driving-instructor
+    required: optional_or_conditional
+    boundary: Training may be privately supplied; official licensing authority remains distinct.
+  - id: motor-insurer
+    required: conditional_compulsory_dependency
+    boundary: Cover and its validity are evidenced without recommending a provider or deciding a real policy.
+  - id: vehicle-provider
+    required: conditional
+    boundary: Vehicle availability does not establish registration, roadworthiness, tax or insurance compliance.
+
+redress:
+  - route: licensing correction, review or complaint
+    authority_status: pending_source_by_jurisdiction
+  - route: test-provider complaint or appeal boundary
+    authority_status: pending_source
+  - route: court hearing or statutory appeal
+    authority_status: pending_source_and_case_specific_legal_handoff
+
+source_requirements:
+  acquisition_status: authorized_not_started
+  required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
+  candidate_families: [GB licensing authority, Northern Ireland licensing authority, test providers, police guidance, court and justice guidance, compulsory insurance guidance]
+
+known_unknowns:
+  - exact licensing and testing variants selected for each jurisdiction
+  - notice types, deadlines and disposal options in the selected enforcement examples
+  - which relationships between keeper, recipient and driver are official, normalized or inferred
+
+competency_questions:
+  - id: driving-cq-1
+    question: Which outputs from learning and testing become evidence for the next licensing stage?
+    expected: ordered episodes, evidence lineage, authority and validity time
+  - id: driving-cq-2
+    question: Which dependencies are public authority services and which are private but necessary or conditional?
+    expected: actor roles, authority boundaries and dependency status
+  - id: driving-cq-3
+    question: What must the notice recipient do next, by when, and according to which source?
+    expected: notice identity, recipient role, sourced deadline, response channel and limitation
+  - id: driving-cq-4
+    question: Where do Great Britain and Northern Ireland routes diverge?
+    expected: separate authorities, sources, stages and known unknowns
+
+acceptance:
+  - ordinary learning stages and the speeding exception form one traceable journey
+  - Great Britain facts are not silently assigned to Northern Ireland
+  - compulsory private dependencies remain distinct from public authority
+  - no fixture output predicts liability, penalty, course eligibility or court outcome
