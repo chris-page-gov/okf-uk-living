@@ -13,6 +13,8 @@ domain profile and source/rights decisions are reviewed.
 - [Research overview and generating prompt](research/overview.md)
 - [OKF bundle root](index.md)
 - [Implementation roadmap](ROADMAP.md)
+- [Delivery planning](PLANNING.md)
+- [Delivery tracking](TRACKING.md)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -37,22 +39,25 @@ domain profile and source/rights decisions are reviewed.
 
 ## Local commands
 
-Create a virtual environment and install the intentionally small authoring
-dependency set:
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/). Project
+dependencies are declared in `pyproject.toml` and pinned by `uv.lock`; `uv run`
+creates and maintains the local environment automatically.
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-okf.txt
+uv sync --locked
 ```
 
 Build and verify the initial bundle:
 
 ```sh
-.venv/bin/python scripts/build_okf_bundle.py
-.venv/bin/python scripts/build_okf_bundle.py --check
-.venv/bin/python scripts/check_okf.py
-.venv/bin/python -m unittest discover -s tests
+uv run --locked python scripts/build_okf_bundle.py
+uv run --locked python scripts/build_okf_bundle.py --check
+uv run --locked python scripts/check_okf.py
+uv run --locked python -m unittest discover -s tests
 ```
+
+`make validate` runs the same required sequence. Validation is local-only by
+default; pull requests and merges do not run remote CI or update GitHub Pages.
 
 The generated small-bundle entrypoint is `okf-bundle.json`. No public URL is
 claimed until an exact deployed URL passes a real-browser identity and journey

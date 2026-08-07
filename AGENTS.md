@@ -28,6 +28,8 @@ life events from before birth to death and bereavement.
   caches or temporary output to Git.
 - Preserve unrelated work and use focused feature branches and pull requests
   after the reviewed initialization commit.
+- Keep implementation and its planning, tracking, status, changelog and
+  authoring documentation in the same pull request, following `PLANNING.md`.
 - Keep CI disabled until the bootstrap and domain profile are reviewed.
 - Never create remotes, push, publish, enable CI or spend money implicitly.
 
@@ -36,10 +38,10 @@ life events from before birth to death and bereavement.
 If OKF Markdown changes, run:
 
 ```sh
-python3 scripts/build_okf_bundle.py
-python3 scripts/build_okf_bundle.py --check
-python3 scripts/check_okf.py
-python3 -m unittest discover -s tests
+uv run --locked python scripts/build_okf_bundle.py
+uv run --locked python scripts/build_okf_bundle.py --check
+uv run --locked python scripts/check_okf.py
+uv run --locked python -m unittest discover -s tests
 ```
 
 Before any publication change, also validate the approved domain profile,
@@ -49,6 +51,12 @@ Never provide a public bundle URL until that exact deployed URL passes a
 real-browser identity and journey check. A failed public verification is
 reported as failed and the link remains labelled unverified; it does not
 silently trigger a release rebuild.
+
+Local checks are the default and only evaluation environment. Pull requests,
+pushes and merges must not trigger remote CI or GitHub Pages updates. After
+every pull request, state that GitHub Pages was not updated and requires an
+explicit owner publication request, unless that pull request records such a
+request and its deployment and browser-verification evidence.
 
 ## Initial modelling priority
 

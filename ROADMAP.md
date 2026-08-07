@@ -4,7 +4,8 @@
 
 - Review the repository scaffold, research overview and licence decisions.
 - Initialize Git and make one initialization-only default-branch commit.
-- Keep CI, remote creation and publication disabled.
+- Create the private GitHub remote only after explicit owner authorization.
+- Keep remote CI and GitHub Pages publication disabled.
 
 ## Phase 1 — domain profile and contracts
 
@@ -41,6 +42,7 @@ provider, evidence, rule, time, outcome, redress and source provenance.
 ## Phase 5 — release candidate and publication
 
 - Freeze one reproducible candidate and run all release gates against it.
+- Require an explicit owner request before any GitHub Pages deployment.
 - Publish identical bytes; do not rebuild during promotion.
 - Verify the exact public overview, record, query and graph deep links in a real
   browser before sharing any public bundle URL.

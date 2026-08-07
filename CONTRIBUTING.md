@@ -8,5 +8,17 @@ graph identity. Keep section indexes concise and progressive. Every material
 claim must identify its authority, jurisdiction and source evidence.
 
 Before requesting review, regenerate and validate the bundle using the commands
-in `AGENTS.md`. Do not enable CI, create a remote, publish, or add acquired
-source snapshots until the corresponding governance decision is approved.
+in `AGENTS.md`, or run `make validate`.
+
+Update implementation and documentation in lockstep using the matrix in
+[PLANNING.md](PLANNING.md). Every pull request updates `TRACKING.md` and
+`CHANGELOG.md`; changes to scope, gates, authoring or commands update their
+governing documents in the same pull request.
+
+Evaluation is local-only unless the owner explicitly requests publication.
+Do not enable remote CI, update GitHub Pages or add acquired source snapshots
+until the corresponding governance decision is approved. Every pull-request
+handoff must state:
+
+> Publication status: local validation only. GitHub Pages was not updated.
+> Publication requires an explicit owner request.
