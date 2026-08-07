@@ -1,6 +1,6 @@
 # Repository status
 
-- Lifecycle: research and implementation scaffold
+- Lifecycle: bounded three-slice sample ready for integrated review
 - Corpus: root, research overview and three implemented vertical slices
 - Ontology: three normalized slice modules implemented; governed cross-domain
   registry and publication shapes remain planned
@@ -25,9 +25,13 @@
   England-and-Wales court, Scottish prosecution and Northern Ireland speeding
   branches, dependencies, evidence, ontology, synthetic journey and semantic
   tests
-- Third slice: separate England-and-Wales, Scotland and Northern Ireland death
+- Third slice: merged in PR #5 with separate England-and-Wales, Scotland and Northern Ireland death
   registration; Tell Us Once and Northern Ireland manual notification routes;
   three estate-authority routes; private dependencies; ontology; journey; and
-  semantic tests implemented for review
-- Next gate: review the third slice and the stacked licensing change, then the
-  three-slice set before any broader source acquisition or corpus growth
+  semantic tests
+- Licensing: merged in PR #6 with the repository and source-family rights
+  checks passing
+- Publication readiness: reviewable sample, not yet a candidate; no integrated
+  review report, final Explorer lock, release-scope approval or frozen manifest
+- Next gate: `REVIEW-001`, the integrated three-slice review defined in
+  `docs/review-and-publication-plan.md`

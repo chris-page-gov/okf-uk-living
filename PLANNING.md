@@ -39,18 +39,26 @@ to a later pull request.
 ## Near-term delivery units
 
 The owner approved `okf-domain-profile.v1` and the three fixture contracts on
-2026-08-07. The missed-rubbish and learning-to-drive slices are merged, and
-the death and bereavement slice is implemented for review. The active delivery
-sequence is now:
+2026-08-07. All three slices and the licensing decisions are merged. The
+sample is ready for integrated review, but it is not yet a frozen publication
+candidate.
 
-1. Review the death, Tell Us Once and estate-administration implementation.
-2. Review all three implemented slices against their approved fixture
-   contracts and the provisional Explorer consumer lock.
-3. Review the completed licensing decision set, then resolve the
-   consumer-inventory and governed-predicate gates before broader source
-   acquisition or corpus growth.
-4. Await explicit owner direction for any work beyond the approved slices or
-   any GitHub Pages publication.
+The active sequence is defined in the
+[three-slice review and publication plan](docs/review-and-publication-plan.md):
+
+1. `REVIEW-001` — integrated three-slice content, evidence and journey review.
+2. `COMPAT-001` — inventory and lock the actual OKF Explorer consumer.
+3. `SCOPE-001` — approve the initial sample claim and limitations boundary.
+4. `CAND-001` — freeze one locally validated candidate and its hashes.
+5. `PUB-001` — await an explicit owner publication request naming that
+   candidate.
+6. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
+   the exact site in a real browser.
+
+The recommended release scope is the bounded three-slice educational sample
+without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim. This
+keeps the complete curriculum and governed semantic registry out of the first
+sample publication while stating their absence clearly.
 
 ## GitHub Pages publication
 

@@ -13,11 +13,18 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | GOV-002 | Protect remote `main` for the sole-developer workflow | Deferred by platform | GitHub returned HTTP 403: private-repository branch protection requires GitHub Pro or public visibility; operational PR-only policy remains in force |
 | PROF-001 | Approve `okf-domain-profile.v1` | Complete | Approved by `owner:chris-page-gov` on 2026-08-07; bounded source registration authorized |
 | FIX-001 | Contract the three vertical-slice fixtures | Complete | Three synthetic v1 contracts approved with PROF-001 and validated locally |
-| RIGHTS-001 | Resolve repository and bounded source-family licensing | Review | MIT for authored code, documentation and ontology terms; dated evidence for 16 source hosts plus OGL, CPSV-AP, Open Referral UK and HSDS; source use remains link-and-summary with zero snapshots |
+| RIGHTS-001 | Resolve repository and bounded source-family licensing | Complete | Merged in PR #6; MIT for authored material, dated evidence for 16 source hosts, link-and-summary source use and zero snapshots |
 | SLICE-001 | Missed rubbish collection | Complete | Merged in PR #3 with four local routes and a 13-reference denominator |
 | SLICE-002 | Learning to drive and speeding exception | Complete | Merged in PR #4 with GB/NI learning routes, three speeding court boundaries and a 20-reference denominator |
-| SLICE-003 | Death, Tell Us Once and estate administration | Review | Three registration routes, Tell Us Once/NI notification split and three estate-authority routes implemented with a 20-reference denominator; next gate is pull-request review |
-| PUB-001 | Publish a frozen candidate to GitHub Pages | Blocked by design | Requires explicit owner publication request and all release gates |
+| SLICE-003 | Death, Tell Us Once and estate administration | Complete | Merged in PR #5 with three registration routes, Tell Us Once/NI notification split, three estate-authority routes and a 20-reference denominator |
+| REVIEW-001 | Integrated three-slice sample review | Ready | Next delivery unit; produce fixture traceability, cross-slice review and a dated finding ledger with no open blocker |
+| COMPAT-001 | Lock the actual OKF Explorer consumer contract | Planned | Requires local Explorer overview, record, query, graph and deep-link evidence |
+| SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
+| CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
+| PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
+| PAGES-001 | Deploy frozen candidate bytes to GitHub Pages | Blocked on authorization | Manual-only deployment after PUB-001; deployed bytes must match the candidate manifest without rebuilding |
+| VERIFY-001 | Verify the exact public sample in a real browser | Blocked on publication | Validate identity, overview, bundle, slice records, query, graph, source and licence journeys before sharing the URL |
+| RELEASE-001 | Hand off a verified initial sample | Blocked on verification | Label and share the public URL only after VERIFY-001 passes; retain explicit sample limitations |
 
 ## Current operating state
 
@@ -34,3 +41,5 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   eligible generated projections are MIT; third-party material is not
   relicensed and snapshot redistribution is disabled.
 - Public bundle URL: none.
+- Review state: the bounded three-slice sample is ready for integrated review;
+  it is not yet a frozen publication candidate.
