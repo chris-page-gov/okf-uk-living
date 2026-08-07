@@ -33,12 +33,22 @@ Each slice must include the ordinary path, exception path, jurisdiction,
 provider, evidence, rule, time, outcome, redress and source provenance.
 Implementation is authorized within the approved bounded source scope.
 
-The missed-rubbish slice was merged in PR #3 and the learning-to-drive slice
-in PR #4. The death and bereavement slice is implemented for review with
+The missed-rubbish slice was merged in PR #3, the learning-to-drive slice in
+PR #4 and the death-and-bereavement slice in PR #5. The third slice has
 separate national registration routes, the Tell Us Once/Northern Ireland
 notification boundary, three estate-authority routes, private dependencies and
-a 20-reference denominator. All three approved slices now exist; review is the
-gate before any wider corpus work.
+a 20-reference denominator. All three approved slices and their rights
+decisions now exist on main. The integrated review is the gate before any wider
+corpus work or sample candidate.
+
+## Initial sample review and release track
+
+The [review and publication plan](docs/review-and-publication-plan.md) defines
+the bounded route to an initial sample: integrated review, actual Explorer
+compatibility lock, explicit claim/limitations scope, frozen candidate,
+separate owner publication request, manual Pages promotion and exact-browser
+verification. The complete Phase 3 and Phase 4 corpus are not prerequisites
+for a clearly labelled non-conformance three-slice sample.
 
 ## Phase 3 — ontology and curriculum
 
@@ -57,6 +67,7 @@ gate before any wider corpus work.
 
 ## Phase 5 — release candidate and publication
 
+- Complete the initial-sample review, compatibility and scope gates.
 - Freeze one reproducible candidate and run all release gates against it.
 - Require an explicit owner request before any GitHub Pages deployment.
 - Publish identical bytes; do not rebuild during promotion.

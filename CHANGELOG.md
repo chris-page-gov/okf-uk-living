@@ -44,6 +44,9 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Rights validation and regression tests for source-host coverage, exact OGL
   attribution, standards terms, zero snapshots and generated projections.
 - Attribution and third-party notices for downstream users.
+- Explicit three-slice review-to-publication plan with integrated-review,
+  Explorer-compatibility, release-scope, frozen-candidate, manual Pages and
+  real-browser verification gates.
 
 ### Changed
 
@@ -63,6 +66,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Replaced pending reuse markers with recorded source-family decisions while
   retaining link-and-summary-only use and prohibiting source-content and
   snapshot redistribution.
+- Recorded PR #5 and PR #6 as merged and advanced the bounded sample to
+  integrated review, while keeping publication separately gated.
 
 ## [0.0.0] - 2026-08-07
 
