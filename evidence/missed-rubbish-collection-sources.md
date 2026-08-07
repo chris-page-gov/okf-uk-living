@@ -25,9 +25,10 @@ bounded observation set for the first slice:
   Ireland.
 
 The register preserves owner, authority role, jurisdiction, observation time,
-coverage and exclusions. No page was snapshotted. Rights remain limited to
-linking and narrow factual summary pending a reuse decision, and every live
-fact must be checked again before reuse.
+coverage and exclusions. No page was snapshotted. The dated
+[rights decisions](../source/rights-decisions.v1.yaml) retain linking and
+original narrow summary as the permitted project use, and every live fact must
+be checked again before reuse.
 
 The GOV.UK routing page is not treated as proof of a uniform process. Its
 observed scope wording includes a Wales ambiguity, so Welsh facts come directly

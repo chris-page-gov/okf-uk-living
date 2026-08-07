@@ -10,6 +10,12 @@ claim must identify its authority, jurisdiction and source evidence.
 Before requesting review, regenerate and validate the bundle using the commands
 in `AGENTS.md`, or run `make validate`.
 
+Repository-authored contributions are made under the repository's
+[MIT License](LICENSE). Do not paste source-page or standards content into the
+repository. Use browser-compatible links and original summaries, and update
+the [rights register](source/rights-decisions.v1.yaml) whenever a new source
+host or reuse basis is introduced.
+
 Update implementation and documentation in lockstep using the matrix in
 [PLANNING.md](PLANNING.md). Every pull request updates `TRACKING.md` and
 `CHANGELOG.md`; changes to scope, gates, authoring or commands update their

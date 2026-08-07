@@ -33,6 +33,15 @@ class ContractTests(unittest.TestCase):
         self.assertIn("public_bundle_publication", blocked)
         self.assertFalse(self.profile["rights"]["publication_allowed"])
 
+    def test_profile_records_scoped_rights(self) -> None:
+        rights = self.profile["rights"]
+        self.assertEqual("MIT", rights["repository_code"])
+        self.assertEqual("MIT", rights["repository_documentation"])
+        self.assertEqual("MIT", rights["repository_ontology_terms"])
+        self.assertFalse(rights["source_content_redistribution_allowed"])
+        self.assertFalse(rights["source_snapshots"]["redistribution_allowed"])
+        self.assertTrue(rights["generated_projections"]["redistribution_allowed"])
+
     def test_owner_approval_is_recorded(self) -> None:
         self.assertEqual("approved", self.profile["status"])
         self.assertEqual("owner:chris-page-gov", self.profile["approval"]["approved_by"])

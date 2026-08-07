@@ -59,17 +59,31 @@ service records. A fixture moves from `authorized_not_started` to
 recorded under `source/`; this state does not authorize snapshots, broad
 acquisition or redistribution.
 
+The approved [rights register](../source/rights-decisions.v1.yaml) now resolves
+the repository and current linked-source decisions without expanding the use
+boundary. Repository-authored code, documentation and ontology terms are MIT.
+Official pages remain linked references with original summaries; do not copy
+page text, images, logos or other assets into authored or generated output.
+
 Contract validation checks structure, jurisdiction coverage, ordinary and
 exception paths, assertion status and publication gates. A passing contract
 check does not approve the profile or validate a real service route.
 
 ## Linked-reference source registers
 
-Versioned `source/*.v1.yaml` registers preserve source owner, authority role,
+The three versioned source registers preserve source owner, authority role,
 URL, jurisdictional coverage, exclusions, observation date, freshness policy
-and rights basis. A `linked_reference_only` register stores no source snapshot:
-its checksum must remain `not_applicable_no_snapshot`, and authored summaries
-must be narrow, attributed and rechecked before use.
+and rights basis. `source/rights-decisions.v1.yaml` maps every registered host
+to its dated licence evidence. A `linked_reference_only` register stores no
+source snapshot: its checksum must remain `not_applicable_no_snapshot`, and
+authored summaries must be original, narrow, attributed and rechecked before
+use.
+
+Do not acquire, commit or redistribute a snapshot until the exact source,
+licence version, required attribution, exclusions, acquisition time and
+checksum are approved. Generated projections can be MIT only when upstream
+expression is not embedded; otherwise preserve the upstream terms and record
+a new compatibility decision.
 
 Official facts belong on the exact local service or authority record they
 support. Normalized service families and ontology modules may compare those
@@ -98,6 +112,7 @@ uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```
 

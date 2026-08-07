@@ -7,7 +7,11 @@
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
 - Acquisition: 53 official references across all three bounded slice
-  registers, all links with zero snapshots; broad acquisition disabled
+  registers, all links with zero snapshots; all 16 source hosts have dated
+  rights decisions and broad acquisition is disabled
+- Licensing: MIT for repository-authored code, documentation and ontology
+  terms; source content remains link-and-summary only; snapshot redistribution
+  is disabled; eligible repository-authored projections are MIT
 - Deterministic local generation: enabled for authored Markdown
 - Evaluation: local `uv` environment only
 - CI: scaffolded but disabled; pull requests do not run remote checks
@@ -25,5 +29,5 @@
   registration; Tell Us Once and Northern Ireland manual notification routes;
   three estate-authority routes; private dependencies; ontology; journey; and
   semantic tests implemented for review
-- Next gate: review the third slice and then the three-slice set before any
-  broader source acquisition or corpus growth
+- Next gate: review the third slice and the stacked licensing change, then the
+  three-slice set before any broader source acquisition or corpus growth

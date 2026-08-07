@@ -28,6 +28,7 @@ a separate explicit owner request.
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
+- [Attribution and third-party notices](NOTICE.md)
 - [Change log](CHANGELOG.md)
 
 ## Repository shape
@@ -65,6 +66,7 @@ uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -74,6 +76,22 @@ default; pull requests and merges do not run remote CI or update GitHub Pages.
 The generated small-bundle entrypoint is `okf-bundle.json`. No public URL is
 claimed until an exact deployed URL passes a real-browser identity and journey
 check.
+
+## Licensing and source use
+
+Repository-authored code, documentation and ontology terms are licensed under
+the [MIT License](LICENSE). That does not relicense third-party material.
+Official source pages are linked and summarized in original words rather than
+redistributed, and no page snapshots have been acquired. Dated provider,
+OGL, CPSV-AP, Open Referral UK and HSDS determinations are recorded in
+[the licensing decisions](LICENSE_DECISIONS.md), [NOTICE.md](NOTICE.md) and the
+[machine-readable rights register](source/rights-decisions.v1.yaml).
+
+Eligible generated projections are MIT when they contain only
+repository-authored structure, original summaries, facts and links. Source
+snapshots remain non-redistributable until an exact source-specific licence
+decision is recorded. These decisions do not change the separate explicit
+owner gate for publication.
 
 ## Authority boundary
 

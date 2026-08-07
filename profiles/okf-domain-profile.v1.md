@@ -54,20 +54,29 @@ authority within its scope. Generated relationships remain inferred and are
 never presented as official. Unknown is not false.
 
 Source identity, jurisdiction and observation time are required. Each source
-family must later declare its update cadence, rights, coverage and limitations.
+family declares its update cadence, rights, coverage and limitations. The
+[rights register](../source/rights-decisions.v1.yaml) records the dated licence
+evidence for all 16 hosts in the bounded source denominators.
 
 ## Unresolved gates
 
-Approval should explicitly acknowledge that these remain open:
+The repository and current source-family licensing gate is complete:
 
-- repository code and documentation licensing;
-- acquired-source rights and redistribution decisions;
+- repository-authored code, documentation and ontology terms use MIT;
+- source content remains linked and summarized rather than redistributed;
+- no snapshots have been acquired or approved for redistribution; and
+- eligible repository-authored generated projections use MIT without
+  relicensing embedded upstream expression.
+
+These gates remain open:
+
 - the complete Explorer consumer inventory;
 - the governed predicate registry and SHACL shapes; and
 - review of the three completed bounded source-family registers and slices.
 
 These gaps continue to block production assertions or publication where the
-machine-readable profile says they do.
+machine-readable profile says they do. Licensing completion does not authorize
+publication; that remains a separate explicit owner decision.
 
 ## Review checklist
 

@@ -35,6 +35,9 @@ life events from before birth to death and bereavement.
 - Keep remote CI disabled unless the owner explicitly changes the local-only
   evaluation policy or requests publication.
 - Never create remotes, push, publish, enable CI or spend money implicitly.
+- Apply MIT only to repository-authored code, documentation and ontology
+  terms. Source content remains linked and summarized, not redistributed;
+  enforce the dated decisions in `source/rights-decisions.v1.yaml`.
 
 ## Required checks
 
@@ -46,6 +49,7 @@ uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```
 

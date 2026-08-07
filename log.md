@@ -26,3 +26,8 @@
   private dependencies.
 - Added the normalized bereavement model and synthetic journey with semantic
   regression checks for notification and estate non-equivalence.
+- Licensed repository-authored code, documentation and ontology terms under
+  MIT and recorded dated rights evidence for every registered source host.
+- Added OGL attribution, CPSV-AP CC BY 4.0, Open Referral UK and HSDS CC BY-SA
+  4.0 decisions while retaining link-and-summary-only source use and zero
+  snapshots.
