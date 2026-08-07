@@ -58,10 +58,20 @@ class ContractTests(unittest.TestCase):
                 self.assertTrue(fixture["synthetic"])
                 self.assertEqual("editorial-example", fixture["assertion_status"])
 
-    def test_bounded_source_acquisition_is_authorized_but_not_started(self) -> None:
+    def test_bounded_source_acquisition_state_tracks_each_slice(self) -> None:
         for fixture in self.fixtures:
             with self.subTest(fixture=fixture["id"]):
-                self.assertEqual("authorized_not_started", fixture["source_requirements"]["acquisition_status"])
+                expected = (
+                    "linked_references_registered"
+                    if fixture["id"] == "missed-rubbish-collection"
+                    else "authorized_not_started"
+                )
+                self.assertEqual(expected, fixture["source_requirements"]["acquisition_status"])
+                if fixture["id"] == "missed-rubbish-collection":
+                    self.assertEqual(
+                        "source/missed-rubbish-collection.v1.yaml",
+                        fixture["source_requirements"]["register"],
+                    )
 
     def test_validator_rejects_real_personal_context(self) -> None:
         fixture = deepcopy(self.fixtures[0])

@@ -52,13 +52,13 @@ actors:
     authority_assertion: editorial-example
   - id: responsible-waste-authority
     role: accountable-public-authority
-    authority_assertion: pending_source
+    authority_assertion: official_in_selected_local_routes
   - id: collection-operator
     role: delivery-provider-public_or_contracted
-    authority_assertion: pending_source
+    authority_assertion: official_where_named_otherwise_unknown
   - id: complaint-reviewer
     role: complaint_or_ombudsman_route
-    authority_assertion: pending_source
+    authority_assertion: official_in_selected_jurisdiction_routes
 
 journeys:
   ordinary:
@@ -78,8 +78,8 @@ journeys:
         interaction: compare schedule, bin type and local reporting conditions with the observed event
         provider_role: responsible-waste-authority
         evidence: [collection-schedule, bin-type, observed-non-collection]
-        rule: local collection conditions and reporting rule remain pending source acquisition
-        time: local reporting window remains unknown until sourced
+        rule: apply only the conditions on the selected local service record
+        time: use only the selected route's observed local timing boundary
         outcome: report-route-or-limitation-identified
         redress: explain why the route cannot yet be used
         assertion_status: editorial-example
@@ -87,7 +87,7 @@ journeys:
         interaction: submit the minimum synthetic report through an evidenced channel
         provider_role: responsible-waste-authority
         evidence: [synthetic-address-context, scheduled-date, bin-type]
-        rule: required report fields and permitted channels remain pending source acquisition
+        rule: required fields and permitted channels come from the selected official local route
         time: submission timestamp retained
         outcome: acknowledgement-or-reference
         redress: channel failure route
@@ -96,7 +96,7 @@ journeys:
         interaction: record collection, explanation, rejection or other sourced response
         provider_role: responsible-waste-authority
         evidence: [report-reference]
-        rule: service response and remedy rule remains pending source acquisition
+        rule: retain only the selected route's sourced response or remedy statement
         time: response expectation retained only when sourced
         outcome: service-outcome-recorded
         redress: complaint route supplied where supported
@@ -109,8 +109,8 @@ journeys:
         interaction: distinguish timing, presentation, contamination, access, wrong-authority and channel reasons
         provider_role: responsible-waste-authority
         evidence: [rejection-reason, report-reference]
-        rule: rejection conditions remain pending source acquisition
-        time: complaint or re-report deadline must be independently sourced
+        rule: use the selected route's sourced exclusions without importing another council's rule
+        time: complaint or re-report timing must remain local and independently sourced
         outcome: rejection-reason-classified
         redress: re-report-review-or-complaint
         assertion_status: editorial-example
@@ -118,7 +118,7 @@ journeys:
         interaction: follow the authority complaint sequence without promising a remedy
         provider_role: complaint-reviewer
         evidence: [report-reference, rejection-reason, prior-correspondence]
-        rule: complaint sequence and exhaustion requirements remain pending source acquisition
+        rule: follow the selected council sequence and jurisdiction-appropriate external exhaustion rule
         time: escalation timing retained when sourced
         outcome: complaint-outcome-or-next-route
         redress: external reviewer only where authority and exhaustion rules are evidenced
@@ -131,21 +131,22 @@ private_sector_dependencies:
 
 redress:
   - route: local re-report or review
-    authority_status: pending_source
+    authority_status: official_where_supported_by_selected_route
   - route: council complaint sequence
-    authority_status: pending_source
+    authority_status: official_in_selected_local_routes
   - route: external ombudsman or reviewer
-    authority_status: pending_source_and_exhaustion_rules
+    authority_status: official_selected_route_subject_to_current_scope_and_exhaustion_rules
 
 source_requirements:
-  acquisition_status: authorized_not_started
+  acquisition_status: linked_references_registered
+  register: source/missed-rubbish-collection.v1.yaml
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [national council finder, national waste context, selected council service page, selected council complaints page]
 
 known_unknowns:
-  - which council example will anchor each national or local variant
-  - reporting windows, exclusions and remedies for each selected authority
-  - whether delivery is direct or contracted in the selected example
+  - whether a live local rule has changed since the recorded observation date
+  - whether a real report or external complaint would be accepted in a specific case
+  - provider identity where the selected route does not name a collection contractor
 
 competency_questions:
   - id: rubbish-cq-1

@@ -160,6 +160,8 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
     commands = validation.get("required_commands", []) if isinstance(validation, dict) else []
     if not any("scripts/check_contracts.py" in str(command) for command in commands):
         errors.append(f"{prefix}: validation commands must include scripts/check_contracts.py")
+    if not any("scripts/check_sources.py" in str(command) for command in commands):
+        errors.append(f"{prefix}: validation commands must include scripts/check_sources.py")
     if not isinstance(validation, dict) or validation.get("local_only_until_publication_request") is not True:
         errors.append(f"{prefix}: validation must retain the local-only publication boundary")
 
@@ -276,6 +278,12 @@ def validate_fixture(fixture: dict[str, Any], profile: dict[str, Any]) -> list[s
     allowed_acquisition_statuses = {"authorized_not_started", "linked_references_registered"}
     if source_requirements.get("acquisition_status") not in allowed_acquisition_statuses:
         errors.append(f"{prefix}: source acquisition status is not governed")
+    if source_requirements.get("acquisition_status") == "linked_references_registered":
+        register = source_requirements.get("register")
+        if not _nonempty(register):
+            errors.append(f"{prefix}: linked source acquisition must identify its register")
+        elif not (ROOT / str(register)).is_file():
+            errors.append(f"{prefix}: linked source register does not exist: {register}")
     for field in ("required_fields", "candidate_families"):
         if not _nonempty(source_requirements.get(field)):
             errors.append(f"{prefix}: source_requirements.{field} must be non-empty")

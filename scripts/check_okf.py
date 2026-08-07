@@ -8,6 +8,106 @@ from collections import Counter
 from build_okf_bundle import build_bundle
 
 
+MISSED_RUBBISH_ROUTES = {
+    "services/coventry-missed-bin-collection.md": {
+        "jurisdiction": "england:coventry",
+        "provider": "coventry-city-council",
+        "sources": {"coventry-missed-bin", "coventry-complaints"},
+    },
+    "services/edinburgh-missed-bin-collection.md": {
+        "jurisdiction": "scotland:edinburgh",
+        "provider": "city-of-edinburgh-council",
+        "sources": {"edinburgh-missed-bin", "edinburgh-complaints"},
+    },
+    "services/cardiff-missed-collection.md": {
+        "jurisdiction": "wales:cardiff",
+        "provider": "cardiff-council",
+        "sources": {"cardiff-missed-collection", "cardiff-complaints"},
+    },
+    "services/belfast-missed-bin-collection.md": {
+        "jurisdiction": "northern-ireland:belfast",
+        "provider": "belfast-city-council",
+        "sources": {"belfast-missed-bin", "belfast-complaints"},
+    },
+}
+MISSED_RUBBISH_SUPPORTING_NODES = {
+    "services/report-missed-rubbish-collection.md",
+    "journeys/missed-rubbish-collection.md",
+    "ontology/missed-rubbish-collection.md",
+    "evidence/missed-rubbish-collection-sources.md",
+    "jurisdictions/england.md",
+    "jurisdictions/scotland.md",
+    "jurisdictions/wales.md",
+    "jurisdictions/northern-ireland.md",
+    "organisations/coventry-city-council.md",
+    "organisations/city-of-edinburgh-council.md",
+    "organisations/cardiff-council.md",
+    "organisations/belfast-city-council.md",
+    "organisations/local-government-and-social-care-ombudsman.md",
+    "organisations/scottish-public-services-ombudsman.md",
+    "organisations/public-services-ombudsman-for-wales.md",
+    "organisations/northern-ireland-public-services-ombudsman.md",
+}
+
+
+def validate_missed_rubbish_slice(
+    nodes: dict[str, dict[str, object]], edges: list[dict[str, str]]
+) -> list[str]:
+    """Check the first vertical slice's authority, scope and graph invariants."""
+
+    errors: list[str] = []
+    required = set(MISSED_RUBBISH_ROUTES) | MISSED_RUBBISH_SUPPORTING_NODES
+    missing = sorted(required - set(nodes))
+    errors.extend(f"missed-rubbish slice is missing {path}" for path in missing)
+    if missing:
+        return errors
+
+    for path, expected in MISSED_RUBBISH_ROUTES.items():
+        node = nodes[path]
+        if node.get("type") != "Public Service Route":
+            errors.append(f"{path}: must be a Public Service Route")
+        if node.get("assertion_status") != "official":
+            errors.append(f"{path}: local route assertion_status must be official")
+        if node.get("service_family") != "report-missed-rubbish-collection":
+            errors.append(f"{path}: must retain the normalized service family")
+        for field in ("jurisdiction", "provider"):
+            if node.get(field) != expected[field]:
+                errors.append(f"{path}: {field} must be {expected[field]}")
+        if node.get("observed_at") != "2026-08-07":
+            errors.append(f"{path}: observed_at must preserve the source observation date")
+        sources = node.get("sources", [])
+        source_ids = {
+            str(source.get("id"))
+            for source in sources
+            if isinstance(source, dict) and source.get("id")
+        }
+        if source_ids != expected["sources"]:
+            errors.append(f"{path}: must cite its exact service and council-complaint sources")
+
+    family = nodes["services/report-missed-rubbish-collection.md"]
+    if family.get("assertion_status") != "normalized":
+        errors.append("missed-rubbish service family must be normalized")
+    journey = nodes["journeys/missed-rubbish-collection.md"]
+    if journey.get("assertion_status") != "editorial-example" or journey.get("synthetic") is not True:
+        errors.append("missed-rubbish journey must remain a synthetic editorial-example")
+    journey_text = " ".join(str(journey.get("body", "")).split())
+    if "not combined into a universal reporting rule" not in journey_text:
+        errors.append("missed-rubbish journey must reject a universal local timing rule")
+    evidence = nodes["evidence/missed-rubbish-collection-sources.md"]
+    if evidence.get("assertion_status") != "normalized":
+        errors.append("missed-rubbish evidence set must be normalized")
+
+    journey_targets = {
+        edge["target"]
+        for edge in edges
+        if edge["source"] == "journeys/missed-rubbish-collection.md"
+    }
+    expected_journey_targets = required - {"journeys/missed-rubbish-collection.md"}
+    for target in sorted(expected_journey_targets - journey_targets):
+        errors.append(f"missed-rubbish journey must link to {target}")
+    return errors
+
+
 def main() -> int:
     bundle, errors = build_bundle()
     if errors:
@@ -26,6 +126,7 @@ def main() -> int:
     for path_id, node in nodes.items():
         if node.get("type") == "Research Overview" and not node.get("sources"):
             errors.append(f"{path_id}: research overview must declare sources")
+    errors.extend(validate_missed_rubbish_slice(nodes, corpus["edges"]))
     if errors:
         for error in errors:
             print(error)

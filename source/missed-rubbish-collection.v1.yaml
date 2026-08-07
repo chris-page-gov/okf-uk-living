@@ -1,0 +1,168 @@
+register_version: source-register.v1
+slice_id: missed-rubbish-collection
+status: linked_references_registered
+observed_at: "2026-08-07"
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  broad_acquisition: false
+  checksum_policy: not_applicable_without_snapshot
+  rights_policy: link_and_summarize_pending_reuse_review
+
+sources:
+  - id: govuk-missed-bin-collection
+    owner: Government Digital Service
+    authority_role: national_routing_page
+    resource: https://www.gov.uk/missed-bin-collection
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: postcode route presented for England and Wales
+    exclusions: not evidence of one uniform UK or four-nation process; page wording about Wales requires caution
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: coventry-missed-bin
+    owner: Coventry City Council
+    authority_role: responsible_local_service_page
+    resource: https://www.coventry.gov.uk/missedbin
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected England example in the Coventry City Council area
+    exclusions: not evidence for another council or nation
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: coventry-complaints
+    owner: Coventry City Council
+    authority_role: responsible_local_complaint_page
+    resource: https://www.coventry.gov.uk/contact-council/comments-compliments-complaints/2
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected England council complaint route
+    exclusions: not an ombudsman route and not evidence for another authority
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: edinburgh-missed-bin
+    owner: The City of Edinburgh Council
+    authority_role: responsible_local_service_page
+    resource: https://www.edinburgh.gov.uk/bin-collection-days/delays-rubbish-recycling-collections
+    access_method: public_html
+    version_model: live_page_with_operational_updates
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Scotland example in the City of Edinburgh Council area
+    exclusions: operational notices can change; not evidence for another Scottish council
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: edinburgh-complaints
+    owner: The City of Edinburgh Council
+    authority_role: responsible_local_complaint_page
+    resource: https://www.edinburgh.gov.uk/complaints
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Scotland council complaint route
+    exclusions: not the external SPSO route
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: cardiff-missed-collection
+    owner: Cardiff Council
+    authority_role: responsible_local_service_page
+    resource: https://www.cardiff.gov.uk/aboutmissedcollections
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Wales example in the Cardiff Council area
+    exclusions: not evidence for another Welsh council
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: cardiff-complaints
+    owner: Cardiff Council
+    authority_role: responsible_local_complaint_page
+    resource: https://www.cardiff.gov.uk/makeacomplaint
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Wales council complaint route
+    exclusions: initial service requests must use the service route; not evidence for another authority
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: belfast-missed-bin
+    owner: Belfast City Council
+    authority_role: responsible_local_service_page
+    resource: https://www.belfastcity.gov.uk/bins-recycling-environment/bins-boxes-collections/report-request-order-bin-box/missed-bin-collection
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Northern Ireland example in the Belfast City Council area
+    exclusions: not evidence for another Northern Ireland council
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: belfast-complaints
+    owner: Belfast City Council
+    authority_role: responsible_local_complaint_page
+    resource: https://www.belfastcity.gov.uk/Contact-us/Main-Council-Offices/Complaints-Comments-and-Compliments/Complaints-Handling-Procedure
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: selected Northern Ireland council complaint route
+    exclusions: not the external NIPSO route
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: lgsco-waste-and-refuse
+    owner: Local Government and Social Care Ombudsman
+    authority_role: external_redress_guidance_england
+    resource: https://www.lgo.org.uk/make-a-complaint/fact-sheets/environment-and-waste/waste-and-refuse
+    access_method: public_html
+    version_model: live_fact_sheet
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: England local-government waste and refuse complaints
+    exclusions: not applicable to Scotland, Wales or Northern Ireland
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: spso-making-a-complaint
+    owner: Scottish Public Services Ombudsman
+    authority_role: external_redress_guidance_scotland
+    resource: https://www.spso.org.uk/making-complaint
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: complaints about public services in Scotland
+    exclusions: acceptance and investigation remain case-specific
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: psow-how-to-complain
+    owner: Public Services Ombudsman for Wales
+    authority_role: external_redress_guidance_wales
+    resource: https://www.ombudsman.wales/how-to-complain/
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: complaints about public service providers in Wales
+    exclusions: complainant must first use the organisation route and jurisdiction remains case-specific
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nipso-complaints
+    owner: Northern Ireland Public Services Ombudsman
+    authority_role: external_redress_guidance_northern_ireland
+    resource: https://www.nipso.org.uk/
+    access_method: public_html
+    version_model: live_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: unresolved complaints about public service providers in Northern Ireland
+    exclusions: normally requires completion of the body's complaints process and a final response
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
