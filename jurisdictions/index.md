@@ -6,9 +6,9 @@ Ireland, regional and local public services.
 Jurisdiction is a first-class part of every service assertion. It must not be
 inferred solely from the host name or presentation route of a source page.
 
-## Missed rubbish collection examples
+## Implemented national contexts
 
-- [England: selected Coventry context](england.md)
-- [Scotland: selected Edinburgh context](scotland.md)
-- [Wales: selected Cardiff context](wales.md)
-- [Northern Ireland: selected Belfast context](northern-ireland.md)
+- [England context](england.md)
+- [Scotland context](scotland.md)
+- [Wales context](wales.md)
+- [Northern Ireland context](northern-ireland.md)

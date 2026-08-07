@@ -61,15 +61,12 @@ class ContractTests(unittest.TestCase):
     def test_bounded_source_acquisition_state_tracks_each_slice(self) -> None:
         for fixture in self.fixtures:
             with self.subTest(fixture=fixture["id"]):
-                expected = (
-                    "linked_references_registered"
-                    if fixture["id"] == "missed-rubbish-collection"
-                    else "authorized_not_started"
-                )
+                registered = {"missed-rubbish-collection", "learning-to-drive-speeding"}
+                expected = "linked_references_registered" if fixture["id"] in registered else "authorized_not_started"
                 self.assertEqual(expected, fixture["source_requirements"]["acquisition_status"])
-                if fixture["id"] == "missed-rubbish-collection":
+                if fixture["id"] in registered:
                     self.assertEqual(
-                        "source/missed-rubbish-collection.v1.yaml",
+                        f"source/{fixture['id']}.v1.yaml",
                         fixture["source_requirements"]["register"],
                     )
 

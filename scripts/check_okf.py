@@ -48,6 +48,85 @@ MISSED_RUBBISH_SUPPORTING_NODES = {
     "organisations/public-services-ombudsman-for-wales.md",
     "organisations/northern-ireland-public-services-ombudsman.md",
 }
+DRIVING_SPEEDING_ROUTES = {
+    "services/great-britain-learn-to-drive-car.md": {
+        "family": "learn-to-drive-car",
+        "jurisdiction": "great-britain",
+        "providers": {"driver-and-vehicle-licensing-agency", "driver-and-vehicle-standards-agency"},
+        "sources": {
+            "govuk-learn-to-drive-car",
+            "govuk-first-provisional-licence",
+            "govuk-private-practice",
+            "govuk-book-theory-test",
+            "govuk-driving-test-result",
+            "govuk-full-driving-licence",
+        },
+    },
+    "services/northern-ireland-learn-to-drive-car.md": {
+        "family": "learn-to-drive-car",
+        "jurisdiction": "northern-ireland",
+        "providers": {"driver-and-vehicle-agency-northern-ireland"},
+        "sources": {
+            "nidirect-provisional-licence",
+            "nidirect-learner-rules",
+            "nidirect-theory-test",
+            "nidirect-practical-test",
+            "nidirect-claim-test-pass",
+        },
+    },
+    "services/great-britain-speeding-notice.md": {
+        "family": "respond-to-speeding-notice",
+        "jurisdiction": "great-britain:notice-specific",
+        "providers": {"notice-issuing-police-force-great-britain"},
+        "sources": {"govuk-speeding-penalties", "legislation-rta-1988-section-172"},
+    },
+    "services/england-wales-speeding-court-route.md": {
+        "family": "respond-to-speeding-notice",
+        "jurisdiction": "england-and-wales",
+        "providers": {"hm-courts-and-tribunals-service"},
+        "sources": {"govuk-single-justice-procedure", "govuk-appeal-magistrates-decision"},
+    },
+    "services/scotland-speeding-prosecution-route.md": {
+        "family": "respond-to-speeding-notice",
+        "jurisdiction": "scotland",
+        "providers": {"crown-office-and-procurator-fiscal-service"},
+        "sources": {"copfs-prosecution-code", "mygov-scotland-criminal-appeal"},
+    },
+    "services/northern-ireland-speeding-notice.md": {
+        "family": "respond-to-speeding-notice",
+        "jurisdiction": "northern-ireland",
+        "providers": {
+            "northern-ireland-road-safety-partnership",
+            "northern-ireland-courts-and-tribunals-service",
+        },
+        "sources": {
+            "nidirect-speeding-penalties",
+            "nidirect-fixed-penalties",
+            "nidirect-appealing-verdict",
+        },
+    },
+}
+DRIVING_SPEEDING_SUPPORTING_NODES = {
+    "services/learn-to-drive-car.md",
+    "services/respond-to-speeding-notice.md",
+    "journeys/learning-to-drive-speeding.md",
+    "ontology/learning-to-drive-speeding.md",
+    "evidence/learning-to-drive-speeding-sources.md",
+    "jurisdictions/england.md",
+    "jurisdictions/scotland.md",
+    "jurisdictions/wales.md",
+    "jurisdictions/northern-ireland.md",
+    "organisations/driver-and-vehicle-licensing-agency.md",
+    "organisations/driver-and-vehicle-standards-agency.md",
+    "organisations/driver-and-vehicle-agency-northern-ireland.md",
+    "organisations/notice-issuing-police-force-great-britain.md",
+    "organisations/hm-courts-and-tribunals-service.md",
+    "organisations/crown-office-and-procurator-fiscal-service.md",
+    "organisations/northern-ireland-road-safety-partnership.md",
+    "organisations/northern-ireland-courts-and-tribunals-service.md",
+    "organisations/driving-instructor.md",
+    "organisations/motor-insurer.md",
+}
 
 
 def validate_missed_rubbish_slice(
@@ -108,6 +187,70 @@ def validate_missed_rubbish_slice(
     return errors
 
 
+def validate_driving_speeding_slice(
+    nodes: dict[str, dict[str, object]], edges: list[dict[str, str]]
+) -> list[str]:
+    """Check the second slice's evidence order and jurisdiction invariants."""
+
+    errors: list[str] = []
+    required = set(DRIVING_SPEEDING_ROUTES) | DRIVING_SPEEDING_SUPPORTING_NODES
+    missing = sorted(required - set(nodes))
+    errors.extend(f"driving-speeding slice is missing {path}" for path in missing)
+    if missing:
+        return errors
+
+    for path, expected in DRIVING_SPEEDING_ROUTES.items():
+        node = nodes[path]
+        if node.get("type") != "Public Service Route":
+            errors.append(f"{path}: must be a Public Service Route")
+        if node.get("assertion_status") != "official":
+            errors.append(f"{path}: route assertion_status must be official")
+        if node.get("service_family") != expected["family"]:
+            errors.append(f"{path}: must retain service family {expected['family']}")
+        if node.get("jurisdiction") != expected["jurisdiction"]:
+            errors.append(f"{path}: jurisdiction must be {expected['jurisdiction']}")
+        provider_value = node.get("providers", node.get("provider", []))
+        provider_values = provider_value if isinstance(provider_value, list) else [provider_value]
+        if set(provider_values) != expected["providers"]:
+            errors.append(f"{path}: must retain its exact authority provider set")
+        if node.get("observed_at") != "2026-08-07":
+            errors.append(f"{path}: observed_at must preserve the source observation date")
+        sources = node.get("sources", [])
+        source_ids = {
+            str(source.get("id"))
+            for source in sources
+            if isinstance(source, dict) and source.get("id")
+        }
+        if source_ids != expected["sources"]:
+            errors.append(f"{path}: must cite its exact approved source set")
+
+    for family_path in (
+        "services/learn-to-drive-car.md",
+        "services/respond-to-speeding-notice.md",
+    ):
+        if nodes[family_path].get("assertion_status") != "normalized":
+            errors.append(f"{family_path}: service family must be normalized")
+    journey = nodes["journeys/learning-to-drive-speeding.md"]
+    if journey.get("assertion_status") != "editorial-example" or journey.get("synthetic") is not True:
+        errors.append("driving-speeding journey must remain a synthetic editorial-example")
+    journey_text = " ".join(str(journey.get("body", "")).split())
+    if "not combined into one UK deadline" not in journey_text:
+        errors.append("driving-speeding journey must reject a universal notice or court deadline")
+    evidence = nodes["evidence/learning-to-drive-speeding-sources.md"]
+    if evidence.get("assertion_status") != "normalized":
+        errors.append("driving-speeding evidence set must be normalized")
+
+    journey_targets = {
+        edge["target"]
+        for edge in edges
+        if edge["source"] == "journeys/learning-to-drive-speeding.md"
+    }
+    expected_journey_targets = required - {"journeys/learning-to-drive-speeding.md"}
+    for target in sorted(expected_journey_targets - journey_targets):
+        errors.append(f"driving-speeding journey must link to {target}")
+    return errors
+
+
 def main() -> int:
     bundle, errors = build_bundle()
     if errors:
@@ -127,6 +270,7 @@ def main() -> int:
         if node.get("type") == "Research Overview" and not node.get("sources"):
             errors.append(f"{path_id}: research overview must declare sources")
     errors.extend(validate_missed_rubbish_slice(nodes, corpus["edges"]))
+    errors.extend(validate_driving_speeding_slice(nodes, corpus["edges"]))
     if errors:
         for error in errors:
             print(error)

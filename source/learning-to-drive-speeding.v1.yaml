@@ -1,0 +1,252 @@
+register_version: source-register.v1
+slice_id: learning-to-drive-speeding
+status: linked_references_registered
+observed_at: "2026-08-07"
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  broad_acquisition: false
+  checksum_policy: not_applicable_without_snapshot
+  rights_policy: link_and_summarize_pending_reuse_review
+
+sources:
+  - id: govuk-learn-to-drive-car
+    owner: Government Digital Service
+    authority_role: great_britain_composed_journey_page
+    resource: https://www.gov.uk/learn-to-drive-a-car
+    access_method: public_html
+    version_model: live_step_by_step_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: car-learning sequence for Great Britain
+    exclusions: not the Northern Ireland licensing or testing route; health and vehicle-category variants excluded
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-first-provisional-licence
+    owner: Driver and Vehicle Licensing Agency
+    authority_role: great_britain_licensing_service
+    resource: https://www.gov.uk/apply-first-provisional-driving-licence
+    access_method: public_html
+    version_model: live_service_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: first provisional driving licence in England, Scotland and Wales
+    exclusions: eligibility remains case-specific; not a Northern Ireland DVA application
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-private-practice
+    owner: Driver and Vehicle Standards Agency
+    authority_role: great_britain_learning_rules
+    resource: https://www.gov.uk/driving-lessons-learning-to-drive/practising-with-family-or-friends
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: supervision and learner-insurance conditions for private car practice
+    exclusions: no insurer or instructor recommendation and no policy-coverage decision
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-book-theory-test
+    owner: Driver and Vehicle Standards Agency
+    authority_role: great_britain_theory_test_service
+    resource: https://www.gov.uk/book-theory-test
+    access_method: public_html
+    version_model: live_service_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: theory-test booking in England, Scotland and Wales
+    exclusions: different Northern Ireland service; vehicle-category exceptions remain on the live page
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-driving-test-result
+    owner: Driver and Vehicle Standards Agency
+    authority_role: great_britain_practical_test_outcome
+    resource: https://www.gov.uk/driving-test/driving-test-faults-result
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: car practical-test result, licence handoff and test-appeal boundary in Great Britain
+    exclusions: does not predict a test result; court appeal concerns examiner compliance with law rather than merits reassessment
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-full-driving-licence
+    owner: Driver and Vehicle Licensing Agency
+    authority_role: great_britain_full_licence_service
+    resource: https://www.gov.uk/apply-for-your-full-driving-licence
+    access_method: public_html
+    version_model: live_service_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Great Britain full-licence issue after a practical test pass
+    exclusions: exceptions and application identity conditions remain on the live service
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-provisional-licence
+    owner: Driver and Vehicle Agency
+    authority_role: northern_ireland_licensing_service
+    resource: https://www.nidirect.gov.uk/services/apply-provisional-driving-licence-online
+    access_method: public_html
+    version_model: live_service_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: first provisional driving licence application in Northern Ireland
+    exclusions: not a DVLA Great Britain application; identity and health decisions remain with DVA
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-learner-rules
+    owner: Department for Infrastructure Northern Ireland
+    authority_role: northern_ireland_learning_rules
+    resource: https://www.nidirect.gov.uk/articles/minimum-ages-and-rules-learner-drivers-and-riders
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland learner supervision, vehicle, insurance, plate and speed conditions
+    exclusions: other categories and individual entitlement decisions remain outside this slice
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-theory-test
+    owner: Driver and Vehicle Agency
+    authority_role: northern_ireland_theory_test_guidance
+    resource: https://www.nidirect.gov.uk/articles/about-driving-theory-test
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland car theory-test sequence and residency boundary
+    exclusions: booking availability and individual exemptions remain live-service questions
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-practical-test
+    owner: Driver and Vehicle Agency
+    authority_role: northern_ireland_practical_test_guidance
+    resource: https://www.nidirect.gov.uk/articles/about-practical-test-cars
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland car practical-test content and result handling
+    exclusions: does not predict a result or replace booking instructions
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-claim-test-pass
+    owner: Driver and Vehicle Agency
+    authority_role: northern_ireland_full_licence_handoff
+    resource: https://www.nidirect.gov.uk/articles/claiming-driving-test-pass
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland test-pass exchange and licence upgrade
+    exclusions: eligibility for automatic upgrade remains case-specific
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-speeding-penalties
+    owner: Government Digital Service
+    authority_role: great_britain_speeding_notice_guidance
+    resource: https://www.gov.uk/speeding-penalties
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: GOV.UK notice, driver-information, fixed-penalty and court branches used with the Great Britain statutory extent
+    exclusions: not the Northern Ireland route; the notice and issuing authority remain controlling for a real case
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: legislation-rta-1988-section-172
+    owner: The National Archives
+    authority_role: great_britain_driver_information_legislation
+    resource: https://www.legislation.gov.uk/ukpga/1988/52/section/172
+    access_method: public_html
+    version_model: revised_legislation_page
+    update_cadence: check_current_extent_and_changes_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: statutory driver-information provision extending to England, Wales and Scotland
+    exclusions: legal interpretation, defences and case-specific duties require qualified advice; not Northern Ireland law
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-single-justice-procedure
+    owner: HM Courts and Tribunals Service
+    authority_role: england_wales_court_response_guidance
+    resource: https://www.gov.uk/single-justice-procedure-notices
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: response route for an England or Wales single justice procedure notice
+    exclusions: not every speeding allegation uses this route; Scotland and Northern Ireland use different court processes
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-appeal-magistrates-decision
+    owner: HM Courts and Tribunals Service
+    authority_role: england_wales_criminal_court_redress
+    resource: https://www.gov.uk/appeal-magistrates-court-decision
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: review and appeal routes from an England or Wales magistrates court
+    exclusions: case-specific grounds, deadlines and legal advice are outside this bundle
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: copfs-prosecution-code
+    owner: Crown Office and Procurator Fiscal Service
+    authority_role: scotland_prosecution_and_direct_measure_policy
+    resource: https://www.copfs.gov.uk/publications/prosecution-code/html/
+    access_method: public_html
+    version_model: live_policy_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Scottish prosecution decisions and conditional offers for specified road traffic offences
+    exclusions: does not determine the disposal or outcome of an individual report
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: mygov-scotland-criminal-appeal
+    owner: Scottish Government
+    authority_role: scotland_criminal_court_redress
+    resource: https://www.mygov.scot/appeal-sentence-conviction
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Scotland appeal boundary after conviction or sentence
+    exclusions: procedure, deadline, merits and outcome require the current court route and legal advice
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-speeding-penalties
+    owner: Department for Infrastructure Northern Ireland
+    authority_role: northern_ireland_speeding_notice_guidance
+    resource: https://www.nidirect.gov.uk/articles/speed-limits-and-penalties-breaking-them
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland Road Safety Partnership notice, driver identification, course, fixed penalty and court branches
+    exclusions: the notice controls the allotted response time; no course eligibility or liability prediction
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-fixed-penalties
+    owner: Northern Ireland Courts and Tribunals Service
+    authority_role: northern_ireland_fixed_penalty_and_court_choice
+    resource: https://www.nidirect.gov.uk/articles/fixed-penalties-motoring-offences
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland motoring fixed-penalty payment and court-hearing boundary
+    exclusions: ticket-specific amount, deadline and acceptance conditions remain on the notice
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-appealing-verdict
+    owner: Department of Justice Northern Ireland
+    authority_role: northern_ireland_criminal_court_redress
+    resource: https://www.nidirect.gov.uk/articles/appealing-verdict
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland criminal conviction and sentence appeal boundary
+    exclusions: case-specific grounds, deadlines, advice and outcomes remain outside the bundle
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
