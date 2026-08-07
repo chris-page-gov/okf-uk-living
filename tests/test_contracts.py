@@ -33,6 +33,14 @@ class ContractTests(unittest.TestCase):
         self.assertIn("public_bundle_publication", blocked)
         self.assertFalse(self.profile["rights"]["publication_allowed"])
 
+    def test_owner_approval_is_recorded(self) -> None:
+        self.assertEqual("approved", self.profile["status"])
+        self.assertEqual("owner:chris-page-gov", self.profile["approval"]["approved_by"])
+        for fixture in self.fixtures:
+            with self.subTest(fixture=fixture["id"]):
+                self.assertEqual("approved", fixture["status"])
+                self.assertEqual("owner:chris-page-gov", fixture["approval"]["approved_by"])
+
     def test_fixtures_cover_required_dimensions(self) -> None:
         for fixture in self.fixtures:
             with self.subTest(fixture=fixture["id"]):
@@ -50,10 +58,10 @@ class ContractTests(unittest.TestCase):
                 self.assertTrue(fixture["synthetic"])
                 self.assertEqual("editorial-example", fixture["assertion_status"])
 
-    def test_source_acquisition_has_not_started(self) -> None:
+    def test_bounded_source_acquisition_is_authorized_but_not_started(self) -> None:
         for fixture in self.fixtures:
             with self.subTest(fixture=fixture["id"]):
-                self.assertEqual("not_started", fixture["source_requirements"]["acquisition_status"])
+                self.assertEqual("authorized_not_started", fixture["source_requirements"]["acquisition_status"])
 
     def test_validator_rejects_real_personal_context(self) -> None:
         fixture = deepcopy(self.fixtures[0])

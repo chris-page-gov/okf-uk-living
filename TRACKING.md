@@ -11,9 +11,9 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | OPS-001 | Standardize local execution on locked `uv` commands | Complete | Merged in PR #1; `make validate` is the local assurance entrypoint |
 | GOV-001 | Establish planning, tracking and lockstep documentation | Complete | Merged in PR #1 with mandatory publication-status reporting |
 | GOV-002 | Protect remote `main` for the sole-developer workflow | Deferred by platform | GitHub returned HTTP 403: private-repository branch protection requires GitHub Pro or public visibility; operational PR-only policy remains in force |
-| PROF-001 | Approve `okf-domain-profile.v1` | In review | Draft machine contract and human review handoff validate locally; owner approval remains required |
-| FIX-001 | Contract the three vertical-slice fixtures | In review | Three synthetic v1 contracts and executable checks implemented with PROF-001 |
-| SLICE-001 | Missed rubbish collection | Queued | Requires FIX-001 and explicit local source scope |
+| PROF-001 | Approve `okf-domain-profile.v1` | Complete | Approved by `owner:chris-page-gov` on 2026-08-07; bounded source registration authorized |
+| FIX-001 | Contract the three vertical-slice fixtures | Complete | Three synthetic v1 contracts approved with PROF-001 and validated locally |
+| SLICE-001 | Missed rubbish collection | Next | Begin bounded source-family registration and implement against the approved contract |
 | SLICE-002 | Learning to drive and enforcement exception | Queued | Requires FIX-001 and a frozen speeding-or-parking choice |
 | SLICE-003 | Death, Tell Us Once and estate administration | Queued | Requires FIX-001 and four-nation exception boundaries |
 | PUB-001 | Publish a frozen candidate to GitHub Pages | Blocked by design | Requires explicit owner publication request and all release gates |
@@ -26,5 +26,6 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
 - GitHub Pages: not enabled and not updated.
-- Acquisition: disabled pending the domain profile and rights decisions.
+- Acquisition: bounded linked-reference registration authorized for the three
+  slices; broad acquisition remains disabled.
 - Public bundle URL: none.

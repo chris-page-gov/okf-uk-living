@@ -14,7 +14,7 @@ Planned evaluation assets:
 The first executable boundary is the set of three
 [vertical-slice fixture contracts](fixtures/README.md). They define synthetic
 ordinary and exception journeys and are validated locally against the draft
-domain profile.
+domain profile. The owner approved this boundary on 2026-08-07.
 
 Contract validation is not domain validation. No source, journey, Explorer or
 publication evaluation gate is currently claimed as passed.

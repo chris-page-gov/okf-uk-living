@@ -18,6 +18,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Changed
 
+- Recorded owner approval of `okf-domain-profile.v1` and the three fixture
+  contracts, authorizing bounded source registration and slice implementation.
 - Connected the explicitly authorized private GitHub repository while keeping
   remote CI and GitHub Pages disabled.
 - Recorded the private-plan branch-protection limitation while retaining the

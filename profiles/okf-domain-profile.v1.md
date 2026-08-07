@@ -1,15 +1,17 @@
 # `okf-domain-profile.v1` review handoff
 
 This handoff accompanies the machine-readable
-[`okf-domain-profile.v1.yaml`](okf-domain-profile.v1.yaml). It is a draft
-governance contract, not an approved production ontology or authority claim.
+[`okf-domain-profile.v1.yaml`](okf-domain-profile.v1.yaml). The repository owner
+approved the profile and three fixture contracts on 2026-08-07. Approval
+governs bounded slice implementation; it is not a production ontology or an
+authority claim.
 
-## Proposed decision
+## Approval record
 
-Approve the profile as the boundary for implementing the first three vertical
-slices. Approval would authorize bounded source-family decisions and slice
-implementation; it would not authorize broad acquisition, public publication,
-personalized decisions or unsupported four-nation equivalence.
+Approved by `owner:chris-page-gov` on 2026-08-07 as the boundary for the first
+three vertical slices. Approval authorizes bounded source-family registration
+and slice implementation. It does not authorize broad acquisition, public
+publication, personalized decisions or unsupported four-nation equivalence.
 
 ## Fixed scope
 
@@ -69,16 +71,15 @@ machine-readable profile says they do.
 
 ## Review checklist
 
-- [ ] Scope and denominators are acceptable.
-- [ ] Users, tasks and authority boundary are acceptable.
-- [ ] Jurisdiction and assertion-status rules are acceptable.
-- [ ] Standards roles do not overclaim conformance.
-- [ ] Rights, privacy and freshness gates are acceptable.
-- [ ] Explorer consumer-lock assumptions are acceptable or corrected.
-- [ ] The dependency graph orders implementation and publication correctly.
-- [ ] The three [fixture contracts](../evaluation/fixtures/README.md) are an
+- [x] Scope and denominators are acceptable.
+- [x] Users, tasks and authority boundary are acceptable.
+- [x] Jurisdiction and assertion-status rules are acceptable.
+- [x] Standards roles do not overclaim conformance.
+- [x] Rights, privacy and freshness gates are acceptable.
+- [x] Explorer consumer-lock assumptions are acceptable as provisional.
+- [x] The dependency graph orders implementation and publication correctly.
+- [x] The three [fixture contracts](../evaluation/fixtures/README.md) are an
       adequate acceptance boundary.
 
-Until every required correction is recorded and the owner approves this
-handoff, its status remains `draft` and acquisition and publication remain
-disabled.
+Bounded source registration may now begin for the three slices. Broad
+acquisition, corpus expansion and publication remain disabled by the profile.

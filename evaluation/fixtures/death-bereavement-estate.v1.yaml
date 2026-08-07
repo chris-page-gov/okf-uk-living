@@ -1,11 +1,16 @@
 fixture_version: vertical-slice-fixture.v1
 id: death-bereavement-estate
 title: Death, bereavement and estate administration
-status: draft
+status: approved
 assertion_status: editorial-example
 profile: okf-domain-profile.v1
 synthetic: true
 purpose: Test dependent services, data sharing, national exceptions, authority to administer an estate and private notifications.
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
 
 scope:
   included:
@@ -162,7 +167,7 @@ redress:
     authority_status: pending_source_and_case_specific
 
 source_requirements:
-  acquisition_status: not_started
+  acquisition_status: authorized_not_started
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [national death-registration guidance, coroner or equivalent guidance, Tell Us Once, Northern Ireland notification guidance, probate or confirmation authorities, tax authority, selected private notification guidance]
 

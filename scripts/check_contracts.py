@@ -116,15 +116,18 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
     prefix = PROFILE_PATH.relative_to(ROOT).as_posix()
     if profile.get("profile_version") != "okf-domain-profile.v1":
         errors.append(f"{prefix}: profile_version must be okf-domain-profile.v1")
-    if profile.get("status") != "draft":
-        errors.append(f"{prefix}: status must remain draft until owner approval")
+    if profile.get("status") != "approved":
+        errors.append(f"{prefix}: status must record owner approval")
     missing = sorted(section for section in REQUIRED_PROFILE_SECTIONS if not _nonempty(profile.get(section)))
     if missing:
         errors.append(f"{prefix}: missing non-empty sections: {', '.join(missing)}")
 
     approval = profile.get("approval", {})
-    if not isinstance(approval, dict) or approval.get("state") != "pending_owner_review":
-        errors.append(f"{prefix}: approval.state must be pending_owner_review")
+    if not isinstance(approval, dict) or approval.get("state") != "approved":
+        errors.append(f"{prefix}: approval.state must be approved")
+    for field in ("approved_by", "approved_at", "authorized_actions"):
+        if not isinstance(approval, dict) or not _nonempty(approval.get(field)):
+            errors.append(f"{prefix}: approval.{field} must be non-empty")
     blocked = set(approval.get("blocked_actions", [])) if isinstance(approval, dict) else set()
     for action in ("broad_source_acquisition", "public_bundle_publication"):
         if action not in blocked:
@@ -191,6 +194,7 @@ def validate_fixture(fixture: dict[str, Any], profile: dict[str, Any]) -> list[s
         "assertion_status",
         "profile",
         "synthetic",
+        "approval",
         "purpose",
         "scope",
         "dimensions",
@@ -211,12 +215,18 @@ def validate_fixture(fixture: dict[str, Any], profile: dict[str, Any]) -> list[s
         errors.append(f"{prefix}: fixture_version must be vertical-slice-fixture.v1")
     if fixture.get("profile") != profile.get("profile_version"):
         errors.append(f"{prefix}: profile must reference {profile.get('profile_version')}")
-    if fixture.get("status") != "draft":
-        errors.append(f"{prefix}: status must remain draft until profile approval")
+    if fixture.get("status") != "approved":
+        errors.append(f"{prefix}: status must record owner approval")
     if fixture.get("assertion_status") != "editorial-example":
         errors.append(f"{prefix}: contract itself must be editorial-example")
     if fixture.get("synthetic") is not True:
         errors.append(f"{prefix}: synthetic must be true")
+    fixture_approval = fixture.get("approval", {})
+    if not isinstance(fixture_approval, dict) or fixture_approval.get("state") != "approved":
+        errors.append(f"{prefix}: approval.state must be approved")
+    for field in ("approved_by", "approved_at"):
+        if not isinstance(fixture_approval, dict) or not _nonempty(fixture_approval.get(field)):
+            errors.append(f"{prefix}: approval.{field} must be non-empty")
 
     dimensions = set(fixture.get("dimensions", []))
     missing_dimensions = sorted(REQUIRED_DIMENSIONS - dimensions)
@@ -263,8 +273,9 @@ def validate_fixture(fixture: dict[str, Any], profile: dict[str, Any]) -> list[s
 
     source_requirements_value = fixture.get("source_requirements", {})
     source_requirements = source_requirements_value if isinstance(source_requirements_value, dict) else {}
-    if source_requirements.get("acquisition_status") != "not_started":
-        errors.append(f"{prefix}: source acquisition must remain not_started")
+    allowed_acquisition_statuses = {"authorized_not_started", "linked_references_registered"}
+    if source_requirements.get("acquisition_status") not in allowed_acquisition_statuses:
+        errors.append(f"{prefix}: source acquisition status is not governed")
     for field in ("required_fields", "candidate_families"):
         if not _nonempty(source_requirements.get(field)):
             errors.append(f"{prefix}: source_requirements.{field} must be non-empty")
@@ -280,7 +291,7 @@ def validate_fixture(fixture: dict[str, Any], profile: dict[str, Any]) -> list[s
     for status_path, status in _assertion_statuses(fixture):
         if status not in ALLOWED_ASSERTION_STATUSES:
             errors.append(f"{prefix}: {status_path} has unsupported status {status!r}")
-        if status == "official" and source_requirements.get("acquisition_status") == "not_started":
+        if status == "official" and source_requirements.get("acquisition_status") != "linked_references_registered":
             errors.append(f"{prefix}: {status_path} cannot be official before source acquisition")
     return errors
 

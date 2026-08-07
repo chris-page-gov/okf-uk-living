@@ -37,15 +37,15 @@ to a later pull request.
 
 ## Near-term delivery units
 
-1. Review and approve the draft `okf-domain-profile.v1`, including consumer
-   compatibility, assertion status, jurisdiction, freshness, rights and
-   validation policy.
-2. Review and approve the three versioned vertical-slice fixture contracts.
-3. Implement and validate the missed-rubbish-collection slice.
-4. Implement and validate the learning-to-drive and enforcement slice.
-5. Implement and validate the death, Tell Us Once and estate-administration
+The owner approved `okf-domain-profile.v1` and the three fixture contracts on
+2026-08-07. The active delivery sequence is now:
+
+1. Register the bounded source families for missed rubbish collection.
+2. Implement and validate the missed-rubbish-collection slice.
+3. Implement and validate the learning-to-drive and enforcement slice.
+4. Implement and validate the death, Tell Us Once and estate-administration
    slice.
-6. Review the three implemented slices before broader source acquisition or
+5. Review the three implemented slices before broader source acquisition or
    corpus growth.
 
 ## GitHub Pages publication

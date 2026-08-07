@@ -1,11 +1,16 @@
 fixture_version: vertical-slice-fixture.v1
 id: learning-to-drive-speeding
 title: Learning to drive through a speeding exception
-status: draft
+status: approved
 assertion_status: editorial-example
 profile: okf-domain-profile.v1
 synthetic: true
 purpose: Test a composed licensing journey, compulsory private dependencies, enforcement, deadlines and redress.
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
 
 scope:
   included:
@@ -153,7 +158,7 @@ redress:
     authority_status: pending_source_and_case_specific_legal_handoff
 
 source_requirements:
-  acquisition_status: not_started
+  acquisition_status: authorized_not_started
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [GB licensing authority, Northern Ireland licensing authority, test providers, police guidance, court and justice guidance, compulsory insurance guidance]
 

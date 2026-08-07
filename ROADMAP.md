@@ -15,8 +15,8 @@
   SHACL applicability.
 - Resolve repository code/documentation licensing.
 
-Draft profile and fixture contracts are implemented and locally validated.
-Owner approval and the unresolved licensing decisions remain gates.
+The owner approved the profile and three fixture contracts on 2026-08-07.
+Unresolved licensing decisions still gate redistribution and publication.
 
 ## Phase 2 — three vertical slices
 
@@ -26,7 +26,7 @@ Owner approval and the unresolved licensing decisions remain gates.
 
 Each slice must include the ordinary path, exception path, jurisdiction,
 provider, evidence, rule, time, outcome, redress and source provenance.
-Implementation begins only after the Phase 1 handoff is approved.
+Implementation is authorized within the approved bounded source scope.
 
 ## Phase 3 — ontology and curriculum
 

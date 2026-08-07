@@ -1,11 +1,16 @@
 fixture_version: vertical-slice-fixture.v1
 id: missed-rubbish-collection
 title: Missed rubbish collection
-status: draft
+status: approved
 assertion_status: editorial-example
 profile: okf-domain-profile.v1
 synthetic: true
 purpose: Test local responsibility, scheduled service failure, reporting and complaint boundaries.
+
+approval:
+  state: approved
+  approved_by: owner:chris-page-gov
+  approved_at: "2026-08-07"
 
 scope:
   included:
@@ -133,7 +138,7 @@ redress:
     authority_status: pending_source_and_exhaustion_rules
 
 source_requirements:
-  acquisition_status: not_started
+  acquisition_status: authorized_not_started
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [national council finder, national waste context, selected council service page, selected council complaints page]
 
