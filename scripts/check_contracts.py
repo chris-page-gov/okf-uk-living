@@ -129,12 +129,17 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
         if not isinstance(approval, dict) or not _nonempty(approval.get(field)):
             errors.append(f"{prefix}: approval.{field} must be non-empty")
     authorized = set(approval.get("authorized_actions", [])) if isinstance(approval, dict) else set()
-    if "exhaustive_link_only_reference_family_inventory" not in authorized:
-        errors.append(f"{prefix}: approval must authorize the link-only reference-family inventory")
+    for action in (
+        "exhaustive_link_only_reference_family_inventory",
+        "staged_leaf_reference_registration_against_approved_service_families",
+        "local_authority_and_regulator_denominator_research",
+    ):
+        if action not in authorized:
+            errors.append(f"{prefix}: approval must authorize {action}")
     blocked = set(approval.get("blocked_actions", [])) if isinstance(approval, dict) else set()
     for action in (
         "source_snapshot_acquisition",
-        "unbounded_leaf_source_acquisition_before_service_family_approval",
+        "unbounded_or_unstaged_leaf_source_acquisition",
         "public_bundle_publication",
     ):
         if action not in blocked:
@@ -188,6 +193,10 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: validation commands must include scripts/check_inventory.py")
     if not any("scripts/check_rights.py" in str(command) for command in commands):
         errors.append(f"{prefix}: validation commands must include scripts/check_rights.py")
+    if not any("scripts/check_service_denominator.py" in str(command) for command in commands):
+        errors.append(f"{prefix}: validation commands must include scripts/check_service_denominator.py")
+    if not any("scripts/check_corpus_policy.py" in str(command) for command in commands):
+        errors.append(f"{prefix}: validation commands must include scripts/check_corpus_policy.py")
     if not isinstance(validation, dict) or validation.get("local_only_until_publication_request") is not True:
         errors.append(f"{prefix}: validation must retain the local-only publication boundary")
 

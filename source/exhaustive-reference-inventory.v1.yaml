@@ -681,6 +681,61 @@ reference_families:
         domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
         summary: Northern Ireland index for HSC access, conditions, GPs, urgent care and provider discovery.
 
+  - id: ons-geography-identifiers
+    owner: Office for National Statistics
+    jurisdiction: uk-wide
+    authority_role: authoritative_administrative_geography_identifiers_and_history
+    rights_decision: host:www.ons.gov.uk
+    observed_at: "2026-08-07"
+    access_method: public_html_and_open_geography_downloads
+    version_model: dated_names_codes_lookups_and_code_history
+    update_cadence: recheck_vintage_before_each_local_authority_acquisition_wave
+    limitations: >-
+      GSS codes identify geographic areas and vintages; they do not establish
+      which body delivers a service. Some geography products include additional
+      Ordnance Survey, Royal Mail, GeoPlace or Northern Ireland rights.
+    references:
+      - id: ons-geography-names-codes-lookups
+        title: Names, codes and lookups
+        resource: https://www.ons.gov.uk/methodology/geography/geographicalproducts/namescodesandlookups
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, later-life]
+        summary: ONS index for definitive names, GSS codes, geographic relationships, lookups and code history across UK geographies.
+      - id: ons-administrative-names-and-codes
+        title: Names and codes for administrative geographies
+        resource: https://www.ons.gov.uk/methodology/geography/geographicalproducts/namescodesandlookups/namesandcodeslistings/namesandcodesforadministrativegeography
+        source_updated_at: "2023-01-03"
+        domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, later-life]
+        summary: Official administrative-area listings using nine-character GSS codes for local authorities and related UK geography types.
+
+  - id: nhs-organisation-data-service
+    owner: NHS England
+    jurisdiction: england-and-wales-with-declared-wider-coverage
+    authority_role: authoritative_health_and_social_care_organisation_identifiers
+    rights_decision: host:digital.nhs.uk
+    observed_at: "2026-08-07"
+    access_method: public_html_and_open_access_api
+    version_model: live_organisation_reference_data_with_history_and_relationships
+    update_cadence: recheck_coverage_and_api_roadmap_before_each_health_acquisition_wave
+    limitations: >-
+      ODS coverage varies by organisation type and geography. The ORD API is
+      under review for deprecation and is intended to support health and social
+      care delivery, so the project records identifiers manually and does not
+      start bulk acquisition.
+    references:
+      - id: nhs-ods-service
+        title: Organisation Data Service
+        resource: https://digital.nhs.uk/services/organisation-data-service
+        source_updated_at: "2026-05-08"
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: NHS England reference service for unique ODS organisation and site codes across health and social care.
+      - id: nhs-ods-data-coverage
+        title: Organisation Data Service data coverage
+        resource: https://digital.nhs.uk/services/organisation-data-service/ods-data-coverage
+        source_updated_at: "2026-05-08"
+        domains: [health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Official coverage and update-cadence evidence for ODS organisation types, geographies, relationships and reference-data products.
+
 standards_and_tooling_references:
   - id: cpsv-ap-3.2.0
     title: Core Public Service Vocabulary Application Profile 3.2.0
@@ -800,7 +855,7 @@ coverage:
     gap: no_suitable_authoritative_reference_family_established
   local_default:
     status: partial
-    references: [govuk-find-local-council, mygov-organisations, govwales-local-government, nidirect-local-councils]
+    references: [govuk-find-local-council, mygov-organisations, govwales-local-government, nidirect-local-councils, ons-administrative-names-and-codes]
     gap_ids: [GAP-LOCAL-LEAF, GAP-LOCAL-TOPOLOGY]
   domains:
     - id: before-birth-and-starting-family
@@ -927,15 +982,17 @@ coverage:
 gaps:
   - id: GAP-LOCAL-LEAF
     severity: high
+    decision_status: policy_approved_implementation_pending
     scope: all_24_local_cells
     finding: Authority directories exist, but current responsible-provider and redress pages are not registered for every locally delivered service family.
-    owner_follow_up: Approve a local coverage model, including whether to enumerate every authority or use governed representative and exception samples.
+    owner_follow_up: Build the exhaustive active-authority registry and representative-plus-material-exceptions leaf coverage defined in corpus-acquisition-policy.v1.
     blocks: complete_250_to_400_service_family_corpus
   - id: GAP-LOCAL-TOPOLOGY
     severity: high
+    decision_status: identifiers_approved_implementation_pending
     scope: england_and_cross_border_local_services
     finding: Council tiers, combined authorities, health geographies, police areas and contracted providers do not share one stable responsibility boundary.
-    owner_follow_up: Approve authoritative geography identifiers and topology sources before local service identity is generated.
+    owner_follow_up: Implement dated GSS identifiers, applicable ODS codes and source-native fallbacks without treating postcodes as stable identity.
     blocks: postcode_or_geography_based_navigation
   - id: GAP-WALES-CITIZEN-ROUTES
     severity: high
@@ -945,27 +1002,31 @@ gaps:
     blocks: complete_wales_leaf_route_coverage
   - id: GAP-HEALTH-AUTOMATION-RIGHTS
     severity: high
+    decision_status: closed_manual_link_only
     scope: scotland_wales_northern_ireland_health
     finding: NHS inform prohibits scraping without permission; NHS 111 Wales reserves Crown copyright; HSCNI permits only attributed non-commercial reproduction.
-    owner_follow_up: Seek provider permission or retain manual link-and-summary authoring for these health source families.
-    blocks: unattended_health_directory_acquisition
+    owner_follow_up: No current owner action; reconsider provider permission only if an approved wave requires automated extraction.
+    blocks: automated_health_directory_acquisition_only
   - id: GAP-PRIVATE-DEPENDENCIES
     severity: high
+    decision_status: regulator_first_policy_approved_mapping_pending
     scope: banks_insurers_funeral_directors_landlords_employers_transport_operators_and_advisers
     finding: No single authoritative, licence-compatible denominator covers every private dependency required by the proposed journeys.
-    owner_follow_up: Approve regulator-first discovery rules and decide when representative providers are acceptable.
+    owner_follow_up: Map regulator, mandatory-register and statutory-redress denominators to the approved service families.
     blocks: complete_dependency_and_handoff_graphs
   - id: GAP-SECTOR-REDRESS
     severity: medium
+    decision_status: taxonomy_approved_mapping_pending
     scope: financial_housing_energy_legal_transport_health_and_education_redress
     finding: The four public-service ombudsman families are registered, but sector regulators, tribunals and ombudsmen are not yet exhaustively mapped to service families.
-    owner_follow_up: Approve a sector-redress denominator and escalation taxonomy before corpus expansion.
+    owner_follow_up: Apply the approved five-level redress taxonomy using source-specific routes, prerequisites and deadlines.
     blocks: complete_redress_coverage
   - id: GAP-LEGAL-PROCEDURE-REVIEW
     severity: high
+    decision_status: roles_nominated_individual_acceptance_pending
     scope: legal_enforcement_eligibility_and_deadline_claims
     finding: Legislation and official guidance identify sources, but do not remove the need to review current procedure and jurisdiction for each claim.
-    owner_follow_up: Nominate an appropriate legal or policy reviewer for high-impact routes and deadline assertions.
+    owner_follow_up: Appoint consenting qualified legal and clinical reviewers before affected production-grade claims pass review.
     blocks: production_grade_legal_claims
   - id: GAP-LGSL-CURRENCY
     severity: medium
@@ -987,13 +1048,15 @@ gaps:
     blocks: trustworthy_bilingual_navigation
   - id: GAP-EXPLORER-LARGE-CORPUS
     severity: high
+    decision_status: conditionally_approved_pending_REV_001_through_REV_004
     scope: colour_facets_timeline_graph_and_large_bundle_loading
     finding: Explorer 0.5.7 exposes the colour-facet interface through its large-corpus descriptor and projection contract, while this repository currently builds only a small bundle.
-    owner_follow_up: Approve the large-corpus projection as the next bounded consumer-contract implementation after the open review findings are resolved.
+    owner_follow_up: Close REV-001 through REV-004 locally, then activate the already approved projection for local evaluation.
     blocks: colour_facet_review_and_phase_4_explorer_scale
   - id: GAP-SERVICE-FAMILY-DENOMINATOR
     severity: high
+    decision_status: closed_owner_approved_293_families
     scope: phase_4_target_of_250_to_400_service_families
-    finding: The reference-family denominator is complete, but the canonical service-family list and its 250-to-400 target members have not yet been selected.
-    owner_follow_up: Approve a staged service-family denominator derived from these indexes before leaf acquisition begins.
-    blocks: phase_4_corpus_completion_measure
+    finding: The owner-approved service-family-denominator.v1 names 293 normalized planning families in three staged waves.
+    owner_follow_up: No further owner decision; register leaf references in the approved waves and report coverage against 293.
+    blocks: none_for_staged_link_registration

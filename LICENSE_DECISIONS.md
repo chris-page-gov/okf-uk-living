@@ -11,7 +11,7 @@ Machine-readable record: [source/rights-decisions.v1.yaml](source/rights-decisio
 These determinations set the rights boundary for local authoring and testing.
 The owner separately authorized exhaustive link-only reference-family
 discovery on 2026-08-07. They do not authorize snapshots, source-content
-redistribution, unbounded leaf acquisition, public repository visibility,
+redistribution, unbounded or unstaged leaf acquisition, public repository visibility,
 GitHub Pages deployment or publication of a bundle.
 
 ## Repository-authored material
@@ -30,9 +30,9 @@ source content.
 ## Acquired source families
 
 “Acquired” presently means a registered HTTPS reference. The exhaustive
-inventory contains 85 new references and includes the 53 links in the three
-bounded source registers: 138 external reference records and no downloaded
-snapshots. All 23 source hostnames, plus the standards and Explorer families,
+inventory contains 89 new references and includes the 53 links in the three
+bounded source registers: 142 external reference records and no downloaded
+snapshots. All 25 source hostnames, plus the standards and Explorer families,
 are mapped to dated evidence in the rights register.
 
 The operative policy is deliberately uniform even where a source permits
@@ -55,7 +55,7 @@ The registered families are:
 | Restricted national health portals | NHS inform, NHS 111 Wales and HSCNI online services | NHS inform limits use to personal/non-commercial purposes and prohibits scraping without permission; NHS 111 Wales reserves Crown copyright; HSCNI permits attributed non-commercial reproduction. No content is copied. |
 | Invest Northern Ireland bespoke terms | nibusinessinfo.co.uk | Crown and Invest NI material have distinct terms, republication needs written permission and images are excluded. Use links and original summaries only. |
 
-Evidence URLs and the observation date for each of the 23 host decisions are
+Evidence URLs and the observation date for each of the 25 host decisions are
 recorded in `source/rights-decisions.v1.yaml`. An unavailable or ambiguous
 licence is not interpreted as permission.
 

@@ -19,11 +19,18 @@ Ireland, again with no snapshots or source-content redistribution.
 
 The owner-authorized
 [exhaustive reference inventory](exhaustive-reference-inventory.v1.yaml) adds
-85 discovery, standards and consumer references across all 24 proposed
+89 discovery, standards and consumer references across all 24 proposed
 life-course domains and includes the 53 implemented-slice references. Its 120
 domain/reference-jurisdiction cells comprise 96 covered national discovery
 cells and 24 partial local cells. It is a link-and-original-summary inventory,
-not a source snapshot or an approved 250–400 leaf-service denominator.
+not a source snapshot or leaf-service assertion set.
+
+The owner-approved [293-family denominator](service-family-denominator.v1.yaml)
+names the staged planning measure for future link registration. Its normalized
+names are not official service identities. Staged acquisition also follows the
+[corpus acquisition policy](../profiles/corpus-acquisition-policy.v1.yaml),
+including the local-authority, identifier, health, regulator, redress and
+specialist-review boundaries.
 
 The approved [rights decisions](rights-decisions.v1.yaml) map every registered
 source host to a licence family, dated official evidence and the operative

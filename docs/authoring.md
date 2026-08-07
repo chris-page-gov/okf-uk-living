@@ -63,7 +63,16 @@ The owner separately authorized the exhaustive link-only reference-family
 inventory on 2026-08-07. That authorization covers URLs, owners,
 jurisdictions, dates, dated rights decisions, original summaries and gaps for
 the 24-domain denominator. It does not authorize snapshots, source-content
-redistribution, unbounded leaf acquisition or publication.
+redistribution, unbounded or unstaged leaf acquisition or publication.
+
+The owner-approved
+[`service-family-denominator.v1`](../source/service-family-denominator.v1.yaml)
+contains 293 normalized planning families in three waves. The
+[`corpus-acquisition-policy.v1`](../profiles/corpus-acquisition-policy.v1.yaml)
+governs local-authority coverage, GSS and applicable ODS identifiers, manual
+health links, regulator-first private dependencies, sector redress and
+specialist-review gates. A family name authorizes staged source registration;
+it is not an official assertion that routes or rules are uniform.
 
 The approved [rights register](../source/rights-decisions.v1.yaml) now resolves
 the repository and current linked-source decisions without expanding the use
@@ -135,6 +144,8 @@ uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```

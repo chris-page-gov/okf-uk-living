@@ -45,7 +45,7 @@ but four provenance, source-handoff and notice findings remain open. The sample
 is reviewable, but it is not yet a frozen publication candidate.
 
 The owner separately authorized exhaustive link-only reference-family
-discovery on 2026-08-07. `INVENTORY-001` is complete with 138 external records,
+discovery on 2026-08-07. `INVENTORY-001` is complete with 142 external records,
 120 assessed coverage cells and 12 actionable gaps. This planning asset does
 not change the sample release gates or authorize snapshots, broad leaf
 acquisition, CI or publication.
@@ -64,11 +64,14 @@ The active sequence is defined in the
 6. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
    the exact site in a real browser.
 
-For the later complete-corpus track, the next owner gate is `CORPUS-001`:
-approve a staged 250–400 service-family denominator and disposition the local
-topology, health-permission, private-dependency, redress, freshness, bilingual
-identity and large-corpus Explorer gaps in the
-[reference gap analysis](research/exhaustive-reference-gap-analysis.md).
+For the later complete-corpus track, `CORPUS-001` and `ACQPOL-001` are complete.
+The owner approved 293 named families, exhaustive-authority plus representative
+and exception local coverage, GSS and applicable ODS identifiers, manual
+link-only health acquisition, regulator-first private dependencies, sector
+redress and role-based specialist review. The remaining
+[reference gaps](research/exhaustive-reference-gap-analysis.md) are staged
+implementation, freshness/bilingual policy or external reviewer appointments;
+they do not block the four Explorer fixes and local colour-facet projection.
 
 The recommended release scope is the bounded three-slice educational sample
 without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim. This

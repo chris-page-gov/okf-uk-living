@@ -11,10 +11,12 @@ approval:
     - implementation_of_three_vertical_slices
     - licensing_and_rights_decisions
     - exhaustive_link_only_reference_family_inventory
+    - staged_leaf_reference_registration_against_approved_service_families
+    - local_authority_and_regulator_denominator_research
   blocked_actions:
     - source_snapshot_acquisition
     - source_content_redistribution
-    - unbounded_leaf_source_acquisition_before_service_family_approval
+    - unbounded_or_unstaged_leaf_source_acquisition
     - production_vocabulary_assertions
     - corpus_expansion_beyond_three_slices
     - public_bundle_publication
@@ -35,7 +37,7 @@ collection:
     - personalized eligibility, medical or legal decisions
     - real personal dossiers or production case management
     - unsupported equivalence across jurisdictions or source identities
-    - unbounded leaf acquisition before the 250-to-400 service-family denominator is approved
+    - unbounded or unstaged leaf acquisition outside the approved 293-family denominator and corpus policy
   denominators:
     - id: initial-vertical-slices
       target: 3
@@ -45,7 +47,9 @@ collection:
       coverage: England, Scotland, Wales and Northern Ireland
     - id: future-service-families
       target_range: 250-400
-      status: reference_family_inventory_complete_leaf_denominator_needs_owner_approval
+      target: 293
+      status: owner_approved_named_denominator
+      register: source/service-family-denominator.v1.yaml
     - id: exhaustive-reference-cells
       target: 120
       coverage: 24 domains by UK-or-England, Scotland, Wales, Northern Ireland and local reference scope
@@ -234,6 +238,8 @@ validation:
     - uv run --locked python scripts/check_contracts.py
     - uv run --locked python scripts/check_sources.py
     - uv run --locked python scripts/check_inventory.py
+    - uv run --locked python scripts/check_service_denominator.py
+    - uv run --locked python scripts/check_corpus_policy.py
     - uv run --locked python scripts/check_rights.py
     - uv run --locked python -m unittest discover -s tests
   fixture_contract: vertical-slice-fixture.v1
@@ -244,7 +250,7 @@ constraints:
   - authored Markdown and source files are the source of truth
   - generated outputs are rebuilt and never patched by hand
   - exhaustive reference-family discovery is authorized only for links, dated rights evidence and original summaries
-  - snapshots, source-content redistribution and unbounded leaf acquisition stay disabled
+  - snapshots, source-content redistribution and unbounded or unstaged leaf acquisition stay disabled
   - no personalized eligibility, legal or medical decisions
   - no real personal data
   - no unsupported jurisdictional or identity equivalence
@@ -258,11 +264,11 @@ gaps:
     status: partial
     blocks: final compatibility lock
   - id: source-family-register
-    status: complete_for_reference_family_denominator_and_three_implemented_slices
-    blocks: owner_approval_of_the_250_to_400_leaf_service_family_denominator
+    status: complete_for_reference_family_denominator_three_slices_and_approved_293_family_plan
+    blocks: staged_leaf_reference_implementation_and_review
   - id: exhaustive-reference-inventory
     status: complete_120_of_120_cells_with_24_local_cells_partial
-    blocks: local_leaf_topology_health_permissions_private_dependencies_and_large_corpus_projection
+    blocks: local_authority_registry_regulator_mappings_and_specialist_reviewer_appointments
   - id: ontology-predicate-registry
     status: planned
     blocks: governed semantic edge publication
@@ -292,6 +298,14 @@ decisions:
       On 2026-08-07 the owner authorized exhaustive link-only external
       reference-family discovery and gap analysis while retaining zero
       snapshots, no source-content redistribution and no publication.
+  - id: owner-approved-corpus-acquisition-policy
+    assertion_status: editorial-example
+    decision: >-
+      On 2026-08-07 the owner approved the 293-family staged denominator,
+      exhaustive-authority plus representative-and-exception local coverage,
+      GSS and applicable ODS identifiers, manual link-only health acquisition,
+      regulator-first private-dependency discovery, the governed redress
+      taxonomy and role-based specialist review nominations.
 
 evidence:
   - id: research-overview
@@ -322,6 +336,14 @@ evidence:
     resource: research/exhaustive-reference-gap-analysis.md
     observed_at: "2026-08-07"
     role: human review and owner follow-up handoff
+  - id: service-family-denominator
+    resource: source/service-family-denominator.v1.yaml
+    observed_at: "2026-08-07"
+    role: approved named 293-family denominator and staged acquisition waves
+  - id: corpus-acquisition-policy
+    resource: profiles/corpus-acquisition-policy.v1.yaml
+    observed_at: "2026-08-07"
+    role: approved local, identifier, health, regulator, redress, review and Explorer decisions
 
 consumer_lock:
   consumer: OKF Explorer small bundle

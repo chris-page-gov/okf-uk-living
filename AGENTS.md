@@ -50,6 +50,8 @@ uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```

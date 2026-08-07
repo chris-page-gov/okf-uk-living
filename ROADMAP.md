@@ -65,11 +65,12 @@ for a clearly labelled non-conformance three-slice sample.
 ## Phase 4 — complete life-course atlas
 
 - Complete the 24-domain by five-reference-jurisdiction inventory and gap
-  analysis. Completed on 2026-08-07 with 138 external records, 120 assessed
+  analysis. Completed on 2026-08-07 with 142 external records, 120 assessed
   cells, 12 gaps and zero snapshots.
-- Approve the staged 250–400 canonical service-family denominator and resolve
-  the local-topology, health-permission and private-dependency acquisition
-  rules before broad leaf acquisition.
+- Use the owner-approved 293-family staged denominator and corpus-acquisition
+  policy: exhaustive-authority plus representative-and-exception local
+  coverage, GSS/applicable ODS identifiers, manual health links,
+  regulator-first dependencies and governed sector redress.
 - Expand against declared GOV.UK, devolved-government, NHS and local-service
   denominators.
 - Add 40–50 end-to-end journeys and 250–400 canonical service families.

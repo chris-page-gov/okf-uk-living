@@ -49,7 +49,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   real-browser verification gates.
 - Dated local OKF Explorer 0.5.7 review evidence, exact consumer and bundle
   inputs, fixture traceability, and a four-item finding ledger.
-- Owner-authorized exhaustive reference-family inventory with 85 new external
+- Owner-authorized exhaustive reference-family inventory with 89 new external
   references, inclusion of the 53 implemented-slice references, 120 assessed
   domain/jurisdiction cells, original summaries and zero snapshots.
 - Actionable twelve-item gap analysis covering local topology and leaf routes,
@@ -57,6 +57,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   legal review, freshness, bilingual identity and Explorer large-corpus facets.
 - Offline inventory validation and regression tests for the declared
   denominator, source metadata, dated rights decisions and publication limits.
+- Owner-approved 293-family denominator with 24 domains, three staged waves and
+  executable count, identity, scope and authorization checks.
+- Corpus-acquisition policy for exhaustive-authority plus representative and
+  exception local coverage, dated GSS and applicable ODS identifiers, manual
+  health links, regulator-first private dependencies, governed sector redress
+  and role-based specialist review.
 
 ### Changed
 
@@ -82,12 +88,16 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   journeys passed, while relationship provenance, node build provenance,
   source handoff and licence-notice verification remain open and block a
   frozen candidate.
-- Expanded dated rights decisions from 16 to 23 source hosts and added W3C,
+- Expanded dated rights decisions from 16 to 25 source hosts and added ONS,
+  NHS ODS, W3C,
   LGSL and OKF Explorer determinations without relaxing link-and-summary-only
   source use or authorizing publication.
 - Recorded explicit owner authorization for exhaustive link-only reference
-  discovery while preserving the snapshot, redistribution, unbounded leaf
+  discovery while preserving the snapshot, redistribution, unbounded or unstaged leaf
   acquisition, CI and GitHub Pages gates.
+- Recorded owner approval of all six corpus-governance decisions while keeping
+  individual legal and clinical appointments, CI and publication separately
+  gated.
 
 ## [0.0.0] - 2026-08-07
 

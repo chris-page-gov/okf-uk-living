@@ -44,7 +44,7 @@ class RightsDecisionTests(unittest.TestCase):
 
     def test_all_registered_hosts_have_dated_decisions(self) -> None:
         decisions = self.register["host_decisions"]
-        self.assertEqual(23, len(decisions))
+        self.assertEqual(25, len(decisions))
         self.assertTrue(all(decision["evidence"]["observed_at"] for decision in decisions))
 
     def test_reference_standard_licences_are_explicit(self) -> None:

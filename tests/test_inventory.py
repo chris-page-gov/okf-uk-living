@@ -35,7 +35,7 @@ class ExhaustiveReferenceInventoryTests(unittest.TestCase):
 
     def test_inventory_includes_all_existing_slice_references(self) -> None:
         self.assertEqual(53, self.inventory["_validated_included_reference_count"])
-        self.assertEqual(85, self.inventory["_validated_inventory_reference_count"])
+        self.assertEqual(89, self.inventory["_validated_inventory_reference_count"])
 
     def test_every_new_reference_has_https_rights_date_and_original_summary(self) -> None:
         references = flatten_inventory_references(self.inventory)

@@ -8,7 +8,7 @@ Status: **reference-family inventory complete; three-slice release findings open
 The Reader and query journeys pass in OKF Explorer 0.5.7, but relationship and
 node provenance, browser-renderable source handoffs, and licence-notice
 verification must be resolved before a candidate is frozen. The GitHub
-repository is private; validation remains local-only, snapshots, unbounded leaf
+repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
 acquisition and CI remain disabled, and publication requires a separate
 explicit owner request.
 
@@ -16,6 +16,7 @@ explicit owner request.
 
 - [Research overview and generating prompt](research/overview.md)
 - [Exhaustive reference-family inventory and gap analysis](research/exhaustive-reference-gap-analysis.md)
+- [Approved corpus acquisition and review decisions](research/corpus-acquisition-decisions.md)
 - [OKF bundle root](index.md)
 - [Implementation roadmap](ROADMAP.md)
 - [Delivery planning](PLANNING.md)
@@ -32,6 +33,8 @@ explicit owner request.
 - [Driving and speeding linked-reference register](source/learning-to-drive-speeding.v1.yaml)
 - [Death, bereavement and estate linked-reference register](source/death-bereavement-estate.v1.yaml)
 - [Machine-readable exhaustive reference inventory](source/exhaustive-reference-inventory.v1.yaml)
+- [Approved 293-family denominator](source/service-family-denominator.v1.yaml)
+- [Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -74,6 +77,8 @@ uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```

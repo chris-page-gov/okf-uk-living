@@ -21,16 +21,16 @@ Machine-readable inventory:
 ## Result
 
 The external reference-family inventory is complete against its declared
-denominator. It contains 85 newly researched external references and includes
-the 53 references already registered for the three implemented slices: 138
+denominator. It contains 89 newly researched external references and includes
+the 53 references already registered for the three implemented slices: 142
 external reference records in total, with no source snapshots.
 
 The denominator is 24 life-course domains by five reference jurisdictions:
 UK-or-England discovery, Scotland, Wales, Northern Ireland and local delivery.
 All 120 cells are accounted for. The 96 national cells have an authoritative
 reference family; all 24 local cells are partial because authority directories
-exist but responsible leaf-service pages have not been selected for the future
-250–400 canonical service families.
+exist but responsible leaf-service pages have not yet been selected against the
+approved 293-family denominator.
 
 “Complete” here means that every declared reference-family cell and required
 capability has been assessed. It does not claim that every live service page,
@@ -47,11 +47,12 @@ discovery denominator, not evidence for the facts of a future service record.
 | nidirect | 14 | Northern Ireland citizen-service topics and council directory |
 | nibusinessinfo.co.uk | 2 | Northern Ireland business and innovation discovery |
 | Four national health directories | 4 | England, Scotland, Wales and Northern Ireland health-provider discovery |
+| Geography and organisation identifiers | 4 | ONS GSS geography names/codes/history and NHS ODS organisation identity/coverage |
 | Standards and Explorer | 10 | CPSV-AP, Open Referral, HSDS, SKOS, OWL, PROV-O, SHACL, LGSL and OKF Explorer |
 | Existing vertical-slice registers | 53 | Implemented rubbish, driving/enforcement and bereavement routes |
-| **Total** | **138** | Linked references and original project summaries; zero snapshots |
+| **Total** | **142** | Linked references and original project summaries; zero snapshots |
 
-The 85 new references have a URL, owner, jurisdiction, authority role,
+The 89 new references have a URL, owner, jurisdiction, authority role,
 observation date, source update value or explicit “not exposed” marker, a dated
 rights-decision link and an original project summary. The existing 53 records
 retain the same information through their `coverage` and `exclusions` fields,
@@ -111,30 +112,27 @@ current leaf sources.
 
 | Priority | Gap | What remains | Owner decision or follow-up |
 |---|---|---|---|
-| High | `GAP-SERVICE-FAMILY-DENOMINATOR` | The authoritative discovery layer exists, but the target 250–400 canonical service families are not yet named. | Approve a staged service-family list derived from the registered indexes. |
-| High | `GAP-LOCAL-LEAF` | All 24 local cells lack a complete set of current responsible-provider and complaint pages. | Choose enumeration of every authority or a governed representative-plus-exceptions model. |
-| High | `GAP-LOCAL-TOPOLOGY` | Councils, combined authorities, health geographies, police areas and contractors use different boundaries. | Approve authoritative geography identifiers and topology sources. |
+| Closed decision | `GAP-SERVICE-FAMILY-DENOMINATOR` | The owner approved 293 normalized families in three staged waves. | Implement link registration and measure coverage against the named denominator. |
+| High implementation | `GAP-LOCAL-LEAF` | All 24 local cells still need current responsible-provider and complaint coverage. | Build the exhaustive authority registry plus representative-archetype and material-exception leaf routes. |
+| High implementation | `GAP-LOCAL-TOPOLOGY` | Councils, combined authorities, health geographies, police areas and contractors use different boundaries. | Apply dated GSS codes, applicable ODS codes and source-native identifiers under the approved policy. |
 | High | `GAP-WALES-CITIZEN-ROUTES` | GOV.WALES is not a complete citizen transaction catalogue. | Confirm the operational Welsh delivery portals and bodies for each journey. |
-| High | `GAP-HEALTH-AUTOMATION-RIGHTS` | Scottish, Welsh and Northern Ireland health sources do not permit a common unattended acquisition model. | Seek permissions or retain manual link-and-summary authoring. |
-| High | `GAP-PRIVATE-DEPENDENCIES` | No single authoritative denominator covers banks, insurers, funeral directors, landlords, employers, transport operators and professional advisers. | Approve regulator-first discovery and rules for representative providers. |
-| High | `GAP-LEGAL-PROCEDURE-REVIEW` | Official guidance and legislation still require current procedural and jurisdictional review. | Nominate a suitable legal or policy reviewer for high-impact claims and deadlines. |
-| High | `GAP-EXPLORER-LARGE-CORPUS` | The repository produces a small bundle, while the colour facets use Explorer's large-corpus descriptor and projections. | Approve that projection contract after the four open Explorer findings are resolved. |
-| Medium | `GAP-SECTOR-REDRESS` | Sector regulators, tribunals and ombudsmen are not yet mapped to every service family. | Approve a sector-redress denominator and escalation taxonomy. |
+| Closed decision | `GAP-HEALTH-AUTOMATION-RIGHTS` | A common unattended acquisition model is inappropriate. | Keep all four health families manual, link-and-original-summary only; reconsider permission only for a specific future automation need. |
+| High implementation | `GAP-PRIVATE-DEPENDENCIES` | No single authoritative denominator covers all private dependencies. | Apply regulator-first discovery and record the provider-selection basis for required named dependencies. |
+| External appointment | `GAP-LEGAL-PROCEDURE-REVIEW` | Roles are nominated, but consenting qualified legal and clinical individuals are not appointed. | Obtain applicable reviewer acceptance before production-grade legal or medical claims. |
+| Conditional implementation | `GAP-EXPLORER-LARGE-CORPUS` | The local colour-facet projection is approved after the four Explorer findings close. | Close `REV-001` through `REV-004`, build and verify the large projection locally. |
+| Medium implementation | `GAP-SECTOR-REDRESS` | The five-level taxonomy is approved; service-family mappings remain incomplete. | Cite the actual provider, statutory, tribunal, regulator/ombudsman and court sequence for each family. |
 | Medium | `GAP-LGSL-CURRENCY` | The OGL-labelled LGSL catalogue record is dated 2014. | Confirm current ESD Services-list access, version and identifier policy. |
 | Medium | `GAP-FRESHNESS-AUTOMATION` | Devolved portals do not expose one shared update API. | Approve per-family review intervals and permitted automated metadata checks. |
 | Medium | `GAP-BILINGUAL-IDENTITY` | Welsh and English routes cannot be equated from labels or URLs alone. | Approve language-variant identity and equivalence rules. |
 
-## Recommended return sequence
+## Approved return decisions
 
-1. Approve or revise the staged 250–400 service-family denominator.
-2. Decide the local-authority coverage model and geography identifiers.
-3. Decide whether to seek health-provider permissions or keep those families
-   manual and link-only.
-4. Approve regulator-first rules for private dependencies and sector redress.
-5. Nominate reviewers for legal, medical and high-impact deadline claims.
-6. After the four existing Explorer findings are fixed, approve the
-   `okf-explorer-large-corpus.v1` projection needed for colour facets.
+On 2026-08-07 the owner approved all six requested governance decisions. The
+[decision handoff](corpus-acquisition-decisions.md) and machine-readable
+[policy](../profiles/corpus-acquisition-policy.v1.yaml) now govern the 293
+families, local model and identifiers, manual health acquisition,
+regulator-first dependencies, sector redress, specialist-review roles and the
+conditional Explorer projection.
 
-Until those decisions are made, the inventory supports bounded implementation
-planning and source discovery. It does not authorize broad leaf acquisition,
-source snapshots, CI or publication.
+The remaining ledger is implementation and specialist-review work. It does not
+authorize source snapshots, copied source content, CI or publication.

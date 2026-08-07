@@ -8,5 +8,9 @@ standards, rights, privacy, validation, constraints, gaps, decisions, evidence,
 consumer lock and dependency graph.
 
 The owner approved the profile and three fixture contracts on 2026-08-07.
-Bounded source-family registration and slice implementation may proceed; broad
-acquisition and publication stay disabled.
+The owner also approved the
+[`corpus-acquisition-policy.v1`](corpus-acquisition-policy.v1.yaml) and named
+[293-family denominator](../source/service-family-denominator.v1.yaml) on the
+same date. Staged link registration and authority/regulator denominator
+research may proceed; source snapshots, copied content, unbounded acquisition,
+CI and publication stay disabled.

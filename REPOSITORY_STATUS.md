@@ -7,9 +7,9 @@
   registry and publication shapes remain planned
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
-- Acquisition: 85 exhaustive-inventory references plus 53 implemented-slice
-  references, all links with zero snapshots; 23 source hosts and all standards
-  families have dated rights decisions; unbounded leaf acquisition is disabled
+- Acquisition: 89 exhaustive-inventory references plus 53 implemented-slice
+  references, all links with zero snapshots; 25 source hosts and all standards
+  families have dated rights decisions; unbounded or unstaged acquisition is disabled
 - Reference coverage: 24 domains by five reference jurisdictions gives 120
   assessed cells; 96 national cells are covered at discovery-family level and
   24 local cells are partial, with 12 actionable gaps
@@ -45,5 +45,7 @@
   release-scope approval or frozen manifest
 - Next gate: focused remediation and rerun of `REVIEW-001` and `COMPAT-001` as
   defined in `docs/review-and-publication-plan.md`
-- Later corpus gate: owner review of the staged 250–400 service-family
-  denominator and the [exhaustive gap analysis](research/exhaustive-reference-gap-analysis.md)
+- Later corpus policy: owner-approved 293-family denominator and governed local,
+  identifier, health, regulator, redress and reviewer-role decisions; staged
+  mappings and specialist appointments remain tracked in the
+  [exhaustive gap analysis](research/exhaustive-reference-gap-analysis.md)
