@@ -38,7 +38,7 @@ the target browser, as recorded in `REV-003`.
 
 | Input | Rerun value |
 |---|---|
-| Repository branch | `codex/explorer-provenance-large-corpus` (stacked review; not a frozen candidate) |
+| Repository implementation | `b36a574f55e3bbda0baaafd419712e0cee8738cf` on `codex/explorer-provenance-large-corpus` (stacked review; not a frozen candidate) |
 | Bundle | `okf-bundle.json`, SHA-256 `8f39c38997cdc6048df60390dccecfafa43080d87b1ee209b2259315a7ea200a` |
 | Bundle extent | 81 nodes, 318 relationships, 780,134 bytes |
 | Browser handoffs | 103 deterministic HTML files |

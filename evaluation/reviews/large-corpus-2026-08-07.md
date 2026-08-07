@@ -8,6 +8,8 @@ Reviewer: `codex:root`, following owner approval
 
 Result: **pass for local evaluation.**
 
+Implementation commit: `b36a574f55e3bbda0baaafd419712e0cee8738cf`
+
 This visible-browser review used OKF Explorer 0.5.7 at commit
 `babd00c994ac8450480d1d4b128ccbe58f01cbe0` and the generated
 `okf-explorer-large-corpus.v1` descriptor. It did not publish the repository,
