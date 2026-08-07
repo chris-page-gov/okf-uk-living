@@ -11,3 +11,8 @@ checksums and link-and-summary rights limit are intentional.
 The second bounded register covers
 [learning to drive and speeding](learning-to-drive-speeding.v1.yaml) with
 twenty official links and the same zero-snapshot and rights boundary.
+
+The third bounded register covers
+[death, bereavement and estate administration](death-bereavement-estate.v1.yaml)
+with twenty official links across England and Wales, Scotland and Northern
+Ireland, again with no snapshots or redistribution claim.

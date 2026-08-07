@@ -30,6 +30,14 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   normalized ontology; and a synthetic evidence-lineage journey.
 - Driving-slice semantic checks for exact providers, jurisdictions, source
   sets, assertion status, graph completeness and non-universal deadlines.
+- Bounded death, bereavement and estate register with 20 official linked
+  references and no acquired snapshots.
+- Third vertical slice with separate national registration routes; Tell Us
+  Once and Northern Ireland manual notification boundaries; England-and-Wales
+  probate, Scottish confirmation and Northern Ireland probate routes; private
+  dependencies; normalized ontology; and a synthetic journey.
+- Bereavement semantic checks for exact authority, jurisdiction, source-set,
+  notification-coverage, estate-process and graph-completeness boundaries.
 
 ### Changed
 
@@ -41,8 +49,11 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   sole-developer PR-only policy for `main`.
 - Advanced the missed-rubbish fixture acquisition state to
   `linked_references_registered`.
-- Advanced the driving fixture to `linked_references_registered`, leaving only
-  the bereavement source registration not started.
+- Advanced the driving fixture to `linked_references_registered` before its
+  implementation merged in PR #4.
+- Recorded PR #4 as merged and advanced the bereavement fixture to
+  `linked_references_registered`; all three approved denominators are now
+  registered.
 
 ## [0.0.0] - 2026-08-07
 

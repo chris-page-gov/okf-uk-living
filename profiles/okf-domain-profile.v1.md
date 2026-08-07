@@ -64,8 +64,7 @@ Approval should explicitly acknowledge that these remain open:
 - acquired-source rights and redistribution decisions;
 - the complete Explorer consumer inventory;
 - the governed predicate registry and SHACL shapes; and
-- the source-family register for bereavement; bounded missed-rubbish and
-  driving linked-reference registers are now implemented.
+- review of the three completed bounded source-family registers and slices.
 
 These gaps continue to block production assertions or publication where the
 machine-readable profile says they do.
@@ -82,6 +81,7 @@ machine-readable profile says they do.
 - [x] The three [fixture contracts](../evaluation/fixtures/README.md) are an
       adequate acceptance boundary.
 
-Bounded source registration may continue for bereavement. Missed rubbish is
-merged and the driving slice is implemented for review. Broad acquisition and
-publication remain disabled by the profile.
+All three bounded linked-reference registers and vertical slices are now
+implemented for review. This completes the approved implementation scope; it
+does not authorize broad acquisition, corpus expansion or publication, which
+remain disabled by the profile.

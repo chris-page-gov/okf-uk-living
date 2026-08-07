@@ -1,7 +1,7 @@
 ---
 type: "Jurisdiction Context"
 title: "England context"
-description: "England applicability context for selected local waste, Great Britain driving and England-and-Wales court routes."
+description: "England applicability context for selected waste, driving, registration, notification and England-and-Wales court routes."
 status: "observed"
 assertion_status: "normalized"
 observed_at: "2026-08-07"
@@ -19,6 +19,16 @@ sources:
   - id: "govuk-single-justice-procedure"
     title: "Single justice procedure notices"
     resource: "https://www.gov.uk/single-justice-procedure-notices"
+    author: "organisation:hm-courts-and-tribunals-service"
+    observed_at: "2026-08-07"
+  - id: "govuk-tell-us-once"
+    title: "Tell Us Once"
+    resource: "https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once"
+    author: "organisation:government-digital-service"
+    observed_at: "2026-08-07"
+  - id: "govuk-applying-for-probate"
+    title: "Applying for probate"
+    resource: "https://www.gov.uk/applying-for-probate"
     author: "organisation:hm-courts-and-tribunals-service"
     observed_at: "2026-08-07"
 ---
@@ -46,3 +56,11 @@ exception begins with the
 if the case reaches the relevant magistrates process, uses the
 [England and Wales court route](../services/england-wales-speeding-court-route.md).
 No Scottish or Northern Ireland court process is inferred.
+
+## Death, notification and estate administration
+
+The selected route uses [England and Wales death registration](../services/england-wales-death-registration.md),
+[Tell Us Once](../services/tell-us-once.md) within its current residence and
+coverage rules, and the [England and Wales probate route](../services/england-wales-probate-estate.md).
+Scottish confirmation and Northern Ireland registration or probate are not
+substituted.

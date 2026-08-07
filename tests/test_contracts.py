@@ -61,14 +61,14 @@ class ContractTests(unittest.TestCase):
     def test_bounded_source_acquisition_state_tracks_each_slice(self) -> None:
         for fixture in self.fixtures:
             with self.subTest(fixture=fixture["id"]):
-                registered = {"missed-rubbish-collection", "learning-to-drive-speeding"}
-                expected = "linked_references_registered" if fixture["id"] in registered else "authorized_not_started"
-                self.assertEqual(expected, fixture["source_requirements"]["acquisition_status"])
-                if fixture["id"] in registered:
-                    self.assertEqual(
-                        f"source/{fixture['id']}.v1.yaml",
-                        fixture["source_requirements"]["register"],
-                    )
+                self.assertEqual(
+                    "linked_references_registered",
+                    fixture["source_requirements"]["acquisition_status"],
+                )
+                self.assertEqual(
+                    f"source/{fixture['id']}.v1.yaml",
+                    fixture["source_requirements"]["register"],
+                )
 
     def test_validator_rejects_real_personal_context(self) -> None:
         fixture = deepcopy(self.fixtures[0])
@@ -78,6 +78,8 @@ class ContractTests(unittest.TestCase):
 
     def test_validator_rejects_official_status_before_acquisition(self) -> None:
         fixture = deepcopy(self.fixtures[0])
+        fixture["source_requirements"]["acquisition_status"] = "authorized_not_started"
+        fixture["source_requirements"].pop("register", None)
         fixture["journeys"]["ordinary"]["steps"][0]["assertion_status"] = "official"
         errors = validate_fixture(fixture, self.profile)
         self.assertTrue(any("cannot be official before source acquisition" in error for error in errors))
