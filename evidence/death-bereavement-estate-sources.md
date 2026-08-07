@@ -25,8 +25,10 @@ twenty-reference denominator for the third slice:
 - eight nidirect sources for registration, coroner involvement, manual
   notification, benefits, funeral, probate, no-will and debt boundaries.
 
-No page was snapshotted. Rights remain limited to linking and narrow factual
-summary pending reuse review. Observation on 2026-08-07 does not freeze a
+No page was snapshotted. The dated
+[rights decisions](../source/rights-decisions.v1.yaml) retain linking and
+original narrow summary as the permitted project use. Observation on
+2026-08-07 does not freeze a
 service's bodies, deadline, price, form, tax rule or court procedure. The
 current authority and actual document must be checked before use.
 

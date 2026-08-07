@@ -29,6 +29,7 @@ describe. The minimum update set is:
 | Scope, sequencing or gate | `PLANNING.md`, `ROADMAP.md` and `REPOSITORY_STATUS.md` |
 | Authoring model or validation rule | `docs/authoring.md` and `AGENTS.md` |
 | Local command or dependency | `README.md`, `AGENTS.md`, `Makefile`, `pyproject.toml` and `uv.lock` as applicable |
+| Licence or source-use decision | `LICENSE_DECISIONS.md`, `NOTICE.md`, `source/rights-decisions.v1.yaml`, domain profile and affected source/evidence records |
 | Publication state | `TRACKING.md`, `REPOSITORY_STATUS.md`, `CHANGELOG.md` and release evidence |
 
 The pull-request description must explain either which documents changed or
@@ -45,8 +46,9 @@ sequence is now:
 1. Review the death, Tell Us Once and estate-administration implementation.
 2. Review all three implemented slices against their approved fixture
    contracts and the provisional Explorer consumer lock.
-3. Resolve licensing, consumer-inventory and governed-predicate gates before
-   broader source acquisition or corpus growth.
+3. Review the completed licensing decision set, then resolve the
+   consumer-inventory and governed-predicate gates before broader source
+   acquisition or corpus growth.
 4. Await explicit owner direction for any work beyond the approved slices or
    any GitHub Pages publication.
 

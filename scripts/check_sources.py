@@ -12,6 +12,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "source"
+RIGHTS_REGISTER_NAME = "rights-decisions.v1.yaml"
+RECORDED_RIGHTS_POLICY = "link_and_summarize_source_family_decisions_recorded"
+RECORDED_RIGHTS_BASIS = "linked_reference_summary_only_source_family_decision_recorded"
 EXPECTED_MISSED_RUBBISH_IDS = {
     "govuk-missed-bin-collection",
     "coventry-missed-bin",
@@ -100,6 +103,8 @@ def load_source_registers() -> tuple[list[dict[str, Any]], list[str]]:
     registers: list[dict[str, Any]] = []
     errors: list[str] = []
     for path in sorted(SOURCE_DIR.glob("*.v1.yaml")):
+        if path.name == RIGHTS_REGISTER_NAME:
+            continue
         try:
             value = yaml.safe_load(path.read_text(encoding="utf-8"))
         except (OSError, yaml.YAMLError) as error:
@@ -134,6 +139,8 @@ def validate_source_register(register: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: snapshots_acquired must be false")
     if acquisition.get("broad_acquisition") is not False:
         errors.append(f"{prefix}: broad_acquisition must be false")
+    if acquisition.get("rights_policy") != RECORDED_RIGHTS_POLICY:
+        errors.append(f"{prefix}: acquisition.rights_policy must record source-family decisions")
 
     sources = register.get("sources", [])
     if not isinstance(sources, list):
@@ -155,8 +162,11 @@ def validate_source_register(register: dict[str, Any]) -> list[str]:
             errors.append(f"{prefix}: {source_id or index} resource must be an HTTPS URL")
         if source.get("checksum") != "not_applicable_no_snapshot":
             errors.append(f"{prefix}: {source_id or index} must not claim a snapshot checksum")
-        if "linked_reference_summary_only" not in str(source.get("rights_basis", "")):
-            errors.append(f"{prefix}: {source_id or index} rights basis must retain linked-summary limits")
+        if source.get("rights_basis") != RECORDED_RIGHTS_BASIS:
+            errors.append(
+                f"{prefix}: {source_id or index} rights basis must retain linked-summary limits "
+                "and record a source-family decision"
+            )
     if len(ids) != len(set(ids)):
         errors.append(f"{prefix}: source ids must be unique")
     slice_id = str(register.get("slice_id", ""))

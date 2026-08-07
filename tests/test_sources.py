@@ -54,6 +54,19 @@ class SourceRegisterTests(unittest.TestCase):
         errors = validate_source_register(register)
         self.assertTrue(any("linked-summary limits" in error for error in errors))
 
+    def test_rights_decisions_are_recorded_without_relaxing_use(self) -> None:
+        self.assertEqual(
+            "link_and_summarize_source_family_decisions_recorded",
+            self.register["acquisition"]["rights_policy"],
+        )
+        self.assertTrue(
+            all(
+                source["rights_basis"]
+                == "linked_reference_summary_only_source_family_decision_recorded"
+                for source in self.register["sources"]
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -136,8 +136,23 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
     rights = profile.get("rights", {})
     if not isinstance(rights, dict) or rights.get("publication_allowed") is not False:
         errors.append(f"{prefix}: rights.publication_allowed must be false")
-    if not isinstance(rights, dict) or rights.get("redistribution_allowed") is not False:
-        errors.append(f"{prefix}: rights.redistribution_allowed must be false")
+    for field in ("repository_code", "repository_documentation", "repository_ontology_terms"):
+        if not isinstance(rights, dict) or rights.get(field) != "MIT":
+            errors.append(f"{prefix}: rights.{field} must be MIT")
+    if not isinstance(rights, dict) or rights.get("decision_register") != "source/rights-decisions.v1.yaml":
+        errors.append(f"{prefix}: rights.decision_register must identify the v1 rights register")
+    if not isinstance(rights, dict) or rights.get("source_content_redistribution_allowed") is not False:
+        errors.append(f"{prefix}: source content redistribution must be disallowed")
+    snapshots = rights.get("source_snapshots", {}) if isinstance(rights, dict) else {}
+    if not isinstance(snapshots, dict) or snapshots.get("acquired") is not False:
+        errors.append(f"{prefix}: rights.source_snapshots.acquired must be false")
+    if not isinstance(snapshots, dict) or snapshots.get("redistribution_allowed") is not False:
+        errors.append(f"{prefix}: source snapshot redistribution must be disallowed")
+    projections = rights.get("generated_projections", {}) if isinstance(rights, dict) else {}
+    if not isinstance(projections, dict) or projections.get("licence") != "MIT":
+        errors.append(f"{prefix}: generated projections must record MIT")
+    if not isinstance(projections, dict) or projections.get("redistribution_allowed") is not True:
+        errors.append(f"{prefix}: eligible generated projections must allow redistribution")
 
     privacy = profile.get("privacy", {})
     if not isinstance(privacy, dict) or privacy.get("real_personal_data_allowed") is not False:
@@ -162,6 +177,8 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: validation commands must include scripts/check_contracts.py")
     if not any("scripts/check_sources.py" in str(command) for command in commands):
         errors.append(f"{prefix}: validation commands must include scripts/check_sources.py")
+    if not any("scripts/check_rights.py" in str(command) for command in commands):
+        errors.append(f"{prefix}: validation commands must include scripts/check_rights.py")
     if not isinstance(validation, dict) or validation.get("local_only_until_publication_request") is not True:
         errors.append(f"{prefix}: validation must retain the local-only publication boundary")
 

@@ -13,10 +13,15 @@
 - Inventory actual Explorer consumers and pin their compatibility expectations.
 - Select and version OKF 0.2, CPSV-AP, Open Referral UK, SKOS, PROV-O and
   SHACL applicability.
-- Resolve repository code/documentation licensing.
+- Resolve repository code, documentation and ontology-term licensing.
+- Record dated source-family, OGL, CPSV-AP, Open Referral UK and HSDS rights
+  evidence without expanding source acquisition.
 
 The owner approved the profile and three fixture contracts on 2026-08-07.
-Unresolved licensing decisions still gate redistribution and publication.
+Repository-authored material is MIT, every registered source host has a dated
+rights decision, source content remains link-and-summary only, and no snapshots
+are approved for redistribution. Licensing completion does not authorize
+publication, which remains a separate explicit owner gate.
 
 ## Phase 2 — three vertical slices
 

@@ -38,6 +38,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   dependencies; normalized ontology; and a synthetic journey.
 - Bereavement semantic checks for exact authority, jurisdiction, source-set,
   notification-coverage, estate-process and graph-completeness boundaries.
+- MIT licence for repository-authored code, documentation and ontology terms.
+- Dated machine-readable rights decisions covering every registered source
+  host, OGL attribution, CPSV-AP, Open Referral UK and HSDS.
+- Rights validation and regression tests for source-host coverage, exact OGL
+  attribution, standards terms, zero snapshots and generated projections.
+- Attribution and third-party notices for downstream users.
 
 ### Changed
 
@@ -54,6 +60,9 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Recorded PR #4 as merged and advanced the bereavement fixture to
   `linked_references_registered`; all three approved denominators are now
   registered.
+- Replaced pending reuse markers with recorded source-family decisions while
+  retaining link-and-summary-only use and prohibiting source-content and
+  snapshot redistribution.
 
 ## [0.0.0] - 2026-08-07
 

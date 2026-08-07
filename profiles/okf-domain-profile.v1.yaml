@@ -9,6 +9,7 @@ approval:
   authorized_actions:
     - bounded_source_family_registration
     - implementation_of_three_vertical_slices
+    - licensing_and_rights_decisions
   blocked_actions:
     - broad_source_acquisition
     - production_vocabulary_assertions
@@ -165,13 +166,27 @@ standards:
     applicability: planned
 
 rights:
-  repository_code: unresolved
-  repository_documentation: unresolved
-  acquired_sources: require_source_family_decision
+  repository_code: MIT
+  repository_documentation: MIT
+  repository_ontology_terms: MIT
+  decision_register: source/rights-decisions.v1.yaml
+  acquired_sources: source_family_decisions_recorded
   linked_references: links_and_summaries_only
-  redistribution_allowed: false
+  source_content_redistribution_allowed: false
+  source_snapshots:
+    acquired: false
+    redistribution_allowed: false
+  generated_projections:
+    licence: MIT
+    redistribution_allowed: true
+    rule: >-
+      Only repository-authored structure, original summaries, unprotected
+      facts and links; embedded upstream expression retains upstream terms and
+      requires a new compatibility decision.
   publication_allowed: false
-  rule: Absence of a recorded rights decision blocks redistribution and publication.
+  rule: >-
+    Licensing decisions do not authorize publication; an explicit owner
+    request and release validation remain required.
 
 privacy:
   real_personal_data_allowed: false
@@ -211,6 +226,7 @@ validation:
     - uv run --locked python scripts/check_okf.py
     - uv run --locked python scripts/check_contracts.py
     - uv run --locked python scripts/check_sources.py
+    - uv run --locked python scripts/check_rights.py
     - uv run --locked python -m unittest discover -s tests
   fixture_contract: vertical-slice-fixture.v1
   release_validation_required: true
@@ -227,8 +243,8 @@ constraints:
 
 gaps:
   - id: licence-decisions
-    status: open
-    blocks: redistribution and publication
+    status: complete_for_repository_and_registered_source_families
+    blocks: none_within_link_and_summary_policy
   - id: explorer-consumer-inventory
     status: partial
     blocks: final compatibility lock
@@ -254,7 +270,10 @@ decisions:
     decision: GitHub Pages updates require an explicit owner request and frozen candidate.
   - id: linked-reference-first
     assertion_status: editorial-example
-    decision: Link and summarize references until source-family rights permit acquisition or redistribution.
+    decision: Link and summarize source content; do not redistribute it even when a source-family licence permits broader reuse.
+  - id: repository-mit
+    assertion_status: editorial-example
+    decision: License repository-authored code, documentation, ontology terms and eligible generated projections under MIT.
 
 evidence:
   - id: research-overview
@@ -273,6 +292,10 @@ evidence:
     resource: https://www.gov.uk/government/publications/open-standards-for-government/record-and-share-information-about-public-services-in-local-authorities
     observed_at: "2026-08-07"
     role: local-service mapping reference
+  - id: rights-decisions
+    resource: source/rights-decisions.v1.yaml
+    observed_at: "2026-08-07"
+    role: dated rights decisions and evidence for repository and registered source families
 
 consumer_lock:
   consumer: OKF Explorer small bundle

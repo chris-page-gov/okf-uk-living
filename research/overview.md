@@ -124,6 +124,13 @@ It covers services, organisations, locations, eligibility, schedules, costs and
 required documents. CPSV-AP and Open Referral UK should therefore be mapped
 together rather than inventing everything locally.
 
+The [rights decision](../LICENSE_DECISIONS.md) records the licensing boundary
+for those references: CPSV-AP 3.2.0 is CC BY 4.0; the Open Referral UK website
+places most content under the OGL but does not state a Creative Commons version
+for its GitHub “CC BY-SA” label; and the current HSDS documentation is CC BY-SA
+4.0. This project currently links to the standards and maps terminology in
+original words. It does not copy their specification text or claim conformance.
+
 SKOS would handle controlled vocabularies and broader/narrower navigation;
 OWL/RDFS would define classes and relationships; PROV-O would record
 derivation; SHACL would validate publication rules. These roles match the

@@ -25,8 +25,10 @@ twenty-reference denominator for the second slice:
 - separate court and appeal evidence for England and Wales and Scotland; and
 - separate Northern Ireland notice, fixed-penalty and appeal evidence.
 
-No page was snapshotted. Rights remain limited to linking and narrow factual
-summary pending reuse review. Observation on 2026-08-07 does not freeze a
+No page was snapshotted. The dated
+[rights decisions](../source/rights-decisions.v1.yaml) retain linking and
+original narrow summary as the permitted project use. Observation on
+2026-08-07 does not freeze a
 deadline, price, eligibility rule, notice instruction or court procedure;
 current official material and the actual notice must be checked before use.
 

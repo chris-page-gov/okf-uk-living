@@ -21,6 +21,12 @@ and the Northern Ireland manual-notification boundary, funeral dependencies,
 and three estate-authority routes. It contains no snapshots or immutable
 envelope checksums.
 
+The [rights-decision register](rights-decisions.v1.yaml) records an approved,
+dated decision for every hostname in these three registers. Openly licensed
+and restrictively licensed sources use the same conservative project policy:
+link to the source and summarize it in original words; do not redistribute its
+page content. No absence or ambiguity of licence is interpreted as permission.
+
 Initial research references also include:
 
 - GOV.UK services and information browse hierarchy;
@@ -36,3 +42,8 @@ Before any future snapshot acquisition, record for each source its owner,
 authority role, access method, identifier and version model, update cadence,
 rights basis, coverage denominator, exclusions, observation time and immutable
 envelope checksum.
+
+Repository-authored generated projections may use MIT when they contain no
+embedded source expression. A projection containing upstream expression must
+preserve the applicable OGL, Creative Commons or provider terms and requires a
+new compatibility decision before redistribution.
