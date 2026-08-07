@@ -49,9 +49,32 @@ EXPECTED_DRIVING_SPEEDING_IDS = {
     "nidirect-fixed-penalties",
     "nidirect-appealing-verdict",
 }
+EXPECTED_BEREAVEMENT_IDS = {
+    "govuk-register-a-death",
+    "govuk-tell-us-once",
+    "govuk-arrange-funeral",
+    "govuk-applying-for-probate",
+    "govuk-value-estate",
+    "govuk-probate-estate",
+    "govuk-inheritance-tax",
+    "govuk-correcting-death-registration",
+    "nrs-registering-a-death",
+    "copfs-death-investigation",
+    "govscot-after-a-death",
+    "scotcourts-confirmation",
+    "nidirect-registering-a-death",
+    "nidirect-coroners",
+    "nidirect-who-to-tell",
+    "nidirect-bereavement-service",
+    "nidirect-arranging-funeral",
+    "nidirect-apply-probate",
+    "nidirect-no-will",
+    "nidirect-debt-after-death",
+}
 EXPECTED_SOURCE_IDS = {
     "missed-rubbish-collection": EXPECTED_MISSED_RUBBISH_IDS,
     "learning-to-drive-speeding": EXPECTED_DRIVING_SPEEDING_IDS,
+    "death-bereavement-estate": EXPECTED_BEREAVEMENT_IDS,
 }
 REQUIRED_SOURCE_FIELDS = {
     "id",

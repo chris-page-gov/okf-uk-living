@@ -19,3 +19,10 @@
   redress boundaries.
 - Added the normalized driving model and synthetic evidence-lineage journey
   with semantic regression checks.
+- Registered 20 official links for death, bereavement and estate administration
+  without acquiring snapshots.
+- Added separate national registration routes, Tell Us Once and Northern
+  Ireland manual notification, three estate-authority routes and required
+  private dependencies.
+- Added the normalized bereavement model and synthetic journey with semantic
+  regression checks for notification and estate non-equivalence.

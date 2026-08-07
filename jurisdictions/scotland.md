@@ -1,7 +1,7 @@
 ---
 type: "Jurisdiction Context"
 title: "Scotland context"
-description: "Scotland applicability context for selected local waste, Great Britain driving and Scottish prosecution routes."
+description: "Scotland applicability context for selected waste, driving, registration, notification, prosecution and confirmation routes."
 status: "observed"
 assertion_status: "normalized"
 observed_at: "2026-08-07"
@@ -20,6 +20,16 @@ sources:
     title: "Prosecution Code"
     resource: "https://www.copfs.gov.uk/publications/prosecution-code/html/"
     author: "organisation:crown-office-and-procurator-fiscal-service"
+    observed_at: "2026-08-07"
+  - id: "nrs-registering-a-death"
+    title: "Registering a death"
+    resource: "https://www.nrscotland.gov.uk/registration/registering-a-death"
+    author: "organisation:national-records-of-scotland"
+    observed_at: "2026-08-07"
+  - id: "scotcourts-confirmation"
+    title: "Guide to dealing with a deceased's estate in Scotland"
+    resource: "https://www.scotcourts.gov.uk/taking-action/dealing-with-a-deceaseds-estate-in-scotland/guide-to-dealing-with-a-deceaseds-estate-in-scotland"
+    author: "organisation:scottish-courts-and-tribunals-service"
     observed_at: "2026-08-07"
 ---
 
@@ -45,3 +55,11 @@ uses the [Great Britain notice route](../services/great-britain-speeding-notice.
 but then follows the
 [Scottish prosecution and court route](../services/scotland-speeding-prosecution-route.md).
 The England and Wales single justice process is explicitly not imported.
+
+## Death, notification and estate administration
+
+The selected route uses [Scottish death registration](../services/scotland-death-registration.md),
+[Tell Us Once](../services/tell-us-once.md) within its current residence and
+coverage rules, and [Scottish confirmation](../services/scotland-confirmation-estate.md).
+The observed eight-day registration rule and confirmation terminology remain
+Scottish and are not generalized across the UK.

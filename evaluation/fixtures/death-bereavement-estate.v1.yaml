@@ -51,19 +51,19 @@ actors:
     authority_assertion: editorial-example
   - id: certifying-or-coroner-body
     role: medical-certification_or_investigation
-    authority_assertion: pending_source
+    authority_assertion: official_by_jurisdiction
   - id: registration-authority
     role: death-registration
-    authority_assertion: pending_source
+    authority_assertion: official_by_jurisdiction
   - id: notification-service
     role: public-body-notification_or_manual-boundary
-    authority_assertion: pending_source
+    authority_assertion: official_by_jurisdiction_and_coverage
   - id: court-or-estate-authority
     role: grant_confirmation_or_equivalent
-    authority_assertion: pending_source
+    authority_assertion: official_by_jurisdiction
   - id: tax-authority
     role: tax_information_or_transfer
-    authority_assertion: pending_source
+    authority_assertion: official_with_case_specific_limits
 
 journeys:
   ordinary:
@@ -74,7 +74,7 @@ journeys:
         interaction: distinguish expected medical certification and coroner or equivalent involvement
         provider_role: certifying-or-coroner-body
         evidence: [synthetic-death-context, certification-or-referral-output]
-        rule: certification, referral and investigation rules remain pending source acquisition
+        rule: certification, referral and investigation rules are selected only from the registered jurisdictional sources
         time: statutory and operational timing retained only when sourced
         outcome: registration-input-or-investigation-boundary
         redress: correction or official-help route
@@ -83,7 +83,7 @@ journeys:
         interaction: use the jurisdiction-appropriate registration service
         provider_role: registration-authority
         evidence: [certification-or-referral-output, synthetic-informant-context]
-        rule: jurisdictional registration and informant rules remain pending source acquisition
+        rule: jurisdictional registration and informant rules remain attached to their registered official source
         time: registration timing and exceptions independently sourced
         outcome: registration-output-and-certificates
         redress: correction, delayed registration or registrar guidance
@@ -92,7 +92,7 @@ journeys:
         interaction: use Tell Us Once where officially available or record the jurisdictional alternative
         provider_role: notification-service
         evidence: [registration-output, synthetic-reference-details]
-        rule: availability, access and included-body rules remain pending source acquisition
+        rule: current coverage is sourced and uncovered bodies remain explicit
         time: availability, access and action timing retained
         outcome: notified-bodies-and-uncovered-bodies
         redress: service support and manual-notification fallback
@@ -101,7 +101,7 @@ journeys:
         interaction: identify probate, confirmation or other jurisdictional authority and intestacy branch
         provider_role: court-or-estate-authority
         evidence: [death-certificate, synthetic-will-status, estate-context]
-        rule: probate, confirmation, intestacy and authority rules remain pending source acquisition
+        rule: probate, confirmation, intestacy and authority remain distinct by jurisdiction and case context
         time: application, tax and validity dependencies sourced by jurisdiction
         outcome: grant-confirmation-equivalent-or-limitation
         redress: correction, caveat or court route only where officially supported
@@ -110,7 +110,7 @@ journeys:
         interaction: trace assets, debts, tax, distributions and closure without deciding a real estate
         provider_role: synthetic-representative-and-relevant-bodies
         evidence: [estate-authority-output, asset-and-debt-inventory]
-        rule: asset, debt, tax and distribution rules remain pending source acquisition
+        rule: registered guidance identifies boundaries but never decides a real estate
         time: sourced deadlines and retention periods remain attached to their authority
         outcome: synthetic-administration-checklist
         redress: professional or official guidance handoff
@@ -123,7 +123,7 @@ journeys:
         interaction: record availability, jurisdiction and bodies included or excluded
         provider_role: registration-authority-or-notification-service
         evidence: [jurisdiction, registration-output, current-service-source]
-        rule: notification-service coverage rules remain pending source acquisition
+        rule: Tell Us Once scope and the Northern Ireland manual route remain independently sourced
         time: observation time is mandatory because coverage can change
         outcome: covered-and-uncovered-body-list
         redress: official support route or manual fallback
@@ -132,7 +132,7 @@ journeys:
         interaction: follow separately evidenced routes for each required public or private body
         provider_role: synthetic-representative
         evidence: [death-certificate-or-accepted-alternative, account-or-reference-context]
-        rule: each body's accepted evidence and notification rule remains independently sourced
+        rule: each body's accepted evidence and notification rule must be checked independently
         time: each body retains its own deadline and observation time
         outcome: notification-ledger-with-unresolved-items
         redress: body-specific correction, complaint or escalation
@@ -141,7 +141,7 @@ journeys:
         interaction: distinguish no will, disputed authority, insolvent estate or cross-jurisdiction property without deciding the case
         provider_role: court-or-estate-authority
         evidence: [synthetic-exception-context, official-jurisdiction-guidance]
-        rule: disputed, intestate, insolvent and cross-jurisdiction rules remain pending source acquisition
+        rule: registered sources identify ordinary and no-will branches; disputed, insolvent and cross-jurisdiction cases require official or professional handoff
         time: case-specific deadlines require official or professional handoff
         outcome: appropriate-route-or-explicit-legal-boundary
         redress: court, professional advice or official guidance route
@@ -160,22 +160,23 @@ private_sector_dependencies:
 
 redress:
   - route: registration correction or registrar guidance
-    authority_status: pending_source_by_jurisdiction
+    authority_status: official_by_selected_jurisdiction
   - route: notification-service support or body-specific complaint
-    authority_status: pending_source
+    authority_status: official_where_selected_and_body_specific_elsewhere
   - route: court process or professional legal handoff
-    authority_status: pending_source_and_case_specific
+    authority_status: official_boundary_and_case_specific
 
 source_requirements:
-  acquisition_status: authorized_not_started
+  acquisition_status: linked_references_registered
+  register: source/death-bereavement-estate.v1.yaml
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [national death-registration guidance, coroner or equivalent guidance, Tell Us Once, Northern Ireland notification guidance, probate or confirmation authorities, tax authority, selected private notification guidance]
 
 known_unknowns:
-  - exact registration and certification differences selected for each nation
-  - current Tell Us Once availability, included bodies and access route by place
-  - estate thresholds, forms, tax dependencies, deadlines and redress routes
-  - which private organisations accept which evidence and through which channel
+  - current registration or investigation handling for a real death outside the selected ordinary route
+  - Tell Us Once bodies and access details after the 2026-08-07 observation
+  - case-specific estate thresholds, forms, tax dependencies, deadlines and redress routes
+  - each private organisation's current accepted evidence and notification channel
 
 competency_questions:
   - id: death-cq-1

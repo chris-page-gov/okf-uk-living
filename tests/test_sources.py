@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from check_sources import (  # noqa: E402
+    EXPECTED_BEREAVEMENT_IDS,
     EXPECTED_DRIVING_SPEEDING_IDS,
     EXPECTED_MISSED_RUBBISH_IDS,
     validate_source_register,
@@ -30,9 +31,11 @@ class SourceRegisterTests(unittest.TestCase):
         self.assertEqual(EXPECTED_MISSED_RUBBISH_IDS, {source["id"] for source in self.register["sources"]})
         driving = self.registers_by_slice["learning-to-drive-speeding"]
         self.assertEqual(EXPECTED_DRIVING_SPEEDING_IDS, {source["id"] for source in driving["sources"]})
+        bereavement = self.registers_by_slice["death-bereavement-estate"]
+        self.assertEqual(EXPECTED_BEREAVEMENT_IDS, {source["id"] for source in bereavement["sources"]})
 
-    def test_registered_denominator_has_thirty_three_links(self) -> None:
-        self.assertEqual(33, sum(len(register["sources"]) for register in self.registers))
+    def test_registered_denominator_has_fifty_three_links(self) -> None:
+        self.assertEqual(53, sum(len(register["sources"]) for register in self.registers))
 
     def test_no_snapshots_or_broad_acquisition(self) -> None:
         self.assertFalse(self.register["acquisition"]["snapshots_acquired"])

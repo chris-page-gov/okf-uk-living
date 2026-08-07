@@ -82,6 +82,10 @@ route nodes, responsible providers, jurisdictions, approved source sets,
 assertion statuses and required journey links. For enforcement or legal paths,
 the check must also preserve the notice-specific or court-specific deadline
 boundary and reject a synthetic journey presented as official advice.
+For bereavement paths, it must also preserve Tell Us Once coverage, the
+Northern Ireland manual-notification boundary, the exact national
+registration authority and the distinction between probate and Scottish
+confirmation.
 
 ## Build and check
 

@@ -38,15 +38,17 @@ to a later pull request.
 ## Near-term delivery units
 
 The owner approved `okf-domain-profile.v1` and the three fixture contracts on
-2026-08-07. The missed-rubbish slice is merged and the learning-to-drive and
-speeding slice is implemented for review. The active delivery sequence is now:
+2026-08-07. The missed-rubbish and learning-to-drive slices are merged, and
+the death and bereavement slice is implemented for review. The active delivery
+sequence is now:
 
-1. Review the learning-to-drive and speeding implementation and source register.
-2. Register the bounded source family for death, Tell Us Once and estate
-   administration.
-3. Implement and validate that bereavement slice.
-4. Review the three implemented slices before broader source acquisition or
-   corpus growth.
+1. Review the death, Tell Us Once and estate-administration implementation.
+2. Review all three implemented slices against their approved fixture
+   contracts and the provisional Explorer consumer lock.
+3. Resolve licensing, consumer-inventory and governed-predicate gates before
+   broader source acquisition or corpus growth.
+4. Await explicit owner direction for any work beyond the approved slices or
+   any GitHub Pages publication.
 
 ## GitHub Pages publication
 

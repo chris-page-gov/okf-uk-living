@@ -14,6 +14,13 @@ Northern Ireland learning routes, and nine for Great Britain, England and
 Wales, Scotland and Northern Ireland speeding-notice and court boundaries. It
 also contains no snapshots or immutable-envelope checksums.
 
+The third bounded linked-reference set is the
+[`death-bereavement-estate.v1` register](death-bereavement-estate.v1.yaml).
+It records twenty official pages for three registration routes, Tell Us Once
+and the Northern Ireland manual-notification boundary, funeral dependencies,
+and three estate-authority routes. It contains no snapshots or immutable
+envelope checksums.
+
 Initial research references also include:
 
 - GOV.UK services and information browse hierarchy;

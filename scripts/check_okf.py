@@ -127,6 +127,98 @@ DRIVING_SPEEDING_SUPPORTING_NODES = {
     "organisations/driving-instructor.md",
     "organisations/motor-insurer.md",
 }
+BEREAVEMENT_ROUTES = {
+    "services/england-wales-death-registration.md": {
+        "family": "register-a-death",
+        "jurisdiction": "england-and-wales",
+        "providers": {"local-register-office-england-wales"},
+        "sources": {"govuk-register-a-death", "govuk-correcting-death-registration"},
+    },
+    "services/scotland-death-registration.md": {
+        "family": "register-a-death",
+        "jurisdiction": "scotland",
+        "providers": {"scottish-registration-authority", "crown-office-and-procurator-fiscal-service"},
+        "sources": {"nrs-registering-a-death", "copfs-death-investigation"},
+    },
+    "services/northern-ireland-death-registration.md": {
+        "family": "register-a-death",
+        "jurisdiction": "northern-ireland",
+        "providers": {"general-register-office-northern-ireland", "coroners-service-northern-ireland"},
+        "sources": {"nidirect-registering-a-death", "nidirect-coroners"},
+    },
+    "services/tell-us-once.md": {
+        "family": "notify-organisations-after-a-death",
+        "jurisdiction": "england-scotland-wales:residence-specific",
+        "providers": {"tell-us-once-service"},
+        "sources": {"govuk-tell-us-once"},
+    },
+    "services/northern-ireland-death-notifications.md": {
+        "family": "notify-organisations-after-a-death",
+        "jurisdiction": "northern-ireland",
+        "providers": {"northern-ireland-bereavement-service"},
+        "sources": {"nidirect-who-to-tell", "nidirect-bereavement-service"},
+    },
+    "services/england-wales-probate-estate.md": {
+        "family": "administer-an-estate",
+        "jurisdiction": "england-and-wales",
+        "providers": {"hm-courts-and-tribunals-service", "hm-revenue-and-customs"},
+        "sources": {
+            "govuk-applying-for-probate",
+            "govuk-value-estate",
+            "govuk-probate-estate",
+            "govuk-inheritance-tax",
+        },
+    },
+    "services/scotland-confirmation-estate.md": {
+        "family": "administer-an-estate",
+        "jurisdiction": "scotland",
+        "providers": {"scottish-courts-and-tribunals-service", "hm-revenue-and-customs"},
+        "sources": {
+            "scotcourts-confirmation",
+            "govscot-after-a-death",
+            "govuk-value-estate",
+            "govuk-inheritance-tax",
+        },
+    },
+    "services/northern-ireland-probate-estate.md": {
+        "family": "administer-an-estate",
+        "jurisdiction": "northern-ireland",
+        "providers": {"northern-ireland-courts-and-tribunals-service", "hm-revenue-and-customs"},
+        "sources": {
+            "nidirect-apply-probate",
+            "nidirect-no-will",
+            "nidirect-debt-after-death",
+            "govuk-value-estate",
+            "govuk-inheritance-tax",
+        },
+    },
+}
+BEREAVEMENT_SUPPORTING_NODES = {
+    "services/register-a-death.md",
+    "services/notify-organisations-after-a-death.md",
+    "services/administer-an-estate.md",
+    "journeys/death-bereavement-estate.md",
+    "ontology/death-bereavement-estate.md",
+    "evidence/death-bereavement-estate-sources.md",
+    "jurisdictions/england.md",
+    "jurisdictions/scotland.md",
+    "jurisdictions/wales.md",
+    "jurisdictions/northern-ireland.md",
+    "organisations/local-register-office-england-wales.md",
+    "organisations/scottish-registration-authority.md",
+    "organisations/general-register-office-northern-ireland.md",
+    "organisations/coroners-service-northern-ireland.md",
+    "organisations/tell-us-once-service.md",
+    "organisations/northern-ireland-bereavement-service.md",
+    "organisations/hm-courts-and-tribunals-service.md",
+    "organisations/crown-office-and-procurator-fiscal-service.md",
+    "organisations/scottish-courts-and-tribunals-service.md",
+    "organisations/northern-ireland-courts-and-tribunals-service.md",
+    "organisations/hm-revenue-and-customs.md",
+    "organisations/funeral-provider.md",
+    "organisations/private-organisation-after-death.md",
+    "organisations/estate-practitioner.md",
+}
 
 
 def validate_missed_rubbish_slice(
@@ -251,6 +343,73 @@ def validate_driving_speeding_slice(
     return errors
 
 
+def validate_bereavement_slice(
+    nodes: dict[str, dict[str, object]], edges: list[dict[str, str]]
+) -> list[str]:
+    """Check the third slice's authority, notification and estate invariants."""
+
+    errors: list[str] = []
+    required = set(BEREAVEMENT_ROUTES) | BEREAVEMENT_SUPPORTING_NODES
+    missing = sorted(required - set(nodes))
+    errors.extend(f"bereavement slice is missing {path}" for path in missing)
+    if missing:
+        return errors
+
+    for path, expected in BEREAVEMENT_ROUTES.items():
+        node = nodes[path]
+        if node.get("type") != "Public Service Route":
+            errors.append(f"{path}: must be a Public Service Route")
+        if node.get("assertion_status") != "official":
+            errors.append(f"{path}: route assertion_status must be official")
+        if node.get("service_family") != expected["family"]:
+            errors.append(f"{path}: must retain service family {expected['family']}")
+        if node.get("jurisdiction") != expected["jurisdiction"]:
+            errors.append(f"{path}: jurisdiction must be {expected['jurisdiction']}")
+        provider_value = node.get("providers", node.get("provider", []))
+        provider_values = provider_value if isinstance(provider_value, list) else [provider_value]
+        if set(provider_values) != expected["providers"]:
+            errors.append(f"{path}: must retain its exact authority provider set")
+        if node.get("observed_at") != "2026-08-07":
+            errors.append(f"{path}: observed_at must preserve the source observation date")
+        sources = node.get("sources", [])
+        source_ids = {
+            str(source.get("id"))
+            for source in sources
+            if isinstance(source, dict) and source.get("id")
+        }
+        if source_ids != expected["sources"]:
+            errors.append(f"{path}: must cite its exact approved source set")
+
+    for family_path in (
+        "services/register-a-death.md",
+        "services/notify-organisations-after-a-death.md",
+        "services/administer-an-estate.md",
+    ):
+        if nodes[family_path].get("assertion_status") != "normalized":
+            errors.append(f"{family_path}: service family must be normalized")
+    journey = nodes["journeys/death-bereavement-estate.md"]
+    if journey.get("assertion_status") != "editorial-example" or journey.get("synthetic") is not True:
+        errors.append("bereavement journey must remain a synthetic editorial-example")
+    journey_text = " ".join(str(journey.get("body", "")).split())
+    if "not treated as a universal UK notification service" not in journey_text:
+        errors.append("bereavement journey must reject universal Tell Us Once coverage")
+    if "not combined into one UK estate process" not in journey_text:
+        errors.append("bereavement journey must reject a universal estate process")
+    evidence = nodes["evidence/death-bereavement-estate-sources.md"]
+    if evidence.get("assertion_status") != "normalized":
+        errors.append("bereavement evidence set must be normalized")
+
+    journey_targets = {
+        edge["target"]
+        for edge in edges
+        if edge["source"] == "journeys/death-bereavement-estate.md"
+    }
+    expected_journey_targets = required - {"journeys/death-bereavement-estate.md"}
+    for target in sorted(expected_journey_targets - journey_targets):
+        errors.append(f"bereavement journey must link to {target}")
+    return errors
+
+
 def main() -> int:
     bundle, errors = build_bundle()
     if errors:
@@ -271,6 +430,7 @@ def main() -> int:
             errors.append(f"{path_id}: research overview must declare sources")
     errors.extend(validate_missed_rubbish_slice(nodes, corpus["edges"]))
     errors.extend(validate_driving_speeding_slice(nodes, corpus["edges"]))
+    errors.extend(validate_bereavement_slice(nodes, corpus["edges"]))
     if errors:
         for error in errors:
             print(error)

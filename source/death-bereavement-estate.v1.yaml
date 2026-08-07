@@ -1,0 +1,252 @@
+register_version: source-register.v1
+slice_id: death-bereavement-estate
+status: linked_references_registered
+observed_at: "2026-08-07"
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  broad_acquisition: false
+  checksum_policy: not_applicable_without_snapshot
+  rights_policy: link_and_summarize_pending_reuse_review
+
+sources:
+  - id: govuk-register-a-death
+    owner: Government Digital Service
+    authority_role: uk_death_registration_locator
+    resource: https://www.gov.uk/register-a-death
+    access_method: public_html
+    version_model: live_service_locator
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: routes a user to the applicable UK or overseas registration service
+    exclusions: does not itself establish identical registration rules across the UK
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-tell-us-once
+    owner: Government Digital Service
+    authority_role: tell_us_once_service_guidance
+    resource: https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Tell Us Once availability for a person living in England, Scotland or Wales and its covered-government boundary
+    exclusions: unavailable where the person lived in Northern Ireland or permanently abroad; private organisations remain outside the service
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-arrange-funeral
+    owner: Government Digital Service
+    authority_role: england_wales_funeral_guidance
+    resource: https://www.gov.uk/after-a-death/arrange-the-funeral
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: funeral sequencing, private funeral-director dependency and payment boundary in England and Wales
+    exclusions: not a provider recommendation; Scotland and Northern Ireland differences remain independently sourced
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-applying-for-probate
+    owner: HM Courts and Tribunals Service
+    authority_role: england_wales_probate_guidance
+    resource: https://www.gov.uk/applying-for-probate
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: England and Wales probate need, application, will and no-will branches
+    exclusions: different rules apply in Scotland and Northern Ireland; no case-specific legal decision
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-value-estate
+    owner: HM Revenue and Customs
+    authority_role: estate_valuation_and_inheritance_tax_reporting_guidance
+    resource: https://www.gov.uk/valuing-estate-of-someone-who-died
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: estate valuation and reporting steps used before probate, confirmation or Northern Ireland probate
+    exclusions: values, reliefs, liability and reporting detail remain case-specific
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-probate-estate
+    owner: HM Revenue and Customs
+    authority_role: personal_representative_estate_administration_guidance
+    resource: https://www.gov.uk/probate-estate
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: assets, debts, tax and administration-period responsibilities of a personal representative
+    exclusions: no decision about a real estate, beneficiary, debt priority or professional need
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-inheritance-tax
+    owner: HM Revenue and Customs
+    authority_role: inheritance_tax_guidance
+    resource: https://www.gov.uk/inheritance-tax
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: current Inheritance Tax overview and routes to detailed reporting guidance
+    exclusions: no tax calculation, threshold assumption or liability decision in this bundle
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govuk-correcting-death-registration
+    owner: General Register Office
+    authority_role: england_wales_death_registration_correction
+    resource: https://www.gov.uk/correcting-a-death-registration
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: correction boundary and application route for an England or Wales death entry
+    exclusions: not a route for changing a correctly recorded fact or a Scottish or Northern Ireland registration
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nrs-registering-a-death
+    owner: National Records of Scotland
+    authority_role: scotland_death_registration_guidance
+    resource: https://www.nrscotland.gov.uk/registration/registering-a-death
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Scottish registration time, informant, MCCD, output and Tell Us Once handoff
+    exclusions: delay and investigation exceptions remain with the registrar and Procurator Fiscal route
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: copfs-death-investigation
+    owner: Crown Office and Procurator Fiscal Service
+    authority_role: scotland_death_investigation_guidance
+    resource: https://www.copfs.gov.uk/services/bereavement-support/guide-for-bereaved-family-members/deaths-investigation-video-script/
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: bereaved-family explanation of the Scottish sudden, suspicious, unexpected or unexplained death-investigation boundary
+    exclusions: no prediction of whether or how an individual death will be investigated
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: govscot-after-a-death
+    owner: Scottish Government
+    authority_role: scotland_bereavement_and_succession_guidance_collection
+    resource: https://www.gov.scot/collections/what-to-do-after-a-death-in-scotland/
+    access_method: public_html
+    version_model: dated_guidance_collection
+    update_cadence: check_for_current_replacement_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Scottish funeral, executor, succession and inheritance context
+    exclusions: collection includes dated guidance; current service and court pages take priority
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: scotcourts-confirmation
+    owner: Scottish Courts and Tribunals Service
+    authority_role: scotland_confirmation_guidance
+    resource: https://www.scotcourts.gov.uk/taking-action/dealing-with-a-deceaseds-estate-in-scotland/guide-to-dealing-with-a-deceaseds-estate-in-scotland
+    access_method: public_html
+    version_model: live_court_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: confirmation, executor authority, inventory and will or no-will branches in Scotland
+    exclusions: no legal advice; large, intestate, disputed and cross-border estates require the current court or professional route
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-registering-a-death
+    owner: General Register Office for Northern Ireland
+    authority_role: northern_ireland_death_registration_guidance
+    resource: https://www.nidirect.gov.uk/articles/registering-death-district-registrar
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland registration time, informant, MCCD, certificates and coroner exception
+    exclusions: no Tell Us Once claim and no route outside Northern Ireland
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-coroners
+    owner: Northern Ireland Courts and Tribunals Service
+    authority_role: northern_ireland_coroner_guidance
+    resource: https://www.nidirect.gov.uk/articles/coroners-post-mortems-and-inquests
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland coroner referral, investigation and registration-output boundary
+    exclusions: no prediction of an investigation, post-mortem or inquest in an individual case
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-who-to-tell
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_manual_death_notification_guidance
+    resource: https://www.nidirect.gov.uk/articles/who-tell-about-death
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: public and private bodies that may require separate notification in Northern Ireland
+    exclusions: each body's current evidence, account and notification conditions remain controlling
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-bereavement-service
+    owner: Department for Communities Northern Ireland
+    authority_role: northern_ireland_benefit_death_notification_service
+    resource: https://www.nidirect.gov.uk/articles/bereavement-service-reporting-death
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: reporting a death to the Northern Ireland Department for Communities benefit offices
+    exclusions: not Tell Us Once and not notification of every public or private body
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-arranging-funeral
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_funeral_guidance
+    resource: https://www.nidirect.gov.uk/articles/arranging-funeral
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland registration, funeral-provider, payment and probate dependencies
+    exclusions: not a provider recommendation and no entitlement or funding decision
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-apply-probate
+    owner: Northern Ireland Courts and Tribunals Service
+    authority_role: northern_ireland_probate_service
+    resource: https://www.nidirect.gov.uk/services/apply-probate
+    access_method: public_html
+    version_model: live_service_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland grant-of-representation application and required evidence
+    exclusions: individual authority, application validity and outcome remain with the Probate Office
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-no-will
+    owner: Northern Ireland Courts and Tribunals Service
+    authority_role: northern_ireland_intestacy_guidance
+    resource: https://www.nidirect.gov.uk/articles/what-do-if-there-no-will
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: Northern Ireland letters-of-administration and no-will branch
+    exclusions: no inheritance, entitlement or family-provision decision for a real estate
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot
+  - id: nidirect-debt-after-death
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_estate_debt_guidance
+    resource: https://www.nidirect.gov.uk/articles/debt-when-someone-dies
+    access_method: public_html
+    version_model: live_guidance_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_pending_reuse_review
+    coverage: estate, executor or administrator, debt and private-account boundaries in Northern Ireland
+    exclusions: no insolvency, liability, priority or distribution decision for a real estate
+    observed_at: "2026-08-07"
+    checksum: not_applicable_no_snapshot

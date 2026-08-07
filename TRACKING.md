@@ -14,8 +14,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | PROF-001 | Approve `okf-domain-profile.v1` | Complete | Approved by `owner:chris-page-gov` on 2026-08-07; bounded source registration authorized |
 | FIX-001 | Contract the three vertical-slice fixtures | Complete | Three synthetic v1 contracts approved with PROF-001 and validated locally |
 | SLICE-001 | Missed rubbish collection | Complete | Merged in PR #3 with four local routes and a 13-reference denominator |
-| SLICE-002 | Learning to drive and speeding exception | Review | GB/NI learning routes and three speeding court boundaries implemented with a 20-reference denominator; next gate is pull-request review |
-| SLICE-003 | Death, Tell Us Once and estate administration | Queued | Requires FIX-001 and four-nation exception boundaries |
+| SLICE-002 | Learning to drive and speeding exception | Complete | Merged in PR #4 with GB/NI learning routes, three speeding court boundaries and a 20-reference denominator |
+| SLICE-003 | Death, Tell Us Once and estate administration | Review | Three registration routes, Tell Us Once/NI notification split and three estate-authority routes implemented with a 20-reference denominator; next gate is pull-request review |
 | PUB-001 | Publish a frozen candidate to GitHub Pages | Blocked by design | Requires explicit owner publication request and all release gates |
 
 ## Current operating state
@@ -26,7 +26,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
 - GitHub Pages: not enabled and not updated.
-- Acquisition: two bounded registers contain 33 official links and zero
-  snapshots; the bereavement registration is authorized but not started;
-  broad acquisition remains disabled.
+- Acquisition: three bounded registers contain 53 official links and zero
+  snapshots; all approved slice denominators are registered and broad
+  acquisition remains disabled.
 - Public bundle URL: none.

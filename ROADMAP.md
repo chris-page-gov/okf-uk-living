@@ -28,10 +28,12 @@ Each slice must include the ordinary path, exception path, jurisdiction,
 provider, evidence, rule, time, outcome, redress and source provenance.
 Implementation is authorized within the approved bounded source scope.
 
-The missed-rubbish slice was merged in PR #3. The learning-to-drive and
-speeding slice is implemented for review with separate GB and Northern Ireland
-learning routes, three court/prosecution boundaries, compulsory private
-dependencies and a 20-reference denominator. Bereavement remains queued.
+The missed-rubbish slice was merged in PR #3 and the learning-to-drive slice
+in PR #4. The death and bereavement slice is implemented for review with
+separate national registration routes, the Tell Us Once/Northern Ireland
+notification boundary, three estate-authority routes, private dependencies and
+a 20-reference denominator. All three approved slices now exist; review is the
+gate before any wider corpus work.
 
 ## Phase 3 — ontology and curriculum
 
