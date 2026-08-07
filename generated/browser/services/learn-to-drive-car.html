@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn to drive a car — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Learn to drive a car</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>services/learn-to-drive-car.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Service Family&quot;
+title: &quot;Learn to drive a car&quot;
+description: &quot;Normalized family joining provisional entitlement, supervised learning, tests and full-licence output.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+jurisdiction: &quot;great-britain-or-northern-ireland&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;driving-speeding-source-register&quot;
+    title: &quot;Learning-to-drive and speeding linked-reference register&quot;
+    resource: &quot;../source/learning-to-drive-speeding.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Learn to drive a car
+
+This normalized family connects provisional entitlement, lawful supervised
+practice, theory test, practical test and full-licence output. It has separate
+<a href="great-britain-learn-to-drive-car.html">[Great Britain](great-britain-learn-to-drive-car.md)</a> and
+<a href="northern-ireland-learn-to-drive-car.html">[Northern Ireland](northern-ireland-learn-to-drive-car.md)</a> implementations.
+Their providers, residency conditions, learner rules, evidence and licence
+handoffs are not treated as interchangeable.
+
+An optional <a href="../organisations/driving-instructor.html">[driving instructor](../organisations/driving-instructor.md)</a>, a
+suitable vehicle and applicable <a href="../organisations/motor-insurer.html">[motor insurance](../organisations/motor-insurer.md)</a>
+are private dependencies around public licensing and testing. Neither buying a
+lesson nor holding a policy establishes a public entitlement.
+
+The <a href="../ontology/learning-to-drive-speeding.html">[ontology module](../ontology/learning-to-drive-speeding.md)</a> and
+<a href="../journeys/learning-to-drive-speeding.html">[synthetic journey](../journeys/learning-to-drive-speeding.md)</a> preserve the
+ordered evidence outputs without deciding whether a real person may drive.
+</pre>
+</body>
+</html>

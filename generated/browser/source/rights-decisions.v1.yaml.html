@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/rights-decisions.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/rights-decisions.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/rights-decisions.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>rights_decisions_version: rights-decisions.v1
+status: approved
+decided_at: &quot;2026-08-07&quot;
+decided_by: owner:chris-page-gov
+scope: registered_vertical_slices_exhaustive_reference_inventory_and_mapping_references
+
+repository:
+  code:
+    licence: MIT
+    redistribution_allowed: true
+    evidence:
+      - kind: owner_instruction
+        resource: LICENSE
+        observed_at: &quot;2026-08-07&quot;
+  documentation:
+    licence: MIT
+    redistribution_allowed: true
+    evidence:
+      - kind: owner_instruction
+        resource: LICENSE
+        observed_at: &quot;2026-08-07&quot;
+  ontology_terms:
+    licence: MIT
+    redistribution_allowed: true
+    evidence:
+      - kind: owner_instruction
+        resource: LICENSE
+        observed_at: &quot;2026-08-07&quot;
+  limitation: repository_authored_material_only_no_upstream_relicensing
+
+use_policy:
+  source_content: linked_reference_and_original_summary_only
+  source_content_redistribution_allowed: false
+  snapshots_acquired: false
+  snapshot_redistribution_allowed: false
+  future_snapshot_rule: &gt;-
+    Record the exact source licence, version, attribution, exclusions,
+    acquisition time and checksum before acquisition or redistribution.
+  generated_projections:
+    redistribution_allowed: true
+    licence: MIT
+    condition: &gt;-
+      Projection contains only repository-authored structure, original
+      summaries, unprotected facts and links; embedded upstream expression
+      retains its upstream terms and requires a new compatibility decision.
+  publication_allowed: false
+  publication_rule: Explicit owner request and release validation remain required.
+
+attribution:
+  ogl_v3_fallback: Contains public sector information licensed under the Open Government Licence v3.0.
+  ogl_v3_requirements:
+    - use_provider_specified_attribution_when_supplied
+    - identify_information_provider_and_source
+    - link_to_source_and_ogl_v3_where_possible
+    - do_not_imply_official_status_or_endorsement
+    - do_not_use_information_in_a_misleading_way
+    - exclude_personal_data_logos_crests_royal_arms_and_third_party_rights
+  notice: NOTICE.md
+  evidence:
+    - resource: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+      observed_at: &quot;2026-08-07&quot;
+
+licence_families:
+  ogl-uk-3.0:
+    licence: OGL-UK-3.0
+    redistribution_permission: permitted_with_attribution_and_exclusions
+    project_use: linked_reference_and_original_summary_only
+  ogl-provider-version-not-expressly-recorded:
+    licence: Open-Government-Licence-version-not-recorded
+    redistribution_permission: not_relied_on
+    project_use: linked_reference_and_original_summary_only
+  provider-bespoke-reuse:
+    licence: LicenseRef-Provider-Bespoke
+    redistribution_permission: subject_to_provider_conditions
+    project_use: linked_reference_and_original_summary_only
+  provider-copyright-restricted:
+    licence: LicenseRef-Provider-Copyright
+    redistribution_permission: not_permitted_without_separate_permission
+    project_use: linked_reference_and_original_summary_only
+  no-open-licence-established:
+    licence: LicenseRef-No-Open-Licence-Established
+    redistribution_permission: not_permitted_without_separate_permission
+    project_use: linked_reference_and_original_summary_only
+  provider-personal-noncommercial-no-scraping:
+    licence: LicenseRef-Provider-Personal-NonCommercial-No-Scraping
+    redistribution_permission: not_permitted_without_separate_permission
+    project_use: linked_reference_and_original_summary_only
+  provider-attributed-noncommercial:
+    licence: LicenseRef-Provider-Attributed-NonCommercial
+    redistribution_permission: noncommercial_with_attribution_only
+    project_use: linked_reference_and_original_summary_only
+
+host_decisions:
+  - host: www.gov.uk
+    owner_family: UK Government departments and agencies on GOV.UK
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.uk/help/terms-conditions
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.legislation.gov.uk
+    owner_family: The National Archives legislation service
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nationalarchives.gov.uk/legal/copyright/
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.gov.scot
+    owner_family: Scottish Government
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.scot/publications/guide-to-information/pages/copyright/
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.mygov.scot
+    owner_family: Scottish Government citizen service
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.mygov.scot/copyright
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.copfs.gov.uk
+    owner_family: Crown Office and Procurator Fiscal Service
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.copfs.gov.uk/crown-copyright/
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.scotcourts.gov.uk
+    owner_family: Scottish Courts and Tribunals Service
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.scotcourts.gov.uk/scts-crown-copyright-policy/
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.nrscotland.gov.uk
+    owner_family: National Records of Scotland
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nrscotland.gov.uk/privacy
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.nidirect.gov.uk
+    owner_family: Northern Ireland Executive departments and agencies
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nidirect.gov.uk/node/11440
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.spso.org.uk
+    owner_family: Scottish Public Services Ombudsman
+    licence_family: ogl-provider-version-not-expressly-recorded
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.spso.org.uk/freedom-information
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.coventry.gov.uk
+    owner_family: Coventry City Council
+    licence_family: no-open-licence-established
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.coventry.gov.uk/information-governance/open-data/2
+      observed_at: &quot;2026-08-07&quot;
+      limitation: OGL_v1_is_expressly_limited_to_open_data_pages_not_registered_service_pages
+  - host: www.edinburgh.gov.uk
+    owner_family: The City of Edinburgh Council
+    licence_family: provider-copyright-restricted
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.edinburgh.gov.uk/terms
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.cardiff.gov.uk
+    owner_family: Cardiff Council
+    licence_family: no-open-licence-established
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.cardiff.gov.uk/article/3712/Freedom-of-information
+      observed_at: &quot;2026-08-07&quot;
+      limitation: official_page_warns_that_disclosed_information_may_have_reuse_restrictions
+  - host: www.belfastcity.gov.uk
+    owner_family: Belfast City Council
+    licence_family: provider-copyright-restricted
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.belfastcity.gov.uk/Copyright
+      observed_at: &quot;2026-08-07&quot;
+  - host: www.lgo.org.uk
+    owner_family: Local Government and Social Care Ombudsman
+    licence_family: provider-bespoke-reuse
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.lgo.org.uk/copyright
+      observed_at: &quot;2026-08-07&quot;
+      conditions: acknowledge_source_and_copyright_accurate_unamended_not_misleading_not_advertising_led
+  - host: www.ombudsman.wales
+    owner_family: Public Services Ombudsman for Wales
+    licence_family: no-open-licence-established
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.ombudsman.wales/how-to-complain/
+      observed_at: &quot;2026-08-07&quot;
+      limitation: no_page_wide_open_reuse_grant_recorded
+  - host: www.nipso.org.uk
+    owner_family: Northern Ireland Public Services Ombudsman
+    licence_family: no-open-licence-established
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nipso.org.uk/
+      observed_at: &quot;2026-08-07&quot;
+      limitation: no_page_wide_open_reuse_grant_recorded
+  - host: content-api.publishing.service.gov.uk
+    owner_family: Government Digital Service GOV.UK Content API
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.uk/help/terms-conditions
+      observed_at: &quot;2026-08-07&quot;
+      limitation: API_metadata_does_not_establish_leaf_service_jurisdiction_or_availability
+  - host: www.gov.wales
+    owner_family: Welsh Government
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.wales/copyright-statement
+      observed_at: &quot;2026-08-07&quot;
+      limitation: logos_and_separately_identified_rights_are_excluded
+  - host: www.nhs.uk
+    owner_family: Department of Health and Social Care NHS website
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nhs.uk/our-policies/terms-and-conditions/
+      observed_at: &quot;2026-08-07&quot;
+      limitation: &gt;-
+        OGL_excludes_logos_visuals_personal_data_third_party_content_and_medical_devices;
+        provider_attribution_and_refresh_conditions_apply_to_reused_content
+  - host: www.nhsinform.scot
+    owner_family: NHS 24 on behalf of NHS Scotland and the Scottish Government
+    licence_family: provider-personal-noncommercial-no-scraping
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nhsinform.scot/terms-and-conditions/
+      observed_at: &quot;2026-08-07&quot;
+      limitation: personal_and_noncommercial_use_only_and_no_scraping_without_explicit_permission
+  - host: 111.wales.nhs.uk
+    owner_family: Welsh Ambulance Services University NHS Trust
+    licence_family: provider-copyright-restricted
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://111.wales.nhs.uk/termsofuse
+      observed_at: &quot;2026-08-07&quot;
+      limitation: crown_copyright_and_no_copy_reproduction_or_redistribution_outside_content_authorisation_policy
+  - host: online.hscni.net
+    owner_family: Strategic Planning and Performance Group of the Department of Health Northern Ireland
+    licence_family: provider-attributed-noncommercial
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://online.hscni.net/homepage/terms/
+      observed_at: &quot;2026-08-07&quot;
+      limitation: noncommercial_reproduction_with_source_acknowledgement_only_other_use_requires_written_permission
+  - host: www.nibusinessinfo.co.uk
+    owner_family: Invest Northern Ireland on behalf of the Northern Ireland Executive
+    licence_family: provider-bespoke-reuse
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nibusinessinfo.co.uk/content/copyright-information
+      observed_at: &quot;2026-08-07&quot;
+      limitation: &gt;-
+        crown_and_invest_ni_material_have_distinct_terms_republication_requires_written_permission_and_images_are_excluded
+  - host: www.ons.gov.uk
+    owner_family: Office for National Statistics
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.ons.gov.uk/help/terms-conditions
+      observed_at: &quot;2026-08-07&quot;
+      limitation: &gt;-
+        most_content_is_OGL_but_geography_products_can_include_Ordnance_Survey_Royal_Mail_GeoPlace_or_Northern_Ireland_rights
+  - host: digital.nhs.uk
+    owner_family: NHS England Organisation Data Service
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://digital.nhs.uk/about-nhs-digital/terms-and-conditions
+      observed_at: &quot;2026-08-07&quot;
+      limitation: &gt;-
+        current_OGL_with_NHS_England_attribution_exclusions_and_24_hour_refresh_condition_for_reused_content
+
+reference_standards:
+  - id: cpsv-ap-3.2.0
+    licence: CC-BY-4.0
+    owner: European Union
+    project_use: terminology_mapping_reference_only_no_specification_copy
+    requirements:
+      - identify_creator_title_and_source
+      - link_licence_and_retain_notices
+      - indicate_changes
+      - do_not_imply_endorsement
+    evidence:
+      - resource: https://semiceu.github.io/CPSV-AP/releases/3.2.0/
+        observed_at: &quot;2026-08-07&quot;
+      - resource: https://creativecommons.org/licenses/by/4.0/legalcode
+        observed_at: &quot;2026-08-07&quot;
+  - id: open-referral-uk-website
+    licence: OGL-version-not-expressly-recorded-for-most-website-content
+    project_use: terminology_mapping_reference_only
+    evidence:
+      - resource: https://openreferraluk.org/info/terms
+        observed_at: &quot;2026-08-07&quot;
+      - resource: https://openreferraluk.org/about/50-governance
+        observed_at: &quot;2026-08-07&quot;
+    limitation: github_code_bases_are_labelled_CC_BY_SA_without_a_version_so_none_is_inferred
+  - id: open-referral-uk-govuk-record
+    licence: OGL-UK-3.0
+    project_use: linked_reference_and_original_summary_only
+    evidence:
+      - resource: https://www.gov.uk/government/publications/open-standards-for-government/record-and-share-information-about-public-services-in-local-authorities
+        observed_at: &quot;2026-08-07&quot;
+  - id: hsds-3.1-documentation
+    licence: CC-BY-SA-4.0
+    project_use: terminology_mapping_reference_only_no_specification_copy
+    requirements:
+      - identify_creator_title_and_source
+      - link_licence_and_retain_notices
+      - indicate_changes
+      - licence_adaptations_under_CC_BY_SA_4_0
+    evidence:
+      - resource: https://docs.openreferral.org/en/3.1/about/specification-governance.html
+        observed_at: &quot;2026-08-07&quot;
+      - resource: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+        observed_at: &quot;2026-08-07&quot;
+  - id: w3c-recommendations
+    licence: W3C-Document-License-2023
+    project_use: terminology_mapping_reference_only_no_specification_copy
+    requirements:
+      - link_original_document
+      - preserve_copyright_notice_and_document_status_when_copying
+      - do_not_publish_modified_material_as_a_competing_technical_specification
+      - preserve_required_notice_for_implementation_derivatives
+    evidence:
+      - resource: https://www.w3.org/copyright/document-license-2023/
+        observed_at: &quot;2026-08-07&quot;
+    limitation: project_links_and_summarizes_skos_owl_prov_o_and_shacl_without_copying_specification_text
+  - id: local-government-services-list
+    licence: Open-Government-Licence-version-not-recorded
+    project_use: identifier_mapping_reference_only_no_availability_claim
+    evidence:
+      - resource: https://www.data.gov.uk/dataset/56d64715-2fa5-4870-9c9c-a6983785fca4/services-list
+        observed_at: &quot;2026-08-07&quot;
+    limitation: data_gov_uk_record_is_dated_2014_and_does_not_prove_current_service_availability
+  - id: okf-explorer
+    licence: MIT-code-and-CC-BY-NC-4.0-content
+    project_use: consumer_compatibility_reference_only
+    evidence:
+      - resource: https://github.com/chris-page-gov/okf-explorer/blob/main/LICENSE-CODE.md
+        observed_at: &quot;2026-08-07&quot;
+      - resource: https://github.com/chris-page-gov/okf-explorer/blob/main/LICENSE.md
+        observed_at: &quot;2026-08-07&quot;
+    limitation: viewer_code_is_mit_while_the_explorer_corpus_and_documentation_are_cc_by_nc_4_0
+</pre>
+</body>
+</html>

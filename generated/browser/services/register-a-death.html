@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register a death — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Register a death</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>services/register-a-death.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Service Family&quot;
+title: &quot;Register a death&quot;
+description: &quot;Normalized family for certification or investigation handoff, jurisdiction-specific death registration and its official output.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+jurisdiction: &quot;nation-specific&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;bereavement-source-register&quot;
+    title: &quot;Death, bereavement and estate linked-reference register&quot;
+    resource: &quot;../source/death-bereavement-estate.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Register a death
+
+This normalized family preserves the certification or investigation input,
+qualified informant, registering authority, jurisdiction, observation time and
+registration outputs. It does not turn similar labels into one UK process.
+
+The selected implementations are separate
+<a href="england-wales-death-registration.html">[England and Wales](england-wales-death-registration.md)</a>,
+<a href="scotland-death-registration.html">[Scotland](scotland-death-registration.md)</a> and
+<a href="northern-ireland-death-registration.html">[Northern Ireland](northern-ireland-death-registration.md)</a> routes. The current
+registrar, medical or investigation authority decides a real case.
+</pre>
+</body>
+</html>

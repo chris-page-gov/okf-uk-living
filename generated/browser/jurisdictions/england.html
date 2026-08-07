@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>England context — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>England context</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>jurisdictions/england.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Jurisdiction Context&quot;
+title: &quot;England context&quot;
+description: &quot;England applicability context for selected waste, driving, registration, notification and England-and-Wales court routes.&quot;
+status: &quot;observed&quot;
+assertion_status: &quot;normalized&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;coventry-missed-bin&quot;
+    title: &quot;Missed bin collections&quot;
+    resource: &quot;https://www.coventry.gov.uk/missedbin&quot;
+    author: &quot;organisation:coventry-city-council&quot;
+    observed_at: &quot;2026-08-07&quot;
+  - id: &quot;govuk-first-provisional-licence&quot;
+    title: &quot;Apply for your first provisional driving licence&quot;
+    resource: &quot;https://www.gov.uk/apply-first-provisional-driving-licence&quot;
+    author: &quot;organisation:driver-and-vehicle-licensing-agency&quot;
+    observed_at: &quot;2026-08-07&quot;
+  - id: &quot;govuk-single-justice-procedure&quot;
+    title: &quot;Single justice procedure notices&quot;
+    resource: &quot;https://www.gov.uk/single-justice-procedure-notices&quot;
+    author: &quot;organisation:hm-courts-and-tribunals-service&quot;
+    observed_at: &quot;2026-08-07&quot;
+  - id: &quot;govuk-tell-us-once&quot;
+    title: &quot;Tell Us Once&quot;
+    resource: &quot;https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once&quot;
+    author: &quot;organisation:government-digital-service&quot;
+    observed_at: &quot;2026-08-07&quot;
+  - id: &quot;govuk-applying-for-probate&quot;
+    title: &quot;Applying for probate&quot;
+    resource: &quot;https://www.gov.uk/applying-for-probate&quot;
+    author: &quot;organisation:hm-courts-and-tribunals-service&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# England context
+
+## Missed rubbish collection
+
+The implemented England example is the
+<a href="../services/coventry-missed-bin-collection.html">[Coventry missed-bin route](../services/coventry-missed-bin-collection.md)</a>,
+provided by <a href="../organisations/coventry-city-council.html">[Coventry City Council](../organisations/coventry-city-council.md)</a>.
+It is one local observation, not a denominator for all English councils.
+
+After the council complaint process, the selected external route is the
+<a href="../organisations/local-government-and-social-care-ombudsman.html">[Local Government and Social Care Ombudsman](../organisations/local-government-and-social-care-ombudsman.md)</a>,
+subject to that body&#x27;s current scope and exhaustion rules.
+
+## Learning to drive and speeding
+
+The selected ordinary route is the
+<a href="../services/great-britain-learn-to-drive-car.html">[Great Britain car-learning route](../services/great-britain-learn-to-drive-car.md)</a>,
+where DVLA licensing and DVSA testing apply in England. The selected speeding
+exception begins with the
+<a href="../services/great-britain-speeding-notice.html">[Great Britain notice route](../services/great-britain-speeding-notice.md)</a> and,
+if the case reaches the relevant magistrates process, uses the
+<a href="../services/england-wales-speeding-court-route.html">[England and Wales court route](../services/england-wales-speeding-court-route.md)</a>.
+No Scottish or Northern Ireland court process is inferred.
+
+## Death, notification and estate administration
+
+The selected route uses <a href="../services/england-wales-death-registration.html">[England and Wales death registration](../services/england-wales-death-registration.md)</a>,
+<a href="../services/tell-us-once.html">[Tell Us Once](../services/tell-us-once.md)</a> within its current residence and
+coverage rules, and the <a href="../services/england-wales-probate-estate.html">[England and Wales probate route](../services/england-wales-probate-estate.md)</a>.
+Scottish confirmation and Northern Ireland registration or probate are not
+substituted.
+</pre>
+</body>
+</html>

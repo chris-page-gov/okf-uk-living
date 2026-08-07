@@ -6,9 +6,9 @@ Decision date: 2026-08-07
 
 Reviewer: `codex:root`, following owner direction
 
-Result: **content journeys pass; release gate remains open because four
-compatibility and provenance findings require remediation or an explicit
-disposition.**
+Result: **pass for local review and Explorer compatibility. The four original
+findings were remediated and closed in a visible-browser rerun. Publication
+and candidate-freeze gates remain separate.**
 
 This was a visible-browser review of the generated local bundle. It did not
 publish the repository, enable CI or acquire new source material. The companion
@@ -34,6 +34,17 @@ console warnings or errors. The local server returned HTTP 200 for the tested
 authored source target even though direct Markdown navigation was blocked by
 the target browser, as recorded in `REV-003`.
 
+## Remediation rerun inputs
+
+| Input | Rerun value |
+|---|---|
+| Repository branch | `codex/explorer-provenance-large-corpus` (stacked review; not a frozen candidate) |
+| Bundle | `okf-bundle.json`, SHA-256 `8f39c38997cdc6048df60390dccecfafa43080d87b1ee209b2259315a7ea200a` |
+| Bundle extent | 81 nodes, 318 relationships, 780,134 bytes |
+| Browser handoffs | 103 deterministic HTML files |
+| Explorer | `@okf/explorer` 0.5.7 at `babd00c994ac8450480d1d4b128ccbe58f01cbe0` |
+| Origin | `127.0.0.1:8003` no-cache loopback overlay; not a publication URL |
+
 ## Consumer journeys
 
 | Journey | Result | Evidence |
@@ -43,8 +54,9 @@ the target browser, as recorded in `REV-003`.
 | Query: continuing service failure | Pass | Returned the missed-rubbish journey and exposed its complaint and ombudsman relationships. |
 | Query: Motor insurer | Pass | Returned the private dependency and the composed driving journey. |
 | Query: Tell Us Once | Pass | Returned the route, authority role, bereavement journey and Northern Ireland manual-notification exception. |
-| Graph view | Partial | SVG graph rendered and retained its selected record after reload, but relationship provenance/authority was unknown. |
-| Authored source handoff | Fail | The local target existed and returned HTTP 200, but direct Markdown navigation produced `net::ERR_BLOCKED_BY_CLIENT` in the target browser. |
+| Graph view | Pass on rerun | SVG graph rendered; the relationship panel displayed deterministic authored-link derivation, normalized assertion status and real-world scope with no unknown authority. |
+| Authored source handoff | Pass on rerun | `Source ↗` opened a deterministic HTML rendering with the exact authored path; no Markdown/YAML navigation was browser-blocked. |
+| Licence and notice | Pass on rerun | The first-class licensing record opened browser-safe MIT, OGL, CPSV-AP, Open Referral/HSDS, notice and rights-register handoffs. |
 
 ## Fixture traceability
 
@@ -65,27 +77,27 @@ an independent user study or a full WCAG audit.
 
 | ID | Severity | State | Finding and evidence | Required disposition |
 |---|---|---|---|---|
-| `REV-001` | High | Open; blocks `REVIEW-001` and `COMPAT-001` | Generated edges contain only source, target, kind and label. In the expanded graph the Explorer displayed 42 instances of `Authority not declared · unknown`, so the graph cannot demonstrate assertion authority or relationship provenance. | Version edge assertion/provenance fields in the domain projection and lock how Explorer consumes them, or explicitly reduce the release claim and record why the graph remains sufficient. |
-| `REV-002` | Medium | Open; blocks provenance acceptance | Bundle-level `generated_by` and `generated_at` are present, but the selected node panels displayed both values as `Not declared`; the consumer does not expose inherited build provenance. | Add node-level build provenance or make the Explorer display the authoritative bundle-level values, then retest. |
-| `REV-003` | High | Open; blocks source-handoff and publication verification | `Source ↗` resolved to the correct local Markdown path and that target returned HTTP 200, but visible navigation in the target in-app browser failed with `net::ERR_BLOCKED_BY_CLIENT`. | Provide a browser-renderable source route or other compatible handoff and rerun it in the target browser. |
-| `REV-004` | High | Open; blocks licence-notice verification | The Evidence record renders relative links to `LICENSE_DECISIONS.md` and the rights register, but neither is a first-class bundle record and `NOTICE.md` is only an indirect handoff. Visible navigation to both tested Markdown/YAML targets failed with `net::ERR_BLOCKED_BY_CLIENT`, so the Explorer cannot yet prove that licence and attribution notices resolve. | Add an explicit bundle/site licence and notice surface, retain OGL/provider attribution, and verify it in the target browser. |
+| `REV-001` | High | Closed 2026-08-07 | Relationships use `okf-relationship-assertion.v2` with stable IDs, assertion status/scope, authority, derivation, evidence and rights. The graph rerun showed `Deterministic authored-link projection · normalized · real-world` and zero unknown authorities. | Implemented and browser-verified. |
+| `REV-002` | Medium | Closed 2026-08-07 | Every node carries node-level `generated.by` and `generated.at`. Explorer displayed `process:okf-bundle-builder` and `2026-08-07T00:00:00+01:00`. | Implemented and browser-verified. |
+| `REV-003` | High | Closed 2026-08-07 | Deterministic `generated/browser/` HTML handoffs preserve authored identity and rewrite local links to browser-safe HTML. The curriculum source opened without `ERR_BLOCKED_BY_CLIENT`. | Implemented and browser-verified. |
+| `REV-004` | High | Closed 2026-08-07 | `evidence/licensing-and-attribution.md` is a first-class record. Its source handoff opened `LICENSE`, `LICENSE_DECISIONS.md`, `NOTICE.md` and the machine rights register; OGL, CPSV-AP and Open Referral/HSDS terms were visible and none was blocked. | Implemented and browser-verified. |
 
-Decision for all four findings: retain them as real failures; do not waive them
-silently, freeze a candidate or publish. Search state persistence after clearing
-a query was also inconsistent once during the run; it is recorded as an
-observation for retest but is not currently a release blocker.
+The original failures remain preserved above as review history; their closed
+states are based on implemented contracts and a fresh visible-browser rerun,
+not a waiver. Search and filter state were also retested through the separate
+large-corpus projection review.
 
 ## Gate decision
 
-- `REVIEW-001`: executed, **not passed**; the slice content is reviewable but
-  `REV-001` through `REV-004` remain open.
-- `COMPAT-001`: evidence captured, **not locked**; record, query and graph deep
-  links work, but the provenance, source and notice surfaces are incomplete.
-- `SCOPE-001` and `CAND-001`: do not start until the findings are remediated or
-  explicitly dispositioned and the review is rerun.
+- `REVIEW-001`: **passed locally**; all four findings are closed.
+- `COMPAT-001`: **locked for OKF Explorer 0.5.7 local evaluation**; identity,
+  query, graph, provenance, source and notice journeys pass.
+- `SCOPE-001`: remains the next owner review gate for the proposed bounded
+  educational sample.
+- `CAND-001`: remains blocked until scope is approved and a candidate is
+  explicitly frozen with hashes.
 - Publication: not requested and not performed.
 
-The next bounded implementation step is a focused provenance-and-handoff
-remediation: define the edge and node build-provenance contract, expose licence
-and attribution metadata, and make source/notice links browser-renderable. The
-same local Explorer journeys must then be rerun against the resulting bundle.
+The companion [large-corpus review](large-corpus-2026-08-07.md) records the
+approved 293-family, seven-facet planning projection. Neither review authorizes
+GitHub Pages or a public bundle URL.

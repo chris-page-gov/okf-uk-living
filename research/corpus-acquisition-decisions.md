@@ -119,11 +119,13 @@ only with normalized or `editorial-example` status and explicit limitations.
 
 ## 6. Explorer large-corpus projection
 
-`okf-explorer-large-corpus.v1` is conditionally approved. The approval becomes
-effective only when `REV-001` through `REV-004` are closed by local browser
-evidence for relationship authority, node build provenance, rendered source
-handoffs and the first-class licence/notice surface. The projection must expose
+`okf-explorer-large-corpus.v1` is approved for local evaluation. On 2026-08-07,
+`REV-001` through `REV-004` were closed by local browser evidence for
+relationship authority, node build provenance, rendered source handoffs and
+the first-class licence/notice surface. The projection exposes
 colour facets for life-course domain, acquisition wave, delivery scope,
 jurisdiction, implementation status, assertion status and rights state.
 
-This conditional decision does not authorize GitHub Pages or any public URL.
+The [large-corpus review](../evaluation/reviews/large-corpus-2026-08-07.md)
+records 293 searchable planning families and seven reconciled facets. This
+decision does not authorize GitHub Pages or any public URL.

@@ -17,11 +17,12 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | SLICE-001 | Missed rubbish collection | Complete | Merged in PR #3 with four local routes and a 13-reference denominator |
 | SLICE-002 | Learning to drive and speeding exception | Complete | Merged in PR #4 with GB/NI learning routes, three speeding court boundaries and a 20-reference denominator |
 | SLICE-003 | Death, Tell Us Once and estate administration | Complete | Merged in PR #5 with three registration routes, Tell Us Once/NI notification split, three estate-authority routes and a 20-reference denominator |
-| REVIEW-001 | Integrated three-slice sample review | In progress: findings open | [2026-08-07 local review](evaluation/reviews/integrated-three-slice-2026-08-07.md) passed Reader/query content and recorded four open release findings; remediate or explicitly disposition and rerun |
-| COMPAT-001 | Lock the actual OKF Explorer consumer contract | Evaluated: not locked | Explorer 0.5.7 and exact bundle bytes are recorded in [`okf-explorer-local.v1`](evaluation/compatibility/okf-explorer-local.v1.yaml); provenance, source and notice surfaces remain open |
+| REVIEW-001 | Integrated three-slice sample review | Complete: local pass | [2026-08-07 local review](evaluation/reviews/integrated-three-slice-2026-08-07.md) records passing Reader, query, graph-provenance, browser-source and licence-notice journeys; `REV-001` through `REV-004` are closed |
+| COMPAT-001 | Lock the actual OKF Explorer consumer contract | Complete: local lock | Explorer 0.5.7, exact bundle bytes and all required journeys are recorded in [`okf-explorer-local.v1`](evaluation/compatibility/okf-explorer-local.v1.yaml) |
 | INVENTORY-001 | Exhaustive external reference-family inventory | Complete | Owner authorized link-only discovery on 2026-08-07; 142 external reference records, 120 assessed domain/jurisdiction cells, 25 source-host rights decisions, 12 tracked gaps and zero snapshots |
 | CORPUS-001 | Approve the staged 250–400 service-family denominator | Complete | Owner approved [`service-family-denominator.v1`](source/service-family-denominator.v1.yaml) on 2026-08-07: 293 named normalized families in three staged waves |
 | ACQPOL-001 | Approve corpus acquisition and specialist-review policy | Complete | Local authority coverage, GSS/ODS identifiers, manual health links, regulator-first dependencies, sector redress and role-based review nominations approved on 2026-08-07 |
+| LARGE-001 | Build and review the local colour-facet planning projection | Complete: local pass | [`okf-explorer-large-corpus.v1`](evaluation/reviews/large-corpus-2026-08-07.md) exposes 293 searchable planning records and seven reconciled facets with zero snapshots and publication disabled |
 | SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
 | CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
 | PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
@@ -46,10 +47,10 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   eligible generated projections are MIT; third-party material is not
   relicensed and snapshot redistribution is disabled.
 - Public bundle URL: none.
-- Review state: the integrated local Explorer review was executed on
-  2026-08-07. Slice content, queries and deep links passed; `REV-001` through
-  `REV-004` remain open, so the review and compatibility gates have not passed
-  and the sample is not a frozen publication candidate.
+- Review state: the integrated local Explorer remediation rerun passed on
+  2026-08-07 and `REV-001` through `REV-004` are closed. The 293-family
+  colour-facet projection also passes local search and filter journeys. The
+  sample is not a frozen publication candidate until `SCOPE-001` is approved.
 - Reference readiness: all 120 declared domain/reference-jurisdiction cells are
   assessed (96 national covered, 24 local partial). The six requested owner
   decisions are complete; authority/regulator mapping and named specialist

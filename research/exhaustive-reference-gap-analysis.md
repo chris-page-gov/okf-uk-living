@@ -120,7 +120,7 @@ current leaf sources.
 | Closed decision | `GAP-HEALTH-AUTOMATION-RIGHTS` | A common unattended acquisition model is inappropriate. | Keep all four health families manual, link-and-original-summary only; reconsider permission only for a specific future automation need. |
 | High implementation | `GAP-PRIVATE-DEPENDENCIES` | No single authoritative denominator covers all private dependencies. | Apply regulator-first discovery and record the provider-selection basis for required named dependencies. |
 | External appointment | `GAP-LEGAL-PROCEDURE-REVIEW` | Roles are nominated, but consenting qualified legal and clinical individuals are not appointed. | Obtain applicable reviewer acceptance before production-grade legal or medical claims. |
-| Conditional implementation | `GAP-EXPLORER-LARGE-CORPUS` | The local colour-facet projection is approved after the four Explorer findings close. | Close `REV-001` through `REV-004`, build and verify the large projection locally. |
+| Closed implementation | `GAP-EXPLORER-LARGE-CORPUS` | The four Explorer findings are closed and the 293-family, seven-facet projection passes local browser review. | Retain deterministic local checks; publication remains a separate owner gate. |
 | Medium implementation | `GAP-SECTOR-REDRESS` | The five-level taxonomy is approved; service-family mappings remain incomplete. | Cite the actual provider, statutory, tribunal, regulator/ombudsman and court sequence for each family. |
 | Medium | `GAP-LGSL-CURRENCY` | The OGL-labelled LGSL catalogue record is dated 2014. | Confirm current ESD Services-list access, version and identifier policy. |
 | Medium | `GAP-FRESHNESS-AUTOMATION` | Devolved portals do not expose one shared update API. | Approve per-family review intervals and permitted automated metadata checks. |
@@ -133,7 +133,7 @@ On 2026-08-07 the owner approved all six requested governance decisions. The
 [policy](../profiles/corpus-acquisition-policy.v1.yaml) now govern the 293
 families, local model and identifiers, manual health acquisition,
 regulator-first dependencies, sector redress, specialist-review roles and the
-conditional Explorer projection.
+locally approved Explorer projection.
 
 The remaining ledger is implementation and specialist-review work. It does not
 authorize source snapshots, copied source content, CI or publication.

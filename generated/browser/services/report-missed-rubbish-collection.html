@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report a missed rubbish collection — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Report a missed rubbish collection</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>services/report-missed-rubbish-collection.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Service Family&quot;
+title: &quot;Report a missed rubbish collection&quot;
+description: &quot;Normalized service family for reporting an expected local household waste collection that did not occur.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+jurisdiction: &quot;local-authority-specific&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;missed-rubbish-source-register&quot;
+    title: &quot;Missed rubbish collection linked-reference register&quot;
+    resource: &quot;../source/missed-rubbish-collection.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Report a missed rubbish collection
+
+This normalized family groups local routes for reporting a scheduled household
+waste or recycling collection that was not completed. It does not assert a
+single UK provider, deadline, acceptance rule, remedy or complaint body.
+
+The implemented examples are
+<a href="coventry-missed-bin-collection.html">[Coventry](coventry-missed-bin-collection.md)</a>,
+<a href="edinburgh-missed-bin-collection.html">[Edinburgh](edinburgh-missed-bin-collection.md)</a>,
+<a href="cardiff-missed-collection.html">[Cardiff](cardiff-missed-collection.md)</a> and
+<a href="belfast-missed-bin-collection.html">[Belfast](belfast-missed-bin-collection.md)</a>. Their locally official rules stay
+on those records. The <a href="../ontology/missed-rubbish-collection.html">[ontology module](../ontology/missed-rubbish-collection.md)</a>
+and <a href="../journeys/missed-rubbish-collection.html">[synthetic journey](../journeys/missed-rubbish-collection.md)</a> describe the
+shared editorial model.
+
+## Normalized interaction boundary
+
+1. Identify the council responsible for the address.
+2. Check the scheduled collection, local presentation conditions and any
+   disruption notice.
+3. Use the locally evidenced channel and timing rule only when its conditions
+   are met.
+4. Preserve the report outcome or rejection reason.
+5. If the service problem remains unresolved, use the council complaint route
+   before any jurisdiction-appropriate external body.
+
+A delivery contractor can be a required operational dependency without
+becoming the accountable authority. The England redress evidence expressly
+states that councils remain accountable for contractor-delivered waste
+services; no equivalent contractor claim is inferred for the other examples.
+</pre>
+</body>
+</html>

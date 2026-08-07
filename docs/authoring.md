@@ -74,6 +74,12 @@ health links, regulator-first private dependencies, sector redress and
 specialist-review gates. A family name authorizes staged source registration;
 it is not an official assertion that routes or rules are uniform.
 
+The owner-approved `okf-explorer-large-corpus.v1` projection renders those 293
+planning families with seven colour facets. It must remain generated from the
+denominator, contain no acquired source content, and keep publication disabled.
+The static search and every facet posting must reconcile with the same ordered
+record set.
+
 The approved [rights register](../source/rights-decisions.v1.yaml) now resolves
 the repository and current linked-source decisions without expanding the use
 boundary. Repository-authored code, documentation and ontology terms are MIT.
@@ -138,6 +144,8 @@ Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The
 locked project environment is created automatically when these commands run:
 
 ```sh
+uv run --locked python scripts/build_browser_handoff.py
+uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
@@ -147,10 +155,14 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
+uv run --locked python scripts/build_large_corpus.py
+uv run --locked python scripts/build_large_corpus.py --check
+uv run --locked python scripts/check_large_projection.py
 uv run --locked python -m unittest discover -s tests
 ```
 
-`okf-bundle.json` is reproducible output. Never patch it directly.
+`generated/browser/`, `okf-bundle.json`, `large/data/` and
+`okf-explorer.json` are reproducible output. Never patch them directly.
 
 ## Publication boundary
 

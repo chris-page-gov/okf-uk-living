@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Missed rubbish collection model — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Missed rubbish collection model</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>ontology/missed-rubbish-collection.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Ontology Module&quot;
+title: &quot;Missed rubbish collection model&quot;
+description: &quot;Governed normalized concepts for expected collections, reports, exclusions, outcomes and redress.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;missed-rubbish-source-register&quot;
+    title: &quot;Missed rubbish collection linked-reference register&quot;
+    resource: &quot;../source/missed-rubbish-collection.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Missed rubbish collection model
+
+This module defines a small editorial vocabulary for the
+<a href="../journeys/missed-rubbish-collection.html">[missed-rubbish journey](../journeys/missed-rubbish-collection.md)</a>. It groups
+different local terms without asserting that their rules or services are
+identical.
+
+## Concepts
+
+| Concept | Normalized meaning | Boundary |
+|---|---|---|
+| expected collection | A collection identified by the responsible authority&#x27;s current schedule for the place and waste type | A remembered or typical day is not enough |
+| observed non-collection | A synthetic observation that the expected collection did not occur | It does not establish fault or reportability |
+| reportable missed collection | An expected collection plus observed non-collection that meets the selected local route&#x27;s timing and presentation conditions | The classification is local and time-sensitive |
+| exclusion or rejection | A sourced reason why the missed-collection route is unavailable or a report was not accepted | Reasons must not be invented or copied between councils |
+| missed-collection report | The minimum synthetic facts submitted through an official local channel | It is distinct from a formal complaint |
+| service outcome | An acknowledgement, return collection, explanation, rejection or unresolved state recorded after a report | No remedy is promised without evidence |
+| council complaint | A complaint made after the service issue has first been reported where the local process requires that sequence | Its deadlines and stages are local |
+| external complaint | A complaint to the jurisdiction-appropriate ombudsman after applicable local stages | Scope, acceptance and outcome remain with that body |
+
+## From data to ontology
+
+- **Data** records the synthetic scheduled date, waste type, presentation facts,
+  observation and report reference.
+- **Information** combines those values with the responsible council&#x27;s current
+  service page and jurisdiction.
+- **Knowledge** records why the selected local route appears available,
+  excluded or unresolved and attaches its evidence and observation time.
+- **Ontology** supplies the normalized concepts above so the four examples can
+  be compared without erasing their local differences.
+
+## Governed relations
+
+The <a href="../services/report-missed-rubbish-collection.html">[normalized service family](../services/report-missed-rubbish-collection.md)</a>
+has local service routes; each route has one responsible council in this slice,
+applies within its declared local jurisdiction, is supported by the
+<a href="../evidence/missed-rubbish-collection-sources.html">[evidence set](../evidence/missed-rubbish-collection-sources.md)</a>, and may lead
+from a service report to a council complaint and then an external complaint.
+
+These are normalized relations. The service records retain official facts and
+sources. Missing facts remain unknown, and a link never turns a normalized or
+editorial assertion into an official one.
+</pre>
+</body>
+</html>
