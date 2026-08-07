@@ -12,8 +12,9 @@ Every fixture must reference `okf-domain-profile.v1`, declare synthetic data,
 cover ordinary and exception paths, and exercise evidence, time, jurisdiction,
 authority, governing rules, private-sector dependencies, redress and
 provenance. Candidate source families are planning inputs only. Bounded source
-registration is authorized; the missed-rubbish fixture now points to its
-registered linked-reference denominator while the other two remain not started.
+registration is authorized; the missed-rubbish and driving fixtures now point
+to their registered linked-reference denominators while bereavement remains
+not started.
 
 Run `uv run --locked python scripts/check_contracts.py` to validate the profile
 and fixtures. Passing validation means the contracts are internally complete;

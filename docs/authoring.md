@@ -77,6 +77,12 @@ facts, but must not turn local times, exclusions, providers or remedies into a
 UK-wide rule. Synthetic journeys remain `editorial-example` even when their
 branches cite official service facts.
 
+Each implemented slice must add a semantic regression check for its exact
+route nodes, responsible providers, jurisdictions, approved source sets,
+assertion statuses and required journey links. For enforcement or legal paths,
+the check must also preserve the notice-specific or court-specific deadline
+boundary and reject a synthetic journey presented as official advice.
+
 ## Build and check
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The

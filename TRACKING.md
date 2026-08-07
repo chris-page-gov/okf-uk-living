@@ -13,8 +13,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | GOV-002 | Protect remote `main` for the sole-developer workflow | Deferred by platform | GitHub returned HTTP 403: private-repository branch protection requires GitHub Pro or public visibility; operational PR-only policy remains in force |
 | PROF-001 | Approve `okf-domain-profile.v1` | Complete | Approved by `owner:chris-page-gov` on 2026-08-07; bounded source registration authorized |
 | FIX-001 | Contract the three vertical-slice fixtures | Complete | Three synthetic v1 contracts approved with PROF-001 and validated locally |
-| SLICE-001 | Missed rubbish collection | Review | Four local routes, journey, ontology, evidence and 13-reference denominator implemented; next gate is pull-request review |
-| SLICE-002 | Learning to drive and enforcement exception | Queued | Requires FIX-001 and a frozen speeding-or-parking choice |
+| SLICE-001 | Missed rubbish collection | Complete | Merged in PR #3 with four local routes and a 13-reference denominator |
+| SLICE-002 | Learning to drive and speeding exception | Review | GB/NI learning routes and three speeding court boundaries implemented with a 20-reference denominator; next gate is pull-request review |
 | SLICE-003 | Death, Tell Us Once and estate administration | Queued | Requires FIX-001 and four-nation exception boundaries |
 | PUB-001 | Publish a frozen candidate to GitHub Pages | Blocked by design | Requires explicit owner publication request and all release gates |
 
@@ -26,7 +26,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
 - GitHub Pages: not enabled and not updated.
-- Acquisition: the bounded missed-rubbish linked-reference register contains
-  13 official references and zero snapshots; the other two registrations are
-  authorized but not started; broad acquisition remains disabled.
+- Acquisition: two bounded registers contain 33 official links and zero
+  snapshots; the bereavement registration is authorized but not started;
+  broad acquisition remains disabled.
 - Public bundle URL: none.

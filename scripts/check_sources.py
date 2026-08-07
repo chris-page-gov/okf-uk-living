@@ -27,6 +27,32 @@ EXPECTED_MISSED_RUBBISH_IDS = {
     "psow-how-to-complain",
     "nipso-complaints",
 }
+EXPECTED_DRIVING_SPEEDING_IDS = {
+    "govuk-learn-to-drive-car",
+    "govuk-first-provisional-licence",
+    "govuk-private-practice",
+    "govuk-book-theory-test",
+    "govuk-driving-test-result",
+    "govuk-full-driving-licence",
+    "nidirect-provisional-licence",
+    "nidirect-learner-rules",
+    "nidirect-theory-test",
+    "nidirect-practical-test",
+    "nidirect-claim-test-pass",
+    "govuk-speeding-penalties",
+    "legislation-rta-1988-section-172",
+    "govuk-single-justice-procedure",
+    "govuk-appeal-magistrates-decision",
+    "copfs-prosecution-code",
+    "mygov-scotland-criminal-appeal",
+    "nidirect-speeding-penalties",
+    "nidirect-fixed-penalties",
+    "nidirect-appealing-verdict",
+}
+EXPECTED_SOURCE_IDS = {
+    "missed-rubbish-collection": EXPECTED_MISSED_RUBBISH_IDS,
+    "learning-to-drive-speeding": EXPECTED_DRIVING_SPEEDING_IDS,
+}
 REQUIRED_SOURCE_FIELDS = {
     "id",
     "owner",
@@ -110,8 +136,15 @@ def validate_source_register(register: dict[str, Any]) -> list[str]:
             errors.append(f"{prefix}: {source_id or index} rights basis must retain linked-summary limits")
     if len(ids) != len(set(ids)):
         errors.append(f"{prefix}: source ids must be unique")
-    if register.get("slice_id") == "missed-rubbish-collection" and set(ids) != EXPECTED_MISSED_RUBBISH_IDS:
-        errors.append(f"{prefix}: missed-rubbish source denominator must contain the approved 13 references")
+    slice_id = str(register.get("slice_id", ""))
+    expected_ids = EXPECTED_SOURCE_IDS.get(slice_id)
+    if expected_ids is None:
+        errors.append(f"{prefix}: slice_id has no approved source denominator")
+    elif set(ids) != expected_ids:
+        errors.append(
+            f"{prefix}: {slice_id} source denominator must contain the approved "
+            f"{len(expected_ids)} references"
+        )
     return errors
 
 
@@ -131,7 +164,7 @@ def main() -> int:
             print(error)
         return 1
     source_count = sum(len(register["sources"]) for register in registers)
-    print(f"Source checks passed: {len(registers)} register, {source_count} linked references, 0 snapshots")
+    print(f"Source checks passed: {len(registers)} registers, {source_count} linked references, 0 snapshots")
     return 0
 
 

@@ -15,6 +15,8 @@ life events from before birth to death and bereavement.
   derivation and limitations. Similar labels never establish identity.
 - Distinguish `official`, `normalized`, `inferred` and `editorial-example`
   assertions. Never present generated relationships as official claims.
+- Give each implemented slice semantic regression checks for exact authorities,
+  jurisdictions, approved sources, assertion status and required journey links.
 - Do not encode real personal data. Personas and service episodes must be
   synthetic and clearly labelled.
 - Do not turn the bundle into a personalised eligibility, medical or legal
@@ -30,7 +32,8 @@ life events from before birth to death and bereavement.
   after the reviewed initialization commit.
 - Keep implementation and its planning, tracking, status, changelog and
   authoring documentation in the same pull request, following `PLANNING.md`.
-- Keep CI disabled until the bootstrap and domain profile are reviewed.
+- Keep remote CI disabled unless the owner explicitly changes the local-only
+  evaluation policy or requests publication.
 - Never create remotes, push, publish, enable CI or spend money implicitly.
 
 ## Required checks

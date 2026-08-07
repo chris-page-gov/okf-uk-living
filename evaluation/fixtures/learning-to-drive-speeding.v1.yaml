@@ -51,19 +51,19 @@ actors:
     authority_assertion: editorial-example
   - id: licensing-authority-gb
     role: great-britain-driver-licensing-authority
-    authority_assertion: pending_source
+    authority_assertion: official_driver-and-vehicle-licensing-agency
   - id: licensing-authority-ni
     role: northern-ireland-driver-licensing-authority
-    authority_assertion: pending_source
+    authority_assertion: official_driver-and-vehicle-agency
   - id: test-provider
     role: theory_and_practical_test_provider
-    authority_assertion: pending_source
+    authority_assertion: official_dvsa_or_dva_by_jurisdiction
   - id: police-or-enforcement-body
     role: speeding-enforcement-authority
-    authority_assertion: pending_source
+    authority_assertion: official_from_notice_and_selected_route
   - id: court
     role: adjudication-and-redress
-    authority_assertion: pending_source
+    authority_assertion: official_by_court_jurisdiction
 
 journeys:
   ordinary:
@@ -74,8 +74,8 @@ journeys:
         interaction: use the jurisdiction-appropriate licensing route
         provider_role: licensing-authority
         evidence: [synthetic-identity-context, category-requirements-pending-source]
-        rule: jurisdictional entitlement and application rules remain pending source acquisition
-        time: application and validity timing retained only when sourced
+        rule: use the selected DVLA or DVA application and entitlement route without deciding eligibility
+        time: application and validity timing comes from the current official route and output
         outcome: provisional-entitlement-or-reasoned-refusal
         redress: correction, review or fresh application route where evidenced
         assertion_status: editorial-example
@@ -83,7 +83,7 @@ journeys:
         interaction: meet sourced supervision, vehicle and insurance conditions
         provider_role: learner_and_optional-instructor
         evidence: [provisional-entitlement, supervision-evidence, insurance-evidence]
-        rule: supervision, vehicle and insurance conditions remain pending source acquisition
+        rule: apply the selected jurisdiction's sourced supervisor, vehicle, plate and insurance conditions
         time: entitlement and insurance validity checked at the episode time
         outcome: practice-episode-completed
         redress: explain unmet condition without deciding legality
@@ -92,8 +92,8 @@ journeys:
         interaction: book and take jurisdiction-appropriate theory and practical stages
         provider_role: test-provider
         evidence: [provisional-entitlement, booking-reference, test-output]
-        rule: test eligibility, ordering and conduct rules remain pending source acquisition
-        time: booking, validity and retake rules must be sourced
+        rule: use DVSA for Great Britain or DVA for Northern Ireland and preserve the theory-before-practical evidence order
+        time: booking, validity and retake rules come from the current official route
         outcome: pass-fail-or-reschedule-output
         redress: complaint or appeal boundary where supported
         assertion_status: editorial-example
@@ -101,7 +101,7 @@ journeys:
         interaction: record the licence or next official step after the test output
         provider_role: licensing-authority
         evidence: [test-output, provisional-entitlement]
-        rule: licence issue and entitlement rules remain pending source acquisition
+        rule: route the practical pass to DVLA or DVA under the selected official handoff
         time: issue and validity timing retained
         outcome: full-entitlement-or-next-step
         redress: licensing correction or review route
@@ -114,7 +114,7 @@ journeys:
         interaction: distinguish notice type, issuer, recipient role and jurisdiction
         provider_role: police-or-enforcement-body
         evidence: [synthetic-notice, issuer-identity, alleged-event-context]
-        rule: notice authority, recipient duties and alleged offence basis remain pending source acquisition
+        rule: use the notice issuer, recipient role, applicable jurisdiction and current official source without deciding liability
         time: every response deadline must come from the notice and current official source
         outcome: notice-and-response-duty-classified
         redress: correction route for identity or notice errors
@@ -123,7 +123,7 @@ journeys:
         interaction: explain the evidenced information request and response channel
         provider_role: notice-recipient-and-enforcement-body
         evidence: [synthetic-notice, keeper-context, driver-context]
-        rule: driver-information duty and response requirements remain pending source acquisition
+        rule: keep Great Britain and Northern Ireland driver-information sources separate and treat the actual notice as controlling
         time: response timestamp and sourced deadline retained
         outcome: response-record-or-unresolved-boundary
         redress: official advice or legal-help handoff for disputed circumstances
@@ -132,7 +132,7 @@ journeys:
         interaction: distinguish offered disposal, prosecution and court branches without predicting eligibility or outcome
         provider_role: enforcement-body-or-court
         evidence: [response-record, subsequent-official-notice]
-        rule: disposal, prosecution, plea and appeal rules remain pending source acquisition
+        rule: distinguish England-and-Wales, Scottish and Northern Ireland disposal and court branches without predicting one
         time: acceptance, plea, hearing and appeal timing independently sourced
         outcome: route-and-next-step-recorded
         redress: court process or appeal only where evidenced
@@ -151,21 +151,22 @@ private_sector_dependencies:
 
 redress:
   - route: licensing correction, review or complaint
-    authority_status: pending_source_by_jurisdiction
+    authority_status: official_by_selected_licensing_jurisdiction
   - route: test-provider complaint or appeal boundary
-    authority_status: pending_source
+    authority_status: official_where_supported_by_dvsa_or_dva_route
   - route: court hearing or statutory appeal
-    authority_status: pending_source_and_case_specific_legal_handoff
+    authority_status: official_by_court_jurisdiction_and_case_specific_legal_handoff
 
 source_requirements:
-  acquisition_status: authorized_not_started
+  acquisition_status: linked_references_registered
+  register: source/learning-to-drive-speeding.v1.yaml
   required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
   candidate_families: [GB licensing authority, Northern Ireland licensing authority, test providers, police guidance, court and justice guidance, compulsory insurance guidance]
 
 known_unknowns:
-  - exact licensing and testing variants selected for each jurisdiction
-  - notice types, deadlines and disposal options in the selected enforcement examples
-  - which relationships between keeper, recipient and driver are official, normalized or inferred
+  - whether a live licensing, testing, notice or court rule changed after the observation date
+  - the driver identity, response sufficiency, disposal and court route for any real notice
+  - whether a real insurance policy covers the person, vehicle and episode
 
 competency_questions:
   - id: driving-cq-1

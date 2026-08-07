@@ -4,7 +4,7 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **first vertical slice implemented for review**. The approved domain
+Status: **two vertical slices implemented**. The approved domain
 profile and contracts authorize bounded linked-reference registration and the
 three initial slices. The GitHub repository is private; validation remains
 local-only, broad acquisition and CI remain disabled, and publication requires
@@ -20,7 +20,9 @@ a separate explicit owner request.
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
+- [Learning to drive through a speeding exception](journeys/learning-to-drive-speeding.md)
 - [Missed rubbish linked-reference register](source/missed-rubbish-collection.v1.yaml)
+- [Driving and speeding linked-reference register](source/learning-to-drive-speeding.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -53,7 +55,7 @@ creates and maintains the local environment automatically.
 uv sync --locked
 ```
 
-Build and verify the initial bundle:
+Build and verify the bundle:
 
 ```sh
 uv run --locked python scripts/build_okf_bundle.py

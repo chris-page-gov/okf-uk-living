@@ -7,6 +7,13 @@ It records thirteen current official pages for local routes and redress across
 the four nations. Their content is linked and narrowly summarized; it is not
 copied or redistributed, so no immutable-envelope checksum exists.
 
+The second bounded linked-reference set is the
+[`learning-to-drive-speeding.v1` register](learning-to-drive-speeding.v1.yaml).
+It records twenty official pages: eleven for the separate Great Britain and
+Northern Ireland learning routes, and nine for Great Britain, England and
+Wales, Scotland and Northern Ireland speeding-notice and court boundaries. It
+also contains no snapshots or immutable-envelope checksums.
+
 Initial research references also include:
 
 - GOV.UK services and information browse hierarchy;

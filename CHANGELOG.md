@@ -22,6 +22,14 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   service family and ontology module, and a synthetic journey.
 - Semantic slice validation and regression tests for authority, jurisdiction,
   provenance, assertion status and anti-generalization boundaries.
+- Bounded learning-to-drive and speeding register with 20 official linked
+  references and no acquired snapshots.
+- Second vertical slice with separate Great Britain and Northern Ireland
+  learning routes; GB notice, England-and-Wales court, Scottish prosecution
+  and Northern Ireland speeding branches; public/private actor boundaries;
+  normalized ontology; and a synthetic evidence-lineage journey.
+- Driving-slice semantic checks for exact providers, jurisdictions, source
+  sets, assertion status, graph completeness and non-universal deadlines.
 
 ### Changed
 
@@ -32,7 +40,9 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Recorded the private-plan branch-protection limitation while retaining the
   sole-developer PR-only policy for `main`.
 - Advanced the missed-rubbish fixture acquisition state to
-  `linked_references_registered` while leaving the other two not started.
+  `linked_references_registered`.
+- Advanced the driving fixture to `linked_references_registered`, leaving only
+  the bereavement source registration not started.
 
 ## [0.0.0] - 2026-08-07
 

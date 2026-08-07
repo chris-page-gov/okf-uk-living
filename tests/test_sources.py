@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from check_sources import (  # noqa: E402
+    EXPECTED_DRIVING_SPEEDING_IDS,
     EXPECTED_MISSED_RUBBISH_IDS,
     validate_source_register,
     validate_source_registers,
@@ -19,13 +20,19 @@ from check_sources import (  # noqa: E402
 class SourceRegisterTests(unittest.TestCase):
     def setUp(self) -> None:
         self.registers, self.errors = validate_source_registers()
-        self.register = self.registers[0]
+        self.registers_by_slice = {register["slice_id"]: register for register in self.registers}
+        self.register = self.registers_by_slice["missed-rubbish-collection"]
 
     def test_source_register_is_valid(self) -> None:
         self.assertEqual([], self.errors)
 
     def test_bounded_source_denominator_is_fixed(self) -> None:
         self.assertEqual(EXPECTED_MISSED_RUBBISH_IDS, {source["id"] for source in self.register["sources"]})
+        driving = self.registers_by_slice["learning-to-drive-speeding"]
+        self.assertEqual(EXPECTED_DRIVING_SPEEDING_IDS, {source["id"] for source in driving["sources"]})
+
+    def test_registered_denominator_has_thirty_three_links(self) -> None:
+        self.assertEqual(33, sum(len(register["sources"]) for register in self.registers))
 
     def test_no_snapshots_or_broad_acquisition(self) -> None:
         self.assertFalse(self.register["acquisition"]["snapshots_acquired"])

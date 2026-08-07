@@ -28,10 +28,10 @@ Each slice must include the ordinary path, exception path, jurisdiction,
 provider, evidence, rule, time, outcome, redress and source provenance.
 Implementation is authorized within the approved bounded source scope.
 
-The missed-rubbish slice is implemented for review with four explicitly local
-examples, a 13-reference linked-source denominator, ordinary and exception
-paths, contractor boundaries and jurisdiction-specific redress. The driving
-and bereavement slices remain queued.
+The missed-rubbish slice was merged in PR #3. The learning-to-drive and
+speeding slice is implemented for review with separate GB and Northern Ireland
+learning routes, three court/prosecution boundaries, compulsory private
+dependencies and a 20-reference denominator. Bereavement remains queued.
 
 ## Phase 3 — ontology and curriculum
 

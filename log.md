@@ -12,3 +12,10 @@
   jurisdiction contexts and jurisdiction-specific external redress bodies.
 - Added the normalized missed-rubbish model and synthetic ordinary and
   exception journey with semantic regression checks.
+- Registered 20 official links for learning to drive and speeding without
+  acquiring snapshots.
+- Added separate Great Britain and Northern Ireland licensing/testing routes,
+  jurisdiction-specific speeding branches, private dependencies and court
+  redress boundaries.
+- Added the normalized driving model and synthetic evidence-lineage journey
+  with semantic regression checks.

@@ -11,3 +11,4 @@ only where the source standards do not supply them.
 ## Implemented slice modules
 
 - [Missed rubbish collection model](missed-rubbish-collection.md)
+- [Learning to drive and speeding model](learning-to-drive-speeding.md)
