@@ -17,8 +17,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | SLICE-001 | Missed rubbish collection | Complete | Merged in PR #3 with four local routes and a 13-reference denominator |
 | SLICE-002 | Learning to drive and speeding exception | Complete | Merged in PR #4 with GB/NI learning routes, three speeding court boundaries and a 20-reference denominator |
 | SLICE-003 | Death, Tell Us Once and estate administration | Complete | Merged in PR #5 with three registration routes, Tell Us Once/NI notification split, three estate-authority routes and a 20-reference denominator |
-| REVIEW-001 | Integrated three-slice sample review | Ready | Next delivery unit; produce fixture traceability, cross-slice review and a dated finding ledger with no open blocker |
-| COMPAT-001 | Lock the actual OKF Explorer consumer contract | Planned | Requires local Explorer overview, record, query, graph and deep-link evidence |
+| REVIEW-001 | Integrated three-slice sample review | In progress: findings open | [2026-08-07 local review](evaluation/reviews/integrated-three-slice-2026-08-07.md) passed Reader/query content and recorded four open release findings; remediate or explicitly disposition and rerun |
+| COMPAT-001 | Lock the actual OKF Explorer consumer contract | Evaluated: not locked | Explorer 0.5.7 and exact bundle bytes are recorded in [`okf-explorer-local.v1`](evaluation/compatibility/okf-explorer-local.v1.yaml); provenance, source and notice surfaces remain open |
 | SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
 | CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
 | PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
@@ -41,5 +41,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   eligible generated projections are MIT; third-party material is not
   relicensed and snapshot redistribution is disabled.
 - Public bundle URL: none.
-- Review state: the bounded three-slice sample is ready for integrated review;
-  it is not yet a frozen publication candidate.
+- Review state: the integrated local Explorer review was executed on
+  2026-08-07. Slice content, queries and deep links passed; `REV-001` through
+  `REV-004` remain open, so the review and compatibility gates have not passed
+  and the sample is not a frozen publication candidate.

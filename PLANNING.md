@@ -39,15 +39,18 @@ to a later pull request.
 ## Near-term delivery units
 
 The owner approved `okf-domain-profile.v1` and the three fixture contracts on
-2026-08-07. All three slices and the licensing decisions are merged. The
-sample is ready for integrated review, but it is not yet a frozen publication
-candidate.
+2026-08-07. All three slices and the licensing decisions are merged. The first
+integrated local Explorer review has been executed: the content journeys pass,
+but four provenance, source-handoff and notice findings remain open. The sample
+is reviewable, but it is not yet a frozen publication candidate.
 
 The active sequence is defined in the
 [three-slice review and publication plan](docs/review-and-publication-plan.md):
 
-1. `REVIEW-001` — integrated three-slice content, evidence and journey review.
-2. `COMPAT-001` — inventory and lock the actual OKF Explorer consumer.
+1. Remediate or explicitly disposition `REV-001` through `REV-004` from the
+   [2026-08-07 review](evaluation/reviews/integrated-three-slice-2026-08-07.md).
+2. Rerun `REVIEW-001` and lock `COMPAT-001` against the same required Reader,
+   query, graph, deep-link, source and notice journeys.
 3. `SCOPE-001` — approve the initial sample claim and limitations boundary.
 4. `CAND-001` — freeze one locally validated candidate and its hashes.
 5. `PUB-001` — await an explicit owner publication request naming that

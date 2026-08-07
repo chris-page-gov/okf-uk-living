@@ -1,6 +1,7 @@
 # Repository status
 
-- Lifecycle: bounded three-slice sample ready for integrated review
+- Lifecycle: bounded three-slice sample reviewed locally with four open
+  release findings
 - Corpus: root, research overview and three implemented vertical slices
 - Ontology: three normalized slice modules implemented; governed cross-domain
   registry and publication shapes remain planned
@@ -13,7 +14,8 @@
   terms; source content remains link-and-summary only; snapshot redistribution
   is disabled; eligible repository-authored projections are MIT
 - Deterministic local generation: enabled for authored Markdown
-- Evaluation: local `uv` environment only
+- Evaluation: local `uv` environment and visible OKF Explorer 0.5.7 review;
+  Reader/query content passes, release gate remains open
 - CI: scaffolded but disabled; pull requests do not run remote checks
 - Remote: private GitHub repository created after explicit owner authorization
 - Main protection: PR-only policy documented; server enforcement unavailable
@@ -31,7 +33,12 @@
   semantic tests
 - Licensing: merged in PR #6 with the repository and source-family rights
   checks passing
-- Publication readiness: reviewable sample, not yet a candidate; no integrated
-  review report, final Explorer lock, release-scope approval or frozen manifest
-- Next gate: `REVIEW-001`, the integrated three-slice review defined in
-  `docs/review-and-publication-plan.md`
+- Integrated review: executed on 2026-08-07; `REV-001` through `REV-004`
+  remain open for relationship provenance, node build provenance,
+  browser-renderable source handoff and licence-notice verification
+- Explorer compatibility: OKF Explorer 0.5.7 and the reviewed bundle bytes are
+  recorded, but `COMPAT-001` is not locked while those findings remain open
+- Publication readiness: reviewable sample, not yet a candidate; no
+  release-scope approval or frozen manifest
+- Next gate: focused remediation and rerun of `REVIEW-001` and `COMPAT-001` as
+  defined in `docs/review-and-publication-plan.md`

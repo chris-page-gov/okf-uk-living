@@ -16,5 +16,12 @@ The first executable boundary is the set of three
 ordinary and exception journeys and are validated locally against the draft
 domain profile. The owner approved this boundary on 2026-08-07.
 
-Contract validation is not domain validation. No source, journey, Explorer or
-publication evaluation gate is currently claimed as passed.
+The first [integrated three-slice Explorer review](reviews/integrated-three-slice-2026-08-07.md)
+was executed locally on 2026-08-07 against the exact consumer recorded under
+[`compatibility/`](compatibility/README.md). Reader and query journeys passed,
+but relationship provenance, node build provenance, browser-renderable source
+handoffs and licence-notice verification remain open findings. The review and
+compatibility gates are therefore not yet passed.
+
+Contract validation is not domain validation, and a local Explorer result is
+not publication authorization.
