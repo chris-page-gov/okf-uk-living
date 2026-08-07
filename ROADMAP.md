@@ -42,7 +42,9 @@ decisions now exist on main. The first integrated local Explorer review was
 executed on 2026-08-07: all three Reader/query journeys passed, but four open
 provenance, source-handoff and licence-notice findings keep the review and
 compatibility gates open. Those findings must be resolved or explicitly
-dispositioned and retested before any wider corpus work or sample candidate.
+dispositioned and retested before a sample candidate. A separately authorized
+link-only reference-family inventory was completed without starting leaf
+corpus acquisition.
 
 ## Initial sample review and release track
 
@@ -62,6 +64,12 @@ for a clearly labelled non-conformance three-slice sample.
 
 ## Phase 4 — complete life-course atlas
 
+- Complete the 24-domain by five-reference-jurisdiction inventory and gap
+  analysis. Completed on 2026-08-07 with 138 external records, 120 assessed
+  cells, 12 gaps and zero snapshots.
+- Approve the staged 250–400 canonical service-family denominator and resolve
+  the local-topology, health-permission and private-dependency acquisition
+  rules before broad leaf acquisition.
 - Expand against declared GOV.UK, devolved-government, NHS and local-service
   denominators.
 - Add 40–50 end-to-end journeys and 250–400 canonical service families.

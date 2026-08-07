@@ -1,15 +1,18 @@
 # Repository status
 
-- Lifecycle: bounded three-slice sample reviewed locally with four open
-  release findings
+- Lifecycle: exhaustive reference-family inventory complete; bounded
+  three-slice sample reviewed locally with four open release findings
 - Corpus: root, research overview and three implemented vertical slices
 - Ontology: three normalized slice modules implemented; governed cross-domain
   registry and publication shapes remain planned
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
-- Acquisition: 53 official references across all three bounded slice
-  registers, all links with zero snapshots; all 16 source hosts have dated
-  rights decisions and broad acquisition is disabled
+- Acquisition: 85 exhaustive-inventory references plus 53 implemented-slice
+  references, all links with zero snapshots; 23 source hosts and all standards
+  families have dated rights decisions; unbounded leaf acquisition is disabled
+- Reference coverage: 24 domains by five reference jurisdictions gives 120
+  assessed cells; 96 national cells are covered at discovery-family level and
+  24 local cells are partial, with 12 actionable gaps
 - Licensing: MIT for repository-authored code, documentation and ontology
   terms; source content remains link-and-summary only; snapshot redistribution
   is disabled; eligible repository-authored projections are MIT
@@ -42,3 +45,5 @@
   release-scope approval or frozen manifest
 - Next gate: focused remediation and rerun of `REVIEW-001` and `COMPAT-001` as
   defined in `docs/review-and-publication-plan.md`
+- Later corpus gate: owner review of the staged 250–400 service-family
+  denominator and the [exhaustive gap analysis](research/exhaustive-reference-gap-analysis.md)

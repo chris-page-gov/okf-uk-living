@@ -45,7 +45,8 @@ release-scope decision explicitly records that:
   claims;
 - the content is educational and navigational, not current individual advice;
 - all three source denominators and known omissions remain visible; and
-- broader source acquisition and corpus expansion remain out of scope.
+- the separately authorized link-only reference-family inventory does not
+  expand the published corpus or authorize leaf acquisition.
 
 That is the shortest responsible route to a useful reviewable publication. A
 decision to claim formal semantic conformance would instead bring the governed
@@ -80,7 +81,11 @@ cover:
 7. a finding ledger with severity, disposition, reviewer and decision date.
 
 Changes needed to resolve findings remain focused pull requests with full local
-validation. Review findings do not authorize broad source acquisition.
+validation. Review findings do not authorize source snapshots, leaf-source
+acquisition or corpus expansion. The separate 2026-08-07 owner instruction
+authorizes only the exhaustive reference-family inventory of links, rights
+evidence and original summaries recorded in
+[`source/exhaustive-reference-inventory.v1.yaml`](../source/exhaustive-reference-inventory.v1.yaml).
 
 The first run is recorded under `evaluation/reviews/`. `REVIEW-001` remains in
 progress until `REV-001` through `REV-004` are remediated or explicitly

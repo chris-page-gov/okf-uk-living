@@ -1,0 +1,999 @@
+inventory_version: exhaustive-reference-inventory.v1
+status: owner_authorized_link_only
+observed_at: "2026-08-07"
+
+decision:
+  authorized_by: owner:chris-page-gov
+  authorized_at: "2026-08-07"
+  scope: exhaustive_reference_family_inventory_for_the_proposed_life_course_bundle
+  acquisition_mode: linked_reference_and_original_summary_only
+  snapshots_acquired: false
+  source_content_redistribution_allowed: false
+  publication_allowed: false
+  limitation: >-
+    Authorization covers discovery and registration of external reference
+    families. It does not authorize page snapshots, bulk extraction, source
+    content redistribution, CI, GitHub Pages or publication.
+
+denominator:
+  interpretation: >-
+    Exhaustive means every cell in the declared Phase 4 reference-family
+    denominator is assessed. It does not mean that every live service page,
+    provider or legal instrument has already been acquired.
+  domains:
+    - id: before-birth-and-starting-family
+      title: Before birth and starting a family
+    - id: birth-and-newborn
+      title: Birth and the newborn period
+    - id: early-years
+      title: Early years
+    - id: school-years
+      title: School years
+    - id: transition-to-adulthood
+      title: Transition to adulthood
+    - id: further-education-university-research
+      title: Further education, university and research
+    - id: finding-work-and-unemployment
+      title: Finding work and unemployment
+    - id: employment
+      title: Employment
+    - id: housing-and-community
+      title: Housing and community life
+    - id: rubbish-recycling-and-street
+      title: Rubbish, recycling and the street
+    - id: public-and-private-transport
+      title: Public and private transport
+    - id: transport-enforcement
+      title: Transport enforcement
+    - id: money-tax-and-benefits
+      title: Money, tax and benefits
+    - id: shopping-and-consumer-rights
+      title: Shopping and consumer rights
+    - id: relationships-and-family-change
+      title: Relationships and family change
+    - id: health-throughout-life
+      title: Health throughout life
+    - id: disability-care-and-support
+      title: Disability, care and support
+    - id: citizenship-democracy-and-rights
+      title: Citizenship, democracy and rights
+    - id: police-and-legal-services
+      title: Police and legal services
+    - id: starting-and-running-organisation
+      title: Starting and running an organisation
+    - id: ideas-creativity-and-research
+      title: Ideas, creativity and research
+    - id: holidays-volunteering-and-living-overseas
+      title: Holidays, volunteering and living overseas
+    - id: later-life
+      title: Later life
+    - id: death-and-bereavement
+      title: Death and bereavement
+  reference_jurisdictions:
+    - uk-or-england
+    - scotland
+    - wales
+    - northern-ireland
+    - local
+  expected_domain_jurisdiction_cells: 120
+  cell_rule: >-
+    A covered national cell identifies an authoritative discovery family, not
+    a finished service route. A partial local cell identifies authority
+    directories but still requires current responsible-provider pages.
+  capability_dimensions:
+    - authority_and_provider
+    - jurisdiction_and_geography
+    - ordinary_and_exception_routes
+    - rules_rights_and_obligations
+    - requirements_and_evidence
+    - channels_costs_and_time
+    - outcomes_and_redress
+    - private_sector_dependencies
+    - provenance_freshness_and_rights
+    - ontology_curriculum_and_explorer
+  included_existing_registers:
+    - path: source/missed-rubbish-collection.v1.yaml
+      expected_references: 13
+    - path: source/learning-to-drive-speeding.v1.yaml
+      expected_references: 20
+    - path: source/death-bereavement-estate.v1.yaml
+      expected_references: 20
+
+reference_families:
+  - id: govuk-mainstream-browse
+    owner: Government Digital Service
+    jurisdiction: uk-or-england
+    authority_role: authoritative_coverage_and_route_discovery
+    rights_decision: host:www.gov.uk
+    observed_at: "2026-08-07"
+    access_method: public_html_and_content_api
+    version_model: live_mainstream_browse_pages
+    update_cadence: recheck_index_before_each_acquisition_batch
+    limitations: >-
+      GOV.UK pages can be UK-wide, Great Britain, England and Wales or England
+      only. A browse location never establishes the jurisdiction of a leaf
+      service, and the taxonomy describes GOV.UK content rather than the world.
+    references:
+      - id: govuk-browse-benefits
+        title: Benefits
+        resource: https://www.gov.uk/browse/benefits
+        source_updated_at: "2018-05-16T16:12:49Z"
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, finding-work-and-unemployment, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Official discovery index for benefit, appeal, tax-credit and Universal Credit routes represented on GOV.UK.
+      - id: govuk-browse-births-deaths-marriages
+        title: Births, deaths, marriages and care
+        resource: https://www.gov.uk/browse/births-deaths-marriages
+        source_updated_at: "2021-04-27T12:19:57Z"
+        domains: [birth-and-newborn, relationships-and-family-change, later-life, death-and-bereavement]
+        summary: Official discovery index for registration, family change, care and end-of-life routes represented on GOV.UK.
+      - id: govuk-browse-business
+        title: Business and self-employed
+        resource: https://www.gov.uk/browse/business
+        source_updated_at: "2021-04-27T12:21:27Z"
+        domains: [starting-and-running-organisation, ideas-creativity-and-research]
+        summary: Official discovery index for starting, operating, financing, regulating and closing a business.
+      - id: govuk-browse-childcare-parenting
+        title: Childcare and parenting
+        resource: https://www.gov.uk/browse/childcare-parenting
+        source_updated_at: "2015-07-15T11:40:43Z"
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, relationships-and-family-change]
+        summary: Official discovery index for pregnancy, birth, childcare, fostering, adoption and school-related routes.
+      - id: govuk-browse-citizenship
+        title: Citizenship and living in the UK
+        resource: https://www.gov.uk/browse/citizenship
+        source_updated_at: "2015-04-08T10:48:44Z"
+        domains: [transition-to-adulthood, citizenship-democracy-and-rights, holidays-volunteering-and-living-overseas]
+        summary: Official discovery index for voting, participation, citizenship and living-in-the-UK information.
+      - id: govuk-browse-justice
+        title: Crime, justice and the law
+        resource: https://www.gov.uk/browse/justice
+        source_updated_at: "2022-04-06T18:09:47Z"
+        domains: [transport-enforcement, shopping-and-consumer-rights, relationships-and-family-change, citizenship-democracy-and-rights, police-and-legal-services]
+        summary: Official discovery index for police, court, tribunal, legal-aid, victim and appeal routes.
+      - id: govuk-browse-disabilities
+        title: Disabled people
+        resource: https://www.gov.uk/browse/disabilities
+        source_updated_at: "2021-04-27T12:22:23Z"
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, public-and-private-transport, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Official discovery index for disability rights, benefits, care, work, education and transport support.
+      - id: govuk-browse-driving
+        title: Driving and transport
+        resource: https://www.gov.uk/browse/driving
+        source_updated_at: "2021-04-27T12:22:47Z"
+        domains: [transition-to-adulthood, public-and-private-transport, transport-enforcement]
+        summary: Official discovery index for driving licences, vehicles, road use, penalties and transport services.
+      - id: govuk-browse-education
+        title: Education and learning
+        resource: https://www.gov.uk/browse/education
+        source_updated_at: "2021-04-27T12:23:24Z"
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, ideas-creativity-and-research]
+        summary: Official discovery index for schools, qualifications, apprenticeships, higher education and student finance.
+      - id: govuk-browse-employing-people
+        title: Employing people
+        resource: https://www.gov.uk/browse/employing-people
+        source_updated_at: "2021-07-09T12:54:33Z"
+        domains: [before-birth-and-starting-family, employment, starting-and-running-organisation]
+        summary: Official discovery index for employer duties involving hiring, pay, contracts, leave and redundancy.
+      - id: govuk-browse-environment-countryside
+        title: Environment and countryside
+        resource: https://www.gov.uk/browse/environment-countryside
+        source_updated_at: "2023-08-02T10:48:20Z"
+        domains: [housing-and-community, rubbish-recycling-and-street, starting-and-running-organisation]
+        summary: Official discovery index for flooding, waste, environmental regulation, farming and countryside routes.
+      - id: govuk-browse-housing-local-services
+        title: Housing and local services
+        resource: https://www.gov.uk/browse/housing-local-services
+        source_updated_at: "2023-07-31T14:36:03Z"
+        domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, disability-care-and-support, later-life]
+        summary: Official discovery index for housing, councils and locally delivered services represented on GOV.UK.
+      - id: govuk-browse-tax
+        title: Money and tax
+        resource: https://www.gov.uk/browse/tax
+        source_updated_at: "2021-04-27T12:24:51Z"
+        domains: [transition-to-adulthood, employment, money-tax-and-benefits, starting-and-running-organisation, later-life, death-and-bereavement]
+        summary: Official discovery index for personal and business tax, National Insurance, debt and Self Assessment.
+      - id: govuk-browse-abroad
+        title: Passports, travel and living abroad
+        resource: https://www.gov.uk/browse/abroad
+        source_updated_at: "2015-04-08T10:48:43Z"
+        domains: [birth-and-newborn, citizenship-democracy-and-rights, holidays-volunteering-and-living-overseas, death-and-bereavement]
+        summary: Official discovery index for passports, travel advice, consular help and living outside the UK.
+      - id: govuk-browse-visas-immigration
+        title: Visas and immigration
+        resource: https://www.gov.uk/browse/visas-immigration
+        source_updated_at: "2021-06-03T13:56:26Z"
+        domains: [finding-work-and-unemployment, employment, housing-and-community, citizenship-democracy-and-rights, holidays-volunteering-and-living-overseas]
+        summary: Official discovery index for visiting, working, studying, settling and seeking asylum in the UK.
+      - id: govuk-browse-working
+        title: Working, jobs and pensions
+        resource: https://www.gov.uk/browse/working
+        source_updated_at: "2021-07-09T12:54:10Z"
+        domains: [before-birth-and-starting-family, transition-to-adulthood, finding-work-and-unemployment, employment, money-tax-and-benefits, later-life]
+        summary: Official discovery index for finding work, employment rights, leave, redundancy and pensions.
+      - id: govuk-consumer-protection-rights
+        title: Consumer protection and rights
+        resource: https://www.gov.uk/consumer-protection-rights
+        source_updated_at: not_exposed_at_index
+        domains: [shopping-and-consumer-rights]
+        summary: Official routing page that separates consumer advice and enforcement routes by UK jurisdiction.
+      - id: govuk-find-local-council
+        title: Find your local council
+        resource: https://www.gov.uk/find-local-council
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, rubbish-recycling-and-street, public-and-private-transport, disability-care-and-support, police-and-legal-services]
+        summary: Official postcode route for discovering the relevant council website without asserting which tier owns a service.
+      - id: govuk-types-of-council
+        title: Types of council
+        resource: https://www.gov.uk/understand-how-your-council-works/types-of-council
+        source_updated_at: not_exposed_at_index
+        domains: [school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, disability-care-and-support]
+        summary: Official England-focused explanation of council tiers and typical responsibility boundaries.
+
+  - id: govuk-content-api
+    owner: Government Digital Service
+    jurisdiction: uk-or-england
+    authority_role: authoritative_content_identifier_and_update_metadata
+    rights_decision: host:content-api.publishing.service.gov.uk
+    observed_at: "2026-08-07"
+    access_method: public_json_api
+    version_model: live_content_store_representation
+    update_cadence: query_before_each_acquisition_batch
+    limitations: API metadata describes GOV.UK content and does not prove service availability or jurisdiction.
+    references:
+      - id: govuk-content-api-root
+        title: GOV.UK Content API
+        resource: https://content-api.publishing.service.gov.uk/
+        source_updated_at: "2026-06-23T13:59:04+01:00"
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+        summary: Public API for stable GOV.UK content identifiers, links, publishing organisations and update metadata.
+
+  - id: mygov-scot-browse
+    owner: Scottish Government
+    jurisdiction: scotland
+    authority_role: authoritative_citizen_service_discovery
+    rights_decision: host:www.mygov.scot
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_browse_pages
+    update_cadence: recheck_index_before_each_acquisition_batch
+    limitations: >-
+      The categories discover public services in Scotland but do not replace
+      the responsible authority, NHS board, council, court or regulator page.
+    references:
+      - id: mygov-benefits
+        title: Benefits
+        resource: https://www.mygov.scot/browse/benefits
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, finding-work-and-unemployment, money-tax-and-benefits, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Scottish citizen-service index for devolved disability, child, heating, carer and crisis support.
+      - id: mygov-housing
+        title: Housing
+        resource: https://www.mygov.scot/browse/housing
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, housing-and-community, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Scottish citizen-service index for renting, landlords, Council Tax, homelessness and home ownership.
+      - id: mygov-health-social-care
+        title: Health, social care and wellbeing
+        resource: https://www.mygov.scot/browse/health-social-care
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Scottish citizen-service index for health access, care, mental health, advocacy and health complaints.
+      - id: mygov-work-jobs
+        title: Working, jobs and careers
+        resource: https://www.mygov.scot/browse/work-jobs
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, money-tax-and-benefits, later-life]
+        summary: Scottish citizen-service index for work, careers, disclosure checks, rights and employment support.
+      - id: mygov-driving-transport
+        title: Driving and transport
+        resource: https://www.mygov.scot/browse/driving-transport
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, public-and-private-transport, transport-enforcement, disability-care-and-support, later-life]
+        summary: Scottish citizen-service index for road rules, parking support, public transport and driving routes.
+      - id: mygov-local-services
+        title: Local services
+        resource: https://www.mygov.scot/browse/local-services
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, disability-care-and-support, citizenship-democracy-and-rights, later-life]
+        summary: Scottish discovery index for council-delivered services including waste, libraries and community support.
+      - id: mygov-living-visiting-scotland
+        title: Living in and visiting Scotland
+        resource: https://www.mygov.scot/browse/living-visiting-scotland
+        source_updated_at: not_exposed_at_index
+        domains: [shopping-and-consumer-rights, citizenship-democracy-and-rights, holidays-volunteering-and-living-overseas]
+        summary: Scottish citizen-service index for living, participation, voting, consumer support and visiting Scotland.
+      - id: mygov-education-training
+        title: Education and training
+        resource: https://www.mygov.scot/browse/education-training
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, ideas-creativity-and-research]
+        summary: Scottish citizen-service index for schools, training, student support, qualifications and learning grants.
+      - id: mygov-business
+        title: Business
+        resource: https://www.mygov.scot/browse/business
+        source_updated_at: not_exposed_at_index
+        domains: [employment, shopping-and-consumer-rights, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas]
+        summary: Scottish citizen-service index for starting, managing, funding, regulating and closing a business.
+      - id: mygov-birth-death-family
+        title: Births, deaths and family
+        resource: https://www.mygov.scot/browse/birth-death-family
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, relationships-and-family-change, later-life, death-and-bereavement]
+        summary: Scottish citizen-service index for family formation, certificates, childcare, relationship change and death.
+      - id: mygov-crime-justice-law
+        title: Crime, justice and the law
+        resource: https://www.mygov.scot/browse/crime-justice-law
+        source_updated_at: not_exposed_at_index
+        domains: [transport-enforcement, relationships-and-family-change, citizenship-democracy-and-rights, police-and-legal-services]
+        summary: Scottish citizen-service index for police, courts, legal aid, convictions and justice routes.
+      - id: mygov-money-tax
+        title: Money and tax
+        resource: https://www.mygov.scot/browse/money-tax
+        source_updated_at: not_exposed_at_index
+        domains: [finding-work-and-unemployment, money-tax-and-benefits, shopping-and-consumer-rights, starting-and-running-organisation, later-life, death-and-bereavement]
+        summary: Scottish citizen-service index for devolved taxes, debt, bankruptcy, rates and money support.
+      - id: mygov-environment-farm-marine
+        title: Environment, farming and marine
+        resource: https://www.mygov.scot/browse/environment-farm-marine
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, rubbish-recycling-and-street, starting-and-running-organisation]
+        summary: Scottish citizen-service index for environmental, land, water, farming and marine responsibilities.
+      - id: mygov-organisations
+        title: Organisations
+        resource: https://www.mygov.scot/organisations
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+        summary: Official directory of Scottish councils, government bodies, health boards, tribunals, regulators and ombudsmen.
+
+  - id: govwales-topics
+    owner: Welsh Government
+    jurisdiction: wales
+    authority_role: authoritative_policy_service_and_provider_discovery
+    rights_decision: host:www.gov.wales
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_topic_pages
+    update_cadence: recheck_index_before_each_acquisition_batch
+    limitations: >-
+      GOV.WALES mixes policy, guidance, publications and service links. A topic
+      page is not proof that Welsh Government directly delivers a citizen route.
+    references:
+      - id: govwales-arts-culture-sport
+        title: Arts, culture and sport
+        resource: https://www.gov.wales/arts-culture-sport
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, citizenship-democracy-and-rights, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life]
+        summary: Welsh Government topic index for culture, libraries, museums, sport, media and creative activity.
+      - id: govwales-building-planning
+        title: Building and planning
+        resource: https://www.gov.wales/building-planning
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, disability-care-and-support, starting-and-running-organisation]
+        summary: Welsh Government topic index for planning, building regulation, development and appeals.
+      - id: govwales-business-economy-innovation
+        title: Business, economy and innovation
+        resource: https://www.gov.wales/business-economy-innovation
+        source_updated_at: not_exposed_at_index
+        domains: [finding-work-and-unemployment, employment, shopping-and-consumer-rights, starting-and-running-organisation, ideas-creativity-and-research]
+        summary: Welsh Government topic index for enterprise, economic support, tourism, science and innovation.
+      - id: govwales-children-families
+        title: Children and families
+        resource: https://www.gov.wales/children-families
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, relationships-and-family-change, death-and-bereavement]
+        summary: Welsh Government topic index for childcare, parenting, rights, safeguarding and children in care.
+      - id: govwales-communities-regeneration
+        title: Communities and regeneration
+        resource: https://www.gov.wales/communities-regeneration
+        source_updated_at: not_exposed_at_index
+        domains: [finding-work-and-unemployment, housing-and-community, money-tax-and-benefits, shopping-and-consumer-rights, disability-care-and-support, citizenship-democracy-and-rights, later-life]
+        summary: Welsh Government topic index for community support, money, the voluntary sector and emergency services.
+      - id: govwales-digital
+        title: Digital
+        resource: https://www.gov.wales/digital
+        source_updated_at: not_exposed_at_index
+        domains: [school-years, further-education-university-research, citizenship-democracy-and-rights, starting-and-running-organisation]
+        summary: Welsh Government topic index for digital inclusion, public-service standards and connectivity.
+      - id: govwales-education-skills
+        title: Education and skills
+        resource: https://www.gov.wales/education-skills
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, ideas-creativity-and-research]
+        summary: Welsh Government topic index for schools, post-16 education, qualifications, skills and vocational training.
+      - id: govwales-employment-work
+        title: Employment and work
+        resource: https://www.gov.wales/employment-work
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, transition-to-adulthood, finding-work-and-unemployment, employment, disability-care-and-support, later-life]
+        summary: Welsh Government topic index for employment support, fair work, unions and workplace policy.
+      - id: govwales-environment-climate-change
+        title: Environment and climate change
+        resource: https://www.gov.wales/environment-climate-change
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, rubbish-recycling-and-street, public-and-private-transport, starting-and-running-organisation]
+        summary: Welsh Government topic index for waste, flooding, pollution, energy, water and climate policy.
+      - id: govwales-equality-human-rights
+        title: Equality and human rights
+        resource: https://www.gov.wales/equality-human-rights
+        source_updated_at: not_exposed_at_index
+        domains: [school-years, employment, housing-and-community, shopping-and-consumer-rights, relationships-and-family-change, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services]
+        summary: Welsh Government topic index for equality, domestic abuse, modern slavery and human-rights policy.
+      - id: govwales-farming-countryside
+        title: Farming and countryside
+        resource: https://www.gov.wales/farming-countryside
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, starting-and-running-organisation]
+        summary: Welsh Government topic index for rural payments, animals, land management and conservation.
+      - id: govwales-health-social-care
+        title: Health and social care
+        resource: https://www.gov.wales/health-social-care
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Welsh Government topic index for health policy, NHS Wales, maternity, care, costs and complaints.
+      - id: govwales-housing
+        title: Housing
+        resource: https://www.gov.wales/housing
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, housing-and-community, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Welsh Government topic index for renting, owning, homelessness, social housing and Council Tax.
+      - id: govwales-international-eu
+        title: International and EU
+        resource: https://www.gov.wales/international-eu
+        source_updated_at: not_exposed_at_index
+        domains: [citizenship-democracy-and-rights, starting-and-running-organisation, holidays-volunteering-and-living-overseas]
+        summary: Welsh Government topic index for international relations, overseas activity and EU-related responsibilities.
+      - id: govwales-justice-law
+        title: Justice and law
+        resource: https://www.gov.wales/justice-and-law
+        source_updated_at: not_exposed_at_index
+        domains: [transport-enforcement, relationships-and-family-change, citizenship-democracy-and-rights, police-and-legal-services]
+        summary: Welsh Government topic index for devolved justice policy, crime, prisoners and probation.
+      - id: govwales-marine-fisheries
+        title: Marine and fisheries
+        resource: https://www.gov.wales/marine-fisheries
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, starting-and-running-organisation]
+        summary: Welsh Government topic index for marine planning, licensing, fisheries and coastal activity.
+      - id: govwales-public-sector
+        title: Public sector
+        resource: https://www.gov.wales/public-sector
+        source_updated_at: not_exposed_at_index
+        domains: [employment, housing-and-community, rubbish-recycling-and-street, money-tax-and-benefits, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation]
+        summary: Welsh Government topic index for local government, public bodies, procurement, finance and public services.
+      - id: govwales-transport
+        title: Transport
+        resource: https://www.gov.wales/transport
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, housing-and-community, public-and-private-transport, transport-enforcement, disability-care-and-support, later-life]
+        summary: Welsh Government topic index for roads, driving, walking, cycling, bus and rail policy and services.
+      - id: govwales-welsh-language
+        title: Welsh language
+        resource: https://www.gov.wales/welsh-language
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, further-education-university-research, citizenship-democracy-and-rights]
+        summary: Welsh Government topic index for Welsh-language rights, education, standards and public-service provision.
+      - id: govwales-organisations
+        title: Organisations
+        resource: https://www.gov.wales/organisations
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+        summary: Official directory of Welsh Government bodies, NHS organisations, tribunals, regulators and statutory offices.
+      - id: govwales-local-government
+        title: Local government
+        resource: https://www.gov.wales/local-government
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, money-tax-and-benefits, disability-care-and-support, citizenship-democracy-and-rights, later-life]
+        summary: Welsh Government discovery page for local-authority responsibilities, guidance and the local-authority finder.
+
+  - id: nidirect-topics
+    owner: Northern Ireland Executive departments and agencies
+    jurisdiction: northern-ireland
+    authority_role: authoritative_citizen_service_discovery
+    rights_decision: host:www.nidirect.gov.uk
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_topic_pages
+    update_cadence: recheck_index_before_each_acquisition_batch
+    limitations: >-
+      nidirect brings together multiple departments and bodies. The responsible
+      provider and any UK-wide dependency must still be established per route.
+    references:
+      - id: nidirect-motoring
+        title: Motoring
+        resource: https://www.nidirect.gov.uk/information-and-services/motoring
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, public-and-private-transport, transport-enforcement, disability-care-and-support]
+        summary: Northern Ireland citizen index for licensing, tests, vehicles, road safety and driving work.
+      - id: nidirect-health-wellbeing
+        title: Health and wellbeing
+        resource: https://www.nidirect.gov.uk/information-and-services/health-and-wellbeing
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Northern Ireland citizen index for health conditions, maternity, mental health and health-service access.
+      - id: nidirect-benefits-money
+        title: Benefits and money
+        resource: https://www.nidirect.gov.uk/information-and-services/benefits-and-money
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, finding-work-and-unemployment, money-tax-and-benefits, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Northern Ireland citizen index for benefits, Universal Credit, debt and financial support.
+      - id: nidirect-crime-justice-law
+        title: Crime, justice and the law
+        resource: https://www.nidirect.gov.uk/information-and-services/crime-justice-and-law
+        source_updated_at: not_exposed_at_index
+        domains: [transport-enforcement, shopping-and-consumer-rights, relationships-and-family-change, citizenship-democracy-and-rights, police-and-legal-services]
+        summary: Northern Ireland citizen index for courts, legal aid, records, victims and crime prevention.
+      - id: nidirect-property-housing
+        title: Property and housing
+        resource: https://www.nidirect.gov.uk/information-and-services/property-and-housing
+        source_updated_at: not_exposed_at_index
+        domains: [transition-to-adulthood, housing-and-community, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Northern Ireland citizen index for property, rates, renting, landlords, planning and housing support.
+      - id: nidirect-employment-training-careers
+        title: Employment, training and careers
+        resource: https://www.nidirect.gov.uk/information-and-services/employment-training-and-careers
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, disability-care-and-support, starting-and-running-organisation, later-life]
+        summary: Northern Ireland citizen index for careers, training, employment rights, disputes and redundancy.
+      - id: nidirect-family-home-community
+        title: Family, home and community
+        resource: https://www.nidirect.gov.uk/information-and-services/family-home-and-community
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, housing-and-community, relationships-and-family-change, citizenship-democracy-and-rights]
+        summary: Northern Ireland citizen index for childcare, family life, home safety, leisure and community services.
+      - id: nidirect-pensions-retirement
+        title: Pensions and retirement planning
+        resource: https://www.nidirect.gov.uk/information-and-services/pensions-and-retirement-planning
+        source_updated_at: not_exposed_at_index
+        domains: [money-tax-and-benefits, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Northern Ireland citizen index for pension forecasting, retirement income and retirement decisions.
+      - id: nidirect-government-citizens-rights
+        title: Government, citizens and rights
+        resource: https://www.nidirect.gov.uk/information-and-services/government-citizens-and-rights
+        source_updated_at: not_exposed_at_index
+        domains: [birth-and-newborn, shopping-and-consumer-rights, relationships-and-family-change, citizenship-democracy-and-rights, police-and-legal-services, holidays-volunteering-and-living-overseas, death-and-bereavement]
+        summary: Northern Ireland citizen index for civil registration, participation, consumer advice and rights.
+      - id: nidirect-travel-transport-roads
+        title: Travel, transport and roads
+        resource: https://www.nidirect.gov.uk/information-and-services/travel-transport-and-roads
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, disability-care-and-support, holidays-volunteering-and-living-overseas, later-life]
+        summary: Northern Ireland citizen index for public transport, roads, parking, active travel and travel disruption.
+      - id: nidirect-education
+        title: Education
+        resource: https://www.nidirect.gov.uk/information-and-services/education
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, ideas-creativity-and-research]
+        summary: Northern Ireland citizen index for schools, further and higher education, careers and student support.
+      - id: nidirect-disabled-people
+        title: Disabled people
+        resource: https://www.nidirect.gov.uk/information-and-services/disabled-people
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, public-and-private-transport, money-tax-and-benefits, disability-care-and-support, later-life]
+        summary: Northern Ireland citizen index for disability rights and support across work, money, housing and transport.
+      - id: nidirect-environment-outdoors
+        title: Environment and the outdoors
+        resource: https://www.nidirect.gov.uk/information-and-services/environment-and-outdoors
+        source_updated_at: not_exposed_at_index
+        domains: [housing-and-community, rubbish-recycling-and-street, starting-and-running-organisation]
+        summary: Northern Ireland citizen index for energy, waste, environmental quality and outdoor responsibilities.
+      - id: nidirect-local-councils
+        title: Local councils
+        resource: https://www.nidirect.gov.uk/articles/local-councils
+        source_updated_at: not_exposed_at_index
+        domains: [early-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, money-tax-and-benefits, shopping-and-consumer-rights, disability-care-and-support, citizenship-democracy-and-rights, starting-and-running-organisation, later-life]
+        summary: Official directory and responsibility overview for Northern Ireland's local councils.
+
+  - id: nibusinessinfo-guides
+    owner: Invest Northern Ireland
+    jurisdiction: northern-ireland
+    authority_role: authoritative_business_service_discovery
+    rights_decision: host:www.nibusinessinfo.co.uk
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_guide_index
+    update_cadence: recheck_before_each_business_slice
+    limitations: >-
+      Crown and Invest NI material have different terms; the site requires
+      written permission for republication and must remain link-and-summary only.
+    references:
+      - id: nibusinessinfo-starting-business
+        title: Starting a business
+        resource: https://www.nibusinessinfo.co.uk/content/starting-business
+        source_updated_at: not_exposed_at_index
+        domains: [employment, starting-and-running-organisation]
+        summary: Official Northern Ireland business index for formation, structure, finance, premises, staffing and growth.
+      - id: nibusinessinfo-innovation-rd
+        title: Innovation and research and development
+        resource: https://www.nibusinessinfo.co.uk/content/innovation-and-rd
+        source_updated_at: not_exposed_at_index
+        domains: [further-education-university-research, starting-and-running-organisation, ideas-creativity-and-research]
+        summary: Official Northern Ireland business index for product development, innovation, research and intellectual property.
+
+  - id: nhs-england-service-directory
+    owner: Department of Health and Social Care with NHS England delivery
+    jurisdiction: england
+    authority_role: authoritative_health_service_discovery
+    rights_decision: host:www.nhs.uk
+    observed_at: "2026-08-07"
+    access_method: public_html_and_service_search
+    version_model: live_clinically_governed_content
+    update_cadence: recheck_before_each_use_and_follow_provider_refresh_terms
+    limitations: England only; general information is not individual medical advice and excluded content has separate rights.
+    references:
+      - id: nhs-england-services
+        title: NHS services
+        resource: https://www.nhs.uk/nhs-services/
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: England service index for primary, community, hospital, urgent, mental-health and online NHS routes.
+
+  - id: nhs-inform-scotland
+    owner: NHS 24 on behalf of NHS Scotland and the Scottish Government
+    jurisdiction: scotland
+    authority_role: authoritative_health_information_and_service_discovery
+    rights_decision: host:www.nhsinform.scot
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_clinically_governed_content
+    update_cadence: recheck_before_each_use
+    limitations: Personal and non-commercial use only; data scraping requires explicit permission.
+    references:
+      - id: nhs-inform-service-directory
+        title: Scotland's Service Directory
+        resource: https://www.nhsinform.scot/scotlands-service-directory/
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Scotland's national directory for NHS services and support groups, with provider-level details delegated to listed services.
+
+  - id: nhs-wales-service-directory
+    owner: Welsh Ambulance Services University NHS Trust
+    jurisdiction: wales
+    authority_role: authoritative_health_and_wellbeing_service_discovery
+    rights_decision: host:111.wales.nhs.uk
+    observed_at: "2026-08-07"
+    access_method: public_html_and_legacy_web_service
+    version_model: live_directory
+    update_cadence: recheck_before_each_use
+    limitations: Crown copyright is reserved and redistribution is restricted to the provider's content-authorisation policy.
+    references:
+      - id: nhs-wales-services-near-you
+        title: NHS 111 Wales services near you
+        resource: https://111.wales.nhs.uk/LocalServices/Default.aspx?locale=en
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Wales-wide directory for GPs, pharmacies, hospitals, maternity, community health and social-care services.
+
+  - id: hscni-service-directory
+    owner: Strategic Planning and Performance Group of the Department of Health
+    jurisdiction: northern-ireland
+    authority_role: authoritative_health_and_social_care_service_discovery
+    rights_decision: host:online.hscni.net
+    observed_at: "2026-08-07"
+    access_method: public_html
+    version_model: live_directory
+    update_cadence: recheck_before_each_use
+    limitations: Website terms permit attributed non-commercial reproduction only; medical content is not individual advice.
+    references:
+      - id: hscni-services
+        title: Health and Social Care services
+        resource: https://online.hscni.net/hsc-services/
+        source_updated_at: not_exposed_at_index
+        domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, health-throughout-life, disability-care-and-support, later-life, death-and-bereavement]
+        summary: Northern Ireland index for HSC access, conditions, GPs, urgent care and provider discovery.
+
+standards_and_tooling_references:
+  - id: cpsv-ap-3.2.0
+    title: Core Public Service Vocabulary Application Profile 3.2.0
+    resource: https://semiceu.github.io/CPSV-AP/releases/3.2.0/
+    owner: European Union
+    jurisdiction: mapping-reference
+    authority_role: public_service_semantic_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: version_3.2.0
+    rights_decision: standard:cpsv-ap-3.2.0
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: Versioned reference model for public services, life events, evidence, rules, channels, costs and outputs.
+  - id: open-referral-uk-current
+    title: Open Referral UK
+    resource: https://openreferraluk.org/
+    owner: Open Referral UK community
+    jurisdiction: mapping-reference
+    authority_role: local_service_directory_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: live_site
+    rights_decision: standard:open-referral-uk-website
+    domains: [early-years, school-years, finding-work-and-unemployment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, later-life]
+    summary: UK profile reference for local services, organisations, locations, schedules, eligibility, costs and required documents.
+  - id: hsds-3.1
+    title: Human Services Data Specification 3.1
+    resource: https://docs.openreferral.org/en/3.1/
+    owner: Open Referral Initiative
+    jurisdiction: mapping-reference
+    authority_role: human_service_data_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: version_3.1
+    rights_decision: standard:hsds-3.1-documentation
+    domains: [early-years, school-years, finding-work-and-unemployment, housing-and-community, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, later-life]
+    summary: International schema reference underlying Open Referral service, organisation, location and access data.
+  - id: w3c-skos-primer
+    title: SKOS Simple Knowledge Organization System Primer
+    resource: https://www.w3.org/TR/skos-primer/
+    owner: World Wide Web Consortium
+    jurisdiction: mapping-reference
+    authority_role: controlled_vocabulary_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: w3c_recommendation
+    rights_decision: standard:w3c-recommendations
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: W3C reference for concept schemes, preferred labels, alternative labels and broader or narrower navigation.
+  - id: w3c-owl2-primer
+    title: OWL 2 Web Ontology Language Primer
+    resource: https://www.w3.org/TR/owl2-primer/
+    owner: World Wide Web Consortium
+    jurisdiction: mapping-reference
+    authority_role: ontology_semantics_reference
+    observed_at: "2026-08-07"
+    source_updated_at: w3c_recommendation
+    rights_decision: standard:w3c-recommendations
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: W3C reference for class, property, identity and logical ontology semantics.
+  - id: w3c-prov-o
+    title: PROV-O
+    resource: https://www.w3.org/TR/prov-o/
+    owner: World Wide Web Consortium
+    jurisdiction: mapping-reference
+    authority_role: provenance_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: w3c_recommendation
+    rights_decision: standard:w3c-recommendations
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: W3C reference for entities, activities, agents, derivation and observation provenance.
+  - id: w3c-shacl
+    title: Shapes Constraint Language
+    resource: https://www.w3.org/TR/shacl/
+    owner: World Wide Web Consortium
+    jurisdiction: mapping-reference
+    authority_role: validation_shape_reference
+    observed_at: "2026-08-07"
+    source_updated_at: w3c_recommendation
+    rights_decision: standard:w3c-recommendations
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: W3C reference for graph validation shapes, constraint results and publication gates.
+  - id: lgsl-data-gov-uk
+    title: Local Government Services List
+    resource: https://www.data.gov.uk/dataset/56d64715-2fa5-4870-9c9c-a6983785fca4/services-list
+    owner: Local Government Association
+    jurisdiction: england-and-scotland-mapping-reference
+    authority_role: legacy_local_service_identifier_mapping_reference
+    observed_at: "2026-08-07"
+    source_updated_at: "2014-06-02"
+    rights_decision: standard:local-government-services-list
+    domains: [early-years, school-years, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, money-tax-and-benefits, shopping-and-consumer-rights, disability-care-and-support, citizenship-democracy-and-rights, starting-and-running-organisation, later-life]
+    summary: OGL-labelled legacy catalogue of local-government service identifiers used for mapping rather than availability claims.
+  - id: okf-explorer-repository
+    title: OKF Explorer repository
+    resource: https://github.com/chris-page-gov/okf-explorer
+    owner: Chris Page
+    jurisdiction: consumer-reference
+    authority_role: bundle_consumer_and_projection_contract
+    observed_at: "2026-08-07"
+    source_updated_at: "2026-08-04T13:33:06Z"
+    rights_decision: standard:okf-explorer
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: Source and documentation for the tested OKF consumer, including small-bundle and faceted large-corpus contracts.
+  - id: okf-explorer-hosted
+    title: Published OKF Explorer
+    resource: https://chris-page-gov.github.io/okf-explorer/
+    owner: Chris Page
+    jurisdiction: consumer-reference
+    authority_role: published_bundle_consumer
+    observed_at: "2026-08-07"
+    source_updated_at: version_0.5.7
+    rights_decision: standard:okf-explorer
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years, school-years, transition-to-adulthood, further-education-university-research, finding-work-and-unemployment, employment, housing-and-community, rubbish-recycling-and-street, public-and-private-transport, transport-enforcement, money-tax-and-benefits, shopping-and-consumer-rights, relationships-and-family-change, health-throughout-life, disability-care-and-support, citizenship-democracy-and-rights, police-and-legal-services, starting-and-running-organisation, ideas-creativity-and-research, holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    summary: Public Explorer 0.5.7 application that future frozen bundles must pass in real-browser release verification.
+
+coverage:
+  status_meanings:
+    covered: authoritative_reference_family_identified_leaf_evidence_still_required
+    partial: authority_directory_identified_current_local_service_pages_missing
+    gap: no_suitable_authoritative_reference_family_established
+  local_default:
+    status: partial
+    references: [govuk-find-local-council, mygov-organisations, govwales-local-government, nidirect-local-councils]
+    gap_ids: [GAP-LOCAL-LEAF, GAP-LOCAL-TOPOLOGY]
+  domains:
+    - id: before-birth-and-starting-family
+      uk-or-england: [govuk-browse-childcare-parenting, govuk-browse-employing-people, nhs-england-services]
+      scotland: [mygov-birth-death-family, mygov-health-social-care, mygov-work-jobs]
+      wales: [govwales-children-families, govwales-health-social-care, govwales-employment-work]
+      northern-ireland: [nidirect-family-home-community, nidirect-health-wellbeing, nidirect-employment-training-careers]
+    - id: birth-and-newborn
+      uk-or-england: [govuk-browse-childcare-parenting, govuk-browse-births-deaths-marriages, nhs-england-services]
+      scotland: [mygov-birth-death-family, mygov-health-social-care]
+      wales: [govwales-children-families, govwales-health-social-care]
+      northern-ireland: [nidirect-family-home-community, nidirect-government-citizens-rights, nidirect-health-wellbeing]
+    - id: early-years
+      uk-or-england: [govuk-browse-childcare-parenting, govuk-browse-education, nhs-england-services]
+      scotland: [mygov-birth-death-family, mygov-education-training, mygov-health-social-care]
+      wales: [govwales-children-families, govwales-education-skills, govwales-health-social-care]
+      northern-ireland: [nidirect-family-home-community, nidirect-education, nidirect-health-wellbeing]
+    - id: school-years
+      uk-or-england: [govuk-browse-education, govuk-browse-disabilities, nhs-england-services]
+      scotland: [mygov-education-training, mygov-health-social-care, mygov-local-services]
+      wales: [govwales-education-skills, govwales-children-families, govwales-health-social-care]
+      northern-ireland: [nidirect-education, nidirect-disabled-people, nidirect-health-wellbeing]
+    - id: transition-to-adulthood
+      uk-or-england: [govuk-browse-education, govuk-browse-working, govuk-browse-driving]
+      scotland: [mygov-education-training, mygov-work-jobs, mygov-driving-transport]
+      wales: [govwales-education-skills, govwales-employment-work, govwales-transport]
+      northern-ireland: [nidirect-education, nidirect-employment-training-careers, nidirect-motoring]
+    - id: further-education-university-research
+      uk-or-england: [govuk-browse-education, govuk-browse-disabilities, nhs-england-services]
+      scotland: [mygov-education-training, mygov-health-social-care]
+      wales: [govwales-education-skills, govwales-health-social-care]
+      northern-ireland: [nidirect-education, nidirect-employment-training-careers, nibusinessinfo-innovation-rd]
+    - id: finding-work-and-unemployment
+      uk-or-england: [govuk-browse-working, govuk-browse-benefits, govuk-browse-disabilities]
+      scotland: [mygov-work-jobs, mygov-benefits]
+      wales: [govwales-employment-work, govwales-communities-regeneration]
+      northern-ireland: [nidirect-employment-training-careers, nidirect-benefits-money]
+    - id: employment
+      uk-or-england: [govuk-browse-working, govuk-browse-employing-people]
+      scotland: [mygov-work-jobs, mygov-business]
+      wales: [govwales-employment-work, govwales-business-economy-innovation]
+      northern-ireland: [nidirect-employment-training-careers, nibusinessinfo-starting-business]
+    - id: housing-and-community
+      uk-or-england: [govuk-browse-housing-local-services, govuk-browse-environment-countryside, govuk-browse-visas-immigration]
+      scotland: [mygov-housing, mygov-local-services, mygov-environment-farm-marine]
+      wales: [govwales-housing, govwales-communities-regeneration, govwales-building-planning]
+      northern-ireland: [nidirect-property-housing, nidirect-environment-outdoors, nidirect-family-home-community]
+    - id: rubbish-recycling-and-street
+      uk-or-england: [govuk-browse-housing-local-services, govuk-browse-environment-countryside]
+      scotland: [mygov-local-services, mygov-environment-farm-marine]
+      wales: [govwales-environment-climate-change, govwales-local-government]
+      northern-ireland: [nidirect-environment-outdoors, nidirect-local-councils]
+    - id: public-and-private-transport
+      uk-or-england: [govuk-browse-driving, govuk-browse-housing-local-services]
+      scotland: [mygov-driving-transport, mygov-local-services]
+      wales: [govwales-transport, govwales-local-government]
+      northern-ireland: [nidirect-travel-transport-roads, nidirect-motoring]
+    - id: transport-enforcement
+      uk-or-england: [govuk-browse-driving, govuk-browse-justice]
+      scotland: [mygov-driving-transport, mygov-crime-justice-law]
+      wales: [govwales-transport, govwales-justice-law]
+      northern-ireland: [nidirect-motoring, nidirect-crime-justice-law]
+    - id: money-tax-and-benefits
+      uk-or-england: [govuk-browse-benefits, govuk-browse-tax, govuk-browse-working]
+      scotland: [mygov-benefits, mygov-money-tax]
+      wales: [govwales-communities-regeneration, govwales-housing, govwales-public-sector]
+      northern-ireland: [nidirect-benefits-money, nidirect-pensions-retirement]
+    - id: shopping-and-consumer-rights
+      uk-or-england: [govuk-consumer-protection-rights, govuk-browse-justice]
+      scotland: [mygov-living-visiting-scotland, mygov-money-tax]
+      wales: [govwales-business-economy-innovation, govwales-equality-human-rights]
+      northern-ireland: [nidirect-government-citizens-rights, nidirect-crime-justice-law]
+    - id: relationships-and-family-change
+      uk-or-england: [govuk-browse-births-deaths-marriages, govuk-browse-childcare-parenting, govuk-browse-justice]
+      scotland: [mygov-birth-death-family, mygov-crime-justice-law]
+      wales: [govwales-children-families, govwales-equality-human-rights, govwales-justice-law]
+      northern-ireland: [nidirect-family-home-community, nidirect-government-citizens-rights, nidirect-crime-justice-law]
+    - id: health-throughout-life
+      uk-or-england: [nhs-england-services]
+      scotland: [nhs-inform-service-directory, mygov-health-social-care]
+      wales: [nhs-wales-services-near-you, govwales-health-social-care]
+      northern-ireland: [hscni-services, nidirect-health-wellbeing]
+    - id: disability-care-and-support
+      uk-or-england: [govuk-browse-disabilities, govuk-browse-benefits, nhs-england-services]
+      scotland: [mygov-benefits, mygov-health-social-care]
+      wales: [govwales-health-social-care, govwales-equality-human-rights]
+      northern-ireland: [nidirect-disabled-people, nidirect-health-wellbeing]
+    - id: citizenship-democracy-and-rights
+      uk-or-england: [govuk-browse-citizenship, govuk-browse-visas-immigration, govuk-browse-justice]
+      scotland: [mygov-living-visiting-scotland, mygov-crime-justice-law]
+      wales: [govwales-equality-human-rights, govwales-public-sector, govwales-welsh-language]
+      northern-ireland: [nidirect-government-citizens-rights, nidirect-crime-justice-law]
+    - id: police-and-legal-services
+      uk-or-england: [govuk-browse-justice]
+      scotland: [mygov-crime-justice-law]
+      wales: [govwales-justice-law, govwales-equality-human-rights]
+      northern-ireland: [nidirect-crime-justice-law]
+    - id: starting-and-running-organisation
+      uk-or-england: [govuk-browse-business, govuk-browse-employing-people, govuk-browse-tax]
+      scotland: [mygov-business, mygov-money-tax]
+      wales: [govwales-business-economy-innovation, govwales-public-sector]
+      northern-ireland: [nibusinessinfo-starting-business, nidirect-employment-training-careers]
+    - id: ideas-creativity-and-research
+      uk-or-england: [govuk-browse-business, govuk-browse-education]
+      scotland: [mygov-business, mygov-education-training]
+      wales: [govwales-business-economy-innovation, govwales-education-skills, govwales-arts-culture-sport]
+      northern-ireland: [nibusinessinfo-innovation-rd, nidirect-education]
+    - id: holidays-volunteering-and-living-overseas
+      uk-or-england: [govuk-browse-abroad, govuk-browse-citizenship]
+      scotland: [mygov-living-visiting-scotland, mygov-business]
+      wales: [govwales-international-eu, govwales-arts-culture-sport]
+      northern-ireland: [nidirect-travel-transport-roads, nidirect-government-citizens-rights]
+    - id: later-life
+      uk-or-england: [govuk-browse-working, govuk-browse-benefits, nhs-england-services]
+      scotland: [mygov-benefits, mygov-health-social-care, mygov-money-tax]
+      wales: [govwales-health-social-care, govwales-housing, govwales-communities-regeneration]
+      northern-ireland: [nidirect-pensions-retirement, nidirect-health-wellbeing, nidirect-disabled-people]
+    - id: death-and-bereavement
+      uk-or-england: [govuk-browse-births-deaths-marriages, govuk-browse-tax, govuk-browse-abroad]
+      scotland: [mygov-birth-death-family, mygov-benefits, mygov-money-tax]
+      wales: [govwales-health-social-care, govwales-children-families]
+      northern-ireland: [nidirect-government-citizens-rights, nidirect-benefits-money, nidirect-pensions-retirement]
+
+gaps:
+  - id: GAP-LOCAL-LEAF
+    severity: high
+    scope: all_24_local_cells
+    finding: Authority directories exist, but current responsible-provider and redress pages are not registered for every locally delivered service family.
+    owner_follow_up: Approve a local coverage model, including whether to enumerate every authority or use governed representative and exception samples.
+    blocks: complete_250_to_400_service_family_corpus
+  - id: GAP-LOCAL-TOPOLOGY
+    severity: high
+    scope: england_and_cross_border_local_services
+    finding: Council tiers, combined authorities, health geographies, police areas and contracted providers do not share one stable responsibility boundary.
+    owner_follow_up: Approve authoritative geography identifiers and topology sources before local service identity is generated.
+    blocks: postcode_or_geography_based_navigation
+  - id: GAP-WALES-CITIZEN-ROUTES
+    severity: high
+    scope: wales
+    finding: GOV.WALES is a strong policy and organisation index but is not a complete citizen transaction catalogue.
+    owner_follow_up: Confirm the operational Welsh delivery portals and responsible bodies to use for each implemented journey.
+    blocks: complete_wales_leaf_route_coverage
+  - id: GAP-HEALTH-AUTOMATION-RIGHTS
+    severity: high
+    scope: scotland_wales_northern_ireland_health
+    finding: NHS inform prohibits scraping without permission; NHS 111 Wales reserves Crown copyright; HSCNI permits only attributed non-commercial reproduction.
+    owner_follow_up: Seek provider permission or retain manual link-and-summary authoring for these health source families.
+    blocks: unattended_health_directory_acquisition
+  - id: GAP-PRIVATE-DEPENDENCIES
+    severity: high
+    scope: banks_insurers_funeral_directors_landlords_employers_transport_operators_and_advisers
+    finding: No single authoritative, licence-compatible denominator covers every private dependency required by the proposed journeys.
+    owner_follow_up: Approve regulator-first discovery rules and decide when representative providers are acceptable.
+    blocks: complete_dependency_and_handoff_graphs
+  - id: GAP-SECTOR-REDRESS
+    severity: medium
+    scope: financial_housing_energy_legal_transport_health_and_education_redress
+    finding: The four public-service ombudsman families are registered, but sector regulators, tribunals and ombudsmen are not yet exhaustively mapped to service families.
+    owner_follow_up: Approve a sector-redress denominator and escalation taxonomy before corpus expansion.
+    blocks: complete_redress_coverage
+  - id: GAP-LEGAL-PROCEDURE-REVIEW
+    severity: high
+    scope: legal_enforcement_eligibility_and_deadline_claims
+    finding: Legislation and official guidance identify sources, but do not remove the need to review current procedure and jurisdiction for each claim.
+    owner_follow_up: Nominate an appropriate legal or policy reviewer for high-impact routes and deadline assertions.
+    blocks: production_grade_legal_claims
+  - id: GAP-LGSL-CURRENCY
+    severity: medium
+    scope: local_government_service_identifiers
+    finding: The OGL-labelled data.gov.uk LGSL record is dated 2014 and is a mapping source, not evidence that a service is currently offered.
+    owner_follow_up: Confirm the current ESD Services list access, version and stable identifier policy before adopting LGSL identifiers.
+    blocks: governed_local_service_identifier_mapping
+  - id: GAP-FRESHNESS-AUTOMATION
+    severity: medium
+    scope: non_govuk_portals
+    finding: The devolved browse indexes do not expose one common update API or machine-readable observation model.
+    owner_follow_up: Approve per-family review intervals and any permitted automated link or metadata checks.
+    blocks: unattended_freshness_monitoring
+  - id: GAP-BILINGUAL-IDENTITY
+    severity: medium
+    scope: wales_and_other_language_variants
+    finding: English and Welsh records may be translations of one source identity or separately maintained routes; the inventory does not infer identity from labels or URLs.
+    owner_follow_up: Approve language-variant identity and equivalence rules before generating bilingual concepts.
+    blocks: trustworthy_bilingual_navigation
+  - id: GAP-EXPLORER-LARGE-CORPUS
+    severity: high
+    scope: colour_facets_timeline_graph_and_large_bundle_loading
+    finding: Explorer 0.5.7 exposes the colour-facet interface through its large-corpus descriptor and projection contract, while this repository currently builds only a small bundle.
+    owner_follow_up: Approve the large-corpus projection as the next bounded consumer-contract implementation after the open review findings are resolved.
+    blocks: colour_facet_review_and_phase_4_explorer_scale
+  - id: GAP-SERVICE-FAMILY-DENOMINATOR
+    severity: high
+    scope: phase_4_target_of_250_to_400_service_families
+    finding: The reference-family denominator is complete, but the canonical service-family list and its 250-to-400 target members have not yet been selected.
+    owner_follow_up: Approve a staged service-family denominator derived from these indexes before leaf acquisition begins.
+    blocks: phase_4_corpus_completion_measure

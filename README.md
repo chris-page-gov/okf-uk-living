@@ -4,16 +4,18 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **three vertical slices reviewed locally with open release findings**.
+Status: **reference-family inventory complete; three-slice release findings open**.
 The Reader and query journeys pass in OKF Explorer 0.5.7, but relationship and
 node provenance, browser-renderable source handoffs, and licence-notice
 verification must be resolved before a candidate is frozen. The GitHub
-repository is private; validation remains local-only, broad acquisition and CI
-remain disabled, and publication requires a separate explicit owner request.
+repository is private; validation remains local-only, snapshots, unbounded leaf
+acquisition and CI remain disabled, and publication requires a separate
+explicit owner request.
 
 ## Start here
 
 - [Research overview and generating prompt](research/overview.md)
+- [Exhaustive reference-family inventory and gap analysis](research/exhaustive-reference-gap-analysis.md)
 - [OKF bundle root](index.md)
 - [Implementation roadmap](ROADMAP.md)
 - [Delivery planning](PLANNING.md)
@@ -29,6 +31,7 @@ remain disabled, and publication requires a separate explicit owner request.
 - [Missed rubbish linked-reference register](source/missed-rubbish-collection.v1.yaml)
 - [Driving and speeding linked-reference register](source/learning-to-drive-speeding.v1.yaml)
 - [Death, bereavement and estate linked-reference register](source/death-bereavement-estate.v1.yaml)
+- [Machine-readable exhaustive reference inventory](source/exhaustive-reference-inventory.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -70,6 +73,7 @@ uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python -m unittest discover -s tests
 ```

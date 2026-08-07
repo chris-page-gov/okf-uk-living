@@ -2,7 +2,7 @@ rights_decisions_version: rights-decisions.v1
 status: approved
 decided_at: "2026-08-07"
 decided_by: owner:chris-page-gov
-scope: three_bounded_vertical_slice_source_registers_and_mapping_references
+scope: registered_vertical_slices_exhaustive_reference_inventory_and_mapping_references
 
 repository:
   code:
@@ -80,6 +80,14 @@ licence_families:
   no-open-licence-established:
     licence: LicenseRef-No-Open-Licence-Established
     redistribution_permission: not_permitted_without_separate_permission
+    project_use: linked_reference_and_original_summary_only
+  provider-personal-noncommercial-no-scraping:
+    licence: LicenseRef-Provider-Personal-NonCommercial-No-Scraping
+    redistribution_permission: not_permitted_without_separate_permission
+    project_use: linked_reference_and_original_summary_only
+  provider-attributed-noncommercial:
+    licence: LicenseRef-Provider-Attributed-NonCommercial
+    redistribution_permission: noncommercial_with_attribution_only
     project_use: linked_reference_and_original_summary_only
 
 host_decisions:
@@ -200,6 +208,65 @@ host_decisions:
       resource: https://www.nipso.org.uk/
       observed_at: "2026-08-07"
       limitation: no_page_wide_open_reuse_grant_recorded
+  - host: content-api.publishing.service.gov.uk
+    owner_family: Government Digital Service GOV.UK Content API
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.uk/help/terms-conditions
+      observed_at: "2026-08-07"
+      limitation: API_metadata_does_not_establish_leaf_service_jurisdiction_or_availability
+  - host: www.gov.wales
+    owner_family: Welsh Government
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.gov.wales/copyright-statement
+      observed_at: "2026-08-07"
+      limitation: logos_and_separately_identified_rights_are_excluded
+  - host: www.nhs.uk
+    owner_family: Department of Health and Social Care NHS website
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nhs.uk/our-policies/terms-and-conditions/
+      observed_at: "2026-08-07"
+      limitation: >-
+        OGL_excludes_logos_visuals_personal_data_third_party_content_and_medical_devices;
+        provider_attribution_and_refresh_conditions_apply_to_reused_content
+  - host: www.nhsinform.scot
+    owner_family: NHS 24 on behalf of NHS Scotland and the Scottish Government
+    licence_family: provider-personal-noncommercial-no-scraping
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nhsinform.scot/terms-and-conditions/
+      observed_at: "2026-08-07"
+      limitation: personal_and_noncommercial_use_only_and_no_scraping_without_explicit_permission
+  - host: 111.wales.nhs.uk
+    owner_family: Welsh Ambulance Services University NHS Trust
+    licence_family: provider-copyright-restricted
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://111.wales.nhs.uk/termsofuse
+      observed_at: "2026-08-07"
+      limitation: crown_copyright_and_no_copy_reproduction_or_redistribution_outside_content_authorisation_policy
+  - host: online.hscni.net
+    owner_family: Strategic Planning and Performance Group of the Department of Health Northern Ireland
+    licence_family: provider-attributed-noncommercial
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://online.hscni.net/homepage/terms/
+      observed_at: "2026-08-07"
+      limitation: noncommercial_reproduction_with_source_acknowledgement_only_other_use_requires_written_permission
+  - host: www.nibusinessinfo.co.uk
+    owner_family: Invest Northern Ireland on behalf of the Northern Ireland Executive
+    licence_family: provider-bespoke-reuse
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.nibusinessinfo.co.uk/content/copyright-information
+      observed_at: "2026-08-07"
+      limitation: >-
+        crown_and_invest_ni_material_have_distinct_terms_republication_requires_written_permission_and_images_are_excluded
 
 reference_standards:
   - id: cpsv-ap-3.2.0
@@ -244,3 +311,31 @@ reference_standards:
         observed_at: "2026-08-07"
       - resource: https://creativecommons.org/licenses/by-sa/4.0/legalcode
         observed_at: "2026-08-07"
+  - id: w3c-recommendations
+    licence: W3C-Document-License-2023
+    project_use: terminology_mapping_reference_only_no_specification_copy
+    requirements:
+      - link_original_document
+      - preserve_copyright_notice_and_document_status_when_copying
+      - do_not_publish_modified_material_as_a_competing_technical_specification
+      - preserve_required_notice_for_implementation_derivatives
+    evidence:
+      - resource: https://www.w3.org/copyright/document-license-2023/
+        observed_at: "2026-08-07"
+    limitation: project_links_and_summarizes_skos_owl_prov_o_and_shacl_without_copying_specification_text
+  - id: local-government-services-list
+    licence: Open-Government-Licence-version-not-recorded
+    project_use: identifier_mapping_reference_only_no_availability_claim
+    evidence:
+      - resource: https://www.data.gov.uk/dataset/56d64715-2fa5-4870-9c9c-a6983785fca4/services-list
+        observed_at: "2026-08-07"
+    limitation: data_gov_uk_record_is_dated_2014_and_does_not_prove_current_service_availability
+  - id: okf-explorer
+    licence: MIT-code-and-CC-BY-NC-4.0-content
+    project_use: consumer_compatibility_reference_only
+    evidence:
+      - resource: https://github.com/chris-page-gov/okf-explorer/blob/main/LICENSE-CODE.md
+        observed_at: "2026-08-07"
+      - resource: https://github.com/chris-page-gov/okf-explorer/blob/main/LICENSE.md
+        observed_at: "2026-08-07"
+    limitation: viewer_code_is_mit_while_the_explorer_corpus_and_documentation_are_cc_by_nc_4_0

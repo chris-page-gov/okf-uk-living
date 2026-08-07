@@ -31,3 +31,7 @@
 - Added OGL attribution, CPSV-AP CC BY 4.0, Open Referral UK and HSDS CC BY-SA
   4.0 decisions while retaining link-and-summary-only source use and zero
   snapshots.
+- Assessed 138 external reference records against a 120-cell life-course and
+  jurisdiction denominator, with dated rights evidence and 12 follow-up gaps.
+- Kept the exhaustive inventory link-only: no snapshots, source-content
+  redistribution, leaf-corpus expansion, CI or publication were authorized.

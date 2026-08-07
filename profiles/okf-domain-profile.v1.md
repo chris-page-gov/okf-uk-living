@@ -2,16 +2,19 @@
 
 This handoff accompanies the machine-readable
 [`okf-domain-profile.v1.yaml`](okf-domain-profile.v1.yaml). The repository owner
-approved the profile and three fixture contracts on 2026-08-07. Approval
-governs bounded slice implementation; it is not a production ontology or an
-authority claim.
+approved the profile and three fixture contracts on 2026-08-07, and later that
+day explicitly authorized the exhaustive link-only reference-family inventory.
+Neither decision creates a production ontology or an authority claim.
 
 ## Approval record
 
 Approved by `owner:chris-page-gov` on 2026-08-07 as the boundary for the first
-three vertical slices. Approval authorizes bounded source-family registration
-and slice implementation. It does not authorize broad acquisition, public
-publication, personalized decisions or unsupported four-nation equivalence.
+three vertical slices. A second explicit owner instruction on the same date
+authorized exhaustive discovery of external reference families with URLs,
+owners, jurisdictions, dates, licence evidence, original summaries and a gap
+analysis. It does not authorize snapshots, source-content redistribution,
+unbounded leaf acquisition, public publication, personalized decisions or
+unsupported four-nation equivalence.
 
 ## Fixed scope
 
@@ -23,8 +26,10 @@ The first denominator is three slices:
 
 Each must exercise ordinary and exception paths, jurisdiction, provider,
 authority, evidence, governing rules, time, outcome, redress, provenance and
-any necessary private-sector dependency. Broader life-course coverage remains
-deferred.
+any necessary private-sector dependency. The broader reference-family layer is
+now inventoried across all 24 domains and five reference jurisdictions. The
+future 250–400 canonical service-family denominator and leaf acquisition remain
+deferred for owner review.
 
 ## Semantic and authority boundary
 
@@ -56,7 +61,9 @@ never presented as official. Unknown is not false.
 Source identity, jurisdiction and observation time are required. Each source
 family declares its update cadence, rights, coverage and limitations. The
 [rights register](../source/rights-decisions.v1.yaml) records the dated licence
-evidence for all 16 hosts in the bounded source denominators.
+evidence for all 23 registered source hosts plus the standards and Explorer
+references. The [exhaustive inventory](../source/exhaustive-reference-inventory.v1.yaml)
+contains 85 new references and includes the 53 implemented-slice references.
 
 ## Unresolved gates
 
@@ -68,10 +75,15 @@ The repository and current source-family licensing gate is complete:
 - eligible repository-authored generated projections use MIT without
   relicensing embedded upstream expression.
 
-These gates remain open:
+The [gap analysis](../research/exhaustive-reference-gap-analysis.md) accounts
+for all 120 domain/reference-jurisdiction cells: 96 national cells have an
+authoritative discovery family and 24 local cells remain partial. These gates
+remain open:
 
 - the complete Explorer consumer inventory;
 - the governed predicate registry and SHACL shapes; and
+- local leaf-service topology, health acquisition permissions, private
+  dependencies and the staged 250–400 service-family denominator;
 - review of the three completed bounded source-family registers and slices.
 
 These gaps continue to block production assertions or publication where the
@@ -91,6 +103,7 @@ publication; that remains a separate explicit owner decision.
       adequate acceptance boundary.
 
 All three bounded linked-reference registers and vertical slices are now
-implemented for review. This completes the approved implementation scope; it
-does not authorize broad acquisition, corpus expansion or publication, which
+implemented for review, and the exhaustive external reference-family inventory
+is complete against its declared denominator. This does not authorize source
+snapshots, unbounded leaf acquisition, corpus expansion or publication, which
 remain disabled by the profile.

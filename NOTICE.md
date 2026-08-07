@@ -14,7 +14,9 @@ Contains public sector information licensed under the Open Government Licence
 v3.0.
 
 The information providers and exact source pages are identified in the three
-versioned [source registers](source/README.md). Re-use must preserve any
+versioned source registers and the
+[exhaustive reference inventory](source/exhaustive-reference-inventory.v1.yaml).
+Re-use must preserve any
 provider-specified attribution, identify the source, link to the
 [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/),
 avoid misleading use or implied endorsement, and respect exclusions including
@@ -39,6 +41,25 @@ redistribute their page content or assets.
   [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Reuse of
   licensed material requires attribution, an indication of changes and the
   same licence for adaptations.
+- **W3C Recommendations:** SKOS, OWL 2, PROV-O and SHACL are governed by the
+  [W3C Document License 2023](https://www.w3.org/copyright/document-license-2023/).
+  This project links and maps terminology without copying specification text.
+- **Local Government Services List:** the data.gov.uk record is OGL-labelled
+  but does not record a version and is dated 2014. It is used only as a legacy
+  identifier-mapping reference.
+- **OKF Explorer:** viewer code is MIT; the Explorer repository's corpus and
+  documentation are CC BY-NC 4.0. It is used only as a tested consumer
+  reference.
+
+## Restricted provider references
+
+NHS inform permits personal and non-commercial use and prohibits scraping
+without explicit permission. NHS 111 Wales reserves Crown copyright and
+restricts copying or redistribution to its content-authorisation policy.
+HSCNI permits attributed non-commercial reproduction and requires permission
+for other uses. nibusinessinfo.co.uk separates Crown and Invest Northern
+Ireland material and requires written permission for republication. These
+sources are linked and summarized only; no provider content is redistributed.
 
 The project currently uses these standards only as mapping references. It does
 not copy their schemas or specification text and does not claim conformance.

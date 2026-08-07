@@ -10,8 +10,11 @@ approval:
     - bounded_source_family_registration
     - implementation_of_three_vertical_slices
     - licensing_and_rights_decisions
+    - exhaustive_link_only_reference_family_inventory
   blocked_actions:
-    - broad_source_acquisition
+    - source_snapshot_acquisition
+    - source_content_redistribution
+    - unbounded_leaf_source_acquisition_before_service_family_approval
     - production_vocabulary_assertions
     - corpus_expansion_beyond_three_slices
     - public_bundle_publication
@@ -32,7 +35,7 @@ collection:
     - personalized eligibility, medical or legal decisions
     - real personal dossiers or production case management
     - unsupported equivalence across jurisdictions or source identities
-    - broad life-course acquisition before the three slices are reviewed
+    - unbounded leaf acquisition before the 250-to-400 service-family denominator is approved
   denominators:
     - id: initial-vertical-slices
       target: 3
@@ -42,7 +45,11 @@ collection:
       coverage: England, Scotland, Wales and Northern Ireland
     - id: future-service-families
       target_range: 250-400
-      status: deferred_until_slice_review
+      status: reference_family_inventory_complete_leaf_denominator_needs_owner_approval
+    - id: exhaustive-reference-cells
+      target: 120
+      coverage: 24 domains by UK-or-England, Scotland, Wales, Northern Ireland and local reference scope
+      status: 96_covered_and_24_local_partial
     - id: future-competency-questions
       target_minimum: 100
       status: deferred_until_slice_review
@@ -226,6 +233,7 @@ validation:
     - uv run --locked python scripts/check_okf.py
     - uv run --locked python scripts/check_contracts.py
     - uv run --locked python scripts/check_sources.py
+    - uv run --locked python scripts/check_inventory.py
     - uv run --locked python scripts/check_rights.py
     - uv run --locked python -m unittest discover -s tests
   fixture_contract: vertical-slice-fixture.v1
@@ -235,7 +243,8 @@ validation:
 constraints:
   - authored Markdown and source files are the source of truth
   - generated outputs are rebuilt and never patched by hand
-  - source work remains bounded to approved linked-reference registration; broad acquisition stays disabled
+  - exhaustive reference-family discovery is authorized only for links, dated rights evidence and original summaries
+  - snapshots, source-content redistribution and unbounded leaf acquisition stay disabled
   - no personalized eligibility, legal or medical decisions
   - no real personal data
   - no unsupported jurisdictional or identity equivalence
@@ -249,8 +258,11 @@ gaps:
     status: partial
     blocks: final compatibility lock
   - id: source-family-register
-    status: complete_three_of_three_slices
-    blocks: none_within_approved_slice_scope
+    status: complete_for_reference_family_denominator_and_three_implemented_slices
+    blocks: owner_approval_of_the_250_to_400_leaf_service_family_denominator
+  - id: exhaustive-reference-inventory
+    status: complete_120_of_120_cells_with_24_local_cells_partial
+    blocks: local_leaf_topology_health_permissions_private_dependencies_and_large_corpus_projection
   - id: ontology-predicate-registry
     status: planned
     blocks: governed semantic edge publication
@@ -274,6 +286,12 @@ decisions:
   - id: repository-mit
     assertion_status: editorial-example
     decision: License repository-authored code, documentation, ontology terms and eligible generated projections under MIT.
+  - id: owner-authorized-reference-inventory
+    assertion_status: editorial-example
+    decision: >-
+      On 2026-08-07 the owner authorized exhaustive link-only external
+      reference-family discovery and gap analysis while retaining zero
+      snapshots, no source-content redistribution and no publication.
 
 evidence:
   - id: research-overview
@@ -296,6 +314,14 @@ evidence:
     resource: source/rights-decisions.v1.yaml
     observed_at: "2026-08-07"
     role: dated rights decisions and evidence for repository and registered source families
+  - id: exhaustive-reference-inventory
+    resource: source/exhaustive-reference-inventory.v1.yaml
+    observed_at: "2026-08-07"
+    role: 24-domain reference-family denominator, source metadata and actionable gaps
+  - id: exhaustive-reference-gap-analysis
+    resource: research/exhaustive-reference-gap-analysis.md
+    observed_at: "2026-08-07"
+    role: human review and owner follow-up handoff
 
 consumer_lock:
   consumer: OKF Explorer small bundle

@@ -44,6 +44,12 @@ integrated local Explorer review has been executed: the content journeys pass,
 but four provenance, source-handoff and notice findings remain open. The sample
 is reviewable, but it is not yet a frozen publication candidate.
 
+The owner separately authorized exhaustive link-only reference-family
+discovery on 2026-08-07. `INVENTORY-001` is complete with 138 external records,
+120 assessed coverage cells and 12 actionable gaps. This planning asset does
+not change the sample release gates or authorize snapshots, broad leaf
+acquisition, CI or publication.
+
 The active sequence is defined in the
 [three-slice review and publication plan](docs/review-and-publication-plan.md):
 
@@ -57,6 +63,12 @@ The active sequence is defined in the
    candidate.
 6. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
    the exact site in a real browser.
+
+For the later complete-corpus track, the next owner gate is `CORPUS-001`:
+approve a staged 250–400 service-family denominator and disposition the local
+topology, health-permission, private-dependency, redress, freshness, bilingual
+identity and large-corpus Explorer gaps in the
+[reference gap analysis](research/exhaustive-reference-gap-analysis.md).
 
 The recommended release scope is the bounded three-slice educational sample
 without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim. This

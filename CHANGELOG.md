@@ -49,6 +49,14 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   real-browser verification gates.
 - Dated local OKF Explorer 0.5.7 review evidence, exact consumer and bundle
   inputs, fixture traceability, and a four-item finding ledger.
+- Owner-authorized exhaustive reference-family inventory with 85 new external
+  references, inclusion of the 53 implemented-slice references, 120 assessed
+  domain/jurisdiction cells, original summaries and zero snapshots.
+- Actionable twelve-item gap analysis covering local topology and leaf routes,
+  Welsh delivery sources, health permissions, private dependencies, redress,
+  legal review, freshness, bilingual identity and Explorer large-corpus facets.
+- Offline inventory validation and regression tests for the declared
+  denominator, source metadata, dated rights decisions and publication limits.
 
 ### Changed
 
@@ -74,6 +82,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   journeys passed, while relationship provenance, node build provenance,
   source handoff and licence-notice verification remain open and block a
   frozen candidate.
+- Expanded dated rights decisions from 16 to 23 source hosts and added W3C,
+  LGSL and OKF Explorer determinations without relaxing link-and-summary-only
+  source use or authorizing publication.
+- Recorded explicit owner authorization for exhaustive link-only reference
+  discovery while preserving the snapshot, redistribution, unbounded leaf
+  acquisition, CI and GitHub Pages gates.
 
 ## [0.0.0] - 2026-08-07
 

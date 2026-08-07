@@ -128,8 +128,15 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
     for field in ("approved_by", "approved_at", "authorized_actions"):
         if not isinstance(approval, dict) or not _nonempty(approval.get(field)):
             errors.append(f"{prefix}: approval.{field} must be non-empty")
+    authorized = set(approval.get("authorized_actions", [])) if isinstance(approval, dict) else set()
+    if "exhaustive_link_only_reference_family_inventory" not in authorized:
+        errors.append(f"{prefix}: approval must authorize the link-only reference-family inventory")
     blocked = set(approval.get("blocked_actions", [])) if isinstance(approval, dict) else set()
-    for action in ("broad_source_acquisition", "public_bundle_publication"):
+    for action in (
+        "source_snapshot_acquisition",
+        "unbounded_leaf_source_acquisition_before_service_family_approval",
+        "public_bundle_publication",
+    ):
         if action not in blocked:
             errors.append(f"{prefix}: approval must block {action}")
 
@@ -177,6 +184,8 @@ def validate_profile(profile: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: validation commands must include scripts/check_contracts.py")
     if not any("scripts/check_sources.py" in str(command) for command in commands):
         errors.append(f"{prefix}: validation commands must include scripts/check_sources.py")
+    if not any("scripts/check_inventory.py" in str(command) for command in commands):
+        errors.append(f"{prefix}: validation commands must include scripts/check_inventory.py")
     if not any("scripts/check_rights.py" in str(command) for command in commands):
         errors.append(f"{prefix}: validation commands must include scripts/check_rights.py")
     if not isinstance(validation, dict) or validation.get("local_only_until_publication_request") is not True:
