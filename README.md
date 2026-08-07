@@ -15,6 +15,8 @@ domain profile and source/rights decisions are reviewed.
 - [Implementation roadmap](ROADMAP.md)
 - [Delivery planning](PLANNING.md)
 - [Delivery tracking](TRACKING.md)
+- [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
+- [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -53,6 +55,7 @@ Build and verify the initial bundle:
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
+uv run --locked python scripts/check_contracts.py
 uv run --locked python -m unittest discover -s tests
 ```
 

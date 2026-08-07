@@ -49,6 +49,18 @@ A service record should eventually declare:
 Unknown is not false. Do not invent missing eligibility, cost, authority,
 identity or legal relationships.
 
+## Domain profile and fixture contracts
+
+The draft [`okf-domain-profile.v1`](../profiles/okf-domain-profile.v1.md)
+governs the first three slice contracts under `evaluation/fixtures/`. Those
+fixtures are synthetic `editorial-example` acceptance boundaries, not official
+service records. Keep their source acquisition status `not_started` until the
+profile and source-family rights are approved.
+
+Contract validation checks structure, jurisdiction coverage, ordinary and
+exception paths, assertion status and publication gates. A passing contract
+check does not approve the profile or validate a real service route.
+
 ## Build and check
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The
@@ -58,6 +70,7 @@ locked project environment is created automatically when these commands run:
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
+uv run --locked python scripts/check_contracts.py
 uv run --locked python -m unittest discover -s tests
 ```
 

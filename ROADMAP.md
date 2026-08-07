@@ -15,6 +15,9 @@
   SHACL applicability.
 - Resolve repository code/documentation licensing.
 
+Draft profile and fixture contracts are implemented and locally validated.
+Owner approval and the unresolved licensing decisions remain gates.
+
 ## Phase 2 — three vertical slices
 
 1. Missed rubbish collection.
@@ -23,6 +26,7 @@
 
 Each slice must include the ordinary path, exception path, jurisdiction,
 provider, evidence, rule, time, outcome, redress and source provenance.
+Implementation begins only after the Phase 1 handoff is approved.
 
 ## Phase 3 — ontology and curriculum
 

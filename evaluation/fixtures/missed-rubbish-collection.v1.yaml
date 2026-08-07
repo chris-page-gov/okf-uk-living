@@ -1,0 +1,160 @@
+fixture_version: vertical-slice-fixture.v1
+id: missed-rubbish-collection
+title: Missed rubbish collection
+status: draft
+assertion_status: editorial-example
+profile: okf-domain-profile.v1
+synthetic: true
+purpose: Test local responsibility, scheduled service failure, reporting and complaint boundaries.
+
+scope:
+  included:
+    - identify the responsible waste-collection authority
+    - distinguish schedule, expected collection and observed non-collection
+    - report within the locally evidenced window
+    - handle rejection, wrong authority and complaint escalation
+  excluded:
+    - deciding whether a real household qualifies for collection
+    - assuming one reporting window or remedy applies to every council
+
+dimensions:
+  - ordinary_path
+  - exception_path
+  - evidence
+  - rule
+  - time
+  - jurisdiction
+  - authority
+  - private_sector_dependencies
+  - redress
+  - provenance
+
+jurisdictions:
+  - id: local
+    expectation: Responsibility and operational rules are evidenced for the address and council structure.
+  - id: england
+    expectation: At least one sourced local example without generalizing it nationally.
+  - id: scotland
+    expectation: National context and local delivery boundary are stated separately.
+  - id: wales
+    expectation: National context and local delivery boundary are stated separately.
+  - id: northern-ireland
+    expectation: Council responsibility and terminology are independently evidenced.
+
+actors:
+  - id: synthetic-resident
+    role: reporter
+    authority_assertion: editorial-example
+  - id: responsible-waste-authority
+    role: accountable-public-authority
+    authority_assertion: pending_source
+  - id: collection-operator
+    role: delivery-provider-public_or_contracted
+    authority_assertion: pending_source
+  - id: complaint-reviewer
+    role: complaint_or_ombudsman_route
+    authority_assertion: pending_source
+
+journeys:
+  ordinary:
+    entry_state: A synthetic household expected a scheduled collection that did not occur.
+    outcome: The responsible authority records the report and supplies a sourced next step or outcome.
+    steps:
+      - id: locate-authority
+        interaction: determine responsible council or authority from the synthetic address context
+        provider_role: service-finder_or_local-authority
+        evidence: [synthetic-address-context]
+        rule: current responsibility rule must be identified from an authoritative source
+        time: current responsibility must be observed and dated
+        outcome: responsible-authority-identified
+        redress: correct a failed or ambiguous authority lookup
+        assertion_status: editorial-example
+      - id: check-collection
+        interaction: compare schedule, bin type and local reporting conditions with the observed event
+        provider_role: responsible-waste-authority
+        evidence: [collection-schedule, bin-type, observed-non-collection]
+        rule: local collection conditions and reporting rule remain pending source acquisition
+        time: local reporting window remains unknown until sourced
+        outcome: report-route-or-limitation-identified
+        redress: explain why the route cannot yet be used
+        assertion_status: editorial-example
+      - id: submit-report
+        interaction: submit the minimum synthetic report through an evidenced channel
+        provider_role: responsible-waste-authority
+        evidence: [synthetic-address-context, scheduled-date, bin-type]
+        rule: required report fields and permitted channels remain pending source acquisition
+        time: submission timestamp retained
+        outcome: acknowledgement-or-reference
+        redress: channel failure route
+        assertion_status: editorial-example
+      - id: receive-outcome
+        interaction: record collection, explanation, rejection or other sourced response
+        provider_role: responsible-waste-authority
+        evidence: [report-reference]
+        rule: service response and remedy rule remains pending source acquisition
+        time: response expectation retained only when sourced
+        outcome: service-outcome-recorded
+        redress: complaint route supplied where supported
+        assertion_status: editorial-example
+  exception:
+    entry_state: The report is rejected, routed to the wrong authority or cannot be completed.
+    outcome: The user receives the evidenced correction, complaint route or explicit unresolved boundary.
+    steps:
+      - id: capture-rejection
+        interaction: distinguish timing, presentation, contamination, access, wrong-authority and channel reasons
+        provider_role: responsible-waste-authority
+        evidence: [rejection-reason, report-reference]
+        rule: rejection conditions remain pending source acquisition
+        time: complaint or re-report deadline must be independently sourced
+        outcome: rejection-reason-classified
+        redress: re-report-review-or-complaint
+        assertion_status: editorial-example
+      - id: escalate-complaint
+        interaction: follow the authority complaint sequence without promising a remedy
+        provider_role: complaint-reviewer
+        evidence: [report-reference, rejection-reason, prior-correspondence]
+        rule: complaint sequence and exhaustion requirements remain pending source acquisition
+        time: escalation timing retained when sourced
+        outcome: complaint-outcome-or-next-route
+        redress: external reviewer only where authority and exhaustion rules are evidenced
+        assertion_status: editorial-example
+
+private_sector_dependencies:
+  - id: contracted-collection-operator
+    required: conditional
+    boundary: A contractor may deliver the service, but responsibility is not transferred without source evidence.
+
+redress:
+  - route: local re-report or review
+    authority_status: pending_source
+  - route: council complaint sequence
+    authority_status: pending_source
+  - route: external ombudsman or reviewer
+    authority_status: pending_source_and_exhaustion_rules
+
+source_requirements:
+  acquisition_status: not_started
+  required_fields: [owner, authority_role, identifier, jurisdiction, observed_at, update_cadence, rights, limitations]
+  candidate_families: [national council finder, national waste context, selected council service page, selected council complaints page]
+
+known_unknowns:
+  - which council example will anchor each national or local variant
+  - reporting windows, exclusions and remedies for each selected authority
+  - whether delivery is direct or contracted in the selected example
+
+competency_questions:
+  - id: rubbish-cq-1
+    question: Which authority is responsible for the synthetic address and what evidence supports that identity?
+    expected: authority, geography, source and observation time
+  - id: rubbish-cq-2
+    question: What turns a scheduled collection into a reportable missed collection in this locality?
+    expected: schedule, local conditions, observed event and limitations
+  - id: rubbish-cq-3
+    question: What can the resident do when the report is rejected?
+    expected: reason, next route, time boundary and redress authority
+
+acceptance:
+  - ordinary and exception journeys are executable against synthetic context
+  - local facts never become unsupported UK-wide claims
+  - responsible authority and delivery operator identities remain distinct
+  - every material assertion has status, source identity, jurisdiction and observation time

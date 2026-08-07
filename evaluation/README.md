@@ -11,4 +11,10 @@ Planned evaluation assets:
 - provenance checks that distinguish official, normalized, inferred and
   editorial-example assertions.
 
-No evaluation gate is currently claimed as passed.
+The first executable boundary is the set of three
+[vertical-slice fixture contracts](fixtures/README.md). They define synthetic
+ordinary and exception journeys and are validated locally against the draft
+domain profile.
+
+Contract validation is not domain validation. No source, journey, Explorer or
+publication evaluation gate is currently claimed as passed.
