@@ -13,7 +13,7 @@ requires an explicit owner request naming the frozen candidate.
 
 ## Current baseline
 
-The sample is ready for integrated review. Main contains:
+The sample has completed its first integrated local review. Main contains:
 
 - the approved domain profile and three synthetic fixture contracts;
 - missed rubbish collection, learning to drive through speeding enforcement,
@@ -25,10 +25,12 @@ The sample is ready for integrated review. Main contains:
   terms; and
 - deterministic locked-`uv` generation and 44 local tests.
 
-“Ready for review” does not yet mean “release candidate”. The three slices have
-not been assessed together as one sample, the actual Explorer consumer contract
-is still provisional, and no candidate bytes or browser evidence have been
-frozen.
+The [2026-08-07 review](../evaluation/reviews/integrated-three-slice-2026-08-07.md)
+passed the three Reader/query content journeys and recorded the exact Explorer
+0.5.7 consumer and bundle bytes. It did not pass the release gate: relationship
+authority/provenance, node build-provenance presentation, browser-renderable
+source handoffs and licence-notice verification remain open. No candidate or
+publication bytes have been frozen.
 
 ## Intended first publication
 
@@ -79,6 +81,11 @@ cover:
 
 Changes needed to resolve findings remain focused pull requests with full local
 validation. Review findings do not authorize broad source acquisition.
+
+The first run is recorded under `evaluation/reviews/`. `REVIEW-001` remains in
+progress until `REV-001` through `REV-004` are remediated or explicitly
+dispositioned and the affected Explorer journeys pass on rerun. The companion
+consumer record under `evaluation/compatibility/` is evaluated but not locked.
 
 ## Candidate and publication controls
 

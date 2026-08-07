@@ -1,0 +1,65 @@
+contract_version: okf-explorer-consumer.v1
+id: okf-explorer-local
+status: evaluated_with_open_findings
+decision_date: "2026-08-07"
+review: evaluation/reviews/integrated-three-slice-2026-08-07.md
+
+consumer:
+  package: "@okf/explorer"
+  version: "0.5.7"
+  commit: babd00c994ac8450480d1d4b128ccbe58f01cbe0
+  build_source: existing_local_static_build
+  browser: codex-in-app-browser
+  viewport:
+    width: 710
+    height: 705
+
+bundle:
+  repository_commit: 1077883fb7950c7f553472472aaaafa760701b42
+  path: okf-bundle.json
+  sha256: 2371b1d3f17d521f0190ae9dd9457d5a26335bf872252a8f745fed1abcb88965
+  bytes: 281493
+  schema: okf-explorer-bundle.v0
+  okf_version: "0.2"
+  title: A Life in the UK
+  node_count: 78
+  edge_count: 313
+  generated_by: scripts/build_okf_bundle.py
+  generated_at: "2026-08-07T00:00:00+01:00"
+
+entrypoint:
+  pattern: "?bundle={encoded-same-origin-bundle-url}#overview"
+  publication_url: null
+  local_only: true
+
+journeys:
+  - id: overview
+    status: pass
+  - id: record-deep-link
+    status: pass
+  - id: query
+    status: pass
+    terms:
+      - continuing service failure
+      - Motor insurer
+      - Tell Us Once
+  - id: graph
+    status: partial
+    evidence: SVG rendered and deep link restored; relationship authority and provenance were unknown.
+  - id: authored-source-handoff
+    status: fail
+    evidence: Local target returned HTTP 200; target browser navigation returned net::ERR_BLOCKED_BY_CLIENT.
+  - id: licence-and-notice
+    status: fail
+    evidence: Evidence rendered relative licensing and rights links, but both browser navigations were blocked and NOTICE was not a first-class bundle record.
+
+open_findings:
+  - REV-001
+  - REV-002
+  - REV-003
+  - REV-004
+
+publication:
+  requested: false
+  pages_updated: false
+  public_url: null

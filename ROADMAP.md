@@ -38,8 +38,11 @@ PR #4 and the death-and-bereavement slice in PR #5. The third slice has
 separate national registration routes, the Tell Us Once/Northern Ireland
 notification boundary, three estate-authority routes, private dependencies and
 a 20-reference denominator. All three approved slices and their rights
-decisions now exist on main. The integrated review is the gate before any wider
-corpus work or sample candidate.
+decisions now exist on main. The first integrated local Explorer review was
+executed on 2026-08-07: all three Reader/query journeys passed, but four open
+provenance, source-handoff and licence-notice findings keep the review and
+compatibility gates open. Those findings must be resolved or explicitly
+dispositioned and retested before any wider corpus work or sample candidate.
 
 ## Initial sample review and release track
 

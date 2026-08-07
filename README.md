@@ -4,11 +4,12 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **three vertical slices ready for integrated review**. The approved domain
-profile and contracts authorize bounded linked-reference registration and the
-three initial slices. The GitHub repository is private; validation remains
-local-only, broad acquisition and CI remain disabled, and publication requires
-a separate explicit owner request.
+Status: **three vertical slices reviewed locally with open release findings**.
+The Reader and query journeys pass in OKF Explorer 0.5.7, but relationship and
+node provenance, browser-renderable source handoffs, and licence-notice
+verification must be resolved before a candidate is frozen. The GitHub
+repository is private; validation remains local-only, broad acquisition and CI
+remain disabled, and publication requires a separate explicit owner request.
 
 ## Start here
 
@@ -18,6 +19,8 @@ a separate explicit owner request.
 - [Delivery planning](PLANNING.md)
 - [Delivery tracking](TRACKING.md)
 - [Three-slice review and publication plan](docs/review-and-publication-plan.md)
+- [2026-08-07 integrated Explorer review](evaluation/reviews/integrated-three-slice-2026-08-07.md)
+- [Local Explorer input record](evaluation/compatibility/okf-explorer-local.v1.yaml)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)

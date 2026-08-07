@@ -47,6 +47,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Explicit three-slice review-to-publication plan with integrated-review,
   Explorer-compatibility, release-scope, frozen-candidate, manual Pages and
   real-browser verification gates.
+- Dated local OKF Explorer 0.5.7 review evidence, exact consumer and bundle
+  inputs, fixture traceability, and a four-item finding ledger.
 
 ### Changed
 
@@ -68,6 +70,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   snapshot redistribution.
 - Recorded PR #5 and PR #6 as merged and advanced the bounded sample to
   integrated review, while keeping publication separately gated.
+- Executed the first visible-browser integrated review: all three Reader/query
+  journeys passed, while relationship provenance, node build provenance,
+  source handoff and licence-notice verification remain open and block a
+  frozen candidate.
 
 ## [0.0.0] - 2026-08-07
 
