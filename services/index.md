@@ -7,3 +7,11 @@ test applies everywhere in the United Kingdom.
 Each implemented record must state its jurisdiction, responsible provider,
 source, observation time, requirements, evidence, channels, outcomes and
 redress routes where known.
+
+## Implemented families and routes
+
+- [Report a missed rubbish collection](report-missed-rubbish-collection.md)
+  - [Coventry missed bin collection](coventry-missed-bin-collection.md)
+  - [Edinburgh missed bin collection](edinburgh-missed-bin-collection.md)
+  - [Cardiff missed collection](cardiff-missed-collection.md)
+  - [Belfast missed bin collection](belfast-missed-bin-collection.md)

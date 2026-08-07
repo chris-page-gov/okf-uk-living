@@ -1,0 +1,49 @@
+from __future__ import annotations
+
+from copy import deepcopy
+import sys
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from check_sources import (  # noqa: E402
+    EXPECTED_MISSED_RUBBISH_IDS,
+    validate_source_register,
+    validate_source_registers,
+)
+
+
+class SourceRegisterTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.registers, self.errors = validate_source_registers()
+        self.register = self.registers[0]
+
+    def test_source_register_is_valid(self) -> None:
+        self.assertEqual([], self.errors)
+
+    def test_bounded_source_denominator_is_fixed(self) -> None:
+        self.assertEqual(EXPECTED_MISSED_RUBBISH_IDS, {source["id"] for source in self.register["sources"]})
+
+    def test_no_snapshots_or_broad_acquisition(self) -> None:
+        self.assertFalse(self.register["acquisition"]["snapshots_acquired"])
+        self.assertFalse(self.register["acquisition"]["broad_acquisition"])
+        self.assertTrue(all(source["checksum"] == "not_applicable_no_snapshot" for source in self.register["sources"]))
+
+    def test_validator_rejects_snapshot_claim(self) -> None:
+        register = deepcopy(self.register)
+        register["sources"][0]["checksum"] = "sha256:not-a-real-envelope"
+        errors = validate_source_register(register)
+        self.assertTrue(any("must not claim a snapshot checksum" in error for error in errors))
+
+    def test_validator_rejects_rights_overclaim(self) -> None:
+        register = deepcopy(self.register)
+        register["sources"][0]["rights_basis"] = "unrestricted"
+        errors = validate_source_register(register)
+        self.assertTrue(any("linked-summary limits" in error for error in errors))
+
+
+if __name__ == "__main__":
+    unittest.main()

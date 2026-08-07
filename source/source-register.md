@@ -1,6 +1,13 @@
 # Source register
 
-No source snapshot has been acquired yet. Initial research references include:
+No source snapshot has been acquired. The first bounded linked-reference set is
+the machine-readable
+[`missed-rubbish-collection.v1` register](missed-rubbish-collection.v1.yaml).
+It records thirteen current official pages for local routes and redress across
+the four nations. Their content is linked and narrowly summarized; it is not
+copied or redistributed, so no immutable-envelope checksum exists.
+
+Initial research references also include:
 
 - GOV.UK services and information browse hierarchy;
 - GOV.UK Content API and taxonomy principles;
@@ -11,6 +18,7 @@ No source snapshot has been acquired yet. Initial research references include:
 - national health and devolved-government service portals; and
 - local-government service vocabularies and directories.
 
-Before acquisition, record for each source its owner, authority role, access
-method, identifier and version model, update cadence, rights basis, coverage
-denominator, exclusions, observation time and immutable envelope checksum.
+Before any future snapshot acquisition, record for each source its owner,
+authority role, access method, identifier and version model, update cadence,
+rights basis, coverage denominator, exclusions, observation time and immutable
+envelope checksum.

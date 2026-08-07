@@ -4,9 +4,11 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **research and implementation scaffold**. The repository is local-only;
-acquisition, CI, remote creation and publication remain disabled until the
-domain profile and source/rights decisions are reviewed.
+Status: **first vertical slice implemented for review**. The approved domain
+profile and contracts authorize bounded linked-reference registration and the
+three initial slices. The GitHub repository is private; validation remains
+local-only, broad acquisition and CI remain disabled, and publication requires
+a separate explicit owner request.
 
 ## Start here
 
@@ -17,6 +19,8 @@ domain profile and source/rights decisions are reviewed.
 - [Delivery tracking](TRACKING.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
+- [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
+- [Missed rubbish linked-reference register](source/missed-rubbish-collection.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -56,6 +60,7 @@ uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
+uv run --locked python scripts/check_sources.py
 uv run --locked python -m unittest discover -s tests
 ```
 

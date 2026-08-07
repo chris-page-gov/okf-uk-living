@@ -5,3 +5,7 @@ decisions, coverage denominators and known omissions.
 
 An official source can still be stale or unavailable. Authority, derivation,
 freshness, availability and coverage remain separate evidence dimensions.
+
+## Implemented evidence sets
+
+- [Missed rubbish collection source set](missed-rubbish-collection-sources.md)

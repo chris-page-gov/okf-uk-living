@@ -15,6 +15,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Three synthetic vertical-slice fixture contracts covering ordinary and
   exception journeys for rubbish collection, driving enforcement and death.
 - Executable profile and fixture-contract validation with unit tests.
+- Bounded missed-rubbish source register containing 13 official linked
+  references and no acquired snapshots.
+- First vertical slice with four local service routes, four jurisdiction
+  contexts, responsible councils, external-redress bodies, a normalized
+  service family and ontology module, and a synthetic journey.
+- Semantic slice validation and regression tests for authority, jurisdiction,
+  provenance, assertion status and anti-generalization boundaries.
 
 ### Changed
 
@@ -24,6 +31,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   remote CI and GitHub Pages disabled.
 - Recorded the private-plan branch-protection limitation while retaining the
   sole-developer PR-only policy for `main`.
+- Advanced the missed-rubbish fixture acquisition state to
+  `linked_references_registered` while leaving the other two not started.
 
 ## [0.0.0] - 2026-08-07
 

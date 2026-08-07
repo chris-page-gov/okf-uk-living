@@ -38,13 +38,14 @@ to a later pull request.
 ## Near-term delivery units
 
 The owner approved `okf-domain-profile.v1` and the three fixture contracts on
-2026-08-07. The active delivery sequence is now:
+2026-08-07. The missed-rubbish slice is implemented for review. The active
+delivery sequence is now:
 
-1. Register the bounded source families for missed rubbish collection.
-2. Implement and validate the missed-rubbish-collection slice.
+1. Review the missed-rubbish implementation and its bounded source register.
+2. Register the bounded source family for learning to drive and enforcement.
 3. Implement and validate the learning-to-drive and enforcement slice.
-4. Implement and validate the death, Tell Us Once and estate-administration
-   slice.
+4. Register, implement and validate death, Tell Us Once and estate
+   administration.
 5. Review the three implemented slices before broader source acquisition or
    corpus growth.
 
