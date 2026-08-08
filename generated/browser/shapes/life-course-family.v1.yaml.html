@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shapes/life-course-family.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>shapes/life-course-family.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>shapes/life-course-family.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>shape_set_version: life-course-family-shapes.v1
+status: shacl_style_validation_contract_not_claimed_rdf_conformance
+decision_date: &quot;2026-08-08&quot;
+profile: profiles/life-course-population-contract.v1.yaml
+
+shapes:
+  - id: LifeCourseFamilyShape
+    target_schema: life-course-family.v1
+    closed: false
+    required:
+      - id
+      - title
+      - description
+      - life_course_domain
+      - enclosing_processes
+      - situations
+      - user_needs
+      - interaction_boundary
+      - applicability
+      - actors
+      - journeys
+      - dependencies
+      - sources
+      - limitations
+      - review
+      - narrative
+    rules:
+      - enclosing_processes_min_count_1
+      - ordinary_journey_exactly_1
+      - exception_or_failure_journeys_min_count_1
+      - applicable_route_variant_requires_primary_source
+      - material_relationship_requires_assertion_status_provenance_and_evidence
+      - official_assertion_requires_authoritative_source_with_matching_scope
+      - real_personal_data_forbidden
+      - personalized_decision_logic_forbidden
+  - id: JourneyStepShape
+    target_path: journeys.*.steps.*
+    required: [id, interaction, provider, requirements, evidence, rule, channel, cost, time, output, outcome, redress, assertion_status, sources]
+  - id: SourceReferenceShape
+    target_path: sources.*
+    required: [id, title, owner, authority_role, resource, jurisdiction, observed_at, freshness, rights_decision, summary, limitations]
+    rules:
+      - https_resource_required
+      - source_snapshot_forbidden
+      - original_summary_required
+  - id: MaterialRelationshipShape
+    target_schema: okf-relationship-assertion.v2
+    required: [source, target, predicate, assertion_status, authority, derivation, observed_at, evidence, rights]
+
+</pre>
+</body>
+</html>

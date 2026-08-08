@@ -118,3 +118,14 @@ implemented for review, and the exhaustive external reference-family inventory
 is complete against its declared denominator. This does not authorize source
 snapshots, unbounded or unstaged leaf acquisition, broad corpus assertion
 publication or public deployment, which remain disabled by the profile.
+
+## Full-population authorization
+
+On 2026-08-08 the owner authorized the implementation plan for all 293 named
+families. The machine-readable
+[`life-course-population-contract.v1`](life-course-population-contract.v1.yaml)
+now permits staged dossiers, linked-reference registration, governed semantic
+projections and local Explorer evaluation. It retains zero snapshots, no
+source-content redistribution, no personalised decision logic, no remote CI
+and no publication. Population-complete may include visible specialist-review
+warnings; release grade remains gated on named reviewer acceptance.

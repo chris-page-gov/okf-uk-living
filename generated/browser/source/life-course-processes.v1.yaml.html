@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/life-course-processes.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/life-course-processes.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/life-course-processes.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>process_denominator_version: life-course-processes.v1
+status: owner_authorized_normalized_mapping
+decision_date: &quot;2026-08-08&quot;
+approved_by: owner:chris-page-gov
+assertion_status: normalized
+service_family_denominator: source/service-family-denominator.v1.yaml
+limitations:
+  - Process membership is a repository-authored navigation model, not an official service classification.
+  - Membership never establishes shared jurisdiction, provider, eligibility, rule or route identity.
+  - Packs may refine titles and ordering when leaf evidence requires it, but may not leave a family unmapped.
+evidence:
+  - resource: research/overview.md
+    role: life_course_scope_and_process_intent
+    observed_at: &quot;2026-08-08&quot;
+  - resource: source/service-family-denominator.v1.yaml
+    role: approved_family_identity_and_domain_membership
+    observed_at: &quot;2026-08-08&quot;
+
+processes:
+  - id: pregnancy-maternity-and-workplace-support
+    domain: before-birth-and-starting-family
+    title: Pregnancy, maternity and workplace support
+    families: [access-fertility-and-reproductive-health, start-antenatal-care, receive-maternity-care, claim-maternity-allowance, take-maternity-leave, take-paternity-or-partner-leave, get-healthy-start-support, get-pregnancy-workplace-protection]
+  - id: adoption-fostering-and-surrogacy
+    domain: before-birth-and-starting-family
+    title: Adoption, fostering and surrogacy
+    families: [take-adoption-leave, arrange-adoption, pursue-surrogacy-parenthood, become-a-foster-carer]
+  - id: establish-a-childs-legal-identity
+    domain: birth-and-newborn
+    title: Establish a child&#x27;s legal identity
+    families: [register-a-birth, register-a-stillbirth, obtain-birth-certificates, establish-parental-responsibility, check-child-nationality-status, claim-child-benefit, obtain-child-passport, correct-a-birth-registration]
+  - id: start-newborn-healthcare
+    domain: birth-and-newborn
+    title: Start newborn healthcare
+    families: [register-newborn-with-health-services, access-neonatal-care, arrange-newborn-screening, start-childhood-vaccinations]
+  - id: arrange-childcare-and-early-education
+    domain: early-years
+    title: Arrange childcare and early education
+    families: [get-funded-early-education, use-tax-free-childcare, find-registered-childcare, register-as-childminder, use-childrens-centres, use-public-library-child-services, get-childcare-cost-support]
+  - id: support-early-development-and-safety
+    domain: early-years
+    title: Support early development and safety
+    families: [access-health-visiting, get-early-years-development-support, get-early-years-send-support, report-child-safeguarding-concern, apply-for-adoption-support]
+  - id: enter-and-attend-school
+    domain: school-years
+    title: Enter and attend school
+    families: [apply-for-school-place, appeal-school-admission, arrange-school-transport, meet-school-attendance-duty, choose-home-education, apply-for-free-school-meals]
+  - id: receive-school-support-and-outcomes
+    domain: school-years
+    title: Receive school support and outcomes
+    families: [access-school-health, get-school-send-support, challenge-school-exclusion, sit-public-examinations, support-child-in-care-education, report-school-safeguarding-concern]
+  - id: establish-adult-work-civic-and-identity-records
+    domain: transition-to-adulthood
+    title: Establish adult work, civic and identity records
+    families: [receive-national-insurance-number, start-first-job, get-careers-advice, start-apprenticeship, verify-qualifications, register-to-vote-for-first-time, obtain-proof-of-age-or-identity]
+  - id: move-into-independent-mobility-health-and-care
+    domain: transition-to-adulthood
+    title: Move into independent mobility, health and care
+    families: [learn-to-drive-car, consent-to-healthcare-as-young-person, get-leaving-care-support, transition-to-adult-social-care, access-child-trust-fund]
+  - id: enter-and-fund-post-school-study
+    domain: further-education-university-research
+    title: Enter and fund post-school study
+    families: [apply-for-further-education-course, apply-to-university, get-student-finance, get-disabled-students-allowance, arrange-student-accommodation, claim-student-council-tax-disregard, register-with-health-services-as-student, access-adult-skills-training]
+  - id: conduct-and-recognise-research-and-qualifications
+    domain: further-education-university-research
+    title: Conduct and recognise research and qualifications
+    families: [seek-research-funding, obtain-research-ethics-approval, manage-university-intellectual-property, get-academic-qualification-recognised]
+  - id: enter-fair-and-supported-work
+    domain: finding-work-and-unemployment
+    title: Enter fair and supported work
+    families: [use-public-job-search, get-jobcentre-support, prove-right-to-work, start-work-based-apprenticeship, get-disclosure-or-dbs-check, get-access-to-work, volunteer-in-the-uk, resolve-recruitment-discrimination]
+  - id: respond-to-unemployment-and-redundancy
+    domain: finding-work-and-unemployment
+    title: Respond to unemployment and redundancy
+    families: [claim-universal-credit-while-unemployed, claim-new-style-jobseekers-allowance, get-redundancy-support, access-employment-retraining]
+  - id: establish-employment-terms-pay-and-leave
+    domain: employment
+    title: Establish employment terms, pay and leave
+    families: [receive-written-employment-particulars, check-employment-status, receive-national-minimum-wage, pay-paye-and-national-insurance, join-workplace-pension, take-statutory-leave, get-statutory-sick-pay, take-parental-leave]
+  - id: protect-safety-collective-rights-and-redress
+    domain: employment
+    title: Protect safety, collective rights and redress
+    families: [get-workplace-health-and-safety-protection, report-workplace-injury, join-or-use-trade-union, bring-employment-dispute]
+  - id: secure-and-move-home
+    domain: housing-and-community
+    title: Secure and move home
+    families: [rent-private-home, protect-tenancy-deposit, buy-home, move-home, prove-right-to-rent, register-for-council-tax, apply-for-social-housing, get-homelessness-help]
+  - id: adapt-develop-and-protect-home-and-neighbourhood
+    domain: housing-and-community
+    title: Adapt, develop and protect home and neighbourhood
+    families: [apply-for-home-adaptation, seek-planning-permission, meet-building-regulations, report-noise-or-pest-nuisance]
+  - id: manage-household-waste-collections
+    domain: rubbish-recycling-and-street
+    title: Manage household waste collections
+    families: [view-waste-collection-schedule, report-missed-rubbish-collection, order-replacement-waste-container, use-household-recycling-service, arrange-garden-waste-collection, arrange-bulky-waste-collection, dispose-of-hazardous-waste, arrange-clinical-waste-collection]
+  - id: report-street-and-environmental-problems
+    domain: rubbish-recycling-and-street
+    title: Report street and environmental problems
+    families: [report-fly-tipping, report-litter-or-dog-fouling, report-abandoned-vehicle, report-street-cleaning-failure]
+  - id: obtain-accessible-and-community-mobility
+    domain: public-and-private-transport
+    title: Obtain accessible and community mobility
+    families: [plan-accessible-public-transport, obtain-concessionary-travel, use-community-transport, get-blue-badge, license-taxi-or-private-hire]
+  - id: own-and-use-a-road-vehicle
+    domain: public-and-private-transport
+    title: Own and use a road vehicle
+    families: [register-vehicle, tax-or-sorn-vehicle, obtain-mot-test, obtain-motor-insurance, report-road-collision, get-parking-permit, pay-clean-air-zone-charge]
+  - id: respond-to-road-notices-and-penalties
+    domain: transport-enforcement
+    title: Respond to road notices and penalties
+    families: [respond-to-speeding-notice, respond-to-council-parking-penalty, challenge-private-parking-charge, identify-driver-after-road-offence, accept-fixed-penalty, attend-driver-awareness-course, manage-penalty-points]
+  - id: challenge-restriction-removal-or-prosecution
+    domain: transport-enforcement
+    title: Challenge restriction, removal or prosecution
+    families: [respond-to-driving-disqualification, appeal-to-traffic-penalty-tribunal, contest-road-user-charge, respond-to-vehicle-clamping-or-removal, respond-to-transport-prosecution]
+  - id: manage-personal-tax-and-contributions
+    domain: money-tax-and-benefits
+    title: Manage personal tax and contributions
+    families: [register-for-income-tax, get-national-insurance-record, file-self-assessment, register-for-vat, pay-council-tax, manage-student-loan-repayment, claim-tax-refund]
+  - id: claim-support-and-resolve-debt
+    domain: money-tax-and-benefits
+    title: Claim support and resolve debt
+    families: [claim-universal-credit, claim-disability-benefit, report-benefit-change-of-circumstances, get-debt-advice-and-relief, enter-personal-insolvency]
+  - id: exercise-contract-and-remedy-rights
+    domain: shopping-and-consumer-rights
+    title: Exercise contract and remedy rights
+    families: [exercise-consumer-rights-for-goods, exercise-consumer-rights-for-services, exercise-digital-content-rights, seek-refund-repair-or-replacement, resolve-consumer-credit-dispute, cancel-distance-contract, challenge-unfair-contract-term]
+  - id: report-harm-and-use-consumer-redress
+    domain: shopping-and-consumer-rights
+    title: Report harm and use consumer redress
+    families: [report-scam-or-fraud, contact-trading-standards, use-sector-ombudsman, make-small-money-claim, report-product-safety-issue]
+  - id: form-change-and-support-family-relationships
+    domain: relationships-and-family-change
+    title: Form, change and support family relationships
+    families: [marry, form-civil-partnership, change-name, divorce-or-dissolve-partnership, resolve-parental-responsibility, arrange-child-maintenance, adopt-child]
+  - id: obtain-family-protection-representation-and-care
+    domain: relationships-and-family-change
+    title: Obtain family protection, representation and care
+    families: [get-domestic-abuse-support, use-family-court, register-lasting-power-of-attorney, apply-for-deputyship, get-family-carer-support]
+  - id: use-routine-and-preventive-healthcare
+    domain: health-throughout-life
+    title: Use routine and preventive healthcare
+    families: [register-with-gp, use-pharmacy-services, get-prescription, access-dental-care, access-eye-care, get-vaccination, use-screening-service, get-sexual-and-reproductive-healthcare]
+  - id: use-specialist-urgent-and-health-redress-routes
+    domain: health-throughout-life
+    title: Use specialist, urgent and health-redress routes
+    families: [access-mental-healthcare, receive-hospital-referral-and-treatment, use-urgent-and-emergency-health-services, complain-about-nhs-care]
+  - id: assess-and-deliver-disability-and-care-support
+    domain: disability-care-and-support
+    title: Assess and deliver disability and care support
+    families: [claim-disability-living-support, get-social-care-needs-assessment, get-carers-assessment, receive-direct-payments, get-disability-home-adaptation, get-residential-care]
+  - id: safeguard-capacity-mobility-and-care-redress
+    domain: disability-care-and-support
+    title: Safeguard capacity, mobility and care redress
+    families: [report-adult-safeguarding-concern, get-mental-capacity-support, arrange-supported-decision-representation, access-mobility-support, obtain-workplace-disability-adjustment, challenge-care-or-disability-benefit-decision]
+  - id: establish-immigration-citizenship-and-passport-status
+    domain: citizenship-democracy-and-rights
+    title: Establish immigration, citizenship and passport status
+    families: [apply-for-visa-or-immigration-permission, apply-for-settlement, apply-for-citizenship, obtain-uk-passport]
+  - id: participate-in-democracy-and-exercise-information-rights
+    domain: citizenship-democracy-and-rights
+    title: Participate in democracy and exercise information rights
+    families: [maintain-electoral-registration, stand-for-election, petition-government, respond-to-public-consultation, contact-elected-representative, perform-jury-service, exercise-data-protection-rights, make-freedom-of-information-request]
+  - id: report-emergencies-crime-and-harm
+    domain: police-and-legal-services
+    title: Report emergencies, crime and harm
+    families: [call-emergency-services, report-crime, report-fraud, report-antisocial-behaviour, report-hate-crime, report-missing-person, get-victim-or-witness-support]
+  - id: obtain-legal-help-and-use-adjudication
+    domain: police-and-legal-services
+    title: Obtain legal help and use adjudication
+    families: [obtain-police-station-legal-advice, get-legal-aid, use-civil-or-family-court, use-tribunal, appeal-court-or-tribunal-decision]
+  - id: form-and-register-an-organisation
+    domain: starting-and-running-organisation
+    title: Form and register an organisation
+    families: [register-as-sole-trader, form-business-partnership, incorporate-company, register-charity, establish-social-enterprise, register-business-taxes]
+  - id: operate-regulate-and-close-an-organisation
+    domain: starting-and-running-organisation
+    title: Operate, regulate and close an organisation
+    families: [run-payroll, obtain-business-licence, meet-workplace-safety-duties, register-data-protection-fee, bid-for-public-contract, close-or-insolvent-business]
+  - id: protect-and-register-intellectual-property
+    domain: ideas-creativity-and-research
+    title: Protect and register intellectual property
+    families: [protect-confidential-information, search-prior-art, apply-for-patent, request-patent-search-and-examination, manage-copyright, register-trade-mark, register-design, license-intellectual-property]
+  - id: fund-publish-and-commercialise-research
+    domain: ideas-creativity-and-research
+    title: Fund, publish and commercialise research
+    families: [apply-for-innovation-grant, use-university-technology-transfer, publish-research, commercialise-research]
+  - id: prepare-for-international-travel
+    domain: holidays-volunteering-and-living-overseas
+    title: Prepare for international travel
+    families: [renew-passport, check-entry-requirements, check-foreign-travel-advice, obtain-ghic-or-ehic, get-travel-vaccination, buy-travel-insurance, declare-goods-at-customs, drive-abroad]
+  - id: live-work-and-get-help-overseas
+    domain: holidays-volunteering-and-living-overseas
+    title: Live, work and get help overseas
+    families: [study-or-volunteer-overseas, work-overseas, manage-tax-ni-benefits-and-pensions-abroad, get-consular-assistance, obtain-emergency-travel-document, get-help-after-serious-incident-abroad]
+  - id: secure-later-life-income-and-mobility
+    domain: later-life
+    title: Secure later-life income and mobility
+    families: [get-state-pension-forecast, claim-state-pension, claim-pension-credit, manage-workplace-pension-in-retirement, use-older-person-concessionary-travel, claim-attendance-allowance]
+  - id: arrange-later-life-care-and-future-decisions
+    domain: later-life
+    title: Arrange later-life care and future decisions
+    families: [get-housing-adaptation-in-later-life, get-social-care-in-later-life, get-carer-support-in-later-life, make-lasting-power-of-attorney, make-advance-care-plan, make-will, access-palliative-or-end-of-life-care]
+  - id: certify-register-notify-and-arrange-after-death
+    domain: death-and-bereavement
+    title: Certify, register, notify and arrange after death
+    families: [obtain-medical-certificate-of-cause-of-death, refer-death-to-coroner-or-procurator-fiscal, register-a-death, notify-organisations-after-a-death, arrange-funeral, arrange-burial-or-cremation, claim-bereavement-support, arrange-repatriation-after-death]
+  - id: identify-and-administer-an-estate
+    domain: death-and-bereavement
+    title: Identify and administer an estate
+    families: [locate-or-prove-will, administer-an-estate, pay-inheritance-tax, settle-estate-debts, update-property-records-after-death, notify-private-organisations-after-death]
+
+</pre>
+</body>
+</html>

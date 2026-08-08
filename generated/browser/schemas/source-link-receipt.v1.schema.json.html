@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/source-link-receipt.v1.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/source-link-receipt.v1.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/source-link-receipt.v1.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/source-link-receipt.v1.schema.json&quot;,
+  &quot;title&quot;: &quot;Metadata-only source-link verification receipt&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;schema&quot;, &quot;source_id&quot;, &quot;url&quot;, &quot;checked_at&quot;, &quot;method&quot;, &quot;result&quot;, &quot;response_body_retained&quot;],
+  &quot;properties&quot;: {
+    &quot;schema&quot;: {&quot;const&quot;: &quot;source-link-receipt.v1&quot;},
+    &quot;source_id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;url&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^https://&quot;},
+    &quot;checked_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot;},
+    &quot;method&quot;: {&quot;enum&quot;: [&quot;http-metadata&quot;, &quot;real-browser&quot;]},
+    &quot;result&quot;: {&quot;enum&quot;: [&quot;active&quot;, &quot;redirected-active&quot;, &quot;browser-verified&quot;, &quot;failed&quot;, &quot;blocked&quot;]},
+    &quot;status_code&quot;: {&quot;type&quot;: [&quot;integer&quot;, &quot;null&quot;]},
+    &quot;final_url&quot;: {&quot;type&quot;: &quot;string&quot;},
+    &quot;media_type&quot;: {&quot;type&quot;: &quot;string&quot;},
+    &quot;display_mode&quot;: {&quot;enum&quot;: [&quot;link&quot;, &quot;json&quot;, &quot;xml&quot;, &quot;text&quot;]},
+    &quot;response_body_retained&quot;: {&quot;const&quot;: false},
+    &quot;limitation&quot;: {&quot;type&quot;: &quot;string&quot;}
+  },
+  &quot;additionalProperties&quot;: false
+}
+</pre>
+</body>
+</html>

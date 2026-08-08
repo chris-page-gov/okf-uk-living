@@ -1,5 +1,13 @@
 # OKF change log
 
+## 2026-08-08
+
+- Authorized staged implementation of all 293 approved service families.
+- Added 48 enclosing processes, governed predicates, dossier and link-receipt
+  schemas, SHACL-style shapes and an executable population-contract check.
+- Kept source snapshots, copied source content, remote CI and publication
+  disabled.
+
 ## 2026-08-07
 
 - Created the OKF v0.2 root and research overview.

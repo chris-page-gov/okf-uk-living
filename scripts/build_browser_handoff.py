@@ -38,6 +38,9 @@ def handoff_paths() -> list[Path]:
     for pattern in (
         "source/*.v1.yaml",
         "profiles/*.v1.yaml",
+        "ontology/*.v1.yaml",
+        "shapes/*.v1.yaml",
+        "schemas/*.json",
         "evaluation/**/*.v1.yaml",
     ):
         paths.update(path for path in ROOT.glob(pattern) if path.is_file())
@@ -121,7 +124,12 @@ def render_document(path: Path, known: set[Path]) -> str:
     text = source.read_text(encoding="utf-8")
     output = output_relative_path(path)
     title = document_title(path, text)
-    source_kind = "Markdown" if path.suffix == ".md" else "YAML" if path.suffix in {".yaml", ".yml"} else "text"
+    source_kind = (
+        "Markdown" if path.suffix == ".md"
+        else "YAML" if path.suffix in {".yaml", ".yml"}
+        else "JSON" if path.suffix == ".json"
+        else "text"
+    )
     linked = linked_source(text, path, output, known)
     return f"""<!doctype html>
 <html lang="en">

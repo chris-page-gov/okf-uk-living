@@ -22,11 +22,14 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **reference-family inventory complete; Explorer remediation passes locally**.
+Status: **full 293-family population implementation authorized and contracted**.
 The Reader, query, graph provenance, browser source handoff and licence-notice
 journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
-also exposes seven reconciled colour facets and static search. It remains a
-planning view, not an official service corpus or publication candidate. The GitHub
+also exposes seven reconciled colour facets and static search. The
+`life-course-population-contract.v1` contract now governs eight delivery packs,
+48 enclosing processes and the distinction between population-complete and
+specialist-reviewed release grade. The current projection remains a planning
+view, not an official service corpus or publication candidate. The GitHub
 repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
 acquisition and CI remain disabled, and publication requires a separate
 explicit owner request.
@@ -54,6 +57,9 @@ explicit owner request.
 - <a href="source/death-bereavement-estate.v1.yaml.html">[Death, bereavement and estate linked-reference register](source/death-bereavement-estate.v1.yaml)</a>
 - <a href="source/exhaustive-reference-inventory.v1.yaml.html">[Machine-readable exhaustive reference inventory](source/exhaustive-reference-inventory.v1.yaml)</a>
 - <a href="source/service-family-denominator.v1.yaml.html">[Approved 293-family denominator](source/service-family-denominator.v1.yaml)</a>
+- <a href="profiles/life-course-population-contract.v1.yaml.html">[Full-population implementation contract](profiles/life-course-population-contract.v1.yaml)</a>
+- <a href="source/life-course-processes.v1.yaml.html">[48 enclosing-process denominator](source/life-course-processes.v1.yaml)</a>
+- <a href="ontology/governed-predicates.v1.yaml.html">[Governed predicate registry](ontology/governed-predicates.v1.yaml)</a>
 - <a href="profiles/corpus-acquisition-policy.v1.yaml.html">[Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)</a>
 - <a href="REPOSITORY_STATUS.html">[Repository status](REPOSITORY_STATUS.md)</a>
 - <a href="docs/authoring.md">[Authoring and validation guide](docs/authoring.md)</a>
@@ -75,6 +81,7 @@ explicit owner request.
 | `organisations/` | Public authorities and other delivery actors |
 | `evidence/` | Source and claim evidence indexes |
 | `source/` | Authored inputs and immutable acquired source envelopes |
+| `schemas/` and `shapes/` | Family, link-receipt and semantic validation contracts |
 | `generated/` | Reproducible output boundary; never edit by hand |
 | `evaluation/` | Competency questions, journeys and acceptance evidence |
 
@@ -101,6 +108,7 @@ uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
+uv run --locked python scripts/check_population_contract.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
