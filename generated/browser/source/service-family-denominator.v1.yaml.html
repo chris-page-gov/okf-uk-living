@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/service-family-denominator.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/service-family-denominator.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/service-family-denominator.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>service_family_denominator_version: service-family-denominator.v1
+status: owner_approved
+decision_date: &quot;2026-08-07&quot;
+approved_by: owner:chris-page-gov
+
+decision:
+  target_range: 250-400
+  declared_family_count: 293
+  assertion_status: normalized
+  naming_rule: stable_kebab_case_user_need_or_public_capability
+  source_inventory: source/exhaustive-reference-inventory.v1.yaml
+  authorizes:
+    - staged_leaf_reference_registration_against_named_families
+    - local_authority_and_regulator_denominator_research
+    - gap_and_coverage_measurement_against_the_named_families
+  does_not_authorize:
+    - source_snapshots
+    - source_content_redistribution
+    - personalized_eligibility_legal_or_medical_decisions
+    - unsupported_cross_jurisdiction_equivalence
+    - ci_or_publication
+
+waves:
+  - id: wave-1
+    purpose: Core life events, high-use routes and dependencies needed to expand the three proven slices.
+  - id: wave-2
+    purpose: Evidence, exception, redress and locally delivered routes across all domains.
+  - id: wave-3
+    purpose: Specialist, cross-border, long-tail and private-dependency handoffs needed for full coverage.
+
+implemented_families:
+  - report-missed-rubbish-collection
+  - learn-to-drive-car
+  - respond-to-speeding-notice
+  - register-a-death
+  - notify-organisations-after-a-death
+  - administer-an-estate
+
+scope_classes:
+  national-and-devolved: Route requires a UK, Great Britain, England, Scotland, Wales or Northern Ireland evidence decision.
+  local-authority: Responsibility depends on an identified local authority or statutory local provider.
+  mixed-public-private: A public route has a required or common regulated private-sector dependency.
+  regulated-private: Discovery starts with an official regulator, mandatory register or statutory redress body rather than provider marketing.
+  cross-border: Route crosses UK or international jurisdiction and requires explicit territorial evidence.
+
+domains:
+  - id: before-birth-and-starting-family
+    title: Before birth and starting a family
+    wave-1:
+      - access-fertility-and-reproductive-health
+      - start-antenatal-care
+      - receive-maternity-care
+      - claim-maternity-allowance
+    wave-2:
+      - take-maternity-leave
+      - take-paternity-or-partner-leave
+      - take-adoption-leave
+      - arrange-adoption
+    wave-3:
+      - pursue-surrogacy-parenthood
+      - become-a-foster-carer
+      - get-healthy-start-support
+      - get-pregnancy-workplace-protection
+
+  - id: birth-and-newborn
+    title: Birth and the newborn period
+    wave-1:
+      - register-a-birth
+      - register-a-stillbirth
+      - obtain-birth-certificates
+      - establish-parental-responsibility
+    wave-2:
+      - check-child-nationality-status
+      - register-newborn-with-health-services
+      - claim-child-benefit
+      - access-neonatal-care
+    wave-3:
+      - arrange-newborn-screening
+      - start-childhood-vaccinations
+      - obtain-child-passport
+      - correct-a-birth-registration
+
+  - id: early-years
+    title: Early years
+    wave-1:
+      - get-funded-early-education
+      - use-tax-free-childcare
+      - find-registered-childcare
+      - register-as-childminder
+    wave-2:
+      - access-health-visiting
+      - get-early-years-development-support
+      - get-early-years-send-support
+      - report-child-safeguarding-concern
+    wave-3:
+      - use-childrens-centres
+      - use-public-library-child-services
+      - apply-for-adoption-support
+      - get-childcare-cost-support
+
+  - id: school-years
+    title: School years
+    wave-1:
+      - apply-for-school-place
+      - appeal-school-admission
+      - arrange-school-transport
+      - meet-school-attendance-duty
+    wave-2:
+      - choose-home-education
+      - apply-for-free-school-meals
+      - access-school-health
+      - get-school-send-support
+    wave-3:
+      - challenge-school-exclusion
+      - sit-public-examinations
+      - support-child-in-care-education
+      - report-school-safeguarding-concern
+
+  - id: transition-to-adulthood
+    title: Transition to adulthood
+    wave-1:
+      - receive-national-insurance-number
+      - start-first-job
+      - get-careers-advice
+      - start-apprenticeship
+    wave-2:
+      - verify-qualifications
+      - register-to-vote-for-first-time
+      - learn-to-drive-car
+      - consent-to-healthcare-as-young-person
+    wave-3:
+      - get-leaving-care-support
+      - transition-to-adult-social-care
+      - access-child-trust-fund
+      - obtain-proof-of-age-or-identity
+
+  - id: further-education-university-research
+    title: Further education, university and research
+    wave-1:
+      - apply-for-further-education-course
+      - apply-to-university
+      - get-student-finance
+      - get-disabled-students-allowance
+    wave-2:
+      - arrange-student-accommodation
+      - claim-student-council-tax-disregard
+      - register-with-health-services-as-student
+      - access-adult-skills-training
+    wave-3:
+      - seek-research-funding
+      - obtain-research-ethics-approval
+      - manage-university-intellectual-property
+      - get-academic-qualification-recognised
+
+  - id: finding-work-and-unemployment
+    title: Finding work and unemployment
+    wave-1:
+      - use-public-job-search
+      - get-jobcentre-support
+      - prove-right-to-work
+      - start-work-based-apprenticeship
+    wave-2:
+      - get-disclosure-or-dbs-check
+      - claim-universal-credit-while-unemployed
+      - claim-new-style-jobseekers-allowance
+      - get-access-to-work
+    wave-3:
+      - get-redundancy-support
+      - access-employment-retraining
+      - volunteer-in-the-uk
+      - resolve-recruitment-discrimination
+
+  - id: employment
+    title: Employment
+    wave-1:
+      - receive-written-employment-particulars
+      - check-employment-status
+      - receive-national-minimum-wage
+      - pay-paye-and-national-insurance
+    wave-2:
+      - join-workplace-pension
+      - take-statutory-leave
+      - get-statutory-sick-pay
+      - take-parental-leave
+    wave-3:
+      - get-workplace-health-and-safety-protection
+      - report-workplace-injury
+      - join-or-use-trade-union
+      - bring-employment-dispute
+
+  - id: housing-and-community
+    title: Housing and community life
+    wave-1:
+      - rent-private-home
+      - protect-tenancy-deposit
+      - buy-home
+      - move-home
+    wave-2:
+      - prove-right-to-rent
+      - register-for-council-tax
+      - apply-for-social-housing
+      - get-homelessness-help
+    wave-3:
+      - apply-for-home-adaptation
+      - seek-planning-permission
+      - meet-building-regulations
+      - report-noise-or-pest-nuisance
+
+  - id: rubbish-recycling-and-street
+    title: Rubbish, recycling and the street
+    wave-1:
+      - view-waste-collection-schedule
+      - report-missed-rubbish-collection
+      - order-replacement-waste-container
+      - use-household-recycling-service
+    wave-2:
+      - arrange-garden-waste-collection
+      - arrange-bulky-waste-collection
+      - dispose-of-hazardous-waste
+      - arrange-clinical-waste-collection
+    wave-3:
+      - report-fly-tipping
+      - report-litter-or-dog-fouling
+      - report-abandoned-vehicle
+      - report-street-cleaning-failure
+
+  - id: public-and-private-transport
+    title: Public and private transport
+    wave-1:
+      - plan-accessible-public-transport
+      - obtain-concessionary-travel
+      - use-community-transport
+      - get-blue-badge
+    wave-2:
+      - license-taxi-or-private-hire
+      - register-vehicle
+      - tax-or-sorn-vehicle
+      - obtain-mot-test
+    wave-3:
+      - obtain-motor-insurance
+      - report-road-collision
+      - get-parking-permit
+      - pay-clean-air-zone-charge
+
+  - id: transport-enforcement
+    title: Transport enforcement
+    wave-1:
+      - respond-to-speeding-notice
+      - respond-to-council-parking-penalty
+      - challenge-private-parking-charge
+      - identify-driver-after-road-offence
+    wave-2:
+      - accept-fixed-penalty
+      - attend-driver-awareness-course
+      - manage-penalty-points
+      - respond-to-driving-disqualification
+    wave-3:
+      - appeal-to-traffic-penalty-tribunal
+      - contest-road-user-charge
+      - respond-to-vehicle-clamping-or-removal
+      - respond-to-transport-prosecution
+
+  - id: money-tax-and-benefits
+    title: Money, tax and benefits
+    wave-1:
+      - register-for-income-tax
+      - get-national-insurance-record
+      - file-self-assessment
+      - claim-universal-credit
+    wave-2:
+      - register-for-vat
+      - pay-council-tax
+      - manage-student-loan-repayment
+      - claim-disability-benefit
+    wave-3:
+      - claim-tax-refund
+      - report-benefit-change-of-circumstances
+      - get-debt-advice-and-relief
+      - enter-personal-insolvency
+
+  - id: shopping-and-consumer-rights
+    title: Shopping and consumer rights
+    wave-1:
+      - exercise-consumer-rights-for-goods
+      - exercise-consumer-rights-for-services
+      - exercise-digital-content-rights
+      - seek-refund-repair-or-replacement
+    wave-2:
+      - report-scam-or-fraud
+      - resolve-consumer-credit-dispute
+      - contact-trading-standards
+      - use-sector-ombudsman
+    wave-3:
+      - make-small-money-claim
+      - cancel-distance-contract
+      - challenge-unfair-contract-term
+      - report-product-safety-issue
+
+  - id: relationships-and-family-change
+    title: Relationships and family change
+    wave-1:
+      - marry
+      - form-civil-partnership
+      - change-name
+      - divorce-or-dissolve-partnership
+    wave-2:
+      - resolve-parental-responsibility
+      - arrange-child-maintenance
+      - adopt-child
+      - get-domestic-abuse-support
+    wave-3:
+      - use-family-court
+      - register-lasting-power-of-attorney
+      - apply-for-deputyship
+      - get-family-carer-support
+
+  - id: health-throughout-life
+    title: Health throughout life
+    wave-1:
+      - register-with-gp
+      - use-pharmacy-services
+      - get-prescription
+      - access-dental-care
+    wave-2:
+      - access-eye-care
+      - get-vaccination
+      - use-screening-service
+      - get-sexual-and-reproductive-healthcare
+    wave-3:
+      - access-mental-healthcare
+      - receive-hospital-referral-and-treatment
+      - use-urgent-and-emergency-health-services
+      - complain-about-nhs-care
+
+  - id: disability-care-and-support
+    title: Disability, care and support
+    wave-1:
+      - claim-disability-living-support
+      - get-social-care-needs-assessment
+      - get-carers-assessment
+      - receive-direct-payments
+    wave-2:
+      - get-disability-home-adaptation
+      - get-residential-care
+      - report-adult-safeguarding-concern
+      - get-mental-capacity-support
+    wave-3:
+      - arrange-supported-decision-representation
+      - access-mobility-support
+      - obtain-workplace-disability-adjustment
+      - challenge-care-or-disability-benefit-decision
+
+  - id: citizenship-democracy-and-rights
+    title: Citizenship, democracy and rights
+    wave-1:
+      - apply-for-visa-or-immigration-permission
+      - apply-for-settlement
+      - apply-for-citizenship
+      - obtain-uk-passport
+    wave-2:
+      - maintain-electoral-registration
+      - stand-for-election
+      - petition-government
+      - respond-to-public-consultation
+    wave-3:
+      - contact-elected-representative
+      - perform-jury-service
+      - exercise-data-protection-rights
+      - make-freedom-of-information-request
+
+  - id: police-and-legal-services
+    title: Police and legal services
+    wave-1:
+      - call-emergency-services
+      - report-crime
+      - report-fraud
+      - report-antisocial-behaviour
+    wave-2:
+      - report-hate-crime
+      - report-missing-person
+      - get-victim-or-witness-support
+      - obtain-police-station-legal-advice
+    wave-3:
+      - get-legal-aid
+      - use-civil-or-family-court
+      - use-tribunal
+      - appeal-court-or-tribunal-decision
+
+  - id: starting-and-running-organisation
+    title: Starting and running an organisation
+    wave-1:
+      - register-as-sole-trader
+      - form-business-partnership
+      - incorporate-company
+      - register-charity
+    wave-2:
+      - establish-social-enterprise
+      - register-business-taxes
+      - run-payroll
+      - obtain-business-licence
+    wave-3:
+      - meet-workplace-safety-duties
+      - register-data-protection-fee
+      - bid-for-public-contract
+      - close-or-insolvent-business
+
+  - id: ideas-creativity-and-research
+    title: Ideas, creativity and research
+    wave-1:
+      - protect-confidential-information
+      - search-prior-art
+      - apply-for-patent
+      - request-patent-search-and-examination
+    wave-2:
+      - manage-copyright
+      - register-trade-mark
+      - register-design
+      - license-intellectual-property
+    wave-3:
+      - apply-for-innovation-grant
+      - use-university-technology-transfer
+      - publish-research
+      - commercialise-research
+
+  - id: holidays-volunteering-and-living-overseas
+    title: Holidays, volunteering and living overseas
+    wave-1:
+      - renew-passport
+      - check-entry-requirements
+      - check-foreign-travel-advice
+      - obtain-ghic-or-ehic
+    wave-2:
+      - get-travel-vaccination
+      - buy-travel-insurance
+      - declare-goods-at-customs
+      - drive-abroad
+    wave-3:
+      - study-or-volunteer-overseas
+      - work-overseas
+      - manage-tax-ni-benefits-and-pensions-abroad
+      - get-consular-assistance
+      - obtain-emergency-travel-document
+      - get-help-after-serious-incident-abroad
+
+  - id: later-life
+    title: Later life
+    wave-1:
+      - get-state-pension-forecast
+      - claim-state-pension
+      - claim-pension-credit
+      - manage-workplace-pension-in-retirement
+    wave-2:
+      - use-older-person-concessionary-travel
+      - claim-attendance-allowance
+      - get-housing-adaptation-in-later-life
+      - get-social-care-in-later-life
+    wave-3:
+      - get-carer-support-in-later-life
+      - make-lasting-power-of-attorney
+      - make-advance-care-plan
+      - make-will
+      - access-palliative-or-end-of-life-care
+
+  - id: death-and-bereavement
+    title: Death and bereavement
+    wave-1:
+      - obtain-medical-certificate-of-cause-of-death
+      - refer-death-to-coroner-or-procurator-fiscal
+      - register-a-death
+      - notify-organisations-after-a-death
+    wave-2:
+      - arrange-funeral
+      - arrange-burial-or-cremation
+      - claim-bereavement-support
+      - locate-or-prove-will
+    wave-3:
+      - administer-an-estate
+      - pay-inheritance-tax
+      - settle-estate-debts
+      - update-property-records-after-death
+      - notify-private-organisations-after-death
+      - arrange-repatriation-after-death
+
+scope_overrides:
+  local-authority:
+    - apply-for-school-place
+    - appeal-school-admission
+    - arrange-school-transport
+    - apply-for-free-school-meals
+    - challenge-school-exclusion
+    - register-for-council-tax
+    - apply-for-social-housing
+    - get-homelessness-help
+    - seek-planning-permission
+    - meet-building-regulations
+    - report-noise-or-pest-nuisance
+    - view-waste-collection-schedule
+    - report-missed-rubbish-collection
+    - order-replacement-waste-container
+    - use-household-recycling-service
+    - arrange-garden-waste-collection
+    - arrange-bulky-waste-collection
+    - dispose-of-hazardous-waste
+    - arrange-clinical-waste-collection
+    - report-fly-tipping
+    - report-litter-or-dog-fouling
+    - report-abandoned-vehicle
+    - report-street-cleaning-failure
+    - get-blue-badge
+    - license-taxi-or-private-hire
+    - get-parking-permit
+    - respond-to-council-parking-penalty
+    - appeal-to-traffic-penalty-tribunal
+    - pay-council-tax
+    - contact-trading-standards
+    - get-social-care-needs-assessment
+    - get-carers-assessment
+    - receive-direct-payments
+    - get-disability-home-adaptation
+    - get-residential-care
+    - report-adult-safeguarding-concern
+    - get-housing-adaptation-in-later-life
+    - get-social-care-in-later-life
+  mixed-public-private:
+    - access-fertility-and-reproductive-health
+    - pursue-surrogacy-parenthood
+    - find-registered-childcare
+    - register-as-childminder
+    - arrange-student-accommodation
+    - rent-private-home
+    - protect-tenancy-deposit
+    - buy-home
+    - move-home
+    - plan-accessible-public-transport
+    - obtain-motor-insurance
+    - report-road-collision
+    - arrange-funeral
+    - administer-an-estate
+    - notify-private-organisations-after-death
+    - arrange-repatriation-after-death
+  regulated-private:
+    - challenge-private-parking-charge
+    - resolve-consumer-credit-dispute
+    - use-sector-ombudsman
+    - report-product-safety-issue
+    - obtain-workplace-disability-adjustment
+    - protect-confidential-information
+    - license-intellectual-property
+    - buy-travel-insurance
+  cross-border:
+    - check-child-nationality-status
+    - get-academic-qualification-recognised
+    - apply-for-visa-or-immigration-permission
+    - apply-for-settlement
+    - apply-for-citizenship
+    - check-entry-requirements
+    - check-foreign-travel-advice
+    - obtain-ghic-or-ehic
+    - declare-goods-at-customs
+    - drive-abroad
+    - study-or-volunteer-overseas
+    - work-overseas
+    - manage-tax-ni-benefits-and-pensions-abroad
+    - get-consular-assistance
+    - obtain-emergency-travel-document
+    - get-help-after-serious-incident-abroad
+    - arrange-repatriation-after-death
+</pre>
+</body>
+</html>

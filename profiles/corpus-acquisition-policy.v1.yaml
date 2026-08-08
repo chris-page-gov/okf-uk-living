@@ -1,0 +1,207 @@
+policy_version: corpus-acquisition-policy.v1
+status: owner_approved
+decision_date: "2026-08-07"
+approved_by: owner:chris-page-gov
+service_family_denominator: source/service-family-denominator.v1.yaml
+reference_inventory: source/exhaustive-reference-inventory.v1.yaml
+
+authority_boundary:
+  assertion_status: normalized
+  rule: >-
+    This policy governs discovery and review. It does not make a service,
+    responsibility, provider, geography, legal rule or deadline official.
+  prohibited:
+    - source_snapshots_without_source_specific_approval
+    - source_content_redistribution
+    - provider_recommendations_or_rankings
+    - inferred_jurisdiction_or_service_equivalence
+    - personal_eligibility_legal_or_medical_decisions
+    - real_personal_data
+    - ci_or_publication_without_explicit_owner_request
+
+local_coverage:
+  model: exhaustive_authority_registry_plus_representative_and_exception_leaf_routes
+  decision: approved
+  authority_layer:
+    completeness: every_active_principal_authority_and_functional_body_in_the_approved_official_denominators
+    sources:
+      - govuk-find-local-council
+      - mygov-organisations
+      - govwales-local-government
+      - nidirect-local-councils
+      - ons-administrative-names-and-codes
+  service_family_layer:
+    completeness: every_local_authority_scoped_service_family_mapped_to_responsible_authority_types_in_each_nation
+    identity_rule: A responsibility type never proves that a particular authority currently offers the same route.
+  leaf_route_layer:
+    completeness: one_current_route_per_governed_structural_archetype_plus_every_known_material_exception
+    exhaustive_every_authority_required: false
+    expansion_rule: A local claim about a named place requires that responsible provider's current leaf source.
+  archetypes:
+    england:
+      - unitary_authority
+      - metropolitan_district
+      - london_borough
+      - county_and_district_two_tier
+      - combined_authority_or_mayoral_function
+    scotland:
+      - council_area
+    wales:
+      - principal_council
+    northern-ireland:
+      - district_council
+    functional:
+      - health_body
+      - police_or_fire_area
+      - transport_authority
+      - court_or_tribunal_region
+      - contracted_provider
+
+geography_and_organisation_identifiers:
+  decision: approved
+  administrative_geography:
+    primary_identifier: GSS_nine_character_code
+    required_fields:
+      - code
+      - official_name
+      - geography_type
+      - vintage_or_effective_date
+      - source_url
+      - observed_at
+    source: ons-administrative-names-and-codes
+    history_source: ons-geography-names-codes-lookups
+  project_jurisdiction:
+    identifiers:
+      - uk-wide
+      - england
+      - scotland
+      - wales
+      - northern-ireland
+      - local
+    rule: Project jurisdiction identifiers describe scope and never replace official geography identifiers.
+  health_organisations:
+    primary_identifier_where_covered: ODS_code
+    source: nhs-ods-service
+    coverage_source: nhs-ods-data-coverage
+    fallback: retain_source_native_identifier_and_identity_evidence
+  postcode:
+    allowed_use: transient_authority_route_discovery_only
+    storage_allowed: false
+    identity_rule: A postcode lookup is routing evidence, not a stable service or authority identity.
+  lifecycle_rule: Never overwrite predecessor, successor, boundary vintage or effective dates.
+
+health_source_permissions:
+  decision: keep_manual_link_and_original_summary_only
+  seek_additional_provider_permission_now: false
+  reconsider_when: a_specific_approved_acquisition_wave_requires_automated_directory_or_content_extraction
+  england:
+    source_family: nhs-england-service-directory
+    mode: manual_link_and_original_summary_only_despite_ogl
+  scotland:
+    source_family: nhs-inform-scotland
+    mode: manual_link_and_original_summary_only
+    reason: personal_noncommercial_terms_and_no_scraping_without_explicit_permission
+  wales:
+    source_family: nhs-wales-service-directory
+    mode: manual_link_and_original_summary_only
+    reason: crown_copyright_and_content_authorisation_restrictions
+  northern-ireland:
+    source_family: hscni-service-directory
+    mode: manual_link_and_original_summary_only
+    reason: attributed_noncommercial_reproduction_only
+  universal_rule: No medical content is transformed into individual advice or eligibility logic.
+
+private_dependencies:
+  decision: regulator_first
+  provider_selection_rule: >-
+    Start with the statutory regulator, mandatory register, official licensing
+    authority or statutory redress body. Add a named provider only when the
+    journey requires that exact provider and record why it is necessary.
+  required_fields:
+    - dependency_role
+    - sector
+    - regulator_or_licensing_authority
+    - register_or_directory_url
+    - jurisdiction
+    - compulsory_or_optional
+    - provider_selection_basis
+    - observed_at
+    - rights_decision
+    - redress_route
+  prohibited:
+    - commercial_rankings
+    - inferred_quality_or_endorsement
+    - provider_completeness_claim_without_denominator
+    - copying_provider_marketing_or_directory_content
+  no_single_regulator_rule: Record the absence of a statutory denominator and use a functional role rather than an arbitrary provider.
+
+sector_redress:
+  decision: governed_escalation_taxonomy
+  sequence:
+    - provider_internal_review_or_complaint
+    - statutory_reconsideration_or_review
+    - tribunal_or_specialist_appeal
+    - regulator_or_ombudsman
+    - court_or_judicial_review
+  rule: >-
+    The sequence is a taxonomy, not a universal procedure. Each service family
+    must cite the current route, prerequisites, deadlines and jurisdiction.
+  sectors:
+    - financial_services_and_insurance
+    - housing_and_property
+    - energy_and_utilities
+    - communications_and_post
+    - transport_and_travel
+    - health_and_social_care
+    - education_and_training
+    - legal_and_professional_services
+    - employment
+    - consumer_goods_and_services
+
+claim_review:
+  decision: role_based_nominations
+  coordinator:
+    reviewer: owner:chris-page-gov
+    responsibility: editorial_scope_source_identity_and_release_gate
+    status: nominated
+  reviewer_roles:
+    - id: reviewer:qualified-uk-legal-procedure
+      scope: legal_effects_enforcement_appeal_routes_and_statutory_deadlines
+      qualification: suitable_current_uk_legal_or_public_policy_expertise
+      status: role_nominated_individual_not_appointed
+      required_for: production_grade_legal_claim
+    - id: reviewer:registered-clinical-safety
+      scope: medical_risk_urgent_care_and_health_service_safety_boundaries
+      qualification: current_relevant_uk_clinical_registration_or_clinical_safety_expertise
+      status: role_nominated_individual_not_appointed
+      required_for: production_grade_medical_claim
+    - id: reviewer:authoritative-service-policy
+      scope: eligibility_evidence_fees_deadlines_and_operational_exceptions
+      qualification: current_service_owner_policy_or_equivalent_subject_expertise
+      status: assigned_per_service_family
+      required_for: high_impact_or_time_critical_claim
+  high_impact_rule: >-
+    A legal, medical, eligibility, enforcement or deadline claim cannot pass the
+    production-grade gate until the applicable role accepts the review and the
+    current authoritative source has been re-observed.
+  sample_rule: Educational examples may remain clearly labelled normalized or editorial-example with explicit limitations.
+
+explorer_large_corpus:
+  target_contract: okf-explorer-large-corpus.v1
+  decision: approved_for_local_evaluation
+  approval_effective_on: "2026-08-07"
+  approval_evidence: evaluation/reviews/integrated-three-slice-2026-08-07.md
+  prerequisites_completed:
+    - REV-001_closed_relationship_authority_and_provenance
+    - REV-002_closed_node_build_provenance
+    - REV-003_closed_browser_renderable_source_handoff
+    - REV-004_closed_first_class_licence_and_notice_surface
+  required_facets:
+    - life_course_domain
+    - acquisition_wave
+    - delivery_scope
+    - jurisdiction
+    - implementation_status
+    - assertion_status
+    - rights_state
+  publication_allowed: false

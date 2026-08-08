@@ -59,6 +59,27 @@ service records. A fixture moves from `authorized_not_started` to
 recorded under `source/`; this state does not authorize snapshots, broad
 acquisition or redistribution.
 
+The owner separately authorized the exhaustive link-only reference-family
+inventory on 2026-08-07. That authorization covers URLs, owners,
+jurisdictions, dates, dated rights decisions, original summaries and gaps for
+the 24-domain denominator. It does not authorize snapshots, source-content
+redistribution, unbounded or unstaged leaf acquisition or publication.
+
+The owner-approved
+[`service-family-denominator.v1`](../source/service-family-denominator.v1.yaml)
+contains 293 normalized planning families in three waves. The
+[`corpus-acquisition-policy.v1`](../profiles/corpus-acquisition-policy.v1.yaml)
+governs local-authority coverage, GSS and applicable ODS identifiers, manual
+health links, regulator-first private dependencies, sector redress and
+specialist-review gates. A family name authorizes staged source registration;
+it is not an official assertion that routes or rules are uniform.
+
+The owner-approved `okf-explorer-large-corpus.v1` projection renders those 293
+planning families with seven colour facets. It must remain generated from the
+denominator, contain no acquired source content, and keep publication disabled.
+The static search and every facet posting must reconcile with the same ordered
+record set.
+
 The approved [rights register](../source/rights-decisions.v1.yaml) now resolves
 the repository and current linked-source decisions without expanding the use
 boundary. Repository-authored code, documentation and ontology terms are MIT.
@@ -101,22 +122,47 @@ Northern Ireland manual-notification boundary, the exact national
 registration authority and the distinction between probate and Scottish
 confirmation.
 
+## Exhaustive reference-family inventory
+
+[`source/exhaustive-reference-inventory.v1.yaml`](../source/exhaustive-reference-inventory.v1.yaml)
+is the Phase 4 discovery denominator. It accounts for 24 life-course domains
+across UK-or-England, Scotland, Wales, Northern Ireland and local reference
+scope. A `covered` cell means an authoritative discovery family has been
+identified; it does not make the category page evidence for a leaf-service
+claim. Local cells remain `partial` until current responsible-provider and
+redress pages are selected.
+
+Every inventory reference requires an HTTPS URL, owner, jurisdiction,
+authority role, observation date, source update value or explicit absence,
+dated rights decision and original summary. `scripts/check_inventory.py`
+enforces the denominator, rights links, reference identity and gap ledger
+offline; live freshness is a separate reviewed acquisition activity.
+
 ## Build and check
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The
 locked project environment is created automatically when these commands run:
 
 ```sh
+uv run --locked python scripts/build_browser_handoff.py
+uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
+uv run --locked python scripts/build_large_corpus.py
+uv run --locked python scripts/build_large_corpus.py --check
+uv run --locked python scripts/check_large_projection.py
 uv run --locked python -m unittest discover -s tests
 ```
 
-`okf-bundle.json` is reproducible output. Never patch it directly.
+`generated/browser/`, `okf-bundle.json`, `large/data/` and
+`okf-explorer.json` are reproducible output. Never patch them directly.
 
 ## Publication boundary
 

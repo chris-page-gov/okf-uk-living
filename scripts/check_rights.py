@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 import yaml
 
 from check_sources import RECORDED_RIGHTS_BASIS, load_source_registers
+from check_inventory import flatten_inventory_references, load_reference_inventory
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,9 @@ EXPECTED_STANDARD_LICENCES = {
     "open-referral-uk-website": "OGL-version-not-expressly-recorded-for-most-website-content",
     "open-referral-uk-govuk-record": "OGL-UK-3.0",
     "hsds-3.1-documentation": "CC-BY-SA-4.0",
+    "w3c-recommendations": "W3C-Document-License-2023",
+    "local-government-services-list": "Open-Government-Licence-version-not-recorded",
+    "okf-explorer": "MIT-code-and-CC-BY-NC-4.0-content",
 }
 
 
@@ -129,6 +133,20 @@ def validate_rights_register(register: dict[str, Any]) -> list[str]:
             source_hosts.add(urlparse(str(source.get("resource", ""))).netloc.lower())
             if source.get("rights_basis") != RECORDED_RIGHTS_BASIS:
                 errors.append(f"{prefix}: {source.get('id', 'source')} lacks the recorded rights basis")
+    inventory, inventory_errors = load_reference_inventory()
+    errors.extend(inventory_errors)
+    for reference in flatten_inventory_references(inventory):
+        rights_decision = str(reference.get("rights_decision", ""))
+        if not rights_decision.startswith("host:"):
+            continue
+        source_count += 1
+        resource_host = urlparse(str(reference.get("resource", ""))).netloc.lower()
+        source_hosts.add(resource_host)
+        if rights_decision != f"host:{resource_host}":
+            errors.append(
+                f"{prefix}: {reference.get('id', 'inventory reference')} rights decision "
+                "does not match its resource host"
+            )
     if set(decision_hosts) != source_hosts:
         missing = sorted(source_hosts - set(decision_hosts))
         extra = sorted(set(decision_hosts) - source_hosts)

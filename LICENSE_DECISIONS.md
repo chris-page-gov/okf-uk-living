@@ -9,9 +9,10 @@ Decision owner: `owner:chris-page-gov`
 Machine-readable record: [source/rights-decisions.v1.yaml](source/rights-decisions.v1.yaml)
 
 These determinations set the rights boundary for local authoring and testing.
-They do not authorize broad source acquisition, public repository visibility,
-GitHub Pages deployment or publication of a bundle. Those actions still need
-an explicit owner request and the applicable release checks.
+The owner separately authorized exhaustive link-only reference-family
+discovery on 2026-08-07. They do not authorize snapshots, source-content
+redistribution, unbounded or unstaged leaf acquisition, public repository visibility,
+GitHub Pages deployment or publication of a bundle.
 
 ## Repository-authored material
 
@@ -28,9 +29,11 @@ source content.
 
 ## Acquired source families
 
-“Acquired” presently means a registered HTTPS reference. The three bounded
-source registers contain 53 links and no downloaded snapshots. Every source
-hostname is mapped to a dated evidence record in the rights register.
+“Acquired” presently means a registered HTTPS reference. The exhaustive
+inventory contains 89 new references and includes the 53 links in the three
+bounded source registers: 142 external reference records and no downloaded
+snapshots. All 25 source hostnames, plus the standards and Explorer families,
+are mapped to dated evidence in the rights register.
 
 The operative policy is deliberately uniform even where a source permits
 broader reuse: link to the authoritative page, summarize it in original words,
@@ -48,8 +51,11 @@ The registered families are:
 | Bespoke provider reuse | Local Government and Social Care Ombudsman | Website information may be reused only with source/copyright acknowledgement, accuracy, no amendment, no misleading use and no advertising-led use. This project uses only links and summaries. |
 | SPSO website OGL | Scottish Public Services Ombudsman | The SPSO states that all website information is available through the OGL, subject to its conditions. |
 | No open licence established | Cardiff Council, Public Services Ombudsman for Wales and Northern Ireland Public Services Ombudsman | No page-wide open reuse grant was established from the recorded official evidence. Default to links and original summaries; do not copy or redistribute. |
+| OGL v3.0 with provider conditions | GOV.WALES and the NHS website for England | GOV.WALES excludes logos. NHS reuse has attribution, refresh and excluded-content conditions; this project still links and summarizes only. |
+| Restricted national health portals | NHS inform, NHS 111 Wales and HSCNI online services | NHS inform limits use to personal/non-commercial purposes and prohibits scraping without permission; NHS 111 Wales reserves Crown copyright; HSCNI permits attributed non-commercial reproduction. No content is copied. |
+| Invest Northern Ireland bespoke terms | nibusinessinfo.co.uk | Crown and Invest NI material have distinct terms, republication needs written permission and images are excluded. Use links and original summaries only. |
 
-Evidence URLs and the observation date for each of the 16 host decisions are
+Evidence URLs and the observation date for each of the 25 host decisions are
 recorded in `source/rights-decisions.v1.yaml`. An unavailable or ambiguous
 licence is not interpreted as permission.
 
@@ -111,6 +117,22 @@ and the [CC BY-SA 4.0 legal code](https://creativecommons.org/licenses/by-sa/4.0
 This project currently maps terminology in original words and links to the
 standards. It does not redistribute their schemas or text, so no downstream
 ShareAlike claim is made for repository-authored ontology terms.
+
+## W3C, LGSL and OKF Explorer
+
+The SKOS, OWL 2, PROV-O and SHACL Recommendations are governed by the W3C
+Document License 2023. This project links to them and describes their roles in
+original words; it does not copy or publish a modified technical specification.
+
+The data.gov.uk Local Government Services List record is labelled Open
+Government Licence but is dated 2014 and does not state a licence version. It
+is an identifier-mapping reference, not evidence that a service is currently
+available.
+
+The OKF Explorer repository licenses viewer and build code under MIT, while
+its corpus and documentation are CC BY-NC 4.0. This repository uses the
+Explorer only as a consumer-compatibility reference and copies neither code
+nor corpus content.
 
 ## Snapshots and generated projections
 

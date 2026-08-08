@@ -426,8 +426,24 @@ def main() -> int:
     duplicates = sorted(title for title, count in titles.items() if title and count > 1)
     errors.extend(f"duplicate case-insensitive title: {title}" for title in duplicates)
     for path_id, node in nodes.items():
+        source = str(node.get("source", ""))
+        generated = node.get("generated", {})
+        if node.get("authored_source") != path_id or not source.startswith("generated/browser/"):
+            errors.append(f"{path_id}: must expose its authored identity through a browser handoff")
+        if not isinstance(generated, dict) or not generated.get("by") or not generated.get("at"):
+            errors.append(f"{path_id}: must expose node-level build provenance")
         if node.get("type") == "Research Overview" and not node.get("sources"):
             errors.append(f"{path_id}: research overview must declare sources")
+    for edge in corpus["edges"]:
+        authority = edge.get("authority", {})
+        if edge.get("schema") != "okf-relationship-assertion.v2":
+            errors.append(f"{edge.get('id', 'relationship')}: must use the governed relationship contract")
+        if not isinstance(authority, dict) or authority.get("class") not in {"derived", "synthetic"}:
+            errors.append(f"{edge.get('id', 'relationship')}: must declare relationship authority")
+        if not edge.get("derivation") or not edge.get("evidence") or not edge.get("rights"):
+            errors.append(f"{edge.get('id', 'relationship')}: must declare provenance, evidence and rights")
+    if "evidence/licensing-and-attribution.md" not in nodes:
+        errors.append("first-class licensing and attribution evidence is absent from nodes")
     errors.extend(validate_missed_rubbish_slice(nodes, corpus["edges"]))
     errors.extend(validate_driving_speeding_slice(nodes, corpus["edges"]))
     errors.extend(validate_bereavement_slice(nodes, corpus["edges"]))

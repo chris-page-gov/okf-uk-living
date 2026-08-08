@@ -13,6 +13,8 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "source"
 RIGHTS_REGISTER_NAME = "rights-decisions.v1.yaml"
+REFERENCE_INVENTORY_NAME = "exhaustive-reference-inventory.v1.yaml"
+SERVICE_DENOMINATOR_NAME = "service-family-denominator.v1.yaml"
 RECORDED_RIGHTS_POLICY = "link_and_summarize_source_family_decisions_recorded"
 RECORDED_RIGHTS_BASIS = "linked_reference_summary_only_source_family_decision_recorded"
 EXPECTED_MISSED_RUBBISH_IDS = {
@@ -103,7 +105,7 @@ def load_source_registers() -> tuple[list[dict[str, Any]], list[str]]:
     registers: list[dict[str, Any]] = []
     errors: list[str] = []
     for path in sorted(SOURCE_DIR.glob("*.v1.yaml")):
-        if path.name == RIGHTS_REGISTER_NAME:
+        if path.name in {RIGHTS_REGISTER_NAME, REFERENCE_INVENTORY_NAME, SERVICE_DENOMINATOR_NAME}:
             continue
         try:
             value = yaml.safe_load(path.read_text(encoding="utf-8"))

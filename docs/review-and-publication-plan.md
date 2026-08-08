@@ -13,24 +13,23 @@ requires an explicit owner request naming the frozen candidate.
 
 ## Current baseline
 
-The sample has completed its first integrated local review. Main contains:
+The sample has completed its local remediation review. The reviewed branch contains:
 
 - the approved domain profile and three synthetic fixture contracts;
 - missed rubbish collection, learning to drive through speeding enforcement,
   and death and bereavement through estate administration;
-- 78 OKF nodes and 313 relationships;
+- 81 OKF nodes and 318 governed relationships;
 - 53 linked official references across 16 rights-mapped hosts;
 - zero source snapshots;
 - MIT licensing for repository-authored code, documentation and ontology
   terms; and
-- deterministic locked-`uv` generation and 44 local tests.
+- deterministic locked-`uv` generation, browser handoffs and local tests.
 
 The [2026-08-07 review](../evaluation/reviews/integrated-three-slice-2026-08-07.md)
-passed the three Reader/query content journeys and recorded the exact Explorer
-0.5.7 consumer and bundle bytes. It did not pass the release gate: relationship
-authority/provenance, node build-provenance presentation, browser-renderable
-source handoffs and licence-notice verification remain open. No candidate or
-publication bytes have been frozen.
+passes Reader/query, relationship and node provenance, browser source-handoff
+and licence-notice journeys and records the exact Explorer 0.5.7 consumer and
+bundle bytes. `REV-001` through `REV-004` are closed. No candidate or
+publication bytes have been frozen because `SCOPE-001` remains the next gate.
 
 ## Intended first publication
 
@@ -45,7 +44,8 @@ release-scope decision explicitly records that:
   claims;
 - the content is educational and navigational, not current individual advice;
 - all three source denominators and known omissions remain visible; and
-- broader source acquisition and corpus expansion remain out of scope.
+- the separately authorized link-only reference-family inventory does not
+  expand the published corpus or authorize leaf acquisition.
 
 That is the shortest responsible route to a useful reviewable publication. A
 decision to claim formal semantic conformance would instead bring the governed
@@ -66,9 +66,7 @@ predicate registry and validation shapes into the release-critical path.
 
 ## Integrated review contents
 
-`REVIEW-001` is the next implementation step and can begin locally without a
-publication request. It will produce durable evidence under `evaluation/` and
-cover:
+`REVIEW-001` produced durable evidence under `evaluation/` and covered:
 
 1. one ordinary and one exception journey for each slice;
 2. cross-slice checks for assertion status, source identity and evidence
@@ -80,12 +78,15 @@ cover:
 7. a finding ledger with severity, disposition, reviewer and decision date.
 
 Changes needed to resolve findings remain focused pull requests with full local
-validation. Review findings do not authorize broad source acquisition.
+validation. Review findings do not authorize source snapshots, leaf-source
+acquisition or corpus expansion. The separate 2026-08-07 owner instruction
+authorizes only the exhaustive reference-family inventory of links, rights
+evidence and original summaries recorded in
+[`source/exhaustive-reference-inventory.v1.yaml`](../source/exhaustive-reference-inventory.v1.yaml).
 
-The first run is recorded under `evaluation/reviews/`. `REVIEW-001` remains in
-progress until `REV-001` through `REV-004` are remediated or explicitly
-dispositioned and the affected Explorer journeys pass on rerun. The companion
-consumer record under `evaluation/compatibility/` is evaluated but not locked.
+The first run and passing remediation rerun are recorded under
+`evaluation/reviews/`. `REVIEW-001` and `COMPAT-001` are complete for local
+evaluation. `SCOPE-001` is the next owner decision; publication remains gated.
 
 ## Candidate and publication controls
 

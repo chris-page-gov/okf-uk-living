@@ -44,7 +44,7 @@ class RightsDecisionTests(unittest.TestCase):
 
     def test_all_registered_hosts_have_dated_decisions(self) -> None:
         decisions = self.register["host_decisions"]
-        self.assertEqual(16, len(decisions))
+        self.assertEqual(25, len(decisions))
         self.assertTrue(all(decision["evidence"]["observed_at"] for decision in decisions))
 
     def test_reference_standard_licences_are_explicit(self) -> None:
@@ -52,6 +52,11 @@ class RightsDecisionTests(unittest.TestCase):
         self.assertEqual("CC-BY-4.0", standards["cpsv-ap-3.2.0"]["licence"])
         self.assertEqual("CC-BY-SA-4.0", standards["hsds-3.1-documentation"]["licence"])
         self.assertIn("without_a_version", standards["open-referral-uk-website"]["limitation"])
+        self.assertEqual("W3C-Document-License-2023", standards["w3c-recommendations"]["licence"])
+        self.assertEqual(
+            "MIT-code-and-CC-BY-NC-4.0-content",
+            standards["okf-explorer"]["licence"],
+        )
 
     def test_ogl_attribution_is_exact(self) -> None:
         self.assertEqual(EXPECTED_OGL_ATTRIBUTION, self.register["attribution"]["ogl_v3_fallback"])

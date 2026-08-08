@@ -27,9 +27,14 @@ class ContractTests(unittest.TestCase):
     def test_expected_fixtures_are_present(self) -> None:
         self.assertEqual(EXPECTED_FIXTURE_IDS, {fixture["id"] for fixture in self.fixtures})
 
-    def test_profile_blocks_acquisition_and_publication(self) -> None:
+    def test_profile_authorizes_staged_acquisition_but_blocks_unbounded_acquisition_and_publication(self) -> None:
+        authorized = set(self.profile["approval"]["authorized_actions"])
         blocked = set(self.profile["approval"]["blocked_actions"])
-        self.assertIn("broad_source_acquisition", blocked)
+        self.assertIn("exhaustive_link_only_reference_family_inventory", authorized)
+        self.assertIn("staged_leaf_reference_registration_against_approved_service_families", authorized)
+        self.assertIn("local_authority_and_regulator_denominator_research", authorized)
+        self.assertIn("unbounded_or_unstaged_leaf_source_acquisition", blocked)
+        self.assertIn("source_snapshot_acquisition", blocked)
         self.assertIn("public_bundle_publication", blocked)
         self.assertFalse(self.profile["rights"]["publication_allowed"])
 

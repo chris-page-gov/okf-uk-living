@@ -1,0 +1,100 @@
+{
+  "defaults": {
+    "distribution_segment_limit": 24,
+    "facet_mode": "suggested",
+    "search_threshold": 12
+  },
+  "facets": [
+    {
+      "default_state": "pinned",
+      "description": "The approved 24-domain planning spine.",
+      "key": "life_course_domain",
+      "label": "Life-course domain",
+      "open_control": "distribution",
+      "order": 1,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "pinned",
+      "description": "The approved staged reference-registration wave.",
+      "key": "acquisition_wave",
+      "label": "Acquisition wave",
+      "open_control": "distribution",
+      "order": 2,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "pinned",
+      "description": "The governed discovery scope; not a claim of uniform delivery.",
+      "key": "delivery_scope",
+      "label": "Delivery scope",
+      "open_control": "distribution",
+      "order": 3,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "shown",
+      "description": "The jurisdiction evidence still required for the planning family.",
+      "key": "jurisdiction",
+      "label": "Jurisdiction research",
+      "open_control": "distribution",
+      "order": 4,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "shown",
+      "description": "Whether the family is present in the three reviewed slices.",
+      "key": "implementation_status",
+      "label": "Implementation status",
+      "open_control": "distribution",
+      "order": 5,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "shown",
+      "description": "The governed status of this planning projection.",
+      "key": "assertion_status",
+      "label": "Assertion status",
+      "open_control": "distribution",
+      "order": 6,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    },
+    {
+      "default_state": "shown",
+      "description": "Rights boundary for repository metadata and upstream sources.",
+      "key": "rights_state",
+      "label": "Rights state",
+      "open_control": "distribution",
+      "order": 7,
+      "value_order": "count-desc",
+      "value_type": "nominal"
+    }
+  ],
+  "panels": {
+    "left": {
+      "default_tab": "facets",
+      "tabs": [
+        "facets",
+        "browse",
+        "results"
+      ]
+    },
+    "right": {
+      "default_tab": "overview",
+      "tabs": [
+        "overview",
+        "evidence",
+        "data"
+      ]
+    }
+  },
+  "schema": "okf-explorer-presentation.v1",
+  "snapshot": "service-family-denominator-2026-08-07",
+  "status": "stable"
+}

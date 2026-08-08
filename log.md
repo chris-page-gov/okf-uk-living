@@ -31,3 +31,16 @@
 - Added OGL attribution, CPSV-AP CC BY 4.0, Open Referral UK and HSDS CC BY-SA
   4.0 decisions while retaining link-and-summary-only source use and zero
   snapshots.
+- Assessed 142 external reference records against a 120-cell life-course and
+  jurisdiction denominator, with dated rights evidence and 12 follow-up gaps.
+- Kept the exhaustive inventory link-only: no snapshots, source-content
+  redistribution, leaf-corpus expansion, CI or publication were authorized.
+- Approved a named 293-family denominator in three staged acquisition waves.
+- Approved the local-authority coverage and geography identifier model, manual
+  health links, regulator-first dependencies, five-level redress taxonomy and
+  role-based specialist review gates without authorizing publication.
+- Closed all four local Explorer findings by adding governed relationship and
+  node build provenance, browser-safe authored-source handoffs and first-class
+  licence/notice evidence.
+- Built and browser-verified the approved 293-family large-corpus planning
+  projection with seven colour facets, static search and zero source snapshots.

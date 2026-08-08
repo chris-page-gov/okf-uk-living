@@ -24,8 +24,8 @@ life events from before birth to death and bereavement.
 - Model UK-wide, England, Scotland, Wales, Northern Ireland and local variants
   explicitly. A GOV.UK route is not evidence that one process applies
   uniformly across all four nations.
-- Do not edit `generated/`, `okf-bundle.json` or release evidence by hand;
-  rebuild them from authored inputs.
+- Do not edit `generated/`, `large/`, `okf-bundle.json`, `okf-explorer.json`
+  or release evidence by hand; rebuild them from authored inputs.
 - Do not add `.DS_Store`, Word lock files, `_site/`, virtual environments,
   caches or temporary output to Git.
 - Preserve unrelated work and use focused feature branches and pull requests
@@ -44,12 +44,20 @@ life events from before birth to death and bereavement.
 If OKF Markdown changes, run:
 
 ```sh
+uv run --locked python scripts/build_browser_handoff.py
+uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
+uv run --locked python scripts/build_large_corpus.py
+uv run --locked python scripts/build_large_corpus.py --check
+uv run --locked python scripts/check_large_projection.py
 uv run --locked python -m unittest discover -s tests
 ```
 

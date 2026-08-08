@@ -22,7 +22,8 @@ and three estate-authority routes. It contains no snapshots or immutable
 envelope checksums.
 
 The [rights-decision register](rights-decisions.v1.yaml) records an approved,
-dated decision for every hostname in these three registers. Openly licensed
+dated decision for every hostname in these three registers and the exhaustive
+reference inventory. Openly licensed
 and restrictively licensed sources use the same conservative project policy:
 link to the source and summarize it in original words; do not redistribute its
 page content. No absence or ambiguity of licence is interpreted as permission.
@@ -37,6 +38,22 @@ Initial research references also include:
 - W3C SKOS, OWL, PROV-O and SHACL;
 - national health and devolved-government service portals; and
 - local-government service vocabularies and directories.
+
+These are now normalized in the
+[exhaustive reference-family inventory](exhaustive-reference-inventory.v1.yaml):
+89 new records plus the 53 existing slice references, 120 assessed coverage
+cells and 12 actionable gaps. The related
+[gap analysis](../research/exhaustive-reference-gap-analysis.md) is the owner
+handoff for local topology, health permissions, private dependencies, redress,
+freshness, bilingual identity and the Explorer large-corpus projection.
+
+The approved [293-family denominator](service-family-denominator.v1.yaml) and
+[corpus acquisition policy](../profiles/corpus-acquisition-policy.v1.yaml)
+close the owner decisions for staged family naming, local coverage, geography
+and organisation identifiers, manual health acquisition, regulator-first
+dependencies, sector redress and reviewer roles. They authorize staged link
+registration and denominator research only; they do not authorize snapshots,
+copied source content, personalized decisions, CI or publication.
 
 Before any future snapshot acquisition, record for each source its owner,
 authority role, access method, identifier and version model, update cadence,

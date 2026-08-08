@@ -14,7 +14,9 @@ authority, governing rules, private-sector dependencies, redress and
 provenance. Candidate source families are planning inputs only. Bounded source
 registration is authorized; all three fixtures now point to their registered
 linked-reference denominators. This completes the approved acquisition scope
-but does not authorize broad acquisition.
+for the implemented slices. The separately authorized exhaustive
+reference-family inventory does not alter these fixture contracts or authorize
+source snapshots, leaf acquisition or corpus expansion.
 
 Run `uv run --locked python scripts/check_contracts.py` to validate the profile
 and fixtures. Passing validation means the contracts are internally complete;

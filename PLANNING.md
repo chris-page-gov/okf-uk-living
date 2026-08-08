@@ -39,24 +39,37 @@ to a later pull request.
 ## Near-term delivery units
 
 The owner approved `okf-domain-profile.v1` and the three fixture contracts on
-2026-08-07. All three slices and the licensing decisions are merged. The first
-integrated local Explorer review has been executed: the content journeys pass,
-but four provenance, source-handoff and notice findings remain open. The sample
-is reviewable, but it is not yet a frozen publication candidate.
+2026-08-07. All three slices and the licensing decisions are merged. The local
+Explorer remediation rerun passed: relationship and node provenance,
+browser-safe source handoffs, and the first-class licence/notice surface are
+verified. The sample remains reviewable but is not yet a frozen publication
+candidate because scope approval is a separate gate.
+
+The owner separately authorized exhaustive link-only reference-family
+discovery on 2026-08-07. `INVENTORY-001` is complete with 142 external records,
+120 assessed coverage cells and 12 actionable gaps. This planning asset does
+not change the sample release gates or authorize snapshots, broad leaf
+acquisition, CI or publication.
 
 The active sequence is defined in the
 [three-slice review and publication plan](docs/review-and-publication-plan.md):
 
-1. Remediate or explicitly disposition `REV-001` through `REV-004` from the
-   [2026-08-07 review](evaluation/reviews/integrated-three-slice-2026-08-07.md).
-2. Rerun `REVIEW-001` and lock `COMPAT-001` against the same required Reader,
-   query, graph, deep-link, source and notice journeys.
-3. `SCOPE-001` — approve the initial sample claim and limitations boundary.
-4. `CAND-001` — freeze one locally validated candidate and its hashes.
-5. `PUB-001` — await an explicit owner publication request naming that
+1. `SCOPE-001` — approve the initial sample claim and limitations boundary.
+2. `CAND-001` — freeze one locally validated candidate and its hashes.
+3. `PUB-001` — await an explicit owner publication request naming that
    candidate.
-6. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
+4. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
    the exact site in a real browser.
+
+For the later complete-corpus track, `CORPUS-001` and `ACQPOL-001` are complete.
+The owner approved 293 named families, exhaustive-authority plus representative
+and exception local coverage, GSS and applicable ODS identifiers, manual
+link-only health acquisition, regulator-first private dependencies, sector
+redress and role-based specialist review. The remaining
+[reference gaps](research/exhaustive-reference-gap-analysis.md) are staged
+implementation, freshness/bilingual policy or external reviewer appointments.
+The 293-family, seven-facet colour projection is complete and approved for
+local evaluation; it does not claim leaf-service completeness.
 
 The recommended release scope is the bounded three-slice educational sample
 without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim. This

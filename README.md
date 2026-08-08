@@ -4,16 +4,20 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **three vertical slices reviewed locally with open release findings**.
-The Reader and query journeys pass in OKF Explorer 0.5.7, but relationship and
-node provenance, browser-renderable source handoffs, and licence-notice
-verification must be resolved before a candidate is frozen. The GitHub
-repository is private; validation remains local-only, broad acquisition and CI
-remain disabled, and publication requires a separate explicit owner request.
+Status: **reference-family inventory complete; Explorer remediation passes locally**.
+The Reader, query, graph provenance, browser source handoff and licence-notice
+journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
+also exposes seven reconciled colour facets and static search. It remains a
+planning view, not an official service corpus or publication candidate. The GitHub
+repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
+acquisition and CI remain disabled, and publication requires a separate
+explicit owner request.
 
 ## Start here
 
 - [Research overview and generating prompt](research/overview.md)
+- [Exhaustive reference-family inventory and gap analysis](research/exhaustive-reference-gap-analysis.md)
+- [Approved corpus acquisition and review decisions](research/corpus-acquisition-decisions.md)
 - [OKF bundle root](index.md)
 - [Implementation roadmap](ROADMAP.md)
 - [Delivery planning](PLANNING.md)
@@ -21,6 +25,7 @@ remain disabled, and publication requires a separate explicit owner request.
 - [Three-slice review and publication plan](docs/review-and-publication-plan.md)
 - [2026-08-07 integrated Explorer review](evaluation/reviews/integrated-three-slice-2026-08-07.md)
 - [Local Explorer input record](evaluation/compatibility/okf-explorer-local.v1.yaml)
+- [Large-corpus local review](evaluation/reviews/large-corpus-2026-08-07.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -29,6 +34,9 @@ remain disabled, and publication requires a separate explicit owner request.
 - [Missed rubbish linked-reference register](source/missed-rubbish-collection.v1.yaml)
 - [Driving and speeding linked-reference register](source/learning-to-drive-speeding.v1.yaml)
 - [Death, bereavement and estate linked-reference register](source/death-bereavement-estate.v1.yaml)
+- [Machine-readable exhaustive reference inventory](source/exhaustive-reference-inventory.v1.yaml)
+- [Approved 293-family denominator](source/service-family-denominator.v1.yaml)
+- [Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
@@ -65,21 +73,40 @@ uv sync --locked
 Build and verify the bundle:
 
 ```sh
+uv run --locked python scripts/build_browser_handoff.py
+uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
 uv run --locked python scripts/build_okf_bundle.py --check
 uv run --locked python scripts/check_okf.py
 uv run --locked python scripts/check_contracts.py
 uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_rights.py
+uv run --locked python scripts/build_large_corpus.py
+uv run --locked python scripts/build_large_corpus.py --check
+uv run --locked python scripts/check_large_projection.py
 uv run --locked python -m unittest discover -s tests
 ```
 
 `make validate` runs the same required sequence. Validation is local-only by
 default; pull requests and merges do not run remote CI or update GitHub Pages.
 
-The generated small-bundle entrypoint is `okf-bundle.json`. No public URL is
-claimed until an exact deployed URL passes a real-browser identity and journey
-check.
+The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
+bundle and `okf-explorer.json` for the 293-family planning projection. With a
+local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:
+
+```sh
+uv run --locked python scripts/serve_local_explorer.py --port 8003
+```
+
+Open the small bundle at
+`http://127.0.0.1:8003/?bundle=http%3A%2F%2F127.0.0.1%3A8003%2Fokf-bundle.json`
+or the colour-facet planning projection at
+`http://127.0.0.1:8003/?bundle=http%3A%2F%2F127.0.0.1%3A8003%2Fokf-explorer.json`.
+These are loopback review URLs, not publication URLs. No public URL is claimed
+until an exact deployed URL passes a real-browser identity and journey check.
 
 ## Licensing and source use
 

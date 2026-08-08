@@ -1,21 +1,25 @@
 # Repository status
 
-- Lifecycle: bounded three-slice sample reviewed locally with four open
-  release findings
+- Lifecycle: exhaustive reference-family inventory complete; bounded
+  three-slice sample and 293-family colour projection pass local Explorer review
 - Corpus: root, research overview and three implemented vertical slices
 - Ontology: three normalized slice modules implemented; governed cross-domain
   registry and publication shapes remain planned
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
-- Acquisition: 53 official references across all three bounded slice
-  registers, all links with zero snapshots; all 16 source hosts have dated
-  rights decisions and broad acquisition is disabled
+- Acquisition: 89 exhaustive-inventory references plus 53 implemented-slice
+  references, all links with zero snapshots; 25 source hosts and all standards
+  families have dated rights decisions; unbounded or unstaged acquisition is disabled
+- Reference coverage: 24 domains by five reference jurisdictions gives 120
+  assessed cells; 96 national cells are covered at discovery-family level and
+  24 local cells are partial, with 12 actionable gaps
 - Licensing: MIT for repository-authored code, documentation and ontology
   terms; source content remains link-and-summary only; snapshot redistribution
   is disabled; eligible repository-authored projections are MIT
 - Deterministic local generation: enabled for authored Markdown
 - Evaluation: local `uv` environment and visible OKF Explorer 0.5.7 review;
-  Reader/query content passes, release gate remains open
+  Reader/query, graph provenance, browser source, licence/notice and large
+  search/facet journeys pass
 - CI: scaffolded but disabled; pull requests do not run remote checks
 - Remote: private GitHub repository created after explicit owner authorization
 - Main protection: PR-only policy documented; server enforcement unavailable
@@ -33,12 +37,16 @@
   semantic tests
 - Licensing: merged in PR #6 with the repository and source-family rights
   checks passing
-- Integrated review: executed on 2026-08-07; `REV-001` through `REV-004`
-  remain open for relationship provenance, node build provenance,
-  browser-renderable source handoff and licence-notice verification
-- Explorer compatibility: OKF Explorer 0.5.7 and the reviewed bundle bytes are
-  recorded, but `COMPAT-001` is not locked while those findings remain open
+- Integrated review: passed locally on 2026-08-07; `REV-001` through `REV-004`
+  are closed with browser evidence for relationship provenance, node build
+  provenance, source handoff and licence/notice verification
+- Explorer compatibility: OKF Explorer 0.5.7 is locked for local evaluation;
+  the 293-family projection adds seven reconciled colour facets and static search
 - Publication readiness: reviewable sample, not yet a candidate; no
   release-scope approval or frozen manifest
-- Next gate: focused remediation and rerun of `REVIEW-001` and `COMPAT-001` as
-  defined in `docs/review-and-publication-plan.md`
+- Next gate: `SCOPE-001` approval of the bounded educational-sample claims and
+  limitations, followed by an explicitly frozen local candidate
+- Later corpus policy: owner-approved 293-family denominator and governed local,
+  identifier, health, regulator, redress and reviewer-role decisions; staged
+  mappings and specialist appointments remain tracked in the
+  [exhaustive gap analysis](research/exhaustive-reference-gap-analysis.md)
