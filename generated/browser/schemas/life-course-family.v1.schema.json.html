@@ -53,7 +53,7 @@
       &quot;additionalProperties&quot;: false
     },
     &quot;dependencies&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;object&quot;}},
-    &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/source&quot;}},
+    &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;oneOf&quot;: [{&quot;$ref&quot;: &quot;#/$defs/source&quot;}, {&quot;$ref&quot;: &quot;#/$defs/sourceReference&quot;}]}},
     &quot;limitations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
     &quot;review&quot;: {
       &quot;type&quot;: &quot;object&quot;,
@@ -141,10 +141,18 @@
         &quot;limitations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
         &quot;snapshot&quot;: {&quot;const&quot;: false}
       }
+    },
+    &quot;sourceReference&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;register&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;register&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^source/.+\\.ya?ml$&quot;}
+      },
+      &quot;additionalProperties&quot;: false
     }
   }
 }
-
 </pre>
 </body>
 </html>

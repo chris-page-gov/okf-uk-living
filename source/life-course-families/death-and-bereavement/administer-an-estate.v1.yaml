@@ -1,0 +1,135 @@
+schema: life-course-family.v1
+id: administer-an-estate
+title: Administer an estate
+aliases: [probate, confirmation in Scotland, letters of administration, executor duties, deal with an estate]
+description: >-
+  Identify the applicable estate-authority route and navigate the evidence,
+  tax, debt, asset and distribution boundaries without deciding entitlement.
+status: population_complete
+assertion_status: normalized
+life_course_domain: death-and-bereavement
+enclosing_processes:
+  - id: identify-and-administer-an-estate
+    assertion_status: normalized
+    sources: [govuk-applying-for-probate, scotcourts-confirmation, nidirect-apply-probate]
+situations:
+  - An executor or administrator needs authority to deal with an estate.
+  - The estate may have no will, debts, tax, cross-border assets or a dispute.
+user_needs:
+  - Find the correct probate or confirmation route.
+  - Understand the evidence and tax handoffs before and after authority is obtained.
+  - Find professional and court routes for complex or disputed estates.
+interaction_boundary: >-
+  Discovery and process overview only; no decision is made about grant need,
+  applicant authority, tax, insolvency, distribution or beneficiary entitlement.
+applicability:
+  - jurisdiction: England and Wales
+    state: supported
+    route_variants:
+      - {id: england-wales-probate, provider: organisation:hm-courts-and-tribunals-service, primary_source: govuk-applying-for-probate}
+    sources: [govuk-applying-for-probate, govuk-value-estate, govuk-probate-estate, govuk-inheritance-tax]
+  - jurisdiction: Scotland
+    state: supported
+    route_variants:
+      - {id: scotland-confirmation, provider: organisation:scottish-courts-and-tribunals-service, primary_source: scotcourts-confirmation}
+    sources: [govuk-value-estate, govuk-inheritance-tax, govscot-after-a-death, scotcourts-confirmation]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: northern-ireland-probate, provider: organisation:northern-ireland-courts-and-tribunals-service, primary_source: nidirect-apply-probate}
+    sources: [nidirect-apply-probate, nidirect-no-will, nidirect-debt-after-death]
+actors:
+  - {id: organisation:hm-courts-and-tribunals-service, role: england_wales_probate_authority, authority_status: official, sources: [govuk-applying-for-probate]}
+  - {id: organisation:scottish-courts-and-tribunals-service, role: scotland_confirmation_authority, authority_status: official, sources: [scotcourts-confirmation]}
+  - {id: organisation:northern-ireland-courts-and-tribunals-service, role: northern_ireland_probate_authority, authority_status: official, sources: [nidirect-apply-probate]}
+  - {id: organisation:hm-revenue-and-customs, role: tax_authority, authority_status: official, sources: [govuk-value-estate, govuk-inheritance-tax, govuk-probate-estate]}
+  - {id: role:estate-practitioner, role: regulated_private_dependency, authority_status: normalized, sources: [govuk-applying-for-probate, govscot-after-a-death, nidirect-apply-probate]}
+journeys:
+  ordinary:
+    id: establish-authority-and-administer
+    entry_state: A synthetic will or no-will context and preliminary estate information are available.
+    outcome: Authority, administration actions and unresolved liabilities are retained.
+    steps:
+      - id: identify-estate-route-and-evidence
+        interaction: Select England and Wales probate, Scottish confirmation or Northern Ireland probate.
+        provider: organisation:estate-court-authority
+        requirements: {state: supported, summary: Will or no-will context, applicant role, estate inventory and current court requirements.}
+        evidence: {state: supported, summary: Synthetic death, will, asset, debt and applicant evidence.}
+        rule: {state: supported, summary: Jurisdiction-specific terminology and authority requirements remain separate.}
+        channel: {state: supported, summary: Current court or probate service.}
+        cost: {state: supported, summary: Current court route supplies any fee and exemption information.}
+        time: {state: not_published_by_source, reason: Processing time and deadlines are route-specific.}
+        output: {state: supported, summary: Application route, evidence checklist or advice boundary.}
+        outcome: {state: supported, summary: Ready to apply or referred for specialist help.}
+        redress: {state: supported, summary: Court correction, caveat, dispute or appeal route as applicable.}
+        assertion_status: normalized
+        sources: [govuk-applying-for-probate, scotcourts-confirmation, nidirect-apply-probate, nidirect-no-will]
+      - id: value-report-and-obtain-authority
+        interaction: Value the estate, make applicable tax handoffs and obtain the jurisdiction-specific authority document.
+        provider: organisation:estate-court-and-tax-authorities
+        requirements: {state: supported, summary: Current inventory, valuation, tax and court evidence.}
+        evidence: {state: supported, summary: Synthetic valuations and official submission outputs.}
+        rule: {state: supported, summary: Tax and grant requirements remain current and case-specific.}
+        channel: {state: supported, summary: HMRC and applicable court routes.}
+        cost: {state: supported, summary: Current tax and court rules control.}
+        time: {state: not_published_by_source, reason: Case-specific deadlines are not generalized.}
+        output: {state: supported, summary: Grant, confirmation, letters of administration or further-evidence request.}
+        outcome: {state: supported, summary: Authority obtained, pending or refused.}
+        redress: {state: supported, summary: Current tax or court review route.}
+        assertion_status: normalized
+        sources: [govuk-value-estate, govuk-inheritance-tax, govuk-applying-for-probate, scotcourts-confirmation, nidirect-apply-probate]
+      - id: settle-and-distribute-without-deciding
+        interaction: Trace assets, pay debts and tax, keep accounts and follow the evidenced distribution route.
+        provider: role:personal-representative
+        requirements: {state: supported, summary: Authority document, estate accounts and creditor or tax evidence.}
+        evidence: {state: supported, summary: Synthetic asset, debt, tax and payment records.}
+        rule: {state: supported, summary: Do not infer solvency, priority or entitlement.}
+        channel: {state: supported, summary: Body-specific account, creditor, tax and court routes.}
+        cost: {state: not_published_by_source, reason: Estate-specific.}
+        time: {state: not_published_by_source, reason: Estate-specific.}
+        output: {state: supported, summary: Estate accounts and recorded unresolved items.}
+        outcome: {state: supported, summary: Administration complete only when evidenced; otherwise gaps remain visible.}
+        redress: {state: supported, summary: Court, creditor, tax or regulated-professional route as applicable.}
+        assertion_status: normalized
+        sources: [govuk-probate-estate, nidirect-debt-after-death]
+  exceptions:
+    - id: no-will-debt-dispute-cross-border-or-missing-evidence
+      entry_state: Authority, solvency, evidence, jurisdiction or entitlement is unclear or disputed.
+      outcome: The issue is handed to the current court, tax, creditor or regulated-professional route.
+      steps:
+        - id: stop-and-seek-applicable-authority
+          interaction: Preserve the unresolved facts and use the applicable official or regulated-adviser route.
+          provider: role:estate-practitioner-or-court
+          requirements: {state: supported, summary: Actual estate documents and unresolved question.}
+          evidence: {state: supported, summary: Synthetic issue record; no personal estate data.}
+          rule: {state: supported, summary: The bundle does not resolve legal authority, insolvency or entitlement.}
+          channel: {state: supported, summary: Current court, HMRC, creditor or regulator-first professional route.}
+          cost: {state: not_published_by_source, reason: Court and professional costs are case-specific.}
+          time: {state: supported, summary: Make any official deadline visible without calculating advice.}
+          output: {state: supported, summary: Advice, court direction, further-evidence request or unresolved state.}
+          outcome: {state: supported, summary: Return to administration only when supported by the authoritative output.}
+          redress: {state: supported, summary: Applicable court, tax or professional complaint route.}
+          assertion_status: normalized
+          sources: [govuk-applying-for-probate, govscot-after-a-death, nidirect-no-will, nidirect-debt-after-death]
+dependencies:
+  - {id: role:estate-practitioner, state: supported, selection_basis: regulator_first_for_professional_help, sources: [govuk-applying-for-probate, govscot-after-a-death, nidirect-apply-probate]}
+  - {id: role:funeral-provider, state: supported, selection_basis: private_provider_not_public_registration_or_estate_authority, sources: [govuk-arrange-funeral, nidirect-arranging-funeral]}
+sources:
+  - {id: govuk-arrange-funeral, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govuk-applying-for-probate, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govuk-value-estate, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govuk-probate-estate, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govuk-inheritance-tax, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govscot-after-a-death, register: source/death-bereavement-estate.v1.yaml}
+  - {id: scotcourts-confirmation, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-arranging-funeral, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-apply-probate, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-no-will, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-debt-after-death, register: source/death-bereavement-estate.v1.yaml}
+limitations:
+  - Specialist legal and tax review is required before release-grade status.
+  - Current court, tax, creditor and professional routes override this overview.
+review: {population_gate: complete, specialist_review: required}
+narrative:
+  markdown: services/administer-an-estate.md
+  process_context: Identify and administer an estate

@@ -1,0 +1,116 @@
+{
+  "dataset/get-social-care-needs-assessment": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "get-social-care-needs-assessment"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:50d2586d499523f0f79e6ed1",
+      "kind": "belongs-to-life-course-domain",
+      "label": "belongs to life course domain",
+      "observed_at": "2026-08-08",
+      "predicate": "belongs-to-life-course-domain",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-social-care-needs-assessment",
+      "source_iri": "dataset/get-social-care-needs-assessment",
+      "target": "life-course-domain/disability-care-and-support",
+      "target_iri": "life-course-domain/disability-care-and-support"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "get-social-care-needs-assessment"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dc5a6f81764aa46af86bf44d",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-social-care-needs-assessment",
+      "source_iri": "dataset/get-social-care-needs-assessment",
+      "target": "enclosing-process/assess-and-deliver-disability-and-care-support",
+      "target_iri": "enclosing-process/assess-and-deliver-disability-and-care-support"
+    }
+  ],
+  "evidence/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-synthetic-authority-output": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/register-a-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/register-a-death.v1.yaml",
+          "source_ids": [
+            "copfs-death-investigation",
+            "govuk-correcting-death-registration",
+            "nidirect-coroners"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e1b4b0644e5cf0938d1c3767",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority",
+      "source_iri": "service-step/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority",
+      "target": "evidence/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-synthetic-authority-output",
+      "target_iri": "evidence/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-synthetic-authority-output"
+    }
+  ]
+}

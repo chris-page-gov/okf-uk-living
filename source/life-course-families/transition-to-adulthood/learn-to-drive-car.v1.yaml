@@ -1,0 +1,130 @@
+schema: life-course-family.v1
+id: learn-to-drive-car
+title: Learn to drive a car
+aliases: [driving lessons, provisional licence, theory test, practical driving test, get a driving licence]
+description: >-
+  Follow the jurisdiction-specific route from provisional entitlement through
+  supervised learning and tests to the full-licence handoff.
+status: population_complete
+assertion_status: normalized
+life_course_domain: transition-to-adulthood
+enclosing_processes:
+  - id: move-into-independent-mobility-health-and-care
+    assertion_status: normalized
+    sources: [govuk-learn-to-drive-car, nidirect-provisional-licence]
+situations:
+  - A person wants to learn to drive a car in Great Britain or Northern Ireland.
+  - A learner needs to understand the evidence passed between licensing and testing stages.
+user_needs:
+  - Obtain the correct provisional entitlement.
+  - Learn and practise lawfully with suitable supervision, vehicle and insurance.
+  - Take the applicable tests and complete the full-licence handoff.
+interaction_boundary: >-
+  Discovery and evidence sequencing only; no fitness, entitlement, insurance
+  cover or test-result decision is made.
+applicability:
+  - jurisdiction: Great Britain
+    state: supported
+    route_variants:
+      - {id: great-britain, provider: organisation:driver-and-vehicle-licensing-agency, primary_source: govuk-learn-to-drive-car}
+    sources: [govuk-learn-to-drive-car, govuk-first-provisional-licence, govuk-private-practice, govuk-book-theory-test, govuk-driving-test-result, govuk-full-driving-licence]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: northern-ireland, provider: organisation:driver-and-vehicle-agency-northern-ireland, primary_source: nidirect-provisional-licence}
+    sources: [nidirect-provisional-licence, nidirect-learner-rules, nidirect-theory-test, nidirect-practical-test, nidirect-claim-test-pass]
+actors:
+  - {id: organisation:driver-and-vehicle-licensing-agency, role: great_britain_licensing_authority, authority_status: official, sources: [govuk-first-provisional-licence, govuk-full-driving-licence]}
+  - {id: organisation:driver-and-vehicle-standards-agency, role: great_britain_testing_authority, authority_status: official, sources: [govuk-book-theory-test, govuk-driving-test-result]}
+  - {id: organisation:driver-and-vehicle-agency-northern-ireland, role: northern_ireland_licensing_and_testing_authority, authority_status: official, sources: [nidirect-provisional-licence, nidirect-theory-test, nidirect-practical-test]}
+  - {id: role:regulated-driving-instructor, role: optional_private_provider, authority_status: normalized, sources: [govuk-private-practice, nidirect-learner-rules]}
+  - {id: role:motor-insurer, role: regulated_private_dependency, authority_status: normalized, sources: [govuk-private-practice, nidirect-learner-rules]}
+journeys:
+  ordinary:
+    id: provisional-to-full-licence
+    entry_state: A synthetic learner has selected the correct licensing jurisdiction and car category.
+    outcome: The official full-licence handoff or next required action is retained.
+    steps:
+      - id: obtain-provisional-entitlement
+        interaction: Apply to the correct licensing authority for provisional entitlement.
+        provider: organisation:licensing-authority
+        requirements: {state: supported, summary: Current residence, identity, age and health conditions from the selected route.}
+        evidence: {state: supported, summary: Synthetic application evidence and licensing output.}
+        rule: {state: supported, summary: DVLA rules apply in Great Britain and DVA rules in Northern Ireland.}
+        channel: {state: supported, summary: Official licensing service.}
+        cost: {state: supported, summary: Current fee is supplied by the live service and is not frozen here.}
+        time: {state: not_published_by_source, reason: Processing time remains on the live route.}
+        output: {state: supported, summary: Provisional entitlement, refusal or correction route.}
+        outcome: {state: supported, summary: Ready to learn or directed to the current correction route.}
+        redress: {state: supported, summary: Use the licensing authority's current correction or complaint route.}
+        assertion_status: normalized
+        sources: [govuk-first-provisional-licence, nidirect-provisional-licence]
+      - id: learn-and-pass-tests
+        interaction: Practise lawfully, take the theory test and take the practical test in order.
+        provider: organisation:testing-authority
+        requirements: {state: supported, summary: Provisional entitlement, supervision, vehicle, insurance and prior test evidence.}
+        evidence: {state: supported, summary: Theory and practical booking and result outputs.}
+        rule: {state: supported, summary: The selected jurisdiction and vehicle category control.}
+        channel: {state: supported, summary: Official test booking and result routes.}
+        cost: {state: supported, summary: Live booking services provide current fees.}
+        time: {state: supported, summary: Result validity and booking conditions remain on current sources.}
+        output: {state: supported, summary: Test pass, fail, cancellation or reschedule output.}
+        outcome: {state: supported, summary: Continue, repeat or use the conduct-complaint boundary.}
+        redress: {state: supported, summary: Provider complaint or stated court boundary; not a merits reassessment.}
+        assertion_status: normalized
+        sources: [govuk-private-practice, govuk-book-theory-test, govuk-driving-test-result, nidirect-learner-rules, nidirect-theory-test, nidirect-practical-test]
+      - id: complete-full-licence-handoff
+        interaction: Pass the practical-test output to the correct licensing authority.
+        provider: organisation:licensing-authority
+        requirements: {state: supported, summary: Applicable practical-test pass and identity or licence evidence.}
+        evidence: {state: supported, summary: Official pass and handoff record.}
+        rule: {state: supported, summary: Automatic or separate claim conditions depend on the route.}
+        channel: {state: supported, summary: DVLA or DVA current handoff route.}
+        cost: {state: not_published_by_source, reason: Consult the selected live route.}
+        time: {state: supported, summary: Any claim deadline remains route-specific.}
+        output: {state: supported, summary: Full licence or further official action.}
+        outcome: {state: supported, summary: Licence issued, pending or correction required.}
+        redress: {state: supported, summary: Licensing authority correction or complaint route.}
+        assertion_status: normalized
+        sources: [govuk-driving-test-result, govuk-full-driving-licence, nidirect-claim-test-pass]
+  exceptions:
+    - id: wrong-jurisdiction-missing-evidence-or-test-failure
+      entry_state: The route is wrong, required evidence is missing or a test does not produce a pass.
+      outcome: The official correction, fresh application, reschedule or complaint boundary is retained.
+      steps:
+        - id: stop-correct-and-re-enter
+          interaction: Stop the sequence, retain the failure state and use the selected authority's current next route.
+          provider: organisation:licensing-or-testing-authority
+          requirements: {state: supported, summary: The actual decision, result or missing-evidence notice.}
+          evidence: {state: supported, summary: Synthetic official output; no personal licence or policy data.}
+          rule: {state: supported, summary: Do not infer entitlement or a changed result.}
+          channel: {state: supported, summary: Current licensing, test reschedule or conduct-complaint route.}
+          cost: {state: not_published_by_source, reason: The selected live service controls any further fee.}
+          time: {state: not_published_by_source, reason: Current decision or booking terms control.}
+          output: {state: supported, summary: Corrected application, new booking or retained complaint.}
+          outcome: {state: supported, summary: Re-enter the ordinary sequence only with the required output.}
+          redress: {state: supported, summary: Authority complaint or stated legal boundary.}
+          assertion_status: normalized
+          sources: [govuk-learn-to-drive-car, govuk-driving-test-result, nidirect-practical-test]
+dependencies:
+  - {id: role:regulated-driving-instructor, state: supported, selection_basis: official_register_or_current_public_guidance, sources: [govuk-private-practice]}
+  - {id: role:motor-insurer, state: supported, selection_basis: regulator_first_no_provider_recommendation, sources: [govuk-private-practice, nidirect-learner-rules]}
+sources:
+  - {id: govuk-learn-to-drive-car, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-first-provisional-licence, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-private-practice, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-book-theory-test, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-driving-test-result, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-full-driving-licence, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-provisional-licence, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-learner-rules, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-theory-test, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-practical-test, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-claim-test-pass, register: source/learning-to-drive-speeding.v1.yaml}
+limitations:
+  - Vehicle categories, medical fitness and individual entitlement remain on current official services.
+  - Private lessons or insurance do not establish public entitlement.
+review: {population_gate: complete, specialist_review: required}
+narrative:
+  markdown: services/learn-to-drive-car.md
+  process_context: Move into independent mobility, health and care

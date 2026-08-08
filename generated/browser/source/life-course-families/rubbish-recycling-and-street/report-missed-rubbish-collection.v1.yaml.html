@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/life-course-families/rubbish-recycling-and-street/report-missed-rubbish-collection.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/life-course-families/rubbish-recycling-and-street/report-missed-rubbish-collection.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/life-course-families/rubbish-recycling-and-street/report-missed-rubbish-collection.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>schema: life-course-family.v1
+id: report-missed-rubbish-collection
+title: Report a missed rubbish collection
+aliases: [missed bin, bin not collected, rubbish collection missed, recycling not collected]
+description: &gt;-
+  Find the responsible council, check its local collection conditions, report
+  an eligible missed collection and follow the applicable complaint route.
+status: population_complete
+assertion_status: normalized
+life_course_domain: rubbish-recycling-and-street
+enclosing_processes:
+  - id: manage-household-waste-collections
+    assertion_status: normalized
+    sources: [govuk-missed-bin-collection]
+situations:
+  - A scheduled household waste or recycling collection did not happen.
+  - A resident needs to distinguish a reportable miss from a disruption or presentation problem.
+user_needs:
+  - Find the council responsible for the collection address.
+  - Report the missed collection through the council&#x27;s current route.
+  - Escalate a continuing service failure through the correct complaints process.
+interaction_boundary: &gt;-
+  Navigation and evidence handoff only. The record does not decide whether a
+  local report will be accepted or promise a return collection.
+applicability:
+  - jurisdiction: England
+    state: supported
+    route_variants:
+      - {id: coventry, geographic_identifier: E08000026, provider: organisation:coventry-city-council, primary_source: coventry-missed-bin}
+    sources: [govuk-missed-bin-collection, coventry-missed-bin, coventry-complaints, lgsco-waste-and-refuse]
+  - jurisdiction: Scotland
+    state: supported
+    route_variants:
+      - {id: edinburgh, geographic_identifier: S12000036, provider: organisation:city-of-edinburgh-council, primary_source: edinburgh-missed-bin}
+    sources: [edinburgh-missed-bin, edinburgh-complaints, spso-making-a-complaint]
+  - jurisdiction: Wales
+    state: supported
+    route_variants:
+      - {id: cardiff, geographic_identifier: W06000015, provider: organisation:cardiff-council, primary_source: cardiff-missed-collection}
+    sources: [govuk-missed-bin-collection, cardiff-missed-collection, cardiff-complaints, psow-how-to-complain]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: belfast, geographic_identifier: N09000003, provider: organisation:belfast-city-council, primary_source: belfast-missed-bin}
+    sources: [belfast-missed-bin, belfast-complaints, nipso-complaints]
+actors:
+  - {id: organisation:responsible-local-authority, role: accountable_authority, authority_status: normalized, sources: [govuk-missed-bin-collection]}
+  - {id: organisation:local-waste-service-provider, role: delivery_provider, authority_status: normalized, sources: [coventry-missed-bin, edinburgh-missed-bin, cardiff-missed-collection, belfast-missed-bin]}
+  - {id: organisation:public-services-ombudsman, role: external_redress, authority_status: normalized, sources: [lgsco-waste-and-refuse, spso-making-a-complaint, psow-how-to-complain, nipso-complaints]}
+journeys:
+  ordinary:
+    id: report-eligible-missed-collection
+    entry_state: A synthetic expected collection has not occurred.
+    outcome: The report outcome or official explanation is retained.
+    steps:
+      - id: identify-authority-and-schedule
+        interaction: Identify the responsible council and expected collection.
+        provider: organisation:responsible-local-authority
+        requirements: {state: supported, summary: Collection address and expected waste stream.}
+        evidence: {state: supported, summary: Current local collection schedule and disruption notice.}
+        rule: {state: supported, summary: Use only the selected council&#x27;s timing and presentation rules.}
+        channel: {state: supported, summary: Official council web or stated assisted channel.}
+        cost: {state: not_published_by_source, reason: No separate reporting charge is published in the selected routes.}
+        time: {state: supported, summary: Check the selected route&#x27;s reporting window.}
+        output: {state: supported, summary: Correct authority and reportability boundary.}
+        outcome: {state: supported, summary: Continue to the official report or retain the exclusion reason.}
+        redress: {state: not_applicable, reason: Redress follows a submitted or unresolved service issue.}
+        assertion_status: normalized
+        sources: [govuk-missed-bin-collection, coventry-missed-bin, edinburgh-missed-bin, cardiff-missed-collection, belfast-missed-bin]
+      - id: submit-and-retain-outcome
+        interaction: Submit the minimum report and retain its acknowledgement or explanation.
+        provider: organisation:local-waste-service-provider
+        requirements: {state: supported, summary: Locally required address, date, container and waste details.}
+        evidence: {state: supported, summary: Synthetic submission time and council response.}
+        rule: {state: supported, summary: The selected authority&#x27;s current acceptance conditions control.}
+        channel: {state: supported, summary: Official local route.}
+        cost: {state: not_published_by_source, reason: No reporting fee is stated.}
+        time: {state: supported, summary: Local reporting and return-collection times are not universal.}
+        output: {state: supported, summary: Reference, acknowledgement, rejection or operational notice.}
+        outcome: {state: supported, summary: Resolved, pending, excluded or unresolved report.}
+        redress: {state: supported, summary: Council complaints route if the service problem remains unresolved.}
+        assertion_status: normalized
+        sources: [coventry-missed-bin, edinburgh-missed-bin, cardiff-missed-collection, belfast-missed-bin]
+  exceptions:
+    - id: wrong-authority-excluded-or-unresolved
+      entry_state: The first route is wrong, the report is excluded, the channel fails or the service remains unresolved.
+      outcome: The reason and the next official local or external-redress route are retained.
+      steps:
+        - id: correct-or-escalate
+          interaction: Correct the authority or complete local complaints before jurisdiction-appropriate external redress.
+          provider: organisation:public-services-ombudsman
+          requirements: {state: supported, summary: Final local response or evidence of the applicable exhaustion boundary.}
+          evidence: {state: supported, summary: Report, complaint and response records.}
+          rule: {state: supported, summary: Each ombudsman&#x27;s current scope and time rules control.}
+          channel: {state: supported, summary: Council complaint route followed by the applicable ombudsman route.}
+          cost: {state: not_published_by_source, reason: Consult the current redress route.}
+          time: {state: supported, summary: Current council and ombudsman limits apply.}
+          output: {state: supported, summary: Corrected route, final response or redress acknowledgement.}
+          outcome: {state: supported, summary: Resolved, redirected or retained as unresolved.}
+          redress: {state: supported, summary: LGSCO, SPSO, PSOW or NIPSO according to jurisdiction and scope.}
+          assertion_status: normalized
+          sources: [coventry-complaints, edinburgh-complaints, cardiff-complaints, belfast-complaints, lgsco-waste-and-refuse, spso-making-a-complaint, psow-how-to-complain, nipso-complaints]
+dependencies: []
+sources:
+  - {id: govuk-missed-bin-collection, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: coventry-missed-bin, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: coventry-complaints, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: edinburgh-missed-bin, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: edinburgh-complaints, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: cardiff-missed-collection, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: cardiff-complaints, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: belfast-missed-bin, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: belfast-complaints, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: lgsco-waste-and-refuse, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: spso-making-a-complaint, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: psow-how-to-complain, register: source/missed-rubbish-collection.v1.yaml}
+  - {id: nipso-complaints, register: source/missed-rubbish-collection.v1.yaml}
+limitations:
+  - Local rules are evidenced by four structural examples, not copied across every council.
+  - Live operational notices and acceptance rules must be checked before use.
+review: {population_gate: complete, specialist_review: not_required}
+narrative:
+  markdown: services/report-missed-rubbish-collection.md
+  process_context: Manage household waste collections
+</pre>
+</body>
+</html>

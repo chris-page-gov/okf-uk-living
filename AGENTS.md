@@ -59,6 +59,7 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_life_course_dossiers.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check

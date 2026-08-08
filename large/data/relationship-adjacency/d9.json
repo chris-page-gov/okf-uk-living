@@ -1,0 +1,115 @@
+{
+  "dataset/register-business-taxes": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "register-business-taxes"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:047647de9fb44b0c3b6264cb",
+      "kind": "belongs-to-life-course-domain",
+      "label": "belongs to life course domain",
+      "observed_at": "2026-08-08",
+      "predicate": "belongs-to-life-course-domain",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-business-taxes",
+      "source_iri": "dataset/register-business-taxes",
+      "target": "life-course-domain/starting-and-running-organisation",
+      "target_iri": "life-course-domain/starting-and-running-organisation"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "register-business-taxes"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:63776aaa0fe9ea17d45b5406",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-business-taxes",
+      "source_iri": "dataset/register-business-taxes",
+      "target": "enclosing-process/form-and-register-an-organisation",
+      "target_iri": "enclosing-process/form-and-register-an-organisation"
+    }
+  ],
+  "dependency/role-funeral-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/administer-an-estate.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/administer-an-estate.v1.yaml",
+          "source_ids": [
+            "govuk-arrange-funeral",
+            "nidirect-arranging-funeral"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7701e9494b4704ae900cfcb7",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/administer-an-estate",
+      "source_iri": "dataset/administer-an-estate",
+      "target": "dependency/role-funeral-provider",
+      "target_iri": "dependency/role-funeral-provider"
+    }
+  ]
+}

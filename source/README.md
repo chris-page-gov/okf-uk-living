@@ -39,6 +39,12 @@ normalized discovery structure, not an official classification. New dossiers
 will be authored under `source/life-course-families/` in the eight packs fixed
 by the [population contract](../profiles/life-course-population-contract.v1.yaml).
 
+The six families from the reviewed vertical slices are now authored in that
+tree as complete discovery dossiers. They resolve, without duplication, the
+existing 53 reference entries into typed link-only resources and provide the
+proving input for narrative, search, relationship and semantic projections.
+No source response body or snapshot is stored.
+
 The approved [rights decisions](rights-decisions.v1.yaml) map every registered
 source host to a licence family, dated official evidence and the operative
 link-and-summary decision. They also record MIT for repository-authored code,

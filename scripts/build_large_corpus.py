@@ -13,6 +13,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from build_okf_bundle import ROOT
 from check_service_denominator import (
     flatten_service_families,
@@ -20,12 +22,13 @@ from check_service_denominator import (
     service_family_scopes,
     validate_service_denominator,
 )
+from life_course_projection import project, semantic_graph
 
 
 DESCRIPTOR_PATH = ROOT / "okf-explorer.json"
 DATA_ROOT = ROOT / "large" / "data"
-GENERATED_AT = "2026-08-07T00:00:00+01:00"
-SNAPSHOT = "service-family-denominator-2026-08-07"
+GENERATED_AT = "2026-08-08T00:00:00+01:00"
+SNAPSHOT = "life-course-three-slice-2026-08-08"
 FACETS = (
     ("life_course_domain", "Life-course domain", "The approved 24-domain planning spine."),
     ("acquisition_wave", "Acquisition wave", "The approved staged reference-registration wave."),
@@ -38,8 +41,11 @@ FACETS = (
 SEARCH_FIELDS = (
     ("title", 1, 16),
     ("name", 2, 12),
-    ("topics", 4, 6),
-    ("tags", 8, 3),
+    ("search_aliases", 4, 14),
+    ("notes", 8, 8),
+    ("search_text", 16, 5),
+    ("topics", 64, 6),
+    ("tags", 32, 3),
 )
 SEARCH_STOP_WORDS = {
     "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "in", "into",
@@ -128,9 +134,15 @@ def facet_index(rows: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def search_tokens(value: Any) -> set[str]:
-    values = value if isinstance(value, list) else [value]
+    if isinstance(value, dict):
+        values = list(value.values())
+    else:
+        values = value if isinstance(value, list) else [value]
     tokens: set[str] = set()
     for item in values:
+        if isinstance(item, (list, dict)):
+            tokens.update(search_tokens(item))
+            continue
         for token in re.findall(r"[a-z0-9]+", str(item).lower()):
             if len(token) >= 2 and token not in SEARCH_STOP_WORDS:
                 tokens.add(token)
@@ -157,7 +169,7 @@ def search_outputs(rows: list[dict[str, Any]]) -> dict[Path, str]:
                 "title": row["title"],
                 "publisher": row["publisher"],
                 "publisher_title": "A Life in the UK",
-                "resource_count": 0,
+                "resource_count": row.get("resource_count", 0),
                 "formats": row["formats"],
                 "tags": row["tags"],
                 "topics": row["topics"],
@@ -241,22 +253,85 @@ def json_text(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
 
 
+def relationship_bucket(route: str) -> str:
+    value = 0x811C9DC5
+    for byte in route.encode("utf-8"):
+        value ^= byte
+        value = (value * 0x01000193) & 0xFFFFFFFF
+    return f"{(value >> 24) & 0xFF:02x}"
+
+
+def locator_outputs(rows: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[Path, str]]:
+    buckets: dict[str, dict[str, list[int]]] = defaultdict(dict)
+    for ordinal, row in enumerate(rows):
+        buckets[relationship_bucket(row["route"])][row["route"]] = [0, ordinal]
+    paths = {
+        bucket: f"large/data/record-locator/{bucket}.json" for bucket in sorted(buckets)
+    }
+    manifest = {
+        "schema": "okf-record-locator-sharded.v1",
+        "algorithm": "fnv1a32-prefix-2",
+        "snapshot": SNAPSHOT,
+        "records": len(rows),
+        "chunk_size": 1000,
+        "record_chunks": ["large/data/records-0.json"],
+        "buckets": paths,
+        "bucket_count": len(paths),
+    }
+    return manifest, {Path(paths[bucket]): json_text(values) for bucket, values in sorted(buckets.items())}
+
+
+def adjacency_outputs(relationships: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[Path, str]]:
+    by_route: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for edge in relationships:
+        by_route[edge["source"]].append(edge)
+        if edge["target"] != edge["source"]:
+            by_route[edge["target"]].append(edge)
+    buckets: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(dict)
+    for endpoint, edges in sorted(by_route.items()):
+        buckets[relationship_bucket(endpoint)][endpoint] = edges
+    paths = {
+        bucket: f"large/data/relationship-adjacency/{bucket}.json" for bucket in sorted(buckets)
+    }
+    manifest = {
+        "schema": "okf-relationship-adjacency.v1",
+        "algorithm": "fnv1a32-prefix-2",
+        "snapshot": SNAPSHOT,
+        "routes": len(by_route),
+        "relationships": len(relationships),
+        "buckets": paths,
+    }
+    return manifest, {Path(paths[bucket]): json_text(values) for bucket, values in sorted(buckets.items())}
+
+
 def build_outputs() -> dict[Path, str]:
     denominator, errors = load_service_denominator()
     if denominator:
         errors.extend(validate_service_denominator(denominator))
     if errors:
         raise ValueError("; ".join(sorted(set(errors))))
-    rows = records(denominator)
-    counts = {"datasets": len(rows), "records": len(rows), "resources": 0, "publishers": 1, "relationships": 0}
+    rows, resources, relationships, validation = project(denominator)
+    locator, locator_shards = locator_outputs(rows)
+    adjacency, adjacency_shards = adjacency_outputs(relationships)
+    validation.pop("relationship_adjacency", None)
+    service_family_count = sum(row.get("record_type") == "Service Family" for row in rows)
+    counts = {
+        "datasets": len(rows),
+        "records": len(rows),
+        "concepts": len(rows),
+        "service_families": service_family_count,
+        "resources": len(resources),
+        "publishers": 1,
+        "relationships": len(relationships),
+    }
     descriptor = {
         "schema": "okf-explorer-large-corpus.v1",
         "kind": "okf-large-corpus",
         "okf_version": "0.2",
-        "core_conformance": "OKF Explorer large-corpus planning projection",
-        "title": "A Life in the UK — service-family planning denominator",
-        "description": "Owner-approved 293-family planning denominator with governed colour facets and no acquired source content.",
-        "version": "service-family-denominator.v1",
+        "core_conformance": "OKF Explorer large-corpus life-course projection",
+        "title": "A Life in the UK — life-course discovery corpus",
+        "description": "Approved 293-family denominator with six dossier-backed families, typed linked sources and governed semantic relationships.",
+        "version": "life-course-three-slice.v1",
         "status": "approved-for-local-evaluation",
         "assertion_scope": "real-world",
         "publisher": "owner:chris-page-gov",
@@ -269,12 +344,17 @@ def build_outputs() -> dict[Path, str]:
             "analysis_overview": "large/data/analysis/overview.json",
             "presentation": "large/data/presentation.json",
             "search_manifest": "large/data/search/manifest.json",
+            "record_locator": "large/data/record-locator.json",
+            "relationship_adjacency": "large/data/relationship-adjacency.json",
+            "validation_report": "large/data/validation-report.json",
+            "json_ld": "generated/semantic/life-course-corpus.jsonld",
+            "yaml_ld": "generated/semantic/life-course-corpus.yamlld",
             "markdown_index": "generated/browser/index.html",
             "notes": "generated/browser/evidence/licensing-and-attribution.html",
         },
         "counts": counts,
         "source": {
-            "mode": "repository-authored-planning-projection",
+            "mode": "repository-authored-dossiers-plus-linked-references",
             "denominator": "generated/browser/source/service-family-denominator.v1.yaml.html",
             "policy": "generated/browser/profiles/corpus-acquisition-policy.v1.yaml.html",
             "source_snapshots": False,
@@ -287,15 +367,15 @@ def build_outputs() -> dict[Path, str]:
             "search": "static worker shards",
         },
         "vocabulary": {
-            "record_singular": "service family",
-            "record_plural": "service families",
+            "record_singular": "concept",
+            "record_plural": "concepts",
             "publisher_singular": "project",
             "publisher_plural": "projects",
-            "search_placeholder": "Search 293 planned service families",
+            "search_placeholder": "Search 293 families and supporting concepts",
         },
     }
     manifest = {
-        "title": "A Life in the UK service-family planning manifest",
+        "title": "A Life in the UK life-course concept manifest",
         "generated_at": GENERATED_AT,
         "snapshot": SNAPSHOT,
         "counts": counts,
@@ -305,6 +385,9 @@ def build_outputs() -> dict[Path, str]:
             "presentation": "large/data/presentation.json",
             "facets": "large/data/facets.json",
             "search": "large/data/search/manifest.json",
+            "record_locator": "large/data/record-locator.json",
+            "relationship_adjacency": "large/data/relationship-adjacency.json",
+            "validation": "large/data/validation-report.json",
         },
         "chunks": {
             "datasets": ["large/data/records-0.json"],
@@ -314,12 +397,12 @@ def build_outputs() -> dict[Path, str]:
         },
     }
     overview = {
-        "title": "Service-family planning denominator",
-        "description": "293 normalized families across 24 life-course domains and three staged acquisition waves.",
+        "title": "Life-course discovery corpus",
+        "description": "293 normalized families across 24 domains, with six population-complete three-slice dossiers and 53 typed official links.",
         "counts": counts,
         "status": "approved-for-local-evaluation",
         "notices": [
-            "Planning records are not official service assertions.",
+            "Normalized records are discovery aids, not official service assertions or personal decisions.",
             "Source content is linked and summarized, not redistributed.",
             "GitHub Pages publication has not been authorized.",
         ],
@@ -329,7 +412,7 @@ def build_outputs() -> dict[Path, str]:
         "generated_at": GENERATED_AT,
         "summary": {
             "title": "Coverage planning",
-            "description": "Colour facets expose acquisition sequencing and evidence gaps without claiming leaf-service completeness.",
+            "description": "Colour facets expose population progress while sourced dossiers provide narratives, links and inspectable relationships.",
         },
         "counts": counts,
     }
@@ -360,7 +443,7 @@ def build_outputs() -> dict[Path, str]:
         "id": "publisher:okf-uk-living",
         "name": "okf-uk-living",
         "title": "A Life in the UK",
-        "state": "repository-authored-planning",
+        "state": "repository-authored-life-course-corpus",
         "source_url": "generated/browser/index.html",
     }]
     outputs = {
@@ -371,10 +454,21 @@ def build_outputs() -> dict[Path, str]:
         Path("large/data/presentation.json"): json_text(presentation),
         Path("large/data/facets.json"): json_text(facet_index(rows)),
         Path("large/data/records-0.json"): json_text(rows),
-        Path("large/data/resources-0.json"): json_text([]),
+        Path("large/data/resources-0.json"): json_text(resources),
         Path("large/data/publishers-0.json"): json_text(publishers),
-        Path("large/data/relationships-0.json"): json_text([]),
+        Path("large/data/relationships-0.json"): json_text(relationships),
+        Path("large/data/record-locator.json"): json_text(locator),
+        Path("large/data/relationship-adjacency.json"): json_text(adjacency),
+        Path("large/data/validation-report.json"): json_text(validation),
     }
+    outputs.update(locator_shards)
+    outputs.update(adjacency_shards)
+    semantic = semantic_graph(rows, relationships)
+    outputs[Path("generated/semantic/life-course-corpus.jsonld")] = json_text(semantic)
+    outputs[Path("generated/semantic/life-course-corpus.yamlld")] = yaml.safe_dump(
+        semantic, allow_unicode=True, sort_keys=True, width=120
+    )
+    outputs[Path("generated/semantic/validation-report.json")] = json_text(validation)
     outputs.update(search_outputs(rows))
     return outputs
 
@@ -424,7 +518,7 @@ def main(argv: list[str] | None = None) -> int:
         print("Large-corpus projection is synchronized: 293 service families and 7 governed facets")
         return 0
     write_outputs(outputs)
-    print("wrote local large-corpus planning projection")
+    print("wrote local life-course discovery projection")
     return 0
 
 

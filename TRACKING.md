@@ -24,8 +24,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | ACQPOL-001 | Approve corpus acquisition and specialist-review policy | Complete | Local authority coverage, GSS/ODS identifiers, manual health links, regulator-first dependencies, sector redress and role-based review nominations approved on 2026-08-07 |
 | LARGE-001 | Build and review the local colour-facet planning projection | Complete: local pass | [`okf-explorer-large-corpus.v1`](evaluation/reviews/large-corpus-2026-08-07.md) exposes 293 searchable planning records and seven reconciled facets with zero snapshots and publication disabled |
 | POP-001 | Contract the full 293-family population | Complete | Owner-authorized `life-course-population-contract.v1`; 48 processes map all 293 families exactly once; dossier, source-link, predicate and shape contracts validate locally |
-| POP-002 | Extend the universal Explorer contract | In progress | Add selected-record narratives and typed link/JSON/XML/text source access without a proxy or source snapshots |
-| POP-003 | Migrate the six reviewed families | Planned | Project existing slice narratives, resources and governed relationships through the new contract |
+| POP-002 | Extend the universal Explorer contract | Complete | Merged as OKF Explorer PR #72: authored record narratives and typed link/JSON/XML/text source access, with full three-browser assurance and no Pages update |
+| POP-003 | Migrate the six reviewed families | Complete: local pass | [Local deterministic and browser review](evaluation/reviews/three-slice-population-migration-2026-08-08.md): six population-complete dossiers, 53 link-only resources, 602 concepts, 1,025 governed relationships and zero snapshots |
 | POP-004 | Implement shared authority and source infrastructure | Planned | Active authority/functional-body registry, GSS/ODS/source-native identity, regulator/redress maps and metadata-only link receipts |
 | PACK-001 | Populate family beginnings | Planned | 36 families across before birth, birth/newborn and early years |
 | PACK-002 | Populate learning and transition | Planned | 36 families across school, transition and post-school study/research |
@@ -69,4 +69,5 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   decisions are complete; authority/regulator mapping and named specialist
   reviewer acceptance remain implementation or external-review work.
 - Population implementation: owner-authorized on 2026-08-08 in eight packs;
-  foundation contract complete, Explorer contract next.
+  foundation, universal Explorer contract and six-family migration complete;
+  shared authority and source infrastructure is next.

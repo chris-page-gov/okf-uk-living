@@ -38,6 +38,11 @@ def validate_large_projection() -> list[str]:
     search = load_json("large/data/search/manifest.json")
     search_results = load_json("large/data/search/results-0.json")
     search_postings = load_json("large/data/search/postings.json").get("tokens", {})
+    resources = load_json("large/data/resources-0.json")
+    relationships = load_json("large/data/relationships-0.json")
+    locator = load_json("large/data/record-locator.json")
+    adjacency = load_json("large/data/relationship-adjacency.json")
+    validation = load_json("large/data/validation-report.json")
     denominator, denominator_errors = load_service_denominator()
     if denominator:
         denominator_errors.extend(validate_service_denominator(denominator))
@@ -55,8 +60,11 @@ def validate_large_projection() -> list[str]:
         errors.append("descriptor must preserve the publication gate")
     if manifest.get("indexes", {}).get("overview") != "large/data/overview.json":
         errors.append("manifest must expose an overview index")
-    if len(rows) != 293 or descriptor.get("counts", {}).get("records") != len(rows):
-        errors.append("large projection must contain exactly the approved 293 families")
+    service_families = [row for row in rows if row.get("record_type") == "Service Family"]
+    if len(service_families) != 293 or descriptor.get("counts", {}).get("service_families") != 293:
+        errors.append("large projection must distinguish exactly the approved 293 service families")
+    if descriptor.get("counts", {}).get("concepts") != len(rows) or len(rows) <= len(service_families):
+        errors.append("descriptor must distinguish the larger supporting-concept count")
     if search.get("counts", {}).get("documents") != len(rows) or len(search_results) != len(rows):
         errors.append("static search must cover all approved planning families")
     missed_ordinal = next(
@@ -72,11 +80,51 @@ def validate_large_projection() -> list[str]:
         if not filter_path or load_json(filter_path).get("key") != key:
             errors.append(f"static search must expose filter postings for facet {key}")
     if len({row.get("name") for row in rows}) != len(rows):
-        errors.append("large projection family names must be unique")
-    if any(row.get("assertion_status") != "normalized" for row in rows):
-        errors.append("every large projection record must remain normalized")
-    if any(row.get("resource_count") != 0 for row in rows):
-        errors.append("planning records must not claim acquired resources")
+        errors.append("large projection concept names must be unique")
+    if any(row.get("assertion_status") not in {"official", "normalized"} for row in rows):
+        errors.append("every projected concept must retain a governed assertion status")
+    dossier_families = [row for row in service_families if row.get("implementation_status") == "population-complete-three-slice"]
+    if len(dossier_families) != 6 or any(not row.get("narrative", {}).get("body") for row in dossier_families):
+        errors.append("six migrated families must expose authored large-record narratives")
+    if sum(row.get("resource_count", 0) for row in service_families) != 53 or len(resources) != 53:
+        errors.append("six migrated families must expose exactly 53 linked source resources")
+    if any(resource.get("source_access", {}).get("display_mode") != "link" for resource in resources):
+        errors.append("all migrated sources must use link-only typed access")
+    if any(resource.get("provenance", {}).get("response_body_retained") is not False for resource in resources):
+        errors.append("source resource provenance must record that no response body was retained")
+    required_edge_fields = {"predicate", "assertion_status", "authority", "derivation", "observed_at", "evidence", "rights"}
+    if not relationships or any(required_edge_fields - set(edge) for edge in relationships):
+        errors.append("every generated relationship must carry governed provenance and evidence")
+    process_edges = {
+        edge["source"] for edge in relationships if edge.get("predicate") == "part-of-enclosing-process" and edge.get("source", "").startswith("dataset/")
+    }
+    if len(process_edges) != 293:
+        errors.append("all 293 families must be reachable from an approved enclosing process")
+    locator_routes = {
+        route
+        for path in locator.get("buckets", {}).values()
+        for route in load_json(path)
+    }
+    if (
+        locator.get("schema") != "okf-record-locator-sharded.v1"
+        or locator.get("algorithm") != "fnv1a32-prefix-2"
+        or locator.get("records") != len(rows)
+        or any(row["route"] not in locator_routes for row in rows)
+    ):
+        errors.append("sharded record locator must cover every projected concept")
+    adjacency_routes = {
+        route
+        for path in adjacency.get("buckets", {}).values()
+        for route in load_json(path)
+    }
+    if (
+        adjacency.get("schema") != "okf-relationship-adjacency.v1"
+        or adjacency.get("algorithm") != "fnv1a32-prefix-2"
+        or any(edge["source"] not in adjacency_routes or edge["target"] not in adjacency_routes for edge in relationships)
+    ):
+        errors.append("sharded relationship adjacency must cover every relationship endpoint")
+    if validation.get("status") != "conformant" or validation.get("counts", {}).get("dossier_backed_families") != 6:
+        errors.append("SHACL-style validation report must reconcile the six-family migration")
     expected_keys = [key for key, _, _ in FACETS]
     actual_keys = [facet.get("key") for facet in presentation.get("facets", [])]
     if actual_keys != expected_keys:
@@ -98,7 +146,7 @@ def main() -> int:
         for error in errors:
             print(error)
         return 1
-    print("Large-corpus checks passed: 293 searchable planning records, 7 reconciled facets, 0 source snapshots")
+    print("Large-corpus checks passed: 293 families, 6 dossier-backed narratives, 53 source links, governed relationships, 0 snapshots")
     return 0
 
 
