@@ -6,3 +6,4 @@ remain open until a report records their retest and disposition.
 
 - [2026-08-07 integrated three-slice Explorer review](integrated-three-slice-2026-08-07.md)
 - [2026-08-07 large-corpus colour-facet review](large-corpus-2026-08-07.md)
+- [2026-08-08 Pack 1 family-beginnings review](pack-1-family-beginnings-2026-08-08.md)

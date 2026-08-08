@@ -620,5 +620,46 @@
       "target": "outcome/report-missed-rubbish-collection-report-eligible-missed-collection-identify-authority-and-schedule-continue-to-the-official-report-or-retain-the-exclusion-reason",
       "target_iri": "outcome/report-missed-rubbish-collection-report-eligible-missed-collection-identify-authority-and-schedule-continue-to-the-official-report-or-retain-the-exclusion-reason"
     }
+  ],
+  "redress/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/arrange-adoption.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/arrange-adoption.v1.yaml",
+          "source_ids": [
+            "arrange-adoption-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:400813e0d32457c4fcff056f",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
   ]
 }

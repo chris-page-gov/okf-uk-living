@@ -4,11 +4,13 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 from typing import Any
 
 from build_large_corpus import FACETS, ROOT, build_outputs
 from check_service_denominator import load_service_denominator, validate_service_denominator
+from life_course_dossiers import load_dossiers, resolve_sources
 
 
 def load_json(path: str) -> Any:
@@ -47,6 +49,9 @@ def validate_large_projection() -> list[str]:
     if denominator:
         denominator_errors.extend(validate_service_denominator(denominator))
     errors.extend(denominator_errors)
+    dossiers, dossier_errors = load_dossiers()
+    errors.extend(dossier_errors)
+    expected_resource_count = sum(len(resolve_sources(dossier)[0]) for dossier in dossiers.values())
 
     if descriptor.get("schema") != "okf-explorer-large-corpus.v1" or descriptor.get("kind") != "okf-large-corpus":
         errors.append("okf-explorer.json must declare the large-corpus v1 contract")
@@ -67,8 +72,9 @@ def validate_large_projection() -> list[str]:
         errors.append("descriptor must distinguish the larger supporting-concept count")
     if search.get("counts", {}).get("documents") != len(rows) or len(search_results) != len(rows):
         errors.append("static search must cover all approved planning families")
-    if len(manifest.get("chunks", {}).get("datasets", [])) != 2 or len(search.get("entrypoints", {}).get("result_docs", [])) != 2:
-        errors.append("record and search-result hydration must shard corpora above 1,000 concepts")
+    expected_chunks = math.ceil(len(rows) / 1000)
+    if len(manifest.get("chunks", {}).get("datasets", [])) != expected_chunks or len(search.get("entrypoints", {}).get("result_docs", [])) != expected_chunks:
+        errors.append("record and search-result hydration must reconcile all 1,000-record chunks")
     missed_ordinal = next(
         (index for index, row in enumerate(rows) if row.get("name") == "report-missed-rubbish-collection"),
         None,
@@ -85,17 +91,17 @@ def validate_large_projection() -> list[str]:
         errors.append("large projection concept names must be unique")
     if any(row.get("assertion_status") not in {"official", "normalized"} for row in rows):
         errors.append("every projected concept must retain a governed assertion status")
-    dossier_families = [row for row in service_families if row.get("implementation_status") == "population-complete-three-slice"]
-    if len(dossier_families) != 6 or any(not row.get("narrative", {}).get("body") for row in dossier_families):
-        errors.append("six migrated families must expose authored large-record narratives")
+    dossier_families = [row for row in service_families if row.get("implementation_status") == "population-complete"]
+    if len(dossier_families) != len(dossiers) or any(not row.get("narrative", {}).get("body") for row in dossier_families):
+        errors.append("every dossier-backed family must expose its authored large-record narrative")
     authority_geographies = [row for row in rows if row.get("record_type") == "Administrative Geography"]
     authority_organisations = [row for row in rows if row.get("record_type") == "Organisation"]
     if len(authority_geographies) != 397 or len(authority_organisations) != 438:
         errors.append("shared authority projection must expose 397 GSS geographies and 438 organisations")
     if validation.get("counts", {}).get("authority_geographies") != 397 or validation.get("counts", {}).get("authority_organisations") != 438:
         errors.append("validation report must reconcile authority and geography infrastructure")
-    if sum(row.get("resource_count", 0) for row in service_families) != 53 or len(resources) != 53:
-        errors.append("six migrated families must expose exactly 53 linked source resources")
+    if sum(row.get("resource_count", 0) for row in service_families) != expected_resource_count or len(resources) != expected_resource_count:
+        errors.append("projected source resources must reconcile with all authored dossier assertions")
     if any(resource.get("source_access", {}).get("display_mode") != "link" for resource in resources):
         errors.append("all migrated sources must use link-only typed access")
     if any(resource.get("provenance", {}).get("response_body_retained") is not False for resource in resources):
@@ -131,8 +137,8 @@ def validate_large_projection() -> list[str]:
         or any(edge["source"] not in adjacency_routes or edge["target"] not in adjacency_routes for edge in relationships)
     ):
         errors.append("sharded relationship adjacency must cover every relationship endpoint")
-    if validation.get("status") != "conformant" or validation.get("counts", {}).get("dossier_backed_families") != 6:
-        errors.append("SHACL-style validation report must reconcile the six-family migration")
+    if validation.get("status") != "conformant" or validation.get("counts", {}).get("dossier_backed_families") != len(dossiers):
+        errors.append("SHACL-style validation report must reconcile the current dossier population stage")
     expected_keys = [key for key, _, _ in FACETS]
     actual_keys = [facet.get("key") for facet in presentation.get("facets", [])]
     if actual_keys != expected_keys:
@@ -154,7 +160,14 @@ def main() -> int:
         for error in errors:
             print(error)
         return 1
-    print("Large-corpus checks passed: 293 families, 6 dossier-backed narratives, 397 geographies, 438 organisations, 53 source links, governed relationships, 0 snapshots")
+    validation = load_json("large/data/validation-report.json")
+    counts = validation["counts"]
+    print(
+        "Large-corpus checks passed: 293 families, "
+        f"{counts['dossier_backed_families']} dossier-backed narratives, "
+        f"397 geographies, 438 organisations, {counts['resources']} source links, "
+        "governed relationships, 0 snapshots"
+    )
     return 0
 
 

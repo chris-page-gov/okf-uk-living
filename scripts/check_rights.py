@@ -11,6 +11,7 @@ import yaml
 
 from check_sources import RECORDED_RIGHTS_BASIS, load_source_registers
 from check_inventory import flatten_inventory_references, load_reference_inventory
+from check_domain_registers import load_registers as load_domain_registers, register_sources
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -142,6 +143,15 @@ def validate_rights_register(register: dict[str, Any]) -> list[str]:
             source_hosts.add(urlparse(str(source.get("resource", ""))).netloc.lower())
             if source.get("rights_basis") != RECORDED_RIGHTS_BASIS:
                 errors.append(f"{prefix}: {source.get('id', 'source')} lacks the recorded rights basis")
+    domain_registers, domain_errors = load_domain_registers()
+    errors.extend(domain_errors)
+    for _, domain_register in domain_registers:
+        for source in register_sources(domain_register):
+            source_count += 1
+            resource_host = urlparse(str(source.get("resource", ""))).netloc.lower()
+            source_hosts.add(resource_host)
+            if source.get("rights_basis") != RECORDED_RIGHTS_BASIS:
+                errors.append(f"{prefix}: {source.get('id', 'domain source')} lacks the recorded rights basis")
     inventory, inventory_errors = load_reference_inventory()
     errors.extend(inventory_errors)
     for reference in flatten_inventory_references(inventory):

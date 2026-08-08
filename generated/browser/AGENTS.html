@@ -66,6 +66,8 @@ life events from before birth to death and bereavement.
 If OKF Markdown changes, run:
 
 ```sh
+uv run --locked python scripts/render_life_course_packs.py
+uv run --locked python scripts/render_life_course_packs.py --check
 uv run --locked python scripts/build_browser_handoff.py
 uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
@@ -77,12 +79,14 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_domain_registers.py
 uv run --locked python scripts/check_life_course_dossiers.py
 uv run --locked python scripts/check_authority_registry.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
 uv run --locked python scripts/check_large_projection.py
+uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -115,6 +119,13 @@ The three slices are complete. The owner authorized staged implementation of
 all 293 families on 2026-08-08. New families follow
 `life-course-family.v1`, the 48-process navigation denominator and the existing
 link-only, jurisdiction, privacy, review and publication boundaries.
+
+Author each population pack in the compact domain registers under
+`source/domain-registers/`, then run `render_life_course_packs.py`. The renderer
+owns the corresponding dossier, service-family narrative and domain narrative;
+do not hand-edit those rendered files. Every pack contributes at least 13
+natural-language competency questions and body-free link receipts before its
+local review can pass.
 </pre>
 </body>
 </html>

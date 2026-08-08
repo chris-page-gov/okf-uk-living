@@ -99,7 +99,15 @@ organizations and ten regulator/redress sector maps. Seven external
 infrastructure sources have body-free metadata receipts. The 1,434-concept
 projection and its search results are now deterministically sharded above the
 1,000-record boundary and pass real local Explorer search, detail and graph
-journeys. Pack 1 is the next bounded population unit.
+journeys.
+
+`PACK-001` completed locally on 2026-08-08. The first three life-course domains
+now add 36 population-complete discovery dossiers, 36 service narratives,
+three domain narratives, 45 active body-free source receipts and 13 competency
+questions. The resulting 2,485-concept projection contains 160 typed source
+links and 2,894 provenance-bearing relationships. Alias search, authored
+Narrative, family-centred Graph and official-source handoff journeys pass in a
+visible local Explorer. Pack 2 is the next bounded population unit.
 
 ## Phase 5 — release candidate and publication
 

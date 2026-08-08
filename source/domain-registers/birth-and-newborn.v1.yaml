@@ -1,0 +1,321 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-1-family-beginnings
+domain: birth-and-newborn
+title: Birth and the newborn period
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-1-family-beginnings-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+route_sources:
+  - id: birth-newborn-scotland-handoff
+    jurisdiction: Scotland
+    title: Register a birth in Scotland
+    owner: Scottish Government
+    authority_role: scotland_birth_registration_handoff
+    resource: https://www.mygov.scot/register-birth
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Scotland through the current birth-registration service and its local registrar handoff.
+    exclusions: Does not prove another newborn family's clinical, benefit, passport or nationality rules.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: birth-newborn-wales-handoff
+    jurisdiction: Wales
+    title: Children and families in Wales
+    owner: Welsh Government
+    authority_role: wales_birth_and_newborn_discovery_handoff
+    resource: https://www.gov.wales/children-families
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Wales to current birth, newborn, parenting and family-service material.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: birth-newborn-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Registering and naming your baby
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_birth_and_newborn_handoff
+    resource: https://www.nidirect.gov.uk/articles/registering-and-naming-your-baby
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Explains Northern Ireland birth registration and the registration-card handoff into GP registration.
+    exclusions: Does not prove every newborn health, benefit, passport or nationality rule.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+families:
+  - id: register-a-birth
+    title: Register a birth
+    aliases: [birth registration, register a new baby]
+    description: Select the correct registrar route, register the birth and retain the official registration outputs.
+    situations: [A live birth must be registered with the authority responsible for the place and jurisdiction.]
+    user_needs: [Find the registrar, required information, current time boundary and correction route.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: required
+    source:
+      id: register-a-birth-primary
+      title: Register a birth
+      owner: General Register Office
+      authority_role: england_wales_birth_registration_locator
+      resource: https://www.gov.uk/register-birth
+      access_method: public_html
+      version_model: live_service_locator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes a birth in England or Wales to the responsible register office and current registration information.
+      exclusions: Scotland and Northern Ireland have separate registrar routes; no informant or registration decision is made here.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: register-a-stillbirth
+    title: Register a stillbirth
+    aliases: [stillbirth registration, register a baby born still]
+    description: Navigate the sensitive certification and registrar handoff for a stillbirth and retain the official outputs.
+    situations: [A family or qualified informant needs the current stillbirth registration route after the clinical handoff.]
+    user_needs: [Find the correct registrar and know where bereavement and investigation support is obtained.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: required
+    source:
+      id: register-a-stillbirth-primary
+      title: Register a stillbirth
+      owner: General Register Office
+      authority_role: england_wales_stillbirth_registration_guidance
+      resource: https://www.gov.uk/register-stillbirth
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the England and Wales stillbirth-registration route and points to current support.
+      exclusions: Does not determine certification, investigation, informant status or another nation's process.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: obtain-birth-certificates
+    title: Obtain birth certificates
+    aliases: [order a birth certificate, get a copy birth record]
+    description: Find the responsible registration authority and order an official copy of a birth certificate.
+    situations: [A person needs an official birth certificate after registration or for a later process.]
+    user_needs: [Identify the correct register, search details, fee and delivery route.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: required
+    source:
+      id: obtain-birth-certificates-primary
+      title: Order a birth, death, marriage or civil partnership certificate
+      owner: General Register Office
+      authority_role: england_wales_certificate_ordering_service
+      resource: https://www.gov.uk/order-copy-birth-death-marriage-certificate
+      access_method: public_html
+      version_model: live_transaction_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes people to current certificate-ordering services for England and Wales and signposts other registers.
+      exclusions: Does not guarantee a record match, delivery time, identity use or another nation's register.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: establish-parental-responsibility
+    title: Establish parental responsibility
+    aliases: [parental rights and responsibilities, get parental responsibility]
+    description: Navigate the registration, agreement or court handoffs through which parental responsibility may be established.
+    situations: [A parent or carer needs to understand whether and how parental responsibility is recorded or obtained.]
+    user_needs: [Find the applicable legal route and know when independent advice or a court decision is required.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: required
+    source:
+      id: establish-parental-responsibility-primary
+      title: Parental rights and responsibilities
+      owner: Ministry of Justice
+      authority_role: england_wales_parental_responsibility_guidance
+      resource: https://www.gov.uk/parental-rights-responsibilities
+      access_method: public_html
+      version_model: live_legal_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Introduces England and Wales routes by which parental responsibility may arise or be obtained.
+      exclusions: Does not decide status, parentage, agreement validity, welfare or a court application.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: check-child-nationality-status
+    title: Check a child's nationality status
+    aliases: [is my child British, child citizenship status]
+    description: Use current official nationality guidance before applying for evidence, registration or a passport.
+    situations: [A parent or responsible adult needs to understand which nationality or citizenship route may apply to a child.]
+    user_needs: [Find the authoritative status and evidence route without the bundle deciding nationality.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: check-child-nationality-status-primary
+      title: Check if you're a British citizen
+      owner: Home Office
+      authority_role: uk_british_citizenship_guidance
+      resource: https://www.gov.uk/check-british-citizenship
+      access_method: public_html
+      version_model: live_immigration_and_nationality_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes users through current British citizenship guidance and relevant application handoffs.
+      exclusions: Does not determine a child's citizenship, immigration status, evidence sufficiency or legal outcome.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: register-newborn-with-health-services
+    title: Register a newborn with health services
+    aliases: [register baby with GP, newborn NHS registration]
+    description: Connect a newborn to the current primary-care and child-health record routes after birth registration.
+    situations: [A newborn needs to be registered with the relevant primary-care and child-health services.]
+    user_needs: [Find the current GP or equivalent provider route and understand what registration evidence is requested.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: register-newborn-with-health-services-primary
+      title: How to register with a GP surgery
+      owner: NHS England
+      authority_role: england_gp_registration_guidance
+      resource: https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/
+      access_method: public_html
+      version_model: live_health_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Explains the England NHS route for registering with a GP surgery, including a newborn handoff where applicable.
+      exclusions: Does not select a practice, decide registration, establish another nation's process or replace urgent care.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: claim-child-benefit
+    title: Claim Child Benefit
+    aliases: [child benefit claim, register child for child benefit]
+    description: Use the current Child Benefit route to make, manage or challenge a claim after a child joins the household.
+    situations: [A person responsible for a child needs to check and use the Child Benefit service.]
+    user_needs: [Find the claim, evidence, payment and challenge route without calculating entitlement locally.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: claim-child-benefit-primary
+      title: Child Benefit
+      owner: HM Revenue and Customs
+      authority_role: uk_child_benefit_service
+      resource: https://www.gov.uk/child-benefit
+      access_method: public_html
+      version_model: live_benefit_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the current Child Benefit overview and handoffs to claim, report change and challenge routes.
+      exclusions: Does not calculate entitlement, tax effects, payment, evidence sufficiency or a decision outcome.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: access-neonatal-care
+    title: Access neonatal care
+    aliases: [special care baby unit, care for premature or ill baby]
+    description: Understand the hospital and specialist handoff when a newborn needs special, high-dependency or intensive care.
+    situations: [A baby is premature, unwell or needs specialist care after birth.]
+    user_needs: [Find current clinical and family-support information while decisions remain with the neonatal team.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: access-neonatal-care-primary
+      title: Special care for ill or premature babies
+      owner: NHS England
+      authority_role: england_neonatal_care_guidance
+      resource: https://www.nhs.uk/pregnancy/labour-and-birth/special-care-ill-or-premature-babies/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Explains England NHS neonatal-unit roles and family information for babies needing special care.
+      exclusions: Does not diagnose, triage, choose a unit, recommend treatment or replace the clinical team.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: arrange-newborn-screening
+    title: Arrange newborn screening
+    aliases: [newborn screening tests, baby blood spot and hearing tests]
+    description: Navigate the newborn screening offers, consent conversations, results and follow-up handoffs.
+    situations: [A newborn is due source-defined screening checks or follow-up after a screening result.]
+    user_needs: [Understand what is offered and where decisions and follow-up are handled by the clinical service.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: arrange-newborn-screening-primary
+      title: Newborn screening
+      owner: NHS England
+      authority_role: england_newborn_screening_guidance
+      resource: https://www.nhs.uk/baby/newborn-screening/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Introduces the England NHS newborn screening programme and follow-up information.
+      exclusions: Does not give consent, interpret a result, diagnose a condition or establish another nation's programme.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: start-childhood-vaccinations
+    title: Start childhood vaccinations
+    aliases: [baby vaccination schedule, childhood immunisations]
+    description: Find the current national vaccination schedule and provider route for a child.
+    situations: [A parent or carer needs current information about vaccines offered to a baby or child.]
+    user_needs: [Find the accountable health-service schedule and know where individual clinical advice is obtained.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: start-childhood-vaccinations-primary
+      title: NHS vaccinations and when to have them
+      owner: NHS England
+      authority_role: england_vaccination_schedule_guidance
+      resource: https://www.nhs.uk/vaccinations/nhs-vaccinations-and-when-to-have-them/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Publishes the current England NHS vaccination schedule and route to further vaccine information.
+      exclusions: Does not provide individual clinical advice, consent, contraindication assessment or another nation's schedule.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: obtain-child-passport
+    title: Obtain a child passport
+    aliases: [apply for child passport, first passport for a baby]
+    description: Use the current HM Passport Office route for a child's first, renewed or replacement passport.
+    situations: [A parent or responsible adult needs a passport for a child.]
+    user_needs: [Find the correct application, evidence, consent, referee and exception route.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: obtain-child-passport-primary
+      title: Get a passport for your child
+      owner: HM Passport Office
+      authority_role: uk_child_passport_service
+      resource: https://www.gov.uk/get-a-child-passport
+      access_method: public_html
+      version_model: live_transaction_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the current UK child-passport application and evidence route.
+      exclusions: Does not decide nationality, parental consent, evidence sufficiency, urgency or issue a passport.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: correct-a-birth-registration
+    title: Correct a birth registration
+    aliases: [amend a birth certificate, correct birth record]
+    description: Navigate the responsible register's process for correcting an error in a completed birth entry.
+    situations: [A person believes information in a birth registration is incorrect or incomplete.]
+    user_needs: [Find the register, evidence, fee, decision and challenge route for the jurisdiction.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: required
+    source:
+      id: correct-a-birth-registration-primary
+      title: Correct a birth registration
+      owner: General Register Office
+      authority_role: england_wales_birth_registration_correction
+      resource: https://www.gov.uk/correct-birth-registration
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the England and Wales route for applying to correct a birth registration.
+      exclusions: Does not decide whether a correction is permitted, change legal parentage or establish another nation's route.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot

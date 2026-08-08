@@ -114,6 +114,85 @@
       "target_iri": "enclosing-process/manage-household-waste-collections"
     }
   ],
+  "evidence/use-tax-free-childcare-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/use-tax-free-childcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/use-tax-free-childcare.v1.yaml",
+          "source_ids": [
+            "use-tax-free-childcare-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a2dec8ac8e2b1982dca3d185",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-tax-free-childcare-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-tax-free-childcare-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/use-tax-free-childcare-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/use-tax-free-childcare-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "output/start-childhood-vaccinations-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/start-childhood-vaccinations.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/start-childhood-vaccinations.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "birth-newborn-wales-handoff",
+            "start-childhood-vaccinations-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:183f1e4600e6865e48317f19",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/start-childhood-vaccinations-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/start-childhood-vaccinations-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/start-childhood-vaccinations-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/start-childhood-vaccinations-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
   "user-need/notify-organisations-after-a-death-retain-evidence-of-each-notification-and-unresolved-response": [
     {
       "assertion_scope": "real-world",
@@ -151,6 +230,44 @@
       "source_iri": "dataset/notify-organisations-after-a-death",
       "target": "user-need/notify-organisations-after-a-death-retain-evidence-of-each-notification-and-unresolved-response",
       "target_iri": "user-need/notify-organisations-after-a-death-retain-evidence-of-each-notification-and-unresolved-response"
+    }
+  ],
+  "user-need/obtain-child-passport-find-the-correct-application": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-child-passport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-child-passport.v1.yaml",
+          "source_ids": [
+            "obtain-child-passport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d3d2d44d1b226fae4de313fd",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-child-passport",
+      "source_iri": "dataset/obtain-child-passport",
+      "target": "user-need/obtain-child-passport-find-the-correct-application",
+      "target_iri": "user-need/obtain-child-passport-find-the-correct-application"
     }
   ]
 }

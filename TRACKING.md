@@ -27,8 +27,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | POP-002 | Extend the universal Explorer contract | Complete | Merged as OKF Explorer PR #72: authored record narratives and typed link/JSON/XML/text source access, with full three-browser assurance and no Pages update |
 | POP-003 | Migrate the six reviewed families | Complete: local pass | [Local deterministic and browser review](evaluation/reviews/three-slice-population-migration-2026-08-08.md): six population-complete dossiers, 53 link-only resources, 602 concepts, 1,025 governed relationships and zero snapshots |
 | POP-004 | Implement shared authority and source infrastructure | Complete: local pass | [2026-08-08 review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md): 382 principal areas, 19 strategic authorities, 397 GSS geographies, 438 organizations, ten sector maps and seven active metadata-only receipts |
-| PACK-001 | Populate family beginnings | Active | 36 families across before birth, birth/newborn and early years |
-| PACK-002 | Populate learning and transition | Planned | 36 families across school, transition and post-school study/research |
+| PACK-001 | Populate family beginnings | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-1-family-beginnings-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions, four-nation handoffs and passing local Explorer journeys |
+| PACK-002 | Populate learning and transition | Active | 36 families across school, transition and post-school study/research |
 | PACK-003 | Populate work and money | Planned | 36 families across finding work, employment and money/tax/benefits |
 | PACK-004 | Populate home, place and transport | Planned | 36 families across housing, rubbish/street and public/private transport |
 | PACK-005 | Populate enforcement, consumer and justice | Planned | 36 families across transport enforcement, consumer rights and police/legal services |
@@ -51,8 +51,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
 - GitHub Pages: not enabled and not updated.
-- Acquisition: 89 exhaustive-inventory references plus 53 implemented-slice
-  references give 142 external records and zero snapshots; all 28 source hosts
+- Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
+  references and 45 Pack 1 sources give 187 source records and zero snapshots; all 28 source hosts
   and the standards families have dated rights decisions. Source content
   remains link-and-summary only. Staged link registration against the approved
   293 families is authorized; unbounded or unstaged acquisition stays disabled.
@@ -69,5 +69,5 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   decisions are complete; authority/regulator mapping and named specialist
   reviewer acceptance remain implementation or external-review work.
 - Population implementation: owner-authorized on 2026-08-08 in eight packs;
-  foundation, universal Explorer contract, six-family migration and shared
-  authority/source infrastructure complete; `PACK-001` is next.
+  foundation, universal Explorer contract, six-family migration, shared
+  authority/source infrastructure and `PACK-001` complete; `PACK-002` is active.

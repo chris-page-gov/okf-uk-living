@@ -78,7 +78,19 @@ def load_source_register(register: str) -> tuple[dict[str, dict[str, Any]], list
     path = ROOT / register
     value, errors = load_yaml(path)
     result: dict[str, dict[str, Any]] = {}
-    for source in value.get("sources", []) if isinstance(value.get("sources"), list) else []:
+    sources = list(value.get("sources", [])) if isinstance(value.get("sources"), list) else []
+    if value.get("register_version") == "life-course-domain-register.v1":
+        sources.extend(
+            source
+            for source in value.get("route_sources", [])
+            if isinstance(source, dict)
+        )
+        sources.extend(
+            family.get("source")
+            for family in value.get("families", [])
+            if isinstance(family, dict) and isinstance(family.get("source"), dict)
+        )
+    for source in sources:
         if not isinstance(source, dict) or not str(source.get("id", "")):
             errors.append(f"{register}: every source must be a mapping with an id")
             continue

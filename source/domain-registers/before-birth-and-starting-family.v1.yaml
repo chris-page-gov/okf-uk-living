@@ -1,0 +1,325 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-1-family-beginnings
+domain: before-birth-and-starting-family
+title: Before birth and starting a family
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-1-family-beginnings-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+route_sources:
+  - id: before-birth-scotland-handoff
+    jurisdiction: Scotland
+    title: Having a baby in Scotland
+    owner: Scottish Government
+    authority_role: scotland_pregnancy_and_parenting_discovery_handoff
+    resource: https://www.mygov.scot/browse/birth-death-family/children-parenting/having-baby
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Scotland to current pregnancy, birth and early-parenting services and support.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: before-birth-wales-handoff
+    jurisdiction: Wales
+    title: Children and families in Wales
+    owner: Welsh Government
+    authority_role: wales_children_and_families_discovery_handoff
+    resource: https://www.gov.wales/children-families
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Wales to current children, family, pregnancy and early-years policy and services.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: before-birth-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Family, home and community in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_family_service_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/family-home-and-community
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Northern Ireland to current family, pregnancy, birth and local support services.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+families:
+  - id: access-fertility-and-reproductive-health
+    title: Access fertility and reproductive health
+    aliases: [fertility treatment, IVF and reproductive health]
+    description: Find the current fertility or reproductive-health assessment and treatment route without assuming eligibility or clinical outcome.
+    situations: [A person wants advice, assessment or treatment relating to fertility or reproductive health.]
+    user_needs: [Find the accountable health-service route and understand where clinical assessment begins.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: regulated-fertility-provider
+    source:
+      id: access-fertility-and-reproductive-health-primary
+      title: IVF
+      owner: NHS England
+      authority_role: england_fertility_treatment_guidance
+      resource: https://www.nhs.uk/tests-and-treatments/ivf/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Explains the England NHS pathway into IVF information, assessment and treatment considerations.
+      exclusions: Does not decide eligibility, diagnosis, treatment, funding or outcome for an individual.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: start-antenatal-care
+    title: Start antenatal care
+    aliases: [book a midwife, first pregnancy appointment]
+    description: Enter the current maternity service early in pregnancy and identify the first booking and assessment handoff.
+    situations: [A person knows or thinks they are pregnant and needs to begin maternity care.]
+    user_needs: [Find the current self-referral, GP or midwife route for the place where care will be received.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: start-antenatal-care-primary
+      title: Your antenatal care and appointments
+      owner: NHS England
+      authority_role: england_antenatal_care_guidance
+      resource: https://www.nhs.uk/pregnancy/your-pregnancy-care/your-antenatal-care-and-appointments/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes a person in England into antenatal booking, appointments and source-defined care information.
+      exclusions: Does not diagnose pregnancy, assess urgency or replace a midwife, GP or emergency service.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: receive-maternity-care
+    title: Receive maternity care
+    aliases: [pregnancy and birth care, labour and birth services]
+    description: Navigate maternity care from pregnancy through labour, birth and the immediate clinical handoff after birth.
+    situations: [A pregnant person needs continuing maternity, labour or birth care.]
+    user_needs: [Understand the current provider pathway and where urgent clinical advice is obtained.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: receive-maternity-care-primary
+      title: Labour and birth
+      owner: NHS England
+      authority_role: england_labour_and_birth_guidance
+      resource: https://www.nhs.uk/pregnancy/labour-and-birth/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the England NHS navigation collection for labour, birth settings and immediate care information.
+      exclusions: Does not provide diagnosis, emergency triage, personalised care planning or a treatment decision.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: claim-maternity-allowance
+    title: Claim Maternity Allowance
+    aliases: [maternity allowance claim, maternity pay when self-employed]
+    description: Check and use the current Maternity Allowance route when statutory maternity pay may not apply.
+    situations: [A pregnant person or new parent needs to check whether Maternity Allowance is the relevant income-support route.]
+    user_needs: [Find the current claim, evidence, decision and challenge route without calculating entitlement locally.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: claim-maternity-allowance-primary
+      title: Maternity Allowance
+      owner: Department for Work and Pensions
+      authority_role: maternity_allowance_service
+      resource: https://www.gov.uk/maternity-allowance
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the current Maternity Allowance overview and route to check and make a claim.
+      exclusions: Does not calculate entitlement, payment amount, evidence sufficiency or a challenge outcome.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: take-maternity-leave
+    title: Take maternity leave
+    aliases: [statutory maternity leave, maternity pay and leave]
+    description: Navigate notice, leave and pay information for an employee taking maternity leave.
+    situations: [An employee needs to tell an employer about pregnancy and plan maternity leave or pay.]
+    user_needs: [Find the current employment route, notice requirements and dispute handoff.]
+    primary_jurisdictions: [England, Scotland, Wales]
+    specialist_review: required
+    source:
+      id: take-maternity-leave-primary
+      title: Maternity pay and leave
+      owner: Department for Business and Trade
+      authority_role: great_britain_maternity_leave_guidance
+      resource: https://www.gov.uk/maternity-pay-leave
+      access_method: public_html
+      version_model: live_employment_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes employees in Great Britain through current statutory maternity leave and pay information.
+      exclusions: Northern Ireland employment law and individual employment status require their own current route.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: take-paternity-or-partner-leave
+    title: Take paternity or partner leave
+    aliases: [paternity leave, partner leave after birth]
+    description: Navigate current notice, leave and pay information for an eligible parent or partner after birth or placement.
+    situations: [A parent or partner needs to plan time away from work around a birth or adoption placement.]
+    user_needs: [Find the current employment route and understand where status or eligibility is decided.]
+    primary_jurisdictions: [England, Scotland, Wales]
+    specialist_review: required
+    source:
+      id: take-paternity-or-partner-leave-primary
+      title: Paternity pay and leave
+      owner: Department for Business and Trade
+      authority_role: great_britain_paternity_leave_guidance
+      resource: https://www.gov.uk/paternity-pay-leave
+      access_method: public_html
+      version_model: live_employment_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes employees in Great Britain through current statutory paternity leave and pay information.
+      exclusions: Northern Ireland employment law and individual eligibility require their own current route.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: take-adoption-leave
+    title: Take adoption leave
+    aliases: [statutory adoption leave, adoption pay]
+    description: Navigate leave and pay information when a child is placed for adoption or through an applicable parental-order route.
+    situations: [An employee needs to plan leave around an adoption placement or another source-defined qualifying event.]
+    user_needs: [Find current adoption leave, notice, pay and employment-dispute information.]
+    primary_jurisdictions: [England, Scotland, Wales]
+    specialist_review: required
+    source:
+      id: take-adoption-leave-primary
+      title: Adoption pay and leave
+      owner: Department for Business and Trade
+      authority_role: great_britain_adoption_leave_guidance
+      resource: https://www.gov.uk/adoption-pay-leave
+      access_method: public_html
+      version_model: live_employment_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes employees in Great Britain through current statutory adoption leave and pay information.
+      exclusions: Northern Ireland employment law and case-specific eligibility require their own current route.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: arrange-adoption
+    title: Arrange adoption
+    aliases: [adopt a child, adoption assessment]
+    description: Find the accountable adoption agency route and understand the assessment, matching and decision handoffs.
+    situations: [A person or family is considering applying to adopt a child.]
+    user_needs: [Find the current national or local adoption service and its assessment and complaint route.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: registered-adoption-agency
+    source:
+      id: arrange-adoption-primary
+      title: Child adoption
+      owner: Department for Education
+      authority_role: england_adoption_service_guidance
+      resource: https://www.gov.uk/child-adoption
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes prospective adopters in England to an adoption agency and describes the source-defined process.
+      exclusions: Does not approve an adopter, match a child, decide a court application or establish another nation's process.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: pursue-surrogacy-parenthood
+    title: Pursue surrogacy parenthood
+    aliases: [have a child through surrogacy, parental order after surrogacy]
+    description: Navigate the legal and service handoffs around a surrogacy arrangement and the route to legal parenthood.
+    situations: [An intended parent or surrogate needs authoritative information about the UK surrogacy and parental-order boundary.]
+    user_needs: [Find the current official route and know when independent legal and clinical advice is needed.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    dependency: independent-surrogacy-legal-and-clinical-support
+    source:
+      id: pursue-surrogacy-parenthood-primary
+      title: Legal rights when using surrogates and donors
+      owner: UK Government
+      authority_role: uk_surrogacy_legal_guidance
+      resource: https://www.gov.uk/legal-rights-when-using-surrogates-and-donors
+      access_method: public_html
+      version_model: live_legal_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Introduces the UK legal-parenthood and parental-order handoff for surrogacy and donor arrangements.
+      exclusions: Does not provide legal advice, approve an arrangement, determine parenthood or recommend an agency.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: become-a-foster-carer
+    title: Become a foster carer
+    aliases: [apply to foster, foster parent assessment]
+    description: Find the accountable fostering service and navigate enquiry, assessment, approval and review stages.
+    situations: [A person or household is considering becoming a foster carer.]
+    user_needs: [Find the current public or regulated fostering route and its decision and complaint handoff.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: regulated-fostering-service
+    source:
+      id: become-a-foster-carer-primary
+      title: Becoming a foster parent in England
+      owner: Department for Education
+      authority_role: england_fostering_service_guidance
+      resource: https://www.gov.uk/becoming-foster-parent
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes prospective foster carers in England to local-authority or independent-agency assessment.
+      exclusions: Does not approve a carer, recommend an agency or establish another nation's fostering process.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: get-healthy-start-support
+    title: Get Healthy Start support
+    aliases: [Healthy Start card, help to buy healthy food and vitamins]
+    description: Use the current Healthy Start or nation-specific equivalent route for food, milk and vitamin support.
+    situations: [A pregnant person or family with a young child wants to check the relevant healthy-food support route.]
+    user_needs: [Find the current programme for the nation and submit a claim without the bundle deciding eligibility.]
+    primary_jurisdictions: [England, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: get-healthy-start-support-primary
+      title: Healthy Start
+      owner: NHS Business Services Authority
+      authority_role: healthy_start_service
+      resource: https://www.gov.uk/healthy-start
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes people to Healthy Start information and application support for its published coverage.
+      exclusions: Scotland uses a distinct support route; the bundle does not calculate eligibility or payment.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: get-pregnancy-workplace-protection
+    title: Get pregnancy workplace protection
+    aliases: [pregnant employee rights, pregnancy discrimination at work]
+    description: Navigate health and safety, time-off, discrimination and employment-redress routes connected with pregnancy at work.
+    situations: [A pregnant employee needs to understand the employer and statutory protection routes.]
+    user_needs: [Find current workplace protections and the responsible advice or redress service.]
+    primary_jurisdictions: [England, Scotland, Wales]
+    specialist_review: required
+    source:
+      id: get-pregnancy-workplace-protection-primary
+      title: Pregnant employees' rights
+      owner: Department for Business and Trade
+      authority_role: great_britain_pregnancy_employment_rights_guidance
+      resource: https://www.gov.uk/working-when-pregnant-your-rights
+      access_method: public_html
+      version_model: live_employment_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Introduces current Great Britain pregnancy-at-work rights and employer handoffs.
+      exclusions: Does not decide employment status, discrimination, safety risk, remedy or Northern Ireland law.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot

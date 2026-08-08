@@ -1,0 +1,325 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-1-family-beginnings
+domain: early-years
+title: Early years
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-1-family-beginnings-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+route_sources:
+  - id: early-years-scotland-handoff
+    jurisdiction: Scotland
+    title: Help with childcare costs in Scotland
+    owner: Scottish Government
+    authority_role: scotland_childcare_support_handoff
+    resource: https://www.mygov.scot/childcare-costs-help
+    access_method: public_html
+    version_model: live_service_guidance
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes families in Scotland to current funded childcare and childcare-cost support.
+    exclusions: Does not prove a separate development, health, safeguarding, library or registration rule.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: early-years-wales-handoff
+    jurisdiction: Wales
+    title: Childcare in Wales
+    owner: Welsh Government
+    authority_role: wales_childcare_and_early_years_handoff
+    resource: https://www.gov.wales/childcare
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes families and providers in Wales to current childcare and early-years information.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+  - id: early-years-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Education in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_early_years_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/education
+    access_method: public_html
+    version_model: live_topic_page
+    update_cadence: check_before_each_use
+    rights_basis: linked_reference_summary_only_source_family_decision_recorded
+    coverage: Routes people in Northern Ireland to current education, childcare and early-years services.
+    exclusions: A topic handoff does not prove a family-specific rule, deadline, cost or eligibility decision.
+    observed_at: "2026-08-08"
+    checksum: not_applicable_no_snapshot
+families:
+  - id: get-funded-early-education
+    title: Get funded early education
+    aliases: [free childcare hours, funded nursery place]
+    description: Find and use the current nation and local-authority route for funded early education or childcare hours.
+    situations: [A family wants to check and arrange a funded early-education or childcare place.]
+    user_needs: [Find the current offer, provider requirements, application and exception route without calculating eligibility locally.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: registered-childcare-provider
+    source:
+      id: get-funded-early-education-primary
+      title: Free Childcare for Working Parents
+      owner: Department for Education
+      authority_role: england_working_parent_childcare_service
+      resource: https://www.gov.uk/free-childcare-if-working
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes eligible working parents in England through the current funded-childcare application and provider handoff.
+      exclusions: Does not calculate eligibility, guarantee a place, select a provider or establish another nation's offer.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: use-tax-free-childcare
+    title: Use Tax-Free Childcare
+    aliases: [tax free childcare account, government childcare top-up]
+    description: Check, open and manage a Tax-Free Childcare account through the current UK service.
+    situations: [A working family wants to check whether Tax-Free Childcare is the relevant cost-support route.]
+    user_needs: [Find the application, reconfirmation, payment and decision-review handoffs.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: use-tax-free-childcare-primary
+      title: Tax-Free Childcare
+      owner: HM Revenue and Customs
+      authority_role: uk_tax_free_childcare_service
+      resource: https://www.gov.uk/tax-free-childcare
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides the current Tax-Free Childcare overview and application-account handoff.
+      exclusions: Does not calculate eligibility, payments, provider status, tax effects or a decision outcome.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: find-registered-childcare
+    title: Find registered childcare
+    aliases: [find a childminder, search childcare providers]
+    description: Start from the accountable public register or local service to find childcare providers and verify current registration.
+    situations: [A parent or carer needs to find childcare and check whether a provider is appropriately registered.]
+    user_needs: [Use the current national or local register without treating the bundle as a provider recommendation.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: registered-childcare-provider
+    source:
+      id: find-registered-childcare-primary
+      title: Find a registered childminder
+      owner: Department for Education
+      authority_role: england_registered_childminder_locator
+      resource: https://www.gov.uk/find-registered-childminder
+      access_method: public_html
+      version_model: live_service_locator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes families in England to current local and regulator-backed childminder searches.
+      exclusions: Does not recommend a provider, guarantee availability or establish another nation's registration system.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: register-as-childminder
+    title: Register as a childminder
+    aliases: [become a childminder, childminder registration]
+    description: Find the responsible regulator and complete the applicable registration and inspection route before offering childcare.
+    situations: [A person wants to provide childminding or home-based childcare.]
+    user_needs: [Identify the current regulator, suitability checks, registration route and review or complaint handoff.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: childcare-regulator-and-checking-services
+    source:
+      id: register-as-childminder-primary
+      title: Become a childminder or nanny in England
+      owner: Department for Education
+      authority_role: england_childminder_registration_guidance
+      resource: https://www.gov.uk/become-childminder-nanny
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes prospective childminders and nannies in England through current registration and regulator information.
+      exclusions: Does not determine suitability, registration, employment status or another nation's regulatory process.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: access-health-visiting
+    title: Access health visiting
+    aliases: [health visitor support, baby development reviews]
+    description: Connect a family to the current health-visiting or child-health review route after the midwifery handoff.
+    situations: [A parent or carer needs routine child-health, development or family-support contact in the early years.]
+    user_needs: [Find the responsible local health team and know where urgent or specialist concerns are escalated.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: access-health-visiting-primary
+      title: Your baby's health and development reviews
+      owner: NHS England
+      authority_role: england_child_health_review_guidance
+      resource: https://www.nhs.uk/baby/babys-development/height-weight-and-reviews/baby-reviews/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Explains routine England NHS child-health and development reviews and the health-visitor handoff.
+      exclusions: Does not diagnose, assess safeguarding risk, select a local team or replace urgent clinical care.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: get-early-years-development-support
+    title: Get early-years development support
+    aliases: [baby development help, toddler development support]
+    description: Navigate routine development information into the current health, early-years or specialist assessment route when concerns arise.
+    situations: [A parent, carer or practitioner wants support with a young child's development.]
+    user_needs: [Find the accountable local route and distinguish general information from clinical or educational assessment.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: get-early-years-development-support-primary
+      title: Baby's development
+      owner: NHS England
+      authority_role: england_early_child_development_guidance
+      resource: https://www.nhs.uk/baby/babys-development/
+      access_method: public_html
+      version_model: live_health_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Provides England NHS development information and routes concerns toward current child-health services.
+      exclusions: Does not assess development, diagnose a condition, decide support or establish another nation's pathway.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: get-early-years-send-support
+    title: Get early-years SEND support
+    aliases: [special educational needs in nursery, early years additional needs support]
+    description: Find the early-years setting, local-authority and assessment routes for special educational needs or disability support.
+    situations: [A young child may need additional educational support before or during early education.]
+    user_needs: [Understand the current setting and local-authority handoffs, decisions and challenge routes.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: get-early-years-send-support-primary
+      title: Extra help in education for children with special educational needs
+      owner: Department for Education
+      authority_role: england_send_support_guidance
+      resource: https://www.gov.uk/children-with-special-educational-needs/extra-SEN-help
+      access_method: public_html
+      version_model: live_education_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Introduces England education support and assessment handoffs for children with special educational needs.
+      exclusions: Does not assess need, allocate support, decide a plan, diagnose disability or establish another nation's system.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: report-child-safeguarding-concern
+    title: Report a child safeguarding concern
+    aliases: [report child abuse, child protection concern]
+    description: Find the immediate emergency or responsible local-authority route for a concern about a child's safety or welfare.
+    situations: [Someone is worried that a child may be at risk of abuse, neglect or other harm.]
+    user_needs: [Reach the current emergency or safeguarding authority without the bundle assessing risk or evidence.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: report-child-safeguarding-concern-primary
+      title: Report child abuse to a local council
+      owner: Department for Education
+      authority_role: england_child_safeguarding_locator
+      resource: https://www.gov.uk/report-child-abuse-to-local-council
+      access_method: public_html
+      version_model: live_service_locator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes an England safeguarding concern to the responsible local council and signposts emergency action.
+      exclusions: Does not assess immediate danger, investigate, decide evidence or establish another nation's safeguarding route.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: use-childrens-centres
+    title: Use children's centres
+    aliases: [find a family hub, Sure Start children's centre]
+    description: Locate the current local children's-centre or family-hub offer and follow its service-specific access route.
+    situations: [A family wants local early-years, parenting, health or practical support from a children's centre or family hub.]
+    user_needs: [Find the responsible local service and check what is currently offered and how to access it.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    source:
+      id: use-childrens-centres-primary
+      title: Find a Sure Start Children's Centre
+      owner: Department for Education
+      authority_role: england_childrens_centre_locator
+      resource: https://www.gov.uk/find-sure-start-childrens-centre
+      access_method: public_html
+      version_model: live_service_locator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes families in England to the local authority responsible for children's-centre information.
+      exclusions: Does not guarantee a named centre, current programme, eligibility, appointment or another nation's equivalent.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: use-public-library-child-services
+    title: Use public library child services
+    aliases: [library activities for children, local library family services]
+    description: Find the responsible public library service and its current reading, activity, access and support offer for children.
+    situations: [A child or family wants to use local public-library collections, activities or digital services.]
+    user_needs: [Find the correct library authority, locations, membership and accessible-service information.]
+    primary_jurisdictions: [England, Wales]
+    specialist_review: not_required
+    source:
+      id: use-public-library-child-services-primary
+      title: Local library services
+      owner: Department for Culture, Media and Sport
+      authority_role: england_wales_library_service_locator
+      resource: https://www.gov.uk/local-library-services
+      access_method: public_html
+      version_model: live_service_locator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Routes users in England and Wales to the responsible local public-library service.
+      exclusions: Does not enumerate live activities, stock, membership rules, accessibility or another nation's service.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: apply-for-adoption-support
+    title: Apply for adoption support
+    aliases: [post-adoption support, adoption support assessment]
+    description: Navigate the responsible adoption service's assessment, funded-support and review handoffs after an adoption.
+    situations: [An adopted child, adoptive family or other eligible person needs adoption-related support.]
+    user_needs: [Find the accountable adoption service, assessment route and current fund or complaint handoff.]
+    primary_jurisdictions: [England]
+    specialist_review: required
+    dependency: registered-adoption-support-provider
+    source:
+      id: apply-for-adoption-support-primary
+      title: Adoption and Special Guardianship Support Fund
+      owner: Department for Education
+      authority_role: england_adoption_support_fund_guidance
+      resource: https://www.gov.uk/guidance/adoption-and-special-guardianship-support-fund-asgsf
+      access_method: public_html
+      version_model: live_service_guidance
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Explains the England fund and adoption-service assessment handoff for eligible therapeutic support.
+      exclusions: Does not assess need, determine eligibility, recommend a provider, approve funding or establish another nation's support.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
+  - id: get-childcare-cost-support
+    title: Get childcare cost support
+    aliases: [help paying for childcare, childcare benefits and schemes]
+    description: Compare the current official childcare-cost support routes and continue to the applicable claim or account.
+    situations: [A family needs help with childcare costs and does not yet know which public scheme may apply.]
+    user_needs: [Find current schemes, interaction warnings and application handoffs without a local eligibility calculation.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    source:
+      id: get-childcare-cost-support-primary
+      title: Help with childcare costs
+      owner: HM Revenue and Customs
+      authority_role: uk_childcare_cost_support_navigator
+      resource: https://www.gov.uk/help-with-childcare-costs
+      access_method: public_html
+      version_model: live_service_navigator
+      update_cadence: check_before_each_use
+      rights_basis: linked_reference_summary_only_source_family_decision_recorded
+      coverage: Compares current UK childcare-cost support families and routes users toward the relevant service.
+      exclusions: Does not calculate eligibility, optimize benefits, guarantee a provider or decide a claim.
+      observed_at: "2026-08-08"
+      checksum: not_applicable_no_snapshot
