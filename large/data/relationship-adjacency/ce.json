@@ -1,4 +1,45 @@
 {
+  "dependency/fca-authorised-motor-insurance-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:49a5055065c32643591fcf3b",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-motor-insurance",
+      "source_iri": "dataset/obtain-motor-insurance",
+      "target": "dependency/fca-authorised-motor-insurance-provider",
+      "target_iri": "dependency/fca-authorised-motor-insurance-provider"
+    }
+  ],
   "evidence/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -113,6 +154,47 @@
       "source_iri": "dataset/respond-to-speeding-notice",
       "target": "organisation/organisation-northern-ireland-courts-and-tribunals-service",
       "target_iri": "organisation/organisation-northern-ireland-courts-and-tribunals-service"
+    }
+  ],
+  "outcome/use-household-recycling-service-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml",
+          "source_ids": [
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff",
+            "use-household-recycling-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c8777a10b73502e1c45e16f0",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-household-recycling-service-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-household-recycling-service-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/use-household-recycling-service-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/use-household-recycling-service-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "output/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
@@ -459,6 +541,152 @@
       "source_iri": "service-step/get-early-years-send-support-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/get-early-years-send-support-early-years-scotland-handoff",
       "target_iri": "resource/get-early-years-send-support-early-years-scotland-handoff"
+    }
+  ],
+  "resource/get-parking-permit-get-parking-permit-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml",
+          "source_ids": [
+            "get-parking-permit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8d9e936ae830dbb27d6db868",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-parking-permit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-parking-permit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-parking-permit-get-parking-permit-primary",
+      "target_iri": "resource/get-parking-permit-get-parking-permit-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml",
+          "source_ids": [
+            "get-parking-permit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a7e069d5844d7afe995857ac",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-parking-permit-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-parking-permit-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/get-parking-permit-get-parking-permit-primary",
+      "target_iri": "resource/get-parking-permit-get-parking-permit-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml",
+          "source_ids": [
+            "get-parking-permit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b166d69ccb88ca3f9697d01c",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/get-parking-permit-get-parking-permit-primary",
+      "target_iri": "resource/get-parking-permit-get-parking-permit-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml",
+          "source_ids": [
+            "get-parking-permit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b299a0be3a69fa188c35d6a6",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-parking-permit",
+      "source_iri": "dataset/get-parking-permit",
+      "target": "resource/get-parking-permit-get-parking-permit-primary",
+      "target_iri": "resource/get-parking-permit-get-parking-permit-primary"
     }
   ],
   "resource/get-pregnancy-workplace-protection-get-pregnancy-workplace-protection-primary": [
@@ -1777,6 +2005,542 @@
       "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0e9e911f37160443816e8c15",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-road-collision-public-private-transport-northern-ireland-handoff",
+      "target_iri": "resource/report-road-collision-public-private-transport-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:324a50f7a416c2aba62a32de",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5b113990c0140e8999b8177b",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6436fb0f575115c8a61f5acd",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-road-collision-public-private-transport-wales-handoff",
+      "target_iri": "resource/report-road-collision-public-private-transport-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8fcecfc7be58904546621aad",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:96ccc02012bb777c91cc9815",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9cc01bd30d53f8fef574e725",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ade3ae9b7b76bf944c56be58",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ca0cb99e355369394e6cf724",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-road-collision-report-road-collision-primary",
+      "target_iri": "resource/report-road-collision-report-road-collision-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d0ea832b2b8925981dd30220",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-road-collision-public-private-transport-scotland-handoff",
+      "target_iri": "resource/report-road-collision-public-private-transport-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e24f7d8c950f8a4cff1af91b",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-road-collision-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-road-collision-ordinary-source-linked-route",
+      "target": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e37060fee5e66afcb5285631",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/report-road-collision-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/report-road-collision-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e3dce75e36ff4248810e4ab5",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f85e2283994d63d13c14c6e6",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/report-road-collision-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ]
 }

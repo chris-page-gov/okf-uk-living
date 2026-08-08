@@ -73,6 +73,47 @@
       "target_iri": "enclosing-process/use-routine-and-preventive-healthcare"
     }
   ],
+  "dependency/regulated-or-registered-letting-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:844f1d43674f6bb96a248154",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/rent-private-home",
+      "source_iri": "dataset/rent-private-home",
+      "target": "dependency/regulated-or-registered-letting-provider",
+      "target_iri": "dependency/regulated-or-registered-letting-provider"
+    }
+  ],
   "evidence/become-a-foster-carer-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -152,6 +193,47 @@
       "target_iri": "evidence/obtain-child-passport-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "evidence/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml",
+          "source_ids": [
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff",
+            "use-household-recycling-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fb6589d7cd82085c3eea3dd2",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "outcome/get-leaving-care-support-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -193,6 +275,47 @@
       "target_iri": "outcome/get-leaving-care-support-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
+  "outcome/pay-clean-air-zone-charge-ordinary-source-linked-route-follow-current-official-instructions-check-the-vehicle-and-journey-against-the-current-official-zone-service-pay-where-required-and-retain-payment-or-exemption-evidence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/pay-clean-air-zone-charge.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/pay-clean-air-zone-charge.v1.yaml",
+          "source_ids": [
+            "pay-clean-air-zone-charge-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:509df2e8f406c560ac571682",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/pay-clean-air-zone-charge-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/pay-clean-air-zone-charge-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/pay-clean-air-zone-charge-ordinary-source-linked-route-follow-current-official-instructions-check-the-vehicle-and-journey-against-the-current-official-zone-service-pay-where-required-and-retain-payment-or-exemption-evidence",
+      "target_iri": "outcome/pay-clean-air-zone-charge-ordinary-source-linked-route-follow-current-official-instructions-check-the-vehicle-and-journey-against-the-current-official-zone-service-pay-where-required-and-retain-payment-or-exemption-evidence"
+    }
+  ],
   "redress/manage-university-intellectual-property-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
     {
       "assertion_scope": "real-world",
@@ -232,6 +355,234 @@
       "source_iri": "service-step/manage-university-intellectual-property-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "redress/manage-university-intellectual-property-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
       "target_iri": "redress/manage-university-intellectual-property-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "redress/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml",
+          "source_ids": [
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff",
+            "use-household-recycling-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:95620ddf94963d2a08485718",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "requirement/protect-tenancy-deposit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/protect-tenancy-deposit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/protect-tenancy-deposit.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "protect-tenancy-deposit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b43beda00b4dd375c910b522",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/protect-tenancy-deposit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/protect-tenancy-deposit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/protect-tenancy-deposit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/protect-tenancy-deposit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "resource/report-abandoned-vehicle-rubbish-street-wales-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:50a419ce92f474e4c1877200",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-abandoned-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-abandoned-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6097aae3aed34d771106e175",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-abandoned-vehicle-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-abandoned-vehicle-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9ac3f5111e83381a88f6a9d0",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-abandoned-vehicle",
+      "source_iri": "dataset/report-abandoned-vehicle",
+      "target": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-abandoned-vehicle.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c7c7e81802864d46191d857d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-abandoned-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-abandoned-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-abandoned-vehicle-rubbish-street-wales-handoff"
     }
   ],
   "resource/sit-public-examinations-school-years-scotland-handoff": [
@@ -378,6 +729,743 @@
       "source_iri": "service-step/sit-public-examinations-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/sit-public-examinations-school-years-scotland-handoff",
       "target_iri": "resource/sit-public-examinations-school-years-scotland-handoff"
+    }
+  ],
+  "rule/arrange-bulky-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml",
+          "source_ids": [
+            "arrange-bulky-waste-collection-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:683c4160848a773e400bde7b",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-bulky-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-bulky-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/arrange-bulky-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/arrange-bulky-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "rule/use-household-recycling-service-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/use-household-recycling-service.v1.yaml",
+          "source_ids": [
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff",
+            "use-household-recycling-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3a8676a04f85c34f4dd2f720",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-household-recycling-service-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-household-recycling-service-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/use-household-recycling-service-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/use-household-recycling-service-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "service-episode/order-replacement-waste-container-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml",
+          "source_ids": [
+            "order-replacement-waste-container-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9c6370bcd15bea39c5c25f61",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/order-replacement-waste-container",
+      "source_iri": "dataset/order-replacement-waste-container",
+      "target": "service-episode/order-replacement-waste-container-exception-or-route-failure",
+      "target_iri": "service-episode/order-replacement-waste-container-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml",
+          "source_ids": [
+            "order-replacement-waste-container-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b53f11730ae80b859e8e8f1d",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/order-replacement-waste-container-exception-or-route-failure",
+      "source_iri": "service-episode/order-replacement-waste-container-exception-or-route-failure",
+      "target": "service-step/order-replacement-waste-container-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/order-replacement-waste-container-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/order-replacement-waste-container.v1.yaml",
+          "source_ids": [
+            "order-replacement-waste-container-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f8b1899ce903c4438acd8fe3",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/order-replacement-waste-container-exception-or-route-failure",
+      "source_iri": "service-episode/order-replacement-waste-container-exception-or-route-failure",
+      "target": "enclosing-process/manage-household-waste-collections",
+      "target_iri": "enclosing-process/manage-household-waste-collections"
+    }
+  ],
+  "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "housing-community-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0218fe9451164eb2e5efc776",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/apply-for-home-adaptation-housing-community-scotland-handoff",
+      "target_iri": "resource/apply-for-home-adaptation-housing-community-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1cfd67ca54fa733e4c0905b0",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2625f2e058740268888b0be9",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3c9685e3044c3ce6ad02e70b",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:48086d696dde8d28d7185ff4",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/apply-for-home-adaptation-ordinary-source-linked-route",
+      "source_iri": "service-episode/apply-for-home-adaptation-ordinary-source-linked-route",
+      "target": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5aacc191829a2e2b522ea0ed",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/apply-for-home-adaptation-housing-community-wales-handoff",
+      "target_iri": "resource/apply-for-home-adaptation-housing-community-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:683e19a9a21b44643c8f52c4",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7f7fb7019c3b2b8957bfaa56",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/apply-for-home-adaptation-housing-community-northern-ireland-handoff",
+      "target_iri": "resource/apply-for-home-adaptation-housing-community-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7f9335f33da7c42f580310d7",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:825744e32ce72a1c9820ac37",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/apply-for-home-adaptation-apply-for-home-adaptation-primary",
+      "target_iri": "resource/apply-for-home-adaptation-apply-for-home-adaptation-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:97209dacc0aaac59b836a9f9",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-request-the-applicable-needs-housing-and-grant-assessments-before-arranging-eligible-accessibility-work",
+      "target_iri": "outcome/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-request-the-applicable-needs-housing-and-grant-assessments-before-arranging-eligible-accessibility-work"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:adda3261bb0aa54efc82adda",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f8442560c67be9c2676000b3",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-home-adaptation.v1.yaml",
+          "source_ids": [
+            "apply-for-home-adaptation-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fa74b653d1131860ad66f499",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/apply-for-home-adaptation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ]
 }

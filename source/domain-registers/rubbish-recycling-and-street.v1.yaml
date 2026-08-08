@@ -1,0 +1,239 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-4-home-place-transport
+domain: rubbish-recycling-and-street
+title: Rubbish, recycling and the street
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-4-home-place-transport-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: rubbish-street-scotland-handoff
+    jurisdiction: Scotland
+    title: Bins and recycling in Scotland
+    owner: Scottish Government
+    authority_role: scotland_waste_discovery_handoff
+    resource: https://www.mygov.scot/browse/housing-local-services/rubbish-and-recycling
+    coverage: Routes people to current Scottish household-waste and local-council services.
+    exclusions: Does not determine collection arrangements, accepted materials, charges or enforcement.
+  - <<: *source_defaults
+    id: rubbish-street-wales-handoff
+    jurisdiction: Wales
+    title: Recycling and waste in Wales
+    owner: Welsh Government
+    authority_role: wales_waste_discovery_handoff
+    resource: https://www.gov.wales/recycling-waste-circular-economy
+    coverage: Routes people to current Welsh waste policy, local services and environmental guidance.
+    exclusions: Does not establish a local collection, report or disposal route.
+  - <<: *source_defaults
+    id: rubbish-street-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Rubbish, recycling and waste in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_waste_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/environment-and-outdoors/waste-and-recycling
+    coverage: Routes people to current Northern Ireland household and council waste services.
+    exclusions: Great Britain waste routes do not establish Northern Ireland collection or disposal procedure.
+families:
+  - <<: *family_defaults
+    id: view-waste-collection-schedule
+    title: View the waste collection schedule
+    aliases: [bin collection day, when is recycling collected, household waste calendar]
+    description: Use the responsible council's address-based service to identify current collection dates, containers and material streams.
+    situations: [A household needs to know when and how ordinary waste or recycling will be collected.]
+    user_needs: [Reach the correct local schedule without assuming neighbouring authorities use the same calendar or materials.]
+    source:
+      <<: *source_defaults
+      id: view-waste-collection-schedule-primary
+      title: Find out your rubbish collection day
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_collection_day_locator
+      resource: https://www.gov.uk/rubbish-collection-day
+      coverage: Routes users in England and Wales to the responsible council collection-day service.
+      exclusions: Does not publish the local calendar or guarantee collection after service disruption.
+  - id: report-missed-rubbish-collection
+    title: Report a missed rubbish collection
+    aliases: [missed bin, bin not collected, council missed waste pickup]
+    description: Check the local collection conditions and report an eligible missed household waste or recycling collection.
+    situations: [A household waste or recycling container was not emptied on the expected collection day.]
+    user_needs: [Find the responsible council route and preserve local eligibility and exception evidence.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - <<: *family_defaults
+    id: order-replacement-waste-container
+    title: Order a replacement waste container
+    aliases: [replace missing bin, request recycling box, new food waste caddy]
+    description: Request the locally specified bin, box, bag or caddy and retain any charge, delivery or refusal information.
+    situations: [A household container is missing, damaged, unsuitable or newly required.]
+    user_needs: [Use the correct council route and understand that container types, charges and entitlement are local.]
+    source:
+      <<: *source_defaults
+      id: order-replacement-waste-container-primary
+      title: Find your local council
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_local_council_locator
+      resource: https://www.gov.uk/find-local-council
+      coverage: Locates the England council responsible for local waste-container services.
+      exclusions: Does not specify container entitlement, size, charge, delivery or local exceptions.
+  - <<: *family_defaults
+    id: use-household-recycling-service
+    title: Use a household recycling service
+    aliases: [what can I recycle, household recycling collection, recycling centre]
+    description: Check locally accepted materials and use the applicable kerbside, bring-site or household recycling-centre route.
+    situations: [A household wants to separate and dispose of recyclable materials correctly.]
+    user_needs: [Distinguish ordinary household recycling from restricted, hazardous, commercial or chargeable waste.]
+    source:
+      <<: *source_defaults
+      id: use-household-recycling-service-primary
+      title: Household recycling
+      owner: Department for Environment, Food and Rural Affairs
+      authority_role: england_household_recycling_guidance
+      resource: https://www.gov.uk/recycling-collections
+      coverage: Routes users to England local recycling collection information and general material guidance.
+      exclusions: Does not establish what a specific council accepts or the rules at a recycling centre.
+  - <<: *family_defaults
+    id: arrange-garden-waste-collection
+    title: Arrange garden waste collection
+    aliases: [green bin subscription, garden waste service, dispose of garden cuttings]
+    description: Check the council's subscription, container and seasonal rules before arranging garden-waste collection or an alternative disposal route.
+    situations: [A household needs to dispose of grass, leaves, branches or other ordinary garden waste.]
+    user_needs: [Find local charges and exclusions without treating garden waste as part of every standard collection.]
+    source:
+      <<: *source_defaults
+      id: arrange-garden-waste-collection-primary
+      title: Garden waste disposal
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_garden_waste_locator
+      resource: https://www.gov.uk/garden-waste-disposal
+      coverage: Routes users in England and Wales to the relevant council garden-waste service.
+      exclusions: Does not publish subscription cost, collection frequency, accepted material or assisted-service rules.
+  - <<: *family_defaults
+    id: arrange-bulky-waste-collection
+    title: Arrange bulky waste collection
+    aliases: [council furniture collection, remove large household item, bulky item pickup]
+    description: Book or identify the local route for large household items and retain item, fee, access and collection conditions.
+    situations: [A household needs to dispose of furniture, appliances or another item too large for ordinary bins.]
+    user_needs: [Separate council collection, retailer take-back, reuse and licensed private disposal routes.]
+    dependency: licensed-waste-carrier
+    source:
+      <<: *source_defaults
+      id: arrange-bulky-waste-collection-primary
+      title: Apply for special collection of large waste items
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_bulky_waste_locator
+      resource: https://www.gov.uk/collection-large-waste-items
+      coverage: Routes users in England and Wales to council bulky-item collection services.
+      exclusions: Does not establish item eligibility, price, preparation, access or collection timing.
+  - <<: *family_defaults
+    id: dispose-of-hazardous-waste
+    title: Dispose of hazardous waste
+    aliases: [household chemicals disposal, asbestos waste, dangerous waste collection]
+    description: Identify the material and use the authority or licensed-provider route that accepts it without mixing it into ordinary waste.
+    situations: [A household or responsible person needs to dispose of material that may be hazardous.]
+    user_needs: [Find the current classification and safe handoff while preserving emergency and commercial-waste boundaries.]
+    dependency: licensed-hazardous-waste-provider
+    source:
+      <<: *source_defaults
+      id: dispose-of-hazardous-waste-primary
+      title: Hazardous waste disposal
+      owner: Department for Environment, Food and Rural Affairs
+      authority_role: england_hazardous_waste_guidance
+      resource: https://www.gov.uk/hazardous-waste-disposal
+      coverage: Introduces England hazardous-waste responsibilities and household council handoffs.
+      exclusions: Does not classify an unknown substance, provide emergency advice or authorise transport or disposal.
+  - <<: *family_defaults
+    id: arrange-clinical-waste-collection
+    title: Arrange clinical waste collection
+    aliases: [sharps bin collection, medical waste from home, used needle disposal]
+    description: Ask the health or council route responsible for prescribed clinical waste, sharps or dressings to arrange the applicable collection.
+    situations: [Treatment or care at home produces waste that may need a clinical collection route.]
+    user_needs: [Distinguish clinical waste from medicines, ordinary hygiene waste and urgent sharps incidents.]
+    source:
+      <<: *source_defaults
+      id: arrange-clinical-waste-collection-primary
+      title: Request clinical waste collection
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_clinical_waste_locator
+      resource: https://www.gov.uk/request-clinical-waste-collection
+      coverage: Routes users in England and Wales to the council clinical-waste service.
+      exclusions: Does not decide clinical classification, supply containers, handle medicines or give injury advice.
+  - <<: *family_defaults
+    id: report-fly-tipping
+    title: Report fly-tipping
+    aliases: [illegal rubbish dumping, dumped waste report, waste left on land]
+    description: Record the location safely and report dumped waste to the responsible authority while leaving hazardous or criminal investigation to officials.
+    situations: [Waste appears to have been deposited unlawfully on land or beside the highway.]
+    user_needs: [Reach the correct council, landowner or environmental regulator and avoid unsafe handling.]
+    source:
+      <<: *source_defaults
+      id: report-fly-tipping-primary
+      title: Report fly-tipping
+      owner: Department for Environment, Food and Rural Affairs
+      authority_role: england_wales_fly_tipping_report_locator
+      resource: https://www.gov.uk/report-flytipping
+      coverage: Routes England and Wales users to the appropriate council fly-tipping report.
+      exclusions: Does not investigate, identify an offender, remove waste or replace an emergency hazardous-material route.
+  - <<: *family_defaults
+    id: report-litter-or-dog-fouling
+    title: Report litter or dog fouling
+    aliases: [street litter complaint, dog mess report, overflowing litter bin]
+    description: Give the responsible local service a location and current condition so it can decide cleaning or enforcement action.
+    situations: [Litter, an overflowing public bin or dog fouling affects a public place.]
+    user_needs: [Distinguish cleansing, parks, highways, private land and enforcement responsibility.]
+    source:
+      <<: *source_defaults
+      id: report-litter-or-dog-fouling-primary
+      title: Report a litter problem
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_litter_report_locator
+      resource: https://www.gov.uk/report-litter
+      coverage: Routes users in England and Wales to the council responsible for litter reports.
+      exclusions: Does not establish an offence, identify a person, issue a penalty or guarantee cleansing time.
+  - <<: *family_defaults
+    id: report-abandoned-vehicle
+    title: Report an abandoned vehicle
+    aliases: [abandoned car report, vehicle left on street, council remove abandoned vehicle]
+    description: Provide location and observable vehicle information to the responsible council, police or landowner route without approaching the vehicle unsafely.
+    situations: [A vehicle appears abandoned on a road, public place or other land.]
+    user_needs: [Separate abandonment from obstruction, dangerous driving, untaxed-vehicle and private-land routes.]
+    source:
+      <<: *source_defaults
+      id: report-abandoned-vehicle-primary
+      title: Report an abandoned vehicle
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_abandoned_vehicle_locator
+      resource: https://www.gov.uk/report-abandoned-vehicle
+      coverage: Routes users in England and Wales to the council abandoned-vehicle report service.
+      exclusions: Does not declare abandonment, authorise removal or replace police emergency reporting.
+  - <<: *family_defaults
+    id: report-street-cleaning-failure
+    title: Report a street-cleaning failure
+    aliases: [street not swept, road cleansing complaint, dirty pavement report]
+    description: Report the precise public-space location and condition to the authority or landowner responsible for cleansing and retain its response.
+    situations: [A road, pavement or public area has not been cleaned or remains affected after a service visit.]
+    user_needs: [Find the correct highways, district, unitary, estate or private-land responsibility route.]
+    source:
+      <<: *source_defaults
+      id: report-street-cleaning-failure-primary
+      title: Find your local council
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_local_street_cleansing_locator
+      resource: https://www.gov.uk/find-local-council
+      coverage: Locates the England council through which local street-cleansing responsibility can be resolved.
+      exclusions: Does not identify the responsible tier for a specific location or set a cleaning standard or response time.

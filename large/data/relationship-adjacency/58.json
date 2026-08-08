@@ -847,6 +847,47 @@
       "target_iri": "outcome/claim-maternity-allowance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
+  "output/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:69b864be7c36ffa5c4555f15",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
   "requirement/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -883,6 +924,47 @@
       "source_iri": "service-step/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml",
+          "source_ids": [
+            "report-street-cleaning-failure-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a39aadc40a31beb4ed3c520e",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
     }
   ],
   "requirement/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
@@ -922,6 +1004,47 @@
       "source_iri": "service-step/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "requirement/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
       "target_iri": "requirement/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "rule/get-homelessness-help-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/get-homelessness-help.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/get-homelessness-help.v1.yaml",
+          "source_ids": [
+            "get-homelessness-help-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1b54392adcfc20d89e4676c0",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-homelessness-help-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-homelessness-help-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/get-homelessness-help-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/get-homelessness-help-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "rule/use-public-library-child-services-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [

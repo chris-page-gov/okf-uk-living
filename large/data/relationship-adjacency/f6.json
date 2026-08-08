@@ -1426,5 +1426,46 @@
       "target": "service-step/take-parental-leave-ordinary-source-linked-route-follow-current-official-instructions",
       "target_iri": "service-step/take-parental-leave-ordinary-source-linked-route-follow-current-official-instructions"
     }
+  ],
+  "user-need/get-homelessness-help-find-the-urgent-local-route-while-preserving-safeguarding": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/get-homelessness-help.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/get-homelessness-help.v1.yaml",
+          "source_ids": [
+            "get-homelessness-help-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:08bb293d118dcb392e2466e5",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-homelessness-help",
+      "source_iri": "dataset/get-homelessness-help",
+      "target": "user-need/get-homelessness-help-find-the-urgent-local-route-while-preserving-safeguarding",
+      "target_iri": "user-need/get-homelessness-help-find-the-urgent-local-route-while-preserving-safeguarding"
+    }
   ]
 }

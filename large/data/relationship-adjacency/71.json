@@ -147,6 +147,47 @@
       "target_iri": "enclosing-process/arrange-later-life-care-and-future-decisions"
     }
   ],
+  "evidence/register-vehicle-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/register-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/register-vehicle.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "register-vehicle-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b4e7f749d169d34606a06a00",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/register-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/register-vehicle-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/register-vehicle-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
   "outcome/apply-for-further-education-course-ordinary-source-linked-route-follow-current-official-instructions-find-a-suitable-further-education-course-and-follow-the-provider-s-admission-and-funding-route": [
     {
       "assertion_scope": "real-world",
@@ -675,6 +716,47 @@
       "source_iri": "service-step/register-a-death-certification-to-registration-output-select-registration-route",
       "target": "resource/register-a-death-nrs-registering-a-death",
       "target_iri": "resource/register-a-death-nrs-registering-a-death"
+    }
+  ],
+  "rule/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0b2a7f20a0ad3fad98224741",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "rule/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [

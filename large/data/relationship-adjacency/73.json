@@ -622,6 +622,47 @@
       "target_iri": "service-episode/access-neonatal-care-ordinary-source-linked-route"
     }
   ],
+  "evidence/rent-private-home-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e61875aac749c62371958372",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/rent-private-home-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/rent-private-home-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/rent-private-home-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/rent-private-home-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "evidence/start-first-job-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -702,6 +743,88 @@
       "source_iri": "service-step/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "output/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
       "target_iri": "output/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "output/use-community-transport-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/use-community-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/use-community-transport.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "use-community-transport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a3cdbd3cc0f1676e4d924003",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-community-transport-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-community-transport-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/use-community-transport-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/use-community-transport-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
+  "redress/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d604408d26fd560b51efe346",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
     }
   ],
   "redress/arrange-adoption-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
@@ -1236,6 +1359,661 @@
       "source_iri": "service-step/report-child-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/report-child-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/report-child-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "service-episode/report-road-collision-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c07ecb68cdb555529d664acd",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-road-collision-exception-or-route-failure",
+      "source_iri": "service-episode/report-road-collision-exception-or-route-failure",
+      "target": "service-step/report-road-collision-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/report-road-collision-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec9addcd95e7265a79c151d3",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-road-collision-exception-or-route-failure",
+      "source_iri": "service-episode/report-road-collision-exception-or-route-failure",
+      "target": "enclosing-process/own-and-use-a-road-vehicle",
+      "target_iri": "enclosing-process/own-and-use-a-road-vehicle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/report-road-collision.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "report-road-collision-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f5d4b08a93243a471c0e8c45",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-road-collision",
+      "source_iri": "dataset/report-road-collision",
+      "target": "service-episode/report-road-collision-exception-or-route-failure",
+      "target_iri": "service-episode/report-road-collision-exception-or-route-failure"
+    }
+  ],
+  "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0b2a7f20a0ad3fad98224741",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0c1b9b8f4153906adef49ce1",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:18bde1831d625afc4634bc8b",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:397afc259a7cea39bdbfa30e",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:415db43bdf5e1161e48ad17e",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/obtain-motor-insurance-ordinary-source-linked-route",
+      "source_iri": "service-episode/obtain-motor-insurance-ordinary-source-linked-route",
+      "target": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:429e70b6242fcbf250f3c229",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:433c21bcf7675e8f7534116a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-motor-insurance-public-private-transport-wales-handoff",
+      "target_iri": "resource/obtain-motor-insurance-public-private-transport-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5fd9e1b8c0d66deb59486c98",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7d96d1a5bb8dc0431ab2f6d2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-motor-insurance-public-private-transport-northern-ireland-handoff",
+      "target_iri": "resource/obtain-motor-insurance-public-private-transport-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:853e2551fa16f8b89809a55f",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b726c1c23033217853b3b986",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-motor-insurance-obtain-motor-insurance-primary",
+      "target_iri": "resource/obtain-motor-insurance-obtain-motor-insurance-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ddafbbad7fe093c2930f5789",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/obtain-motor-insurance-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de99cc8000bb0d81a23f78dc",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f98a096d02559e1c381b22ae",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-motor-insurance-public-private-transport-scotland-handoff",
+      "target_iri": "resource/obtain-motor-insurance-public-private-transport-scotland-handoff"
     }
   ],
   "user-need/obtain-birth-certificates-identify-the-correct-register": [

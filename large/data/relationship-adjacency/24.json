@@ -608,6 +608,88 @@
       "target_iri": "life-course-domain/finding-work-and-unemployment"
     }
   ],
+  "evidence/seek-planning-permission-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/seek-planning-permission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/seek-planning-permission.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "seek-planning-permission-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b4b37c2c92cd602e25d1fa96",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/seek-planning-permission-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/seek-planning-permission-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/seek-planning-permission-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/seek-planning-permission-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "redress/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "obtain-mot-test-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1ad9a76bbe6ec3b70ff01483",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
   "requirement/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -912,6 +994,47 @@
       "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/move-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/move-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/move-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "move-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:726dff336975a99d6ec1a260",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/move-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/move-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/move-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/move-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "service-episode/apply-to-university-exception-or-route-failure": [

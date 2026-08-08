@@ -1473,6 +1473,47 @@
       "target_iri": "resource/claim-student-council-tax-disregard-post-school-study-scotland-handoff"
     }
   ],
+  "rule/prove-right-to-rent-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/prove-right-to-rent.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/prove-right-to-rent.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "prove-right-to-rent-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f26cc1f671a5082ebd986262",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/prove-right-to-rent-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/prove-right-to-rent-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/prove-right-to-rent-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/prove-right-to-rent-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
   "service-episode/get-student-finance-exception-or-route-failure": [
     {
       "assertion_scope": "real-world",

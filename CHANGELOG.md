@@ -6,6 +6,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Pack 4 population for all 36 approved identities across housing/community,
+  rubbish/street and public/private transport, adding 35 compact dossiers and
+  narratives while preserving the deeper missed-rubbish vertical slice.
+- Forty-four current official link-only sources with body-free receipts and 13
+  natural-language competency questions covering all three domains, four
+  nations, local delivery, exceptions and redress.
+
 - Pack 3 population for all 36 approved families across finding work,
   employment and money/tax/benefits, with original summaries, four-nation
   variants, ordinary and exception journeys and specialist-review boundaries.
@@ -144,6 +151,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Advanced `PACK-004` to complete and `PACK-005` to active after the 148-family,
+  5,567-concept, 524-resource and 8,599-relationship projection passed locked
+  local validation.
 
 - Advanced `PACK-003` to complete and `PACK-004` to active after the 113-family,
   4,535-concept, 384-resource and 6,622-relationship projection passed locked

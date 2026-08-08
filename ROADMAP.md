@@ -122,8 +122,15 @@ overlap-preservation path for later packs.
 money/tax/benefits add 36 dossiers, service narratives, 45 active link-only
 sources and 13 competency questions. The 4,535-concept projection contains 113
 dossier-backed families, 384 resources and 6,622 governed relationships. The
-new HSE host has dated OGL evidence and remains link-and-summary only. Pack 4
-is the next bounded population unit.
+new HSE host has dated OGL evidence and remains link-and-summary only.
+
+`PACK-004` completed locally on 2026-08-08. Housing/community, rubbish/street
+and public/private transport account for all 36 contracted identities, adding
+35 dossiers while preserving the deeper missed-rubbish vertical slice.
+Forty-four active link-only sources and 13 additional competency questions
+passed acceptance. The 5,567-concept projection contains 148 dossier-backed
+families, 524 resources and 8,599 governed relationships. Pack 5 is the next
+bounded population unit.
 
 ## Phase 5 — release candidate and publication
 

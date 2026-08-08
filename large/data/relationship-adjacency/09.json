@@ -1625,6 +1625,47 @@
       "target_iri": "evidence/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "outcome/tax-or-sorn-vehicle-ordinary-source-linked-route-follow-current-official-instructions-use-the-current-vehicle-record-to-tax-the-vehicle-or-make-the-applicable-statutory-off-road-notification-and-retain-confirmation": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "tax-or-sorn-vehicle-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4085381f840a189f15d4eb88",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/tax-or-sorn-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/tax-or-sorn-vehicle-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/tax-or-sorn-vehicle-ordinary-source-linked-route-follow-current-official-instructions-use-the-current-vehicle-record-to-tax-the-vehicle-or-make-the-applicable-statutory-off-road-notification-and-retain-confirmation",
+      "target_iri": "outcome/tax-or-sorn-vehicle-ordinary-source-linked-route-follow-current-official-instructions-use-the-current-vehicle-record-to-tax-the-vehicle-or-make-the-applicable-statutory-off-road-notification-and-retain-confirmation"
+    }
+  ],
   "output/appeal-school-admission-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
     {
       "assertion_scope": "real-world",
@@ -1746,6 +1787,47 @@
       "source_iri": "service-step/find-registered-childcare-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "output/find-registered-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
       "target_iri": "output/find-registered-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "output/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:490d4e6011659b3782ddb02c",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
   "redress/access-neonatal-care-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
@@ -2055,6 +2137,47 @@
       "source_iri": "service-step/register-as-childminder-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/register-as-childminder-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/register-as-childminder-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:30f6968896816d49bc8c916d",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "rule/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
@@ -3680,6 +3803,464 @@
       "source_iri": "service-step/register-with-health-services-as-student-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/register-with-health-services-as-student-post-school-study-scotland-handoff",
       "target_iri": "resource/register-with-health-services-as-student-post-school-study-scotland-handoff"
+    }
+  ],
+  "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4989fedbbdba986d798bd375",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4a2637bb40c8d18759e9b7df",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b04418cc8df4085efc09cea7",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-noise-or-pest-nuisance-housing-community-wales-handoff",
+      "target_iri": "resource/report-noise-or-pest-nuisance-housing-community-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c55c48b13696ce626b841c2d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-noise-or-pest-nuisance-report-noise-or-pest-nuisance-primary",
+      "target_iri": "resource/report-noise-or-pest-nuisance-report-noise-or-pest-nuisance-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c5ae74ddd9b894d9bbf2ff97",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c7b0c4fecd2193de488a45dc",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d51c03b729ca21ecd51f8b76",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-noise-or-pest-nuisance-housing-community-northern-ireland-handoff",
+      "target_iri": "resource/report-noise-or-pest-nuisance-housing-community-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e409085de19ecb4e81267140",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e8d98530e99fdfb83c397941",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec61269c8bbcb0e012181347",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-noise-or-pest-nuisance-housing-community-scotland-handoff",
+      "target_iri": "resource/report-noise-or-pest-nuisance-housing-community-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f816b4c60bea2d7eaa378f20",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f93aef21749b61fd0bbfb8fa",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-noise-or-pest-nuisance-exception-or-route-failure",
+      "source_iri": "service-episode/report-noise-or-pest-nuisance-exception-or-route-failure",
+      "target": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/report-noise-or-pest-nuisance-exception-or-route-failure-resolve-route-boundary-or-failure"
     }
   ],
   "user-need/challenge-school-exclusion-understand-the-decision-record": [

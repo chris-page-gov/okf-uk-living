@@ -229,6 +229,47 @@
       "target_iri": "outcome/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
+  "output/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:857b340586eb785bb5336164",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "output/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -466,6 +507,47 @@
       "source_iri": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/claim-universal-credit-while-unemployed-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/claim-universal-credit-while-unemployed-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ae836d5a44ba87dcc73ea4e1",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
     }
   ],
   "resource/choose-home-education-school-years-northern-ireland-handoff": [
@@ -1052,6 +1134,624 @@
       "target_iri": "resource/start-work-based-apprenticeship-start-work-based-apprenticeship-primary"
     }
   ],
+  "rule/apply-for-social-housing-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8cb2d8a76b83798bcdc09272",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-social-housing-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/apply-for-social-housing-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/apply-for-social-housing-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "rule/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "tax-or-sorn-vehicle-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a518330466ec9574dcb834e1",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:09e2a0639f291404347d62f1",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:176851df5d9bacdee33c2778",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:29884177483ef71c9339615a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/apply-for-social-housing-housing-community-northern-ireland-handoff",
+      "target_iri": "resource/apply-for-social-housing-housing-community-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3ec5830950ebd39c0bb6a182",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/apply-for-social-housing-ordinary-source-linked-route",
+      "source_iri": "service-episode/apply-for-social-housing-ordinary-source-linked-route",
+      "target": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:45ca24631974cad731cba97b",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4983c44d665721b93864f0bf",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "housing-community-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4eaafb73266e5b4a65b3934f",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/apply-for-social-housing-housing-community-scotland-handoff",
+      "target_iri": "resource/apply-for-social-housing-housing-community-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:78b7b18ba118a42bfebd2aa5",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/apply-for-social-housing-apply-for-social-housing-primary",
+      "target_iri": "resource/apply-for-social-housing-apply-for-social-housing-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:857b340586eb785bb5336164",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8d95f649fdde9e18e8f330bc",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:949b61a0b09b47b39e61d4df",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9b7ba9e953564506f90c446b",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/apply-for-social-housing-housing-community-wales-handoff",
+      "target_iri": "resource/apply-for-social-housing-housing-community-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:aa582f0b2e21db6ef3c4be32",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml",
+          "source_ids": [
+            "apply-for-social-housing-primary",
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ed1446b0f13fc0ee80dec112",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-social-housing-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    }
+  ],
   "service-step/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route": [
     {
       "assertion_scope": "real-world",
@@ -1586,6 +2286,542 @@
       "source_iri": "service-step/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/get-academic-qualification-recognised-post-school-study-scotland-handoff",
       "target_iri": "resource/get-academic-qualification-recognised-post-school-study-scotland-handoff"
+    }
+  ],
+  "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:179d378d242418e2c4ee6357",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1d7eda54525de8e015da580d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/register-for-council-tax-register-for-council-tax-primary",
+      "target_iri": "resource/register-for-council-tax-register-for-council-tax-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:567dfe3af36e49c5e88146e3",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:58fb004d410262c586721daa",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/register-for-council-tax-housing-community-northern-ireland-handoff",
+      "target_iri": "resource/register-for-council-tax-housing-community-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6cedc19a9e8bdfdd4b7b05c4",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ac5c9e27471cff90629ffcf5",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ae836d5a44ba87dcc73ea4e1",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b260d044274f3699f531f61b",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/register-for-council-tax-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bd196549ed5ab2b4c0333629",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/register-for-council-tax-ordinary-source-linked-route",
+      "source_iri": "service-episode/register-for-council-tax-ordinary-source-linked-route",
+      "target": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c8c7a73f430b05d73c97a2c5",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d0444c7a1ab2deb6c0846a36",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/register-for-council-tax-housing-community-scotland-handoff",
+      "target_iri": "resource/register-for-council-tax-housing-community-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de69397163cb52f52dd9b724",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "register-for-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ea2e5fc2a5c74d8c2357305c",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/register-for-council-tax.v1.yaml",
+          "source_ids": [
+            "housing-community-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f9b5d19443df8e1e57ac3744",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-for-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/register-for-council-tax-housing-community-wales-handoff",
+      "target_iri": "resource/register-for-council-tax-housing-community-wales-handoff"
     }
   ],
   "service-step/take-paternity-or-partner-leave-exception-or-route-failure-resolve-route-boundary-or-failure": [
