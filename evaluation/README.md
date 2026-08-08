@@ -67,5 +67,11 @@ the three preserved death/notification/estate slices. It adds 47 body-free
 official links and 13 questions, bringing acceptance to 293 families, 104
 questions and all 24 life-course domains.
 
+The [population assurance review](reviews/population-assurance-2026-08-08.md)
+reconciles the whole authored and generated corpus, freezes exact artifact
+hashes and records six representative visible-Explorer journeys. It establishes
+the local population-complete gate with zero blocking omissions while retaining
+the separate specialist-review and publication gates.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

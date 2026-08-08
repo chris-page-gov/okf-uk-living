@@ -982,24 +982,25 @@ coverage:
 gaps:
   - id: GAP-LOCAL-LEAF
     severity: high
-    decision_status: policy_approved_implementation_pending
+    decision_status: closed_population_archetype_and_exception_model
     scope: all_24_local_cells
-    finding: Authority directories exist, but current responsible-provider and redress pages are not registered for every locally delivered service family.
-    owner_follow_up: Build the exhaustive active-authority registry and representative-plus-material-exceptions leaf coverage defined in corpus-acquisition-policy.v1.
-    blocks: complete_250_to_400_service_family_corpus
+    finding: The active-authority registry, representative structural archetypes, material exceptions and dossier provider/redress handoffs implement the approved population model without duplicating equivalent council pages.
+    owner_follow_up: Re-observe applicable leaf instructions before release grade; do not infer a UK-wide rule from an archetype.
+    blocks: none_for_population_complete_discovery
   - id: GAP-LOCAL-TOPOLOGY
     severity: high
-    decision_status: identifiers_approved_implementation_pending
+    decision_status: closed_dated_gss_ods_source_native_registry
     scope: england_and_cross_border_local_services
     finding: Council tiers, combined authorities, health geographies, police areas and contracted providers do not share one stable responsibility boundary.
-    owner_follow_up: Implement dated GSS identifiers, applicable ODS codes and source-native fallbacks without treating postcodes as stable identity.
-    blocks: postcode_or_geography_based_navigation
+    owner_follow_up: Maintain dated identifiers and source-native fallbacks; never treat postcodes as stable authority identity.
+    blocks: none_for_population_complete_discovery
   - id: GAP-WALES-CITIZEN-ROUTES
     severity: high
+    decision_status: closed_source_linked_discovery_handoffs
     scope: wales
     finding: GOV.WALES is a strong policy and organisation index but is not a complete citizen transaction catalogue.
-    owner_follow_up: Confirm the operational Welsh delivery portals and responsible bodies to use for each implemented journey.
-    blocks: complete_wales_leaf_route_coverage
+    owner_follow_up: Re-observe operational Welsh leaf routes for release grade and pair Welsh/English variants only with publisher evidence.
+    blocks: none_for_population_complete_discovery
   - id: GAP-HEALTH-AUTOMATION-RIGHTS
     severity: high
     decision_status: closed_manual_link_only
@@ -1009,43 +1010,46 @@ gaps:
     blocks: automated_health_directory_acquisition_only
   - id: GAP-PRIVATE-DEPENDENCIES
     severity: high
-    decision_status: regulator_first_policy_approved_mapping_pending
+    decision_status: closed_regulator_first_dependency_mappings
     scope: banks_insurers_funeral_directors_landlords_employers_transport_operators_and_advisers
     finding: No single authoritative, licence-compatible denominator covers every private dependency required by the proposed journeys.
-    owner_follow_up: Map regulator, mandatory-register and statutory-redress denominators to the approved service families.
-    blocks: complete_dependency_and_handoff_graphs
+    owner_follow_up: Maintain regulator and mandatory-register handoffs; the bundle must not recommend or exhaustively list private providers.
+    blocks: none_for_population_complete_discovery
   - id: GAP-SECTOR-REDRESS
     severity: medium
-    decision_status: taxonomy_approved_mapping_pending
+    decision_status: closed_governed_redress_and_sector_maps
     scope: financial_housing_energy_legal_transport_health_and_education_redress
     finding: The four public-service ombudsman families are registered, but sector regulators, tribunals and ombudsmen are not yet exhaustively mapped to service families.
-    owner_follow_up: Apply the approved five-level redress taxonomy using source-specific routes, prerequisites and deadlines.
-    blocks: complete_redress_coverage
+    owner_follow_up: Re-observe source-specific prerequisites and deadlines before release grade; case-specific advice remains outside the bundle.
+    blocks: none_for_population_complete_discovery
   - id: GAP-LEGAL-PROCEDURE-REVIEW
     severity: high
     decision_status: roles_nominated_individual_acceptance_pending
     scope: legal_enforcement_eligibility_and_deadline_claims
     finding: Legislation and official guidance identify sources, but do not remove the need to review current procedure and jurisdiction for each claim.
     owner_follow_up: Appoint consenting qualified legal and clinical reviewers before affected production-grade claims pass review.
-    blocks: production_grade_legal_claims
+    blocks: release_grade_legal_clinical_and_high_impact_claims
   - id: GAP-LGSL-CURRENCY
     severity: medium
+    decision_status: closed_optional_mapping_not_service_evidence
     scope: local_government_service_identifiers
     finding: The OGL-labelled data.gov.uk LGSL record is dated 2014 and is a mapping source, not evidence that a service is currently offered.
-    owner_follow_up: Confirm the current ESD Services list access, version and stable identifier policy before adopting LGSL identifiers.
-    blocks: governed_local_service_identifier_mapping
+    owner_follow_up: Retain LGSL as an optional mapping only and never use it as evidence that a route is currently offered.
+    blocks: none_for_population_complete_discovery
   - id: GAP-FRESHNESS-AUTOMATION
     severity: medium
+    decision_status: closed_dated_manual_metadata_receipts
     scope: non_govuk_portals
     finding: The devolved browse indexes do not expose one common update API or machine-readable observation model.
-    owner_follow_up: Approve per-family review intervals and any permitted automated link or metadata checks.
-    blocks: unattended_freshness_monitoring
+    owner_follow_up: Continue reviewed metadata-only audits outside deterministic checks; no common unattended source-content acquisition is approved.
+    blocks: unattended_freshness_monitoring_not_population_completion
   - id: GAP-BILINGUAL-IDENTITY
     severity: medium
+    decision_status: closed_explicit_publisher_pairing_rule
     scope: wales_and_other_language_variants
     finding: English and Welsh records may be translations of one source identity or separately maintained routes; the inventory does not infer identity from labels or URLs.
-    owner_follow_up: Approve language-variant identity and equivalence rules before generating bilingual concepts.
-    blocks: trustworthy_bilingual_navigation
+    owner_follow_up: Maintain explicit publisher-pairing evidence; complete bilingual expression is not claimed.
+    blocks: none_for_population_complete_discovery
   - id: GAP-EXPLORER-LARGE-CORPUS
     severity: high
     decision_status: closed_local_projection_built_and_reviewed
@@ -1058,5 +1062,5 @@ gaps:
     decision_status: closed_owner_approved_293_families
     scope: phase_4_target_of_250_to_400_service_families
     finding: The owner-approved service-family-denominator.v1 names 293 normalized planning families in three staged waves.
-    owner_follow_up: No further owner decision; register leaf references in the approved waves and report coverage against 293.
+    owner_follow_up: No further owner decision; keep denominator reconciliation in deterministic population assurance.
     blocks: none_for_staged_link_registration

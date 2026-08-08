@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>evaluation/candidates/population-complete-candidate.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>evaluation/candidates/population-complete-candidate.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>evaluation/candidates/population-complete-candidate.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>schema: life-course-population-candidate.v1
+candidate_id: life-course-population-complete-2026-08-08
+status: frozen_local_population_complete
+frozen_at: &quot;2026-08-08T22:15:00+01:00&quot;
+basis_commit: b65ed03545f78b261b5d6c9e49061424dc69b7dc
+basis_pull_request: https://github.com/chris-page-gov/okf-uk-living/pull/21
+population_complete: true
+release_grade: false
+publication_authorized: false
+source_snapshots_acquired: false
+source_response_bodies_retained: false
+scope: The 293-family static life-course discovery projection and its governed semantic, search, source-link and relationship data plane.
+artifacts:
+  - okf-explorer.json
+  - large/data/manifest.json
+  - large/data/search/manifest.json
+  - large/data/relationships-0.json
+  - large/data/resources-0.json
+  - large/data/validation-report.json
+  - generated/semantic/life-course-corpus.jsonld
+  - generated/semantic/life-course-corpus.yamlld
+  - generated/semantic/validation-report.json
+browser_review:
+  explorer_version: 0.5.7
+  observed_at: &quot;2026-08-08T22:10:00+01:00&quot;
+  bundle_url: http://127.0.0.1:8011/okf-explorer.json
+  source_response_bodies_retained: false
+  journeys:
+    - kind: national
+      query: get tax back from HMRC
+      expected_family: claim-tax-refund
+      expected_title: Claim a tax refund
+      status: passed_search_details_narrative_graph_official_source
+    - kind: devolved
+      query: death registration
+      expected_family: register-a-death
+      expected_title: Register a death
+      status: passed_search_details_narrative_graph_official_source
+    - kind: local
+      query: missed bin collection
+      expected_family: report-missed-rubbish-collection
+      expected_title: Report a missed rubbish collection
+      status: passed_search_details_narrative_graph_official_source
+    - kind: health
+      query: NHS 111
+      expected_family: use-urgent-and-emergency-health-services
+      expected_title: Use urgent and emergency health services
+      status: passed_search_details_narrative_graph_official_source
+    - kind: legal
+      query: legal aid
+      expected_family: get-legal-aid
+      expected_title: Get legal aid
+      status: passed_search_details_narrative_graph_official_source
+    - kind: private-dependency
+      query: private parking ticket
+      expected_family: challenge-private-parking-charge
+      expected_title: Challenge a private parking charge
+      status: passed_search_details_narrative_graph_official_source
+gap_dispositions:
+  - id: GAP-LOCAL-LEAF
+    population_gate: satisfied_by_approved_archetype_and_material_exception_model
+    remaining_boundary: Equivalent council pages are not duplicated and leaf instructions must be re-observed for release grade.
+    evidence: [source/authority-registry.v1.yaml, profiles/corpus-acquisition-policy.v1.yaml]
+  - id: GAP-LOCAL-TOPOLOGY
+    population_gate: satisfied_by_dated_gss_ods_and_source_native_registry
+    remaining_boundary: Postcodes are not treated as stable authority identity.
+    evidence: [source/authority-registry.v1.yaml, evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md]
+  - id: GAP-WALES-CITIZEN-ROUTES
+    population_gate: satisfied_for_source_linked_discovery
+    remaining_boundary: A national discovery handoff does not establish a Welsh leaf rule or bilingual identity.
+    evidence: [source/domain-registers, docs/authoring.md]
+  - id: GAP-HEALTH-AUTOMATION-RIGHTS
+    population_gate: satisfied_by_manual_link_only_acquisition
+    remaining_boundary: Automated source-content acquisition remains prohibited without permission.
+    evidence: [profiles/corpus-acquisition-policy.v1.yaml, LICENSE_DECISIONS.md]
+  - id: GAP-PRIVATE-DEPENDENCIES
+    population_gate: satisfied_by_regulator_first_dependency_mappings
+    remaining_boundary: The bundle does not recommend or exhaustively list private providers.
+    evidence: [source/shared-authority-seeds.v1.yaml, source/life-course-families]
+  - id: GAP-SECTOR-REDRESS
+    population_gate: satisfied_by_governed_redress_steps_and_sector_maps
+    remaining_boundary: Case-specific prerequisites and deadlines remain with the current official route.
+    evidence: [source/shared-authority-seeds.v1.yaml, source/life-course-families]
+  - id: GAP-LEGAL-PROCEDURE-REVIEW
+    population_gate: non_blocking_specialist_review_warning
+    remaining_boundary: Named legal, clinical and service-owner acceptance is required for release grade.
+    evidence: [profiles/corpus-acquisition-policy.v1.yaml, generated/assurance/review-status-report.json]
+  - id: GAP-LGSL-CURRENCY
+    population_gate: satisfied_by_optional_source_native_mapping_policy
+    remaining_boundary: LGSL never proves that a current authority offers a route.
+    evidence: [source/authority-registry.v1.yaml, docs/authoring.md]
+  - id: GAP-FRESHNESS-AUTOMATION
+    population_gate: satisfied_by_dated_manual_metadata_receipts
+    remaining_boundary: Live link audits remain separate from deterministic offline tests.
+    evidence: [evaluation/link-receipts, docs/authoring.md]
+  - id: GAP-BILINGUAL-IDENTITY
+    population_gate: satisfied_by_explicit_publisher_pairing_rule
+    remaining_boundary: Label similarity never creates identity and complete bilingual content is not claimed.
+    evidence: [docs/authoring.md, source/authority-registry.v1.yaml]
+  - id: GAP-EXPLORER-LARGE-CORPUS
+    population_gate: satisfied_by_local_explorer_review
+    remaining_boundary: Public deployment remains unverified and unauthorized.
+    evidence: [evaluation/reviews/large-corpus-2026-08-07.md, evaluation/candidates/population-complete-candidate.v1.yaml]
+  - id: GAP-SERVICE-FAMILY-DENOMINATOR
+    population_gate: satisfied_by_owner_approved_293_family_denominator
+    remaining_boundary: Unstaged acquisition remains disabled.
+    evidence: [source/service-family-denominator.v1.yaml, profiles/life-course-population-contract.v1.yaml]
+</pre>
+</body>
+</html>

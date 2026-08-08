@@ -4,7 +4,7 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **full 293-family population implementation authorized and contracted**.
+Status: **local 293-family population-complete candidate frozen**.
 The Reader, query, graph provenance, browser source handoff and licence-notice
 journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
@@ -14,8 +14,10 @@ specialist-reviewed release grade. All 293 reviewed families now expose
 authored narratives, typed official links and governed journey graphs across
 all 24 life-course domains. The shared infrastructure now adds
 397 dated GSS geographies, 438 reusable authority/regulator/redress records,
-ten sector maps and metadata-only source-link receipts. This is not an official service
-corpus or publication candidate. The GitHub
+ten sector maps and metadata-only source-link receipts. Deterministic population
+assurance records zero blocking omissions and freezes the exact local data-plane
+artifacts. This is not an official service corpus, a release-grade candidate or
+a publication candidate. The GitHub
 repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
 acquisition and CI remain disabled, and publication requires a separate
 explicit owner request.
@@ -43,6 +45,9 @@ explicit owner request.
 - [Pack 6 family/health/care review](evaluation/reviews/pack-6-family-health-care-2026-08-08.md)
 - [Pack 7 civic/enterprise/creativity review](evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md)
 - [Pack 8 mobility/later-life/death review](evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md)
+- [Population assurance review](evaluation/reviews/population-assurance-2026-08-08.md)
+- [Frozen local population candidate](evaluation/candidates/population-complete-candidate.v1.yaml)
+- [Generated candidate manifest](generated/assurance/candidate-manifest.json)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -119,6 +124,9 @@ uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
 uv run --locked python scripts/check_large_projection.py
 uv run --locked python scripts/check_search_acceptance.py
+uv run --locked python scripts/build_population_assurance.py
+uv run --locked python scripts/build_population_assurance.py --check
+uv run --locked python scripts/check_population_assurance.py
 uv run --locked python -m unittest discover -s tests
 ```
 

@@ -14,3 +14,4 @@ remain open until a report records their retest and disposition.
 - [2026-08-08 Pack 6 family/health/care review](pack-6-family-health-care-2026-08-08.md)
 - [2026-08-08 Pack 7 civic/enterprise/creativity review](pack-7-civic-enterprise-creativity-2026-08-08.md)
 - [2026-08-08 Pack 8 mobility/later-life/death review](pack-8-mobility-later-life-death-2026-08-08.md)
+- [2026-08-08 population assurance review](population-assurance-2026-08-08.md)

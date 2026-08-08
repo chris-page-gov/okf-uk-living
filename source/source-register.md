@@ -42,10 +42,10 @@ Initial research references also include:
 These are now normalized in the
 [exhaustive reference-family inventory](exhaustive-reference-inventory.v1.yaml):
 89 new records plus the 53 existing slice references, 120 assessed coverage
-cells and 12 actionable gaps. The related
+cells and 12 tracked gaps. The related
 [gap analysis](../research/exhaustive-reference-gap-analysis.md) is the owner
-handoff for local topology, health permissions, private dependencies, redress,
-freshness, bilingual identity and the Explorer large-corpus projection.
+handoff records their population-gate dispositions and the remaining
+release-review, freshness, bilingual and future-automation boundaries.
 
 The approved [293-family denominator](service-family-denominator.v1.yaml) and
 [corpus acquisition policy](../profiles/corpus-acquisition-policy.v1.yaml)
