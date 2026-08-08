@@ -3936,6 +3936,47 @@
       "target_iri": "output/appeal-school-admission-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
+  "output/complain-about-nhs-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/complain-about-nhs-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/complain-about-nhs-care.v1.yaml",
+          "source_ids": [
+            "complain-about-nhs-care-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:773022c75868ae47131ce459",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/complain-about-nhs-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/complain-about-nhs-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/complain-about-nhs-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/complain-about-nhs-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
   "output/receive-national-insurance-number-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -5057,6 +5098,47 @@
       "source_iri": "service-step/notify-organisations-after-a-death-notify-covered-and-uncovered-bodies-determine-coverage",
       "target": "rule/notify-organisations-after-a-death-notify-covered-and-uncovered-bodies-determine-coverage-tell-us-once-does-not-apply-to-northern-ireland-and-does-not-cover-every-organisation",
       "target_iri": "rule/notify-organisations-after-a-death-notify-covered-and-uncovered-bodies-determine-coverage-tell-us-once-does-not-apply-to-northern-ireland-and-does-not-cover-every-organisation"
+    }
+  ],
+  "rule/use-pharmacy-services-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-pharmacy-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2d05183b3e44c1f4aa5e4977",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-pharmacy-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-pharmacy-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/use-pharmacy-services-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/use-pharmacy-services-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "service-episode/get-victim-or-witness-support-ordinary-source-linked-route": [

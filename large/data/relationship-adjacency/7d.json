@@ -1577,6 +1577,46 @@
       "target_iri": "service-episode/report-workplace-injury-ordinary-source-linked-route"
     }
   ],
+  "evidence/form-civil-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/form-civil-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/form-civil-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "form-civil-partnership-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:026e3b60b8aec4aab8d36f23",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/form-civil-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/form-civil-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/form-civil-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/form-civil-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/get-blue-badge-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -1656,6 +1696,47 @@
       "source_iri": "service-step/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "evidence/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
       "target_iri": "evidence/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "outcome/access-mental-healthcare-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/access-mental-healthcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/access-mental-healthcare.v1.yaml",
+          "source_ids": [
+            "access-mental-healthcare-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a459c205749d464d1eb9a853",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-mental-healthcare-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-mental-healthcare-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/access-mental-healthcare-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/access-mental-healthcare-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "outcome/prove-right-to-work-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
@@ -1738,6 +1819,47 @@
       "source_iri": "service-step/report-fly-tipping-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "outcome/report-fly-tipping-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
       "target_iri": "outcome/report-fly-tipping-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "output/get-mental-capacity-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-mental-capacity-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0bea2a5e7b56777348a07c47",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-mental-capacity-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-mental-capacity-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/get-mental-capacity-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/get-mental-capacity-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
   "redress/get-school-send-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
@@ -2639,6 +2761,125 @@
       "target_iri": "rule/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
+  "service-episode/get-mental-capacity-support-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-mental-capacity-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:40f91d6e3a1ae862a5594cf0",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-mental-capacity-support",
+      "source_iri": "dataset/get-mental-capacity-support",
+      "target": "service-episode/get-mental-capacity-support-exception-or-route-failure",
+      "target_iri": "service-episode/get-mental-capacity-support-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-mental-capacity-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:715c42f20f433bcae7dc63ec",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-mental-capacity-support-exception-or-route-failure",
+      "source_iri": "service-episode/get-mental-capacity-support-exception-or-route-failure",
+      "target": "service-step/get-mental-capacity-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/get-mental-capacity-support-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-mental-capacity-support.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-mental-capacity-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:92c0ec782e4c4ad2d09c943e",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-mental-capacity-support-exception-or-route-failure",
+      "source_iri": "service-episode/get-mental-capacity-support-exception-or-route-failure",
+      "target": "enclosing-process/safeguard-capacity-mobility-and-care-redress",
+      "target_iri": "enclosing-process/safeguard-capacity-mobility-and-care-redress"
+    }
+  ],
   "service-episode/take-maternity-leave-ordinary-source-linked-route": [
     {
       "assertion_scope": "real-world",
@@ -2787,6 +3028,464 @@
       "source_iri": "dataset/take-maternity-leave",
       "target": "service-episode/take-maternity-leave-ordinary-source-linked-route",
       "target_iri": "service-episode/take-maternity-leave-ordinary-source-linked-route"
+    }
+  ],
+  "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3fd5b7e7ff5577d4773cb31a",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:65056d1e7880b07bbdb8d64d",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7ab55da90e1125936fa4425d",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8d17cddeccb2c739f64b65d8",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:90b8b6ce00f1a1075911c6c6",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a10f02a36bc95f4942eb3f45",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/use-urgent-and-emergency-health-services-health-scotland-handoff",
+      "target_iri": "resource/use-urgent-and-emergency-health-services-health-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:afbc423b1fd5affbb7039504",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/use-urgent-and-emergency-health-services-health-northern-ireland-handoff",
+      "target_iri": "resource/use-urgent-and-emergency-health-services-health-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dec66841dc2d95329c5dc632",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/use-urgent-and-emergency-health-services-health-wales-handoff",
+      "target_iri": "resource/use-urgent-and-emergency-health-services-health-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e6117f9e1d4195e080a06d87",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-urgent-and-emergency-health-services-exception-or-route-failure",
+      "source_iri": "service-episode/use-urgent-and-emergency-health-services-exception-or-route-failure",
+      "target": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e9e8ab4e9025a31e1e2eaf18",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f290feb28e5c88da90d19f2d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/use-urgent-and-emergency-health-services-use-urgent-and-emergency-health-services-primary",
+      "target_iri": "resource/use-urgent-and-emergency-health-services-use-urgent-and-emergency-health-services-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-urgent-and-emergency-health-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-urgent-and-emergency-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ff950660528205348ae9f249",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/use-urgent-and-emergency-health-services-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
     }
   ],
   "user-need/report-street-cleaning-failure-unitary": [

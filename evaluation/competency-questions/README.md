@@ -8,7 +8,7 @@ answers or personal decisions.
 aliases in the first five, each competency question's expected family in the
 first ten, staged process retrieval and empty results for an unmatched query.
 
-Current progress: **65 of at least 100** questions across 15 of 24 domains.
+Current progress: **78 of at least 100** questions across 18 of 24 domains.
 
 - [`pack-1-family-beginnings.v1`](pack-1-family-beginnings.v1.yaml) — 13
   questions across before birth, birth/newborn and early years.
@@ -21,3 +21,5 @@ Current progress: **65 of at least 100** questions across 15 of 24 domains.
   questions across housing/community, rubbish/street and public/private transport.
 - [`pack-5-enforcement-consumer-justice.v1`](pack-5-enforcement-consumer-justice.v1.yaml)
   — 13 questions across transport enforcement, consumer rights and police/legal services.
+- [`pack-6-family-health-care.v1`](pack-6-family-health-care.v1.yaml) — 13
+  questions across relationships/family change, health and disability/care/support.

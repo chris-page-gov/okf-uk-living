@@ -2073,6 +2073,47 @@
       "target_iri": "enclosing-process/obtain-legal-help-and-use-adjudication"
     }
   ],
+  "evidence/access-mobility-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/access-mobility-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/access-mobility-support.v1.yaml",
+          "source_ids": [
+            "access-mobility-support-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:511e212b18fb77e7e2694459",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-mobility-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-mobility-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/access-mobility-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/access-mobility-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
   "evidence/apply-for-school-place-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -2239,6 +2280,47 @@
       "source_iri": "service-step/report-school-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "outcome/report-school-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
       "target_iri": "outcome/report-school-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "output/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-disability-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-disability-home-adaptation.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-disability-home-adaptation-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2bd6768ab7dba75f2aec2dfd",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
   "redress/claim-disability-benefit-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
@@ -3047,6 +3129,125 @@
       "source_iri": "service-episode/join-or-use-trade-union-exception-or-route-failure",
       "target": "service-step/join-or-use-trade-union-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target_iri": "service-step/join-or-use-trade-union-exception-or-route-failure-resolve-route-boundary-or-failure"
+    }
+  ],
+  "service-episode/use-pharmacy-services-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-pharmacy-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6576470176e0e724e078fcec",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-pharmacy-services",
+      "source_iri": "dataset/use-pharmacy-services",
+      "target": "service-episode/use-pharmacy-services-exception-or-route-failure",
+      "target_iri": "service-episode/use-pharmacy-services-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-pharmacy-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:98f9e39ce060cca00c67ac04",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-pharmacy-services-exception-or-route-failure",
+      "source_iri": "service-episode/use-pharmacy-services-exception-or-route-failure",
+      "target": "service-step/use-pharmacy-services-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/use-pharmacy-services-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/use-pharmacy-services.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "use-pharmacy-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fd7f822fb6e589c6f31ceb44",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-pharmacy-services-exception-or-route-failure",
+      "source_iri": "service-episode/use-pharmacy-services-exception-or-route-failure",
+      "target": "enclosing-process/use-routine-and-preventive-healthcare",
+      "target_iri": "enclosing-process/use-routine-and-preventive-healthcare"
     }
   ],
   "service-step/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure": [
@@ -4301,6 +4502,464 @@
       "source_iri": "service-step/register-for-income-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/register-for-income-tax-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/register-for-income-tax-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:12feb92478af1107dfccdbd9",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-adult-safeguarding-concern-disability-care-scotland-handoff",
+      "target_iri": "resource/report-adult-safeguarding-concern-disability-care-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:41e123c14416f65c756030a3",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-adult-safeguarding-concern-exception-or-route-failure",
+      "source_iri": "service-episode/report-adult-safeguarding-concern-exception-or-route-failure",
+      "target": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:490fc7331c83389847ae02e2",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4b09012f86065137136568c9",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:62022652300ddc6e0b989990",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-adult-safeguarding-concern-disability-care-northern-ireland-handoff",
+      "target_iri": "resource/report-adult-safeguarding-concern-disability-care-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:72f45ff982a80f5ef4840622",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:91b23ceebb7c56f8d89c9447",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a2999094fefdabe4d4059843",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b32bd993bdc9987907a48436",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-adult-safeguarding-concern-report-adult-safeguarding-concern-primary",
+      "target_iri": "resource/report-adult-safeguarding-concern-report-adult-safeguarding-concern-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bb4e4d51f807f0b549e6e493",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-adult-safeguarding-concern-disability-care-wales-handoff",
+      "target_iri": "resource/report-adult-safeguarding-concern-disability-care-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e8e57fad2d6d3909106c929d",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f63952617536c0c593b6189c",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/report-adult-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
   "service-step/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions": [

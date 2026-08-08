@@ -1,4 +1,86 @@
 {
+  "dependency/commissioned-sexual-and-reproductive-health-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/get-sexual-and-reproductive-healthcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/get-sexual-and-reproductive-healthcare.v1.yaml",
+          "source_ids": [
+            "get-sexual-and-reproductive-healthcare-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8488a43eaa6ae98028850b0c",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-sexual-and-reproductive-healthcare",
+      "source_iri": "dataset/get-sexual-and-reproductive-healthcare",
+      "target": "dependency/commissioned-sexual-and-reproductive-health-provider",
+      "target_iri": "dependency/commissioned-sexual-and-reproductive-health-provider"
+    }
+  ],
+  "evidence/arrange-supported-decision-representation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/arrange-supported-decision-representation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/arrange-supported-decision-representation.v1.yaml",
+          "source_ids": [
+            "arrange-supported-decision-representation-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c8759e390fef10d9bd5a6263",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-supported-decision-representation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-supported-decision-representation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/arrange-supported-decision-representation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/arrange-supported-decision-representation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/bring-employment-dispute-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -74,6 +156,87 @@
       "source_iri": "service-step/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "evidence/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
       "target_iri": "evidence/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "evidence/get-family-carer-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-family-carer-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-family-carer-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-family-carer-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ad8e869b2a610b716a8d2058",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-family-carer-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-family-carer-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/get-family-carer-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/get-family-carer-support-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "evidence/get-social-care-needs-assessment-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-social-care-needs-assessment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-social-care-needs-assessment.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-social-care-needs-assessment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4190898451fc9be8718f0c14",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-social-care-needs-assessment-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-social-care-needs-assessment-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/get-social-care-needs-assessment-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/get-social-care-needs-assessment-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
   "life-course-domain/police-and-legal-services": [
@@ -621,6 +784,47 @@
       "source_iri": "service-step/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/get-academic-qualification-recognised-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "outcome/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions-describe-the-work-barrier-engage-the-employer-s-adjustment-process-and-use-occupational-access-to-work-or-employment-redress-routes-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/obtain-workplace-disability-adjustment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/obtain-workplace-disability-adjustment.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "obtain-workplace-disability-adjustment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b1314909920eaa2b81379385",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions-describe-the-work-barrier-engage-the-employer-s-adjustment-process-and-use-occupational-access-to-work-or-employment-redress-routes-as-applicable",
+      "target_iri": "outcome/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions-describe-the-work-barrier-engage-the-employer-s-adjustment-process-and-use-occupational-access-to-work-or-employment-redress-routes-as-applicable"
     }
   ],
   "output/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
@@ -2719,6 +2923,47 @@
       "source_iri": "service-step/register-a-death-certification-to-registration-output-select-registration-route",
       "target": "redress/register-a-death-certification-to-registration-output-select-registration-route-registrar-correction-or-complaint-route-where-applicable",
       "target_iri": "redress/register-a-death-certification-to-registration-output-select-registration-route-registrar-correction-or-complaint-route-where-applicable"
+    }
+  ],
+  "user-need/obtain-workplace-disability-adjustment-connect-employer-duties-practical-support-and-redress-without-deciding-reasonableness-or-discrimination": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/obtain-workplace-disability-adjustment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/obtain-workplace-disability-adjustment.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "obtain-workplace-disability-adjustment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8a10347c6ef605dd1f6a2bc4",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-workplace-disability-adjustment",
+      "source_iri": "dataset/obtain-workplace-disability-adjustment",
+      "target": "user-need/obtain-workplace-disability-adjustment-connect-employer-duties-practical-support-and-redress-without-deciding-reasonableness-or-discrimination",
+      "target_iri": "user-need/obtain-workplace-disability-adjustment-connect-employer-duties-practical-support-and-redress-without-deciding-reasonableness-or-discrimination"
     }
   ]
 }

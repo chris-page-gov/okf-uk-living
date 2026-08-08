@@ -545,6 +545,47 @@
       "target_iri": "actor/organisation-wales-official-route-provider"
     }
   ],
+  "evidence/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/get-disability-home-adaptation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/get-disability-home-adaptation.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "get-disability-home-adaptation-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:76f3b2a35ba05a0979cc3d5c",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/get-disability-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -787,6 +828,47 @@
       "source_iri": "service-step/volunteer-in-the-uk-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "outcome/volunteer-in-the-uk-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
       "target_iri": "outcome/volunteer-in-the-uk-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "output/access-dental-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/access-dental-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/access-dental-care.v1.yaml",
+          "source_ids": [
+            "access-dental-care-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ab0d6e4871da9732a14180ee",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-dental-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-dental-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/access-dental-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/access-dental-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
   "output/access-school-health-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
@@ -1196,6 +1278,47 @@
       "target_iri": "redress/report-missed-rubbish-collection-report-eligible-missed-collection-identify-authority-and-schedule-redress-follows-a-submitted-or-unresolved-service-issue"
     }
   ],
+  "requirement/get-vaccination-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/get-vaccination.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/get-vaccination.v1.yaml",
+          "source_ids": [
+            "get-vaccination-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a66fabed11180e3cbe4696b8",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-vaccination-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-vaccination-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/get-vaccination-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/get-vaccination-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
   "requirement/make-small-money-claim-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -1459,6 +1582,152 @@
       "source_iri": "service-step/dispose-of-hazardous-waste-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/dispose-of-hazardous-waste-dispose-of-hazardous-waste-primary",
       "target_iri": "resource/dispose-of-hazardous-waste-dispose-of-hazardous-waste-primary"
+    }
+  ],
+  "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0239353f484af7a32f0767a8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:21452e2ced530e80f8659b38",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/divorce-or-dissolve-partnership",
+      "source_iri": "dataset/divorce-or-dissolve-partnership",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5cad4ce517ba1925089abbe8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7dfb532011f8462562d34815",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff"
     }
   ],
   "resource/report-child-safeguarding-concern-report-child-safeguarding-concern-primary": [
@@ -1727,6 +1996,986 @@
       "source_iri": "service-step/seek-research-funding-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/seek-research-funding-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/seek-research-funding-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0239353f484af7a32f0767a8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1a2033f113330a5687198867",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4f2c8526b75528ca77bc0ab3",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:53fe9468125c2cb5ccd6e7e9",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:54737e96085704029ce5457e",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/divorce-or-dissolve-partnership-divorce-or-dissolve-partnership-primary",
+      "target_iri": "resource/divorce-or-dissolve-partnership-divorce-or-dissolve-partnership-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:54debc1417c30118b0ebee33",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:643f7e03ad6362696fa4df98",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7d054cee895f1c92f50ab480",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:959ecdcefe5f66da813d0f47",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/divorce-or-dissolve-partnership-family-change-northern-ireland-handoff",
+      "target_iri": "resource/divorce-or-dissolve-partnership-family-change-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b0f44541fb2e761422146bce",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/divorce-or-dissolve-partnership-ordinary-source-linked-route",
+      "source_iri": "service-episode/divorce-or-dissolve-partnership-ordinary-source-linked-route",
+      "target": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d6f782b8dedbcecf5661add8",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e0597149d8f2ae9e73141ea0",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/divorce-or-dissolve-partnership.v1.yaml",
+          "source_ids": [
+            "divorce-or-dissolve-partnership-primary",
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e4fb0c87f725050ee3281038",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0056879bd7c30a24f05c7739",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-domestic-abuse-support-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-domestic-abuse-support-ordinary-source-linked-route",
+      "target": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3d71c0c3b480682aa4ccd613",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-domestic-abuse-support-family-change-scotland-handoff",
+      "target_iri": "resource/get-domestic-abuse-support-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3e2bf0c7b61616425a30a1b6",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5509b8c7b49b4ca7d7ba8de6",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-domestic-abuse-support-family-change-northern-ireland-handoff",
+      "target_iri": "resource/get-domestic-abuse-support-family-change-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:639749e1f59546e7005e5242",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-domestic-abuse-support-get-domestic-abuse-support-primary",
+      "target_iri": "resource/get-domestic-abuse-support-get-domestic-abuse-support-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:700b123182463bfcb2cc87ec",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7bfe1f90ea02a43923227333",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9d38fc817f37eb1ea62131f7",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ae46329543cdd6e5373f8f6b",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c4f7a1355b8b12a3b6df3d7f",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c67b271e0114476e5c8cc110",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de124ca4023ed604a83abb24",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/get-domestic-abuse-support.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "get-domestic-abuse-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fd583ef8a73522c651cabcea",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
   "service-step/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route": [
@@ -3703,6 +4952,47 @@
       "source_iri": "service-step/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "requirement/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
       "target_iri": "requirement/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "user-need/get-sexual-and-reproductive-healthcare-find-a-confidential-service-while-keeping-clinical-consent-urgent-and-safeguarding-decisions-with-professionals": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/get-sexual-and-reproductive-healthcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/get-sexual-and-reproductive-healthcare.v1.yaml",
+          "source_ids": [
+            "get-sexual-and-reproductive-healthcare-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7dffbf054dd4badac3ba5567",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-sexual-and-reproductive-healthcare",
+      "source_iri": "dataset/get-sexual-and-reproductive-healthcare",
+      "target": "user-need/get-sexual-and-reproductive-healthcare-find-a-confidential-service-while-keeping-clinical-consent-urgent-and-safeguarding-decisions-with-professionals",
+      "target_iri": "user-need/get-sexual-and-reproductive-healthcare-find-a-confidential-service-while-keeping-clinical-consent-urgent-and-safeguarding-decisions-with-professionals"
     }
   ]
 }

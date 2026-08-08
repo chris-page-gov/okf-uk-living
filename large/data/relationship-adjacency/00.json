@@ -2935,6 +2935,47 @@
       "target_iri": "redress/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
+  "requirement/get-prescription-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/get-prescription.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/get-prescription.v1.yaml",
+          "source_ids": [
+            "get-prescription-primary",
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e924d8652010ad094326b59",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-prescription-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-prescription-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/get-prescription-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/get-prescription-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
   "requirement/join-or-use-trade-union-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -3156,6 +3197,193 @@
       "source_iri": "service-step/apply-for-home-adaptation-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/apply-for-home-adaptation-housing-community-wales-handoff",
       "target_iri": "resource/apply-for-home-adaptation-housing-community-wales-handoff"
+    }
+  ],
+  "resource/marry-family-change-scotland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/marry.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/marry.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0b4576b4cdd7c67dc44dc916",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/marry-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/marry-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/marry-family-change-scotland-handoff",
+      "target_iri": "resource/marry-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/marry.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/marry.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0c5f36a90097ecab72879468",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/marry-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/marry-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/marry-family-change-scotland-handoff",
+      "target_iri": "resource/marry-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/marry.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/marry.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2644e5777b934c1e608b08db",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/marry-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/marry-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/marry-family-change-scotland-handoff",
+      "target_iri": "resource/marry-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/marry.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/marry.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8697494a1c9b2b6ea09e234f",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/marry",
+      "source_iri": "dataset/marry",
+      "target": "resource/marry-family-change-scotland-handoff",
+      "target_iri": "resource/marry-family-change-scotland-handoff"
+    }
+  ],
+  "rule/report-adult-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/report-adult-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "report-adult-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a5d87a3d181af0c10c500ecb",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-adult-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-adult-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/report-adult-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/report-adult-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "rule/tax-or-sorn-vehicle-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
@@ -4868,6 +5096,496 @@
       "target_iri": "redress/take-paternity-or-partner-leave-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
     }
   ],
+  "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:01d2dcfe4b66a1c1a87cf6ba",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-family-court-ordinary-source-linked-route",
+      "source_iri": "service-episode/use-family-court-ordinary-source-linked-route",
+      "target": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0dc687a5dd5aa49c6efa839c",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:398948fab75e8ec21ad0d41a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5a6271d2ced7de8151c27c9c",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:74fe025809f5a0381e0fd434",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:848844bbc1ce7512050d99e9",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/use-family-court-use-family-court-primary",
+      "target_iri": "resource/use-family-court-use-family-court-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:98737348ee1f554065600f56",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:99c765656b7c97bf23d35514",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9e239c4d7e94e8963640961b",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a59a054244f7d0114262e5ed",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b5d6a05f6392d2778bf53ffa",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/use-family-court-family-change-scotland-handoff",
+      "target_iri": "resource/use-family-court-family-change-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "use-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d9481ec3bf47510cd975133a",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/use-family-court-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/use-family-court-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/use-family-court.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fb4ad42ec7c4441359bd31b4",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/use-family-court-family-change-northern-ireland-handoff",
+      "target_iri": "resource/use-family-court-family-change-northern-ireland-handoff"
+    }
+  ],
   "user-need/apply-for-home-adaptation-landlord": [
     {
       "assertion_scope": "real-world",
@@ -4947,6 +5665,47 @@
       "source_iri": "dataset/cancel-distance-contract",
       "target": "user-need/cancel-distance-contract-trader-information-and-return-responsibilities-without-calculating-a-deadline",
       "target_iri": "user-need/cancel-distance-contract-trader-information-and-return-responsibilities-without-calculating-a-deadline"
+    }
+  ],
+  "user-need/receive-hospital-referral-and-treatment-understand-referral-and-provider-handoffs-without-clinical-advice-waiting-time-promises-or-treatment-decisions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/receive-hospital-referral-and-treatment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/receive-hospital-referral-and-treatment.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "receive-hospital-referral-and-treatment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9b5688eaa726e4535455689d",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/receive-hospital-referral-and-treatment",
+      "source_iri": "dataset/receive-hospital-referral-and-treatment",
+      "target": "user-need/receive-hospital-referral-and-treatment-understand-referral-and-provider-handoffs-without-clinical-advice-waiting-time-promises-or-treatment-decisions",
+      "target_iri": "user-need/receive-hospital-referral-and-treatment-understand-referral-and-provider-handoffs-without-clinical-advice-waiting-time-promises-or-treatment-decisions"
     }
   ],
   "user-need/report-road-collision-legal-reporting": [

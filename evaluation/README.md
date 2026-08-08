@@ -48,5 +48,11 @@ accounts for all 36 families while preserving the reviewed speeding-notice
 slice, and adds 44 body-free official links plus 13 questions across transport
 penalties, consumer remedies and police or adjudication routes.
 
+The [Pack 6 family/health/care review](reviews/pack-6-family-health-care-2026-08-08.md)
+adds 36 dossiers, 45 body-free official links and 13 questions across family
+change, health throughout life and disability/care/support. It proves that
+manual health references remain typed, link-only resources and that clinical,
+capacity, safeguarding and legal decisions remain outside the bundle.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

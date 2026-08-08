@@ -700,6 +700,87 @@
       "target_iri": "evidence/access-health-visiting-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "evidence/register-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/relationships-and-family-change/register-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/relationships-and-family-change/register-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "family-change-northern-ireland-handoff",
+            "family-change-scotland-handoff",
+            "register-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:88286a35f73254ffe61c46c2",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/register-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/register-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "outcome/receive-direct-payments-ordinary-source-linked-route-follow-current-official-instructions-use-the-responsible-social-care-authority-s-assessed-personal-budget-route-and-follow-its-agreement-payment-employment-monitoring-and-review-requirements": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/receive-direct-payments.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/receive-direct-payments.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "receive-direct-payments-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:747f2949b2c52dc6e9bacd6e",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-direct-payments-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/receive-direct-payments-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/receive-direct-payments-ordinary-source-linked-route-follow-current-official-instructions-use-the-responsible-social-care-authority-s-assessed-personal-budget-route-and-follow-its-agreement-payment-employment-monitoring-and-review-requirements",
+      "target_iri": "outcome/receive-direct-payments-ordinary-source-linked-route-follow-current-official-instructions-use-the-responsible-social-care-authority-s-assessed-personal-budget-route-and-follow-its-agreement-payment-employment-monitoring-and-review-requirements"
+    }
+  ],
   "outcome/report-antisocial-behaviour-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -1223,6 +1304,47 @@
       "source_iri": "service-step/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/obtain-motor-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/receive-direct-payments.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/receive-direct-payments.v1.yaml",
+          "source_ids": [
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff",
+            "receive-direct-payments-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d59a7a5d69b61a917ed827ba",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
     }
   ],
   "requirement/rent-private-home-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [

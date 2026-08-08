@@ -2238,6 +2238,47 @@
       "target_iri": "outcome/pay-paye-and-national-insurance-ordinary-source-linked-route-follow-current-official-instructions-understand-payroll-deductions-and-use-employer-or-hmrc-correction-routes-when-records-appear-wrong"
     }
   ],
+  "outcome/receive-hospital-referral-and-treatment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/health-throughout-life/receive-hospital-referral-and-treatment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/health-throughout-life/receive-hospital-referral-and-treatment.v1.yaml",
+          "source_ids": [
+            "health-northern-ireland-handoff",
+            "health-scotland-handoff",
+            "health-wales-handoff",
+            "receive-hospital-referral-and-treatment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:029d0ec9720adf9ef445fe23",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-hospital-referral-and-treatment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/receive-hospital-referral-and-treatment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/receive-hospital-referral-and-treatment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/receive-hospital-referral-and-treatment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "output/arrange-garden-waste-collection-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -2597,6 +2638,164 @@
       "source_iri": "service-step/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml",
+          "source_ids": [
+            "challenge-care-or-disability-benefit-decision-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8313f74095fc16d9527024c7",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/challenge-care-or-disability-benefit-decision",
+      "source_iri": "dataset/challenge-care-or-disability-benefit-decision",
+      "target": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "target_iri": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml",
+          "source_ids": [
+            "challenge-care-or-disability-benefit-decision-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:97d9338b75a23229af995900",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "source_iri": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "target": "service-step/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml",
+          "source_ids": [
+            "challenge-care-or-disability-benefit-decision-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a9d6b12cbb2d5fe089c31eeb",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "source_iri": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "target": "enclosing-process/safeguard-capacity-mobility-and-care-redress",
+      "target_iri": "enclosing-process/safeguard-capacity-mobility-and-care-redress"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/disability-care-and-support/challenge-care-or-disability-benefit-decision.v1.yaml",
+          "source_ids": [
+            "challenge-care-or-disability-benefit-decision-primary",
+            "disability-care-northern-ireland-handoff",
+            "disability-care-scotland-handoff",
+            "disability-care-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b85e95e1170400799cb5f5f9",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "source_iri": "service-episode/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route",
+      "target": "service-step/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/challenge-care-or-disability-benefit-decision-ordinary-source-linked-route-follow-current-official-instructions"
     }
   ],
   "service-step/get-school-send-support-ordinary-source-linked-route-select-current-jurisdiction-route": [

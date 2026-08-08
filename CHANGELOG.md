@@ -6,6 +6,14 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Pack 6 population for all 36 approved families across relationships/family
+  change, health throughout life and disability/care/support, with original
+  summaries, four-nation variants, ordinary and exception journeys and
+  specialist-review boundaries.
+- Forty-five current official link-only sources with body-free receipts and 13
+  natural-language competency questions covering family change, routine and
+  urgent health, care assessment, capacity, safeguarding and redress.
+
 - Pack 5 population for all 36 approved identities across transport
   enforcement, shopping/consumer rights and police/legal services, adding 35
   compact dossiers and narratives while preserving the reviewed
@@ -159,6 +167,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Advanced `PACK-006` to complete and `PACK-007` to active after the 219-family,
+  7,613-concept, 761-resource and 12,377-relationship projection passed locked
+  local validation and visible Explorer review.
 
 - Advanced `PACK-005` to complete and `PACK-006` to active after the 183-family,
   6,587-concept, 629-resource and 10,424-relationship projection passed locked

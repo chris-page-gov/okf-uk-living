@@ -1,0 +1,275 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-6-family-health-care
+domain: disability-care-and-support
+title: Disability, care and support
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-6-family-health-care-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: disability-care-scotland-handoff
+    jurisdiction: Scotland
+    title: Health and social care in Scotland
+    owner: Scottish Government
+    authority_role: scotland_disability_care_handoff
+    resource: https://www.mygov.scot/browse/health-social-care
+    coverage: Routes people to current Scottish disability, care, capacity, support and benefit services.
+    exclusions: Does not determine eligibility, local provision, capacity, safeguarding action or redress.
+  - <<: *source_defaults
+    id: disability-care-wales-handoff
+    jurisdiction: Wales
+    title: Social care in Wales
+    owner: Welsh Government
+    authority_role: wales_disability_care_handoff
+    resource: https://www.gov.wales/social-care
+    coverage: Routes people to current Welsh social-care policy and applicable local service information.
+    exclusions: Does not identify an individual local authority route or decide eligibility or safeguarding action.
+  - <<: *source_defaults
+    id: disability-care-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Caring for someone in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_disability_care_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/caring-someone
+    coverage: Routes people to current Northern Ireland carer, disability, benefit and care information.
+    exclusions: Does not identify every trust service or decide eligibility, capacity or safeguarding action.
+families:
+  - <<: *family_defaults
+    id: claim-disability-living-support
+    title: Claim disability living support
+    aliases: [disability benefit, PIP DLA attendance allowance, financial help disabled]
+    description: Identify the age, circumstance and jurisdiction-specific benefit, use its current claim route and preserve review and appeal information.
+    situations:
+      - A disabled person or carer needs information about non-means-tested or related living-cost support.
+    user_needs:
+      - Find the correct benefit without a local eligibility calculation or medical assessment.
+    source:
+      <<: *source_defaults
+      id: claim-disability-living-support-primary
+      title: Financial help if you are disabled
+      owner: Department for Work and Pensions
+      authority_role: great_britain_disability_financial_support_handoff
+      resource: https://www.gov.uk/financial-help-disabled
+      coverage: Routes Great Britain users to disability benefits, vehicles, equipment, housing and work support.
+      exclusions: Does not select a benefit, calculate eligibility, assess disability or establish Northern Ireland routes.
+  - <<: *family_defaults
+    id: get-social-care-needs-assessment
+    title: Get a social-care needs assessment
+    aliases: [adult social care assessment, council care assessment, assess daily living support]
+    description: Ask the responsible local social-care body for an assessment, receive its written outcome and use the complaint route if the process or decision is disputed.
+    situations:
+      - A person may need support with daily living, safety, equipment, personal care or participation.
+    user_needs:
+      - Find the responsible local route and understand assessment, financial and complaint boundaries.
+    source:
+      <<: *source_defaults
+      id: get-social-care-needs-assessment-primary
+      title: Getting a care needs assessment
+      owner: NHS England
+      authority_role: england_local_social_care_assessment_guidance
+      resource: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/getting-a-needs-assessment/
+      coverage: Explains England local-authority needs assessments, outcomes, financial assessment and complaints.
+      exclusions: Does not assess a person, decide eligibility, identify local provision or establish devolved law.
+  - <<: *family_defaults
+    id: get-carers-assessment
+    title: Get a carer's assessment
+    aliases: [unpaid carer assessment, council carers assessment, assess carer support needs]
+    description: Ask the responsible social-care body to assess the unpaid carer's needs and use the resulting support, review or complaint route.
+    situations:
+      - An unpaid carer needs their own practical, wellbeing or participation needs assessed.
+    user_needs:
+      - Separate the carer's assessment from the cared-for person's needs and benefit decisions.
+    source:
+      <<: *source_defaults
+      id: get-carers-assessment-primary
+      title: Carer's assessments
+      owner: NHS England
+      authority_role: england_local_carer_assessment_guidance
+      resource: https://www.nhs.uk/social-care-and-support/support-and-benefits-for-carers/carer-assessments/
+      coverage: Explains England local-authority carer assessments, possible support and complaint routes.
+      exclusions: Does not assess needs, decide support, identify local provision or establish devolved law.
+  - <<: *family_defaults
+    id: receive-direct-payments
+    title: Receive direct payments
+    aliases: [social care personal budget, direct payment for care, manage care budget]
+    description: Use the responsible social-care authority's assessed personal-budget route and follow its agreement, payment, employment, monitoring and review requirements.
+    situations:
+      - An eligible person or representative is considering managing some assessed care support through payments.
+    user_needs:
+      - Find local administration and support without assuming eligibility, amount or employer responsibilities.
+    source:
+      <<: *source_defaults
+      id: receive-direct-payments-primary
+      title: Personal budgets and direct payments
+      owner: NHS England
+      authority_role: england_social_care_personal_budget_guidance
+      resource: https://www.nhs.uk/social-care-and-support/money-work-and-benefits/personal-budgets/
+      coverage: Introduces England personal budgets, direct payments and management options.
+      exclusions: Does not decide eligibility or amount, manage payroll, recommend care or establish devolved routes.
+  - <<: *family_defaults
+    id: get-disability-home-adaptation
+    title: Get a disability home adaptation
+    aliases: [disabled facilities grant, adapt home for disability, home accessibility grant]
+    description: Ask for the relevant needs and home assessment, then use the responsible housing or social-care body's grant, permission and works route.
+    situations:
+      - A disabled person needs changes to make a home safer, accessible or usable.
+    user_needs:
+      - Connect assessment, tenure, funding, permission, contractor and complaint boundaries.
+    dependency: competent-and-insured-home-adaptation-provider
+    source:
+      <<: *source_defaults
+      id: get-disability-home-adaptation-primary
+      title: Disabled Facilities Grants
+      owner: Department for Levelling Up, Housing and Communities
+      authority_role: england_wales_home_adaptation_grant_guidance
+      resource: https://www.gov.uk/disabled-facilities-grants
+      coverage: Introduces England and Wales council Disabled Facilities Grant eligibility and application handoffs.
+      exclusions: Does not assess need, award a grant, obtain landlord or planning consent, or establish devolved equivalents.
+  - <<: *family_defaults
+    id: get-residential-care
+    title: Get residential care
+    aliases: [find care home, nursing home assessment, arrange residential social care]
+    description: Complete the applicable needs and financial assessments, check regulated provider information and agree placement, funding and review arrangements.
+    situations:
+      - A person may need accommodation with personal or nursing care.
+    user_needs:
+      - Navigate assessment, funding, provider regulation, contracts and safeguarding without recommending a home.
+    dependency: registered-residential-or-nursing-care-provider
+    source:
+      <<: *source_defaults
+      id: get-residential-care-primary
+      title: Care homes
+      owner: NHS England
+      authority_role: england_care_home_guidance
+      resource: https://www.nhs.uk/social-care-and-support/care-services-equipment-and-care-homes/care-homes/
+      coverage: Introduces England care-home types, assessment, funding and regulated-provider finding.
+      exclusions: Does not assess need, recommend a provider, inspect care or establish devolved arrangements.
+  - <<: *family_defaults
+    id: report-adult-safeguarding-concern
+    title: Report an adult safeguarding concern
+    aliases: [report abuse of vulnerable adult, adult at risk concern, care safeguarding referral]
+    description: Contact emergency services for immediate danger and the responsible local safeguarding route for suspected abuse, neglect or exploitation.
+    situations:
+      - An adult with care and support needs may be experiencing or at risk of abuse or neglect.
+    user_needs:
+      - Reach the accountable urgent or safeguarding service without classifying risk or collecting personal data.
+    source:
+      <<: *source_defaults
+      id: report-adult-safeguarding-concern-primary
+      title: Abuse and neglect of adults at risk
+      owner: NHS England
+      authority_role: england_adult_safeguarding_guidance
+      resource: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/abuse-and-neglect-adults-at-risk/
+      coverage: Describes England emergency, police and local-authority adult safeguarding handoffs.
+      exclusions: Does not assess risk, investigate, decide protective action or establish devolved procedures.
+  - <<: *family_defaults
+    id: get-mental-capacity-support
+    title: Get mental-capacity support
+    aliases: [mental capacity assessment, help making decisions, capacity act support]
+    description: Support the person to decide where possible and use the applicable professional, advocacy, representation or court route for the specific decision.
+    situations:
+      - There is concern about a person's ability to make a particular decision at the relevant time.
+    user_needs:
+      - Find decision-specific support without a capacity finding by the bundle.
+    dependency: qualified-capacity-assessor-or-legal-adviser
+    source:
+      <<: *source_defaults
+      id: get-mental-capacity-support-primary
+      title: Mental Capacity Act
+      owner: NHS England
+      authority_role: england_wales_mental_capacity_guidance
+      resource: https://www.nhs.uk/social-care-and-support/making-decisions-for-someone-else/mental-capacity-act/
+      coverage: Introduces England and Wales decision-specific capacity, best-interests and protection principles.
+      exclusions: Does not assess capacity, decide best interests, appoint a representative or establish devolved law.
+  - <<: *family_defaults
+    id: arrange-supported-decision-representation
+    title: Arrange supported decision representation
+    aliases: [make decisions for someone, appoint representative, advocacy and decision support]
+    description: Identify the specific decision and existing authority, then use the applicable advocacy, attorney, deputy, guardian or court route.
+    situations:
+      - A person needs support to decide or another person may need formal authority to act.
+    user_needs:
+      - Distinguish support, consent, representation and court authority for each jurisdiction.
+    dependency: regulated-advocacy-or-legal-provider
+    source:
+      <<: *source_defaults
+      id: arrange-supported-decision-representation-primary
+      title: Make decisions on behalf of someone
+      owner: Office of the Public Guardian
+      authority_role: england_wales_decision_representation_handoff
+      resource: https://www.gov.uk/make-decisions-for-someone
+      coverage: Routes England and Wales users among informal support, attorney and deputy authority.
+      exclusions: Does not assess capacity, grant authority, provide legal advice or establish devolved instruments.
+  - <<: *family_defaults
+    id: access-mobility-support
+    title: Access mobility support
+    aliases: [disability transport help, mobility vehicle support, accessible travel assistance]
+    description: Identify the relevant benefit, concession, vehicle, parking or assisted-travel route and apply through the responsible authority or regulated scheme.
+    situations:
+      - A disabled person needs financial, vehicle or service support for mobility.
+    user_needs:
+      - Navigate separate schemes without combining their eligibility or provider identities.
+    dependency: regulated-mobility-scheme-provider
+    source:
+      <<: *source_defaults
+      id: access-mobility-support-primary
+      title: Vehicles and transport for disabled people
+      owner: Department for Work and Pensions
+      authority_role: great_britain_disability_mobility_handoff
+      resource: https://www.gov.uk/financial-help-disabled/vehicles-and-transport
+      coverage: Routes Great Britain users to vehicle, tax, parking and transport support information.
+      exclusions: Does not determine eligibility, recommend a vehicle or provider, or establish Northern Ireland routes.
+  - <<: *family_defaults
+    id: obtain-workplace-disability-adjustment
+    title: Obtain a workplace disability adjustment
+    aliases: [reasonable adjustment at work, disability support from employer, accessible workplace change]
+    description: Describe the work barrier, engage the employer's adjustment process and use occupational, Access to Work or employment-redress routes as applicable.
+    situations:
+      - A disabled worker or applicant needs a change to remove a workplace disadvantage.
+    user_needs:
+      - Connect employer duties, practical support and redress without deciding reasonableness or discrimination.
+    dependency: competent-workplace-adjustment-provider
+    source:
+      <<: *source_defaults
+      id: obtain-workplace-disability-adjustment-primary
+      title: Reasonable adjustments for disabled workers
+      owner: Department for Business and Trade
+      authority_role: great_britain_workplace_adjustment_guidance
+      resource: https://www.gov.uk/reasonable-adjustments-for-disabled-workers
+      coverage: Introduces Great Britain employer adjustment duties and examples.
+      exclusions: Does not decide disability, reasonableness, discrimination, funding or Northern Ireland law.
+  - <<: *family_defaults
+    id: challenge-care-or-disability-benefit-decision
+    title: Challenge a care or disability-benefit decision
+    aliases: [appeal disability benefit, complain about care assessment, mandatory reconsideration]
+    description: Read the exact decision, identify whether review, complaint or appeal applies and use its current evidence, deadline and escalation route promptly.
+    situations:
+      - A person disagrees with a care assessment, support decision or disability-benefit decision.
+    user_needs:
+      - Select the decision-specific remedy without the bundle calculating time, grounds or prospects.
+    dependency: regulated-welfare-rights-or-legal-adviser
+    source:
+      <<: *source_defaults
+      id: challenge-care-or-disability-benefit-decision-primary
+      title: Challenge a benefit decision by mandatory reconsideration
+      owner: Department for Work and Pensions
+      authority_role: great_britain_benefit_reconsideration_guidance
+      resource: https://www.gov.uk/mandatory-reconsideration
+      coverage: Explains the Great Britain mandatory-reconsideration route for covered benefit decisions.
+      exclusions: Does not cover local care complaints, every benefit, Northern Ireland procedure, deadlines or appeal merits.
