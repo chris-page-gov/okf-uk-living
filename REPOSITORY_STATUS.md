@@ -2,15 +2,15 @@
 
 - Lifecycle: full 293-family population implementation authorized; foundation,
   universal Explorer contract, three-slice dossier migration and shared
-  authority/source infrastructure and the first two corpus packs complete
-- Corpus: root, research overview, 293-family denominator and 77
-  population-complete family dossiers from the three implemented slices and Packs 1–2
+  authority/source infrastructure and the first three corpus packs complete
+- Corpus: root, research overview, 293-family denominator and 113
+  population-complete family dossiers from the three implemented slices and Packs 1–3
 - Ontology: three normalized slice modules plus the 16-predicate governed
   cross-domain registry and SHACL-style family shapes; RDF conformance is not claimed
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
-  references, 45 Pack 1 links and 44 Pack 2 links, all with zero snapshots; 28 source hosts and all standards
+  references, 45 Pack 1 links, 44 Pack 2 links and 45 Pack 3 links, all with zero snapshots; 29 source hosts and all standards
   families have dated rights decisions; unbounded or unstaged acquisition is disabled
 - Reference coverage: 24 domains by five reference jurisdictions gives 120
   assessed cells; 96 national cells are covered at discovery-family level and
@@ -21,8 +21,8 @@
 - Authority infrastructure: 382 principal areas, 19 strategic/combined
   authorities, 397 dated GSS geographies, 438 shared organizations, ten
   regulator/redress sector maps and seven active metadata-only source receipts
-- Deterministic local generation: Markdown bundle plus 3,496-concept sharded large
-  projection, 300 typed source assertions, 4,850 relationships, record locator,
+- Deterministic local generation: Markdown bundle plus 4,535-concept sharded large
+  projection, 384 typed source assertions, 6,622 relationships, record locator,
   adjacency, JSON-LD, YAML-LD and SHACL-style validation report
 - Evaluation: local `uv` environment and visible OKF Explorer 0.5.7 review;
   Reader/query, graph provenance, browser source, licence/notice and large
@@ -61,8 +61,9 @@
 - Pack 2: all 36 learning-and-transition identities are accounted for through
   35 new dossiers and the preserved learning-to-drive slice, with 44 active
   source links and 13 additional competency questions
-- Next complete-corpus gate: `PACK-003`, 36 work-and-money dossiers across
-  finding work, employment and money/tax/benefits
+- Pack 3: 36 work-and-money dossiers and narratives, 45 active source links,
+  13 additional competency questions and a dated HSE OGL decision passed locally
+- Next complete-corpus gate: `PACK-004`, 36 home/place/transport families
 - Later corpus policy: owner-approved 293-family denominator and governed local,
   identifier, health, regulator, redress and reviewer-role decisions; staged
   mappings and specialist appointments remain tracked in the

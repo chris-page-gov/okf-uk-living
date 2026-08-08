@@ -306,6 +306,47 @@
       "target_iri": "outcome/find-registered-childcare-ordinary-source-linked-route-follow-current-official-instructions-start-from-the-accountable-public-register-or-local-service-to-find-childcare-providers-and-verify-current-registration"
     }
   ],
+  "output/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-while-unemployed-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9b6ce97046633969e3877b77",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
   "output/sit-public-examinations-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -547,6 +588,47 @@
       "source_iri": "service-step/check-child-nationality-status-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "rule/check-child-nationality-status-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
       "target_iri": "rule/check-child-nationality-status-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "rule/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-disclosure-or-dbs-check-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de7442fc3970f3d2b6c3ecd5",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "user-need/arrange-school-transport-current-criteria": [

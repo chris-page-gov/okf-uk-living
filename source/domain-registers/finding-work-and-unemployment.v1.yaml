@@ -1,0 +1,248 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-3-work-money
+domain: finding-work-and-unemployment
+title: Finding work and unemployment
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-3-work-money-2026-08-08
+acquisition: &acquisition
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: finding-work-scotland-handoff
+    jurisdiction: Scotland
+    title: Finding a job in Scotland
+    owner: Scottish Government
+    authority_role: scotland_job_support_discovery_handoff
+    resource: https://www.mygov.scot/browse/working-jobs/finding-a-job
+    coverage: Routes people to current Scottish job-search and employment-support services.
+    exclusions: Does not establish eligibility, an employment relationship or a benefit decision.
+  - <<: *source_defaults
+    id: finding-work-wales-handoff
+    jurisdiction: Wales
+    title: Employment support in Wales
+    owner: Welsh Government
+    authority_role: wales_job_support_discovery_handoff
+    resource: https://www.gov.wales/employment-support
+    coverage: Routes people to current Welsh employability and skills support.
+    exclusions: Does not establish eligibility, an employment relationship or a benefit decision.
+  - <<: *source_defaults
+    id: finding-work-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Employment in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_job_support_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/employment
+    coverage: Routes people to current Northern Ireland employment services and rights.
+    exclusions: Does not establish eligibility, an employment relationship or a benefit decision.
+families:
+  - <<: *family_defaults
+    id: use-public-job-search
+    title: Use public job search
+    aliases: [find a job online, government job vacancies]
+    description: Search current public vacancy listings and follow the named employer's application route.
+    situations: [A person wants to find and apply for paid work.]
+    user_needs: [Use an accountable vacancy service while checking the actual employer and application terms.]
+    dependency: recruiting-employer
+    source:
+      <<: *source_defaults
+      id: use-public-job-search-primary
+      title: "Find a job"
+      owner: "Department for Work and Pensions"
+      authority_role: great_britain_public_job_search_service
+      resource: https://www.gov.uk/find-a-job
+      coverage: "Provides the public Great Britain vacancy search and application handoff."
+      exclusions: "Does not recommend an employer or guarantee that a vacancy or offer is genuine."
+  - <<: *family_defaults
+    id: get-jobcentre-support
+    title: Get Jobcentre support
+    aliases: [contact Jobcentre Plus, work coach help]
+    description: Contact the applicable public employment service for work-search, claim or appointment support.
+    situations: [A person needs help from a Jobcentre or employment-service adviser.]
+    user_needs: [Find the right service and retain appointment, claim or referral outputs.]
+    source:
+      <<: *source_defaults
+      id: get-jobcentre-support-primary
+      title: "Contact Jobcentre Plus"
+      owner: "Department for Work and Pensions"
+      authority_role: great_britain_jobcentre_contact_service
+      resource: https://www.gov.uk/contact-jobcentre-plus
+      coverage: "Provides Great Britain Jobcentre Plus contact routes by purpose."
+      exclusions: "Does not book an appointment or decide a claim or work-related requirement."
+  - <<: *family_defaults
+    id: prove-right-to-work
+    title: Prove the right to work
+    aliases: [right to work share code, employer immigration check]
+    description: Use the applicable immigration-status or document route so an employer can complete its statutory check.
+    situations: [A worker or employer needs evidence that employment is permitted.]
+    user_needs: [Use the current Home Office evidence route without the bundle deciding status.]
+    source:
+      <<: *source_defaults
+      id: prove-right-to-work-primary
+      title: "Prove your right to work to an employer"
+      owner: "Home Office"
+      authority_role: uk_right_to_work_evidence_service
+      resource: https://www.gov.uk/prove-right-to-work
+      coverage: "Provides the current online evidence and share-code route."
+      exclusions: "Does not determine immigration status or whether an employer's check is sufficient."
+  - <<: *family_defaults
+    id: start-work-based-apprenticeship
+    title: Start a work-based apprenticeship
+    aliases: [become an apprentice, apprenticeship employment route]
+    description: Find an apprenticeship vacancy and complete both employment and approved-training agreements.
+    situations: [A person wants to enter paid work through an apprenticeship.]
+    user_needs: [Understand the employer, training-provider and public funding handoffs.]
+    dependency: apprenticeship-employer-and-training-provider
+    source:
+      <<: *source_defaults
+      id: start-work-based-apprenticeship-primary
+      title: "Become an apprentice"
+      owner: "Department for Education"
+      authority_role: england_apprenticeship_entry_guidance
+      resource: https://www.gov.uk/become-apprentice
+      coverage: "Introduces England apprenticeship search, employment and training routes."
+      exclusions: "Does not award a vacancy or verify the employer or provider agreement."
+  - <<: *family_defaults
+    id: get-disclosure-or-dbs-check
+    title: Get a disclosure or DBS check
+    aliases: [criminal record check for work, basic DBS certificate]
+    description: Select the correct criminal-record disclosure route for the role and obtain or share its official output.
+    situations: [A worker, volunteer or organisation needs a source-defined criminal-record check.]
+    user_needs: [Identify who may apply, the check level and correction or dispute route.]
+    source:
+      <<: *source_defaults
+      id: get-disclosure-or-dbs-check-primary
+      title: "Request a basic DBS check"
+      owner: "Disclosure and Barring Service"
+      authority_role: england_wales_basic_disclosure_service
+      resource: https://www.gov.uk/request-copy-criminal-record
+      coverage: "Provides the England and Wales basic DBS application route."
+      exclusions: "Does not decide which check is lawful or cover Scottish and Northern Ireland disclosure systems."
+  - <<: *family_defaults
+    id: claim-universal-credit-while-unemployed
+    title: Claim Universal Credit while unemployed
+    aliases: [unemployment Universal Credit claim, UC when out of work]
+    description: Use the applicable claim route and retain claimant-commitment, payment and review outputs.
+    situations: [A person without work needs to check the current means-tested support route.]
+    user_needs: [Reach the live claim and review service without calculating entitlement locally.]
+    source:
+      <<: *source_defaults
+      id: claim-universal-credit-while-unemployed-primary
+      title: "Universal Credit"
+      owner: "Department for Work and Pensions"
+      authority_role: universal_credit_service
+      resource: https://www.gov.uk/universal-credit
+      coverage: "Provides the current Universal Credit overview and claim handoff."
+      exclusions: "Does not calculate entitlement or decide work-related requirements or payment."
+  - <<: *family_defaults
+    id: claim-new-style-jobseekers-allowance
+    title: Claim New Style Jobseeker's Allowance
+    aliases: [new style JSA, contribution based unemployment benefit]
+    description: Check and use the contribution-based unemployment support route and its decision or challenge handoff.
+    situations: [A person who is unemployed or working limited hours wants to check New Style JSA.]
+    user_needs: [Find current contribution, work-search, evidence and review requirements.]
+    source:
+      <<: *source_defaults
+      id: claim-new-style-jobseekers-allowance-primary
+      title: "New Style Jobseeker's Allowance"
+      owner: "Department for Work and Pensions"
+      authority_role: new_style_jobseekers_allowance_service
+      resource: https://www.gov.uk/guidance/new-style-jobseekers-allowance
+      coverage: "Explains the Great Britain New Style JSA claim and decision route."
+      exclusions: "Does not calculate contribution conditions or decide entitlement."
+  - <<: *family_defaults
+    id: get-access-to-work
+    title: Get Access to Work
+    aliases: [workplace disability grant, support to stay in work]
+    description: Apply for employment-related disability support and coordinate the public decision with employer adjustments.
+    situations: [A disabled person or person with a health condition needs support to start or remain in work.]
+    user_needs: [Separate Access to Work funding from the employer's adjustment duties and retain the decision.]
+    source:
+      <<: *source_defaults
+      id: get-access-to-work-primary
+      title: "Access to Work"
+      owner: "Department for Work and Pensions"
+      authority_role: great_britain_access_to_work_service
+      resource: https://www.gov.uk/access-to-work
+      coverage: "Provides the Great Britain Access to Work application and support boundary."
+      exclusions: "Does not diagnose, decide an award or replace the employer's equality duties."
+  - <<: *family_defaults
+    id: get-redundancy-support
+    title: Get redundancy support
+    aliases: [redundancy rights and pay, job lost because role ended]
+    description: Navigate notice, consultation, pay, benefits, job-search and dispute routes after a redundancy proposal or dismissal.
+    situations: [A worker has been told their role may end or has been made redundant.]
+    user_needs: [Find current employment rights and public support without deciding the dismissal's lawfulness.]
+    source:
+      <<: *source_defaults
+      id: get-redundancy-support-primary
+      title: "Redundancy, your rights"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_redundancy_rights_guidance
+      resource: https://www.gov.uk/redundancy-your-rights
+      coverage: "Explains Great Britain redundancy consultation, notice and pay routes."
+      exclusions: "Does not calculate an individual award or determine whether dismissal was fair."
+  - <<: *family_defaults
+    id: access-employment-retraining
+    title: Access employment retraining
+    aliases: [retrain for a new career, job skills training]
+    description: Find governed careers and skills routes before choosing a retraining course or provider.
+    situations: [A person needs new skills after unemployment, redundancy or a career change.]
+    user_needs: [Use public course and funding information and verify the provider.]
+    dependency: approved-training-provider
+    source:
+      <<: *source_defaults
+      id: access-employment-retraining-primary
+      title: "Career skills and training"
+      owner: "Department for Education"
+      authority_role: england_career_training_discovery_guidance
+      resource: https://www.gov.uk/career-skills-and-training
+      coverage: "Routes people in England to current skills assessments, courses and funding."
+      exclusions: "Does not recommend a provider or guarantee funding or employment."
+  - <<: *family_defaults
+    id: volunteer-in-the-uk
+    title: Volunteer in the UK
+    aliases: [find volunteering, unpaid community role]
+    description: Find a legitimate volunteer opportunity and understand the boundary between volunteering, expenses and employment.
+    situations: [A person wants to give unpaid time to an organisation or community.]
+    user_needs: [Check the organisation, safeguarding, expenses and benefit or immigration implications.]
+    dependency: volunteer-involving-organisation
+    source:
+      <<: *source_defaults
+      id: volunteer-in-the-uk-primary
+      title: "Volunteer placements, rights and expenses"
+      owner: "Department for Culture Media and Sport"
+      authority_role: uk_volunteering_rights_guidance
+      resource: https://www.gov.uk/volunteering
+      coverage: "Explains UK volunteer rights, expenses and employment-status boundaries."
+      exclusions: "Does not recommend an organisation or decide employment, benefit or immigration status."
+  - <<: *family_defaults
+    id: resolve-recruitment-discrimination
+    title: Resolve recruitment discrimination
+    aliases: [discrimination in job application, unfair hiring complaint]
+    description: Retain recruitment evidence and use advice, conciliation or legal routes when unlawful discrimination may have occurred.
+    situations: [An applicant believes recruitment treatment may be discriminatory.]
+    user_needs: [Find the correct equality, time-limit and redress route without receiving a legal conclusion locally.]
+    source:
+      <<: *source_defaults
+      id: resolve-recruitment-discrimination-primary
+      title: "Discrimination, your rights, what you can do"
+      owner: "Government Equalities Office"
+      authority_role: great_britain_discrimination_redress_guidance
+      resource: https://www.gov.uk/discrimination-your-rights/what-you-can-do
+      coverage: "Routes Great Britain users to advice and legal remedies for possible discrimination."
+      exclusions: "Does not determine unlawfulness or calculate a deadline or remedy."

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/money-tax-and-benefits.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/money-tax-and-benefits.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/money-tax-and-benefits.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-3-work-money
+domain: money-tax-and-benefits
+title: Money, tax and benefits
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-3-work-money-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: money-tax-benefits-scotland-handoff
+    jurisdiction: Scotland
+    title: Money and tax in Scotland
+    owner: Scottish Government
+    authority_role: scotland_money_support_discovery_handoff
+    resource: https://www.mygov.scot/browse/money-tax
+    coverage: Routes people to current Scottish money, tax and financial-support services.
+    exclusions: Does not calculate liability, entitlement, debt or a challenge outcome.
+  - &lt;&lt;: *source_defaults
+    id: money-tax-benefits-wales-handoff
+    jurisdiction: Wales
+    title: Money and financial inclusion in Wales
+    owner: Welsh Government
+    authority_role: wales_money_support_discovery_handoff
+    resource: https://www.gov.wales/money-and-financial-inclusion
+    coverage: Routes people to current Welsh financial-support policy and services.
+    exclusions: Does not calculate liability, entitlement, debt or a challenge outcome.
+  - &lt;&lt;: *source_defaults
+    id: money-tax-benefits-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Money, tax and benefits in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_money_support_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/money-tax-and-benefits
+    coverage: Routes people to current Northern Ireland money, tax and benefit services.
+    exclusions: Does not calculate liability, entitlement, debt or a challenge outcome.
+families:
+  - &lt;&lt;: *family_defaults
+    id: register-for-income-tax
+    title: Register for Income Tax
+    aliases: [tell HMRC about untaxed income, start paying income tax]
+    description: Identify the correct PAYE, Self Assessment or other HMRC route when income is not already handled correctly.
+    situations: [A person has income or a change that may require Income Tax registration or notification.]
+    user_needs: [Find the responsible tax route and retain HMRC confirmation without calculating liability locally.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-for-income-tax-primary
+      title: &quot;Income Tax&quot;
+      owner: &quot;HM Revenue and Customs&quot;
+      authority_role: uk_income_tax_discovery_guidance
+      resource: https://www.gov.uk/income-tax
+      coverage: &quot;Routes people to current Income Tax, PAYE and Self Assessment information.&quot;
+      exclusions: &quot;Does not calculate liability or decide which notification is required.&quot;
+  - &lt;&lt;: *family_defaults
+    id: get-national-insurance-record
+    title: Get a National Insurance record
+    aliases: [check NI contributions, view national insurance gaps]
+    description: View contribution years and use HMRC correction or voluntary-contribution handoffs for apparent gaps.
+    situations: [A person needs to understand the National Insurance record used for state benefits or pension.]
+    user_needs: [Access the official record and keep forecast, correction and payment decisions separate.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-national-insurance-record-primary
+      title: &quot;Check your National Insurance record&quot;
+      owner: &quot;HM Revenue and Customs&quot;
+      authority_role: uk_national_insurance_record_service
+      resource: https://www.gov.uk/check-national-insurance-record
+      coverage: &quot;Provides the official contribution-year and gap-viewing service.&quot;
+      exclusions: &quot;Does not alter a record or advise whether voluntary contributions are worthwhile.&quot;
+  - &lt;&lt;: *family_defaults
+    id: file-self-assessment
+    title: File Self Assessment
+    aliases: [submit tax return, self assessment deadline]
+    description: Register if required, keep source records, submit the return and retain calculation, payment and amendment outputs.
+    situations: [A person must or may need to submit a Self Assessment tax return.]
+    user_needs: [Follow current registration, filing, payment and correction routes without tax advice from the bundle.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: file-self-assessment-primary
+      title: &quot;Self Assessment tax returns&quot;
+      owner: &quot;HM Revenue and Customs&quot;
+      authority_role: uk_self_assessment_service
+      resource: https://www.gov.uk/self-assessment-tax-returns
+      coverage: &quot;Provides current registration, return and payment handoffs.&quot;
+      exclusions: &quot;Does not decide filing need, calculate tax or provide tax advice.&quot;
+  - &lt;&lt;: *family_defaults
+    id: register-for-vat
+    title: Register for VAT
+    aliases: [VAT registration threshold, get a VAT number]
+    description: Check the current registration boundary and submit business evidence through HMRC&#x27;s VAT route.
+    situations: [A business or person needs to determine whether or when to register for VAT.]
+    user_needs: [Find mandatory, voluntary and exception routes without calculating taxable turnover locally.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-for-vat-primary
+      title: &quot;Register for VAT&quot;
+      owner: &quot;HM Revenue and Customs&quot;
+      authority_role: uk_vat_registration_service
+      resource: https://www.gov.uk/vat-registration
+      coverage: &quot;Explains current VAT registration thresholds and application routes.&quot;
+      exclusions: &quot;Does not calculate taxable turnover or decide registration, exemption or liability.&quot;
+  - &lt;&lt;: *family_defaults
+    id: pay-council-tax
+    title: Pay Council Tax
+    aliases: [council tax bill, local property tax payment]
+    description: Identify the billing authority, understand the bill and use payment, discount, support or challenge routes.
+    situations: [A household has or expects a Council Tax or domestic-rates liability.]
+    user_needs: [Find the correct local authority and keep valuation, liability, support and collection decisions distinct.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: pay-council-tax-primary
+      title: &quot;Council Tax&quot;
+      owner: &quot;Ministry of Housing Communities and Local Government&quot;
+      authority_role: england_wales_council_tax_guidance
+      resource: https://www.gov.uk/council-tax
+      coverage: &quot;Routes England and Wales users to billing, discounts, appeals and local payment.&quot;
+      exclusions: &quot;Scotland and Northern Ireland have distinct local-tax routes; no bill is calculated here.&quot;
+  - &lt;&lt;: *family_defaults
+    id: manage-student-loan-repayment
+    title: Manage student loan repayment
+    aliases: [repay student finance, student loan deductions]
+    description: Identify the repayment plan and use payroll, Self Assessment or overseas repayment routes for the account.
+    situations: [A borrower needs to understand or correct student-loan repayments.]
+    user_needs: [Use the official plan, balance and deduction routes without financial advice from the bundle.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: manage-student-loan-repayment-primary
+      title: &quot;Repaying your student loan&quot;
+      owner: &quot;Student Loans Company&quot;
+      authority_role: uk_student_loan_repayment_guidance
+      resource: https://www.gov.uk/repaying-your-student-loan
+      coverage: &quot;Explains plan-specific repayment, payroll, tax-return and overseas routes.&quot;
+      exclusions: &quot;Does not calculate a balance or advise early repayment.&quot;
+  - &lt;&lt;: *family_defaults
+    id: claim-tax-refund
+    title: Claim a tax refund
+    aliases: [income tax overpayment, get tax back from HMRC]
+    description: Use the correct HMRC refund route for the tax type and retain calculation, payment or refusal outputs.
+    situations: [A person believes too much tax has been paid.]
+    user_needs: [Select the source-defined refund route and know how to query or challenge the result.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-tax-refund-primary
+      title: &quot;Claim a tax refund&quot;
+      owner: &quot;HM Revenue and Customs&quot;
+      authority_role: uk_tax_refund_discovery_guidance
+      resource: https://www.gov.uk/claim-tax-refund
+      coverage: &quot;Routes users to current refund services by tax and circumstance.&quot;
+      exclusions: &quot;Does not establish overpayment, calculate a refund or request personal credentials.&quot;
+  - &lt;&lt;: *family_defaults
+    id: claim-universal-credit
+    title: Claim Universal Credit
+    aliases: [apply for UC, means-tested living cost benefit]
+    description: Check the current claim boundary, submit the live claim and retain commitment, payment and review records.
+    situations: [A household on a low income or out of work needs to check Universal Credit.]
+    user_needs: [Use the responsible service without calculating entitlement or substituting for advice.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-universal-credit-primary
+      title: &quot;Universal Credit&quot;
+      owner: &quot;Department for Work and Pensions&quot;
+      authority_role: universal_credit_service
+      resource: https://www.gov.uk/universal-credit
+      coverage: &quot;Provides the current Universal Credit overview, claim and account handoffs.&quot;
+      exclusions: &quot;Does not calculate entitlement or decide payment, sanctions or review.&quot;
+  - &lt;&lt;: *family_defaults
+    id: claim-disability-benefit
+    title: Claim a disability benefit
+    aliases: [disability payment application, benefits for disabled people]
+    description: Select the correct national and age-specific benefit route and follow assessment, decision and challenge handoffs.
+    situations: [A disabled person or person with a health condition needs to check financial support.]
+    user_needs: [Distinguish benefit systems and retain evidence and decision outputs without a local health or entitlement assessment.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-disability-benefit-primary
+      title: &quot;Financial help if you are disabled&quot;
+      owner: &quot;Department for Work and Pensions&quot;
+      authority_role: disability_benefit_discovery_guidance
+      resource: https://www.gov.uk/financial-help-disabled
+      coverage: &quot;Routes people to current disability-related benefit and support services.&quot;
+      exclusions: &quot;Does not diagnose, select a national benefit or determine entitlement.&quot;
+  - &lt;&lt;: *family_defaults
+    id: report-benefit-change-of-circumstances
+    title: Report a benefit change of circumstances
+    aliases: [tell benefits office about a change, update benefit claim]
+    description: Identify each affected benefit and report the change through its accountable service, retaining confirmation.
+    situations: [A claimant&#x27;s personal, household, work, health or financial circumstances have changed.]
+    user_needs: [Find current notification routes and avoid assuming one report updates every authority.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-benefit-change-of-circumstances-primary
+      title: &quot;Benefits, report a change in circumstances&quot;
+      owner: &quot;Department for Work and Pensions&quot;
+      authority_role: benefit_change_discovery_guidance
+      resource: https://www.gov.uk/report-benefits-change-circumstances
+      coverage: &quot;Routes claimants to source-specific change reporting and explains overpayment risk.&quot;
+      exclusions: &quot;Does not identify every affected service or decide benefit consequences.&quot;
+  - &lt;&lt;: *family_defaults
+    id: get-debt-advice-and-relief
+    title: Get debt advice and relief
+    aliases: [help with debts, debt management options]
+    description: Use free or regulated advice to compare formal and informal debt solutions before committing.
+    situations: [A person cannot meet debts or needs a sustainable repayment or relief route.]
+    user_needs: [Start with public options and regulated advice rather than provider marketing.]
+    dependency: regulated-debt-advice-or-insolvency-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-debt-advice-and-relief-primary
+      title: &quot;Options for dealing with your debts&quot;
+      owner: &quot;Insolvency Service&quot;
+      authority_role: england_wales_debt_solution_guidance
+      resource: https://www.gov.uk/options-for-dealing-with-your-debts
+      coverage: &quot;Compares official England and Wales debt-management and insolvency routes.&quot;
+      exclusions: &quot;Does not recommend a provider, give financial advice or establish devolved debt law.&quot;
+  - &lt;&lt;: *family_defaults
+    id: enter-personal-insolvency
+    title: Enter personal insolvency
+    aliases: [apply for bankruptcy, formal insolvency for debts]
+    description: Use the applicable formal insolvency route only after advice, then retain adjudicator, trustee and creditor outputs.
+    situations: [A person is considering bankruptcy or another formal insolvency process.]
+    user_needs: [Understand territorial routes, consequences, costs and challenge boundaries before applying.]
+    dependency: regulated-insolvency-practitioner-or-official-receiver
+    source:
+      &lt;&lt;: *source_defaults
+      id: enter-personal-insolvency-primary
+      title: &quot;Apply for bankruptcy&quot;
+      owner: &quot;Insolvency Service&quot;
+      authority_role: england_wales_online_bankruptcy_service
+      resource: https://www.gov.uk/apply-for-bankruptcy
+      coverage: &quot;Provides the England and Wales online bankruptcy application and consequence guidance.&quot;
+      exclusions: &quot;Scotland and Northern Ireland have distinct insolvency routes; this is not financial or legal advice.&quot;
+</pre>
+</body>
+</html>

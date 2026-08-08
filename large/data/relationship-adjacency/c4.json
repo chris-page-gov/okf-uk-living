@@ -229,6 +229,45 @@
       "target_iri": "outcome/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
+  "outcome/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "pay-paye-and-national-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de372b8fe4ac7206c4d708cd",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "outcome/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -309,6 +348,229 @@
       "source_iri": "service-step/arrange-newborn-screening-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "output/arrange-newborn-screening-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
       "target_iri": "output/arrange-newborn-screening-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "output/claim-tax-refund-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/claim-tax-refund.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/claim-tax-refund.v1.yaml",
+          "source_ids": [
+            "claim-tax-refund-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e90a8162c7a9bf6b22b5e5d1",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-tax-refund-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-tax-refund-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/claim-tax-refund-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/claim-tax-refund-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
+  "resource/get-national-insurance-record-get-national-insurance-record-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:84779b01fd9b6cdbf4d5de85",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-national-insurance-record-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/get-national-insurance-record-get-national-insurance-record-primary",
+      "target_iri": "resource/get-national-insurance-record-get-national-insurance-record-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b1c6ef731671b8ef4a923a6f",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-national-insurance-record",
+      "source_iri": "dataset/get-national-insurance-record",
+      "target": "resource/get-national-insurance-record-get-national-insurance-record-primary",
+      "target_iri": "resource/get-national-insurance-record-get-national-insurance-record-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cd61601f0a962053f7f5ab74",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-national-insurance-record-get-national-insurance-record-primary",
+      "target_iri": "resource/get-national-insurance-record-get-national-insurance-record-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e1ca763687b93ce6cca906f2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/get-national-insurance-record-get-national-insurance-record-primary",
+      "target_iri": "resource/get-national-insurance-record-get-national-insurance-record-primary"
+    }
+  ],
+  "rule/receive-national-minimum-wage-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/receive-national-minimum-wage.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/receive-national-minimum-wage.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "receive-national-minimum-wage-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bda27952231d3e00b6fa4aeb",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-national-minimum-wage-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/receive-national-minimum-wage-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/receive-national-minimum-wage-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/receive-national-minimum-wage-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "rule/start-antenatal-care-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [

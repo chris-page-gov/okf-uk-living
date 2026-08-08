@@ -115,6 +115,86 @@
       "target_iri": "organisation/organisation-northern-ireland-courts-and-tribunals-service"
     }
   ],
+  "output/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-redundancy-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c8f2121c95fb8008e79fc7f8",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "redress/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a970ad37f266c1837cdabdc3",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    }
+  ],
   "redress/report-missed-rubbish-collection-report-eligible-missed-collection-submit-and-retain-outcome-council-complaints-route-if-the-service-problem-remains-unresolved": [
     {
       "assertion_scope": "real-world",
@@ -644,6 +724,125 @@
       "source_iri": "service-episode/use-childrens-centres-exception-or-route-failure",
       "target": "service-step/use-childrens-centres-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target_iri": "service-step/use-childrens-centres-exception-or-route-failure-resolve-route-boundary-or-failure"
+    }
+  ],
+  "service-episode/use-public-job-search-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "use-public-job-search-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:08244d1686054961e56d63d0",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-public-job-search-exception-or-route-failure",
+      "source_iri": "service-episode/use-public-job-search-exception-or-route-failure",
+      "target": "service-step/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "use-public-job-search-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2c74cf3d3cc7b99533a9388a",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-public-job-search",
+      "source_iri": "dataset/use-public-job-search",
+      "target": "service-episode/use-public-job-search-exception-or-route-failure",
+      "target_iri": "service-episode/use-public-job-search-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "use-public-job-search-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4c4e5520aade489b140901c7",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-public-job-search-exception-or-route-failure",
+      "source_iri": "service-episode/use-public-job-search-exception-or-route-failure",
+      "target": "enclosing-process/enter-fair-and-supported-work",
+      "target_iri": "enclosing-process/enter-fair-and-supported-work"
     }
   ],
   "service-step/claim-student-council-tax-disregard-ordinary-source-linked-route-select-current-jurisdiction-route": [
@@ -1180,6 +1379,404 @@
       "source_iri": "service-step/claim-student-council-tax-disregard-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "actor/organisation-official-service-directory",
       "target_iri": "actor/organisation-official-service-directory"
+    }
+  ],
+  "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:08468d53e869816bf9d89e52",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2f57d564d62a69fb87334f4d",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6226c11ee6159b7c79f86268",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/enter-personal-insolvency-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7025ebeb3dcb55c563de158f",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/enter-personal-insolvency-ordinary-source-linked-route",
+      "source_iri": "service-episode/enter-personal-insolvency-ordinary-source-linked-route",
+      "target": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:835b257b646ea633b7c53f6f",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9914e6e47cb881fd5706bbf5",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/enter-personal-insolvency-enter-personal-insolvency-primary",
+      "target_iri": "resource/enter-personal-insolvency-enter-personal-insolvency-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:aab7732b0347c6e68fb1ece9",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b3ac79018b916bee24bc48b9",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c1efc7cfb1652172ba17bb3c",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e986a608ff2da5e5c9b19862",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/enter-personal-insolvency.v1.yaml",
+          "source_ids": [
+            "enter-personal-insolvency-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f95fb2bfec3207720b36a711",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/enter-personal-insolvency-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ]
 }

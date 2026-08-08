@@ -39,6 +39,47 @@
       "target_iri": "evidence/register-a-birth-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "outcome/get-access-to-work-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-access-to-work-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f57a04ad543107d4a5e8960d",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-access-to-work-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-access-to-work-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/get-access-to-work-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/get-access-to-work-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
   "output/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -280,6 +321,191 @@
       "source_iri": "service-step/arrange-student-accommodation-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "requirement/arrange-student-accommodation-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
       "target_iri": "requirement/arrange-student-accommodation-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "requirement/join-workplace-pension-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-workplace-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-workplace-pension.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-workplace-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8598ef573411ec473f77381b",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/join-workplace-pension-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/join-workplace-pension-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/join-workplace-pension-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/join-workplace-pension-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0cad4b28ed98b8bb4160ef38",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-disclosure-or-dbs-check",
+      "source_iri": "dataset/get-disclosure-or-dbs-check",
+      "target": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0d6baf1b06b463fa96089186",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a82d947f71e15818b57189ac",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dfefe64388fdab183042ec51",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/get-disclosure-or-dbs-check-finding-work-northern-ireland-handoff"
     }
   ],
   "resource/register-newborn-with-health-services-register-newborn-with-health-services-primary": [
@@ -625,6 +851,125 @@
       "source_iri": "service-episode/challenge-school-exclusion-exception-or-route-failure",
       "target": "enclosing-process/receive-school-support-and-outcomes",
       "target_iri": "enclosing-process/receive-school-support-and-outcomes"
+    }
+  ],
+  "service-episode/get-access-to-work-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-access-to-work-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4b7058fcbc9a521b1a18fd7d",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-access-to-work-exception-or-route-failure",
+      "source_iri": "service-episode/get-access-to-work-exception-or-route-failure",
+      "target": "enclosing-process/enter-fair-and-supported-work",
+      "target_iri": "enclosing-process/enter-fair-and-supported-work"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-access-to-work-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c24aa94e92c889b101d65bc2",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-access-to-work",
+      "source_iri": "dataset/get-access-to-work",
+      "target": "service-episode/get-access-to-work-exception-or-route-failure",
+      "target_iri": "service-episode/get-access-to-work-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-access-to-work-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de285e2413de5a7314e612ba",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-access-to-work-exception-or-route-failure",
+      "source_iri": "service-episode/get-access-to-work-exception-or-route-failure",
+      "target": "service-step/get-access-to-work-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/get-access-to-work-exception-or-route-failure-resolve-route-boundary-or-failure"
     }
   ],
   "service-episode/register-a-birth-exception-or-route-failure": [

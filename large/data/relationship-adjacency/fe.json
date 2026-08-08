@@ -1362,6 +1362,47 @@
       "target_iri": "evidence/arrange-newborn-screening-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "output/get-jobcentre-support-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-jobcentre-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-jobcentre-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-jobcentre-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5b0a2800cb1238587dfef3b3",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-jobcentre-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-jobcentre-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/get-jobcentre-support-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/get-jobcentre-support-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
   "redress/become-a-foster-carer-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
     {
       "assertion_scope": "real-world",
@@ -1401,6 +1442,44 @@
       "source_iri": "service-step/become-a-foster-carer-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "redress/become-a-foster-carer-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
       "target_iri": "redress/become-a-foster-carer-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
+  ],
+  "redress/manage-student-loan-repayment-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/manage-student-loan-repayment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/manage-student-loan-repayment.v1.yaml",
+          "source_ids": [
+            "manage-student-loan-repayment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ccab6d38d7dbec9bdc3b867a",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/manage-student-loan-repayment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/manage-student-loan-repayment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/manage-student-loan-repayment-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/manage-student-loan-repayment-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
   "requirement/access-health-visiting-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
@@ -1524,6 +1603,152 @@
       "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "requirement/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
       "target_iri": "requirement/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "resource/access-employment-retraining-finding-work-northern-ireland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:09ed5f5802e107d06ecbfc8c",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-employment-retraining-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-employment-retraining-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/access-employment-retraining-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/access-employment-retraining-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:63bea52899487bcb68e2a1f4",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/access-employment-retraining-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/access-employment-retraining-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:742105acd00cc2482e1cc232",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/access-employment-retraining-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/access-employment-retraining-finding-work-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7d212bf6b4daf3f2d77c5f3d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/access-employment-retraining",
+      "source_iri": "dataset/access-employment-retraining",
+      "target": "resource/access-employment-retraining-finding-work-northern-ireland-handoff",
+      "target_iri": "resource/access-employment-retraining-finding-work-northern-ireland-handoff"
     }
   ],
   "service-episode/consent-to-healthcare-as-young-person-exception-or-route-failure": [
@@ -1804,6 +2029,450 @@
       "source_iri": "service-episode/report-missed-rubbish-collection-report-eligible-missed-collection",
       "target": "service-step/report-missed-rubbish-collection-report-eligible-missed-collection-identify-authority-and-schedule",
       "target_iri": "service-step/report-missed-rubbish-collection-report-eligible-missed-collection-identify-authority-and-schedule"
+    }
+  ],
+  "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1b390e432555a46a03a33cbe",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3dc7eafaf04ceca77000f5ca",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3f4dfa6cd6c3329ef0abca29",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:44c884d6e01bebb3dd88672f",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:50dc376ecfe59e0dd7858e96",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:686f572c951951ab116f0624",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-workplace-injury-report-workplace-injury-primary",
+      "target_iri": "resource/report-workplace-injury-report-workplace-injury-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6f117fb547d1545628a5541f",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8022ff7267d5ec1e71fb61b7",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-workplace-injury-employment-northern-ireland-handoff",
+      "target_iri": "resource/report-workplace-injury-employment-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:88a29c267708447cf59db4a2",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:adb2ad41b2c8e97c75dfb204",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-workplace-injury-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-workplace-injury-ordinary-source-linked-route",
+      "target": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d705174a16a0695990eee833",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec43693541f26b74ed110ff5",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions"
     }
   ],
   "service-step/verify-qualifications-ordinary-source-linked-route-select-current-jurisdiction-route": [
@@ -2340,6 +3009,44 @@
       "source_iri": "service-step/verify-qualifications-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/verify-qualifications-verify-qualifications-primary",
       "target_iri": "resource/verify-qualifications-verify-qualifications-primary"
+    }
+  ],
+  "user-need/file-self-assessment-payment-and-correction-routes-without-tax-advice-from-the-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/file-self-assessment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/file-self-assessment.v1.yaml",
+          "source_ids": [
+            "file-self-assessment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f0c2504be880122225b1aac8",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/file-self-assessment",
+      "source_iri": "dataset/file-self-assessment",
+      "target": "user-need/file-self-assessment-payment-and-correction-routes-without-tax-advice-from-the-bundle",
+      "target_iri": "user-need/file-self-assessment-payment-and-correction-routes-without-tax-advice-from-the-bundle"
     }
   ]
 }

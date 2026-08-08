@@ -816,6 +816,47 @@
       "target_iri": "evidence/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "evidence/start-work-based-apprenticeship-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/start-work-based-apprenticeship.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/start-work-based-apprenticeship.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "start-work-based-apprenticeship-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a20f848f0a840cb437859c67",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/start-work-based-apprenticeship-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/start-work-based-apprenticeship-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/start-work-based-apprenticeship-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/start-work-based-apprenticeship-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "outcome/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions-give-the-billing-authority-the-student-evidence-needed-to-apply-the-current-disregard-or-discount-decision": [
     {
       "assertion_scope": "real-world",
@@ -895,6 +936,45 @@
       "source_iri": "service-step/register-a-stillbirth-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/register-a-stillbirth-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/register-a-stillbirth-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "outcome/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions-identify-the-relevant-statutory-time-off-route-and-give-the-employer-the-current-notice-or-evidence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/take-statutory-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/take-statutory-leave.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "take-statutory-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4fa8face872cf9337db6c064",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions-identify-the-relevant-statutory-time-off-route-and-give-the-employer-the-current-notice-or-evidence",
+      "target_iri": "outcome/take-statutory-leave-ordinary-source-linked-route-follow-current-official-instructions-identify-the-relevant-statutory-time-off-route-and-give-the-employer-the-current-notice-or-evidence"
     }
   ],
   "redress/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
@@ -1082,6 +1162,156 @@
       "source_iri": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "resource/receive-national-insurance-number-transition-adulthood-northern-ireland-handoff",
       "target_iri": "resource/receive-national-insurance-number-transition-adulthood-northern-ireland-handoff"
+    }
+  ],
+  "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-workplace-health-and-safety-protection-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0c5bf3eaabc607a5a9865c2a",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "target": "service-step/get-workplace-health-and-safety-protection-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/get-workplace-health-and-safety-protection-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-workplace-health-and-safety-protection-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:120442a4daebc0ead8045331",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "target": "enclosing-process/protect-safety-collective-rights-and-redress",
+      "target_iri": "enclosing-process/protect-safety-collective-rights-and-redress"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-workplace-health-and-safety-protection-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2d368b5c3a4ce1d50f65d745",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "target": "service-step/get-workplace-health-and-safety-protection-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/get-workplace-health-and-safety-protection-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-workplace-health-and-safety-protection-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:af4ef8afe79c677529fe1dee",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-workplace-health-and-safety-protection",
+      "source_iri": "dataset/get-workplace-health-and-safety-protection",
+      "target": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route",
+      "target_iri": "service-episode/get-workplace-health-and-safety-protection-ordinary-source-linked-route"
     }
   ]
 }

@@ -228,6 +228,44 @@
       "target_iri": "outcome/get-careers-advice-ordinary-source-linked-route-follow-current-official-instructions-find-impartial-careers-information-and-an-adviser-route-for-education-training-or-work-choices"
     }
   ],
+  "output/claim-disability-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/claim-disability-benefit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/claim-disability-benefit.v1.yaml",
+          "source_ids": [
+            "claim-disability-benefit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:350a5a2db87a0562017eac60",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-disability-benefit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-disability-benefit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/claim-disability-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/claim-disability-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "requirement/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
     {
       "assertion_scope": "real-world",
@@ -413,6 +451,45 @@
       "source_iri": "service-step/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/register-to-vote-for-first-time-register-to-vote-for-first-time-primary",
       "target_iri": "resource/register-to-vote-for-first-time-register-to-vote-for-first-time-primary"
+    }
+  ],
+  "rule/check-employment-status-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/check-employment-status.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/check-employment-status.v1.yaml",
+          "source_ids": [
+            "check-employment-status-primary",
+            "employment-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a11e2462b9f945ea2dda6a38",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-employment-status-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/check-employment-status-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/check-employment-status-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/check-employment-status-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "rule/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
@@ -652,6 +729,116 @@
       "target_iri": "service-step/obtain-research-ethics-approval-ordinary-source-linked-route-follow-current-official-instructions"
     }
   ],
+  "service-episode/pay-council-tax-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8c2808a465803854b229bddd",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-council-tax-exception-or-route-failure",
+      "source_iri": "service-episode/pay-council-tax-exception-or-route-failure",
+      "target": "service-step/pay-council-tax-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/pay-council-tax-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9a8fb5582d71746516b32c1b",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-council-tax-exception-or-route-failure",
+      "source_iri": "service-episode/pay-council-tax-exception-or-route-failure",
+      "target": "enclosing-process/manage-personal-tax-and-contributions",
+      "target_iri": "enclosing-process/manage-personal-tax-and-contributions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a5ac6183ae3bab4011cd6b77",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/pay-council-tax",
+      "source_iri": "dataset/pay-council-tax",
+      "target": "service-episode/pay-council-tax-exception-or-route-failure",
+      "target_iri": "service-episode/pay-council-tax-exception-or-route-failure"
+    }
+  ],
   "user-need/apply-for-school-place-application-window": [
     {
       "assertion_scope": "real-world",
@@ -732,6 +919,45 @@
       "source_iri": "dataset/arrange-newborn-screening",
       "target": "user-need/arrange-newborn-screening-understand-what-is-offered-and-where-decisions-and-follow-up-are-handled-by-the-clinical-service",
       "target_iri": "user-need/arrange-newborn-screening-understand-what-is-offered-and-where-decisions-and-follow-up-are-handled-by-the-clinical-service"
+    }
+  ],
+  "user-need/join-or-use-trade-union-verify-the-organisation-and-keep-public-rights-separate-from-membership-decisions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cde854191da0181c02d7da69",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/join-or-use-trade-union",
+      "source_iri": "dataset/join-or-use-trade-union",
+      "target": "user-need/join-or-use-trade-union-verify-the-organisation-and-keep-public-rights-separate-from-membership-decisions",
+      "target_iri": "user-need/join-or-use-trade-union-verify-the-organisation-and-keep-public-rights-separate-from-membership-decisions"
     }
   ]
 }

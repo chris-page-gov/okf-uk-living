@@ -117,6 +117,47 @@
       "target_iri": "output/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
+  "output/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-disclosure-or-dbs-check-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:80d5cd995b420e80f2ff4dca",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/get-disclosure-or-dbs-check-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
   "rule/apply-for-free-school-meals-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
     {
       "assertion_scope": "real-world",
@@ -156,6 +197,45 @@
       "source_iri": "service-step/apply-for-free-school-meals-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "rule/apply-for-free-school-meals-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
       "target_iri": "rule/apply-for-free-school-meals-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "rule/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-statutory-sick-pay.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-statutory-sick-pay.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-statutory-sick-pay-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:003e2f34f211b3e3ab864d4a",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "service-episode/access-neonatal-care-ordinary-source-linked-route": [
@@ -472,6 +552,125 @@
       "source_iri": "service-episode/get-early-years-send-support-ordinary-source-linked-route",
       "target": "enclosing-process/support-early-development-and-safety",
       "target_iri": "enclosing-process/support-early-development-and-safety"
+    }
+  ],
+  "service-episode/get-redundancy-support-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-redundancy-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1015710c61861485ef139c04",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-redundancy-support",
+      "source_iri": "dataset/get-redundancy-support",
+      "target": "service-episode/get-redundancy-support-exception-or-route-failure",
+      "target_iri": "service-episode/get-redundancy-support-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-redundancy-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:861a898f148ba94aea5b5687",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-redundancy-support-exception-or-route-failure",
+      "source_iri": "service-episode/get-redundancy-support-exception-or-route-failure",
+      "target": "enclosing-process/respond-to-unemployment-and-redundancy",
+      "target_iri": "enclosing-process/respond-to-unemployment-and-redundancy"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-redundancy-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f7e6aeb8324fe0aad850ade6",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-redundancy-support-exception-or-route-failure",
+      "source_iri": "service-episode/get-redundancy-support-exception-or-route-failure",
+      "target": "service-step/get-redundancy-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/get-redundancy-support-exception-or-route-failure-resolve-route-boundary-or-failure"
     }
   ],
   "service-episode/get-school-send-support-exception-or-route-failure": [
@@ -2017,6 +2216,86 @@
       "target_iri": "evidence/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
+  "user-need/check-employment-status-separate-tax-status-from-employment-rights-status-and-avoid-a-fabricated-local-conclusion": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/check-employment-status.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/check-employment-status.v1.yaml",
+          "source_ids": [
+            "check-employment-status-primary",
+            "employment-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5664782d68e126a417d5d694",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/check-employment-status",
+      "source_iri": "dataset/check-employment-status",
+      "target": "user-need/check-employment-status-separate-tax-status-from-employment-rights-status-and-avoid-a-fabricated-local-conclusion",
+      "target_iri": "user-need/check-employment-status-separate-tax-status-from-employment-rights-status-and-avoid-a-fabricated-local-conclusion"
+    }
+  ],
+  "user-need/get-access-to-work-separate-access-to-work-funding-from-the-employer-s-adjustment-duties-and-retain-the-decision": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-access-to-work.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-access-to-work-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0208a1aacf59fdbb88689558",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-access-to-work",
+      "source_iri": "dataset/get-access-to-work",
+      "target": "user-need/get-access-to-work-separate-access-to-work-funding-from-the-employer-s-adjustment-duties-and-retain-the-decision",
+      "target_iri": "user-need/get-access-to-work-separate-access-to-work-funding-from-the-employer-s-adjustment-duties-and-retain-the-decision"
+    }
+  ],
   "user-need/get-careers-advice-reach-the-appropriate-public-careers-service-without-treating-guidance-as-a-guaranteed-outcome": [
     {
       "assertion_scope": "real-world",
@@ -2056,6 +2335,45 @@
       "source_iri": "dataset/get-careers-advice",
       "target": "user-need/get-careers-advice-reach-the-appropriate-public-careers-service-without-treating-guidance-as-a-guaranteed-outcome",
       "target_iri": "user-need/get-careers-advice-reach-the-appropriate-public-careers-service-without-treating-guidance-as-a-guaranteed-outcome"
+    }
+  ],
+  "user-need/get-statutory-sick-pay-evidence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-statutory-sick-pay.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-statutory-sick-pay.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-statutory-sick-pay-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:82a486b89072996e0d69f886",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-statutory-sick-pay",
+      "source_iri": "dataset/get-statutory-sick-pay",
+      "target": "user-need/get-statutory-sick-pay-evidence",
+      "target_iri": "user-need/get-statutory-sick-pay-evidence"
     }
   ]
 }

@@ -1,4 +1,80 @@
 {
+  "evidence/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/claim-universal-credit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/claim-universal-credit.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:04a6ed0e2af0a54777af681d",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "evidence/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/report-benefit-change-of-circumstances.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/report-benefit-change-of-circumstances.v1.yaml",
+          "source_ids": [
+            "report-benefit-change-of-circumstances-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:11d1d37d6b841fa61c26e6e4",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/report-benefit-change-of-circumstances-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "life-course-domain/starting-and-running-organisation": [
     {
       "assertion_scope": "real-world",
@@ -503,6 +579,86 @@
       "source_iri": "dataset/run-payroll",
       "target": "life-course-domain/starting-and-running-organisation",
       "target_iri": "life-course-domain/starting-and-running-organisation"
+    }
+  ],
+  "outcome/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions-find-governed-careers-and-skills-routes-before-choosing-a-retraining-course-or-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/access-employment-retraining.v1.yaml",
+          "source_ids": [
+            "access-employment-retraining-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5086fc206c608b88a9df245a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions-find-governed-careers-and-skills-routes-before-choosing-a-retraining-course-or-provider",
+      "target_iri": "outcome/access-employment-retraining-ordinary-source-linked-route-follow-current-official-instructions-find-governed-careers-and-skills-routes-before-choosing-a-retraining-course-or-provider"
+    }
+  ],
+  "outcome/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/take-parental-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/take-parental-leave.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "take-parental-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bcd2f59c1af88755c2cd7bd7",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/take-parental-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
   "output/register-to-vote-for-first-time-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [

@@ -73,6 +73,45 @@
       "target_iri": "life-course-domain/relationships-and-family-change"
     }
   ],
+  "outcome/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions-record-the-incident-and-use-employer-enforcing-authority-and-injury-reporting-routes-applicable-to-the-event": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dcf623472c4591755f6270c4",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions-record-the-incident-and-use-employer-enforcing-authority-and-injury-reporting-routes-applicable-to-the-event",
+      "target_iri": "outcome/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions-record-the-incident-and-use-employer-enforcing-authority-and-injury-reporting-routes-applicable-to-the-event"
+    }
+  ],
   "output/get-healthy-start-support-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -338,6 +377,84 @@
       "source_iri": "service-step/arrange-student-accommodation-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/arrange-student-accommodation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/arrange-student-accommodation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f200a440f5cb853c1d393311",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/take-statutory-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/take-statutory-leave.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "take-statutory-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b6c8f179cbe76b9148b677c0",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
   "service-episode/arrange-student-accommodation-ordinary-source-linked-route": [
@@ -954,6 +1071,404 @@
       "source_iri": "service-episode/apply-for-school-place-exception-or-route-failure",
       "target": "service-step/apply-for-school-place-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target_iri": "service-step/apply-for-school-place-exception-or-route-failure-resolve-route-boundary-or-failure"
+    }
+  ],
+  "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0c67051e2b007a70dacbda9a",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3348f5ca6c39de4ebbfa73d2",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:71ce79136ea4f18ff5693473",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:720aceab006ce0902b286b6f",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:723d88ad37cdf65b976889fe",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7e02c50f278974d63d91a8eb",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7e2cee0253e20c7475bf9037",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-national-insurance-record-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-national-insurance-record-ordinary-source-linked-route",
+      "target": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:91b1b8180b16537d1fe82521",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cde60402242aa858b4530e2b",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-view-contribution-years-and-use-hmrc-correction-or-voluntary-contribution-handoffs-for-apparent-gaps",
+      "target_iri": "outcome/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions-view-contribution-years-and-use-hmrc-correction-or-voluntary-contribution-handoffs-for-apparent-gaps"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e1ca763687b93ce6cca906f2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/get-national-insurance-record-get-national-insurance-record-primary",
+      "target_iri": "resource/get-national-insurance-record-get-national-insurance-record-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e49b6e4587a712ba1223c45b",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/get-national-insurance-record-ordinary-source-linked-route-follow-current-official-instructions"
     }
   ],
   "service-step/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions": [

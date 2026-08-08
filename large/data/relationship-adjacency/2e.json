@@ -161,6 +161,45 @@
       "target_iri": "output/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
+  "redress/pay-paye-and-national-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "pay-paye-and-national-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b80b25f4c9fff5b356824066",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/pay-paye-and-national-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/pay-paye-and-national-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/pay-paye-and-national-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/pay-paye-and-national-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
+  ],
   "rule/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
     {
       "assertion_scope": "real-world",
@@ -237,6 +276,156 @@
       "source_iri": "service-step/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority",
       "target": "rule/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-the-responsible-authority-controls-when-registration-can-continue",
       "target_iri": "rule/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-the-responsible-authority-controls-when-registration-can-continue"
+    }
+  ],
+  "service-episode/join-or-use-trade-union-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1d49c945f4bfd02bc6439b84",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "source_iri": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "target": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/join-or-use-trade-union-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3c1a99e5574288f99b8b24eb",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/join-or-use-trade-union",
+      "source_iri": "dataset/join-or-use-trade-union",
+      "target": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "target_iri": "service-episode/join-or-use-trade-union-ordinary-source-linked-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:507a8d05be2ba74fdde8024b",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "source_iri": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "target": "service-step/join-or-use-trade-union-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/join-or-use-trade-union-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/join-or-use-trade-union.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/join-or-use-trade-union.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "join-or-use-trade-union-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec6fd5d045d1248fd9f2c063",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "source_iri": "service-episode/join-or-use-trade-union-ordinary-source-linked-route",
+      "target": "enclosing-process/protect-safety-collective-rights-and-redress",
+      "target_iri": "enclosing-process/protect-safety-collective-rights-and-redress"
     }
   ]
 }

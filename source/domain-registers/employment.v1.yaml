@@ -1,0 +1,246 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-3-work-money
+domain: employment
+title: Employment
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-3-work-money-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England, Scotland, Wales]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: employment-scotland-handoff
+    jurisdiction: Scotland
+    title: Working and jobs in Scotland
+    owner: Scottish Government
+    authority_role: scotland_employment_discovery_handoff
+    resource: https://www.mygov.scot/browse/working-jobs
+    coverage: Routes people to current Scottish employment and work-support information.
+    exclusions: Employment law may be Great Britain-wide but services and delivery remain route-specific.
+  - <<: *source_defaults
+    id: employment-wales-handoff
+    jurisdiction: Wales
+    title: Employment support in Wales
+    owner: Welsh Government
+    authority_role: wales_employment_discovery_handoff
+    resource: https://www.gov.wales/employment-support
+    coverage: Routes people to current Welsh employability and workplace support.
+    exclusions: Employment law may be Great Britain-wide but services and delivery remain route-specific.
+  - <<: *source_defaults
+    id: employment-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Employment in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_employment_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/employment
+    coverage: Routes people to current Northern Ireland employment rights and services.
+    exclusions: Great Britain employment guidance does not establish Northern Ireland law or procedure.
+families:
+  - <<: *family_defaults
+    id: receive-written-employment-particulars
+    title: Receive written employment particulars
+    aliases: [written statement of employment, job terms in writing]
+    description: Obtain the employer's required written terms and retain corrections or dispute evidence.
+    situations: [A worker is starting or continuing a job and needs the terms recorded.]
+    user_needs: [Understand the written-statement boundary and where missing or inaccurate terms can be challenged.]
+    source:
+      <<: *source_defaults
+      id: receive-written-employment-particulars-primary
+      title: "Employment contracts and conditions, written statement"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_written_particulars_guidance
+      resource: https://www.gov.uk/employment-contracts-and-conditions/written-statement-of-employment-particulars
+      coverage: "Explains Great Britain written-statement content and timing."
+      exclusions: "Does not interpret an individual contract or determine employment status."
+  - <<: *family_defaults
+    id: check-employment-status
+    title: Check employment status
+    aliases: [am I an employee or worker, self-employed status]
+    description: Use official tax and rights guidance to identify the status questions an accountable authority or tribunal decides.
+    situations: [A person or engager is unsure whether work is employment, worker status or self-employment.]
+    user_needs: [Separate tax status from employment-rights status and avoid a fabricated local conclusion.]
+    source:
+      <<: *source_defaults
+      id: check-employment-status-primary
+      title: "Employment status"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_employment_status_guidance
+      resource: https://www.gov.uk/employment-status
+      coverage: "Introduces employment-status categories and their rights in Great Britain."
+      exclusions: "Does not determine status for a real engagement or replace tax and legal decisions."
+  - <<: *family_defaults
+    id: receive-national-minimum-wage
+    title: Receive the National Minimum Wage
+    aliases: [minimum wage rate, underpaid at work]
+    description: Check the current statutory rate and use pay-record, complaint or enforcement routes when pay may be short.
+    situations: [A worker needs to understand or challenge minimum-wage pay.]
+    user_needs: [Find current rates, status boundaries and confidential enforcement or tribunal routes.]
+    source:
+      <<: *source_defaults
+      id: receive-national-minimum-wage-primary
+      title: "National Minimum Wage and National Living Wage rates"
+      owner: "Department for Business and Trade"
+      authority_role: uk_minimum_wage_guidance
+      resource: https://www.gov.uk/national-minimum-wage-rates
+      coverage: "Publishes current statutory minimum-wage rates and age bands."
+      exclusions: "Does not calculate pay or decide whether a worker or time is covered."
+  - <<: *family_defaults
+    id: pay-paye-and-national-insurance
+    title: Pay PAYE and National Insurance
+    aliases: [tax deducted from wages, employee PAYE contributions]
+    description: Understand payroll deductions and use employer or HMRC correction routes when records appear wrong.
+    situations: [An employee needs to understand income-tax and National Insurance deductions from pay.]
+    user_needs: [Check tax code and payslip evidence and reach the accountable correction service.]
+    source:
+      <<: *source_defaults
+      id: pay-paye-and-national-insurance-primary
+      title: "How you pay Income Tax"
+      owner: "HM Revenue and Customs"
+      authority_role: uk_paye_income_tax_guidance
+      resource: https://www.gov.uk/income-tax/how-you-pay-income-tax
+      coverage: "Explains PAYE deductions and tax-code handoffs."
+      exclusions: "Does not calculate tax, validate a payslip or correct an account."
+  - <<: *family_defaults
+    id: join-workplace-pension
+    title: Join a workplace pension
+    aliases: [automatic enrolment pension, opt in to employer pension]
+    description: Follow automatic-enrolment or opt-in steps and retain scheme, contribution and decision records.
+    situations: [A worker needs to understand or act on workplace pension enrolment.]
+    user_needs: [Find employer, scheme and regulator boundaries without selecting investments locally.]
+    dependency: regulated-workplace-pension-scheme
+    source:
+      <<: *source_defaults
+      id: join-workplace-pension-primary
+      title: "Workplace pensions"
+      owner: "Department for Work and Pensions"
+      authority_role: great_britain_workplace_pension_guidance
+      resource: https://www.gov.uk/workplace-pensions
+      coverage: "Explains automatic enrolment, contributions and opting out in Great Britain."
+      exclusions: "Does not recommend a pension, calculate benefits or decide an employer breach."
+  - <<: *family_defaults
+    id: take-statutory-leave
+    title: Take statutory leave
+    aliases: [holiday entitlement, time off work rights]
+    description: Identify the relevant statutory time-off route and give the employer the current notice or evidence.
+    situations: [A worker needs annual leave or another statutory period away from work.]
+    user_needs: [Distinguish leave types, employer procedure and dispute routes.]
+    source:
+      <<: *source_defaults
+      id: take-statutory-leave-primary
+      title: "Holidays and time off"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_leave_discovery_guidance
+      resource: https://www.gov.uk/browse/working/time-off
+      coverage: "Routes workers to current Great Britain holiday and time-off rights."
+      exclusions: "Does not calculate entitlement or decide whether an absence is protected."
+  - <<: *family_defaults
+    id: get-statutory-sick-pay
+    title: Get Statutory Sick Pay
+    aliases: [SSP from employer, sick pay when unable to work]
+    description: Give required sickness evidence and use employer, HMRC or benefit handoffs when payment is refused or ends.
+    situations: [An employee cannot work because of sickness and needs to check statutory pay.]
+    user_needs: [Find current eligibility, evidence, payment and dispute routes without a local award calculation.]
+    source:
+      <<: *source_defaults
+      id: get-statutory-sick-pay-primary
+      title: "Statutory Sick Pay"
+      owner: "Department for Work and Pensions"
+      authority_role: great_britain_statutory_sick_pay_guidance
+      resource: https://www.gov.uk/statutory-sick-pay
+      coverage: "Explains Great Britain SSP eligibility, evidence and employer-payment routes."
+      exclusions: "Does not diagnose illness or decide employment status, eligibility or amount."
+  - <<: *family_defaults
+    id: take-parental-leave
+    title: Take parental leave
+    aliases: [unpaid parental leave, time off to care for child]
+    description: Use the statutory parental-leave notice route and respond to postponement or dispute outputs.
+    situations: [An employee needs time away from work to care for a child.]
+    user_needs: [Find current eligibility, notice and employer-response boundaries.]
+    source:
+      <<: *source_defaults
+      id: take-parental-leave-primary
+      title: "Unpaid parental leave"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_parental_leave_guidance
+      resource: https://www.gov.uk/parental-leave
+      coverage: "Explains Great Britain unpaid parental-leave rights and notice."
+      exclusions: "Does not decide eligibility or whether an employer response is lawful."
+  - <<: *family_defaults
+    id: get-workplace-health-and-safety-protection
+    title: Get workplace health and safety protection
+    aliases: [unsafe workplace help, employer safety duties]
+    description: Raise a workplace risk through employer and regulator routes while preserving urgent and protected-disclosure boundaries.
+    situations: [A worker or other person is concerned about workplace health or safety.]
+    user_needs: [Identify the enforcing authority and escalation route without the bundle assessing risk.]
+    source:
+      <<: *source_defaults
+      id: get-workplace-health-and-safety-protection-primary
+      title: "Your health and safety at work"
+      owner: "Health and Safety Executive"
+      authority_role: great_britain_workplace_safety_guidance
+      resource: https://www.hse.gov.uk/simple-health-safety/law/
+      coverage: "Introduces Great Britain worker health-and-safety rights, responsibilities and concern routes."
+      exclusions: "Does not inspect a workplace, assess immediate danger or determine enforcement."
+  - <<: *family_defaults
+    id: report-workplace-injury
+    title: Report a workplace injury
+    aliases: [RIDDOR incident report, accident at work notification]
+    description: Record the incident and use employer, enforcing-authority and injury-reporting routes applicable to the event.
+    situations: [A workplace accident, dangerous occurrence or occupational condition may require reporting.]
+    user_needs: [Distinguish emergency care, employer records and statutory reporting responsibility.]
+    source:
+      <<: *source_defaults
+      id: report-workplace-injury-primary
+      title: "Report an incident"
+      owner: "Health and Safety Executive"
+      authority_role: great_britain_riddor_reporting_service
+      resource: https://www.hse.gov.uk/riddor/report.htm
+      coverage: "Provides the Great Britain RIDDOR incident-reporting route."
+      exclusions: "Does not decide reportability, liability or compensation and the host requires its own rights decision."
+  - <<: *family_defaults
+    id: join-or-use-trade-union
+    title: Join or use a trade union
+    aliases: [union membership rights, get help from my union]
+    description: Find an independent trade union and understand membership, representation and workplace-rights boundaries.
+    situations: [A worker wants collective representation, advice or support.]
+    user_needs: [Verify the organisation and keep public rights separate from membership decisions.]
+    dependency: independent-listed-trade-union
+    source:
+      <<: *source_defaults
+      id: join-or-use-trade-union-primary
+      title: "Join a trade union"
+      owner: "Department for Business and Trade"
+      authority_role: great_britain_trade_union_rights_guidance
+      resource: https://www.gov.uk/join-trade-union
+      coverage: "Explains Great Britain rights to join and use a trade union."
+      exclusions: "Does not recommend a union, create membership or provide representation."
+  - <<: *family_defaults
+    id: bring-employment-dispute
+    title: Bring an employment dispute
+    aliases: [employment tribunal claim, challenge employer decision]
+    description: Preserve evidence and use internal resolution, conciliation and tribunal routes within current time boundaries.
+    situations: [A worker or employer cannot resolve an employment-rights dispute.]
+    user_needs: [Find the applicable early-conciliation and adjudication route without receiving legal advice.]
+    source:
+      <<: *source_defaults
+      id: bring-employment-dispute-primary
+      title: "Make a claim to an employment tribunal"
+      owner: "HM Courts and Tribunals Service"
+      authority_role: great_britain_employment_tribunal_service
+      resource: https://www.gov.uk/employment-tribunals
+      coverage: "Explains Great Britain tribunal claim, response and hearing handoffs."
+      exclusions: "Does not provide legal advice, calculate a deadline or predict an outcome."

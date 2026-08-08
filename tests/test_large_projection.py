@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -9,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_large_corpus import build_outputs  # noqa: E402
+from build_large_corpus import build_outputs, remove_generated_tree  # noqa: E402
 from check_large_projection import validate_large_projection  # noqa: E402
 from life_course_dossiers import load_dossiers, resolve_sources  # noqa: E402
 
@@ -24,6 +25,14 @@ def projected_rows(outputs: dict[Path, str]) -> list[dict[str, object]]:
 
 
 class LargeProjectionTests(unittest.TestCase):
+    def test_generated_tree_cleanup_ignores_finder_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "large-data"
+            root.mkdir()
+            (root / ".DS_Store").write_bytes(b"finder metadata")
+            remove_generated_tree(root)
+            self.assertFalse(root.exists())
+
     def test_projection_is_valid(self) -> None:
         self.assertEqual([], validate_large_projection())
 
