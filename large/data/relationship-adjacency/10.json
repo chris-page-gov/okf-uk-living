@@ -699,6 +699,44 @@
       "target_iri": "actor/organisation-scotland-official-route-provider"
     }
   ],
+  "dependency/university-technology-transfer-office-and-regulated-advisers": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml",
+          "source_ids": [
+            "use-university-technology-transfer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c48ac2482d595779f258f518",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-university-technology-transfer",
+      "source_iri": "dataset/use-university-technology-transfer",
+      "target": "dependency/university-technology-transfer-office-and-regulated-advisers",
+      "target_iri": "dependency/university-technology-transfer-office-and-regulated-advisers"
+    }
+  ],
   "enclosing-process/prepare-for-international-travel": [
     {
       "assertion_scope": "real-world",
@@ -2032,6 +2070,82 @@
       "target_iri": "rule/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
+  "rule/exercise-data-protection-rights-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/exercise-data-protection-rights.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/exercise-data-protection-rights.v1.yaml",
+          "source_ids": [
+            "exercise-data-protection-rights-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e17aba9e28030313e895a436",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/exercise-data-protection-rights-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/exercise-data-protection-rights-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/exercise-data-protection-rights-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/exercise-data-protection-rights-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/stand-for-election-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/stand-for-election.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/stand-for-election.v1.yaml",
+          "source_ids": [
+            "stand-for-election-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:13cc58b71977cef3fbf4a1c0",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/stand-for-election-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/stand-for-election-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/stand-for-election-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/stand-for-election-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
   "service-step/appeal-court-or-tribunal-decision-ordinary-source-linked-route-follow-current-official-instructions": [
     {
       "assertion_scope": "real-world",
@@ -3092,6 +3206,44 @@
       "source_iri": "dataset/respond-to-driving-disqualification",
       "target": "user-need/respond-to-driving-disqualification-keep-the-court-order",
       "target_iri": "user-need/respond-to-driving-disqualification-keep-the-court-order"
+    }
+  ],
+  "user-need/use-university-technology-transfer-find-the-institutional-process-while-preserving-funder-employment-collaborator-and-ownership-boundaries": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml",
+          "source_ids": [
+            "use-university-technology-transfer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e01e68fc677e0ff6d5a0421",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-university-technology-transfer",
+      "source_iri": "dataset/use-university-technology-transfer",
+      "target": "user-need/use-university-technology-transfer-find-the-institutional-process-while-preserving-funder-employment-collaborator-and-ownership-boundaries",
+      "target_iri": "user-need/use-university-technology-transfer-find-the-institutional-process-while-preserving-funder-employment-collaborator-and-ownership-boundaries"
     }
   ]
 }

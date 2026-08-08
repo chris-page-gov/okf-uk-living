@@ -583,6 +583,80 @@
       "target_iri": "jurisdiction/scotland"
     }
   ],
+  "dependency/regulated-patent-attorney": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/request-patent-search-and-examination.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/request-patent-search-and-examination.v1.yaml",
+          "source_ids": [
+            "request-patent-search-and-examination-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6ee43339c47589c3dbbd4d13",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/request-patent-search-and-examination",
+      "source_iri": "dataset/request-patent-search-and-examination",
+      "target": "dependency/regulated-patent-attorney",
+      "target_iri": "dependency/regulated-patent-attorney"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/apply-for-patent.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/apply-for-patent.v1.yaml",
+          "source_ids": [
+            "apply-for-patent-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:971ea0f8c1a7ef4a08ff6444",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-patent",
+      "source_iri": "dataset/apply-for-patent",
+      "target": "dependency/regulated-patent-attorney",
+      "target_iri": "dependency/regulated-patent-attorney"
+    }
+  ],
   "evidence/get-leaving-care-support-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -1768,6 +1842,46 @@
       "target_iri": "redress/join-workplace-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
+  "redress/register-charity-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/register-charity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/register-charity.v1.yaml",
+          "source_ids": [
+            "organisation-northern-ireland-handoff",
+            "organisation-scotland-handoff",
+            "register-charity-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:17e45f69b7c1fe8266fe7d82",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-charity-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/register-charity-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/register-charity-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/register-charity-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    }
+  ],
   "redress/use-pharmacy-services-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
     {
       "assertion_scope": "real-world",
@@ -2180,6 +2294,44 @@
       "source_iri": "service-step/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bf54698ae65ad92444f69cc3",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "service-episode/meet-school-attendance-duty-ordinary-source-linked-route": [
@@ -3824,6 +3976,442 @@
       "source_iri": "service-step/change-name-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "actor/organisation-responsible-authority-or-redress-body",
       "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    }
+  ],
+  "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:160be074d3716dfb0ad5e442",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:17034f8f4eeb3daa1bc01176",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1d2593b24483381c9fa4b841",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:37c1044fcf5e1a4085cb0c45",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:682bb5858d5328061cbef1a0",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9f3aaf69ce9a07916bac1439",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-register-as-an-employer-where-required-maintain-payroll-records-and-send-current-pay-deduction-and-final-reports-through-the-hmrc-route",
+      "target_iri": "outcome/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-register-as-an-employer-where-required-maintain-payroll-records-and-send-current-pay-deduction-and-final-reports-through-the-hmrc-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bf54698ae65ad92444f69cc3",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c6708c6661345a70e3f6b10a",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/run-payroll-ordinary-source-linked-route",
+      "source_iri": "service-episode/run-payroll-ordinary-source-linked-route",
+      "target": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d09022466aabbd327ed96c8d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/run-payroll-run-payroll-primary",
+      "target_iri": "resource/run-payroll-run-payroll-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e27dcbaad755ad558b67ca09",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/run-payroll-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e2f25861dcde8239028fc7e0",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/run-payroll-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/run-payroll-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/run-payroll-ordinary-source-linked-route-select-current-jurisdiction-route"
+    }
+  ],
+  "user-need/apply-for-visa-or-immigration-permission-find-the-correct-current-route-without-the-bundle-assessing-eligibility-evidence-or-prospects": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml",
+          "source_ids": [
+            "apply-for-visa-or-immigration-permission-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0635c646fd871ea3ab799a5a",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-visa-or-immigration-permission",
+      "source_iri": "dataset/apply-for-visa-or-immigration-permission",
+      "target": "user-need/apply-for-visa-or-immigration-permission-find-the-correct-current-route-without-the-bundle-assessing-eligibility-evidence-or-prospects",
+      "target_iri": "user-need/apply-for-visa-or-immigration-permission-find-the-correct-current-route-without-the-bundle-assessing-eligibility-evidence-or-prospects"
     }
   ],
   "user-need/choose-home-education-school-withdrawal-and-authority-contact-route": [

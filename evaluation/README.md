@@ -54,5 +54,12 @@ change, health throughout life and disability/care/support. It proves that
 manual health references remain typed, link-only resources and that clinical,
 capacity, safeguarding and legal decisions remain outside the bundle.
 
+The [Pack 7 civic/enterprise/creativity review](reviews/pack-7-civic-enterprise-creativity-2026-08-08.md)
+adds 36 dossiers, 45 body-free official links and 13 questions across civic
+participation, organisation operation and ideas/research. It proves alias
+search, enclosing-process Narrative, family-centred Graph and typed official
+source access while retaining immigration, legal, tax, electoral and
+intellectual-property review boundaries.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

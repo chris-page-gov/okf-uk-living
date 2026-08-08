@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/ideas-creativity-and-research.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/ideas-creativity-and-research.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/ideas-creativity-and-research.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-7-civic-enterprise-creativity
+domain: ideas-creativity-and-research
+title: Ideas, creativity and research
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-7-civic-enterprise-creativity-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: ideas-research-scotland-handoff
+    jurisdiction: Scotland
+    title: Business support in Scotland
+    owner: Scottish Government
+    authority_role: scotland_innovation_support_handoff
+    resource: https://www.mygov.scot/business-support
+    coverage: Routes creators and organisations to current Scottish innovation, research and business-support services.
+    exclusions: Does not assess intellectual property, decide grant eligibility, select a university route or commercialise research.
+  - &lt;&lt;: *source_defaults
+    id: ideas-research-wales-handoff
+    jurisdiction: Wales
+    title: Business support for innovation in Wales
+    owner: Welsh Government
+    authority_role: wales_innovation_support_handoff
+    resource: https://www.gov.wales/business-support-innovation
+    coverage: Routes creators, researchers and organisations to current Welsh innovation support and funding routes.
+    exclusions: Does not decide grant eligibility, ownership, protection, publication or commercial strategy.
+  - &lt;&lt;: *source_defaults
+    id: ideas-research-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Starting a business in Northern Ireland
+    owner: Invest Northern Ireland
+    authority_role: northern_ireland_intellectual_property_handoff
+    resource: https://www.nibusinessinfo.co.uk/starting-business
+    coverage: Provides a current Northern Ireland business-discovery handoff from which organisations can reach business planning, innovation and operating guidance.
+    exclusions: Does not provide a complete intellectual-property index, legal advice, searches, rights grants, asset valuation or funding decisions.
+families:
+  - &lt;&lt;: *family_defaults
+    id: protect-confidential-information
+    title: Protect confidential information
+    aliases: [non disclosure agreement, keep invention secret, protect business know how]
+    description: Identify information that should remain confidential, control disclosure and access and obtain advice on suitable agreements before sharing it.
+    situations:
+      - A creator, researcher or organisation needs to share or use sensitive technical or business information.
+    user_needs:
+      - Preserve confidentiality and future rights without contract drafting or a legal conclusion by the bundle.
+    dependency: regulated-intellectual-property-or-contract-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: protect-confidential-information-primary
+      title: Intellectual property and your work
+      owner: Intellectual Property Office
+      authority_role: uk_intellectual_property_overview
+      resource: https://www.gov.uk/intellectual-property-an-overview
+      coverage: Introduces UK intellectual-property categories and protection choices, including confidentiality boundaries.
+      exclusions: Does not draft an agreement, decide ownership, guarantee secrecy or provide legal advice.
+  - &lt;&lt;: *family_defaults
+    id: search-prior-art
+    title: Search prior art
+    aliases: [search existing patents, check invention novelty, patent database search]
+    description: Search relevant patent and technical information, record the strategy and results and obtain specialist interpretation before relying on novelty conclusions.
+    situations:
+      - An inventor or researcher wants to identify earlier public disclosures relevant to an idea.
+    user_needs:
+      - Use authoritative patent search routes without a local novelty or freedom-to-operate opinion.
+    dependency: regulated-patent-attorney-or-search-professional
+    source:
+      &lt;&lt;: *source_defaults
+      id: search-prior-art-primary
+      title: Search for a patent
+      owner: Intellectual Property Office
+      authority_role: uk_patent_search_handoff
+      resource: https://www.gov.uk/search-for-patent
+      coverage: Routes users to UK and international patent-information search services.
+      exclusions: Does not perform a complete search, interpret results, decide novelty or establish freedom to operate.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-patent
+    title: Apply for a patent
+    aliases: [patent an invention, file UK patent, protect technical invention]
+    description: Preserve pre-filing confidentiality, assess the protection route and use the current application, fee, search, publication and examination process.
+    situations:
+      - An inventor or owner is considering patent protection for a technical invention.
+    user_needs:
+      - Find the filing process and professional boundary without deciding patentability or strategy.
+    dependency: regulated-patent-attorney
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-patent-primary
+      title: Apply for a patent
+      owner: Intellectual Property Office
+      authority_role: uk_patent_application_guidance
+      resource: https://www.gov.uk/patent-your-invention
+      coverage: Explains UK patentability overview, application, costs, search, publication and examination stages.
+      exclusions: Does not assess patentability, draft claims, provide legal advice or grant a patent.
+  - &lt;&lt;: *family_defaults
+    id: request-patent-search-and-examination
+    title: Request patent search and examination
+    aliases: [request IPO patent search, substantive examination request, patent application examination]
+    description: Read the filed application and official correspondence and submit the required search or examination request and fee within the stated application-specific time.
+    situations:
+      - A UK patent applicant needs to continue an application through search, publication or substantive examination.
+    user_needs:
+      - Reach the application-specific official route without the bundle calculating deadlines or drafting amendments.
+    dependency: regulated-patent-attorney
+    source:
+      &lt;&lt;: *source_defaults
+      id: request-patent-search-and-examination-primary
+      title: Patent search, publication and examination
+      owner: Intellectual Property Office
+      authority_role: uk_patent_search_examination_guidance
+      resource: https://www.gov.uk/patent-your-invention/request-your-search-and-examination
+      coverage: Explains UK patent search, publication, examination requests and application-specific notices.
+      exclusions: Does not calculate a deadline, interpret a report, draft amendments or predict grant.
+  - &lt;&lt;: *family_defaults
+    id: manage-copyright
+    title: Manage copyright
+    aliases: [protect copyrighted work, copyright ownership and permission, use creative work legally]
+    description: Identify the work, ownership, term and intended use and use permission, exception, licensing or enforcement routes as applicable.
+    situations:
+      - A creator, user or organisation needs to understand rights in an original work or protected material.
+    user_needs:
+      - Navigate ownership and permission without the bundle deciding infringement, exceptions or term.
+    dependency: regulated-copyright-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: manage-copyright-primary
+      title: Copyright
+      owner: Intellectual Property Office
+      authority_role: uk_copyright_guidance
+      resource: https://www.gov.uk/copyright
+      coverage: Introduces UK automatic copyright, ownership, duration, licensing and infringement routes.
+      exclusions: Does not decide ownership, term, subsistence, exception, infringement or remedy.
+  - &lt;&lt;: *family_defaults
+    id: register-trade-mark
+    title: Register a trade mark
+    aliases: [protect brand name, file UK trademark, register logo or mark]
+    description: Search relevant marks and classifications, select the goods or services and use the application, examination, publication and opposition route.
+    situations:
+      - A person or organisation wants registered protection for a brand sign in the United Kingdom.
+    user_needs:
+      - Find the official route without clearance, classification or conflict advice from the bundle.
+    dependency: regulated-trade-mark-attorney
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-trade-mark-primary
+      title: How to register a trade mark
+      owner: Intellectual Property Office
+      authority_role: uk_trade_mark_registration_guidance
+      resource: https://www.gov.uk/how-to-register-a-trade-mark
+      coverage: Explains UK search, classification, application, examination, publication and opposition stages.
+      exclusions: Does not clear a mark, select classes, provide legal advice or guarantee registration.
+  - &lt;&lt;: *family_defaults
+    id: register-design
+    title: Register a design
+    aliases: [protect product appearance, file registered design, UK design registration]
+    description: Identify the visual features and ownership, preserve novelty where required and use the current application, examination and registration route.
+    situations:
+      - A creator or organisation wants registered protection for a product&#x27;s appearance.
+    user_needs:
+      - Distinguish registered, unregistered and other rights without a local validity decision.
+    dependency: regulated-design-or-intellectual-property-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-design-primary
+      title: Register a design
+      owner: Intellectual Property Office
+      authority_role: uk_registered_design_service
+      resource: https://www.gov.uk/register-a-design
+      coverage: Explains UK registered-design eligibility, application, fees, examination and publication.
+      exclusions: Does not assess novelty, ownership, scope, infringement or guarantee registration.
+  - &lt;&lt;: *family_defaults
+    id: license-intellectual-property
+    title: License intellectual property
+    aliases: [IP licence agreement, allow others to use rights, license patent trademark copyright]
+    description: Confirm ownership and scope, define the rights and territory to be licensed and obtain advice on terms, registration, payment and enforcement.
+    situations:
+      - A rights owner or user wants permission to exploit intellectual property.
+    user_needs:
+      - Find the transaction and register boundaries without contract drafting, valuation or negotiation by the bundle.
+    dependency: regulated-intellectual-property-and-commercial-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: license-intellectual-property-primary
+      title: Licensing intellectual property
+      owner: Intellectual Property Office
+      authority_role: uk_intellectual_property_licensing_guidance
+      resource: https://www.gov.uk/licensing-intellectual-property
+      coverage: Introduces UK intellectual-property licensing, assignments, valuation and professional-support handoffs.
+      exclusions: Does not verify ownership, value rights, draft terms, provide tax advice or decide enforceability.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-innovation-grant
+    title: Apply for an innovation grant
+    aliases: [Innovate UK grant, research innovation funding, apply for business R&amp;D funding]
+    description: Find a current competition, confirm its scope and applicant rules and submit the required proposal, budget, partners and declarations.
+    situations:
+      - A business, researcher or collaboration seeks public funding for innovation.
+    user_needs:
+      - Find current competitions without the bundle judging eligibility, quality or award prospects.
+    dependency: regulated-grant-accounting-or-bid-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-innovation-grant-primary
+      title: Apply for innovation funding
+      owner: Innovate UK
+      authority_role: uk_innovation_funding_handoff
+      resource: https://www.gov.uk/apply-funding-innovation
+      coverage: Routes UK businesses and research organisations to current government-backed innovation funding search and application services.
+      exclusions: Does not identify every fund, decide eligibility, write an application or predict award.
+  - &lt;&lt;: *family_defaults
+    id: use-university-technology-transfer
+    title: Use university technology transfer
+    aliases: [university invention disclosure, research commercialisation office, academic technology transfer]
+    description: Follow the institution&#x27;s disclosure and ownership policy, engage its technology-transfer function and agree protection, licensing or spin-out decisions.
+    situations:
+      - Research or intellectual property connected to a university may have commercial or wider-use potential.
+    user_needs:
+      - Find the institutional process while preserving funder, employment, collaborator and ownership boundaries.
+    dependency: university-technology-transfer-office-and-regulated-advisers
+    source:
+      &lt;&lt;: *source_defaults
+      id: use-university-technology-transfer-primary
+      title: University and business collaboration agreements
+      owner: Intellectual Property Office
+      authority_role: uk_university_business_ip_agreement_guidance
+      resource: https://www.gov.uk/guidance/university-and-business-collaboration-agreements-lambert-toolkit
+      coverage: Provides UK model collaboration guidance and prompts for university-business intellectual-property arrangements.
+      exclusions: Does not establish institution policy, decide ownership, disclose an invention or negotiate a transaction.
+  - &lt;&lt;: *family_defaults
+    id: publish-research
+    title: Publish research
+    aliases: [open access publication, submit research paper, share research outputs]
+    description: Confirm authorship, ethics, funder, data, confidentiality and rights constraints before selecting a publication and preservation route.
+    situations:
+      - A researcher or organisation wants to communicate research outputs publicly.
+    user_needs:
+      - Place publication within ethics, open-access, confidentiality, data and intellectual-property processes.
+    dependency: institution-research-office-publisher-and-specialist-advisers
+    source:
+      &lt;&lt;: *source_defaults
+      id: publish-research-primary
+      title: FCDO open access policy
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_public_research_open_access_policy_example
+      resource: https://www.gov.uk/government/publications/fcdo-open-access-policy/fcdo-open-access-policy
+      coverage: Provides a current authoritative example of publication and open-access requirements for research funded by a UK government department.
+      exclusions: Does not cover every funder or institution, select a journal, confirm compliance, review ethics, licence content or publish an output.
+  - &lt;&lt;: *family_defaults
+    id: commercialise-research
+    title: Commercialise research
+    aliases: [turn research into business, research spinout, license university invention]
+    description: Confirm ownership, obligations and evidence, assess protection and routes to impact and use the institution, funder and regulated-adviser process.
+    situations:
+      - Research results may support licensing, a spin-out, collaboration, public deployment or another route to impact.
+    user_needs:
+      - Navigate ownership, funding, valuation, regulation and conflicts without commercial or investment advice.
+    dependency: university-technology-transfer-office-and-regulated-commercial-advisers
+    source:
+      &lt;&lt;: *source_defaults
+      id: commercialise-research-primary
+      title: Funding to develop and exploit knowledge assets
+      owner: HM Treasury
+      authority_role: uk_public_sector_knowledge_asset_handoff
+      resource: https://www.gov.uk/guidance/get-funding-to-develop-and-exploit-knowledge-assets
+      coverage: Illustrates a UK public-sector route for developing and commercialising eligible knowledge assets.
+      exclusions: Does not cover every university or private route, decide ownership or eligibility, value assets or provide investment advice.
+</pre>
+</body>
+</html>

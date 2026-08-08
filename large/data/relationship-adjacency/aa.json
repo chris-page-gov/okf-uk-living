@@ -990,6 +990,46 @@
       "target_iri": "output/get-residential-care-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
+  "output/obtain-business-licence-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/obtain-business-licence.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/obtain-business-licence.v1.yaml",
+          "source_ids": [
+            "obtain-business-licence-primary",
+            "organisation-northern-ireland-handoff",
+            "organisation-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:80466e0559b28f608c3042f6",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-business-licence-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-business-licence-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/obtain-business-licence-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/obtain-business-licence-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "redress/move-home-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
     {
       "assertion_scope": "real-world",
@@ -1268,6 +1308,44 @@
       "source_iri": "service-step/use-childrens-centres-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/use-childrens-centres-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/use-childrens-centres-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml",
+          "source_ids": [
+            "use-university-technology-transfer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:993a60282d7e4d20206417e9",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
     }
   ],
   "resource/access-neonatal-care-birth-newborn-scotland-handoff": [

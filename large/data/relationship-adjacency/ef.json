@@ -583,6 +583,80 @@
       "target_iri": "life-course-domain/transport-enforcement"
     }
   ],
+  "dependency/regulated-immigration-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml",
+          "source_ids": [
+            "apply-for-settlement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b7bf74ba6cf277b77a7dfa6a",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-settlement",
+      "source_iri": "dataset/apply-for-settlement",
+      "target": "dependency/regulated-immigration-adviser",
+      "target_iri": "dependency/regulated-immigration-adviser"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml",
+          "source_ids": [
+            "apply-for-visa-or-immigration-permission-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fcf310b851d8a242d4b1fe73",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-visa-or-immigration-permission",
+      "source_iri": "dataset/apply-for-visa-or-immigration-permission",
+      "target": "dependency/regulated-immigration-adviser",
+      "target_iri": "dependency/regulated-immigration-adviser"
+    }
+  ],
   "evidence/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -622,6 +696,44 @@
       "source_iri": "service-step/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "evidence/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
       "target_iri": "evidence/access-employment-retraining-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "evidence/apply-for-settlement-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml",
+          "source_ids": [
+            "apply-for-settlement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:605236442ab066c0047ce6d1",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-settlement-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-settlement-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/apply-for-settlement-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/apply-for-settlement-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
   "evidence/manage-university-intellectual-property-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
@@ -707,6 +819,78 @@
     }
   ],
   "jurisdiction/england": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/bid-for-public-contract.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/bid-for-public-contract.v1.yaml",
+          "source_ids": [
+            "bid-for-public-contract-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0024676b432359e6e51fa4cd",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/bid-for-public-contract",
+      "source_iri": "dataset/bid-for-public-contract",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/close-or-insolvent-business.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/close-or-insolvent-business.v1.yaml",
+          "source_ids": [
+            "close-or-insolvent-business-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:002768b0b233b94e889f9296",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/close-or-insolvent-business",
+      "source_iri": "dataset/close-or-insolvent-business",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
     {
       "assertion_scope": "real-world",
       "assertion_status": "normalized",
@@ -812,6 +996,114 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/use-sector-ombudsman",
       "source_iri": "dataset/use-sector-ombudsman",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/register-design.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/register-design.v1.yaml",
+          "source_ids": [
+            "register-design-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:030cc52412185d6d2c89da7a",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-design",
+      "source_iri": "dataset/register-design",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/apply-for-patent.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/apply-for-patent.v1.yaml",
+          "source_ids": [
+            "apply-for-patent-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:038049c892e897899561bb91",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-patent",
+      "source_iri": "dataset/apply-for-patent",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/meet-workplace-safety-duties.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/meet-workplace-safety-duties.v1.yaml",
+          "source_ids": [
+            "meet-workplace-safety-duties-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:03e1fca2a9af74a8796ef264",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/meet-workplace-safety-duties",
+      "source_iri": "dataset/meet-workplace-safety-duties",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -1073,6 +1365,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/obtain-business-licence.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/obtain-business-licence.v1.yaml",
+          "source_ids": [
+            "obtain-business-licence-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:119f5dd0ba81c3d85f214015",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-business-licence",
+      "source_iri": "dataset/obtain-business-licence",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/health-throughout-life/access-dental-care.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -1172,6 +1500,78 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/arrange-student-accommodation",
       "source_iri": "dataset/arrange-student-accommodation",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/maintain-electoral-registration.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/maintain-electoral-registration.v1.yaml",
+          "source_ids": [
+            "maintain-electoral-registration-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:15a43095db7869e7107f5e18",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/maintain-electoral-registration",
+      "source_iri": "dataset/maintain-electoral-registration",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/incorporate-company.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/incorporate-company.v1.yaml",
+          "source_ids": [
+            "incorporate-company-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:15b9511111a505d46f85450f",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/incorporate-company",
+      "source_iri": "dataset/incorporate-company",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -1541,6 +1941,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-citizenship.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-citizenship.v1.yaml",
+          "source_ids": [
+            "apply-for-citizenship-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2a7878776ce9b04ee20fba65",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-citizenship",
+      "source_iri": "dataset/apply-for-citizenship",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/report-scam-or-fraud.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -1640,6 +2076,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/start-antenatal-care",
       "source_iri": "dataset/start-antenatal-care",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml",
+          "source_ids": [
+            "make-freedom-of-information-request-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2fe3fd4858f2e353784e61bc",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/make-freedom-of-information-request",
+      "source_iri": "dataset/make-freedom-of-information-request",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -1784,6 +2256,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/complain-about-nhs-care",
       "source_iri": "dataset/complain-about-nhs-care",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/stand-for-election.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/stand-for-election.v1.yaml",
+          "source_ids": [
+            "stand-for-election-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3349396aa784ece139359f24",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/stand-for-election",
+      "source_iri": "dataset/stand-for-election",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -2072,6 +2580,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/prove-right-to-work",
       "source_iri": "dataset/prove-right-to-work",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/perform-jury-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/perform-jury-service.v1.yaml",
+          "source_ids": [
+            "perform-jury-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:421441d74a7e7813694613c6",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/perform-jury-service",
+      "source_iri": "dataset/perform-jury-service",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -2396,6 +2940,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/obtain-police-station-legal-advice",
       "source_iri": "dataset/obtain-police-station-legal-advice",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/establish-social-enterprise.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/establish-social-enterprise.v1.yaml",
+          "source_ids": [
+            "establish-social-enterprise-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:499f616489af38a35b48754c",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/establish-social-enterprise",
+      "source_iri": "dataset/establish-social-enterprise",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -3089,6 +3669,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/commercialise-research.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/commercialise-research.v1.yaml",
+          "source_ids": [
+            "commercialise-research-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5acced732b3272687c7d802f",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/commercialise-research",
+      "source_iri": "dataset/commercialise-research",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/disability-care-and-support/claim-disability-living-support.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -3488,6 +4104,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/exercise-data-protection-rights.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/exercise-data-protection-rights.v1.yaml",
+          "source_ids": [
+            "exercise-data-protection-rights-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:67b789471d42aeed07ed3e75",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/exercise-data-protection-rights",
+      "source_iri": "dataset/exercise-data-protection-rights",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/police-and-legal-services/get-legal-aid.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -3632,6 +4284,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/register-data-protection-fee.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/register-data-protection-fee.v1.yaml",
+          "source_ids": [
+            "register-data-protection-fee-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6c78b9bac1152f93c3991e31",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-data-protection-fee",
+      "source_iri": "dataset/register-data-protection-fee",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/disability-care-and-support/arrange-supported-decision-representation.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -3767,6 +4455,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/consent-to-healthcare-as-young-person",
       "source_iri": "dataset/consent-to-healthcare-as-young-person",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/register-as-sole-trader.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/register-as-sole-trader.v1.yaml",
+          "source_ids": [
+            "register-as-sole-trader-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6f6af9ada51dde29b8ce76ed",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-as-sole-trader",
+      "source_iri": "dataset/register-as-sole-trader",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -4280,6 +5004,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/form-business-partnership.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/form-business-partnership.v1.yaml",
+          "source_ids": [
+            "form-business-partnership-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7dea6e5a902906ca50977ed2",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/form-business-partnership",
+      "source_iri": "dataset/form-business-partnership",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/birth-and-newborn/arrange-newborn-screening.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -4460,6 +5220,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:84fd6e6fa41a30ed86fe4716",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/run-payroll",
+      "source_iri": "dataset/run-payroll",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -4595,6 +5391,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/report-road-collision",
       "source_iri": "dataset/report-road-collision",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/license-intellectual-property.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/license-intellectual-property.v1.yaml",
+          "source_ids": [
+            "license-intellectual-property-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8b60149cb723e07533fe22d9",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/license-intellectual-property",
+      "source_iri": "dataset/license-intellectual-property",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -5036,6 +5868,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-settlement.v1.yaml",
+          "source_ids": [
+            "apply-for-settlement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:95db1b711e92b5a0675b4fb7",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-settlement",
+      "source_iri": "dataset/apply-for-settlement",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/employment/join-workplace-pension.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -5360,6 +6228,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/protect-confidential-information.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/protect-confidential-information.v1.yaml",
+          "source_ids": [
+            "protect-confidential-information-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9e24f881dbbc670adf20b315",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/protect-confidential-information",
+      "source_iri": "dataset/protect-confidential-information",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -5468,6 +6372,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/apply-for-innovation-grant.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/apply-for-innovation-grant.v1.yaml",
+          "source_ids": [
+            "apply-for-innovation-grant-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9f6a05704d3892212ed265f9",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-innovation-grant",
+      "source_iri": "dataset/apply-for-innovation-grant",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -5495,6 +6435,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/rent-private-home",
       "source_iri": "dataset/rent-private-home",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/respond-to-public-consultation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/respond-to-public-consultation.v1.yaml",
+          "source_ids": [
+            "respond-to-public-consultation-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9ffdbfc5cbc39be57869d70e",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/respond-to-public-consultation",
+      "source_iri": "dataset/respond-to-public-consultation",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -6188,6 +7164,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/obtain-uk-passport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/obtain-uk-passport.v1.yaml",
+          "source_ids": [
+            "obtain-uk-passport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b2d16a9a4c631539823bd44f",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-uk-passport",
+      "source_iri": "dataset/obtain-uk-passport",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/employment/check-employment-status.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -6323,6 +7335,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/appeal-court-or-tribunal-decision",
       "source_iri": "dataset/appeal-court-or-tribunal-decision",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/publish-research.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/publish-research.v1.yaml",
+          "source_ids": [
+            "publish-research-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b44ff5d2b6010f54cc8c7ac3",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/publish-research",
+      "source_iri": "dataset/publish-research",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -6503,6 +7551,42 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/get-academic-qualification-recognised",
       "source_iri": "dataset/get-academic-qualification-recognised",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/apply-for-visa-or-immigration-permission.v1.yaml",
+          "source_ids": [
+            "apply-for-visa-or-immigration-permission-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ba10c7ab4eedc533abb2c48d",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/apply-for-visa-or-immigration-permission",
+      "source_iri": "dataset/apply-for-visa-or-immigration-permission",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -6908,6 +7992,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/register-business-taxes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/register-business-taxes.v1.yaml",
+          "source_ids": [
+            "register-business-taxes-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c7d2d16bf5cbc1c2de2b480c",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-business-taxes",
+      "source_iri": "dataset/register-business-taxes",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/take-paternity-or-partner-leave.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -7016,6 +8136,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml",
+          "source_ids": [
+            "use-university-technology-transfer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c9a05defadc25a5cc1540970",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-university-technology-transfer",
+      "source_iri": "dataset/use-university-technology-transfer",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/housing-and-community/apply-for-social-housing.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -7115,6 +8271,78 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/register-as-childminder",
       "source_iri": "dataset/register-as-childminder",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/contact-elected-representative.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/contact-elected-representative.v1.yaml",
+          "source_ids": [
+            "contact-elected-representative-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cc77c3ea7e790f3b21943e2a",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/contact-elected-representative",
+      "source_iri": "dataset/contact-elected-representative",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/request-patent-search-and-examination.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/request-patent-search-and-examination.v1.yaml",
+          "source_ids": [
+            "request-patent-search-and-examination-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cd5f7454376b4d9fba0981f8",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/request-patent-search-and-examination",
+      "source_iri": "dataset/request-patent-search-and-examination",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -7376,6 +8604,78 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/register-charity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/register-charity.v1.yaml",
+          "source_ids": [
+            "register-charity-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d7a93757a66ee50b162474d7",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-charity",
+      "source_iri": "dataset/register-charity",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/search-prior-art.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/search-prior-art.v1.yaml",
+          "source_ids": [
+            "search-prior-art-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d8f1a30f9405fa24d2d7e396",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/search-prior-art",
+      "source_iri": "dataset/search-prior-art",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/birth-and-newborn/start-childhood-vaccinations.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -7475,6 +8775,78 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/attend-driver-awareness-course",
       "source_iri": "dataset/attend-driver-awareness-course",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/petition-government.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/petition-government.v1.yaml",
+          "source_ids": [
+            "petition-government-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:de764ced773dba1324c0aa69",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/petition-government",
+      "source_iri": "dataset/petition-government",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/register-trade-mark.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/register-trade-mark.v1.yaml",
+          "source_ids": [
+            "register-trade-mark-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:df64fa993916da098395883a",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-trade-mark",
+      "source_iri": "dataset/register-trade-mark",
       "target": "jurisdiction/england",
       "target_iri": "jurisdiction/england"
     },
@@ -8276,6 +9648,42 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/manage-copyright.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/manage-copyright.v1.yaml",
+          "source_ids": [
+            "manage-copyright-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fa3d54a4c3846286448ef53c",
+      "kind": "applies-in-jurisdiction",
+      "label": "applies in jurisdiction",
+      "observed_at": "2026-08-08",
+      "predicate": "applies-in-jurisdiction",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/manage-copyright",
+      "source_iri": "dataset/manage-copyright",
+      "target": "jurisdiction/england",
+      "target_iri": "jurisdiction/england"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/volunteer-in-the-uk.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -8453,6 +9861,44 @@
       "source_iri": "service-step/get-victim-or-witness-support-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/get-victim-or-witness-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/get-victim-or-witness-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "outcome/make-freedom-of-information-request-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml",
+          "source_ids": [
+            "make-freedom-of-information-request-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a37c05e0df1e41ee0a93cefe",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-freedom-of-information-request-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/make-freedom-of-information-request-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/make-freedom-of-information-request-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/make-freedom-of-information-request-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "outcome/receive-maternity-care-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
@@ -8697,6 +10143,44 @@
       "target_iri": "requirement/claim-universal-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
     }
   ],
+  "requirement/contact-elected-representative-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/contact-elected-representative.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/contact-elected-representative.v1.yaml",
+          "source_ids": [
+            "contact-elected-representative-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7382d2c80055e0970b9ad82b",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/contact-elected-representative-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/contact-elected-representative-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/contact-elected-representative-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/contact-elected-representative-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
   "requirement/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -8735,6 +10219,44 @@
       "source_iri": "service-step/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/divorce-or-dissolve-partnership-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/make-freedom-of-information-request-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/make-freedom-of-information-request.v1.yaml",
+          "source_ids": [
+            "make-freedom-of-information-request-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:411ec14f95c21ff08bac2427",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-freedom-of-information-request-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/make-freedom-of-information-request-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/make-freedom-of-information-request-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/make-freedom-of-information-request-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
     }
   ],
   "requirement/receive-written-employment-particulars-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [
