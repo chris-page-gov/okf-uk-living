@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/holidays-volunteering-and-living-overseas.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/holidays-volunteering-and-living-overseas.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/holidays-volunteering-and-living-overseas.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-8-mobility-later-life-and-death
+domain: holidays-volunteering-and-living-overseas
+title: Holidays, volunteering and living overseas
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-8-mobility-later-life-death-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: overseas-scotland-handoff
+    jurisdiction: Scotland
+    title: Foreign travel advice
+    owner: Foreign, Commonwealth and Development Office
+    authority_role: uk_overseas_route_handoff_for_scotland
+    resource: https://www.gov.uk/foreign-travel-advice
+    coverage: Provides the current UK country-by-country travel-advice route for people in Scotland.
+    exclusions: Does not decide entry, safety, insurance, health or consular outcomes and is not a distinct Scottish service.
+  - &lt;&lt;: *source_defaults
+    id: overseas-wales-handoff
+    jurisdiction: Wales
+    title: Foreign travel advice
+    owner: Foreign, Commonwealth and Development Office
+    authority_role: uk_overseas_route_handoff_for_wales
+    resource: https://www.gov.uk/foreign-travel-advice
+    coverage: Provides the current UK country-by-country travel-advice route for people in Wales.
+    exclusions: Does not decide entry, safety, insurance, health or consular outcomes and is not a distinct Welsh service.
+  - &lt;&lt;: *source_defaults
+    id: overseas-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Foreign travel advice
+    owner: Foreign, Commonwealth and Development Office
+    authority_role: uk_overseas_route_handoff_for_northern_ireland
+    resource: https://www.gov.uk/foreign-travel-advice
+    coverage: Provides the current UK country-by-country travel-advice route for people in Northern Ireland.
+    exclusions: Does not decide entry, safety, insurance, health or consular outcomes and is not a distinct Northern Ireland service.
+families:
+  - &lt;&lt;: *family_defaults
+    id: renew-passport
+    title: Renew a passport
+    aliases: [replace expired passport, renew UK passport, passport running out]
+    description: Check passport validity and destination timing, use the current renewal route and retain the application and delivery references.
+    situations: [A British passport holder needs a replacement before travel or other identity use.]
+    user_needs: [Use the correct adult, child, lost, damaged or overseas route without assuming processing time.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: renew-passport-primary
+      title: Renew or replace your adult passport
+      owner: HM Passport Office
+      authority_role: uk_adult_passport_renewal
+      resource: https://www.gov.uk/renew-adult-passport
+      coverage: Routes eligible adult British passport holders through current renewal and replacement steps.
+      exclusions: Does not guarantee identity, nationality, processing time, travel acceptance or a child or overseas route.
+  - &lt;&lt;: *family_defaults
+    id: check-entry-requirements
+    title: Check entry requirements
+    aliases: [visa rules for destination, passport validity abroad, destination entry rules]
+    description: Select the destination advice, confirm passport, visa, transit and border requirements with the responsible authorities and recheck before travel.
+    situations: [A traveller needs to understand the conditions for entering or transiting another country.]
+    user_needs: [Find authoritative current requirements without the bundle deciding admissibility.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: check-entry-requirements-primary
+      title: Foreign travel advice
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_destination_entry_advice_handoff
+      resource: https://www.gov.uk/foreign-travel-advice
+      coverage: Routes travellers to country pages containing current entry, passport, visa and transit advice.
+      exclusions: Does not grant entry, replace the destination authority or guarantee that conditions will not change.
+  - &lt;&lt;: *family_defaults
+    id: check-foreign-travel-advice
+    title: Check foreign travel advice
+    aliases: [is destination safe, FCDO travel warning, country travel advice]
+    description: Read the current destination advice, understand its geographic and risk scope and review insurance and contingency implications before and during travel.
+    situations: [A traveller needs current official safety, security, health or disruption information for a destination.]
+    user_needs: [Use dated official advice without turning it into a personal risk decision.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: check-foreign-travel-advice-primary
+      title: Foreign travel advice
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_foreign_travel_advice
+      resource: https://www.gov.uk/foreign-travel-advice
+      coverage: Publishes current UK government destination advice and significant warnings.
+      exclusions: Does not guarantee safety, cover every local condition or make an insurance decision.
+  - &lt;&lt;: *family_defaults
+    id: obtain-ghic-or-ehic
+    title: Obtain a GHIC or EHIC
+    aliases: [global health insurance card, European health insurance card, healthcare card abroad]
+    description: Check which reciprocal-healthcare card applies, apply through the official route and understand that travel insurance and local charges may still be required.
+    situations: [A UK resident plans eligible temporary travel where reciprocal healthcare may apply.]
+    user_needs: [Distinguish GHIC or EHIC coverage from insurance, planned treatment and private care.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: obtain-ghic-or-ehic-primary
+      title: Applying for healthcare cover abroad
+      owner: NHS Business Services Authority
+      authority_role: uk_reciprocal_healthcare_card
+      resource: https://www.gov.uk/global-health-insurance-card
+      coverage: Routes eligible residents to current GHIC and EHIC application and replacement information.
+      exclusions: Does not decide eligibility, guarantee treatment or replace travel insurance.
+  - &lt;&lt;: *family_defaults
+    id: get-travel-vaccination
+    title: Get a travel vaccination
+    aliases: [vaccines before holiday, travel clinic vaccines, destination immunisations]
+    description: Check destination and personal clinical advice early, contact an appropriate health service and follow its assessment, timing and charge information.
+    situations: [A traveller may need recommended or required vaccination before going abroad.]
+    user_needs: [Find clinical assessment and official destination information without diagnosis or suitability advice from the bundle.]
+    dependency: registered-travel-health-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-travel-vaccination-primary
+      title: Travel vaccinations
+      owner: NHS England
+      authority_role: england_travel_vaccination_guidance
+      resource: https://www.nhs.uk/vaccinations/travel-vaccinations/
+      coverage: Explains England travel-vaccination planning, NHS availability and private-clinic handoffs.
+      exclusions: Does not decide clinical suitability, establish devolved provision or guarantee appointment timing.
+  - &lt;&lt;: *family_defaults
+    id: buy-travel-insurance
+    title: Buy travel insurance
+    aliases: [holiday insurance, insurance for trip abroad, cover medical costs overseas]
+    description: Match cover to destination, activities, health, cancellation and disruption needs, check exclusions and use regulated complaint routes where required.
+    situations: [A traveller wants financial protection for an overseas trip.]
+    user_needs: [Use public guidance and regulated-provider checks without a product recommendation.]
+    dependency: fca-authorised-travel-insurance-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: buy-travel-insurance-primary
+      title: Foreign travel insurance
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_travel_insurance_guidance
+      resource: https://www.gov.uk/guidance/foreign-travel-insurance
+      coverage: Explains why cover, disclosure, exclusions, activities and destination advice matter for overseas travel.
+      exclusions: Does not recommend a product, decide coverage or resolve an insurance claim.
+  - &lt;&lt;: *family_defaults
+    id: declare-goods-at-customs
+    title: Declare goods at customs
+    aliases: [customs allowance on return, bring goods into UK, declare cash or purchases]
+    description: Check the route, goods, value and allowance rules and use the current declaration channel before or at the border when required.
+    situations: [A traveller is bringing personal goods, purchases, restricted items or cash into the UK.]
+    user_needs: [Find current customs rules without the bundle valuing goods or deciding liability.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: declare-goods-at-customs-primary
+      title: Bringing goods into the UK for personal use
+      owner: HM Revenue and Customs
+      authority_role: uk_personal_customs_guidance
+      resource: https://www.gov.uk/bringing-goods-into-uk-personal-use
+      coverage: Routes travellers to current personal allowances, restrictions and declaration services.
+      exclusions: Does not value goods, decide commercial use, calculate every charge or release items.
+  - &lt;&lt;: *family_defaults
+    id: drive-abroad
+    title: Drive abroad
+    aliases: [take car overseas, international driving permit, driving licence abroad]
+    description: Check destination licence, permit, vehicle, insurance and road-rule requirements and obtain documents through current official routes.
+    situations: [A driver plans to drive a UK or hired vehicle in another country.]
+    user_needs: [Coordinate driver, vehicle, insurance and destination rules without assuming UK documents are sufficient.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: drive-abroad-primary
+      title: Driving abroad
+      owner: Department for Transport
+      authority_role: uk_driving_abroad_guidance
+      resource: https://www.gov.uk/driving-abroad
+      coverage: Routes UK drivers to current licence, permit, vehicle-document and insurance information.
+      exclusions: Does not establish destination law, guarantee hire acceptance or replace insurer and vehicle-owner checks.
+  - &lt;&lt;: *family_defaults
+    id: study-or-volunteer-overseas
+    title: Study or volunteer overseas
+    aliases: [study abroad programme, volunteer abroad, overseas placement]
+    description: Confirm the programme, safeguarding, entry, health, insurance, funding and emergency arrangements with the responsible institution and destination authorities.
+    situations: [A learner or volunteer is considering an organised period overseas.]
+    user_needs: [Place the placement within travel and institutional processes without endorsing a provider.]
+    dependency: sending-institution-or-registered-volunteer-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: study-or-volunteer-overseas-primary
+      title: Turing Scheme
+      owner: Department for Education
+      authority_role: uk_study_abroad_discovery_handoff
+      resource: https://www.gov.uk/government/collections/turing-scheme
+      coverage: Provides current UK provider-led international-placement funding and guidance, including study, work and some volunteering placements.
+      exclusions: Does not cover every independent volunteer route, select a programme, decide entry or guarantee funding.
+  - &lt;&lt;: *family_defaults
+    id: work-overseas
+    title: Work overseas
+    aliases: [get a job abroad, work in another country, move overseas for employment]
+    description: Confirm destination permission, employment terms, professional recognition, tax, social security, health and return implications before starting work.
+    situations: [A person is considering employment or self-employment outside the UK.]
+    user_needs: [Find cross-border work obligations without immigration, tax or employment advice from the bundle.]
+    dependency: regulated-cross-border-employment-and-tax-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: work-overseas-primary
+      title: Working abroad
+      owner: UK Government
+      authority_role: uk_working_abroad_handoff
+      resource: https://www.gov.uk/working-abroad
+      coverage: Routes UK residents to current work-abroad, tax, social-security and destination information.
+      exclusions: Does not obtain permission, verify an employer or decide tax, employment or professional status.
+  - &lt;&lt;: *family_defaults
+    id: manage-tax-ni-benefits-and-pensions-abroad
+    title: Manage tax, National Insurance, benefits and pensions abroad
+    aliases: [move abroad tax pension, benefits while overseas, National Insurance abroad]
+    description: Notify the relevant bodies, identify residence and reciprocal-arrangement questions and use specialist advice for cross-border tax or entitlement decisions.
+    situations: [A person moves, works or retires abroad while retaining UK tax, contribution, benefit or pension connections.]
+    user_needs: [Coordinate official routes without calculating residence, liability or entitlement.]
+    dependency: regulated-cross-border-tax-and-benefits-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: manage-tax-ni-benefits-and-pensions-abroad-primary
+      title: Tax if you retire abroad
+      owner: HM Revenue and Customs
+      authority_role: uk_retirement_abroad_tax_handoff
+      resource: https://www.gov.uk/tax-right-retire-abroad-return-to-uk
+      coverage: Introduces current UK tax, pension and notification routes for retirement abroad and return.
+      exclusions: Does not cover every move or benefit, determine residence, calculate liability or give tax advice.
+  - &lt;&lt;: *family_defaults
+    id: get-consular-assistance
+    title: Get consular assistance
+    aliases: [contact British embassy, consular help abroad, find UK embassy]
+    description: Locate the responsible British embassy, high commission or consulate and use its published emergency or routine assistance route.
+    situations: [A British national abroad needs information or help that may fall within consular support.]
+    user_needs: [Understand the consular assistance boundary without assuming the government can compel local authorities or pay costs.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-consular-assistance-primary
+      title: Find a British embassy, high commission or consulate
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_consular_post_locator
+      resource: https://www.gov.uk/world/embassies
+      coverage: Locates current UK diplomatic and consular posts and their contact routes.
+      exclusions: Does not guarantee assistance, override local law, pay private costs or replace emergency services.
+  - &lt;&lt;: *family_defaults
+    id: obtain-emergency-travel-document
+    title: Obtain an emergency travel document
+    aliases: [emergency passport abroad, lost passport overseas, urgent travel document]
+    description: Confirm the need and journey, use the official application route and follow identity, evidence, fee, collection and destination acceptance steps.
+    situations: [A British national abroad cannot use their passport for urgent travel.]
+    user_needs: [Reach the correct urgent document route without assuming eligibility or destination acceptance.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: obtain-emergency-travel-document-primary
+      title: Apply for an emergency travel document
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_emergency_travel_document
+      resource: https://www.gov.uk/emergency-travel-document
+      coverage: Provides the current online eligibility, evidence, fee and collection route for eligible British nationals abroad.
+      exclusions: Does not guarantee issue, timing, transit acceptance or entry at a destination.
+  - &lt;&lt;: *family_defaults
+    id: get-help-after-serious-incident-abroad
+    title: Get help after a serious incident abroad
+    aliases: [arrested abroad help, victim abroad, hospital or crisis overseas]
+    description: Contact local emergency services and the relevant consular post, preserve case details and follow the incident-specific medical, legal, insurance or family route.
+    situations: [A British national or family faces a serious accident, crime, arrest, detention, disaster or other crisis abroad.]
+    user_needs: [Find urgent local and consular boundaries without legal, medical or safety advice from the bundle.]
+    dependency: local-emergency-legal-medical-and-insurance-services
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-help-after-serious-incident-abroad-primary
+      title: Support for British nationals abroad
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_consular_assistance_scope
+      resource: https://www.gov.uk/government/collections/support-for-british-nationals-abroad
+      coverage: Explains the current scope and limits of consular assistance for serious situations abroad.
+      exclusions: Does not provide emergency response, legal representation, medical treatment, insurance or a guaranteed intervention.
+</pre>
+</body>
+</html>

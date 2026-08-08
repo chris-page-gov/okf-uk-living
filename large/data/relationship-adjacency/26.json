@@ -737,6 +737,47 @@
       "target_iri": "outcome/receive-direct-payments-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
+  "output/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml",
+          "source_ids": [
+            "access-palliative-or-end-of-life-care-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cd312146f4d3ae39d9f7a6fb",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "output/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -1309,6 +1350,44 @@
       "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
       "target_iri": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "rule/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml",
+          "source_ids": [
+            "work-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a187d59154ea4306f5082922",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/work-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/work-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "service-episode/apply-for-innovation-grant-ordinary-source-linked-route": [
@@ -3461,6 +3540,47 @@
       "source_iri": "service-step/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/report-scam-or-fraud-report-scam-or-fraud-primary",
       "target_iri": "resource/report-scam-or-fraud-report-scam-or-fraud-primary"
+    }
+  ],
+  "user-need/get-housing-adaptation-in-later-life-housing": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml",
+          "source_ids": [
+            "get-housing-adaptation-in-later-life-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0bf37583e6d4bab219ceaaea",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-housing-adaptation-in-later-life",
+      "source_iri": "dataset/get-housing-adaptation-in-later-life",
+      "target": "user-need/get-housing-adaptation-in-later-life-housing",
+      "target_iri": "user-need/get-housing-adaptation-in-later-life-housing"
     }
   ],
   "user-need/learn-to-drive-car-take-the-applicable-tests-and-complete-the-full-licence-handoff": [

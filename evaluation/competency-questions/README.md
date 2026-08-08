@@ -8,7 +8,7 @@ answers or personal decisions.
 aliases in the first five, each competency question's expected family in the
 first ten, staged process retrieval and empty results for an unmatched query.
 
-Current progress: **91 of at least 100** questions across 21 of 24 domains.
+Current progress: **104 of at least 100** questions across all 24 domains.
 
 - [`pack-1-family-beginnings.v1`](pack-1-family-beginnings.v1.yaml) — 13
   questions across before birth, birth/newborn and early years.
@@ -25,3 +25,5 @@ Current progress: **91 of at least 100** questions across 21 of 24 domains.
   questions across relationships/family change, health and disability/care/support.
 - [`pack-7-civic-enterprise-creativity.v1`](pack-7-civic-enterprise-creativity.v1.yaml)
   — 13 questions across citizenship/democracy, organisations and ideas/research.
+- [`pack-8-mobility-later-life-death.v1`](pack-8-mobility-later-life-death.v1.yaml)
+  — 13 questions across overseas routes, later life and death/bereavement.

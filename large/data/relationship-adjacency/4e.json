@@ -865,6 +865,47 @@
       "target_iri": "outcome/obtain-workplace-disability-adjustment-ordinary-source-linked-route-follow-current-official-instructions-describe-the-work-barrier-engage-the-employer-s-adjustment-process-and-use-occupational-access-to-work-or-employment-redress-routes-as-applicable"
     }
   ],
+  "output/access-palliative-or-end-of-life-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml",
+          "source_ids": [
+            "access-palliative-or-end-of-life-care-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:24baeed62d824c198fb4c76c",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-palliative-or-end-of-life-care-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/access-palliative-or-end-of-life-care-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/access-palliative-or-end-of-life-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/access-palliative-or-end-of-life-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
   "output/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -904,6 +945,44 @@
       "source_iri": "service-step/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "output/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
       "target_iri": "output/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "output/get-consular-assistance-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/get-consular-assistance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/get-consular-assistance.v1.yaml",
+          "source_ids": [
+            "get-consular-assistance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fa6878ff2b1a47e9fa5c4f3c",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-consular-assistance-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-consular-assistance-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/get-consular-assistance-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/get-consular-assistance-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
   "redress/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding-court": [
@@ -1784,6 +1863,44 @@
       "source_iri": "service-step/manage-penalty-points-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/manage-penalty-points-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/manage-penalty-points-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "rule/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml",
+          "source_ids": [
+            "study-or-volunteer-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:94947faa20165f90af57bd21",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
   "service-episode/bring-employment-dispute-exception-or-route-failure": [
@@ -2999,6 +3116,47 @@
       "source_iri": "service-step/register-a-death-certification-to-registration-output-select-registration-route",
       "target": "redress/register-a-death-certification-to-registration-output-select-registration-route-registrar-correction-or-complaint-route-where-applicable",
       "target_iri": "redress/register-a-death-certification-to-registration-output-select-registration-route-registrar-correction-or-complaint-route-where-applicable"
+    }
+  ],
+  "user-need/get-carer-support-in-later-life-keep-the-carer-s-own-needs-visible-alongside-the-cared-for-person-s-process": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml",
+          "source_ids": [
+            "get-carer-support-in-later-life-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:407d4d8e070b162c6756c4f9",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-carer-support-in-later-life",
+      "source_iri": "dataset/get-carer-support-in-later-life",
+      "target": "user-need/get-carer-support-in-later-life-keep-the-carer-s-own-needs-visible-alongside-the-cared-for-person-s-process",
+      "target_iri": "user-need/get-carer-support-in-later-life-keep-the-carer-s-own-needs-visible-alongside-the-cared-for-person-s-process"
     }
   ],
   "user-need/obtain-workplace-disability-adjustment-connect-employer-duties-practical-support-and-redress-without-deciding-reasonableness-or-discrimination": [

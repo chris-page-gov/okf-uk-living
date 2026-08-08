@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/later-life.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/later-life.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/later-life.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-8-mobility-later-life-and-death
+domain: later-life
+title: Later life
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-8-mobility-later-life-death-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: later-life-scotland-handoff
+    jurisdiction: Scotland
+    title: Benefits in Scotland
+    owner: Scottish Government
+    authority_role: scotland_later_life_benefit_handoff
+    resource: https://www.mygov.scot/browse/benefits
+    coverage: Routes people to current Scottish benefit, disability and older-person support information.
+    exclusions: Does not decide entitlement, pension, care, legal planning or health needs.
+  - &lt;&lt;: *source_defaults
+    id: later-life-wales-handoff
+    jurisdiction: Wales
+    title: Social care in Wales
+    owner: Welsh Government
+    authority_role: wales_later_life_care_handoff
+    resource: https://www.gov.wales/social-care
+    coverage: Routes people to current Welsh social-care policy, support and service information.
+    exclusions: Does not assess needs, identify a local service, decide funding or cover every pension and legal-planning route.
+  - &lt;&lt;: *source_defaults
+    id: later-life-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Pensions and retirement planning
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_retirement_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/pensions-and-retirement-planning
+    coverage: Routes people to current Northern Ireland pension and retirement-planning information.
+    exclusions: Does not decide pension entitlement, care, health or legal-planning needs.
+families:
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: get-state-pension-forecast
+    title: Get a State Pension forecast
+    aliases: [check future State Pension, pension forecast online, expected State Pension]
+    description: Use the official forecast service, review the contribution record and follow its correction or voluntary-contribution handoffs where relevant.
+    situations: [A person wants an estimate of their future UK State Pension and qualifying record.]
+    user_needs: [Understand that a forecast is not a guarantee and may require record correction or advice.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-state-pension-forecast-primary
+      title: Check your State Pension forecast
+      owner: Department for Work and Pensions
+      authority_role: uk_state_pension_forecast
+      resource: https://www.gov.uk/check-state-pension
+      coverage: Provides the current forecast route and National Insurance record handoffs.
+      exclusions: Does not guarantee a future amount, give financial advice or resolve every record issue.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: claim-state-pension
+    title: Claim State Pension
+    aliases: [start State Pension, defer pension claim, claim retirement pension]
+    description: Check invitation and claim timing, use the applicable online, telephone or postal route and retain the decision and payment information.
+    situations: [A person is approaching or has passed State Pension age and wants to claim.]
+    user_needs: [Use the current claim route without the bundle calculating age, amount, deferral or tax.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-state-pension-primary
+      title: Get your State Pension
+      owner: Department for Work and Pensions
+      authority_role: uk_state_pension_claim
+      resource: https://www.gov.uk/get-state-pension
+      coverage: Explains current UK State Pension claim, deferral and payment routes.
+      exclusions: Does not calculate entitlement, choose a claim date, give tax advice or decide an appeal.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales]
+    id: claim-pension-credit
+    title: Claim Pension Credit
+    aliases: [top up retirement income, guarantee credit, pensioner income benefit]
+    description: Check the current qualifying framework and use the claim route with income, savings, housing and partner information requested by the authority.
+    situations: [A person over the qualifying age has a low retirement income and wants to explore Pension Credit.]
+    user_needs: [Reach the official calculation and decision process without a local entitlement result.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-pension-credit-primary
+      title: Pension Credit
+      owner: Department for Work and Pensions
+      authority_role: great_britain_pension_credit
+      resource: https://www.gov.uk/pension-credit
+      coverage: Routes Great Britain claimants to current Pension Credit conditions, calculation and claim services.
+      exclusions: Does not cover the Northern Ireland claim route, calculate entitlement or decide a challenge.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: manage-workplace-pension-in-retirement
+    title: Manage a workplace pension in retirement
+    aliases: [take workplace pension, retirement pension options, draw pension pot]
+    description: Find each scheme, obtain its options and regulated guidance, understand tax and benefit effects and make decisions through the scheme provider.
+    situations: [A person is approaching retirement or needs to use, transfer or trace workplace pension benefits.]
+    user_needs: [Find scheme and guidance routes without an investment, transfer or withdrawal recommendation.]
+    dependency: pension-scheme-and-fca-regulated-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: manage-workplace-pension-in-retirement-primary
+      title: Workplace pensions
+      owner: Department for Work and Pensions
+      authority_role: uk_workplace_pension_guidance
+      resource: https://www.gov.uk/workplace-pensions
+      coverage: Introduces workplace pension participation, scheme and retirement-information routes.
+      exclusions: Does not trace every scheme, recommend options, calculate tax or provide regulated financial advice.
+  - &lt;&lt;: *family_defaults
+    id: use-older-person-concessionary-travel
+    title: Use older-person concessionary travel
+    aliases: [older persons bus pass, free bus travel pension age, senior travel pass]
+    description: Identify the territorial and local scheme, check its age and residence rules and apply through the responsible authority.
+    situations: [An older person wants to use or apply for concessionary public transport.]
+    user_needs: [Find the correct local route without assuming one UK age, mode or validity rule.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: use-older-person-concessionary-travel-primary
+      title: Apply for an older person&#x27;s bus pass
+      owner: Department for Transport
+      authority_role: england_older_person_bus_pass_locator
+      resource: https://www.gov.uk/apply-for-elderly-person-bus-pass
+      coverage: Routes eligible England applicants to the responsible local concessionary bus-pass service.
+      exclusions: Does not establish Scottish, Welsh or Northern Ireland schemes, decide eligibility or issue a pass.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales]
+    id: claim-attendance-allowance
+    title: Claim Attendance Allowance
+    aliases: [benefit for care needs over pension age, attendance benefit, help with personal care]
+    description: Use the current claim form and evidence route, describe the care or supervision needs and follow decision, revision or appeal steps.
+    situations: [A person over State Pension age has a disability or health condition that creates care or supervision needs.]
+    user_needs: [Reach the official benefit decision without the bundle assessing disability or entitlement.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-attendance-allowance-primary
+      title: Attendance Allowance
+      owner: Department for Work and Pensions
+      authority_role: great_britain_attendance_allowance
+      resource: https://www.gov.uk/attendance-allowance
+      coverage: Explains Great Britain conditions, claim, decision and challenge routes.
+      exclusions: Does not cover the Northern Ireland claim route, assess care needs or calculate entitlement.
+  - &lt;&lt;: *family_defaults
+    id: get-housing-adaptation-in-later-life
+    title: Get a housing adaptation in later life
+    aliases: [adapt home for older person, disabled facilities grant older person, home equipment in later life]
+    description: Request the local assessment, identify housing and tenure responsibilities and use the funding, works and review route offered for the home.
+    situations: [An older person needs changes or equipment to use their home safely or independently.]
+    user_needs: [Coordinate care, housing, landlord and grant boundaries without promising an adaptation or amount.]
+    dependency: assessed-adaptation-contractor-or-equipment-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-housing-adaptation-in-later-life-primary
+      title: Disabled Facilities Grants
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_home_adaptation_grant
+      resource: https://www.gov.uk/disabled-facilities-grants
+      coverage: Introduces England and Wales local assessment and grant routes for eligible home adaptations.
+      exclusions: Does not establish Scottish or Northern Ireland provision, assess need or guarantee funding or works.
+  - &lt;&lt;: *family_defaults
+    id: get-social-care-in-later-life
+    title: Get social care in later life
+    aliases: [older person care assessment, help at home in later life, residential care assessment]
+    description: Ask the responsible local care authority for an assessment and follow its care planning, financial assessment, provider and review process.
+    situations: [An older person may need help with daily living, safety, connection or residential care.]
+    user_needs: [Find the territorial and local assessment route without a needs, capacity or funding decision from the bundle.]
+    dependency: commissioned-or-registered-care-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-social-care-in-later-life-primary
+      title: Getting a needs assessment
+      owner: NHS England
+      authority_role: england_adult_social_care_assessment_guidance
+      resource: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/getting-a-needs-assessment/
+      coverage: Explains England local-authority needs assessment and care-planning handoffs.
+      exclusions: Does not establish devolved routes, assess need, decide capacity, calculate charges or recommend a provider.
+  - &lt;&lt;: *family_defaults
+    id: get-carer-support-in-later-life
+    title: Get carer support in later life
+    aliases: [support for older unpaid carer, carers assessment retirement, respite help for carer]
+    description: Identify the unpaid caring role, request the applicable carer&#x27;s assessment and use benefit, respite, health and emergency-planning routes.
+    situations: [An older person provides unpaid care or is cared for by an unpaid family member or friend.]
+    user_needs: [Keep the carer&#x27;s own needs visible alongside the cared-for person&#x27;s process.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-carer-support-in-later-life-primary
+      title: Support and benefits for carers
+      owner: NHS England
+      authority_role: england_carer_support_guidance
+      resource: https://www.nhs.uk/conditions/social-care-and-support-guide/support-and-benefits-for-carers/
+      coverage: Routes England unpaid carers to assessments, benefits, breaks and practical support.
+      exclusions: Does not establish devolved provision, decide eligibility, assess needs or arrange emergency care.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Wales]
+    id: make-lasting-power-of-attorney
+    title: Make a lasting power of attorney
+    aliases: [appoint attorney for future, property and finance LPA, health and welfare LPA]
+    description: Choose the applicable legal instrument and attorneys, complete and register it while the donor can make the decision and obtain advice for conflicts or complexity.
+    situations: [A person wants trusted people to act if they later cannot make specified decisions.]
+    user_needs: [Use the correct territorial legal route without a capacity, suitability or drafting decision from the bundle.]
+    dependency: regulated-solicitor-or-legal-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: make-lasting-power-of-attorney-primary
+      title: Make, register or end a lasting power of attorney
+      owner: Office of the Public Guardian
+      authority_role: england_wales_lasting_power_of_attorney
+      resource: https://www.gov.uk/power-of-attorney
+      coverage: Routes England and Wales users through current lasting-power registration and use information.
+      exclusions: Does not apply the Scottish or Northern Ireland instrument, assess capacity, choose attorneys or provide legal advice.
+  - &lt;&lt;: *family_defaults
+    id: make-advance-care-plan
+    title: Make an advance care plan
+    aliases: [plan future care wishes, advance decision treatment, end of life care plan]
+    description: Discuss future wishes and clinical or legal instruments with the responsible health team and advisers, document them and ensure relevant people can find them.
+    situations: [A person wants to plan care, treatment, communication or practical preferences for future serious illness or loss of capacity.]
+    user_needs: [Separate preferences, clinical plans and legally binding instruments without drafting or treatment advice.]
+    dependency: responsible-clinical-team-and-regulated-legal-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: make-advance-care-plan-primary
+      title: Why plan ahead for end of life care?
+      owner: NHS England
+      authority_role: england_advance_care_planning_guidance
+      resource: https://www.nhs.uk/tests-and-treatments/end-of-life-care/planning-ahead/why-plan-ahead/
+      coverage: Introduces England advance statements, advance decisions, powers of attorney and care-planning conversations.
+      exclusions: Does not establish devolved law or practice, assess capacity, draft an instrument or make a clinical decision.
+  - &lt;&lt;: *family_defaults
+    primary_jurisdictions: [England, Wales]
+    id: make-will
+    title: Make a will
+    aliases: [write a valid will, choose executor, update will]
+    description: Identify the applicable succession law, record wishes and executors using the required formalities and obtain legal advice for complexity or vulnerability.
+    situations: [A person wants to decide how their estate should be handled after death.]
+    user_needs: [Reach current legal guidance without the bundle drafting, witnessing or validating a will.]
+    dependency: regulated-solicitor-or-will-professional
+    source:
+      &lt;&lt;: *source_defaults
+      id: make-will-primary
+      title: Making a will
+      owner: Ministry of Justice
+      authority_role: england_wales_will_guidance
+      resource: https://www.gov.uk/make-will
+      coverage: Explains England and Wales will, signing, witness, storage and update boundaries.
+      exclusions: Does not establish Scottish or Northern Ireland law, draft or validate a will or advise on tax and family provision.
+  - &lt;&lt;: *family_defaults
+    id: access-palliative-or-end-of-life-care
+    title: Access palliative or end-of-life care
+    aliases: [palliative care support, hospice care, end of life NHS help]
+    description: Contact the responsible clinical team for assessment and coordination of symptom, practical, emotional and family support, using urgent services when needed.
+    situations: [A person has an advanced or life-limiting condition and may need palliative or end-of-life care.]
+    user_needs: [Find current clinical and support routes without diagnosis, prognosis or treatment advice from the bundle.]
+    dependency: commissioned-palliative-care-or-hospice-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: access-palliative-or-end-of-life-care-primary
+      title: End of life care
+      owner: NHS England
+      authority_role: england_end_of_life_care_guidance
+      resource: https://www.nhs.uk/conditions/end-of-life-care/
+      coverage: Introduces England palliative and end-of-life care, planning and support routes.
+      exclusions: Does not establish devolved provision, diagnose, predict prognosis, triage or recommend treatment or a provider.
+</pre>
+</body>
+</html>
