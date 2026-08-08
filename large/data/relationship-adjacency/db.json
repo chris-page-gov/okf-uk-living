@@ -327,6 +327,47 @@
       "target_iri": "enclosing-process/form-and-register-an-organisation"
     }
   ],
+  "evidence/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/appeal-school-admission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/appeal-school-admission.v1.yaml",
+          "source_ids": [
+            "appeal-school-admission-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:37239fbaf31c605771198793",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "output/apply-for-adoption-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
     {
       "assertion_scope": "real-world",
@@ -366,6 +407,88 @@
       "source_iri": "service-step/apply-for-adoption-support-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "output/apply-for-adoption-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
       "target_iri": "output/apply-for-adoption-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
+  "output/apply-to-university-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-to-university.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-to-university.v1.yaml",
+          "source_ids": [
+            "apply-to-university-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c0d224dc32477d09f99dfdf7",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-to-university-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-to-university-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/apply-to-university-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/apply-to-university-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "redress/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/challenge-school-exclusion.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/challenge-school-exclusion.v1.yaml",
+          "source_ids": [
+            "challenge-school-exclusion-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5ed27e1f2949ce25d11aa461",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/challenge-school-exclusion-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
   "resource/apply-for-adoption-support-apply-for-adoption-support-primary": [

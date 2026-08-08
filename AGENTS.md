@@ -107,4 +107,6 @@ Author each population pack in the compact domain registers under
 owns the corresponding dossier, service-family narrative and domain narrative;
 do not hand-edit those rendered files. Every pack contributes at least 13
 natural-language competency questions and body-free link receipts before its
-local review can pass.
+local review can pass. When a pack includes one of the six richer vertical
+slices, mark that family `preserve_existing: true`; validation requires the
+existing dossier and narrative and the renderer must not replace them.

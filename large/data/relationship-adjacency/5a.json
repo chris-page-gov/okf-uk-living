@@ -1240,6 +1240,47 @@
       "target_iri": "user-need/use-tax-free-childcare-reconfirmation"
     }
   ],
+  "evidence/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-school-place.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-school-place.v1.yaml",
+          "source_ids": [
+            "apply-for-school-place-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2064811dc78fdf42788a03db",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
   "rule/establish-parental-responsibility-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
     {
       "assertion_scope": "real-world",
@@ -1359,6 +1400,464 @@
       "source_iri": "service-step/register-a-death-certification-to-registration-output-select-registration-route",
       "target": "rule/register-a-death-certification-to-registration-output-select-registration-route-national-and-registrar-specific-rules-remain-separate",
       "target_iri": "rule/register-a-death-certification-to-registration-output-select-registration-route-national-and-registrar-specific-rules-remain-separate"
+    }
+  ],
+  "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "school-years-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:05f267f3172cc8e997ef0313",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-free-school-meals-school-years-northern-ireland-handoff",
+      "target_iri": "resource/apply-for-free-school-meals-school-years-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:37fef139459911948ab74e51",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-free-school-meals-school-years-wales-handoff",
+      "target_iri": "resource/apply-for-free-school-meals-school-years-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:44c9ac847a31be29d3603663",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5b7f91dde271dc8b0a7f9168",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5f15264b7781c78c6636074a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:76d1e5459419b1f48f316030",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-free-school-meals-apply-for-free-school-meals-primary",
+      "target_iri": "resource/apply-for-free-school-meals-apply-for-free-school-meals-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "school-years-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:77c9416859cd9cfcbe661799",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-free-school-meals-school-years-scotland-handoff",
+      "target_iri": "resource/apply-for-free-school-meals-school-years-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:781b6930b295d56864b4adb0",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:85067eda2d5e1aab22c45624",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/apply-for-free-school-meals-exception-or-route-failure",
+      "source_iri": "service-episode/apply-for-free-school-meals-exception-or-route-failure",
+      "target": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:87036111a40a426ea8b3ca1a",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c2ecccf8a19bffc4dfdf0d3b",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/apply-for-free-school-meals.v1.yaml",
+          "source_ids": [
+            "apply-for-free-school-meals-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d17be58a0ddb250608a250d0",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/apply-for-free-school-meals-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
     }
   ],
   "user-need/apply-for-adoption-support-assessment-route-and-current-fund-or-complaint-handoff": [

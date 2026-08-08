@@ -72,12 +72,14 @@ The 293-family, seven-facet colour projection is complete and approved for
 local evaluation; it does not claim leaf-service completeness.
 
 The foundation and Explorer contract are complete. The three-slice migration,
-shared authority/source infrastructure and `PACK-001` family-beginnings corpus
-are locally complete and supply the proving fixture, reusable identities and
-repeatable domain-register renderer for the remaining packs.
+shared authority/source infrastructure, `PACK-001` family-beginnings and
+`PACK-002` learning-and-transition corpora are locally complete and supply the
+proving fixtures, reusable identities and repeatable domain-register renderer
+for the remaining packs. The renderer now preserves richer vertical-slice
+dossiers when a later pack accounts for those approved identities.
 The active complete-corpus sequence is now:
 
-1. `PACK-002` through `PACK-008` — populate the seven remaining contracted domain packs, beginning with learning and transition.
+1. `PACK-003` through `PACK-008` — populate the six remaining contracted domain packs, beginning with work and money.
 2. `ASSURE-001` — reconcile search, graph, provenance, source links and local browser journeys and freeze a local population candidate.
 
 Population-complete permits a visible `specialist_review_required` state.

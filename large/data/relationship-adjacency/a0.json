@@ -147,6 +147,88 @@
       "target_iri": "life-course-domain/transport-enforcement"
     }
   ],
+  "evidence/transition-to-adult-social-care-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/transition-to-adult-social-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/transition-to-adult-social-care.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff",
+            "transition-to-adult-social-care-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a5026c5c6add30e4bd3ee8ee",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/transition-to-adult-social-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/transition-to-adult-social-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/transition-to-adult-social-care-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/transition-to-adult-social-care-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "outcome/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/get-academic-qualification-recognised.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/get-academic-qualification-recognised.v1.yaml",
+          "source_ids": [
+            "get-academic-qualification-recognised-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:040d2a88ce093471d3e3cccc",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/get-academic-qualification-recognised-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "outcome/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -301,6 +383,152 @@
       "source_iri": "service-step/get-pregnancy-workplace-protection-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "redress/get-pregnancy-workplace-protection-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
       "target_iri": "redress/get-pregnancy-workplace-protection-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
+  ],
+  "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml",
+          "source_ids": [
+            "post-school-study-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:01a24aa29cd21f52aa191a84",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-research-ethics-approval",
+      "source_iri": "dataset/obtain-research-ethics-approval",
+      "target": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff",
+      "target_iri": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml",
+          "source_ids": [
+            "post-school-study-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9150ca7fcc43c10967d203ae",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-research-ethics-approval-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-research-ethics-approval-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff",
+      "target_iri": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml",
+          "source_ids": [
+            "post-school-study-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9c848919e45adc2ceb3d6dd1",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-research-ethics-approval-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-research-ethics-approval-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff",
+      "target_iri": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/obtain-research-ethics-approval.v1.yaml",
+          "source_ids": [
+            "post-school-study-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:df88bb8ab4ad7b3778d883b2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-research-ethics-approval-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-research-ethics-approval-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff",
+      "target_iri": "resource/obtain-research-ethics-approval-post-school-study-northern-ireland-handoff"
     }
   ],
   "rule/notify-organisations-after-a-death-notify-covered-and-uncovered-bodies-notify-and-track-each-body-each-recipient-s-current-requirements-control": [
@@ -949,6 +1177,47 @@
       "source_iri": "service-step/get-early-years-development-support-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "resource/get-early-years-development-support-early-years-scotland-handoff",
       "target_iri": "resource/get-early-years-development-support-early-years-scotland-handoff"
+    }
+  ],
+  "user-need/claim-student-council-tax-disregard-find-the-billing-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/claim-student-council-tax-disregard.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/claim-student-council-tax-disregard.v1.yaml",
+          "source_ids": [
+            "claim-student-council-tax-disregard-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:64814a10f24ab1acae51a5e4",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-student-council-tax-disregard",
+      "source_iri": "dataset/claim-student-council-tax-disregard",
+      "target": "user-need/claim-student-council-tax-disregard-find-the-billing-authority",
+      "target_iri": "user-need/claim-student-council-tax-disregard-find-the-billing-authority"
     }
   ]
 }

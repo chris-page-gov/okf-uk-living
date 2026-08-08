@@ -1,0 +1,239 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-2-learning-transition
+domain: transition-to-adulthood
+title: Transition to adulthood
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-2-learning-transition-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: transition-adulthood-scotland-handoff
+    jurisdiction: Scotland
+    title: Education and training in Scotland
+    owner: Scottish Government
+    authority_role: scotland_transition_service_discovery_handoff
+    resource: https://www.mygov.scot/browse/education-training
+    coverage: Routes people to current Scottish education, training and transition services.
+    exclusions: Does not establish a family-specific rule, entitlement, deadline or outcome.
+  - <<: *source_defaults
+    id: transition-adulthood-wales-handoff
+    jurisdiction: Wales
+    title: Education and skills in Wales
+    owner: Welsh Government
+    authority_role: wales_transition_service_discovery_handoff
+    resource: https://www.gov.wales/education-skills
+    coverage: Routes people to current Welsh learning, skills and transition services.
+    exclusions: Does not establish a family-specific rule, entitlement, deadline or outcome.
+  - <<: *source_defaults
+    id: transition-adulthood-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Young people in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_transition_service_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/education
+    coverage: Routes young people to current Northern Ireland services and responsibilities.
+    exclusions: Does not establish a family-specific rule, entitlement, deadline or outcome.
+families:
+  - <<: *family_defaults
+    id: receive-national-insurance-number
+    title: Receive a National Insurance number
+    aliases: [get my NI number, national insurance number for a young person]
+    description: Find the automatic or application route for a National Insurance number and correct a missing-number problem.
+    situations: [A young person needs a National Insurance number for work, tax or benefits.]
+    user_needs: [Understand whether a number should arrive automatically and how to apply or recover it.]
+    source:
+      <<: *source_defaults
+      id: receive-national-insurance-number-primary
+      title: Apply for a National Insurance number
+      owner: HM Revenue and Customs
+      authority_role: national_insurance_number_service
+      resource: https://www.gov.uk/apply-national-insurance-number
+      coverage: Provides the current application and existing-number boundary.
+      exclusions: Does not create, disclose or validate an individual's number.
+  - <<: *family_defaults
+    id: start-first-job
+    title: Start a first job
+    aliases: [first job checklist, begin paid work]
+    description: Navigate job search, offer, work-status, pay and tax handoffs when beginning paid employment.
+    situations: [A young person is looking for or preparing to start their first paid job.]
+    user_needs: [Find official job-search and worker-rights routes and retain the employer's written output.]
+    source:
+      <<: *source_defaults
+      id: start-first-job-primary
+      title: Finding a job
+      owner: UK Government
+      authority_role: public_job_search_discovery_handoff
+      resource: https://www.gov.uk/browse/working/finding-job
+      coverage: Routes people to official job-search, application and starting-work information.
+      exclusions: Does not recommend an employer, guarantee work or decide employment status.
+  - <<: *family_defaults
+    id: get-careers-advice
+    title: Get careers advice
+    aliases: [career guidance for teenagers, choose a career]
+    description: Find impartial careers information and an adviser route for education, training or work choices.
+    situations: [A young person wants help comparing future study, training and work routes.]
+    user_needs: [Reach the appropriate public careers service without treating guidance as a guaranteed outcome.]
+    source:
+      <<: *source_defaults
+      id: get-careers-advice-primary
+      title: Careers helpline for teenagers
+      owner: Department for Education
+      authority_role: england_young_people_careers_service
+      resource: https://www.gov.uk/careers-helpline-for-teenagers
+      coverage: Provides the England public careers-information and adviser handoff for teenagers.
+      exclusions: Does not choose a course, occupation or employer for the user.
+  - <<: *family_defaults
+    id: start-apprenticeship
+    title: Start an apprenticeship
+    aliases: [find an apprenticeship, apprentice job and training]
+    description: Search and apply for an apprenticeship, then retain the employer and training-provider agreements.
+    situations: [A person wants paid work combined with approved training.]
+    user_needs: [Find the applicable apprenticeship service and understand the employer-provider boundary.]
+    dependency: apprenticeship-employer-and-training-provider
+    source:
+      <<: *source_defaults
+      id: start-apprenticeship-primary
+      title: Find an apprenticeship
+      owner: Department for Education
+      authority_role: england_apprenticeship_application_service
+      resource: https://www.gov.uk/apply-apprenticeship
+      coverage: Routes applicants to current England apprenticeship vacancies and applications.
+      exclusions: Does not recommend an employer, award a place or verify employment terms.
+  - <<: *family_defaults
+    id: verify-qualifications
+    title: Verify qualifications
+    aliases: [check exam qualification, confirm certificate or award]
+    description: Find the awarding-body or official recognition route to confirm a qualification or replace evidence.
+    situations: [A person, employer or institution needs to check a qualification record.]
+    user_needs: [Identify the awarding organisation and current verification or replacement route.]
+    source:
+      <<: *source_defaults
+      id: verify-qualifications-primary
+      title: Find a regulated qualification
+      owner: Office of Qualifications and Examinations Regulation
+      authority_role: england_regulated_qualification_register
+      resource: https://www.gov.uk/find-a-regulated-qualification
+      coverage: Routes users to England's register of regulated qualifications and awarding organisations.
+      exclusions: Does not authenticate an individual's certificate or establish overseas equivalence.
+  - <<: *family_defaults
+    id: register-to-vote-for-first-time
+    title: Register to vote for the first time
+    aliases: [first electoral registration, join the electoral register]
+    description: Submit an electoral-registration application and respond to any local registration evidence request.
+    situations: [A newly eligible person wants to join the electoral register.]
+    user_needs: [Use the correct registration route and understand that the local officer decides the application.]
+    source:
+      <<: *source_defaults
+      id: register-to-vote-for-first-time-primary
+      title: Register to vote
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: electoral_registration_service
+      resource: https://www.gov.uk/register-to-vote
+      coverage: Provides the current online electoral-registration route and local-officer handoff.
+      exclusions: Does not determine eligibility or confirm registration.
+  - id: learn-to-drive-car
+    title: Learn to drive a car
+    aliases: [driving lessons, provisional licence, theory test, practical driving test, get a driving licence]
+    description: Follow the jurisdiction-specific route from provisional entitlement through supervised learning and tests to the full-licence handoff.
+    situations: [A person wants to learn to drive a car in Great Britain or Northern Ireland.]
+    user_needs: [Obtain the correct provisional entitlement and complete the applicable testing route.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - <<: *family_defaults
+    id: consent-to-healthcare-as-young-person
+    title: Consent to healthcare as a young person
+    aliases: [child consent to treatment, young person medical consent]
+    description: Understand the clinical decision boundary for a child or young person agreeing to treatment.
+    situations: [A child, young person, parent or clinician needs authoritative information about consent.]
+    user_needs: [Find the current clinical and legal route without the bundle deciding capacity or consent.]
+    source:
+      <<: *source_defaults
+      id: consent-to-healthcare-as-young-person-primary
+      title: Consent to treatment — children and young people
+      owner: NHS England
+      authority_role: england_young_person_treatment_consent_guidance
+      resource: https://www.nhs.uk/conditions/consent-to-treatment/children/
+      coverage: Explains the England NHS consent framework and clinician decision boundary.
+      exclusions: Does not assess capacity, consent, treatment need or urgency.
+  - <<: *family_defaults
+    id: get-leaving-care-support
+    title: Get leaving-care support
+    aliases: [care leaver help, personal adviser after local authority care]
+    description: Find the local-authority planning, adviser and support route for moving from care into adulthood.
+    situations: [A young person is preparing to leave or has recently left local-authority care.]
+    user_needs: [Reach the accountable leaving-care team and understand plan, support and complaint handoffs.]
+    source:
+      <<: *source_defaults
+      id: get-leaving-care-support-primary
+      title: Leaving foster or local authority care
+      owner: Department for Education
+      authority_role: england_care_leaver_support_guidance
+      resource: https://www.gov.uk/leaving-foster-or-local-authority-care
+      coverage: Introduces England leaving-care entitlements and the local-authority support route.
+      exclusions: Does not assess individual entitlement, need or accommodation safety.
+  - <<: *family_defaults
+    id: transition-to-adult-social-care
+    title: Transition to adult social care
+    aliases: [move from children to adult care, transition social care assessment]
+    description: Navigate assessment and planning when ongoing support moves from children's to adult services.
+    situations: [A young person with care or support needs is approaching adult-service thresholds.]
+    user_needs: [Find the responsible authority, assessment sequence and continuity or challenge route.]
+    source:
+      <<: *source_defaults
+      id: transition-to-adult-social-care-primary
+      title: Apply for a needs assessment by social services
+      owner: Department of Health and Social Care
+      authority_role: england_adult_social_care_assessment_discovery_service
+      resource: https://www.gov.uk/apply-needs-assessment-social-services
+      coverage: Routes an England applicant to the council adult-social-care assessment service.
+      exclusions: Does not assess need, determine eligibility or create a care plan.
+  - <<: *family_defaults
+    id: access-child-trust-fund
+    title: Access a Child Trust Fund
+    aliases: [find child trust fund, withdraw CTF at 18]
+    description: Find a Child Trust Fund provider and follow the maturity, control or missing-account route.
+    situations: [A young person or responsible adult needs to locate or manage a Child Trust Fund.]
+    user_needs: [Use the official tracing route before contacting the regulated account provider.]
+    dependency: regulated-child-trust-fund-provider
+    source:
+      <<: *source_defaults
+      id: access-child-trust-fund-primary
+      title: Child Trust Fund
+      owner: HM Revenue and Customs
+      authority_role: child_trust_fund_discovery_and_tracing_service
+      resource: https://www.gov.uk/child-trust-funds
+      coverage: Provides the current Child Trust Fund overview, tracing and provider handoffs.
+      exclusions: Does not disclose account details, recommend a provider or decide access.
+  - <<: *family_defaults
+    id: obtain-proof-of-age-or-identity
+    title: Obtain proof of age or identity
+    aliases: [get photo ID, prove age as a young person]
+    description: Select an authoritative identity route for the intended purpose and obtain the required evidence.
+    situations: [A young person needs accepted proof of identity, age or nationality.]
+    user_needs: [Check what the relying service accepts before applying for an identity document.]
+    source:
+      <<: *source_defaults
+      id: obtain-proof-of-age-or-identity-primary
+      title: Apply online for a first adult passport
+      owner: HM Passport Office
+      authority_role: uk_first_adult_passport_service
+      resource: https://www.gov.uk/apply-first-adult-passport
+      coverage: Provides an authoritative UK passport identity route for eligible first-time adult applicants.
+      exclusions: A passport is not the only proof-of-age route and the bundle does not decide eligibility or document acceptance.

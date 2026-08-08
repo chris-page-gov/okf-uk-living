@@ -1,4 +1,45 @@
 {
+  "evidence/get-disabled-students-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/get-disabled-students-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/get-disabled-students-allowance.v1.yaml",
+          "source_ids": [
+            "get-disabled-students-allowance-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ebe49e022d616ede269b208a",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disabled-students-allowance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-disabled-students-allowance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/get-disabled-students-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/get-disabled-students-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/take-maternity-leave-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -36,6 +77,47 @@
       "source_iri": "service-step/take-maternity-leave-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "evidence/take-maternity-leave-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
       "target_iri": "evidence/take-maternity-leave-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "outcome/obtain-proof-of-age-or-identity-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3e6262ba8c708abd42f7a675",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/obtain-proof-of-age-or-identity-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/obtain-proof-of-age-or-identity-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
   "outcome/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [

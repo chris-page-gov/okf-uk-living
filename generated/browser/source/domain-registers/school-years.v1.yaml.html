@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/school-years.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/school-years.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/school-years.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-2-learning-transition
+domain: school-years
+title: School years
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-2-learning-transition-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: school-years-scotland-handoff
+    jurisdiction: Scotland
+    title: School education in Scotland
+    owner: Scottish Government
+    authority_role: scotland_school_service_discovery_handoff
+    resource: https://www.mygov.scot/browse/education-training
+    coverage: Routes people to current Scottish school education services and support.
+    exclusions: Does not establish a family-specific eligibility rule, deadline or outcome.
+  - &lt;&lt;: *source_defaults
+    id: school-years-wales-handoff
+    jurisdiction: Wales
+    title: Education and skills in Wales
+    owner: Welsh Government
+    authority_role: wales_school_service_discovery_handoff
+    resource: https://www.gov.wales/education-skills
+    coverage: Routes people to current Welsh education services, policy and support.
+    exclusions: Does not establish a family-specific eligibility rule, deadline or outcome.
+  - &lt;&lt;: *source_defaults
+    id: school-years-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Education in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_school_service_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/education
+    coverage: Routes people to current Northern Ireland education services and support.
+    exclusions: Does not establish a family-specific eligibility rule, deadline or outcome.
+families:
+  - &lt;&lt;: *family_defaults
+    id: apply-for-school-place
+    title: Apply for a school place
+    aliases: [school admissions application, primary or secondary school place]
+    description: Find the responsible admissions route and submit a school-place application for the relevant intake or move.
+    situations: [A parent or carer needs a state-funded school place for a child.]
+    user_needs: [Identify the admissions authority, application window, preferences and decision route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-school-place-primary
+      title: Apply for a primary school place
+      owner: Department for Education
+      authority_role: england_primary_school_admissions_service
+      resource: https://www.gov.uk/apply-for-primary-school-place
+      coverage: Routes an England applicant to the responsible council and current primary admissions process.
+      exclusions: Does not allocate a place or establish another nation&#x27;s admissions process.
+  - &lt;&lt;: *family_defaults
+    id: appeal-school-admission
+    title: Appeal a school admission decision
+    aliases: [school place appeal, challenge refused school admission]
+    description: Use the applicable independent appeal route after an admissions authority refuses a preferred school place.
+    situations: [A school-place application has been refused and the applicant wants the decision reviewed.]
+    user_needs: [Find the appeal body, deadline, evidence boundary and decision route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: appeal-school-admission-primary
+      title: Appealing a school&#x27;s decision
+      owner: Department for Education
+      authority_role: england_school_admission_appeal_guidance
+      resource: https://www.gov.uk/schools-admissions/appealing-a-schools-decision
+      coverage: Explains the England school-admission appeal route and hearing boundary.
+      exclusions: Does not predict or decide an appeal.
+  - &lt;&lt;: *family_defaults
+    id: arrange-school-transport
+    title: Arrange school transport
+    aliases: [free school transport, travel assistance to school]
+    description: Find the council or education authority route for school travel assistance and any review process.
+    situations: [A child may need help travelling safely to and from school.]
+    user_needs: [Locate the responsible authority, current criteria, application and review route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: arrange-school-transport-primary
+      title: Free school transport
+      owner: Department for Education
+      authority_role: england_school_transport_discovery_service
+      resource: https://www.gov.uk/free-school-transport
+      coverage: Routes England applicants to their council&#x27;s current school-transport application.
+      exclusions: Does not determine eligibility, route safety or transport provision.
+  - &lt;&lt;: *family_defaults
+    id: meet-school-attendance-duty
+    title: Meet school attendance duties
+    aliases: [school absence rules, child missing school]
+    description: Understand the attendance route, authorised-absence boundary and response when attendance is disrupted.
+    situations: [A parent, carer or pupil needs to understand attendance responsibilities or report an absence.]
+    user_needs: [Find the school and authority route before a penalty, support or exception decision.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: meet-school-attendance-duty-primary
+      title: School attendance and absence
+      owner: Department for Education
+      authority_role: england_school_attendance_guidance
+      resource: https://www.gov.uk/school-attendance-absence
+      coverage: Explains the England attendance and authorised-absence service boundary.
+      exclusions: Does not decide whether an absence is authorised or whether enforcement is lawful.
+  - &lt;&lt;: *family_defaults
+    id: choose-home-education
+    title: Choose home education
+    aliases: [educate child at home, elective home education]
+    description: Navigate the notification, education and local-authority contact boundaries when educating a child at home.
+    situations: [A parent or carer is considering or using home education.]
+    user_needs: [Find the applicable duties, school withdrawal and authority contact route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: choose-home-education-primary
+      title: Educating your child at home
+      owner: Department for Education
+      authority_role: england_home_education_guidance
+      resource: https://www.gov.uk/home-education
+      coverage: Introduces the England elective home-education route and local-authority boundary.
+      exclusions: Does not assess education suitability or establish devolved rules.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-free-school-meals
+    title: Apply for free school meals
+    aliases: [school meal support, free lunches at school]
+    description: Find the current school-meal support route and submit an application where one is required.
+    situations: [A household needs to check or request help with school meal costs.]
+    user_needs: [Locate the responsible authority and current application or automatic-entitlement route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-free-school-meals-primary
+      title: Apply for free school meals
+      owner: Department for Education
+      authority_role: england_free_school_meals_discovery_service
+      resource: https://www.gov.uk/apply-free-school-meals
+      coverage: Routes England applicants to the responsible council&#x27;s school-meal service.
+      exclusions: Does not calculate household entitlement or establish another nation&#x27;s offer.
+  - &lt;&lt;: *family_defaults
+    id: access-school-health
+    title: Access school health support
+    aliases: [school nurse, health support at school]
+    description: Find the current school-health or clinical route for a child&#x27;s health need during the school years.
+    situations: [A child or family needs preventive, routine or condition-related health support connected with school.]
+    user_needs: [Identify the accountable health and school contact without relying on the bundle for clinical advice.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: access-school-health-primary
+      title: Is my child too ill for school?
+      owner: NHS England
+      authority_role: england_school_health_guidance
+      resource: https://www.nhs.uk/live-well/is-my-child-too-ill-for-school/
+      coverage: Provides an England NHS handoff for common illness, school attendance and clinical help.
+      exclusions: Does not diagnose, assess urgency or replace the child&#x27;s clinician or school-health service.
+  - &lt;&lt;: *family_defaults
+    id: get-school-send-support
+    title: Get school SEND support
+    aliases: [special educational needs help at school, SEN support]
+    description: Navigate school support, assessment and education-plan routes for special educational needs or disability.
+    situations: [A child may need additional educational support because of learning difficulty or disability.]
+    user_needs: [Find the school, local-authority and review sequence without deciding need locally.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-school-send-support-primary
+      title: Children with special educational needs and disabilities
+      owner: Department for Education
+      authority_role: england_send_support_guidance
+      resource: https://www.gov.uk/children-with-special-educational-needs
+      coverage: Introduces the England SEND support and education, health and care plan routes.
+      exclusions: Does not assess a child or determine support, placement or appeal outcome.
+  - &lt;&lt;: *family_defaults
+    id: challenge-school-exclusion
+    title: Challenge a school exclusion
+    aliases: [appeal school exclusion, suspended or expelled from school]
+    description: Follow the review and challenge route after a pupil is suspended or permanently excluded.
+    situations: [A pupil has received a suspension or permanent-exclusion decision.]
+    user_needs: [Understand the decision record, governing-body review and independent-review boundary.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: challenge-school-exclusion-primary
+      title: School discipline and exclusions
+      owner: Department for Education
+      authority_role: england_school_exclusion_guidance
+      resource: https://www.gov.uk/school-discipline-exclusions/exclusions
+      coverage: Explains England suspension, exclusion and challenge routes.
+      exclusions: Does not decide the merits or provide legal advice.
+  - &lt;&lt;: *family_defaults
+    id: sit-public-examinations
+    title: Sit public examinations
+    aliases: [take GCSE or A level exams, exam results and appeals]
+    description: Navigate entry, reasonable-adjustment, results and review routes for regulated school examinations.
+    situations: [A learner needs to enter, sit or respond to the result of a public examination.]
+    user_needs: [Find the exam centre, awarding organisation and current review or appeal route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: sit-public-examinations-primary
+      title: Exam results, what you can do next
+      owner: Department for Education
+      authority_role: england_public_examination_results_guidance
+      resource: https://www.gov.uk/guidance/your-results-what-next
+      coverage: Routes learners from England qualification results to current review and next-step information.
+      exclusions: Does not award a grade, arrange an exam entry or decide an appeal.
+  - &lt;&lt;: *family_defaults
+    id: support-child-in-care-education
+    title: Support a child in care in education
+    aliases: [looked-after child education, virtual school support]
+    description: Find the accountable education support around a child looked after by a local authority.
+    situations: [A looked-after child needs coordinated education planning or support.]
+    user_needs: [Identify the school, social-care and virtual-school roles and escalation route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: support-child-in-care-education-primary
+      title: Promoting the education of looked-after children
+      owner: Department for Education
+      authority_role: england_looked_after_child_education_guidance
+      resource: https://www.gov.uk/government/publications/promoting-the-education-of-looked-after-children
+      coverage: Publishes the England statutory-guidance handoff for looked-after children&#x27;s education.
+      exclusions: Does not determine an individual child&#x27;s plan, placement or safeguarding action.
+  - &lt;&lt;: *family_defaults
+    id: report-school-safeguarding-concern
+    title: Report a school safeguarding concern
+    aliases: [report child abuse from school, school child protection concern]
+    description: Use the urgent, school or local-authority route when a concern about a child&#x27;s safety arises in school life.
+    situations: [Someone is concerned that a child connected with a school may be harmed or at risk.]
+    user_needs: [Reach the current safeguarding authority without delaying an emergency response.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-school-safeguarding-concern-primary
+      title: Report child abuse to a local council
+      owner: Department for Education
+      authority_role: england_local_child_safeguarding_discovery_service
+      resource: https://www.gov.uk/report-child-abuse-to-local-council
+      coverage: Routes an England concern to the relevant local children&#x27;s social-care service.
+      exclusions: Does not assess risk, investigate harm or replace emergency services.
+</pre>
+</body>
+</html>

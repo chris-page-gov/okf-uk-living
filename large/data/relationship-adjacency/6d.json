@@ -188,6 +188,88 @@
       "target_iri": "dependency/regulated-fostering-service"
     }
   ],
+  "output/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml",
+          "source_ids": [
+            "receive-national-insurance-number-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9ab8e35be4e3edaaee48595a",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "requirement/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:45c4eba04108e20891afbb14",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
   "requirement/arrange-adoption-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [
     {
       "assertion_scope": "real-world",
@@ -227,6 +309,807 @@
       "source_iri": "service-step/arrange-adoption-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "requirement/arrange-adoption-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
       "target_iri": "requirement/arrange-adoption-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    }
+  ],
+  "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "report-school-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0153276fd1c5ed29bd11c0ce",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-school-safeguarding-concern",
+      "source_iri": "dataset/report-school-safeguarding-concern",
+      "target": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary",
+      "target_iri": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "report-school-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3d6256e2a085a8ca0ad6072a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-school-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-school-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary",
+      "target_iri": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "report-school-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6d6abb99214aab5858c9d91e",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-school-safeguarding-concern-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-school-safeguarding-concern-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary",
+      "target_iri": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/report-school-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "report-school-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec611591b5ad8cf4b7234e99",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-school-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-school-safeguarding-concern-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary",
+      "target_iri": "resource/report-school-safeguarding-concern-report-school-safeguarding-concern-primary"
+    }
+  ],
+  "service-episode/receive-national-insurance-number-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml",
+          "source_ids": [
+            "receive-national-insurance-number-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:95dadbb067214afa1e7907cf",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/receive-national-insurance-number-exception-or-route-failure",
+      "source_iri": "service-episode/receive-national-insurance-number-exception-or-route-failure",
+      "target": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml",
+          "source_ids": [
+            "receive-national-insurance-number-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9ad3eeb3e66a56e0a2faff3d",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/receive-national-insurance-number-exception-or-route-failure",
+      "source_iri": "service-episode/receive-national-insurance-number-exception-or-route-failure",
+      "target": "enclosing-process/establish-adult-work-civic-and-identity-records",
+      "target_iri": "enclosing-process/establish-adult-work-civic-and-identity-records"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml",
+          "source_ids": [
+            "receive-national-insurance-number-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f52e2c80b18a89f04b9bbf64",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/receive-national-insurance-number",
+      "source_iri": "dataset/receive-national-insurance-number",
+      "target": "service-episode/receive-national-insurance-number-exception-or-route-failure",
+      "target_iri": "service-episode/receive-national-insurance-number-exception-or-route-failure"
+    }
+  ],
+  "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:062be5b200e6961a2e397fc4",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0dad437d8518d593dc3dbf0e",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:39ae6ef1c0914c55fa8e2b10",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "school-years-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3b5490d7d7d543116b8ee52f",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/arrange-school-transport-school-years-scotland-handoff",
+      "target_iri": "resource/arrange-school-transport-school-years-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6b7a976284089ceed8147abd",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/arrange-school-transport-arrange-school-transport-primary",
+      "target_iri": "resource/arrange-school-transport-arrange-school-transport-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:73dc6a6d36d8680c20e904a2",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:76d46b8e92065fe885d0bf4f",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8280131c438137e1a64aec6c",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:99fbe046e7a31580826145a2",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/arrange-school-transport-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c4c5b8a9426615e20514f051",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e3cb6757134fc5d63852eb50",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/arrange-school-transport-school-years-wales-handoff",
+      "target_iri": "resource/arrange-school-transport-school-years-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "school-years-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f2186a7c71416217004cc04a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/arrange-school-transport-school-years-northern-ireland-handoff",
+      "target_iri": "resource/arrange-school-transport-school-years-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:faaa6599ca352d1b7aa2c045",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/arrange-school-transport-ordinary-source-linked-route",
+      "source_iri": "service-episode/arrange-school-transport-ordinary-source-linked-route",
+      "target": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fc28d6b4a3b397749ba8afe1",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/arrange-school-transport-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ]
 }

@@ -519,6 +519,47 @@
       "target_iri": "outcome/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
+  "outcome/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/register-to-vote-for-first-time.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/register-to-vote-for-first-time.v1.yaml",
+          "source_ids": [
+            "register-to-vote-for-first-time-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cc41e46aa3e0e218f6e87f7a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/register-to-vote-for-first-time-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
   "output/get-childcare-cost-support-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -710,6 +751,47 @@
       "source_iri": "dataset/respond-to-speeding-notice",
       "target": "resource/respond-to-speeding-notice-nidirect-appealing-verdict",
       "target_iri": "resource/respond-to-speeding-notice-nidirect-appealing-verdict"
+    }
+  ],
+  "rule/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/arrange-school-transport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/arrange-school-transport.v1.yaml",
+          "source_ids": [
+            "arrange-school-transport-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3b083ccbd5d0670476b22e8d",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/arrange-school-transport-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ]
 }

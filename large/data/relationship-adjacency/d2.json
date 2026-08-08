@@ -122,6 +122,47 @@
       "target_iri": "rule/access-health-visiting-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
+  "rule/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/claim-student-council-tax-disregard.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/claim-student-council-tax-disregard.v1.yaml",
+          "source_ids": [
+            "claim-student-council-tax-disregard-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f112c740df57fd6aa9490f12",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/claim-student-council-tax-disregard-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "rule/get-funded-early-education-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
     {
       "assertion_scope": "real-world",
@@ -857,6 +898,47 @@
       "source_iri": "service-step/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "redress/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
       "target_iri": "redress/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "user-need/get-disabled-students-allowance-evidence-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/get-disabled-students-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/get-disabled-students-allowance.v1.yaml",
+          "source_ids": [
+            "get-disabled-students-allowance-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3c2f3cc1fecadf76c871f40d",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-disabled-students-allowance",
+      "source_iri": "dataset/get-disabled-students-allowance",
+      "target": "user-need/get-disabled-students-allowance-evidence-boundary",
+      "target_iri": "user-need/get-disabled-students-allowance-evidence-boundary"
     }
   ]
 }

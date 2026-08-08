@@ -111,6 +111,47 @@
       "target_iri": "redress/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
+  "rule/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/start-first-job.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/start-first-job.v1.yaml",
+          "source_ids": [
+            "start-first-job-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b17a52934d4d177b7d1a6a53",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
   "rule/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
     {
       "assertion_scope": "real-world",
@@ -306,6 +347,542 @@
       "source_iri": "service-episode/start-antenatal-care-ordinary-source-linked-route",
       "target": "enclosing-process/pregnancy-maternity-and-workplace-support",
       "target_iri": "enclosing-process/pregnancy-maternity-and-workplace-support"
+    }
+  ],
+  "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:058100355739ecaf1ecdd5b3",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/obtain-proof-of-age-or-identity-ordinary-source-linked-route",
+      "source_iri": "service-episode/obtain-proof-of-age-or-identity-ordinary-source-linked-route",
+      "target": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:13ca7f0a58e2a77fb5fe6a16",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-proof-of-age-or-identity-obtain-proof-of-age-or-identity-primary",
+      "target_iri": "resource/obtain-proof-of-age-or-identity-obtain-proof-of-age-or-identity-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1eec18aeeb8ac612d10837c2",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2b9597262defaa7a67ab879e",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4cd6399c744dd78fc5283644",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-proof-of-age-or-identity-transition-adulthood-northern-ireland-handoff",
+      "target_iri": "resource/obtain-proof-of-age-or-identity-transition-adulthood-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:62d7c1b987af26cffe5f7152",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-proof-of-age-or-identity-transition-adulthood-wales-handoff",
+      "target_iri": "resource/obtain-proof-of-age-or-identity-transition-adulthood-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6862c5e7b017fafb0be62ec7",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:780fa17a1cb36efd4764ab94",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7f2a7319f77e89b218d23759",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-proof-of-age-or-identity-transition-adulthood-scotland-handoff",
+      "target_iri": "resource/obtain-proof-of-age-or-identity-transition-adulthood-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:843ef4deaf5645b5794cbf46",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:969783b8415d598db9665cac",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b03ff2d443044d20dc67d955",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e7d33e8ca84c4d724aa411de",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/obtain-proof-of-age-or-identity.v1.yaml",
+          "source_ids": [
+            "obtain-proof-of-age-or-identity-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e9ffd0945e97422131180024",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/obtain-proof-of-age-or-identity-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
   "user-need/learn-to-drive-car-learn-and-practise-lawfully-with-suitable-supervision-vehicle-and-insurance": [

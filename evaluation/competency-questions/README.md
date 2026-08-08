@@ -8,7 +8,10 @@ answers or personal decisions.
 aliases in the first five, each competency question's expected family in the
 first ten, staged process retrieval and empty results for an unmatched query.
 
-Current progress: **13 of at least 100** questions across 3 of 24 domains.
+Current progress: **26 of at least 100** questions across 6 of 24 domains.
 
 - [`pack-1-family-beginnings.v1`](pack-1-family-beginnings.v1.yaml) — 13
   questions across before birth, birth/newborn and early years.
+- [`pack-2-learning-transition.v1`](pack-2-learning-transition.v1.yaml) — 13
+  questions across school years, transition to adulthood and post-school
+  study/research.

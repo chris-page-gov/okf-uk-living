@@ -40,6 +40,47 @@
       "target_iri": "outcome/start-antenatal-care-ordinary-source-linked-route-follow-current-official-instructions-enter-the-current-maternity-service-early-in-pregnancy-and-identify-the-first-booking-and-assessment-handoff"
     }
   ],
+  "output/consent-to-healthcare-as-young-person-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/consent-to-healthcare-as-young-person.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/consent-to-healthcare-as-young-person.v1.yaml",
+          "source_ids": [
+            "consent-to-healthcare-as-young-person-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e9fb20b3f8a8860a0f1167b8",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/consent-to-healthcare-as-young-person-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/consent-to-healthcare-as-young-person-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/consent-to-healthcare-as-young-person-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/consent-to-healthcare-as-young-person-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
   "redress/learn-to-drive-car-wrong-jurisdiction-missing-evidence-or-test-failure-stop-correct-and-re-enter-authority-complaint-or-stated-legal-boundary": [
     {
       "assertion_scope": "real-world",

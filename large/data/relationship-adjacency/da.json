@@ -1,4 +1,45 @@
 {
+  "dependency/recognised-qualification-comparison-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/get-academic-qualification-recognised.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/get-academic-qualification-recognised.v1.yaml",
+          "source_ids": [
+            "get-academic-qualification-recognised-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f9423cdfd6cd33a3bfb10c75",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-academic-qualification-recognised",
+      "source_iri": "dataset/get-academic-qualification-recognised",
+      "target": "dependency/recognised-qualification-comparison-provider",
+      "target_iri": "dependency/recognised-qualification-comparison-provider"
+    }
+  ],
   "evidence/get-pregnancy-workplace-protection-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -36,6 +77,129 @@
       "source_iri": "service-step/get-pregnancy-workplace-protection-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "evidence/get-pregnancy-workplace-protection-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
       "target_iri": "evidence/get-pregnancy-workplace-protection-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "output/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6a28952ebbe270d570106c13",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
+  "output/support-child-in-care-education-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/support-child-in-care-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/support-child-in-care-education.v1.yaml",
+          "source_ids": [
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff",
+            "support-child-in-care-education-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e0ffd119977bcf1c01cdfc78",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/support-child-in-care-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/support-child-in-care-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/support-child-in-care-education-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/support-child-in-care-education-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "output/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/transition-to-adult-social-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/transition-to-adult-social-care.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff",
+            "transition-to-adult-social-care-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:19fe3c10fa36679cddde0949",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
     }
   ],
   "redress/get-early-years-send-support-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
@@ -119,6 +283,47 @@
       "target_iri": "redress/register-a-death-certification-to-registration-output-select-registration-route-registrar-correction-or-complaint-route-where-applicable"
     }
   ],
+  "redress/verify-qualifications-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/verify-qualifications.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/verify-qualifications.v1.yaml",
+          "source_ids": [
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff",
+            "verify-qualifications-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:41afcbc229243341ad58d7ce",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/verify-qualifications-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/verify-qualifications-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/verify-qualifications-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/verify-qualifications-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    }
+  ],
   "requirement/claim-maternity-allowance-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
     {
       "assertion_scope": "real-world",
@@ -155,6 +360,1109 @@
       "source_iri": "service-step/claim-maternity-allowance-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "requirement/claim-maternity-allowance-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
       "target_iri": "requirement/claim-maternity-allowance-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "requirement/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transition-to-adulthood/receive-national-insurance-number.v1.yaml",
+          "source_ids": [
+            "receive-national-insurance-number-primary",
+            "transition-adulthood-northern-ireland-handoff",
+            "transition-adulthood-scotland-handoff",
+            "transition-adulthood-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:42668d63b6f67cb9098a5d65",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/receive-national-insurance-number-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
+  "resource/access-adult-skills-training-access-adult-skills-training-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5b7dd860874e9de118175672",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-adult-skills-training-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/access-adult-skills-training-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/access-adult-skills-training-access-adult-skills-training-primary",
+      "target_iri": "resource/access-adult-skills-training-access-adult-skills-training-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8fc4ae3b695e12c7935b22d9",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-adult-skills-training-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/access-adult-skills-training-access-adult-skills-training-primary",
+      "target_iri": "resource/access-adult-skills-training-access-adult-skills-training-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a3c620a5d26f186296ff8aa2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/access-adult-skills-training",
+      "source_iri": "dataset/access-adult-skills-training",
+      "target": "resource/access-adult-skills-training-access-adult-skills-training-primary",
+      "target_iri": "resource/access-adult-skills-training-access-adult-skills-training-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/access-adult-skills-training.v1.yaml",
+          "source_ids": [
+            "access-adult-skills-training-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e697cb1ed140f4e862570dc6",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/access-adult-skills-training-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/access-adult-skills-training-access-adult-skills-training-primary",
+      "target_iri": "resource/access-adult-skills-training-access-adult-skills-training-primary"
+    }
+  ],
+  "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0036da47b381da6b4c2c90c4",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-further-education-course-post-school-study-wales-handoff",
+      "target_iri": "resource/apply-for-further-education-course-post-school-study-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0a59054b6f373439db7065fd",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0e61a1cec085b9a2c990d099",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:273b700f4747ac3d67bd666c",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "post-school-study-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:37da157274416c0c6ed4ba8d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-further-education-course-post-school-study-scotland-handoff",
+      "target_iri": "resource/apply-for-further-education-course-post-school-study-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:50c5abeb7ad872299ade13f8",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "post-school-study-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6f72e7691a0dcb181d57f5b8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-further-education-course-post-school-study-northern-ireland-handoff",
+      "target_iri": "resource/apply-for-further-education-course-post-school-study-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6f825c89b5332a22d2ef5294",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8a8b9198f0cbb43ed227c30c",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/apply-for-further-education-course-apply-for-further-education-course-primary",
+      "target_iri": "resource/apply-for-further-education-course-apply-for-further-education-course-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a673a7e5484b35ced62bd140",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ab8847f176d03e2713b5da1f",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/apply-for-further-education-course-exception-or-route-failure",
+      "source_iri": "service-episode/apply-for-further-education-course-exception-or-route-failure",
+      "target": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/further-education-university-research/apply-for-further-education-course.v1.yaml",
+          "source_ids": [
+            "apply-for-further-education-course-primary",
+            "post-school-study-northern-ireland-handoff",
+            "post-school-study-scotland-handoff",
+            "post-school-study-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:edcf301b0ad79bd3884d945c",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/apply-for-further-education-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1752d8d3d6f76f1c11496c89",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:396c6aa75371cf38dcc4a454",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3fab175fcea0bc2d9af68c7a",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/choose-home-education-exception-or-route-failure",
+      "source_iri": "service-episode/choose-home-education-exception-or-route-failure",
+      "target": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "school-years-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3fda8f583585cddb26dd3df6",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/choose-home-education-school-years-northern-ireland-handoff",
+      "target_iri": "resource/choose-home-education-school-years-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:55cb236a27c24f68710e7875",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:591f82ce276bfc1318fad472",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7e3ce365047d435336d8e203",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7ffdaa89c69fcf3f27e68856",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:911a3d6a5dd2eb0e24013fb5",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/choose-home-education-school-years-wales-handoff",
+      "target_iri": "resource/choose-home-education-school-years-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d64e35f6aa3d58f31cedb0d1",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/choose-home-education-choose-home-education-primary",
+      "target_iri": "resource/choose-home-education-choose-home-education-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "school-years-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f930f2a655cf823b798b03e5",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/choose-home-education-school-years-scotland-handoff",
+      "target_iri": "resource/choose-home-education-school-years-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/school-years/choose-home-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/school-years/choose-home-education.v1.yaml",
+          "source_ids": [
+            "choose-home-education-primary",
+            "school-years-northern-ireland-handoff",
+            "school-years-scotland-handoff",
+            "school-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fce47c743c3248337a5b2257",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/choose-home-education-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ]
 }

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/further-education-university-research.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/further-education-university-research.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/further-education-university-research.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-2-learning-transition
+domain: further-education-university-research
+title: Further education, university and research
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-2-learning-transition-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: post-school-study-scotland-handoff
+    jurisdiction: Scotland
+    title: Further and higher education in Scotland
+    owner: Scottish Government
+    authority_role: scotland_post_school_study_discovery_handoff
+    resource: https://www.mygov.scot/browse/education-training
+    coverage: Routes people to current Scottish college, university and student-support services.
+    exclusions: Does not establish a course, funding, admission or research decision.
+  - &lt;&lt;: *source_defaults
+    id: post-school-study-wales-handoff
+    jurisdiction: Wales
+    title: Further and higher education in Wales
+    owner: Welsh Government
+    authority_role: wales_post_school_study_discovery_handoff
+    resource: https://www.gov.wales/education-skills
+    coverage: Routes people to current Welsh further- and higher-education services and policy.
+    exclusions: Does not establish a course, funding, admission or research decision.
+  - &lt;&lt;: *source_defaults
+    id: post-school-study-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Higher education in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_post_school_study_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/education/higher-education
+    coverage: Routes people to current Northern Ireland higher-education and student-support services.
+    exclusions: Does not establish a course, funding, admission or research decision.
+families:
+  - &lt;&lt;: *family_defaults
+    id: apply-for-further-education-course
+    title: Apply for a further education course
+    aliases: [find a college course, apply for FE study]
+    description: Find a suitable further-education course and follow the provider&#x27;s admission and funding route.
+    situations: [A learner wants study after secondary education outside an undergraduate or graduate degree.]
+    user_needs: [Compare governed course information and reach the accountable provider application.]
+    dependency: regulated-further-education-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-further-education-course-primary
+      title: Further education courses and funding
+      owner: Department for Education
+      authority_role: england_further_education_discovery_guidance
+      resource: https://www.gov.uk/further-education-courses
+      coverage: Introduces England further-education course search and funding handoffs.
+      exclusions: Does not recommend a provider, admit a learner or award funding.
+  - &lt;&lt;: *family_defaults
+    id: apply-to-university
+    title: Apply to university
+    aliases: [university application, apply for undergraduate course]
+    description: Search for a higher-education course and submit an application through the applicable admissions route.
+    situations: [A prospective student wants to apply for undergraduate higher education.]
+    user_needs: [Find the application sequence, provider decisions and response deadlines on current sources.]
+    dependency: higher-education-provider-and-admissions-service
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-to-university-primary
+      title: Apply to university
+      owner: Department for Education
+      authority_role: uk_undergraduate_application_guidance
+      resource: https://www.gov.uk/higher-education-courses-find-and-apply
+      coverage: Routes prospective UK undergraduates through course search, admissions service and provider decisions.
+      exclusions: Does not recommend a course, submit an application or make an admission decision.
+  - &lt;&lt;: *family_defaults
+    id: get-student-finance
+    title: Get student finance
+    aliases: [student loan application, tuition fee and maintenance support]
+    description: Select the correct national student-finance system and follow application, evidence and payment handoffs.
+    situations: [A student needs help with tuition fees or living costs for an eligible course.]
+    user_needs: [Use the correct nation and study-year route without calculating entitlement locally.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-student-finance-primary
+      title: Student finance
+      owner: Department for Education
+      authority_role: england_student_finance_guidance
+      resource: https://www.gov.uk/student-finance
+      coverage: Routes students to the current England finance application, evidence and repayment information.
+      exclusions: Does not calculate eligibility or amount and does not establish devolved finance rules.
+  - &lt;&lt;: *family_defaults
+    id: get-disabled-students-allowance
+    title: Get Disabled Students&#x27; Allowance
+    aliases: [DSA application, disability study support]
+    description: Apply for disability-related study support and complete any source-required needs assessment.
+    situations: [A higher-education student may need additional support because of disability or health condition.]
+    user_needs: [Find the correct finance body, evidence boundary, assessment and review route.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-disabled-students-allowance-primary
+      title: Disabled Students&#x27; Allowance
+      owner: Department for Education
+      authority_role: england_disabled_students_allowance_guidance
+      resource: https://www.gov.uk/disabled-students-allowance-dsa
+      coverage: Explains the England DSA application, assessment and support boundary.
+      exclusions: Does not diagnose, decide eligibility, recommend suppliers or award support.
+  - &lt;&lt;: *family_defaults
+    id: arrange-student-accommodation
+    title: Arrange student accommodation
+    aliases: [university halls, rent a student home]
+    description: Compare provider-managed and private student housing, then retain the applicable licence or tenancy terms.
+    situations: [A student needs accommodation for college or university study.]
+    user_needs: [Identify provider, tenancy, code and complaints boundaries before committing.]
+    dependency: regulated-or-code-bound-student-housing-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: arrange-student-accommodation-primary
+      title: Renting as a university student
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_student_private_renting_guidance
+      resource: https://www.gov.uk/private-renting/student-tenancies
+      coverage: Explains current England tenancy and licence distinctions for university students.
+      exclusions: Does not recommend accommodation, inspect a property or interpret an individual contract.
+  - &lt;&lt;: *family_defaults
+    id: claim-student-council-tax-disregard
+    title: Claim a student council tax disregard
+    aliases: [student council tax exemption, council tax discount for students]
+    description: Give the billing authority the student evidence needed to apply the current disregard or discount decision.
+    situations: [A household includes a student and needs the council-tax bill assessed correctly.]
+    user_needs: [Find the billing authority, evidence and challenge route without calculating the bill locally.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: claim-student-council-tax-disregard-primary
+      title: Council Tax discounts for full-time students
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_student_council_tax_guidance
+      resource: https://www.gov.uk/council-tax/discounts-for-full-time-students
+      coverage: Explains the England and Wales student-disregard boundary and local billing-authority handoff.
+      exclusions: Does not determine student status, household liability or bill amount.
+  - &lt;&lt;: *family_defaults
+    id: register-with-health-services-as-student
+    title: Register with health services as a student
+    aliases: [student GP registration, doctor near university]
+    description: Register with the appropriate primary-care service near study and retain routes for existing or urgent care.
+    situations: [A student has moved for study and needs access to routine healthcare.]
+    user_needs: [Find the current primary-care registration route without losing urgent or continuity-of-care handoffs.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-with-health-services-as-student-primary
+      title: How to register with a GP surgery
+      owner: NHS England
+      authority_role: england_gp_registration_guidance
+      resource: https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/
+      coverage: Explains the England NHS GP registration process and refusal boundary.
+      exclusions: Does not diagnose, choose a practice, guarantee registration or replace urgent care.
+  - &lt;&lt;: *family_defaults
+    id: access-adult-skills-training
+    title: Access adult skills training
+    aliases: [free adult courses, retrain with government-funded skills]
+    description: Find a current funded adult-skills course and apply through an accountable provider.
+    situations: [An adult wants to gain skills, retrain or improve employment prospects.]
+    user_needs: [Locate governed course and funding information before selecting a provider.]
+    dependency: approved-adult-skills-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: access-adult-skills-training-primary
+      title: Free courses for jobs
+      owner: Department for Education
+      authority_role: england_adult_skills_funding_guidance
+      resource: https://www.gov.uk/guidance/free-courses-for-jobs
+      coverage: Routes eligible England adults to current publicly funded course information and providers.
+      exclusions: Does not determine eligibility, recommend a provider or award a qualification.
+  - &lt;&lt;: *family_defaults
+    id: seek-research-funding
+    title: Seek research funding
+    aliases: [apply for a research grant, fund an academic project]
+    description: Find an applicable public funding opportunity and follow sponsor, organisation and funder submission stages.
+    situations: [A researcher or research organisation needs funding for a proposed project.]
+    user_needs: [Identify the funder, eligibility boundary, organisational approval and decision route.]
+    dependency: research-organisation-and-funder
+    source:
+      &lt;&lt;: *source_defaults
+      id: seek-research-funding-primary
+      title: Applying for research funding
+      owner: Department of Health and Social Care
+      authority_role: public_research_funding_process_guidance
+      resource: https://www.gov.uk/government/publications/applying-for-research-funding/applying-for-research-funding
+      coverage: Describes a public research commission and submission boundary and links to current opportunities.
+      exclusions: It is not a universal funder index and does not assess or award a proposal.
+  - &lt;&lt;: *family_defaults
+    id: obtain-research-ethics-approval
+    title: Obtain research ethics approval
+    aliases: [research ethics committee approval, ethical review for a study]
+    description: Identify the sponsor, institutional and statutory approvals applicable to a proposed study before it begins.
+    situations: [A research proposal may require ethical or regulatory review.]
+    user_needs: [Use the institution and relevant statutory authority to determine and evidence required approvals.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: obtain-research-ethics-approval-primary
+      title: Health Research Authority
+      owner: Health Research Authority
+      authority_role: england_health_and_social_care_research_approval_authority
+      resource: https://www.gov.uk/government/organisations/health-research-authority/about
+      coverage: Identifies the authority responsible for health and social-care research approvals in England.
+      exclusions: Not every research project is health research; institutional and devolved approvals remain separate.
+  - &lt;&lt;: *family_defaults
+    id: manage-university-intellectual-property
+    title: Manage university intellectual property
+    aliases: [student or researcher IP, university invention ownership]
+    description: Locate the institution&#x27;s intellectual-property policy and use disclosure, ownership and commercialisation routes.
+    situations: [A student, researcher or institution needs to manage intellectual assets arising from university activity.]
+    user_needs: [Find the governing contract and institutional policy before assuming ownership or disclosure rights.]
+    dependency: university-technology-transfer-or-research-office
+    source:
+      &lt;&lt;: *source_defaults
+      id: manage-university-intellectual-property-primary
+      title: Intellectual asset management for universities
+      owner: Intellectual Property Office
+      authority_role: uk_university_intellectual_asset_guidance
+      resource: https://www.gov.uk/government/publications/intellectual-asset-management-for-universities
+      coverage: Provides public guidance for universities on institutional intellectual-asset strategy.
+      exclusions: Does not determine ownership under an individual contract or replace legal advice.
+  - &lt;&lt;: *family_defaults
+    id: get-academic-qualification-recognised
+    title: Get an academic qualification recognised
+    aliases: [compare overseas degree, UK academic equivalence statement]
+    description: Identify the relying body&#x27;s purpose and obtain the recognition evidence that its current route accepts.
+    situations: [A person needs an overseas academic award compared with a UK qualification for a stated purpose.]
+    user_needs: [Follow the relying authority to the recognised comparison service without assuming universal equivalence.]
+    dependency: recognised-qualification-comparison-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-academic-qualification-recognised-primary
+      title: If your degree was taught or researched in English
+      owner: Home Office
+      authority_role: uk_visa_and_nationality_degree_comparison_handoff
+      resource: https://www.gov.uk/english-language/degrees-in-english
+      coverage: Shows one official use case that hands overseas academic comparison to the recognised provider.
+      exclusions: Recognition is purpose-specific; this route does not establish universal academic or professional equivalence.
+</pre>
+</body>
+</html>
