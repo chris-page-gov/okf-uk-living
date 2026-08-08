@@ -1240,6 +1240,47 @@
       "target_iri": "user-need/use-tax-free-childcare-reconfirmation"
     }
   ],
+  "dependency/licensed-hazardous-waste-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/dispose-of-hazardous-waste.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/dispose-of-hazardous-waste.v1.yaml",
+          "source_ids": [
+            "dispose-of-hazardous-waste-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1712bc6dceb1bac3460bef57",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/dispose-of-hazardous-waste",
+      "source_iri": "dataset/dispose-of-hazardous-waste",
+      "target": "dependency/licensed-hazardous-waste-provider",
+      "target_iri": "dependency/licensed-hazardous-waste-provider"
+    }
+  ],
   "evidence/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -1281,6 +1322,129 @@
       "target_iri": "evidence/apply-for-school-place-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "evidence/report-litter-or-dog-fouling-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-litter-or-dog-fouling.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-litter-or-dog-fouling.v1.yaml",
+          "source_ids": [
+            "report-litter-or-dog-fouling-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b31454ee9ecc67456fc38400",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-litter-or-dog-fouling-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-litter-or-dog-fouling-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/report-litter-or-dog-fouling-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/report-litter-or-dog-fouling-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "outcome/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-parking-permit.v1.yaml",
+          "source_ids": [
+            "get-parking-permit-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d96fdef1077dd1b1d5812ecd",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/get-parking-permit-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "outcome/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-find-a-private-tenancy-route-check-the-landlord-or-agent-boundary-and-retain-the-agreement-inventory-and-payment-records": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7730d45d948bedea0e0c0afb",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-find-a-private-tenancy-route-check-the-landlord-or-agent-boundary-and-retain-the-agreement-inventory-and-payment-records",
+      "target_iri": "outcome/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-find-a-private-tenancy-route-check-the-landlord-or-agent-boundary-and-retain-the-agreement-inventory-and-payment-records"
+    }
+  ],
   "output/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -1318,6 +1482,47 @@
       "source_iri": "service-step/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "output/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
       "target_iri": "output/report-workplace-injury-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "redress/obtain-motor-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-motor-insurance.v1.yaml",
+          "source_ids": [
+            "obtain-motor-insurance-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:019af1e4d6eafea20a30ae29",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-motor-insurance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-motor-insurance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/obtain-motor-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/obtain-motor-insurance-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
   "redress/register-for-income-tax-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
@@ -1395,6 +1600,152 @@
       "source_iri": "service-step/get-workplace-health-and-safety-protection-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "requirement/get-workplace-health-and-safety-protection-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
       "target_iri": "requirement/get-workplace-health-and-safety-protection-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    }
+  ],
+  "resource/report-street-cleaning-failure-rubbish-street-wales-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a7a9df08978ec75ccc68164c",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:afabb4d3429ea4aebbf2805e",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-street-cleaning-failure-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-street-cleaning-failure-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b301efd5537f9137703bc4c3",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-street-cleaning-failure-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/report-street-cleaning-failure.v1.yaml",
+          "source_ids": [
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d70f9121d2d68972f0621880",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-street-cleaning-failure",
+      "source_iri": "dataset/report-street-cleaning-failure",
+      "target": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff",
+      "target_iri": "resource/report-street-cleaning-failure-rubbish-street-wales-handoff"
     }
   ],
   "rule/establish-parental-responsibility-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [

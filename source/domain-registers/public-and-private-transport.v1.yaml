@@ -1,0 +1,249 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-4-home-place-transport
+domain: public-and-private-transport
+title: Public and private transport
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-4-home-place-transport-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: public-private-transport-scotland-handoff
+    jurisdiction: Scotland
+    title: Transport and travel in Scotland
+    owner: Scottish Government
+    authority_role: scotland_transport_discovery_handoff
+    resource: https://www.mygov.scot/browse/driving-transport
+    coverage: Routes people to current Scottish public, accessible, local and road-transport services.
+    exclusions: Does not establish that an England concession, permit or operator-licensing route applies in Scotland.
+  - <<: *source_defaults
+    id: public-private-transport-wales-handoff
+    jurisdiction: Wales
+    title: Transport in Wales
+    owner: Welsh Government
+    authority_role: wales_transport_discovery_handoff
+    resource: https://www.gov.wales/transport
+    coverage: Routes people to current Welsh transport policy, concessions and service information.
+    exclusions: Does not determine a local permit, concession, operator licence or journey accessibility.
+  - <<: *source_defaults
+    id: public-private-transport-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Travel, transport and roads in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_transport_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/travel-transport-and-roads
+    coverage: Routes people to current Northern Ireland public-transport, motoring and road services.
+    exclusions: Great Britain vehicle and local-transport pages do not establish Northern Ireland procedure.
+families:
+  - <<: *family_defaults
+    id: plan-accessible-public-transport
+    title: Plan accessible public transport
+    aliases: [accessible train or bus journey, passenger assistance, travel with a wheelchair]
+    description: Check vehicle, station, stop and assistance information with the relevant operator before travel and retain disruption or complaint routes.
+    situations: [A disabled or older passenger needs to plan a journey using public transport.]
+    user_needs: [Bring together operator accessibility, assistance booking, interchange and passenger-rights handoffs.]
+    dependency: licensed-public-transport-operator
+    source:
+      <<: *source_defaults
+      id: plan-accessible-public-transport-primary
+      title: Transport if you're disabled
+      owner: Department for Transport
+      authority_role: uk_accessible_transport_guidance
+      resource: https://www.gov.uk/transport-disabled
+      coverage: Routes disabled passengers to current public-transport assistance, concession and rights information.
+      exclusions: Does not guarantee a vehicle, station, stop, assistance booking or disruption outcome.
+  - <<: *family_defaults
+    id: obtain-concessionary-travel
+    title: Obtain concessionary travel
+    aliases: [older person bus pass, disabled bus pass, free or discounted travel]
+    description: Apply to the responsible national or local scheme and retain eligibility, card, renewal and appeal information.
+    situations: [A person may qualify by age, disability or another governed category for discounted public transport.]
+    user_needs: [Find the scheme for the journey and residence location without assuming one UK entitlement.]
+    source:
+      <<: *source_defaults
+      id: obtain-concessionary-travel-primary
+      title: Apply for an older person's bus pass
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_older_person_bus_pass_locator
+      resource: https://www.gov.uk/apply-for-elderly-person-bus-pass
+      coverage: Routes England applicants to the local authority older-person bus-pass service.
+      exclusions: Does not decide age, residence, disability or companion entitlement and does not cover all schemes.
+  - <<: *family_defaults
+    id: use-community-transport
+    title: Use community transport
+    aliases: [dial a ride, volunteer car scheme, accessible local transport]
+    description: Find an eligible local not-for-profit, commissioned or permit-based transport service and confirm booking and support arrangements.
+    situations: [A person cannot readily use ordinary public transport for an essential or community journey.]
+    user_needs: [Identify accountable local schemes, membership boundaries and safe operator information.]
+    dependency: permitted-or-commissioned-community-transport-provider
+    source:
+      <<: *source_defaults
+      id: use-community-transport-primary
+      title: Community transport services and Shopmobility
+      owner: Department for Transport
+      authority_role: england_community_transport_guidance
+      resource: https://www.gov.uk/community-transport-services-shopmobility
+      coverage: Introduces England community transport and mobility services and local handoffs.
+      exclusions: Does not verify an operator, establish eligibility, make a booking or assess support needs.
+  - <<: *family_defaults
+    id: get-blue-badge
+    title: Get a Blue Badge
+    aliases: [disabled parking badge, renew blue badge, challenge blue badge refusal]
+    description: Apply through the applicable scheme, provide requested evidence and retain the decision, badge conditions and review route.
+    situations: [A disabled person needs access to governed parking concessions.]
+    user_needs: [Reach the correct national or local scheme and keep eligibility, evidence and misuse decisions with the authority.]
+    source:
+      <<: *source_defaults
+      id: get-blue-badge-primary
+      title: Apply for or renew a Blue Badge
+      owner: Department for Transport
+      authority_role: england_blue_badge_application
+      resource: https://www.gov.uk/apply-blue-badge
+      coverage: Provides the England application locator and scheme information.
+      exclusions: Does not assess mobility, eligibility, parking availability, local restrictions or enforcement.
+  - <<: *family_defaults
+    id: license-taxi-or-private-hire
+    title: License a taxi or private-hire service
+    aliases: [taxi driver licence, private hire operator licence, minicab licensing]
+    description: Apply to the responsible licensing authority for the driver, vehicle or operator role and retain checks, conditions and appeal information.
+    situations: [A person or business wants to drive, operate or license a taxi or private-hire vehicle.]
+    user_needs: [Identify the correct licensing role and authority without treating local conditions as nationally uniform.]
+    dependency: licensed-taxi-private-hire-provider
+    source:
+      <<: *source_defaults
+      id: license-taxi-or-private-hire-primary
+      title: Taxi driver licences
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_taxi_driver_licence_locator
+      resource: https://www.gov.uk/taxi-driver-licence
+      coverage: Routes England and Wales applicants to the relevant council taxi-driver licensing service.
+      exclusions: Does not cover every operator or vehicle licence, decide fitness or publish local conditions and fees.
+  - <<: *family_defaults
+    id: register-vehicle
+    title: Register a vehicle
+    aliases: [DVLA vehicle registration, get V5C log book, tell DVLA about vehicle]
+    description: Notify the responsible vehicle-registration authority about acquisition, import, build or keeper change and retain registration evidence.
+    situations: [A vehicle or keeper change needs to be entered on the applicable official register.]
+    user_needs: [Find the correct registration transaction and distinguish keeper records from ownership, tax and insurance.]
+    source:
+      <<: *source_defaults
+      id: register-vehicle-primary
+      title: Vehicle registration
+      owner: Driver and Vehicle Licensing Agency
+      authority_role: great_britain_vehicle_registration_guidance
+      resource: https://www.gov.uk/vehicle-registration
+      coverage: Routes Great Britain users to current vehicle registration and V5C transactions.
+      exclusions: Does not prove ownership, approve an import or establish Northern Ireland-specific procedure.
+  - <<: *family_defaults
+    id: tax-or-sorn-vehicle
+    title: Tax or make a SORN for a vehicle
+    aliases: [vehicle tax, declare car off road, renew road tax]
+    description: Use the current vehicle record to tax the vehicle or make the applicable statutory off-road notification and retain confirmation.
+    situations: [A registered keeper needs to tax a vehicle or declare that it will be kept off public roads.]
+    user_needs: [Select tax or SORN correctly and preserve insurance, MOT, keeper and enforcement boundaries.]
+    source:
+      <<: *source_defaults
+      id: tax-or-sorn-vehicle-primary
+      title: Tax your vehicle
+      owner: Driver and Vehicle Licensing Agency
+      authority_role: uk_vehicle_tax_service
+      resource: https://www.gov.uk/vehicle-tax
+      coverage: Provides the current vehicle-tax service and links to SORN and exemption routes.
+      exclusions: Does not decide exemption, keeper liability, roadworthiness, insurance or enforcement.
+  - <<: *family_defaults
+    id: obtain-mot-test
+    title: Obtain an MOT test
+    aliases: [book MOT, vehicle roadworthiness certificate, check MOT result]
+    description: Check when testing applies, use an approved test station and retain the certificate, advisory and failure information.
+    situations: [A vehicle keeper needs to meet the applicable periodic roadworthiness-test requirement.]
+    user_needs: [Verify the approved provider and understand test, repair, retest and appeal boundaries.]
+    dependency: approved-mot-test-centre
+    source:
+      <<: *source_defaults
+      id: obtain-mot-test-primary
+      title: Getting an MOT
+      owner: Driver and Vehicle Standards Agency
+      authority_role: great_britain_mot_guidance
+      resource: https://www.gov.uk/getting-an-mot
+      coverage: Explains Great Britain MOT timing, approved centres, results and appeal handoffs.
+      exclusions: Does not inspect a vehicle, guarantee roadworthiness or establish Northern Ireland testing procedure.
+  - <<: *family_defaults
+    id: obtain-motor-insurance
+    title: Obtain motor insurance
+    aliases: [car insurance legal requirement, insure a vehicle, check motor insurer]
+    description: Use an authorised insurer or intermediary to obtain cover suitable for the vehicle and use, then retain policy and certificate evidence.
+    situations: [A person will keep or use a motor vehicle and needs the applicable compulsory cover.]
+    user_needs: [Start with regulated-provider checks and distinguish legal minimum cover from personal product selection.]
+    dependency: fca-authorised-motor-insurance-provider
+    source:
+      <<: *source_defaults
+      id: obtain-motor-insurance-primary
+      title: Vehicle insurance
+      owner: Department for Transport
+      authority_role: uk_vehicle_insurance_guidance
+      resource: https://www.gov.uk/vehicle-insurance
+      coverage: Explains compulsory motor-insurance responsibilities and official enforcement handoffs.
+      exclusions: Does not recommend or arrange a policy, assess risk, set a premium or decide a claim.
+  - <<: *family_defaults
+    id: report-road-collision
+    title: Report a road collision
+    aliases: [car accident report, road traffic collision, exchange details after crash]
+    description: Address immediate safety, exchange or record required details and use police, insurer and injury routes applicable to the collision.
+    situations: [A vehicle collision has caused injury, damage or another reportable circumstance.]
+    user_needs: [Place emergency action, legal reporting, insurance notification and evidence preservation in a safe sequence.]
+    source:
+      <<: *source_defaults
+      id: report-road-collision-primary
+      title: Vehicle insurance if you're in an accident
+      owner: Department for Transport
+      authority_role: uk_road_collision_guidance
+      resource: https://www.gov.uk/vehicle-insurance/if-youre-in-an-accident
+      coverage: Explains immediate detail exchange, police-report and insurer-notification boundaries.
+      exclusions: Does not provide emergency response, decide fault, assess injury or determine liability or compensation.
+  - <<: *family_defaults
+    id: get-parking-permit
+    title: Get a parking permit
+    aliases: [resident parking permit, visitor parking permit, council controlled parking]
+    description: Apply to the responsible parking authority for the applicable resident, visitor, business or special permit and retain its conditions.
+    situations: [A person or organisation needs permission to park within a locally controlled scheme.]
+    user_needs: [Identify the exact authority and zone and distinguish permits from Blue Badges, suspensions and private parking.]
+    source:
+      <<: *source_defaults
+      id: get-parking-permit-primary
+      title: Apply for a parking permit
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_parking_permit_locator
+      resource: https://www.gov.uk/parking-permit
+      coverage: Routes England and Wales users to the relevant council parking-permit service.
+      exclusions: Does not determine eligibility, zone coverage, cost, availability, conditions or enforcement.
+  - <<: *family_defaults
+    id: pay-clean-air-zone-charge
+    title: Pay a clean air zone charge
+    aliases: [check clean air zone, emissions zone payment, CAZ charge]
+    description: Check the vehicle and journey against the current official zone service, pay where required and retain payment or exemption evidence.
+    situations: [A vehicle may enter a charging clean-air zone.]
+    user_needs: [Find the official zone and vehicle checker and avoid confusing local clean-air, congestion and low-emission schemes.]
+    source:
+      <<: *source_defaults
+      id: pay-clean-air-zone-charge-primary
+      title: Drive in a clean air zone
+      owner: Department for Transport
+      authority_role: england_clean_air_zone_service
+      resource: https://www.gov.uk/clean-air-zones
+      coverage: Provides England clean-air-zone vehicle checking and payment routes.
+      exclusions: Does not cover every local road-user charge, decide an exemption or cancel a penalty.

@@ -356,6 +356,47 @@
       "target_iri": "rule/get-access-to-work-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
+  "rule/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/view-waste-collection-schedule.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/view-waste-collection-schedule.v1.yaml",
+          "source_ids": [
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff",
+            "view-waste-collection-schedule-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d34bdf2e866d41a9be1db308",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/view-waste-collection-schedule-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "service-step/report-missed-rubbish-collection-report-eligible-missed-collection-submit-and-retain-outcome": [
     {
       "assertion_scope": "real-world",

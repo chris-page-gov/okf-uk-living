@@ -1,4 +1,86 @@
 {
+  "dependency/qualified-planning-or-design-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/seek-planning-permission.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/seek-planning-permission.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "seek-planning-permission-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a1e897f246686b5090d40ede",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/seek-planning-permission",
+      "source_iri": "dataset/seek-planning-permission",
+      "target": "dependency/qualified-planning-or-design-adviser",
+      "target_iri": "dependency/qualified-planning-or-design-adviser"
+    }
+  ],
+  "evidence/get-blue-badge-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-blue-badge.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-blue-badge.v1.yaml",
+          "source_ids": [
+            "get-blue-badge-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2b6e2839e0cfae6b28db6949",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-blue-badge-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-blue-badge-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/get-blue-badge-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/get-blue-badge-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "evidence/support-child-in-care-education-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -243,6 +325,47 @@
       "target_iri": "redress/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
+  "redress/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/report-noise-or-pest-nuisance.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "report-noise-or-pest-nuisance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bfa5fbb0659f20e015f5b789",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
+  ],
   "resource/receive-national-insurance-number-transition-adulthood-wales-handoff": [
     {
       "assertion_scope": "real-world",
@@ -466,6 +589,125 @@
       "source_iri": "service-step/report-benefit-change-of-circumstances-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/report-benefit-change-of-circumstances-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/report-benefit-change-of-circumstances-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "service-episode/arrange-bulky-waste-collection-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml",
+          "source_ids": [
+            "arrange-bulky-waste-collection-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:17966edbd01fc541f70ba8b5",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure",
+      "source_iri": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure",
+      "target": "service-step/arrange-bulky-waste-collection-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/arrange-bulky-waste-collection-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml",
+          "source_ids": [
+            "arrange-bulky-waste-collection-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:84f89387bc53fe75c2c87d43",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/arrange-bulky-waste-collection",
+      "source_iri": "dataset/arrange-bulky-waste-collection",
+      "target": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure",
+      "target_iri": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/arrange-bulky-waste-collection.v1.yaml",
+          "source_ids": [
+            "arrange-bulky-waste-collection-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:921faf6a07b7f1780edb35cb",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure",
+      "source_iri": "service-episode/arrange-bulky-waste-collection-exception-or-route-failure",
+      "target": "enclosing-process/manage-household-waste-collections",
+      "target_iri": "enclosing-process/manage-household-waste-collections"
     }
   ],
   "service-step/administer-an-estate-no-will-debt-dispute-cross-border-or-missing-evidence-stop-and-seek-applicable-authority": [

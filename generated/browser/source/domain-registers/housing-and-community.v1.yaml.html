@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/housing-and-community.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/housing-and-community.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/housing-and-community.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-4-home-place-transport
+domain: housing-and-community
+title: Housing and community life
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-4-home-place-transport-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: housing-community-scotland-handoff
+    jurisdiction: Scotland
+    title: Housing and local services in Scotland
+    owner: Scottish Government
+    authority_role: scotland_housing_discovery_handoff
+    resource: https://www.mygov.scot/browse/housing-local-services
+    coverage: Routes people to current Scottish housing, planning, local-tax and neighbourhood services.
+    exclusions: Does not establish that an England housing rule or local route applies in Scotland.
+  - &lt;&lt;: *source_defaults
+    id: housing-community-wales-handoff
+    jurisdiction: Wales
+    title: Housing in Wales
+    owner: Welsh Government
+    authority_role: wales_housing_discovery_handoff
+    resource: https://www.gov.wales/housing
+    coverage: Routes people to current Welsh housing policy, support and service information.
+    exclusions: Does not determine a tenancy, planning, homelessness or adaptation decision.
+  - &lt;&lt;: *source_defaults
+    id: housing-community-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Property and housing in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_housing_discovery_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/property-and-housing
+    coverage: Routes people to current Northern Ireland property, housing and local-service information.
+    exclusions: England, Scotland and Wales housing rules do not establish Northern Ireland procedure.
+families:
+  - &lt;&lt;: *family_defaults
+    id: rent-private-home
+    title: Rent a private home
+    aliases: [private renting, find a rented home, tenant rights]
+    description: Find a private tenancy route, check the landlord or agent boundary and retain the agreement, inventory and payment records.
+    situations: [A person is considering or starting a tenancy from a private landlord or letting agent.]
+    user_needs: [Understand the current tenancy, affordability, safety and complaint handoffs without the bundle recommending a property.]
+    dependency: regulated-or-registered-letting-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: rent-private-home-primary
+      title: Private renting
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_private_renting_guidance
+      resource: https://www.gov.uk/private-renting
+      coverage: Introduces England private-renting rights, responsibilities and service handoffs.
+      exclusions: Does not assess affordability, approve a property or interpret an individual tenancy.
+  - &lt;&lt;: *family_defaults
+    id: protect-tenancy-deposit
+    title: Protect a tenancy deposit
+    aliases: [deposit protection scheme, landlord kept my deposit, tenancy deposit dispute]
+    description: Check that a tenancy deposit enters the applicable protection scheme and use its evidence and dispute route when repayment is contested.
+    situations: [A tenant or landlord needs to protect, recover or dispute a private-tenancy deposit.]
+    user_needs: [Identify the scheme, prescribed information and adjudication boundary for the tenancy location.]
+    dependency: government-authorised-tenancy-deposit-scheme
+    source:
+      &lt;&lt;: *source_defaults
+      id: protect-tenancy-deposit-primary
+      title: Tenancy deposit protection
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_tenancy_deposit_guidance
+      resource: https://www.gov.uk/tenancy-deposit-protection
+      coverage: Explains England deposit-protection duties, authorised schemes and dispute handoffs.
+      exclusions: Does not decide deductions, tenancy status or a court claim.
+  - &lt;&lt;: *family_defaults
+    id: buy-home
+    title: Buy a home
+    aliases: [purchase a property, home buying process, conveyancing]
+    description: Navigate finance, offer, survey, conveyancing, exchange and completion while keeping professional and land-registration responsibilities explicit.
+    situations: [A person is preparing to purchase a residential property.]
+    user_needs: [See the ordered buying process and verify regulated advisers without receiving financial or legal advice.]
+    dependency: regulated-mortgage-and-conveyancing-providers
+    source:
+      &lt;&lt;: *source_defaults
+      id: buy-home-primary
+      title: How to buy a home
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_home_buying_guidance
+      resource: https://www.gov.uk/government/publications/how-to-buy-a-home
+      coverage: Provides England process guidance from preparation through completion.
+      exclusions: Does not recommend property, finance, survey or legal providers or establish title.
+  - &lt;&lt;: *family_defaults
+    id: move-home
+    title: Move home
+    aliases: [moving house checklist, change address after moving, leave current home]
+    description: Coordinate the old and new housing route, utilities, local records, address changes and handover evidence around a move.
+    situations: [A household is preparing to leave one home and occupy another.]
+    user_needs: [Place notices, handover, address updates and service transfers into a safe sequence.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: move-home-primary
+      title: Moving from your owned home
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_home_moving_guidance
+      resource: https://www.gov.uk/selling-a-home
+      coverage: Introduces the England selling, completion and moving-out process and its professional handoffs.
+      exclusions: Does not cover every tenure, complete address changes or provide conveyancing advice.
+  - &lt;&lt;: *family_defaults
+    id: prove-right-to-rent
+    title: Prove the right to rent
+    aliases: [right to rent share code, landlord immigration check, prove renting status]
+    description: Use the current identity or share-code route for an England right-to-rent check and respond through the official correction boundary.
+    situations: [A prospective adult occupier must provide evidence for a statutory right-to-rent check in England.]
+    user_needs: [Find the official evidence route and distinguish it from immigration advice or landlord selection.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: prove-right-to-rent-primary
+      title: Prove your right to rent in England
+      owner: Home Office
+      authority_role: england_right_to_rent_service
+      resource: https://www.gov.uk/prove-right-to-rent
+      coverage: Provides the England online status and share-code route and document alternatives.
+      exclusions: The statutory scheme is England-specific and this bundle does not determine immigration status.
+  - &lt;&lt;: *family_defaults
+    id: register-for-council-tax
+    title: Register for Council Tax
+    aliases: [tell council I moved in, council tax account, start paying council tax]
+    description: Notify the responsible local billing authority about occupation and retain the account, valuation and liability decision for review if needed.
+    situations: [A household has moved, changed occupancy or otherwise needs a Council Tax account.]
+    user_needs: [Reach the correct local authority and preserve valuation, discount and appeal boundaries.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-for-council-tax-primary
+      title: Council Tax
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_council_tax_guidance
+      resource: https://www.gov.uk/council-tax
+      coverage: Explains Council Tax liability, bills, bands and local-authority handoffs in England and Wales.
+      exclusions: Does not create an account, value a dwelling or decide liability, discounts or appeals.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-social-housing
+    title: Apply for social housing
+    aliases: [join council housing list, housing association home, housing register application]
+    description: Apply through the responsible allocation scheme and retain assessment, priority, bidding and review decisions.
+    situations: [A household wants to be considered for council or housing-association accommodation.]
+    user_needs: [Find the local allocation route and understand that eligibility and priority are authority decisions.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-social-housing-primary
+      title: Apply for council housing
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_social_housing_locator
+      resource: https://www.gov.uk/council-housing
+      coverage: Routes England and Wales users to the relevant council application and allocation information.
+      exclusions: Does not decide qualification, priority, property availability or a review.
+  - &lt;&lt;: *family_defaults
+    id: get-homelessness-help
+    title: Get homelessness help
+    aliases: [at risk of homelessness, emergency housing help, council homelessness application]
+    description: Contact the accountable housing authority early, state immediate safety and accommodation needs and retain prevention, relief or review decisions.
+    situations: [A person has nowhere safe to stay or may lose accommodation.]
+    user_needs: [Find the urgent local route while preserving safeguarding, domestic-abuse and statutory decision boundaries.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-homelessness-help-primary
+      title: Help if you&#x27;re homeless or at risk of homelessness
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_homelessness_help_locator
+      resource: https://www.gov.uk/homelessness-help-from-council
+      coverage: Routes people in England to local homelessness prevention and assessment services.
+      exclusions: Does not assess homelessness, priority need, local connection, safety or accommodation suitability.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-home-adaptation
+    title: Apply for a home adaptation
+    aliases: [disabled facilities grant, adapt home for disability, home accessibility changes]
+    description: Request the applicable needs, housing and grant assessments before arranging eligible accessibility work.
+    situations: [A disabled person or household needs changes that support safe access or independent living at home.]
+    user_needs: [Coordinate social-care, landlord, grant and building-work boundaries without the bundle assessing clinical need.]
+    dependency: assessed-and-approved-home-adaptation-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-home-adaptation-primary
+      title: Disabled Facilities Grants
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_home_adaptation_grant_guidance
+      resource: https://www.gov.uk/disabled-facilities-grants
+      coverage: Explains England and Wales grant purposes, local-council applications and assessment handoffs.
+      exclusions: Does not assess need, eligibility, consent, planning, costs or contractor suitability.
+  - &lt;&lt;: *family_defaults
+    id: seek-planning-permission
+    title: Seek planning permission
+    aliases: [planning application, permitted development check, appeal planning decision]
+    description: Check whether consent is needed, submit to the responsible planning authority and retain conditions, decisions and appeal information.
+    situations: [A person or organisation proposes development or a material change to land or buildings.]
+    user_needs: [Reach the correct planning regime and separate permission from building regulations and other consents.]
+    dependency: qualified-planning-or-design-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: seek-planning-permission-primary
+      title: Planning permission
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_planning_guidance
+      resource: https://www.gov.uk/planning-permission-england-wales
+      coverage: Introduces England and Wales permission, local-authority and appeal routes.
+      exclusions: Does not decide whether permission is needed, grant consent or replace professional advice.
+  - &lt;&lt;: *family_defaults
+    id: meet-building-regulations
+    title: Meet building regulations
+    aliases: [building control approval, building regulations application, completion certificate]
+    description: Select the applicable building-control route, provide plans and notices and retain inspection and completion evidence.
+    situations: [Building work may be controlled by safety, accessibility, energy or construction requirements.]
+    user_needs: [Distinguish building regulations from planning and verify the accountable building-control provider.]
+    dependency: registered-building-control-professional
+    source:
+      &lt;&lt;: *source_defaults
+      id: meet-building-regulations-primary
+      title: Building regulations approval
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_building_control_guidance
+      resource: https://www.gov.uk/building-regulations-approval
+      coverage: Explains England approval routes, inspections and completion evidence.
+      exclusions: Does not assess design compliance, appoint an inspector or approve work.
+  - &lt;&lt;: *family_defaults
+    id: report-noise-or-pest-nuisance
+    title: Report a noise or pest nuisance
+    aliases: [noise complaint, pest problem, statutory nuisance report]
+    description: Record the effect and report the problem to the responsible property, environmental-health or other authority route.
+    situations: [Noise, pests or another neighbourhood condition may be causing persistent interference or health concern.]
+    user_needs: [Identify landlord, council, regulator and urgent boundaries without declaring a statutory nuisance.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-noise-or-pest-nuisance-primary
+      title: Report a noise nuisance to your council
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_local_noise_report_locator
+      resource: https://www.gov.uk/report-noise-pollution-to-council
+      coverage: Routes England and Wales users to the council noise-report service.
+      exclusions: Does not assess evidence, declare nuisance, arrange pest control or decide enforcement.
+</pre>
+</body>
+</html>

@@ -38,5 +38,10 @@ adds 36 families, 45 body-free official links and 13 questions across finding
 work, employment and money/tax/benefits, including explicit Great Britain and
 Northern Ireland employment boundaries.
 
+The [Pack 4 home/place/transport review](reviews/pack-4-home-place-transport-2026-08-08.md)
+accounts for all 36 families while preserving the deeper missed-rubbish slice,
+and adds 44 body-free official links plus 13 questions across housing, local
+environmental services and accessible or private transport.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

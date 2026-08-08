@@ -404,6 +404,47 @@
       "target_iri": "evidence/receive-written-employment-particulars-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "outcome/arrange-clinical-waste-collection-ordinary-source-linked-route-follow-current-official-instructions-ask-the-health-or-council-route-responsible-for-prescribed-clinical-waste-sharps-or-dressings-to-arrange-the-applicable-collection": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/rubbish-recycling-and-street/arrange-clinical-waste-collection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/rubbish-recycling-and-street/arrange-clinical-waste-collection.v1.yaml",
+          "source_ids": [
+            "arrange-clinical-waste-collection-primary",
+            "rubbish-street-northern-ireland-handoff",
+            "rubbish-street-scotland-handoff",
+            "rubbish-street-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:520d044950c754fbc0e88068",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-clinical-waste-collection-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-clinical-waste-collection-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/arrange-clinical-waste-collection-ordinary-source-linked-route-follow-current-official-instructions-ask-the-health-or-council-route-responsible-for-prescribed-clinical-waste-sharps-or-dressings-to-arrange-the-applicable-collection",
+      "target_iri": "outcome/arrange-clinical-waste-collection-ordinary-source-linked-route-follow-current-official-instructions-ask-the-health-or-council-route-responsible-for-prescribed-clinical-waste-sharps-or-dressings-to-arrange-the-applicable-collection"
+    }
+  ],
   "output/register-for-vat-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
     {
       "assertion_scope": "real-world",
@@ -440,6 +481,88 @@
       "source_iri": "service-step/register-for-vat-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "output/register-for-vat-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
       "target_iri": "output/register-for-vat-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
+  "redress/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/housing-and-community/rent-private-home.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/housing-and-community/rent-private-home.v1.yaml",
+          "source_ids": [
+            "housing-community-northern-ireland-handoff",
+            "housing-community-scotland-handoff",
+            "housing-community-wales-handoff",
+            "rent-private-home-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:41a05f3f61882f8875e5ea15",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/rent-private-home-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    }
+  ],
+  "redress/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/tax-or-sorn-vehicle.v1.yaml",
+          "source_ids": [
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff",
+            "tax-or-sorn-vehicle-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6943fee3fbb5624e530a337c",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/tax-or-sorn-vehicle-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
   "requirement/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
@@ -775,6 +898,152 @@
       "target_iri": "resource/get-leaving-care-support-transition-adulthood-scotland-handoff"
     }
   ],
+  "resource/obtain-mot-test-public-private-transport-scotland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:190707a899465e830a17c995",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-mot-test-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-mot-test-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-mot-test-public-private-transport-scotland-handoff",
+      "target_iri": "resource/obtain-mot-test-public-private-transport-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e1d65666b2ab1fd8c99de6a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-mot-test",
+      "source_iri": "dataset/obtain-mot-test",
+      "target": "resource/obtain-mot-test-public-private-transport-scotland-handoff",
+      "target_iri": "resource/obtain-mot-test-public-private-transport-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9b1f37c293a299f440035f97",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-mot-test-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-mot-test-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-mot-test-public-private-transport-scotland-handoff",
+      "target_iri": "resource/obtain-mot-test-public-private-transport-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "public-private-transport-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f7473909a595d768989fbdc9",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/obtain-mot-test-public-private-transport-scotland-handoff",
+      "target_iri": "resource/obtain-mot-test-public-private-transport-scotland-handoff"
+    }
+  ],
   "resource/use-childrens-centres-early-years-wales-handoff": [
     {
       "assertion_scope": "real-world",
@@ -962,6 +1231,47 @@
       "target_iri": "rule/consent-to-healthcare-as-young-person-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
     }
   ],
+  "rule/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/obtain-mot-test.v1.yaml",
+          "source_ids": [
+            "obtain-mot-test-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4e39fe3de2496e6b66410390",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/obtain-mot-test-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
   "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
     {
       "assertion_scope": "real-world",
@@ -1001,6 +1311,47 @@
       "source_iri": "service-step/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/obtain-proof-of-age-or-identity-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "user-need/get-blue-badge-reach-the-correct-national-or-local-scheme-and-keep-eligibility": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/public-and-private-transport/get-blue-badge.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/public-and-private-transport/get-blue-badge.v1.yaml",
+          "source_ids": [
+            "get-blue-badge-primary",
+            "public-private-transport-northern-ireland-handoff",
+            "public-private-transport-scotland-handoff",
+            "public-private-transport-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3aafaf67c02999f05ac3141d",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-blue-badge",
+      "source_iri": "dataset/get-blue-badge",
+      "target": "user-need/get-blue-badge-reach-the-correct-national-or-local-scheme-and-keep-eligibility",
+      "target_iri": "user-need/get-blue-badge-reach-the-correct-national-or-local-scheme-and-keep-eligibility"
     }
   ]
 }
