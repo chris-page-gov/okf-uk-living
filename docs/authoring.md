@@ -273,6 +273,7 @@ uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python scripts/build_population_assurance.py
 uv run --locked python scripts/build_population_assurance.py --check
 uv run --locked python scripts/check_population_assurance.py
+uv run --locked python scripts/prepare_pages_publication.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -296,6 +297,29 @@ clinical and high-impact operational claims. Publication requires a separate
 owner request and a subsequent exact-deployment browser check. Never change a
 generated assurance report or manifest by hand, and never rebuild a frozen
 publication candidate during promotion.
+
+## Pages publication unit
+
+The public preview is assembled only from files listed in
+`publication/pages-file-manifest.json`. Regenerate that manifest deliberately
+with `uv run --locked python scripts/prepare_pages_publication.py
+--write-manifest`, review its count, total bytes and hashes, and commit it with
+the publication descriptor. Ordinary builds do not rewrite it.
+
+The manual Pages workflow calls the same script with `--destination _site`.
+That operation verifies every source hash and copies the frozen bytes; it does
+not invoke a corpus generator. The only permitted destination is the ignored
+repository `_site/` directory. The workflow publishes only the landing page,
+the publication descriptor, the small bundle, large-corpus data, browser
+handoffs, semantic projections, assurance reports, licence and notice. It does
+not publish authored source dossiers, research working files or acquired
+source content.
+
+The publication descriptor may differ from the local descriptor only in its
+description, status, owner authorization flag and the explicit publication
+envelope. The validator rejects any other drift. Keep `release_grade: false`,
+the specialist-review count and zero-snapshot boundary visible until a later
+review changes them.
 
 ## Publication boundary
 

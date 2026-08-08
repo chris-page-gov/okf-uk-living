@@ -54,10 +54,10 @@ work it tracks; <a href="ROADMAP.html">[ROADMAP.md](ROADMAP.md)</a> remains the 
 | PACK-007 | Populate civic, enterprise and creativity | Complete: local pass | <a href="evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md">[2026-08-08 review](evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md)</a>: 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and passing local Explorer journey |
 | PACK-008 | Populate mobility, later life and death | Complete: local pass | <a href="evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md">[2026-08-08 review](evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md)</a>: all 41 identities accounted for, 38 new dossiers, three preserved death/notification/estate slices, 47 active link-only sources and 13 competency questions |
 | ASSURE-001 | Freeze a local population-complete candidate | Complete: local pass | <a href="evaluation/reviews/population-assurance-2026-08-08.md">[Population assurance](evaluation/reviews/population-assurance-2026-08-08.md)</a> reconciles 293 dossiers, 24 domains, 48 processes, 104 questions, 879 links and 15,810 relationships with zero blocking omissions; exact artifacts are hashed and publication remains disabled |
-| SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
-| CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
-| PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
-| PAGES-001 | Deploy frozen candidate bytes to GitHub Pages | Blocked on authorization | Manual-only deployment after PUB-001; deployed bytes must match the candidate manifest without rebuilding |
+| SCOPE-001 | Approve publication claims and limitations | Complete | Owner authorized the full population-complete corpus as an educational preview; not release-grade, official advice or formal CPSV-AP/Open Referral/OWL/SHACL conformance |
+| CAND-001 | Freeze a reproducible publication candidate | Complete: local pass | The publication unit contains 1,549 exact files (about 179 MB) rooted in candidate manifest `0b1df05a…`; no corpus rebuild or source snapshot |
+| PUB-001 | Authorize publication of the frozen candidate | Complete | Owner explicitly authorized GitHub Pages publication and OKF Explorer evaluation on 2026-08-08 |
+| PAGES-001 | Deploy frozen candidate bytes to GitHub Pages | Active | Merge the manual-only Pages workflow, enable workflow-based Pages without changing repository visibility, and deploy the named candidate |
 | VERIFY-001 | Verify the exact public sample in a real browser | Blocked on publication | Validate identity, overview, bundle, slice records, query, graph, source and licence journeys before sharing the URL |
 | RELEASE-001 | Hand off a verified initial sample | Blocked on verification | Label and share the public URL only after VERIFY-001 passes; retain explicit sample limitations |
 
@@ -68,7 +68,7 @@ work it tracks; <a href="ROADMAP.html">[ROADMAP.md](ROADMAP.md)</a> remains the 
   because the current private-repository plan does not provide branch protection.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
-- GitHub Pages: not enabled and not updated.
+- GitHub Pages: publication authorized; exact-byte manual deployment pending.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
   references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
   sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8
@@ -83,9 +83,9 @@ work it tracks; <a href="ROADMAP.html">[ROADMAP.md](ROADMAP.md)</a> remains the 
 - Review state: the integrated local Explorer remediation rerun passed on
   2026-08-07 and `REV-001` through `REV-004` are closed. The 293-family
   colour-facet projection also passes local search and filter journeys. The
-  full corpus is a frozen local population-complete candidate, not a release-grade
-  or publication candidate. The separate initial sample is not a frozen
-  publication candidate until `SCOPE-001` is approved.
+  full corpus is a frozen population-complete publication preview, not a
+  release-grade candidate. Owner authorization is recorded; exact deployment
+  and public verification remain pending.
 - Reference readiness: all 120 declared domain/reference-jurisdiction cells are
   assessed (96 national covered, 24 local discovery/archetype cells). The six
   requested owner decisions are complete and every tracked gap has a

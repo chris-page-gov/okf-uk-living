@@ -42,8 +42,8 @@ The owner approved `okf-domain-profile.v1` and the three fixture contracts on
 2026-08-07. All three slices and the licensing decisions are merged. The local
 Explorer remediation rerun passed: relationship and node provenance,
 browser-safe source handoffs, and the first-class licence/notice surface are
-verified. The sample remains reviewable but is not yet a frozen publication
-candidate because scope approval is a separate gate.
+verified. That bounded sample proposal was superseded by the later authorized
+population-complete preview.
 
 The owner separately authorized exhaustive link-only reference-family
 discovery on 2026-08-07. `INVENTORY-001` is complete with 142 external records,
@@ -51,15 +51,15 @@ discovery on 2026-08-07. `INVENTORY-001` is complete with 142 external records,
 not change the sample release gates or authorize snapshots, broad leaf
 acquisition, CI or publication.
 
-The active sequence is defined in the
+The original sample sequence is defined in the
 [three-slice review and publication plan](docs/review-and-publication-plan.md):
 
-1. `SCOPE-001` — approve the initial sample claim and limitations boundary.
-2. `CAND-001` — freeze one locally validated candidate and its hashes.
-3. `PUB-001` — await an explicit owner publication request naming that
-   candidate.
-4. `PAGES-001` and `VERIFY-001` — deploy identical bytes manually and verify
-   the exact site in a real browser.
+The owner superseded that proposed sample on 2026-08-08 by authorizing the
+population-complete corpus as a public preview. `SCOPE-001`, `CAND-001` and
+`PUB-001` are therefore complete for the preview. `PAGES-001` must promote the
+exact 1,549-file manifest through the manual-only workflow, after which
+`VERIFY-001` must test the exact deployed landing page, bundle identity,
+search, Narrative, Graph, Resources and official-source handoff.
 
 For the complete-corpus track, `CORPUS-001`, `ACQPOL-001` and `POP-001` are complete.
 The owner approved 293 named families, exhaustive-authority plus representative
@@ -87,17 +87,17 @@ candidate reconciles the 293 dossiers, 104 competency questions, source links,
 provenance and six representative browser journeys. No population item remains
 active. A later release-grade track may begin only with named reviewer
 acceptance and current re-observation of applicable legal, clinical and
-high-impact operational claims. Publication remains a separate explicit owner
-request naming a frozen candidate.
+high-impact operational claims. The owner has separately authorized the frozen
+population preview for publication without changing that review boundary.
 
 Population-complete permits a visible `specialist_review_required` state.
 Release grade separately requires named legal, clinical or service-owner
 acceptance for affected high-impact claims.
 
-The recommended release scope is the bounded three-slice educational sample
-without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim. This
-keeps the complete curriculum and governed semantic registry out of the first
-sample publication while stating their absence clearly.
+The authorized publication scope is the population-complete educational
+preview without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim.
+It retains all 291 specialist-review warnings and does not claim release grade,
+official-service status or personalised advice.
 
 ## GitHub Pages publication
 
@@ -106,18 +106,19 @@ deployment target. Pushes, merges and pull requests must not trigger hosted
 validation or Pages updates.
 
 A publication request is a separate owner decision that identifies a frozen
-candidate. Only after that request may the project enable or invoke a Pages
-deployment, and only after the domain profile, source inventory, rights
-decisions, evaluation journeys and candidate checks pass. Promotion must
+candidate. The owner made that request for the population preview on
+2026-08-08. The project may now enable and invoke only the manual Pages
+deployment defined by the frozen publication manifest. Promotion must
 publish the frozen candidate without rebuilding it. The exact deployed site
 must then pass real-browser identity and journey checks before any public
 bundle link is shared.
 
-After every pull request, use one of these statements in the handoff:
+Before publication authorization, pull requests used this statement:
 
 > Publication status: local validation only. GitHub Pages was not updated.
 > Publication requires an explicit owner request.
 
-For an explicitly requested publication pull request, replace it with a record
-of the request, frozen candidate, deployment result and browser-verification
-result. A failed verification remains failed and the public link is withheld.
+This authorized publication pull request instead records the owner request and
+frozen candidate. A follow-up evidence pull request must record the deployment
+and browser-verification result. A failed verification remains failed and the
+public link is withheld.

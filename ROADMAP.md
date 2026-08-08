@@ -181,3 +181,10 @@ and publication is neither authorized nor ready.
 - Publish identical bytes; do not rebuild during promotion.
 - Verify the exact public overview, record, query and graph deep links in a real
   browser before sharing any public bundle URL.
+
+On 2026-08-08 the owner authorized the full population-complete corpus as a
+public preview. This supersedes the earlier proposed three-slice sample scope
+without changing the release-grade boundary: the preview remains navigational,
+non-conformant and visibly subject to specialist review. The exact-byte Pages
+publication unit is manual-only and frozen from the population candidate;
+deployment and public-browser verification remain the next two gates.

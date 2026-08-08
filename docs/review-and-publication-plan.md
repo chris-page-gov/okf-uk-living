@@ -1,55 +1,47 @@
-# Three-slice review and publication plan
+# Population-preview review and publication plan
 
-Status: active
+Status: population-preview publication authorized
 
 Plan date: 2026-08-07
 
 Owner: `owner:chris-page-gov`
 
-This is the bounded path from the implemented three-slice sample to a verified
-GitHub Pages publication. It does not authorize publication. Local work may
-advance through candidate freezing; enabling or updating GitHub Pages still
-requires an explicit owner request naming the frozen candidate.
+This is the governed path from the implemented corpus to a verified GitHub
+Pages publication. The owner authorized the full population-complete
+preview on 2026-08-08. Deployment remains manual-only and exact-byte verified;
+the authorization does not make the preview release-grade.
 
 ## Current baseline
 
-The sample has completed its local remediation review. The reviewed branch contains:
+The population candidate contains 293 service families across 24 domains and
+48 enclosing processes, with 9,757 concepts, 879 typed official links and
+15,810 governed relationships. Population assurance reconciles 104 competency
+questions, six visible Explorer journeys and zero blocking omissions or source
+snapshots. Its exact local data-plane bytes were frozen in PR #22.
 
-- the approved domain profile and three synthetic fixture contracts;
-- missed rubbish collection, learning to drive through speeding enforcement,
-  and death and bereavement through estate administration;
-- 81 OKF nodes and 318 governed relationships;
-- 53 linked official references across 16 rights-mapped hosts;
-- zero source snapshots;
-- MIT licensing for repository-authored code, documentation and ontology
-  terms; and
-- deterministic locked-`uv` generation, browser handoffs and local tests.
+The publication unit adds only an original landing page and publication
+envelope. Its comprehensive manifest freezes all 1,549 served files and their
+exact byte counts; the Pages transport verifies and copies them without running
+a corpus generator.
 
-The [2026-08-07 review](../evaluation/reviews/integrated-three-slice-2026-08-07.md)
-passes Reader/query, relationship and node provenance, browser source-handoff
-and licence-notice journeys and records the exact Explorer 0.5.7 consumer and
-bundle bytes. `REV-001` through `REV-004` are closed. No candidate or
-publication bytes have been frozen because `SCOPE-001` remains the next gate.
+## Authorized first publication
 
-## Intended first publication
-
-The recommended first publication is an **initial three-slice educational
-sample**, not the complete life-course atlas. It can be published before the
-full curriculum, cross-domain predicate registry and SHACL shapes only if the
-release-scope decision explicitly records that:
+The owner superseded the earlier three-slice recommendation with the **full
+population-complete educational preview**. It contains all 293 families and
+their governed data plane, while explicitly recording that:
 
 - the publication makes no CPSV-AP, Open Referral, OWL or SHACL conformance
   claim;
 - normalized and inferred relationships remain visibly distinct from official
   claims;
 - the content is educational and navigational, not current individual advice;
-- all three source denominators and known omissions remain visible; and
-- the separately authorized link-only reference-family inventory does not
-  expand the published corpus or authorize leaf acquisition.
+- all source denominators, gap dispositions and specialist-review warnings
+  remain visible; and
+- no source content or snapshot is redistributed.
 
-That is the shortest responsible route to a useful reviewable publication. A
-decision to claim formal semantic conformance would instead bring the governed
-predicate registry and validation shapes into the release-critical path.
+The publication is useful for discovery and interface evaluation without
+claiming release grade. A later formal semantic or operational release remains
+a separate review track.
 
 ## Delivery gates
 
@@ -66,7 +58,8 @@ predicate registry and validation shapes into the release-critical path.
 
 ## Integrated review contents
 
-`REVIEW-001` produced durable evidence under `evaluation/` and covered:
+The integrated slice reviews and population assurance produced durable evidence
+under `evaluation/` and covered:
 
 1. one ordinary and one exception journey for each slice;
 2. cross-slice checks for assertion status, source identity and evidence
@@ -84,9 +77,9 @@ authorizes only the exhaustive reference-family inventory of links, rights
 evidence and original summaries recorded in
 [`source/exhaustive-reference-inventory.v1.yaml`](../source/exhaustive-reference-inventory.v1.yaml).
 
-The first run and passing remediation rerun are recorded under
-`evaluation/reviews/`. `REVIEW-001` and `COMPAT-001` are complete for local
-evaluation. `SCOPE-001` is the next owner decision; publication remains gated.
+The first run, remediation rerun, eight pack reviews and population assurance
+are recorded under `evaluation/reviews/`. `REVIEW-001`, `COMPAT-001`,
+`SCOPE-001`, `CAND-001` and `PUB-001` are complete for the population preview.
 
 ## Candidate and publication controls
 
@@ -95,17 +88,17 @@ evaluation. `SCOPE-001` is the next owner decision; publication remains gated.
 - Promote the same files; never rebuild during deployment.
 - Keep remote CI disabled. If GitHub Actions is selected solely as the Pages
   transport, it must be manual-only and consume the frozen artefact.
-- Do not enable Pages, change repository visibility, create a public URL or
-  invoke a deployment before `PUB-001`.
+- Do not change repository visibility. `PUB-001` authorizes only the
+  manual Pages workflow for the frozen preview.
 - Do not label or share a deployed URL as verified until `VERIFY-001` passes in
   a real browser.
 
 ## Completion definitions
 
-- **Reviewable sample:** achieved on main after PRs #5 and #6.
-- **Publication candidate:** achieved after `REVIEW-001`, `COMPAT-001`,
-  `SCOPE-001` and `CAND-001` pass.
-- **Published sample:** achieved only after the owner request, exact-byte Pages
-  deployment and successful real-browser verification.
-- **Complete life-course atlas:** a later roadmap outcome; it is not required
-  for the bounded initial sample.
+- **Population-complete candidate:** achieved in PR #22.
+- **Publication candidate:** achieved when this exact-byte manifest and
+  manual-only workflow pass review on `main`.
+- **Published preview:** achieved only after the authorized Pages deployment
+  and successful real-browser verification.
+- **Release grade:** remains a later gate requiring named specialist acceptance
+  and current source re-observation for applicable claims.

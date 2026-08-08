@@ -22,7 +22,7 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **local 293-family population-complete candidate frozen**.
+Status: **293-family population-complete preview authorized for publication**.
 The Reader, query, graph provenance, browser source handoff and licence-notice
 journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
@@ -35,10 +35,11 @@ all 24 life-course domains. The shared infrastructure now adds
 ten sector maps and metadata-only source-link receipts. Deterministic population
 assurance records zero blocking omissions and freezes the exact local data-plane
 artifacts. This is not an official service corpus, a release-grade candidate or
-a publication candidate. The GitHub
-repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
-acquisition and CI remain disabled, and publication requires a separate
-explicit owner request.
+a release-grade service. The frozen publication unit is awaiting exact-byte
+Pages deployment and public-browser verification. The GitHub
+repository is private; deterministic evaluation remains local-only, snapshots,
+unbounded or unstaged leaf acquisition and remote CI remain disabled. The only
+authorized hosted action is the manual exact-byte Pages transport.
 
 ## Start here
 
@@ -66,6 +67,8 @@ explicit owner request.
 - <a href="evaluation/reviews/population-assurance-2026-08-08.md">[Population assurance review](evaluation/reviews/population-assurance-2026-08-08.md)</a>
 - <a href="evaluation/candidates/population-complete-candidate.v1.yaml.html">[Frozen local population candidate](evaluation/candidates/population-complete-candidate.v1.yaml)</a>
 - <a href="generated/assurance/candidate-manifest.json">[Generated candidate manifest](generated/assurance/candidate-manifest.json)</a>
+- <a href="evaluation/publication/population-preview-authorization-2026-08-08.md">[Publication authorization](evaluation/publication/population-preview-authorization-2026-08-08.md)</a>
+- <a href="publication/README.md">[Pages publication unit](publication/README.md)</a>
 - <a href="profiles/okf-domain-profile.v1.md">[`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)</a>
 - <a href="evaluation/fixtures/README.md">[Three vertical-slice fixture contracts](evaluation/fixtures/README.md)</a>
 - <a href="journeys/missed-rubbish-collection.html">[Missed rubbish collection journey](journeys/missed-rubbish-collection.md)</a>
@@ -145,6 +148,7 @@ uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python scripts/build_population_assurance.py
 uv run --locked python scripts/build_population_assurance.py --check
 uv run --locked python scripts/check_population_assurance.py
+uv run --locked python scripts/prepare_pages_publication.py
 uv run --locked python -m unittest discover -s tests
 ```
 

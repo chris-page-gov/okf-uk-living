@@ -38,7 +38,8 @@
 - Remote: private GitHub repository created after explicit owner authorization
 - Main protection: PR-only policy documented; server enforcement unavailable
   on the current private-repository plan and therefore deferred
-- GitHub Pages: disabled; updates require a separate explicit owner request
+- GitHub Pages: population-preview publication authorized on 2026-08-08;
+  manual exact-byte deployment and public-browser verification pending
 - Public bundle URL: none
 - First slice: missed rubbish merged in PR #3
 - Second slice: merged in PR #4 with separate GB and Northern Ireland learning routes, GB notice,
@@ -60,9 +61,9 @@
 - Population contract: 293 families map exactly once to 48 normalized enclosing
   processes in eight review packs; population completion and release grade are
   separate gates
-- Publication readiness: the full corpus is a frozen local population-complete
-  candidate with exact artifact hashes; it is not release-grade or a
-  publication candidate, and Pages remains unauthorized
+- Publication readiness: the full corpus is a frozen population-complete
+  preview with a 1,549-file exact-byte publication manifest; it is not
+  release-grade, and deployment verification remains pending
 - Pack 1: 36 family-beginnings dossiers, service narratives, four-nation
   variants, ordinary and exception journeys, 45 active source links and 13
   competency questions passed local deterministic and Explorer review
