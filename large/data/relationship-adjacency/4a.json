@@ -1324,6 +1324,44 @@
       "target_iri": "outcome/register-for-income-tax-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
+  "output/check-entry-requirements-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-entry-requirements.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-entry-requirements.v1.yaml",
+          "source_ids": [
+            "check-entry-requirements-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:beba274ea842833c72f8dd63",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-entry-requirements-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-entry-requirements-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/check-entry-requirements-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/check-entry-requirements-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
   "output/form-civil-partnership-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
     {
       "assertion_scope": "real-world",
@@ -1362,6 +1400,84 @@
       "source_iri": "service-step/form-civil-partnership-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "output/form-civil-partnership-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
       "target_iri": "output/form-civil-partnership-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "redress/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9e0c5d638ab21c5decc98b5e",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    }
+  ],
+  "redress/make-will-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-will.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-will.v1.yaml",
+          "source_ids": [
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "make-will-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b7be2f8e01d7b67467f8f99c",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-will-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/make-will-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/make-will-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/make-will-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
     }
   ],
   "redress/obtain-concessionary-travel-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
@@ -2018,6 +2134,190 @@
       "target_iri": "resource/get-student-finance-post-school-study-scotland-handoff"
     }
   ],
+  "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "make-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a4dec5519cf379b2d1f06978",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-lasting-power-of-attorney-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/make-lasting-power-of-attorney-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary",
+      "target_iri": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "make-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:decfded72b29bb9e60e0be3a",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/make-lasting-power-of-attorney-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary",
+      "target_iri": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "make-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:df15f2be8108570d98b2a43d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-lasting-power-of-attorney-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-lasting-power-of-attorney-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary",
+      "target_iri": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "make-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f4d630fc91fa662a77b5fa23",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/make-lasting-power-of-attorney",
+      "source_iri": "dataset/make-lasting-power-of-attorney",
+      "target": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary",
+      "target_iri": "resource/make-lasting-power-of-attorney-make-lasting-power-of-attorney-primary"
+    }
+  ],
+  "rule/arrange-repatriation-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/arrange-repatriation-after-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/arrange-repatriation-after-death.v1.yaml",
+          "source_ids": [
+            "arrange-repatriation-after-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:11b247e4f5859d16b0f0e335",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-repatriation-after-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-repatriation-after-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/arrange-repatriation-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/arrange-repatriation-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "rule/check-employment-status-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
     {
       "assertion_scope": "real-world",
@@ -2442,6 +2742,496 @@
       "source_iri": "service-episode/respond-to-transport-prosecution-exception-or-route-failure",
       "target": "enclosing-process/challenge-restriction-removal-or-prosecution",
       "target_iri": "enclosing-process/challenge-restriction-removal-or-prosecution"
+    }
+  ],
+  "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:01b114d2cce08ca88282e271",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:02b4be7bd6adbe47a881e10c",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:218f35329875f5f07c6adc6e",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2b084bc8adc284ffcf30e7d8",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:45c033b5d6e95a7486922aed",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-follow-the-responsible-medical-examiner-or-practitioner-process-for-certification-and-use-the-coroner-or-procurator-fiscal-route-when-certification-is-not-available",
+      "target_iri": "outcome/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-follow-the-responsible-medical-examiner-or-practitioner-process-for-certification-and-use-the-coroner-or-procurator-fiscal-route-when-certification-is-not-available"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4afaa03df95e742ff44bcbc4",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:51c51fd63402a905549402c7",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:64162deaaf37dcf5f7aded11",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-medical-certificate-of-cause-of-death-obtain-medical-certificate-of-cause-of-death-primary",
+      "target_iri": "resource/obtain-medical-certificate-of-cause-of-death-obtain-medical-certificate-of-cause-of-death-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:78c0aed91266b86d0f6e663a",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8db35370e11c1d79b3559b98",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-medical-certificate-of-cause-of-death-death-bereavement-northern-ireland-handoff",
+      "target_iri": "resource/obtain-medical-certificate-of-cause-of-death-death-bereavement-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c049ac0d2f730b38f6b2b3a8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-medical-certificate-of-cause-of-death-death-bereavement-scotland-handoff",
+      "target_iri": "resource/obtain-medical-certificate-of-cause-of-death-death-bereavement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d4aa6080e7c732d2d750e970",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e381de2c42cab7f33ddc1bac",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route",
+      "source_iri": "service-episode/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route",
+      "target": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-follow-current-official-instructions"
     }
   ],
   "service-step/register-lasting-power-of-attorney-ordinary-source-linked-route-follow-current-official-instructions": [

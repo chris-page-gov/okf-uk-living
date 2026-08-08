@@ -1167,6 +1167,85 @@
       "target_iri": "jurisdiction/northern-ireland"
     }
   ],
+  "dependency/insurer-consular-post-and-qualified-funeral-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/arrange-repatriation-after-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/arrange-repatriation-after-death.v1.yaml",
+          "source_ids": [
+            "arrange-repatriation-after-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cb81edb96bb0d46cf13f8d19",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/arrange-repatriation-after-death",
+      "source_iri": "dataset/arrange-repatriation-after-death",
+      "target": "dependency/insurer-consular-post-and-qualified-funeral-provider",
+      "target_iri": "dependency/insurer-consular-post-and-qualified-funeral-provider"
+    }
+  ],
+  "evidence/get-housing-adaptation-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml",
+          "source_ids": [
+            "get-housing-adaptation-in-later-life-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dee8e487857991771ba28c17",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-housing-adaptation-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-housing-adaptation-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/get-housing-adaptation-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/get-housing-adaptation-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "evidence/receive-direct-payments-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -1366,6 +1445,46 @@
       "source_iri": "service-step/manage-student-loan-repayment-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/manage-student-loan-repayment-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/manage-student-loan-repayment-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "outcome/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c000d28f05241ebab134481a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/obtain-medical-certificate-of-cause-of-death-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "output/check-child-nationality-status-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
@@ -2157,6 +2276,46 @@
       "target_iri": "resource/respond-to-speeding-notice-mygov-scotland-criminal-appeal"
     }
   ],
+  "rule/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml",
+          "source_ids": [
+            "arrange-burial-or-cremation-primary",
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:56a708870d8198a8dac4bd2b",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "rule/establish-parental-responsibility-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
     {
       "assertion_scope": "real-world",
@@ -2195,6 +2354,44 @@
       "source_iri": "service-step/establish-parental-responsibility-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/establish-parental-responsibility-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/establish-parental-responsibility-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "rule/notify-private-organisations-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/notify-private-organisations-after-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/notify-private-organisations-after-death.v1.yaml",
+          "source_ids": [
+            "notify-private-organisations-after-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8504dd6da26430c49177e492",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/notify-private-organisations-after-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/notify-private-organisations-after-death-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/notify-private-organisations-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/notify-private-organisations-after-death-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "rule/pursue-surrogacy-parenthood-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
@@ -2462,6 +2659,404 @@
       "source_iri": "service-episode/use-tax-free-childcare-exception-or-route-failure",
       "target": "enclosing-process/arrange-childcare-and-early-education",
       "target_iri": "enclosing-process/arrange-childcare-and-early-education"
+    }
+  ],
+  "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:074dcba5d803e7e8d122eb12",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/claim-state-pension-claim-state-pension-primary",
+      "target_iri": "resource/claim-state-pension-claim-state-pension-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0faae5c2bc2d019c5740f87a",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:238652ade7010e47fb9f628f",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/claim-state-pension-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/claim-state-pension-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:516d7407cc66d4ca8ebac0d0",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/claim-state-pension-ordinary-source-linked-route",
+      "source_iri": "service-episode/claim-state-pension-ordinary-source-linked-route",
+      "target": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5548051deef1d092723eea37",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:58e4a7c773c452e985216ae7",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e53104101fdb68af391e642",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9e0c5d638ab21c5decc98b5e",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ae0cc29f2ba1d8fbd06f76c7",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d3bf4b628b17c7b074ce1fff",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-state-pension.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-state-pension.v1.yaml",
+          "source_ids": [
+            "claim-state-pension-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e2fe758dd3a5e70b55e57ffe",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/claim-state-pension-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "service-step/exercise-consumer-rights-for-services-exception-or-route-failure-resolve-route-boundary-or-failure": [
@@ -3773,6 +4368,44 @@
       "source_iri": "dataset/get-blue-badge",
       "target": "user-need/get-blue-badge-evidence-and-misuse-decisions-with-the-authority",
       "target_iri": "user-need/get-blue-badge-evidence-and-misuse-decisions-with-the-authority"
+    }
+  ],
+  "user-need/manage-tax-ni-benefits-and-pensions-abroad-liability-or-entitlement": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/manage-tax-ni-benefits-and-pensions-abroad.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/manage-tax-ni-benefits-and-pensions-abroad.v1.yaml",
+          "source_ids": [
+            "manage-tax-ni-benefits-and-pensions-abroad-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2619f2b88f65eba8803f82f8",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/manage-tax-ni-benefits-and-pensions-abroad",
+      "source_iri": "dataset/manage-tax-ni-benefits-and-pensions-abroad",
+      "target": "user-need/manage-tax-ni-benefits-and-pensions-abroad-liability-or-entitlement",
+      "target_iri": "user-need/manage-tax-ni-benefits-and-pensions-abroad-liability-or-entitlement"
     }
   ],
   "user-need/marry-find-the-correct-registration-authority-preliminaries-and-exception-route-without-assuming-one-uk-process": [

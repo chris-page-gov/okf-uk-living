@@ -152,6 +152,14 @@ rights, funding eligibility or publication rules are uniform. When one current
 official page illustrates only a funder, institution or jurisdiction-specific
 route, state that scope and exclusion directly in the source assertion.
 
+Overseas, later-life and death/bereavement registers must separate UK consular
+or national discovery handoffs from destination law, devolved health and care
+routes, local delivery and territorial succession or registration rules.
+Clinical, capacity, cause-of-death, probate, insolvency and tax decisions remain
+with the current authority or regulated adviser. A national or devolved topic
+page may support navigation across a process but cannot establish an individual
+deadline, entitlement, treatment, estate priority or provider recommendation.
+
 Source-link receipts retain response metadata only. They never store response
 bodies. An automated block may be resolved by an explicit real-browser receipt;
 a discovery page is not sufficient evidence for a leaf-service rule.

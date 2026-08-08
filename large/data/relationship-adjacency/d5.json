@@ -161,6 +161,47 @@
       "target_iri": "evidence/get-disabled-students-allowance-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
+  "evidence/use-older-person-concessionary-travel-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/use-older-person-concessionary-travel.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/use-older-person-concessionary-travel.v1.yaml",
+          "source_ids": [
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff",
+            "use-older-person-concessionary-travel-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a8a8e126efa7732292a56610",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-older-person-concessionary-travel-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-older-person-concessionary-travel-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/use-older-person-concessionary-travel-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/use-older-person-concessionary-travel-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "life-course-domain/shopping-and-consumer-rights": [
     {
       "assertion_scope": "real-world",
@@ -1999,6 +2040,404 @@
       "source_iri": "service-episode/incorporate-company-exception-or-route-failure",
       "target": "enclosing-process/form-and-register-an-organisation",
       "target_iri": "enclosing-process/form-and-register-an-organisation"
+    }
+  ],
+  "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0170f160bffccbface697a05",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:53af4ee1c1a09e39f626a59f",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8286403965182fd0c6012d5e",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:89ba26ee9529bc593f0097f2",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8d210f35b2545a0555d25373",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/check-foreign-travel-advice-ordinary-source-linked-route",
+      "source_iri": "service-episode/check-foreign-travel-advice-ordinary-source-linked-route",
+      "target": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c30493bb39e28c0fc9cba13e",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-read-the-current-destination-advice-understand-its-geographic-and-risk-scope-and-review-insurance-and-contingency-implications-before-and-during-travel",
+      "target_iri": "outcome/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-read-the-current-destination-advice-understand-its-geographic-and-risk-scope-and-review-insurance-and-contingency-implications-before-and-during-travel"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c8a79615f6231cba744b64d2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/check-foreign-travel-advice-check-foreign-travel-advice-primary",
+      "target_iri": "resource/check-foreign-travel-advice-check-foreign-travel-advice-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f2147fa17b1f55a8ec39e7eb",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f71f7e2d1f6ce0542eb64a3b",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f82a27189a219e43d009533f",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:faa6f3152c0d20c6a04d1487",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
   "service-step/establish-social-enterprise-ordinary-source-linked-route-select-current-jurisdiction-route": [

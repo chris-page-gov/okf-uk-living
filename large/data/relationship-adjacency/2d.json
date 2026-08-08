@@ -1,4 +1,44 @@
 {
+  "dependency/cemetery-crematorium-or-burial-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml",
+          "source_ids": [
+            "arrange-burial-or-cremation-primary",
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:87c00296e0b3e70fc8622b00",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/arrange-burial-or-cremation",
+      "source_iri": "dataset/arrange-burial-or-cremation",
+      "target": "dependency/cemetery-crematorium-or-burial-authority",
+      "target_iri": "dependency/cemetery-crematorium-or-burial-authority"
+    }
+  ],
   "evidence/bid-for-public-contract-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -74,6 +114,84 @@
       "source_iri": "service-step/get-healthy-start-support-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "evidence/get-healthy-start-support-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
       "target_iri": "evidence/get-healthy-start-support-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "evidence/settle-estate-debts-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/settle-estate-debts.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/settle-estate-debts.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "settle-estate-debts-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5391ef4d82098aafc09b9618",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/settle-estate-debts-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/settle-estate-debts-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/settle-estate-debts-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/settle-estate-debts-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "evidence/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml",
+          "source_ids": [
+            "study-or-volunteer-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:16cbadaed59b77403ea9b2b6",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/study-or-volunteer-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
   "output/arrange-school-transport-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
@@ -232,6 +350,44 @@
       "source_iri": "service-step/respond-to-council-parking-penalty-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "output/respond-to-council-parking-penalty-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
       "target_iri": "output/respond-to-council-parking-penalty-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "output/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml",
+          "source_ids": [
+            "work-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2a71acd929c8827923fab203",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/work-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/work-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/work-overseas-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
     }
   ],
   "redress/pay-council-tax-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
@@ -4362,6 +4518,44 @@
       "source_iri": "service-step/view-waste-collection-schedule-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/view-waste-collection-schedule-view-waste-collection-schedule-primary",
       "target_iri": "resource/view-waste-collection-schedule-view-waste-collection-schedule-primary"
+    }
+  ],
+  "user-need/declare-goods-at-customs-find-current-customs-rules-without-the-bundle-valuing-goods-or-deciding-liability": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/declare-goods-at-customs.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/declare-goods-at-customs.v1.yaml",
+          "source_ids": [
+            "declare-goods-at-customs-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:34df51cfbeebe1c705a2b35e",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/declare-goods-at-customs",
+      "source_iri": "dataset/declare-goods-at-customs",
+      "target": "user-need/declare-goods-at-customs-find-current-customs-rules-without-the-bundle-valuing-goods-or-deciding-liability",
+      "target_iri": "user-need/declare-goods-at-customs-find-current-customs-rules-without-the-bundle-valuing-goods-or-deciding-liability"
     }
   ],
   "user-need/report-product-safety-issue-seller": [

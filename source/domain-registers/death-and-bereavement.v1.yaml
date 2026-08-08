@@ -1,0 +1,268 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-8-mobility-later-life-and-death
+domain: death-and-bereavement
+title: Death and bereavement
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-8-mobility-later-life-death-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: death-bereavement-scotland-handoff
+    jurisdiction: Scotland
+    title: Births, deaths and family in Scotland
+    owner: Scottish Government
+    authority_role: scotland_death_bereavement_handoff
+    resource: https://www.mygov.scot/browse/birth-death-family
+    coverage: Routes bereaved people to current Scottish registration, funeral, support and estate information.
+    exclusions: Does not decide cause, investigation, informant status, succession, tax or individual entitlement.
+  - <<: *source_defaults
+    id: death-bereavement-wales-handoff
+    jurisdiction: Wales
+    title: Death and bereavement
+    owner: UK Government
+    authority_role: england_wales_after_death_handoff
+    resource: https://www.gov.uk/when-someone-dies
+    coverage: Routes people in Wales to current registration, notification, funeral, benefit and estate information.
+    exclusions: Does not establish a local registrar route, decide cause, succession, tax or entitlement.
+  - <<: *source_defaults
+    id: death-bereavement-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: What to do when someone dies
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_after_death_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/births-deaths-baby-loss-marriages-and-civil-partnerships/death-and
+    coverage: Routes bereaved people to current Northern Ireland registration, funeral, notification, benefit and estate information.
+    exclusions: Does not decide cause, investigation, informant status, succession, tax or entitlement.
+families:
+  - <<: *family_defaults
+    id: obtain-medical-certificate-of-cause-of-death
+    title: Obtain a medical certificate of cause of death
+    aliases: [MCCD after death, medical cause of death certificate, doctor death certificate]
+    description: Follow the responsible medical examiner or practitioner process for certification and use the coroner or procurator-fiscal route when certification is not available.
+    situations: [A death needs medical certification before registration unless it enters an investigation route.]
+    user_needs: [Understand the certification handoff without the bundle determining cause of death or issuing a document.]
+    dependency: registered-medical-practitioner-and-medical-examiner
+    source:
+      <<: *source_defaults
+      id: obtain-medical-certificate-of-cause-of-death-primary
+      title: Medical certificate of cause of death guidance
+      owner: Department of Health and Social Care
+      authority_role: england_wales_mccd_guidance
+      resource: https://www.gov.uk/government/publications/medical-certificate-of-cause-of-death-mccd-guidance-for-medical-practitioners
+      coverage: Provides current England and Wales practitioner guidance for medical cause-of-death certification and referral boundaries.
+      exclusions: Does not certify an individual death, apply Scottish or Northern Ireland procedure or replace investigation authorities.
+  - <<: *family_defaults
+    id: refer-death-to-coroner-or-procurator-fiscal
+    title: Refer a death to a coroner or procurator fiscal
+    aliases: [death reported to coroner, sudden death investigation, procurator fiscal death referral]
+    description: Follow the territorial investigation authority and its instructions when a death cannot proceed through ordinary medical certification and registration.
+    situations: [A death is sudden, unexplained, violent or otherwise within a statutory investigation boundary.]
+    user_needs: [Keep England and Wales, Scotland and Northern Ireland investigation authorities distinct.]
+    source:
+      <<: *source_defaults
+      id: refer-death-to-coroner-or-procurator-fiscal-primary
+      title: When a death is reported to a coroner
+      owner: Ministry of Justice
+      authority_role: england_wales_coroner_handoff
+      resource: https://www.gov.uk/after-a-death/when-a-death-is-reported-to-a-coroner
+      coverage: Explains the England and Wales coroner investigation and release handoff after a reportable death.
+      exclusions: Does not decide whether a death is reportable, predict an investigation or establish Scottish or Northern Ireland procedure.
+  - id: register-a-death
+    title: Register a death
+    aliases: [death registration, make registrar appointment, obtain death certificate]
+    description: Use the jurisdiction-specific registrar route after certification or investigation authority release.
+    situations: [An informant needs to register a death with the responsible territorial authority.]
+    user_needs: [Find the correct registrar, evidence, timing and certificate route without importing another nation's rule.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - id: notify-organisations-after-a-death
+    title: Notify organisations after a death
+    aliases: [Tell Us Once, tell government about death, close public records after death]
+    description: Use the available public notification service and separately contact bodies outside its published scope.
+    situations: [A bereaved person needs to tell public authorities and other organisations that someone died.]
+    user_needs: [Distinguish Tell Us Once coverage from Northern Ireland and private-organisation notifications.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - <<: *family_defaults
+    id: arrange-funeral
+    title: Arrange a funeral
+    aliases: [organise funeral, choose funeral director, funeral costs and wishes]
+    description: Confirm release and registration documents, identify wishes and responsibilities and arrange the service, transport, payment and support through suitable providers.
+    situations: [A family, executor or other responsible person needs to arrange a funeral after a death.]
+    user_needs: [Coordinate public documents and private providers without recommending a funeral or supplier.]
+    dependency: funeral-director-or-other-funeral-provider
+    source:
+      <<: *source_defaults
+      id: arrange-funeral-primary
+      title: Arrange the funeral
+      owner: UK Government
+      authority_role: england_wales_funeral_guidance
+      resource: https://www.gov.uk/after-a-death/arrange-the-funeral
+      coverage: Explains England and Wales sequencing, documents, funeral-director, cost and payment boundaries.
+      exclusions: Does not establish Scottish or Northern Ireland procedure, recommend a provider or decide responsibility and payment.
+  - <<: *family_defaults
+    id: arrange-burial-or-cremation
+    title: Arrange burial or cremation
+    aliases: [book crematorium, arrange cemetery burial, burial or cremation forms]
+    description: Select the lawful burial or cremation route, obtain the required authority and forms and coordinate the cemetery, crematorium or other responsible body.
+    situations: [A funeral arrangement requires burial, cremation or another lawful committal route.]
+    user_needs: [Find the territorial and local authorization process without choosing the disposition or provider.]
+    dependency: cemetery-crematorium-or-burial-authority
+    source:
+      <<: *source_defaults
+      id: arrange-burial-or-cremation-primary
+      title: Arrange the funeral
+      owner: UK Government
+      authority_role: england_wales_burial_cremation_handoff
+      resource: https://www.gov.uk/after-a-death/arrange-the-funeral
+      coverage: Introduces England and Wales burial, cremation and funeral-document handoffs.
+      exclusions: Does not establish local availability, Scottish or Northern Ireland requirements, costs or personal wishes.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales]
+    id: claim-bereavement-support
+    title: Claim bereavement support
+    aliases: [bereavement support payment, help after partner dies, funeral benefit support]
+    description: Identify the applicable bereavement benefit or local support route, make the claim with required relationship and contribution information and use challenge steps where needed.
+    situations: [A bereaved spouse, civil partner or family needs financial or practical support after a death.]
+    user_needs: [Find current support without the bundle deciding relationship, contribution or entitlement.]
+    source:
+      <<: *source_defaults
+      id: claim-bereavement-support-primary
+      title: Bereavement Support Payment
+      owner: Department for Work and Pensions
+      authority_role: great_britain_bereavement_support_payment
+      resource: https://www.gov.uk/bereavement-support-payment
+      coverage: Explains Great Britain conditions, claim timing, payments and interaction handoffs for Bereavement Support Payment.
+      exclusions: Does not cover Northern Ireland, calculate entitlement or decide relationship, contribution or appeal questions.
+  - <<: *family_defaults
+    id: locate-or-prove-will
+    title: Locate or prove a will
+    aliases: [find deceased will, search probate will, prove latest valid will]
+    description: Search personal, solicitor, storage and probate sources, preserve competing documents and obtain legal advice where validity, interpretation or family rights are disputed.
+    situations: [Those dealing with an estate need to establish whether a will exists and which instrument governs.]
+    user_needs: [Separate finding a public probate record from legally proving a will.]
+    dependency: regulated-probate-or-succession-adviser
+    source:
+      <<: *source_defaults
+      id: locate-or-prove-will-primary
+      title: Search probate records for documents and wills
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_probate_record_search
+      resource: https://www.gov.uk/search-will-probate
+      coverage: Provides the England and Wales public search and document-order route for probate records and wills.
+      exclusions: Does not locate every unproved will, establish Scottish or Northern Ireland procedure or decide validity and interpretation.
+  - id: administer-an-estate
+    title: Administer an estate
+    aliases: [probate estate administration, Scottish confirmation, deal with assets after death]
+    description: Identify the jurisdiction and authority, value the estate, obtain probate, confirmation or letters where required and administer assets, debts, tax and distribution.
+    situations: [An executor, administrator or family needs authority to deal with a deceased person's estate.]
+    user_needs: [Keep England and Wales probate, Scottish confirmation and Northern Ireland probate routes distinct.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: pay-inheritance-tax
+    title: Pay Inheritance Tax
+    aliases: [IHT after death, estate tax return, inheritance tax payment]
+    description: Value the relevant estate and transfers, determine the reporting and payment route with HMRC and obtain advice before relying on exemptions, reliefs or deadlines.
+    situations: [Those administering an estate need to understand whether Inheritance Tax reporting or payment applies.]
+    user_needs: [Reach HMRC and professional advice without a tax calculation or deadline decision from the bundle.]
+    dependency: regulated-probate-tax-or-accounting-adviser
+    source:
+      <<: *source_defaults
+      id: pay-inheritance-tax-primary
+      title: Inheritance Tax
+      owner: HM Revenue and Customs
+      authority_role: uk_inheritance_tax_guidance
+      resource: https://www.gov.uk/inheritance-tax
+      coverage: Routes estate representatives to current UK Inheritance Tax thresholds, reporting, payment and relief information.
+      exclusions: Does not value an estate, calculate tax, establish succession authority or provide tax advice.
+  - <<: *family_defaults
+    id: settle-estate-debts
+    title: Settle estate debts
+    aliases: [debts after someone dies, insolvent estate, pay deceased bills]
+    description: Identify estate liabilities and priority, preserve creditor and asset evidence and obtain insolvency or probate advice before payment or distribution where funds may be insufficient.
+    situations: [An estate has bills, loans, secured debts, tax or possible liabilities to resolve.]
+    user_needs: [Avoid treating relatives as automatically liable or distributing an uncertain estate.]
+    dependency: regulated-probate-insolvency-or-debt-adviser
+    source:
+      <<: *source_defaults
+      id: settle-estate-debts-primary
+      title: Settling debts and taxes
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_estate_debt_guidance
+      resource: https://www.gov.uk/probate-estate/settling-debts-and-taxes
+      coverage: Explains England and Wales estate debt, creditor-notice, tax and distribution boundaries.
+      exclusions: Does not establish Scottish or Northern Ireland priority rules, determine liability, administer an insolvent estate or give legal advice.
+  - <<: *family_defaults
+    id: update-property-records-after-death
+    title: Update property records after death
+    aliases: [change Land Registry after death, remove deceased owner, inherit registered property]
+    description: Establish the surviving-owner or estate authority and submit the applicable land-registration evidence and forms after obtaining advice for trusts, disputes or unregistered land.
+    situations: [Registered property ownership or contact records need updating after an owner dies.]
+    user_needs: [Connect estate authority to the correct land registry without deciding beneficial ownership.]
+    dependency: regulated-conveyancer-or-probate-adviser
+    source:
+      <<: *source_defaults
+      id: update-property-records-after-death-primary
+      title: Update property records when someone dies
+      owner: HM Land Registry
+      authority_role: england_wales_property_record_after_death
+      resource: https://www.gov.uk/update-property-records-someone-dies
+      coverage: Routes England and Wales users through sole-owner and joint-owner registered-property updates after death.
+      exclusions: Does not apply Scottish or Northern Ireland land registration, decide ownership, deal with disputes or administer the estate.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: notify-private-organisations-after-death
+    title: Notify private organisations after death
+    aliases: [close bank accounts after death, tell utilities someone died, notify insurer landlord employer]
+    description: Build a controlled list of banks, insurers, landlords, employers, utilities and subscriptions outside public notification coverage and follow each bereavement route without sharing unnecessary data.
+    situations: [A bereaved person or estate representative must notify private organisations and settle or transfer accounts.]
+    user_needs: [Distinguish authority to notify from authority to close, transfer, claim or distribute.]
+    dependency: banks-insurers-landlords-employers-and-service-providers
+    source:
+      <<: *source_defaults
+      id: notify-private-organisations-after-death-primary
+      title: Organisations you need to contact and Tell Us Once
+      owner: Cabinet Office
+      authority_role: uk_after_death_notification_scope
+      resource: https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once
+      coverage: Identifies public notification scope and prompts separate contact with banks, mortgage, pension, insurer and other organisations.
+      exclusions: Does not contact organisations, establish estate authority, close accounts or apply Northern Ireland Tell Us Once coverage.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: arrange-repatriation-after-death
+    title: Arrange repatriation after death
+    aliases: [bring body home from abroad, death overseas repatriation, return remains to UK]
+    description: Contact local authorities, insurer, consular post and qualified funeral providers, obtain destination and transport documents and coordinate registration and funeral routes.
+    situations: [A person has died abroad and family are considering local arrangements or repatriation.]
+    user_needs: [Coordinate foreign, consular, insurance and UK territorial processes without recommending a provider.]
+    dependency: insurer-consular-post-and-qualified-funeral-provider
+    source:
+      <<: *source_defaults
+      id: arrange-repatriation-after-death-primary
+      title: What to do when someone dies abroad
+      owner: Foreign, Commonwealth and Development Office
+      authority_role: uk_death_abroad_handoff
+      resource: https://www.gov.uk/after-a-death/death-abroad
+      coverage: Routes bereaved people through local registration, consular contact, repatriation and UK notification considerations after a death abroad.
+      exclusions: Does not arrange transport, pay costs, establish foreign law or replace insurers, funeral providers and registrars.

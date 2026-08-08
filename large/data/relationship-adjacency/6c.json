@@ -1602,6 +1602,46 @@
       "target_iri": "redress/contest-road-user-charge-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
+  "redress/refer-death-to-coroner-or-procurator-fiscal-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/refer-death-to-coroner-or-procurator-fiscal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/refer-death-to-coroner-or-procurator-fiscal.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "refer-death-to-coroner-or-procurator-fiscal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4d52902501634fb6ed981454",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/refer-death-to-coroner-or-procurator-fiscal-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/refer-death-to-coroner-or-procurator-fiscal-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/refer-death-to-coroner-or-procurator-fiscal-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/refer-death-to-coroner-or-procurator-fiscal-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
   "redress/use-public-library-child-services-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
     {
       "assertion_scope": "real-world",
@@ -4111,6 +4151,44 @@
       "source_iri": "dataset/get-prescription",
       "target": "user-need/get-prescription-connect-prescribing-ordering-dispensing-charges-and-urgent-exceptions-without-clinical-advice",
       "target_iri": "user-need/get-prescription-connect-prescribing-ordering-dispensing-charges-and-urgent-exceptions-without-clinical-advice"
+    }
+  ],
+  "user-need/manage-tax-ni-benefits-and-pensions-abroad-coordinate-official-routes-without-calculating-residence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/manage-tax-ni-benefits-and-pensions-abroad.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/manage-tax-ni-benefits-and-pensions-abroad.v1.yaml",
+          "source_ids": [
+            "manage-tax-ni-benefits-and-pensions-abroad-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d8b0d5cf54e600c8b5d6dc25",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/manage-tax-ni-benefits-and-pensions-abroad",
+      "source_iri": "dataset/manage-tax-ni-benefits-and-pensions-abroad",
+      "target": "user-need/manage-tax-ni-benefits-and-pensions-abroad-coordinate-official-routes-without-calculating-residence",
+      "target_iri": "user-need/manage-tax-ni-benefits-and-pensions-abroad-coordinate-official-routes-without-calculating-residence"
     }
   ]
 }

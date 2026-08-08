@@ -700,6 +700,87 @@
       "target_iri": "jurisdiction/northern-ireland"
     }
   ],
+  "dependency/commissioned-palliative-care-or-hospice-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml",
+          "source_ids": [
+            "access-palliative-or-end-of-life-care-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4b121625dbf540cbe14c2a81",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/access-palliative-or-end-of-life-care",
+      "source_iri": "dataset/access-palliative-or-end-of-life-care",
+      "target": "dependency/commissioned-palliative-care-or-hospice-provider",
+      "target_iri": "dependency/commissioned-palliative-care-or-hospice-provider"
+    }
+  ],
+  "dependency/regulated-probate-insolvency-or-debt-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/settle-estate-debts.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/settle-estate-debts.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "settle-estate-debts-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b3606b33f03c6b99e0c7d6b5",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/settle-estate-debts",
+      "source_iri": "dataset/settle-estate-debts",
+      "target": "dependency/regulated-probate-insolvency-or-debt-adviser",
+      "target_iri": "dependency/regulated-probate-insolvency-or-debt-adviser"
+    }
+  ],
   "evidence/report-product-safety-issue-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -861,6 +942,44 @@
       "source_iri": "service-step/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "outcome/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
       "target_iri": "outcome/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
+  "output/declare-goods-at-customs-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/declare-goods-at-customs.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/declare-goods-at-customs.v1.yaml",
+          "source_ids": [
+            "declare-goods-at-customs-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9530cab07c0c4495bf817b6c",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/declare-goods-at-customs-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/declare-goods-at-customs-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/declare-goods-at-customs-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/declare-goods-at-customs-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
   "redress/access-school-health-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
@@ -1583,6 +1702,44 @@
       "source_iri": "service-step/make-small-money-claim-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/make-small-money-claim-consumer-rights-northern-ireland-handoff",
       "target_iri": "resource/make-small-money-claim-consumer-rights-northern-ireland-handoff"
+    }
+  ],
+  "rule/buy-travel-insurance-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml",
+          "source_ids": [
+            "buy-travel-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:54b5ed36f75ad78811c007fb",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/buy-travel-insurance-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/buy-travel-insurance-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/buy-travel-insurance-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/buy-travel-insurance-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "rule/get-carers-assessment-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [

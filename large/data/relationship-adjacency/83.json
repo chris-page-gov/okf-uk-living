@@ -79,6 +79,46 @@
       "target_iri": "outcome/get-sexual-and-reproductive-healthcare-ordinary-source-linked-route-follow-current-official-instructions-use-a-confidential-local-nhs-route-for-contraception-testing-treatment-or-reproductive-healthcare-and-use-urgent-or-safeguarding-services-where-indicated"
     }
   ],
+  "outcome/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2eeff13dce70e0f1b9a78df6",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "outcome/use-childrens-centres-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -525,6 +565,47 @@
       "target_iri": "redress/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
+  "requirement/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/access-palliative-or-end-of-life-care.v1.yaml",
+          "source_ids": [
+            "access-palliative-or-end-of-life-care-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c69f33578fed405df3db3ca7",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/access-palliative-or-end-of-life-care-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
   "requirement/use-household-recycling-service-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
     {
       "assertion_scope": "real-world",
@@ -710,6 +791,152 @@
       "source_iri": "dataset/buy-home",
       "target": "resource/buy-home-housing-community-scotland-handoff",
       "target_iri": "resource/buy-home-housing-community-scotland-handoff"
+    }
+  ],
+  "resource/get-carer-support-in-later-life-later-life-wales-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml",
+          "source_ids": [
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:29e984cd47293e9348e5461f",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-carer-support-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-carer-support-in-later-life-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/get-carer-support-in-later-life-later-life-wales-handoff",
+      "target_iri": "resource/get-carer-support-in-later-life-later-life-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml",
+          "source_ids": [
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2d757579f285e6754896ebff",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-carer-support-in-later-life-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-carer-support-in-later-life-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/get-carer-support-in-later-life-later-life-wales-handoff",
+      "target_iri": "resource/get-carer-support-in-later-life-later-life-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml",
+          "source_ids": [
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7c0921aa0f75fc5a41e49eb4",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-carer-support-in-later-life",
+      "source_iri": "dataset/get-carer-support-in-later-life",
+      "target": "resource/get-carer-support-in-later-life-later-life-wales-handoff",
+      "target_iri": "resource/get-carer-support-in-later-life-later-life-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-carer-support-in-later-life.v1.yaml",
+          "source_ids": [
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b600a1bcd53b50326a1fdd0d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-carer-support-in-later-life-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-carer-support-in-later-life-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/get-carer-support-in-later-life-later-life-wales-handoff",
+      "target_iri": "resource/get-carer-support-in-later-life-later-life-wales-handoff"
     }
   ],
   "resource/obtain-business-licence-obtain-business-licence-primary": [
@@ -2505,6 +2732,46 @@
       "source_iri": "dataset/get-student-finance",
       "target": "user-need/get-student-finance-use-the-correct-nation-and-study-year-route-without-calculating-entitlement-locally",
       "target_iri": "user-need/get-student-finance-use-the-correct-nation-and-study-year-route-without-calculating-entitlement-locally"
+    }
+  ],
+  "user-need/make-lasting-power-of-attorney-suitability-or-drafting-decision-from-the-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/make-lasting-power-of-attorney.v1.yaml",
+          "source_ids": [
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "make-lasting-power-of-attorney-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4f3a608c880f31fba2c0a73a",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/make-lasting-power-of-attorney",
+      "source_iri": "dataset/make-lasting-power-of-attorney",
+      "target": "user-need/make-lasting-power-of-attorney-suitability-or-drafting-decision-from-the-bundle",
+      "target_iri": "user-need/make-lasting-power-of-attorney-suitability-or-drafting-decision-from-the-bundle"
     }
   ]
 }

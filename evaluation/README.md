@@ -61,5 +61,11 @@ search, enclosing-process Narrative, family-centred Graph and typed official
 source access while retaining immigration, legal, tax, electoral and
 intellectual-property review boundaries.
 
+The [Pack 8 mobility/later-life/death review](reviews/pack-8-mobility-later-life-death-2026-08-08.md)
+accounts for the final 41 approved identities through 38 compact dossiers and
+the three preserved death/notification/estate slices. It adds 47 body-free
+official links and 13 questions, bringing acceptance to 293 families, 104
+questions and all 24 life-course domains.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

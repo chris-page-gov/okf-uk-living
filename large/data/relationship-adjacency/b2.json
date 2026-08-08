@@ -659,6 +659,44 @@
       "target_iri": "resource/report-fraud-police-legal-scotland-handoff"
     }
   ],
+  "dependency/pension-scheme-and-fca-regulated-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/manage-workplace-pension-in-retirement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/manage-workplace-pension-in-retirement.v1.yaml",
+          "source_ids": [
+            "manage-workplace-pension-in-retirement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:70d715ed3a5c44a0005015ce",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/manage-workplace-pension-in-retirement",
+      "source_iri": "dataset/manage-workplace-pension-in-retirement",
+      "target": "dependency/pension-scheme-and-fca-regulated-adviser",
+      "target_iri": "dependency/pension-scheme-and-fca-regulated-adviser"
+    }
+  ],
   "evidence/become-a-foster-carer-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -1358,6 +1396,152 @@
       "source_iri": "service-step/arrange-newborn-screening-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "resource/arrange-newborn-screening-arrange-newborn-screening-primary",
       "target_iri": "resource/arrange-newborn-screening-arrange-newborn-screening-primary"
+    }
+  ],
+  "resource/claim-bereavement-support-claim-bereavement-support-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0ea3f79e41ddd309d059b196",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-bereavement-support",
+      "source_iri": "dataset/claim-bereavement-support",
+      "target": "resource/claim-bereavement-support-claim-bereavement-support-primary",
+      "target_iri": "resource/claim-bereavement-support-claim-bereavement-support-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:47514baaef4d8fc608608305",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-bereavement-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-bereavement-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/claim-bereavement-support-claim-bereavement-support-primary",
+      "target_iri": "resource/claim-bereavement-support-claim-bereavement-support-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:70c831fb48c73d2ea580e7c0",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-bereavement-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-bereavement-support-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/claim-bereavement-support-claim-bereavement-support-primary",
+      "target_iri": "resource/claim-bereavement-support-claim-bereavement-support-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/claim-bereavement-support.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dbf7c7aa12fe4f90a43c929d",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-bereavement-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/claim-bereavement-support-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/claim-bereavement-support-claim-bereavement-support-primary",
+      "target_iri": "resource/claim-bereavement-support-claim-bereavement-support-primary"
     }
   ],
   "rule/access-dental-care-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
@@ -3665,6 +3849,45 @@
       "source_iri": "dataset/arrange-student-accommodation",
       "target": "user-need/arrange-student-accommodation-identify-provider",
       "target_iri": "user-need/arrange-student-accommodation-identify-provider"
+    }
+  ],
+  "user-need/claim-attendance-allowance-reach-the-official-benefit-decision-without-the-bundle-assessing-disability-or-entitlement": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-attendance-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-attendance-allowance.v1.yaml",
+          "source_ids": [
+            "claim-attendance-allowance-primary",
+            "later-life-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ef6bfbe7bb351c47e9ef11d3",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-attendance-allowance",
+      "source_iri": "dataset/claim-attendance-allowance",
+      "target": "user-need/claim-attendance-allowance-reach-the-official-benefit-decision-without-the-bundle-assessing-disability-or-entitlement",
+      "target_iri": "user-need/claim-attendance-allowance-reach-the-official-benefit-decision-without-the-bundle-assessing-disability-or-entitlement"
     }
   ]
 }

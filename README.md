@@ -10,9 +10,9 @@ journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
 `life-course-population-contract.v1` contract now governs eight delivery packs,
 48 enclosing processes and the distinction between population-complete and
-specialist-reviewed release grade. Two hundred and fifty-five reviewed families now expose authored
-narratives, typed official links and governed journey graphs; the other
-families remain explicit planning records. The shared infrastructure now adds
+specialist-reviewed release grade. All 293 reviewed families now expose
+authored narratives, typed official links and governed journey graphs across
+all 24 life-course domains. The shared infrastructure now adds
 397 dated GSS geographies, 438 reusable authority/regulator/redress records,
 ten sector maps and metadata-only source-link receipts. This is not an official service
 corpus or publication candidate. The GitHub
@@ -42,6 +42,7 @@ explicit owner request.
 - [Pack 5 enforcement/consumer/justice review](evaluation/reviews/pack-5-enforcement-consumer-justice-2026-08-08.md)
 - [Pack 6 family/health/care review](evaluation/reviews/pack-6-family-health-care-2026-08-08.md)
 - [Pack 7 civic/enterprise/creativity review](evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md)
+- [Pack 8 mobility/later-life/death review](evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -127,7 +128,7 @@ default; pull requests and merges do not run remote CI or update GitHub Pages.
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
 bundle and `okf-explorer.json` for the 293-family discovery projection. The
 large descriptor distinguishes 293 service families from the larger typed
-concept count, currently 7,613 concepts, and exposes generated semantic and
+concept count, currently 9,757 concepts, and exposes generated semantic and
 validation entrypoints. Records and static-search results are sharded in
 1,000-record chunks so supporting infrastructure remains lazily hydratable. With a
 local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:

@@ -78,6 +78,46 @@
       "target_iri": "evidence/obtain-concessionary-travel-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
+  "evidence/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/obtain-medical-certificate-of-cause-of-death.v1.yaml",
+          "source_ids": [
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff",
+            "obtain-medical-certificate-of-cause-of-death-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:33b3de7f20d7671f35e4b5ba",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/obtain-medical-certificate-of-cause-of-death-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "evidence/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -117,6 +157,44 @@
       "source_iri": "service-step/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "evidence/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
       "target_iri": "evidence/transition-to-adult-social-care-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "outcome/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-read-the-current-destination-advice-understand-its-geographic-and-risk-scope-and-review-insurance-and-contingency-implications-before-and-during-travel": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/check-foreign-travel-advice.v1.yaml",
+          "source_ids": [
+            "check-foreign-travel-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c30493bb39e28c0fc9cba13e",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-read-the-current-destination-advice-understand-its-geographic-and-risk-scope-and-review-insurance-and-contingency-implications-before-and-during-travel",
+      "target_iri": "outcome/check-foreign-travel-advice-ordinary-source-linked-route-follow-current-official-instructions-read-the-current-destination-advice-understand-its-geographic-and-risk-scope-and-review-insurance-and-contingency-implications-before-and-during-travel"
     }
   ],
   "outcome/exercise-consumer-rights-for-goods-ordinary-source-linked-route-follow-current-official-instructions-preserve-the-purchase-and-defect-evidence-state-the-requested-statutory-remedy-to-the-trader-and-use-the-applicable-escalation-route": [
@@ -280,6 +358,44 @@
       "source_iri": "service-step/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "outcome/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
       "target_iri": "outcome/report-noise-or-pest-nuisance-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
+  "outcome/work-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/work-overseas.v1.yaml",
+          "source_ids": [
+            "work-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:389e11dd0cf97c690853d896",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/work-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/work-overseas-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/work-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/work-overseas-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
   "output/arrange-garden-waste-collection-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
@@ -516,6 +632,44 @@
       "target_iri": "redress/commercialise-research-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
     }
   ],
+  "redress/manage-workplace-pension-in-retirement-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/manage-workplace-pension-in-retirement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/manage-workplace-pension-in-retirement.v1.yaml",
+          "source_ids": [
+            "manage-workplace-pension-in-retirement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a5ba4cf1a8676aa30d964d1f",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/manage-workplace-pension-in-retirement-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/manage-workplace-pension-in-retirement-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/manage-workplace-pension-in-retirement-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/manage-workplace-pension-in-retirement-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
   "redress/sit-public-examinations-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route": [
     {
       "assertion_scope": "real-world",
@@ -595,6 +749,45 @@
       "target_iri": "redress/stand-for-election-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
     }
   ],
+  "requirement/claim-pension-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/claim-pension-credit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/claim-pension-credit.v1.yaml",
+          "source_ids": [
+            "claim-pension-credit-primary",
+            "later-life-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:39d108e47bb6eb4db5e690df",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-pension-credit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/claim-pension-credit-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/claim-pension-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/claim-pension-credit-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
   "requirement/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
     {
       "assertion_scope": "real-world",
@@ -633,6 +826,44 @@
       "source_iri": "service-step/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "requirement/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
       "target_iri": "requirement/get-domestic-abuse-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/study-or-volunteer-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/study-or-volunteer-overseas.v1.yaml",
+          "source_ids": [
+            "study-or-volunteer-overseas-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:53c08677c7575ca10f142e9c",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/study-or-volunteer-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/study-or-volunteer-overseas-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/study-or-volunteer-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/study-or-volunteer-overseas-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
     }
   ],
   "rule/learn-to-drive-car-provisional-to-full-licence-obtain-provisional-entitlement-dvla-rules-apply-in-great-britain-and-dva-rules-in-northern-ireland": [
@@ -2890,6 +3121,44 @@
       "source_iri": "dataset/get-family-carer-support",
       "target": "user-need/get-family-carer-support-connect-assessment-commissioned-support-and-benefits-without-assuming-eligibility-or-local-provision",
       "target_iri": "user-need/get-family-carer-support-connect-assessment-commissioned-support-and-benefits-without-assuming-eligibility-or-local-provision"
+    }
+  ],
+  "user-need/renew-passport-child": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/renew-passport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/renew-passport.v1.yaml",
+          "source_ids": [
+            "renew-passport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:35a71419fe348c61d0ac8f71",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/renew-passport",
+      "source_iri": "dataset/renew-passport",
+      "target": "user-need/renew-passport-child",
+      "target_iri": "user-need/renew-passport-child"
     }
   ]
 }

@@ -76,6 +76,46 @@
       "target_iri": "evidence/receive-written-employment-particulars-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
+  "outcome/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-select-the-lawful-burial-or-cremation-route-obtain-the-required-authority-and-forms-and-coordinate-the-cemetery-crematorium-or-other-responsible-body": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/arrange-burial-or-cremation.v1.yaml",
+          "source_ids": [
+            "arrange-burial-or-cremation-primary",
+            "death-bereavement-northern-ireland-handoff",
+            "death-bereavement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e80b3b7c53cf63d60c95595a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-select-the-lawful-burial-or-cremation-route-obtain-the-required-authority-and-forms-and-coordinate-the-cemetery-crematorium-or-other-responsible-body",
+      "target_iri": "outcome/arrange-burial-or-cremation-ordinary-source-linked-route-follow-current-official-instructions-select-the-lawful-burial-or-cremation-route-obtain-the-required-authority-and-forms-and-coordinate-the-cemetery-crematorium-or-other-responsible-body"
+    }
+  ],
   "outcome/get-statutory-sick-pay-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -2481,6 +2521,44 @@
       "source_iri": "dataset/become-a-foster-carer",
       "target": "user-need/become-a-foster-carer-find-the-current-public-or-regulated-fostering-route-and-its-decision-and-complaint-handoff",
       "target_iri": "user-need/become-a-foster-carer-find-the-current-public-or-regulated-fostering-route-and-its-decision-and-complaint-handoff"
+    }
+  ],
+  "user-need/buy-travel-insurance-use-public-guidance-and-regulated-provider-checks-without-a-product-recommendation": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml",
+          "source_ids": [
+            "buy-travel-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dcb4331c0d31c61df89cc292",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/buy-travel-insurance",
+      "source_iri": "dataset/buy-travel-insurance",
+      "target": "user-need/buy-travel-insurance-use-public-guidance-and-regulated-provider-checks-without-a-product-recommendation",
+      "target_iri": "user-need/buy-travel-insurance-use-public-guidance-and-regulated-provider-checks-without-a-product-recommendation"
     }
   ],
   "user-need/claim-disability-benefit-distinguish-benefit-systems-and-retain-evidence-and-decision-outputs-without-a-local-health-or-entitlement-assessment": [

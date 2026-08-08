@@ -2534,6 +2534,44 @@
       "target_iri": "evidence/attend-driver-awareness-course-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "evidence/buy-travel-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/holidays-volunteering-and-living-overseas/buy-travel-insurance.v1.yaml",
+          "source_ids": [
+            "buy-travel-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b9b3aa31df5eea635d78da73",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/buy-travel-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/buy-travel-insurance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/buy-travel-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/buy-travel-insurance-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/contest-road-user-charge-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -5817,6 +5855,47 @@
       "source_iri": "dataset/cancel-distance-contract",
       "target": "user-need/cancel-distance-contract-trader-information-and-return-responsibilities-without-calculating-a-deadline",
       "target_iri": "user-need/cancel-distance-contract-trader-information-and-return-responsibilities-without-calculating-a-deadline"
+    }
+  ],
+  "user-need/get-housing-adaptation-in-later-life-coordinate-care": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/later-life/get-housing-adaptation-in-later-life.v1.yaml",
+          "source_ids": [
+            "get-housing-adaptation-in-later-life-primary",
+            "later-life-northern-ireland-handoff",
+            "later-life-scotland-handoff",
+            "later-life-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b151526b6684853ffb12d1d3",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-housing-adaptation-in-later-life",
+      "source_iri": "dataset/get-housing-adaptation-in-later-life",
+      "target": "user-need/get-housing-adaptation-in-later-life-coordinate-care",
+      "target_iri": "user-need/get-housing-adaptation-in-later-life-coordinate-care"
     }
   ],
   "user-need/receive-hospital-referral-and-treatment-understand-referral-and-provider-handoffs-without-clinical-advice-waiting-time-promises-or-treatment-decisions": [

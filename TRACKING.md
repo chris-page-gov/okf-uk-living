@@ -34,8 +34,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | PACK-005 | Populate enforcement, consumer and justice | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-5-enforcement-consumer-justice-2026-08-08.md): all 36 identities accounted for, 35 new dossiers, preserved speeding slice, 44 active link-only sources and 13 competency questions |
 | PACK-006 | Populate relationships, health and care | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-6-family-health-care-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and passing manual health-source and Explorer journeys |
 | PACK-007 | Populate civic, enterprise and creativity | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and passing local Explorer journey |
-| PACK-008 | Populate mobility, later life and death | Active | 41 families across overseas routes, later life and death/bereavement |
-| ASSURE-001 | Freeze a local population-complete candidate | Planned | Requires 293 complete dossiers, active required links, 100+ competency queries and passing graph/narrative/browser reconciliation; does not publish |
+| PACK-008 | Populate mobility, later life and death | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md): all 41 identities accounted for, 38 new dossiers, three preserved death/notification/estate slices, 47 active link-only sources and 13 competency questions |
+| ASSURE-001 | Freeze a local population-complete candidate | Active | Reconcile the now-complete 293 dossiers, 104 competency queries, active links and graph/narrative/browser evidence; does not publish |
 | SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
 | CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
 | PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
@@ -53,7 +53,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - GitHub Pages: not enabled and not updated.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
   references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
-  sources, 44 Pack 5 sources, 45 Pack 6 sources and 45 Pack 7 sources give 454 source records and zero snapshots; all 29 source hosts
+  sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8
+  sources give 501 source records and zero snapshots; all 29 source hosts
   and the standards families have dated rights decisions. Source content
   remains link-and-summary only. Staged link registration against the approved
   293 families is authorized; unbounded or unstaged acquisition stays disabled.
