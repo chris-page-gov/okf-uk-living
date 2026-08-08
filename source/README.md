@@ -45,6 +45,19 @@ existing 53 reference entries into typed link-only resources and provide the
 proving input for narrative, search, relationship and semantic projections.
 No source response body or snapshot is stored.
 
+The reviewed [authority registry](authority-registry.v1.yaml) adds the current
+shared identity layer used across later packs: 382 principal-authority areas,
+19 strategic/combined authorities, 397 dated GSS geographies, 438 organizations
+and ten regulator/redress sector maps. Its reviewed seed records are in
+[shared-authority-seeds.v1](shared-authority-seeds.v1.yaml). GSS identifies an
+area rather than the legal body; family-specific delivery still requires the
+current responsible provider's leaf page. English and Welsh identity is paired
+only by explicit publisher evidence.
+
+The registry refresh parses official source metadata in memory and stores only
+identifiers, names, dates and links. Metadata-only link receipts live under
+`evaluation/link-receipts/`; no response body, geometry or snapshot is retained.
+
 The approved [rights decisions](rights-decisions.v1.yaml) map every registered
 source host to a licence family, dated official evidence and the operative
 link-and-summary decision. They also record MIT for repository-authored code,

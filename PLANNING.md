@@ -72,12 +72,12 @@ The 293-family, seven-facet colour projection is complete and approved for
 local evaluation; it does not claim leaf-service completeness.
 
 The foundation and Explorer contract are complete. The three-slice migration
-is locally complete and supplies the proving fixture for the remaining packs.
+and shared authority/source infrastructure are locally complete and supply the
+proving fixture and reusable identities for the remaining packs.
 The active complete-corpus sequence is now:
 
-1. `POP-004` — implement shared authority, geography, regulator, redress and link-receipt infrastructure.
-2. `PACK-001` through `PACK-008` — populate the eight contracted domain packs.
-3. `ASSURE-001` — reconcile search, graph, provenance, source links and local browser journeys and freeze a local population candidate.
+1. `PACK-001` through `PACK-008` — populate the eight contracted domain packs, beginning with family beginnings.
+2. `ASSURE-001` — reconcile search, graph, provenance, source links and local browser journeys and freeze a local population candidate.
 
 Population-complete permits a visible `specialist_review_required` state.
 Release grade separately requires named legal, clinical or service-owner

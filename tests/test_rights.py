@@ -44,8 +44,13 @@ class RightsDecisionTests(unittest.TestCase):
 
     def test_all_registered_hosts_have_dated_decisions(self) -> None:
         decisions = self.register["host_decisions"]
-        self.assertEqual(25, len(decisions))
+        self.assertEqual(28, len(decisions))
         self.assertTrue(all(decision["evidence"]["observed_at"] for decision in decisions))
+
+    def test_link_only_authority_sources_retain_no_source_expression(self) -> None:
+        policy = self.register["link_only_reference_policy"]
+        self.assertFalse(policy["source_response_body_retained"])
+        self.assertFalse(policy["source_snapshots_acquired"])
 
     def test_reference_standard_licences_are_explicit(self) -> None:
         standards = {item["id"]: item for item in self.register["reference_standards"]}

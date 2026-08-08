@@ -9,6 +9,7 @@ import json
 import re
 import shutil
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -28,13 +29,13 @@ from life_course_projection import project, semantic_graph
 DESCRIPTOR_PATH = ROOT / "okf-explorer.json"
 DATA_ROOT = ROOT / "large" / "data"
 GENERATED_AT = "2026-08-08T00:00:00+01:00"
-SNAPSHOT = "life-course-three-slice-2026-08-08"
+SNAPSHOT = "life-course-authority-infrastructure-2026-08-08"
 FACETS = (
     ("life_course_domain", "Life-course domain", "The approved 24-domain planning spine."),
     ("acquisition_wave", "Acquisition wave", "The approved staged reference-registration wave."),
     ("delivery_scope", "Delivery scope", "The governed discovery scope; not a claim of uniform delivery."),
     ("jurisdiction", "Jurisdiction research", "The jurisdiction evidence still required for the planning family."),
-    ("implementation_status", "Implementation status", "Whether the family is present in the three reviewed slices."),
+    ("implementation_status", "Implementation status", "Population and shared-infrastructure implementation state."),
     ("assertion_status", "Assertion status", "The governed status of this planning projection."),
     ("rights_state", "Rights state", "Rights boundary for repository metadata and upstream sources."),
 )
@@ -51,6 +52,7 @@ SEARCH_STOP_WORDS = {
     "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "in", "into",
     "is", "it", "of", "on", "or", "the", "to", "with",
 }
+RECORD_CHUNK_SIZE = 1000
 
 
 def titleize(identifier: str) -> str:
@@ -143,7 +145,11 @@ def search_tokens(value: Any) -> set[str]:
         if isinstance(item, (list, dict)):
             tokens.update(search_tokens(item))
             continue
-        for token in re.findall(r"[a-z0-9]+", str(item).lower()):
+        normalized = "".join(
+            character for character in unicodedata.normalize("NFKD", str(item))
+            if not unicodedata.combining(character)
+        ).lower()
+        for token in re.findall(r"[a-z0-9]+", normalized):
             if len(token) >= 2 and token not in SEARCH_STOP_WORDS:
                 tokens.add(token)
     return tokens
@@ -195,6 +201,10 @@ def search_outputs(rows: list[dict[str, Any]]) -> dict[Path, str]:
     filter_entrypoints = {
         key: f"large/data/search/filters/{key}.json" for key, _, _ in FACETS
     }
+    result_paths = [
+        f"large/data/search/results-{index // RECORD_CHUNK_SIZE}.json"
+        for index in range(0, len(results), RECORD_CHUNK_SIZE)
+    ]
     search_manifest = {
         "schema": "okf-static-search.v1",
         "snapshot": SNAPSHOT,
@@ -202,7 +212,7 @@ def search_outputs(rows: list[dict[str, Any]]) -> dict[Path, str]:
         "prefix_min_length": 3,
         "lexicon_shard_length": 2,
         "result_limit": 200,
-        "result_doc_chunk_size": 1000,
+        "result_doc_chunk_size": RECORD_CHUNK_SIZE,
         "weights": {field: weight for field, _, weight in SEARCH_FIELDS},
         "field_masks": {field: mask for field, mask, _ in SEARCH_FIELDS},
         "counts": {
@@ -218,7 +228,7 @@ def search_outputs(rows: list[dict[str, Any]]) -> dict[Path, str]:
             "lexicon": lexicon_entrypoints,
             "prefixes": {},
             "postings": [postings_path],
-            "result_docs": ["large/data/search/results-0.json"],
+            "result_docs": result_paths,
             "facets": "large/data/facets.json",
             "doc_map": "large/data/search/doc-map.json",
             "filter_postings": filter_entrypoints,
@@ -227,9 +237,12 @@ def search_outputs(rows: list[dict[str, Any]]) -> dict[Path, str]:
     outputs = {
         Path("large/data/search/manifest.json"): json_text(search_manifest),
         Path(postings_path): json_text({"tokens": dict(sorted(postings.items()))}),
-        Path("large/data/search/results-0.json"): json_text(results),
         Path("large/data/search/doc-map.json"): json_text(doc_map),
     }
+    outputs.update({
+        Path(path): json_text(results[index:index + RECORD_CHUNK_SIZE])
+        for index, path in zip(range(0, len(results), RECORD_CHUNK_SIZE), result_paths, strict=True)
+    })
     outputs.update(
         {
             Path(path): json_text(lexicon_groups[shard])
@@ -264,7 +277,10 @@ def relationship_bucket(route: str) -> str:
 def locator_outputs(rows: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[Path, str]]:
     buckets: dict[str, dict[str, list[int]]] = defaultdict(dict)
     for ordinal, row in enumerate(rows):
-        buckets[relationship_bucket(row["route"])][row["route"]] = [0, ordinal]
+        buckets[relationship_bucket(row["route"])][row["route"]] = [
+            ordinal // RECORD_CHUNK_SIZE,
+            ordinal % RECORD_CHUNK_SIZE,
+        ]
     paths = {
         bucket: f"large/data/record-locator/{bucket}.json" for bucket in sorted(buckets)
     }
@@ -273,8 +289,11 @@ def locator_outputs(rows: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[Pa
         "algorithm": "fnv1a32-prefix-2",
         "snapshot": SNAPSHOT,
         "records": len(rows),
-        "chunk_size": 1000,
-        "record_chunks": ["large/data/records-0.json"],
+        "chunk_size": RECORD_CHUNK_SIZE,
+        "record_chunks": [
+            f"large/data/records-{index // RECORD_CHUNK_SIZE}.json"
+            for index in range(0, len(rows), RECORD_CHUNK_SIZE)
+        ],
         "buckets": paths,
         "bucket_count": len(paths),
     }
@@ -330,8 +349,8 @@ def build_outputs() -> dict[Path, str]:
         "okf_version": "0.2",
         "core_conformance": "OKF Explorer large-corpus life-course projection",
         "title": "A Life in the UK — life-course discovery corpus",
-        "description": "Approved 293-family denominator with six dossier-backed families, typed linked sources and governed semantic relationships.",
-        "version": "life-course-three-slice.v1",
+        "description": "Approved 293-family denominator with six dossier-backed families, typed linked sources, governed relationships and current authority infrastructure.",
+        "version": "life-course-authority-infrastructure.v1",
         "status": "approved-for-local-evaluation",
         "assertion_scope": "real-world",
         "publisher": "owner:chris-page-gov",
@@ -356,6 +375,7 @@ def build_outputs() -> dict[Path, str]:
         "source": {
             "mode": "repository-authored-dossiers-plus-linked-references",
             "denominator": "generated/browser/source/service-family-denominator.v1.yaml.html",
+            "authority_registry": "generated/browser/source/authority-registry.v1.yaml.html",
             "policy": "generated/browser/profiles/corpus-acquisition-policy.v1.yaml.html",
             "source_snapshots": False,
             "upstream_content_redistributed": False,
@@ -390,7 +410,7 @@ def build_outputs() -> dict[Path, str]:
             "validation": "large/data/validation-report.json",
         },
         "chunks": {
-            "datasets": ["large/data/records-0.json"],
+            "datasets": locator["record_chunks"],
             "resources": ["large/data/resources-0.json"],
             "publishers": ["large/data/publishers-0.json"],
             "relationships": ["large/data/relationships-0.json"],
@@ -398,7 +418,7 @@ def build_outputs() -> dict[Path, str]:
     }
     overview = {
         "title": "Life-course discovery corpus",
-        "description": "293 normalized families across 24 domains, with six population-complete three-slice dossiers and 53 typed official links.",
+        "description": "293 normalized families across 24 domains, six population-complete three-slice dossiers, 53 typed official links, 397 dated geographies and 438 shared organisations.",
         "counts": counts,
         "status": "approved-for-local-evaluation",
         "notices": [
@@ -453,7 +473,6 @@ def build_outputs() -> dict[Path, str]:
         Path("large/data/analysis/overview.json"): json_text(analysis),
         Path("large/data/presentation.json"): json_text(presentation),
         Path("large/data/facets.json"): json_text(facet_index(rows)),
-        Path("large/data/records-0.json"): json_text(rows),
         Path("large/data/resources-0.json"): json_text(resources),
         Path("large/data/publishers-0.json"): json_text(publishers),
         Path("large/data/relationships-0.json"): json_text(relationships),
@@ -461,6 +480,10 @@ def build_outputs() -> dict[Path, str]:
         Path("large/data/relationship-adjacency.json"): json_text(adjacency),
         Path("large/data/validation-report.json"): json_text(validation),
     }
+    outputs.update({
+        Path(path): json_text(rows[index:index + RECORD_CHUNK_SIZE])
+        for index, path in zip(range(0, len(rows), RECORD_CHUNK_SIZE), locator["record_chunks"], strict=True)
+    })
     outputs.update(locator_shards)
     outputs.update(adjacency_shards)
     semantic = semantic_graph(rows, relationships)

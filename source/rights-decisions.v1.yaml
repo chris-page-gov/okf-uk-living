@@ -46,6 +46,18 @@ use_policy:
   publication_allowed: false
   publication_rule: Explicit owner request and release validation remain required.
 
+link_only_reference_policy:
+  decision: repository_may_retain_official_urls_identifiers_dates_and_original_summaries_without_acquiring_source_expression
+  source_response_body_retained: false
+  source_snapshots_acquired: false
+  rights_basis: >-
+    Each acquired source family is governed by its host decision below. A link,
+    publisher identity, identifier or observed date is not a redistributed copy
+    of the linked page. Any future acquisition of source expression requires a
+    separate source-specific compatibility decision.
+  decided_at: "2026-08-08"
+  evidence: source/authority-registry.v1.yaml
+
 attribution:
   ogl_v3_fallback: Contains public sector information licensed under the Open Government Licence v3.0.
   ogl_v3_requirements:
@@ -276,6 +288,36 @@ host_decisions:
       observed_at: "2026-08-07"
       limitation: >-
         most_content_is_OGL_but_geography_products_can_include_Ordnance_Survey_Royal_Mail_GeoPlace_or_Northern_Ireland_rights
+  - host: geoportal.statistics.gov.uk
+    owner_family: Office for National Statistics Open Geography Portal
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.ons.gov.uk/methodology/geography/licences
+      observed_at: "2026-08-08"
+      limitation: >-
+        geography_products_may_include_Ordnance_Survey_Royal_Mail_GeoPlace_or_Northern_Ireland_rights;
+        this_repository_retains_only_identifiers_names_dates_and_links
+  - host: services1.arcgis.com
+    owner_family: Office for National Statistics Open Geography ArcGIS services
+    licence_family: ogl-uk-3.0
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://www.ons.gov.uk/methodology/geography/licences
+      observed_at: "2026-08-08"
+      limitation: >-
+        query_responses_are_transformed_in_memory_to_identifiers_names_and_dates_only;
+        no_response_body_or_geometry_is_retained
+  - host: help.esd.org.uk
+    owner_family: Local Government Association and Porism standards help service
+    licence_family: no-open-licence-established
+    decision: linked_reference_and_original_summary_only
+    evidence:
+      resource: https://help.esd.org.uk/standards/faqs/where-can-i-find-latest-local-government-services-list-lgsl
+      observed_at: "2026-08-08"
+      limitation: >-
+        the_help_page_is_used_only_to_identify_the_current_services_list_location;
+        no_vocabulary_or_page_expression_is_acquired_and_the_list_never_proves_service_availability
   - host: digital.nhs.uk
     owner_family: NHS England Organisation Data Service
     licence_family: ogl-uk-3.0

@@ -107,6 +107,33 @@ Source-link receipts retain response metadata only. They never store response
 bodies. An automated block may be resolved by an explicit real-browser receipt;
 a discovery page is not sufficient evidence for a leaf-service rule.
 
+## Shared authority and source infrastructure
+
+[`authority-registry.v1`](../source/authority-registry.v1.yaml) is the dated
+identity denominator for the population packs. It contains 382 principal local
+authority areas and normalized actors, 19 strategic/combined authorities, 397
+GSS geographies in total, and shared national, regulator and redress actors.
+A GSS code identifies an administrative area and does not by itself name the
+legal body or prove that it delivers a service. ODS and source-native identities
+are added only within their declared coverage.
+
+English and Welsh labels share identity only when the publisher places them in
+the same official record or explicitly pairs the pages. Similar text, translated
+slugs or parallel URLs are never identity evidence. ESD Services/LGSL identifiers
+are optional mappings and never evidence that a current authority offers a route.
+
+The reviewed live refresh is:
+
+```sh
+uv run --locked python scripts/refresh_authority_registry.py --check
+```
+
+This parses official metadata in memory and retains only identifiers, names,
+dates and links. It is deliberately separate from the offline build. Live link
+audits use `scripts/audit_source_links.py` and write `source-link-receipt.v1`
+metadata; they never retain response bodies. A failed primary family link blocks
+that family, while a failed secondary link creates a visible gap.
+
 Contract validation checks structure, jurisdiction coverage, ordinary and
 exception paths, assertion status and publication gates. A passing contract
 check does not approve the profile or validate a real service route.
@@ -176,6 +203,8 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_life_course_dossiers.py
+uv run --locked python scripts/check_authority_registry.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/authority-registry.v1.schema.json",
+  "title": "A Life in the UK authority and geography registry",
+  "type": "object",
+  "required": ["authority_registry_version", "status", "observed_at", "identity_rules", "sources", "denominators", "geographies", "organisations", "sector_maps"],
+  "properties": {
+    "authority_registry_version": {"const": "authority-registry.v1"},
+    "status": {"enum": ["current_reviewed", "superseded"]},
+    "observed_at": {"type": "string", "format": "date"},
+    "identity_rules": {"type": "object"},
+    "sources": {"type": "array", "minItems": 1},
+    "denominators": {"type": "object"},
+    "geographies": {"type": "array", "minItems": 382},
+    "organisations": {"type": "array", "minItems": 401},
+    "sector_maps": {"type": "object", "minProperties": 10}
+  },
+  "additionalProperties": false
+}

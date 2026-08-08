@@ -32,11 +32,11 @@ def validate_large_projection() -> list[str]:
 
     descriptor = load_json("okf-explorer.json")
     manifest = load_json("large/data/manifest.json")
-    rows = load_json("large/data/records-0.json")
+    rows = [row for path in manifest.get("chunks", {}).get("datasets", []) for row in load_json(path)]
     facets = load_json("large/data/facets.json")
     presentation = load_json("large/data/presentation.json")
     search = load_json("large/data/search/manifest.json")
-    search_results = load_json("large/data/search/results-0.json")
+    search_results = [row for path in search.get("entrypoints", {}).get("result_docs", []) for row in load_json(path)]
     search_postings = load_json("large/data/search/postings.json").get("tokens", {})
     resources = load_json("large/data/resources-0.json")
     relationships = load_json("large/data/relationships-0.json")
@@ -67,6 +67,8 @@ def validate_large_projection() -> list[str]:
         errors.append("descriptor must distinguish the larger supporting-concept count")
     if search.get("counts", {}).get("documents") != len(rows) or len(search_results) != len(rows):
         errors.append("static search must cover all approved planning families")
+    if len(manifest.get("chunks", {}).get("datasets", [])) != 2 or len(search.get("entrypoints", {}).get("result_docs", [])) != 2:
+        errors.append("record and search-result hydration must shard corpora above 1,000 concepts")
     missed_ordinal = next(
         (index for index, row in enumerate(rows) if row.get("name") == "report-missed-rubbish-collection"),
         None,
@@ -86,6 +88,12 @@ def validate_large_projection() -> list[str]:
     dossier_families = [row for row in service_families if row.get("implementation_status") == "population-complete-three-slice"]
     if len(dossier_families) != 6 or any(not row.get("narrative", {}).get("body") for row in dossier_families):
         errors.append("six migrated families must expose authored large-record narratives")
+    authority_geographies = [row for row in rows if row.get("record_type") == "Administrative Geography"]
+    authority_organisations = [row for row in rows if row.get("record_type") == "Organisation"]
+    if len(authority_geographies) != 397 or len(authority_organisations) != 438:
+        errors.append("shared authority projection must expose 397 GSS geographies and 438 organisations")
+    if validation.get("counts", {}).get("authority_geographies") != 397 or validation.get("counts", {}).get("authority_organisations") != 438:
+        errors.append("validation report must reconcile authority and geography infrastructure")
     if sum(row.get("resource_count", 0) for row in service_families) != 53 or len(resources) != 53:
         errors.append("six migrated families must expose exactly 53 linked source resources")
     if any(resource.get("source_access", {}).get("display_mode") != "link" for resource in resources):
@@ -146,7 +154,7 @@ def main() -> int:
         for error in errors:
             print(error)
         return 1
-    print("Large-corpus checks passed: 293 families, 6 dossier-backed narratives, 53 source links, governed relationships, 0 snapshots")
+    print("Large-corpus checks passed: 293 families, 6 dossier-backed narratives, 397 geographies, 438 organisations, 53 source links, governed relationships, 0 snapshots")
     return 0
 
 

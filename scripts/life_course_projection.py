@@ -17,6 +17,7 @@ from life_course_dossiers import load_dossiers, resolve_sources
 
 GENERATED_AT = "2026-08-08T00:00:00+01:00"
 PROCESS_PATH = ROOT / "source" / "life-course-processes.v1.yaml"
+AUTHORITY_REGISTRY_PATH = ROOT / "source" / "authority-registry.v1.yaml"
 RIGHTS = {
     "source": "generated/browser/evidence/licensing-and-attribution.html",
     "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
@@ -36,6 +37,15 @@ def load_processes() -> list[dict[str, Any]]:
 
     value = yaml.safe_load(PROCESS_PATH.read_text(encoding="utf-8")) or {}
     return list(value.get("processes", []))
+
+
+def load_authority_registry() -> dict[str, Any]:
+    import yaml
+
+    value = yaml.safe_load(AUTHORITY_REGISTRY_PATH.read_text(encoding="utf-8")) or {}
+    if not isinstance(value, dict):
+        raise ValueError("authority registry root must be a mapping")
+    return value
 
 
 def route(kind: str, identifier: str) -> str:
@@ -149,6 +159,7 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
     family_by_id = {family["id"]: family for family in families}
     scopes = service_family_scopes(denominator)
     processes = load_processes()
+    authority_registry = load_authority_registry()
     process_by_family = {
         family_id: process for process in processes for family_id in process.get("families", [])
     }
@@ -183,6 +194,71 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
             assertion_status=assertion_status,
             source_url="generated/browser/schemas/life-course-family.v1.schema.json.html",
         ))
+
+    def actor_record(
+        *, identifier: str, title: str, notes: str, family: dict[str, Any], assertion_status: str = "normalized",
+    ) -> dict[str, Any]:
+        shared = rows_by_route.get(route("organisation", identifier))
+        if shared:
+            return shared
+        return support_record(
+            kind="actor", identifier=identifier, title=title, notes=notes,
+            family=family, assertion_status=assertion_status,
+        )
+
+    for area in authority_registry.get("geographies", []):
+        area_record = base_record(
+            name=f"gss-{area['code'].lower()}",
+            title=area["official_name"],
+            notes=(
+                f"Official {area['geography_type'].replace('_', ' ')} area identified by GSS code "
+                f"{area['code']} at the declared vintage. The code identifies the area, not by itself "
+                "the legal body or service provider."
+            ),
+            record_type="Administrative Geography",
+            record_route=route("geography", area["code"]),
+            assertion_status="official",
+            source_url="generated/browser/source/authority-registry.v1.yaml.html",
+        )
+        area_record.update({
+            "search_aliases": [label["value"] for label in area.get("labels", [])],
+            "search_text": [area["code"], area["geography_type"], area["jurisdiction"]],
+            "topics": ["Authority and geography infrastructure"],
+            "tags": ["gss", area["geography_type"], area["jurisdiction"]],
+            "delivery_scope": ["shared-authority-infrastructure"],
+            "jurisdiction": [area["jurisdiction"]],
+            "implementation_status": "shared-authority-infrastructure",
+            "limitations": [authority_registry["identity_rules"]["gss_area_not_body"]],
+        })
+        add_record(area_record)
+
+    for organisation in authority_registry.get("organisations", []):
+        roles = list(organisation.get("roles", []))
+        organisation_record = base_record(
+            name=f"authority-{slug(organisation['id'])}",
+            title=organisation["title"],
+            notes=(
+                "Shared authority, regulator, redress or provider-role identity. "
+                "A family dossier must cite the current route before applying this organisation to a case."
+            ),
+            record_type="Organisation",
+            record_route=route("organisation", organisation["id"]),
+            assertion_status="normalized",
+            source_url="generated/browser/source/authority-registry.v1.yaml.html",
+        )
+        organisation_record.update({
+            "search_aliases": [organisation.get("title_cy", ""), organisation.get("source_native_id", "")],
+            "search_text": [*roles, organisation.get("organisation_type", ""), organisation.get("administers", "")],
+            "topics": ["Authority, regulation and redress"],
+            "tags": ["shared-authority", *[slug(role) for role in roles]],
+            "delivery_scope": ["shared-authority-infrastructure"],
+            "jurisdiction": organisation.get("jurisdictions", []),
+            "implementation_status": "shared-authority-infrastructure",
+            "official_url": organisation.get("official_url"),
+            "identity_status": organisation.get("identity_status"),
+            "limitations": [authority_registry["identity_rules"]["current_route"]],
+        })
+        add_record(organisation_record)
 
     for domain in denominator["domains"]:
         add_record(base_record(
@@ -356,8 +432,8 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
                         relationship(step_record["route"], previous_step_route, "follows", evidence=step["sources"], source_artifact=source_artifact),
                     ])
                 previous_step_route = step_record["route"]
-                provider_record = support_record(
-                    kind="actor", identifier=step["provider"], title=titleize(slug(step["provider"])),
+                provider_record = actor_record(
+                    identifier=step["provider"], title=titleize(slug(step["provider"])),
                     notes="Provider role named by the authored journey step.", family=family,
                 )
                 relationships.append(relationship(
@@ -401,12 +477,12 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
                 evidence=dossier["enclosing_processes"][0]["sources"], source_artifact=source_artifact,
             ))
         for actor in dossier["actors"]:
-            actor_record = support_record(
-                kind="actor", identifier=actor["id"], title=titleize(slug(actor["id"])),
+            dossier_actor_record = actor_record(
+                identifier=actor["id"], title=titleize(slug(actor["id"])),
                 notes=f"Role: {actor['role']}", family=family, assertion_status=actor["authority_status"],
             )
             relationships.append(relationship(
-                family_route, actor_record["route"], "offered-by", evidence=actor["sources"],
+                family_route, dossier_actor_record["route"], "offered-by", evidence=actor["sources"],
                 assertion_status=actor["authority_status"], source_artifact=source_artifact,
             ))
         for applicability in dossier["applicability"]:
@@ -466,6 +542,8 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
             "resources": len(resources),
             "relationships": len(relationships),
             "snapshots": 0,
+            "authority_geographies": len(authority_registry.get("geographies", [])),
+            "authority_organisations": len(authority_registry.get("organisations", [])),
         },
         "violations": [],
         "population_complete_family_ids": sorted(dossiers),

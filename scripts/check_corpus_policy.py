@@ -75,6 +75,11 @@ def validate_corpus_policy(policy: dict[str, Any]) -> list[str]:
     leaf = local.get("leaf_route_layer", {}) if isinstance(local, dict) else {}
     if not isinstance(leaf, dict) or leaf.get("exhaustive_every_authority_required") is not False:
         errors.append(f"{prefix}: leaf coverage must use governed archetypes plus exceptions")
+    authority_layer = local.get("authority_layer", {}) if isinstance(local, dict) else {}
+    if not isinstance(authority_layer, dict) or authority_layer.get("registry") != "source/authority-registry.v1.yaml":
+        errors.append(f"{prefix}: local coverage must bind the reviewed authority registry")
+    if not isinstance(authority_layer, dict) or authority_layer.get("registry_observed_at") != "2026-08-08":
+        errors.append(f"{prefix}: authority registry must retain its reviewed observation date")
 
     identifiers = policy.get("geography_and_organisation_identifiers", {})
     geography = identifiers.get("administrative_geography", {}) if isinstance(identifiers, dict) else {}
@@ -86,6 +91,17 @@ def validate_corpus_policy(policy: dict[str, Any]) -> list[str]:
     postcode = identifiers.get("postcode", {}) if isinstance(identifiers, dict) else {}
     if not isinstance(postcode, dict) or postcode.get("storage_allowed") is not False:
         errors.append(f"{prefix}: postcode storage must remain prohibited")
+    language_identity = identifiers.get("language_variant_identity", {}) if isinstance(identifiers, dict) else {}
+    prohibited_language_evidence = set(language_identity.get("prohibited_evidence", [])) if isinstance(language_identity, dict) else set()
+    if not isinstance(language_identity, dict) or "publisher explicitly pairs" not in str(language_identity.get("rule", "")):
+        errors.append(f"{prefix}: language identity must require explicit publisher pairing")
+    if prohibited_language_evidence != {"label_similarity", "translated_slug_similarity", "parallel_url_pattern_without_publisher_pairing"}:
+        errors.append(f"{prefix}: language identity must prohibit similarity-only evidence")
+    local_services = identifiers.get("local_service_identifiers", {}) if isinstance(identifiers, dict) else {}
+    if not isinstance(local_services, dict) or local_services.get("use") != "optional_mapping_vocabulary_only":
+        errors.append(f"{prefix}: LGSL must remain an optional mapping vocabulary")
+    if not isinstance(local_services, dict) or local_services.get("establishes_current_service_availability") is not False:
+        errors.append(f"{prefix}: LGSL must not establish current service availability")
 
     health = policy.get("health_source_permissions", {})
     if not isinstance(health, dict) or health.get("decision") != "keep_manual_link_and_original_summary_only":
@@ -107,6 +123,8 @@ def validate_corpus_policy(policy: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: sector redress must use the governed taxonomy")
     if not isinstance(redress, dict) or len(redress.get("sequence", [])) != 5:
         errors.append(f"{prefix}: sector redress sequence must contain five governed levels")
+    if not isinstance(redress, dict) or redress.get("registry") != "source/authority-registry.v1.yaml":
+        errors.append(f"{prefix}: sector redress must bind the shared authority registry")
 
     review = policy.get("claim_review", {})
     coordinator = review.get("coordinator", {}) if isinstance(review, dict) else {}
@@ -131,6 +149,14 @@ def validate_corpus_policy(policy: dict[str, Any]) -> list[str]:
         errors.append(f"{prefix}: large-corpus approval must record all four completed review prerequisites")
     if not isinstance(explorer, dict) or explorer.get("publication_allowed") is not False:
         errors.append(f"{prefix}: large-corpus policy must not authorize publication")
+
+    links = policy.get("link_verification", {})
+    if not isinstance(links, dict) or links.get("decision") != "metadata_only_live_audit_separate_from_deterministic_offline_checks":
+        errors.append(f"{prefix}: link verification must remain a separate metadata-only live audit")
+    if not isinstance(links, dict) or links.get("response_body_retained") is not False:
+        errors.append(f"{prefix}: link verification must not retain response bodies")
+    if not isinstance(links, dict) or links.get("offline_build_network_access") is not False:
+        errors.append(f"{prefix}: deterministic offline builds must not access the network")
 
     denominator, denominator_errors = load_service_denominator()
     errors.extend(denominator_errors)

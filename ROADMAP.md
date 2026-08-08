@@ -92,6 +92,15 @@ existing references as link-only typed resources, and deterministic JSON-LD,
 YAML-LD, validation, locator, adjacency and provenance-bearing relationship
 projections. No source response body or snapshot was acquired.
 
+The shared authority/source-infrastructure delivery completed locally on
+2026-08-08. Its reviewed denominators contain 382 principal-authority areas,
+19 strategic/combined authorities, 397 dated GSS geographies, 438 reusable
+organizations and ten regulator/redress sector maps. Seven external
+infrastructure sources have body-free metadata receipts. The 1,434-concept
+projection and its search results are now deterministically sharded above the
+1,000-record boundary and pass real local Explorer search, detail and graph
+journeys. Pack 1 is the next bounded population unit.
+
 ## Phase 5 — release candidate and publication
 
 - Complete the initial-sample review, compatibility and scope gates.

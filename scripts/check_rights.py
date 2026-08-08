@@ -15,6 +15,7 @@ from check_inventory import flatten_inventory_references, load_reference_invento
 
 ROOT = Path(__file__).resolve().parents[1]
 RIGHTS_PATH = ROOT / "source" / "rights-decisions.v1.yaml"
+AUTHORITY_REGISTRY_PATH = ROOT / "source" / "authority-registry.v1.yaml"
 LICENSE_PATH = ROOT / "LICENSE"
 NOTICE_PATH = ROOT / "NOTICE.md"
 EXPECTED_OGL_ATTRIBUTION = (
@@ -86,6 +87,14 @@ def validate_rights_register(register: dict[str, Any]) -> list[str]:
     if not isinstance(projection, dict) or not _nonempty(projection.get("condition")):
         errors.append(f"{prefix}: generated projection redistribution must be conditional")
 
+    link_policy = register.get("link_only_reference_policy", {})
+    if not isinstance(link_policy, dict) or link_policy.get("source_response_body_retained") is not False:
+        errors.append(f"{prefix}: link-only reference policy must retain no response body")
+    if not isinstance(link_policy, dict) or link_policy.get("source_snapshots_acquired") is not False:
+        errors.append(f"{prefix}: link-only reference policy must retain no snapshots")
+    if not isinstance(link_policy, dict) or link_policy.get("decided_at") != "2026-08-08":
+        errors.append(f"{prefix}: link-only reference policy must retain its decision date")
+
     attribution = register.get("attribution", {})
     if not isinstance(attribution, dict) or attribution.get("ogl_v3_fallback") != EXPECTED_OGL_ATTRIBUTION:
         errors.append(f"{prefix}: OGL v3 fallback attribution is missing or changed")
@@ -147,6 +156,25 @@ def validate_rights_register(register: dict[str, Any]) -> list[str]:
                 f"{prefix}: {reference.get('id', 'inventory reference')} rights decision "
                 "does not match its resource host"
             )
+    try:
+        authority_registry = yaml.safe_load(AUTHORITY_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as error:
+        errors.append(f"{AUTHORITY_REGISTRY_PATH.relative_to(ROOT)}: {error}")
+        authority_registry = {}
+    for source in authority_registry.get("sources", []) if isinstance(authority_registry, dict) else []:
+        if not isinstance(source, dict) or source.get("rights_decision") == "repository:MIT":
+            continue
+        source_count += 1
+        resource_host = urlparse(str(source.get("url", ""))).netloc.lower()
+        source_hosts.add(resource_host)
+        if source.get("rights_decision") != f"host:{resource_host}":
+            errors.append(f"{prefix}: authority source {source.get('id')} rights decision does not match its URL host")
+        query_url = str(source.get("query_url", ""))
+        if query_url:
+            query_host = urlparse(query_url).netloc.lower()
+            source_hosts.add(query_host)
+            if source.get("query_rights_decision") != f"host:{query_host}":
+                errors.append(f"{prefix}: authority source {source.get('id')} query rights decision does not match its query host")
     if set(decision_hosts) != source_hosts:
         missing = sorted(source_hosts - set(decision_hosts))
         extra = sorted(set(decision_hosts) - source_hosts)
