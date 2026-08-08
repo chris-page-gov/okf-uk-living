@@ -8,5 +8,18 @@ The Pages workflow is manual-only. It verifies every source file against the
 manifest and copies those bytes into the deployment artifact; it does not
 rebuild the corpus or acquire source content.
 
+The workflow checks out publication merge
+`980c7a9ec19ddd4161cefa348de689d179d1992b` before transport. This keeps later
+documentation and evaluation commits from changing the 1,549 authorized files.
+Local validation uses `uv run --locked python
+scripts/prepare_pages_publication.py --frozen` to verify the pinned manifest
+identity.
+
 The preview is not release-grade. Its descriptor and landing page retain the
 291 specialist-review warnings and direct readers to current official sources.
+
+The 2026-08-08 enablement attempt failed before deployment because the current
+GitHub plan does not support Pages for the private repository. Visibility was
+not changed and no public URL is verified. Deployment now requires an explicit
+owner choice between public visibility and a separate public publication
+repository.

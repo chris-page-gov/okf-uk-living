@@ -10,22 +10,23 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from prepare_pages_publication import (  # noqa: E402
     EXPECTED_CANDIDATE_ID,
-    build_manifest,
+    PUBLICATION_SOURCE_COMMIT,
     descriptor_errors,
-    validate_manifest,
+    load_frozen_manifest,
+    validate_frozen_publication,
 )
 
 
 class PagesPublicationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.manifest = build_manifest()
+        cls.manifest = load_frozen_manifest()
 
     def test_public_descriptor_changes_only_publication_envelope(self) -> None:
         self.assertEqual([], descriptor_errors())
 
     def test_manifest_is_complete_and_synchronized(self) -> None:
-        self.assertEqual([], validate_manifest(self.manifest))
+        self.assertEqual([], validate_frozen_publication(self.manifest))
         self.assertEqual(EXPECTED_CANDIDATE_ID, self.manifest["candidate_id"])
         self.assertGreater(self.manifest["file_count"], 1_500)
         self.assertFalse(self.manifest["release_grade"])
@@ -44,6 +45,7 @@ class PagesPublicationTests(unittest.TestCase):
         landing = (ROOT / "publication/index.html").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:", workflow)
         self.assertNotIn("\n  push:", workflow)
+        self.assertIn(f"ref: {PUBLICATION_SOURCE_COMMIT}", workflow)
         self.assertIn("population-complete preview", landing)
         self.assertIn("https://chris-page-gov.github.io/okf-explorer/", landing)
         self.assertIn("okf-uk-living%2Fokf-explorer.json", landing)

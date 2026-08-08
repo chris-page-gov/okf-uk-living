@@ -33,7 +33,7 @@ check:
 	uv run --locked python scripts/check_search_acceptance.py
 	uv run --locked python scripts/build_population_assurance.py --check
 	uv run --locked python scripts/check_population_assurance.py
-	uv run --locked python scripts/prepare_pages_publication.py
+	uv run --locked python scripts/prepare_pages_publication.py --frozen
 
 check-browser-handoff:
 	uv run --locked python scripts/build_browser_handoff.py --check
@@ -80,7 +80,7 @@ check-population-assurance:
 	uv run --locked python scripts/check_population_assurance.py
 
 check-pages-publication:
-	uv run --locked python scripts/prepare_pages_publication.py
+	uv run --locked python scripts/prepare_pages_publication.py --frozen
 
 test:
 	uv run --locked python -m unittest discover -s tests
@@ -110,5 +110,5 @@ validate:
 	uv run --locked python scripts/build_population_assurance.py
 	uv run --locked python scripts/build_population_assurance.py --check
 	uv run --locked python scripts/check_population_assurance.py
-	uv run --locked python scripts/prepare_pages_publication.py
+	uv run --locked python scripts/prepare_pages_publication.py --frozen
 	uv run --locked python -m unittest discover -s tests

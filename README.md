@@ -17,9 +17,11 @@ all 24 life-course domains. The shared infrastructure now adds
 ten sector maps and metadata-only source-link receipts. Deterministic population
 assurance records zero blocking omissions and freezes the exact local data-plane
 artifacts. This is not an official service corpus, a release-grade candidate or
-a release-grade service. The frozen publication unit is awaiting exact-byte
-Pages deployment and public-browser verification. The GitHub
-repository is private; deterministic evaluation remains local-only, snapshots,
+a release-grade service. GitHub rejected Pages enablement because the current
+plan does not support Pages for this private repository, so exact-byte
+deployment and public-browser verification are blocked on an owner choice of
+publication host or visibility. The GitHub repository remains private;
+deterministic evaluation remains local-only, snapshots,
 unbounded or unstaged leaf acquisition and remote CI remain disabled. The only
 authorized hosted action is the manual exact-byte Pages transport.
 
@@ -47,6 +49,7 @@ authorized hosted action is the manual exact-byte Pages transport.
 - [Pack 7 civic/enterprise/creativity review](evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md)
 - [Pack 8 mobility/later-life/death review](evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md)
 - [Population assurance review](evaluation/reviews/population-assurance-2026-08-08.md)
+- [Population-preview UI-efficiency review](evaluation/reviews/population-preview-ui-efficiency-2026-08-08.md)
 - [Frozen local population candidate](evaluation/candidates/population-complete-candidate.v1.yaml)
 - [Generated candidate manifest](generated/assurance/candidate-manifest.json)
 - [Publication authorization](evaluation/publication/population-preview-authorization-2026-08-08.md)
@@ -130,7 +133,7 @@ uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python scripts/build_population_assurance.py
 uv run --locked python scripts/build_population_assurance.py --check
 uv run --locked python scripts/check_population_assurance.py
-uv run --locked python scripts/prepare_pages_publication.py
+uv run --locked python scripts/prepare_pages_publication.py --frozen
 uv run --locked python -m unittest discover -s tests
 ```
 
