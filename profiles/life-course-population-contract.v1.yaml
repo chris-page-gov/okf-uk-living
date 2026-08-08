@@ -1,0 +1,173 @@
+contract_version: life-course-population-contract.v1
+status: owner_authorized
+decision_date: "2026-08-08"
+approved_by: owner:chris-page-gov
+
+decision:
+  objective: populate_all_approved_life_course_service_families
+  service_family_denominator: source/service-family-denominator.v1.yaml
+  enclosing_process_denominator: source/life-course-processes.v1.yaml
+  family_count: 293
+  domain_count: 24
+  process_count_minimum: 40
+  process_count_maximum: 50
+  completion_gates:
+    population_complete: >-
+      Every approved family is searchable, source-linked, placed in an
+      enclosing process, connected by governed relationships and supplied
+      with an ordinary and exception journey. Specialist-review warnings may
+      remain visible.
+    release_grade: >-
+      Every applicable legal, clinical and high-impact operational claim has
+      named reviewer acceptance and a current source observation.
+    publication_ready: >-
+      A release-grade candidate is frozen and the exact deployed bytes pass
+      real-browser identity and journey checks after a separate publication
+      request.
+
+authorization:
+  permits:
+    - staged_full_population_implementation_against_the_293_family_denominator
+    - one_authored_life_course_family_v1_dossier_per_family
+    - linked_reference_registration_and_original_summaries
+    - governed_relationship_and_semantic_projection_generation
+    - metadata_only_source_link_verification
+    - local_okf_explorer_evaluation
+    - bounded_universal_okf_explorer_contract_changes
+  prohibits:
+    - source_snapshots
+    - source_content_redistribution
+    - personalized_eligibility_legal_or_medical_decisions
+    - unsupported_cross_jurisdiction_equivalence
+    - real_personal_data
+    - remote_ci_without_explicit_owner_request
+    - github_pages_or_other_publication_without_explicit_owner_request
+
+authored_contract:
+  dossier_schema: schemas/life-course-family.v1.schema.json
+  source_link_receipt_schema: schemas/source-link-receipt.v1.schema.json
+  governed_predicates: ontology/governed-predicates.v1.yaml
+  validation_shapes: shapes/life-course-family.v1.yaml
+  dossier_root: source/life-course-families
+  domain_source_register_root: source/domain-registers
+  narrative_root: services
+  required_family_states:
+    - supported
+    - not_applicable
+    - not_published_by_source
+  forbidden_population_complete_states:
+    - unresolved_primary_route
+    - unresolved_applicable_jurisdiction
+    - unresolved_accountable_provider
+    - missing_ordinary_journey
+    - missing_exception_boundary
+    - missing_required_source
+
+journey_contract:
+  required_paths:
+    - ordinary
+    - exception_or_failure
+  required_step_dimensions:
+    - interaction
+    - provider
+    - requirements
+    - evidence
+    - rule
+    - channel
+    - cost
+    - time
+    - output
+    - outcome
+    - redress
+    - assertion_status
+    - sources
+  safety_boundary: >-
+    Journeys explain and navigate sourced processes. They do not decide a
+    person's eligibility, liability, diagnosis, treatment or legal outcome.
+
+source_contract:
+  mode: linked_reference_and_original_summary_only
+  snapshots_acquired: false
+  source_content_redistribution_allowed: false
+  primary_route_rule: >-
+    Each applicable route variant requires a current authoritative link or a
+    sourced non-applicability decision. A discovery index alone does not prove
+    a leaf-service rule.
+  local_model: exhaustive_authority_registry_plus_representative_and_exception_leaf_routes
+  health_model: manual_link_and_original_summary_only
+  private_dependency_model: regulator_first
+  welsh_language_identity_rule: >-
+    Treat Welsh and English resources as language variants only when the
+    publisher explicitly pairs them; otherwise preserve separate identity.
+
+search_contract:
+  model: governed_static_lexical
+  external_ai_service: false
+  indexed_fields:
+    - title
+    - aliases
+    - description
+    - life_course_domain
+    - enclosing_process
+    - situations
+    - user_needs
+    - journey_steps
+    - providers
+    - evidence
+    - rules
+    - outcomes
+    - redress
+    - source_titles
+  canonical_alias_top_n: 5
+  competency_question_minimum: 100
+  competency_expected_top_n: 10
+  unmatched_query_rule: return_no_invented_semantic_result_and_offer_domain_browsing
+
+semantic_contract:
+  central_hierarchy:
+    - life_course_domain
+    - enclosing_process
+    - service_family
+    - ordinary_or_exception_episode
+  relationship_schema: okf-relationship-assertion.v2
+  assertion_status_required: true
+  provenance_required: true
+  evidence_required_for_material_edge: true
+  generated_formats:
+    - yaml_ld
+    - json_ld
+    - shacl_style_validation_report
+    - okf_explorer_large_corpus
+  generated_projection_licence: MIT
+
+delivery_packs:
+  - id: pack-1-family-beginnings
+    domains: [before-birth-and-starting-family, birth-and-newborn, early-years]
+    expected_families: 36
+  - id: pack-2-learning-and-transition
+    domains: [school-years, transition-to-adulthood, further-education-university-research]
+    expected_families: 36
+  - id: pack-3-work-and-money
+    domains: [finding-work-and-unemployment, employment, money-tax-and-benefits]
+    expected_families: 36
+  - id: pack-4-home-place-and-transport
+    domains: [housing-and-community, rubbish-recycling-and-street, public-and-private-transport]
+    expected_families: 36
+  - id: pack-5-enforcement-consumer-and-justice
+    domains: [transport-enforcement, shopping-and-consumer-rights, police-and-legal-services]
+    expected_families: 36
+  - id: pack-6-relationships-health-and-care
+    domains: [relationships-and-family-change, health-throughout-life, disability-care-and-support]
+    expected_families: 36
+  - id: pack-7-civic-enterprise-and-creativity
+    domains: [citizenship-democracy-and-rights, starting-and-running-organisation, ideas-creativity-and-research]
+    expected_families: 36
+  - id: pack-8-mobility-later-life-and-death
+    domains: [holidays-volunteering-and-living-overseas, later-life, death-and-bereavement]
+    expected_families: 41
+
+pull_request_rule: >-
+  Every implementation pull request updates ROADMAP.md, PLANNING.md,
+  TRACKING.md, REPOSITORY_STATUS.md, CHANGELOG.md and affected authoring
+  guidance in lockstep and states that GitHub Pages was not updated.
+

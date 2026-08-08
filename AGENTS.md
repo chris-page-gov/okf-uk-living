@@ -38,6 +38,10 @@ life events from before birth to death and bereavement.
 - Apply MIT only to repository-authored code, documentation and ontology
   terms. Source content remains linked and summarized, not redistributed;
   enforce the dated decisions in `source/rights-decisions.v1.yaml`.
+- Implement the 293-family population only in the eight governed packs in
+  `profiles/life-course-population-contract.v1.yaml`. Every family must remain
+  mapped to an enclosing process, and population completion must stay separate
+  from specialist-reviewed release grade.
 
 ## Required checks
 
@@ -54,6 +58,7 @@ uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
+uv run --locked python scripts/check_population_contract.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
@@ -75,7 +80,7 @@ every pull request, state that GitHub Pages was not updated and requires an
 explicit owner publication request, unless that pull request records such a
 request and its deployment and browser-verification evidence.
 
-## Initial modelling priority
+## Modelling priority
 
 Implement three vertical slices before expanding the corpus:
 
@@ -85,3 +90,8 @@ Implement three vertical slices before expanding the corpus:
 
 These slices must exercise ordinary paths, exceptions, evidence, time,
 jurisdiction, authority, required private-sector dependencies and redress.
+
+The three slices are complete. The owner authorized staged implementation of
+all 293 families on 2026-08-08. New families follow
+`life-course-family.v1`, the 48-process navigation denominator and the existing
+link-only, jurisdiction, privacy, review and publication boundaries.

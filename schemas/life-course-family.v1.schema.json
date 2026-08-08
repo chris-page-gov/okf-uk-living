@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/life-course-family.v1.schema.json",
+  "title": "A Life in the UK life-course family dossier",
+  "type": "object",
+  "required": [
+    "schema", "id", "title", "aliases", "description", "status",
+    "assertion_status", "life_course_domain", "enclosing_processes",
+    "situations", "user_needs", "interaction_boundary", "applicability",
+    "actors", "journeys", "dependencies", "sources", "limitations",
+    "review", "narrative"
+  ],
+  "properties": {
+    "schema": {"const": "life-course-family.v1"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1},
+    "aliases": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "description": {"type": "string", "minLength": 1},
+    "status": {"enum": ["draft", "population_complete", "release_grade"]},
+    "assertion_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+    "life_course_domain": {"type": "string", "minLength": 1},
+    "enclosing_processes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/identifierReference"}},
+    "situations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "user_needs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "interaction_boundary": {"type": "string", "minLength": 1},
+    "applicability": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/applicability"}},
+    "actors": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/actor"}},
+    "journeys": {
+      "type": "object",
+      "required": ["ordinary", "exceptions"],
+      "properties": {
+        "ordinary": {"$ref": "#/$defs/journey"},
+        "exceptions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/journey"}}
+      },
+      "additionalProperties": false
+    },
+    "dependencies": {"type": "array", "items": {"type": "object"}},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "review": {
+      "type": "object",
+      "required": ["population_gate", "specialist_review"],
+      "properties": {
+        "population_gate": {"enum": ["incomplete", "complete"]},
+        "specialist_review": {"enum": ["not_required", "required", "accepted"]}
+      }
+    },
+    "narrative": {
+      "type": "object",
+      "required": ["markdown", "process_context"],
+      "properties": {
+        "markdown": {"type": "string", "pattern": "^services/.+\\.md$"},
+        "process_context": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "$defs": {
+    "identifierReference": {
+      "type": "object",
+      "required": ["id", "assertion_status", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "assertion_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "required": ["jurisdiction", "state", "route_variants", "sources"],
+      "properties": {
+        "jurisdiction": {"type": "string", "minLength": 1},
+        "state": {"enum": ["supported", "not_applicable", "not_published_by_source"]},
+        "route_variants": {"type": "array"},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "actor": {
+      "type": "object",
+      "required": ["id", "role", "authority_status", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "authority_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "journey": {
+      "type": "object",
+      "required": ["id", "entry_state", "outcome", "steps"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "entry_state": {"type": "string", "minLength": 1},
+        "outcome": {"type": "string", "minLength": 1},
+        "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}}
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": ["id", "interaction", "provider", "requirements", "evidence", "rule", "channel", "cost", "time", "output", "outcome", "redress", "assertion_status", "sources"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "interaction": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "minLength": 1},
+        "requirements": {}, "evidence": {}, "rule": {}, "channel": {}, "cost": {}, "time": {}, "output": {}, "outcome": {}, "redress": {},
+        "assertion_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "owner", "authority_role", "resource", "jurisdiction", "observed_at", "freshness", "rights_decision", "summary", "limitations"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "owner": {"type": "string", "minLength": 1},
+        "authority_role": {"type": "string", "minLength": 1},
+        "resource": {"type": "string", "pattern": "^https://"},
+        "jurisdiction": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "observed_at": {"type": "string", "format": "date"},
+        "freshness": {"type": "string", "minLength": 1},
+        "rights_decision": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 1},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "snapshot": {"const": false}
+      }
+    }
+  }
+}
+

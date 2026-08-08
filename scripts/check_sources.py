@@ -115,6 +115,8 @@ def load_source_registers() -> tuple[list[dict[str, Any]], list[str]]:
         if not isinstance(value, dict):
             errors.append(f"{path.relative_to(ROOT)}: root must be a mapping")
             continue
+        if "register_version" not in value:
+            continue
         value["_path"] = path.relative_to(ROOT).as_posix()
         registers.append(value)
     return registers, errors

@@ -86,6 +86,27 @@ boundary. Repository-authored code, documentation and ontology terms are MIT.
 Official pages remain linked references with original summaries; do not copy
 page text, images, logos or other assets into authored or generated output.
 
+## Full-population dossiers
+
+The owner-authorized
+[`life-course-population-contract.v1`](../profiles/life-course-population-contract.v1.yaml)
+governs the staged 293-family implementation. Each family is authored as a
+`life-course-family.v1` dossier under `source/life-course-families/<domain>/`
+and has a matching service narrative. The dossier retains structured
+applicability, actors, an ordinary journey, at least one exception or failure
+journey, dependencies, sources, limitations and review state.
+
+Every family references one of the 48 normalized processes in
+[`life-course-processes.v1`](../source/life-course-processes.v1.yaml). Process
+membership supports navigation and never establishes official service
+identity, shared rules or four-nation equivalence. Material graph edges use the
+[governed predicates](../ontology/governed-predicates.v1.yaml) and retain
+assertion status, authority, evidence, derivation, observation time and rights.
+
+Source-link receipts retain response metadata only. They never store response
+bodies. An automated block may be resolved by an explicit real-browser receipt;
+a discovery page is not sufficient evidence for a leaf-service rule.
+
 Contract validation checks structure, jurisdiction coverage, ordinary and
 exception paths, assertion status and publication gates. A passing contract
 check does not approve the profile or validate a real service route.
@@ -154,6 +175,7 @@ uv run --locked python scripts/check_sources.py
 uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
+uv run --locked python scripts/check_population_contract.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check

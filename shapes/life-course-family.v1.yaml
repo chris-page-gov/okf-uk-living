@@ -1,0 +1,49 @@
+shape_set_version: life-course-family-shapes.v1
+status: shacl_style_validation_contract_not_claimed_rdf_conformance
+decision_date: "2026-08-08"
+profile: profiles/life-course-population-contract.v1.yaml
+
+shapes:
+  - id: LifeCourseFamilyShape
+    target_schema: life-course-family.v1
+    closed: false
+    required:
+      - id
+      - title
+      - description
+      - life_course_domain
+      - enclosing_processes
+      - situations
+      - user_needs
+      - interaction_boundary
+      - applicability
+      - actors
+      - journeys
+      - dependencies
+      - sources
+      - limitations
+      - review
+      - narrative
+    rules:
+      - enclosing_processes_min_count_1
+      - ordinary_journey_exactly_1
+      - exception_or_failure_journeys_min_count_1
+      - applicable_route_variant_requires_primary_source
+      - material_relationship_requires_assertion_status_provenance_and_evidence
+      - official_assertion_requires_authoritative_source_with_matching_scope
+      - real_personal_data_forbidden
+      - personalized_decision_logic_forbidden
+  - id: JourneyStepShape
+    target_path: journeys.*.steps.*
+    required: [id, interaction, provider, requirements, evidence, rule, channel, cost, time, output, outcome, redress, assertion_status, sources]
+  - id: SourceReferenceShape
+    target_path: sources.*
+    required: [id, title, owner, authority_role, resource, jurisdiction, observed_at, freshness, rights_decision, summary, limitations]
+    rules:
+      - https_resource_required
+      - source_snapshot_forbidden
+      - original_summary_required
+  - id: MaterialRelationshipShape
+    target_schema: okf-relationship-assertion.v2
+    required: [source, target, predicate, assertion_status, authority, derivation, observed_at, evidence, rights]
+

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ontology/governed-predicates.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>ontology/governed-predicates.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>ontology/governed-predicates.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>predicate_registry_version: governed-predicates.v1
+status: owner_authorized_for_population_implementation
+decision_date: &quot;2026-08-08&quot;
+licence: MIT
+namespace: https://chris-page-gov.github.io/okf-uk-living/terms/
+assertion_rule: &gt;-
+  A governed predicate supplies stable repository semantics. It does not make
+  an edge official; each relationship separately records assertion status,
+  authority, evidence, derivation, observation time and limitations.
+
+predicates:
+  - id: belongs-to-life-course-domain
+    label: belongs to life-course domain
+    source_types: [Enclosing Process, Service Family]
+    target_types: [Life-course Domain]
+    mapping_reference: skos:broader
+  - id: part-of-enclosing-process
+    label: part of enclosing process
+    source_types: [Service Family, Service Episode]
+    target_types: [Enclosing Process]
+    mapping_reference: dcterms:isPartOf
+  - id: addresses-user-need
+    label: addresses user need
+    source_types: [Service Family, Public Service]
+    target_types: [User Need]
+    mapping_reference: cpsv:hasInput
+  - id: has-episode
+    label: has episode
+    source_types: [Service Family]
+    target_types: [Service Episode]
+    mapping_reference: dcterms:hasPart
+  - id: precedes
+    label: precedes
+    source_types: [Service Episode]
+    target_types: [Service Episode]
+    mapping_reference: schema:before
+  - id: follows
+    label: follows
+    source_types: [Service Episode]
+    target_types: [Service Episode]
+    mapping_reference: schema:after
+  - id: offered-by
+    label: offered by
+    source_types: [Public Service, Service Family]
+    target_types: [Organisation]
+    mapping_reference: cpsv:hasCompetentAuthority
+  - id: delivered-by
+    label: delivered by
+    source_types: [Service Episode]
+    target_types: [Organisation, Provider Role]
+    mapping_reference: schema:provider
+  - id: applies-in-jurisdiction
+    label: applies in jurisdiction
+    source_types: [Service Family, Service Variant, Rule]
+    target_types: [Jurisdiction, Geography]
+    mapping_reference: dcterms:spatial
+  - id: requires
+    label: requires
+    source_types: [Service Episode]
+    target_types: [Requirement, Evidence, Dependency]
+    mapping_reference: cpsv:hasInput
+  - id: governed-by
+    label: governed by
+    source_types: [Service Family, Service Episode]
+    target_types: [Rule]
+    mapping_reference: cpsv:follows
+  - id: produces
+    label: produces
+    source_types: [Service Episode]
+    target_types: [Output, Decision, Artefact]
+    mapping_reference: cpsv:produces
+  - id: has-outcome
+    label: has outcome
+    source_types: [Service Family, Service Episode]
+    target_types: [Outcome]
+    mapping_reference: cpsv:produces
+  - id: depends-on
+    label: depends on
+    source_types: [Service Family, Service Episode]
+    target_types: [Dependency, Organisation, Provider Role]
+    mapping_reference: dcterms:relation
+  - id: has-redress
+    label: has redress
+    source_types: [Service Family, Service Episode, Decision]
+    target_types: [Redress]
+    mapping_reference: dcterms:relation
+  - id: supported-by-source
+    label: supported by source
+    source_types: [Service Family, Service Episode, Rule, Relationship]
+    target_types: [Source Reference]
+    mapping_reference: prov:wasDerivedFrom
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/life-course-family.v1.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/life-course-family.v1.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/life-course-family.v1.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/life-course-family.v1.schema.json&quot;,
+  &quot;title&quot;: &quot;A Life in the UK life-course family dossier&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;schema&quot;, &quot;id&quot;, &quot;title&quot;, &quot;aliases&quot;, &quot;description&quot;, &quot;status&quot;,
+    &quot;assertion_status&quot;, &quot;life_course_domain&quot;, &quot;enclosing_processes&quot;,
+    &quot;situations&quot;, &quot;user_needs&quot;, &quot;interaction_boundary&quot;, &quot;applicability&quot;,
+    &quot;actors&quot;, &quot;journeys&quot;, &quot;dependencies&quot;, &quot;sources&quot;, &quot;limitations&quot;,
+    &quot;review&quot;, &quot;narrative&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;schema&quot;: {&quot;const&quot;: &quot;life-course-family.v1&quot;},
+    &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[a-z0-9]+(?:-[a-z0-9]+)*$&quot;},
+    &quot;title&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;aliases&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+    &quot;description&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;status&quot;: {&quot;enum&quot;: [&quot;draft&quot;, &quot;population_complete&quot;, &quot;release_grade&quot;]},
+    &quot;assertion_status&quot;: {&quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;editorial-example&quot;]},
+    &quot;life_course_domain&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;enclosing_processes&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/identifierReference&quot;}},
+    &quot;situations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+    &quot;user_needs&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+    &quot;interaction_boundary&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;applicability&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/applicability&quot;}},
+    &quot;actors&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/actor&quot;}},
+    &quot;journeys&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;ordinary&quot;, &quot;exceptions&quot;],
+      &quot;properties&quot;: {
+        &quot;ordinary&quot;: {&quot;$ref&quot;: &quot;#/$defs/journey&quot;},
+        &quot;exceptions&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/journey&quot;}}
+      },
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;dependencies&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;object&quot;}},
+    &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/source&quot;}},
+    &quot;limitations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+    &quot;review&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;population_gate&quot;, &quot;specialist_review&quot;],
+      &quot;properties&quot;: {
+        &quot;population_gate&quot;: {&quot;enum&quot;: [&quot;incomplete&quot;, &quot;complete&quot;]},
+        &quot;specialist_review&quot;: {&quot;enum&quot;: [&quot;not_required&quot;, &quot;required&quot;, &quot;accepted&quot;]}
+      }
+    },
+    &quot;narrative&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;markdown&quot;, &quot;process_context&quot;],
+      &quot;properties&quot;: {
+        &quot;markdown&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^services/.+\\.md$&quot;},
+        &quot;process_context&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}
+      }
+    }
+  },
+  &quot;$defs&quot;: {
+    &quot;identifierReference&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;assertion_status&quot;, &quot;sources&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;assertion_status&quot;: {&quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;editorial-example&quot;]},
+        &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}}
+      }
+    },
+    &quot;applicability&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;jurisdiction&quot;, &quot;state&quot;, &quot;route_variants&quot;, &quot;sources&quot;],
+      &quot;properties&quot;: {
+        &quot;jurisdiction&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;state&quot;: {&quot;enum&quot;: [&quot;supported&quot;, &quot;not_applicable&quot;, &quot;not_published_by_source&quot;]},
+        &quot;route_variants&quot;: {&quot;type&quot;: &quot;array&quot;},
+        &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}}
+      }
+    },
+    &quot;actor&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;role&quot;, &quot;authority_status&quot;, &quot;sources&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;role&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;authority_status&quot;: {&quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;editorial-example&quot;]},
+        &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}}
+      }
+    },
+    &quot;journey&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;entry_state&quot;, &quot;outcome&quot;, &quot;steps&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;entry_state&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;outcome&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;steps&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/step&quot;}}
+      }
+    },
+    &quot;step&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;interaction&quot;, &quot;provider&quot;, &quot;requirements&quot;, &quot;evidence&quot;, &quot;rule&quot;, &quot;channel&quot;, &quot;cost&quot;, &quot;time&quot;, &quot;output&quot;, &quot;outcome&quot;, &quot;redress&quot;, &quot;assertion_status&quot;, &quot;sources&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;interaction&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;provider&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;requirements&quot;: {}, &quot;evidence&quot;: {}, &quot;rule&quot;: {}, &quot;channel&quot;: {}, &quot;cost&quot;: {}, &quot;time&quot;: {}, &quot;output&quot;: {}, &quot;outcome&quot;: {}, &quot;redress&quot;: {},
+        &quot;assertion_status&quot;: {&quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;editorial-example&quot;]},
+        &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}}
+      }
+    },
+    &quot;source&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;title&quot;, &quot;owner&quot;, &quot;authority_role&quot;, &quot;resource&quot;, &quot;jurisdiction&quot;, &quot;observed_at&quot;, &quot;freshness&quot;, &quot;rights_decision&quot;, &quot;summary&quot;, &quot;limitations&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;title&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;owner&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;authority_role&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;resource&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^https://&quot;},
+        &quot;jurisdiction&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+        &quot;observed_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date&quot;},
+        &quot;freshness&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;rights_decision&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;summary&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        &quot;limitations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1}},
+        &quot;snapshot&quot;: {&quot;const&quot;: false}
+      }
+    }
+  }
+}
+
+</pre>
+</body>
+</html>

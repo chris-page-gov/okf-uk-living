@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/source-link-receipt.v1.schema.json",
+  "title": "Metadata-only source-link verification receipt",
+  "type": "object",
+  "required": ["schema", "source_id", "url", "checked_at", "method", "result", "response_body_retained"],
+  "properties": {
+    "schema": {"const": "source-link-receipt.v1"},
+    "source_id": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "pattern": "^https://"},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "method": {"enum": ["http-metadata", "real-browser"]},
+    "result": {"enum": ["active", "redirected-active", "browser-verified", "failed", "blocked"]},
+    "status_code": {"type": ["integer", "null"]},
+    "final_url": {"type": "string"},
+    "media_type": {"type": "string"},
+    "display_mode": {"enum": ["link", "json", "xml", "text"]},
+    "response_body_retained": {"const": false},
+    "limitation": {"type": "string"}
+  },
+  "additionalProperties": false
+}

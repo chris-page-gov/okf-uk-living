@@ -22,6 +22,12 @@ class BrowserHandoffTests(unittest.TestCase):
             Path("LICENSE.html"),
             Path("LICENSE_DECISIONS.html"),
             Path("NOTICE.html"),
+            Path("ontology/governed-predicates.v1.yaml.html"),
+            Path("profiles/life-course-population-contract.v1.yaml.html"),
+            Path("schemas/life-course-family.v1.schema.json.html"),
+            Path("schemas/source-link-receipt.v1.schema.json.html"),
+            Path("shapes/life-course-family.v1.yaml.html"),
+            Path("source/life-course-processes.v1.yaml.html"),
             Path("source/rights-decisions.v1.yaml.html"),
         }
         self.assertTrue(required <= set(self.outputs))

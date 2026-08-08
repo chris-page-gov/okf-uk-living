@@ -1,6 +1,6 @@
 # Delivery tracking
 
-Last updated: 2026-08-07
+Last updated: 2026-08-08
 
 This is the current delivery ledger. Update it in the same pull request as the
 work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
@@ -23,6 +23,19 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | CORPUS-001 | Approve the staged 250–400 service-family denominator | Complete | Owner approved [`service-family-denominator.v1`](source/service-family-denominator.v1.yaml) on 2026-08-07: 293 named normalized families in three staged waves |
 | ACQPOL-001 | Approve corpus acquisition and specialist-review policy | Complete | Local authority coverage, GSS/ODS identifiers, manual health links, regulator-first dependencies, sector redress and role-based review nominations approved on 2026-08-07 |
 | LARGE-001 | Build and review the local colour-facet planning projection | Complete: local pass | [`okf-explorer-large-corpus.v1`](evaluation/reviews/large-corpus-2026-08-07.md) exposes 293 searchable planning records and seven reconciled facets with zero snapshots and publication disabled |
+| POP-001 | Contract the full 293-family population | Complete | Owner-authorized `life-course-population-contract.v1`; 48 processes map all 293 families exactly once; dossier, source-link, predicate and shape contracts validate locally |
+| POP-002 | Extend the universal Explorer contract | In progress | Add selected-record narratives and typed link/JSON/XML/text source access without a proxy or source snapshots |
+| POP-003 | Migrate the six reviewed families | Planned | Project existing slice narratives, resources and governed relationships through the new contract |
+| POP-004 | Implement shared authority and source infrastructure | Planned | Active authority/functional-body registry, GSS/ODS/source-native identity, regulator/redress maps and metadata-only link receipts |
+| PACK-001 | Populate family beginnings | Planned | 36 families across before birth, birth/newborn and early years |
+| PACK-002 | Populate learning and transition | Planned | 36 families across school, transition and post-school study/research |
+| PACK-003 | Populate work and money | Planned | 36 families across finding work, employment and money/tax/benefits |
+| PACK-004 | Populate home, place and transport | Planned | 36 families across housing, rubbish/street and public/private transport |
+| PACK-005 | Populate enforcement, consumer and justice | Planned | 36 families across transport enforcement, consumer rights and police/legal services |
+| PACK-006 | Populate relationships, health and care | Planned | 36 families across relationships/family change, health and disability/care/support |
+| PACK-007 | Populate civic, enterprise and creativity | Planned | 36 families across citizenship/democracy, organisations and ideas/research |
+| PACK-008 | Populate mobility, later life and death | Planned | 41 families across overseas routes, later life and death/bereavement |
+| ASSURE-001 | Freeze a local population-complete candidate | Planned | Requires 293 complete dossiers, active required links, 100+ competency queries and passing graph/narrative/browser reconciliation; does not publish |
 | SCOPE-001 | Approve first-sample claims and limitations | Planned | Recommended: three-slice educational sample with no formal semantic conformance claim |
 | CAND-001 | Freeze a reproducible publication candidate | Blocked on review | Requires REVIEW-001, COMPAT-001 and SCOPE-001; record commit, bundle SHA-256 and local release evidence |
 | PUB-001 | Authorize publication of the frozen candidate | Blocked by design | Requires explicit owner request naming a passing candidate commit and manifest hash |
@@ -55,3 +68,5 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   assessed (96 national covered, 24 local partial). The six requested owner
   decisions are complete; authority/regulator mapping and named specialist
   reviewer acceptance remain implementation or external-review work.
+- Population implementation: owner-authorized on 2026-08-08 in eight packs;
+  foundation contract complete, Explorer contract next.

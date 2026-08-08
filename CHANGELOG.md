@@ -6,6 +6,17 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Owner-authorized `life-course-population-contract.v1` for staged local
+  implementation of all 293 families with separate population-complete,
+  release-grade and publication-ready gates.
+- Forty-eight normalized enclosing processes that map every approved family
+  exactly once without asserting official classification or jurisdictional
+  equivalence.
+- `life-course-family.v1`, metadata-only source-link receipt and SHACL-style
+  validation contracts plus a 16-predicate governed semantic registry.
+- Offline population-contract validation and regression tests for all 293
+  family mappings, eight pack counts, zero snapshots and the publication gate.
+
 - Planned domain profile, source inventory and three vertical-slice fixtures.
 - Delivery planning and tracking ledgers with lockstep documentation rules.
 - Pull-request publication-status template and explicit manual GitHub Pages
@@ -75,6 +86,11 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Superseded the three-slices-only implementation boundary with the explicit
+  2026-08-08 owner authorization for the staged 293-family population while
+  keeping link-and-summary-only acquisition, local evaluation and no Pages
+  publication.
 
 - Recorded owner approval of `okf-domain-profile.v1` and the three fixture
   contracts, authorizing bounded source registration and slice implementation.

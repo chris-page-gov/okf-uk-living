@@ -14,3 +14,9 @@ The owner also approved the
 same date. Staged link registration and authority/regulator denominator
 research may proceed; source snapshots, copied content, unbounded acquisition,
 CI and publication stay disabled.
+
+On 2026-08-08 the owner authorized the
+[`life-course-population-contract.v1`](life-course-population-contract.v1.yaml).
+It permits staged implementation of the 293 named families in eight packs and
+fixes separate population-complete and specialist-reviewed release-grade
+gates. It does not authorize snapshots, copied source content, CI or Pages.
