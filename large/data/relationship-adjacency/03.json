@@ -73,6 +73,47 @@
       "target_iri": "enclosing-process/establish-immigration-citizenship-and-passport-status"
     }
   ],
+  "evidence/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-newborn-with-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-newborn-with-health-services.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "birth-newborn-wales-handoff",
+            "register-newborn-with-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c96f702e80c04a69169277e9",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
   "life-course-domain/employment": [
     {
       "assertion_scope": "real-world",
@@ -579,6 +620,123 @@
       "target_iri": "life-course-domain/employment"
     }
   ],
+  "redress/check-child-nationality-status-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/check-child-nationality-status.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/check-child-nationality-status.v1.yaml",
+          "source_ids": [
+            "check-child-nationality-status-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bd6fbb18fb7bbdda94145a13",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/check-child-nationality-status-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/check-child-nationality-status-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/check-child-nationality-status-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/check-child-nationality-status-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "requirement/claim-child-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/claim-child-benefit.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/claim-child-benefit.v1.yaml",
+          "source_ids": [
+            "claim-child-benefit-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:81facbdd5f1d19a188c14b8d",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-child-benefit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-child-benefit-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/claim-child-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/claim-child-benefit-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/find-registered-childcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/find-registered-childcare.v1.yaml",
+          "source_ids": [
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff",
+            "find-registered-childcare-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c85fd05a028f6c4761742567",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
   "resource/administer-an-estate-govuk-value-estate": [
     {
       "assertion_scope": "real-world",
@@ -651,6 +809,47 @@
       "source_iri": "dataset/administer-an-estate",
       "target": "resource/administer-an-estate-govuk-value-estate",
       "target_iri": "resource/administer-an-estate-govuk-value-estate"
+    }
+  ],
+  "user-need/receive-maternity-care-understand-the-current-provider-pathway-and-where-urgent-clinical-advice-is-obtained": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/receive-maternity-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/receive-maternity-care.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff",
+            "receive-maternity-care-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:43579290f8b29dac94513558",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/receive-maternity-care",
+      "source_iri": "dataset/receive-maternity-care",
+      "target": "user-need/receive-maternity-care-understand-the-current-provider-pathway-and-where-urgent-clinical-advice-is-obtained",
+      "target_iri": "user-need/receive-maternity-care-understand-the-current-provider-pathway-and-where-urgent-clinical-advice-is-obtained"
     }
   ]
 }

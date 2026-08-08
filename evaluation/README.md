@@ -23,5 +23,10 @@ node provenance, browser source and licence/notice journeys pass; all four
 original findings are closed. The [large-corpus review](reviews/large-corpus-2026-08-07.md)
 also passes 293-family search and seven colour facets locally.
 
+The [Pack 1 family-beginnings review](reviews/pack-1-family-beginnings-2026-08-08.md)
+adds 13 questions and proves alias search, per-record Narrative, family-centred
+Graph and active official-source handoffs across the first three domains. Pack
+completion remains local and does not make the corpus release-grade or public.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

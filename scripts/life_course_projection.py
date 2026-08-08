@@ -320,7 +320,7 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
             "acquisition_wave": family["wave"],
             "delivery_scope": delivery_scopes,
             "jurisdiction": [item["jurisdiction"] for item in dossier["applicability"]] if dossier else ["jurisdiction-evidence-required"],
-            "implementation_status": "population-complete-three-slice" if dossier else ("implemented-three-slice" if family_id in implemented else "planned"),
+            "implementation_status": "population-complete" if dossier else ("implemented-three-slice" if family_id in implemented else "planned"),
             "tags": [family["wave"], *delivery_scopes, "normalized", "dossier-backed" if dossier else "planning"],
             "limitations": dossier.get("limitations", record["limitations"]) if dossier else [
                 "Planning denominator, not an official service assertion.",

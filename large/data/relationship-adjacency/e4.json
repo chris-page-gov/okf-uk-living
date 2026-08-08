@@ -186,5 +186,84 @@
       "target": "evidence/register-a-death-certification-to-registration-output-select-registration-route-synthetic-mccd-or-authority-handoff-and-registration-details",
       "target_iri": "evidence/register-a-death-certification-to-registration-output-select-registration-route-synthetic-mccd-or-authority-handoff-and-registration-details"
     }
+  ],
+  "rule/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/pursue-surrogacy-parenthood.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/pursue-surrogacy-parenthood.v1.yaml",
+          "source_ids": [
+            "pursue-surrogacy-parenthood-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cc72cda054b45cfbfdf083fe",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/pursue-surrogacy-parenthood-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "user-need/arrange-newborn-screening-understand-what-is-offered-and-where-decisions-and-follow-up-are-handled-by-the-clinical-service": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/arrange-newborn-screening.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/arrange-newborn-screening.v1.yaml",
+          "source_ids": [
+            "arrange-newborn-screening-primary",
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "birth-newborn-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:28350a45d8f49ad4760aeb3d",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/arrange-newborn-screening",
+      "source_iri": "dataset/arrange-newborn-screening",
+      "target": "user-need/arrange-newborn-screening-understand-what-is-offered-and-where-decisions-and-follow-up-are-handled-by-the-clinical-service",
+      "target_iri": "user-need/arrange-newborn-screening-understand-what-is-offered-and-where-decisions-and-follow-up-are-handled-by-the-clinical-service"
+    }
   ]
 }

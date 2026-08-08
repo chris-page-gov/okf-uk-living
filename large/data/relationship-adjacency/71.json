@@ -147,6 +147,46 @@
       "target_iri": "enclosing-process/arrange-later-life-care-and-future-decisions"
     }
   ],
+  "outcome/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions-find-the-responsible-registration-authority-and-order-an-official-copy-of-a-birth-certificate": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9adf436fb7a1897020a77359",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions-find-the-responsible-registration-authority-and-order-an-official-copy-of-a-birth-certificate",
+      "target_iri": "outcome/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions-find-the-responsible-registration-authority-and-order-an-official-copy-of-a-birth-certificate"
+    }
+  ],
   "resource/administer-an-estate-govuk-probate-estate": [
     {
       "assertion_scope": "real-world",
@@ -329,6 +369,47 @@
       "source_iri": "service-step/register-a-death-certification-to-registration-output-select-registration-route",
       "target": "resource/register-a-death-nrs-registering-a-death",
       "target_iri": "resource/register-a-death-nrs-registering-a-death"
+    }
+  ],
+  "rule/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/receive-maternity-care.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/receive-maternity-care.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff",
+            "receive-maternity-care-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b4a19d72795d9a5f314c5a94",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/receive-maternity-care-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ]
 }

@@ -1,4 +1,42 @@
 {
+  "output/claim-maternity-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/claim-maternity-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/claim-maternity-allowance.v1.yaml",
+          "source_ids": [
+            "claim-maternity-allowance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f8806096df2532affe4a8b87",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-maternity-allowance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/claim-maternity-allowance-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/claim-maternity-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/claim-maternity-allowance-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "rule/learn-to-drive-car-provisional-to-full-licence-obtain-provisional-entitlement-dvla-rules-apply-in-great-britain-and-dva-rules-in-northern-ireland": [
     {
       "assertion_scope": "real-world",
@@ -36,6 +74,657 @@
       "source_iri": "service-step/learn-to-drive-car-provisional-to-full-licence-obtain-provisional-entitlement",
       "target": "rule/learn-to-drive-car-provisional-to-full-licence-obtain-provisional-entitlement-dvla-rules-apply-in-great-britain-and-dva-rules-in-northern-ireland",
       "target_iri": "rule/learn-to-drive-car-provisional-to-full-licence-obtain-provisional-entitlement-dvla-rules-apply-in-great-britain-and-dva-rules-in-northern-ireland"
+    }
+  ],
+  "rule/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/take-adoption-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/take-adoption-leave.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "take-adoption-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:06467e05fdbb424dfc4e9231",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/take-adoption-leave-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "service-episode/register-a-birth-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "register-a-birth-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:07f082229f6060c9a17d8bee",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-a-birth",
+      "source_iri": "dataset/register-a-birth",
+      "target": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "target_iri": "service-episode/register-a-birth-ordinary-source-linked-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "register-a-birth-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:79cc1fb3b15f0c62b24248d2",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "source_iri": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "target": "service-step/register-a-birth-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/register-a-birth-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "register-a-birth-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:978cc6ae62c6ed85cf3e4e13",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "source_iri": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "target": "service-step/register-a-birth-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/register-a-birth-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-a-birth.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "register-a-birth-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b2e5ef4d7bca58206d872c16",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "source_iri": "service-episode/register-a-birth-ordinary-source-linked-route",
+      "target": "enclosing-process/establish-a-childs-legal-identity",
+      "target_iri": "enclosing-process/establish-a-childs-legal-identity"
+    }
+  ],
+  "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:044b84bf1f81deeff64ed5aa",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:12e70512c93a454772c21ff7",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "before-birth-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:134f59b6f4d25e1672de8be2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/become-a-foster-carer-before-birth-scotland-handoff",
+      "target_iri": "resource/become-a-foster-carer-before-birth-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1a1c3a1ecfcd21361a37ff75",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:37540d357f8ab7c2051f1713",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/become-a-foster-carer-become-a-foster-carer-primary",
+      "target_iri": "resource/become-a-foster-carer-become-a-foster-carer-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:39a4232c34da428308169209",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4f2bdf49244ab7e058fedbc2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/become-a-foster-carer-before-birth-northern-ireland-handoff",
+      "target_iri": "resource/become-a-foster-carer-before-birth-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:78b6213c46b1be74590a76aa",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a70994afef744e0227ff15df",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b5ab9298b343b99e517e09b0",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/become-a-foster-carer-before-birth-wales-handoff",
+      "target_iri": "resource/become-a-foster-carer-before-birth-wales-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ef4746a71bdf3a5f1f2b7cd9",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/become-a-foster-carer.v1.yaml",
+          "source_ids": [
+            "become-a-foster-carer-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f47e26cf0788d590edfb855f",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/become-a-foster-carer-exception-or-route-failure",
+      "source_iri": "service-episode/become-a-foster-carer-exception-or-route-failure",
+      "target": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/become-a-foster-carer-exception-or-route-failure-resolve-route-boundary-or-failure"
     }
   ]
 }

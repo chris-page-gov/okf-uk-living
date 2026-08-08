@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_large_corpus import build_outputs  # noqa: E402
 from check_large_projection import validate_large_projection  # noqa: E402
+from life_course_dossiers import load_dossiers, resolve_sources  # noqa: E402
 
 
 def projected_rows(outputs: dict[Path, str]) -> list[dict[str, object]]:
@@ -34,10 +35,12 @@ class LargeProjectionTests(unittest.TestCase):
         families = [row for row in rows if row["record_type"] == "Service Family"]
         self.assertEqual(293, len(families))
         self.assertGreater(len(rows), len(families))
-        self.assertEqual(6, sum(row["implementation_status"] == "population-complete-three-slice" for row in families))
+        dossiers, errors = load_dossiers()
+        self.assertEqual([], errors)
+        self.assertEqual(len(dossiers), sum(row["implementation_status"] == "population-complete" for row in families))
         self.assertTrue(all("upstream-link-only-not-acquired" in row["rights_state"] for row in rows))
 
-    def test_three_slices_project_narratives_sources_and_provenance(self) -> None:
+    def test_population_stage_projects_narratives_sources_and_provenance(self) -> None:
         outputs = build_outputs()
         rows = projected_rows(outputs)
         resources = json.loads(outputs[Path("large/data/resources-0.json")])
@@ -45,11 +48,14 @@ class LargeProjectionTests(unittest.TestCase):
         migrated = [
             row for row in rows
             if row.get("record_type") == "Service Family"
-            and row.get("implementation_status") == "population-complete-three-slice"
+            and row.get("implementation_status") == "population-complete"
         ]
-        self.assertEqual(6, len(migrated))
+        dossiers, errors = load_dossiers()
+        self.assertEqual([], errors)
+        self.assertEqual(len(dossiers), len(migrated))
         self.assertTrue(all(row.get("narrative", {}).get("body") for row in migrated))
-        self.assertEqual(53, len(resources))
+        expected_resources = sum(len(resolve_sources(dossier)[0]) for dossier in dossiers.values())
+        self.assertEqual(expected_resources, len(resources))
         self.assertTrue(all(resource["source_access"]["display_mode"] == "link" for resource in resources))
         self.assertTrue(all(resource["provenance"]["response_body_retained"] is False for resource in resources))
         for relationship in relationships:

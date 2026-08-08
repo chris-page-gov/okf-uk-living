@@ -3,14 +3,14 @@
 - Lifecycle: full 293-family population implementation authorized; foundation,
   universal Explorer contract, three-slice dossier migration and shared
   authority/source infrastructure complete
-- Corpus: root, research overview, 293-family denominator and six
-  population-complete family dossiers from the three implemented slices
+- Corpus: root, research overview, 293-family denominator and 42
+  population-complete family dossiers from the three implemented slices and Pack 1
 - Ontology: three normalized slice modules plus the 16-predicate governed
   cross-domain registry and SHACL-style family shapes; RDF conformance is not claimed
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
-- Acquisition: 89 exhaustive-inventory references plus 53 implemented-slice
-  references, all links with zero snapshots; 28 source hosts and all standards
+- Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
+  references and 45 Pack 1 links, all with zero snapshots; 28 source hosts and all standards
   families have dated rights decisions; unbounded or unstaged acquisition is disabled
 - Reference coverage: 24 domains by five reference jurisdictions gives 120
   assessed cells; 96 national cells are covered at discovery-family level and
@@ -21,8 +21,8 @@
 - Authority infrastructure: 382 principal areas, 19 strategic/combined
   authorities, 397 dated GSS geographies, 438 shared organizations, ten
   regulator/redress sector maps and seven active metadata-only source receipts
-- Deterministic local generation: Markdown bundle plus 1,434-concept sharded large
-  projection, 53 typed source links, 1,025 relationships, record locator,
+- Deterministic local generation: Markdown bundle plus 2,485-concept sharded large
+  projection, 160 typed source assertions, 2,894 relationships, record locator,
   adjacency, JSON-LD, YAML-LD and SHACL-style validation report
 - Evaluation: local `uv` environment and visible OKF Explorer 0.5.7 review;
   Reader/query, graph provenance, browser source, licence/notice and large
@@ -55,8 +55,11 @@
   separate gates
 - Publication readiness: reviewable sample, not yet a candidate; no
   release-scope approval or frozen manifest
-- Next complete-corpus gate: `PACK-001`, 36 family-beginnings dossiers across
-  before birth, birth/newborn and early years
+- Pack 1: 36 family-beginnings dossiers, service narratives, four-nation
+  variants, ordinary and exception journeys, 45 active source links and 13
+  competency questions passed local deterministic and Explorer review
+- Next complete-corpus gate: `PACK-002`, 36 learning-and-transition dossiers
+  across school, transition and post-school study/research
 - Later corpus policy: owner-approved 293-family denominator and governed local,
   identifier, health, regulator, redress and reviewer-role decisions; staged
   mappings and specialist appointments remain tracked in the

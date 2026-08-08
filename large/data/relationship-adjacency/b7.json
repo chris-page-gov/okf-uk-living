@@ -221,6 +221,125 @@
       "target_iri": "life-course-domain/starting-and-running-organisation"
     }
   ],
+  "dependency/registered-childcare-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/get-funded-early-education.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/get-funded-early-education.v1.yaml",
+          "source_ids": [
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff",
+            "get-funded-early-education-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:136bc5ca32099ee63607ed41",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-funded-early-education",
+      "source_iri": "dataset/get-funded-early-education",
+      "target": "dependency/registered-childcare-provider",
+      "target_iri": "dependency/registered-childcare-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/find-registered-childcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/find-registered-childcare.v1.yaml",
+          "source_ids": [
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff",
+            "find-registered-childcare-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6a91c2e5751d461cfb394401",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/find-registered-childcare",
+      "source_iri": "dataset/find-registered-childcare",
+      "target": "dependency/registered-childcare-provider",
+      "target_iri": "dependency/registered-childcare-provider"
+    }
+  ],
+  "evidence/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/take-paternity-or-partner-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/take-paternity-or-partner-leave.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "take-paternity-or-partner-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fb6a64ac8adbcce4fde4d521",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "outcome/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff-licence-issued": [
     {
       "assertion_scope": "real-world",
@@ -259,6 +378,127 @@
       "source_iri": "service-step/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff",
       "target": "outcome/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff-licence-issued",
       "target_iri": "outcome/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff-licence-issued"
+    }
+  ],
+  "output/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/report-child-safeguarding-concern.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/report-child-safeguarding-concern.v1.yaml",
+          "source_ids": [
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff",
+            "report-child-safeguarding-concern-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:187a9e996dbefcf22835f733",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/report-child-safeguarding-concern-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    }
+  ],
+  "redress/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/take-maternity-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/take-maternity-leave.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "take-maternity-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3944d7bd8e98693410db01d0",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "requirement/get-early-years-send-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/get-early-years-send-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/get-early-years-send-support.v1.yaml",
+          "source_ids": [
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff",
+            "get-early-years-send-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0619f0c778a1c40e04956a9a",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-early-years-send-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-early-years-send-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/get-early-years-send-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/get-early-years-send-support-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
     }
   ]
 }

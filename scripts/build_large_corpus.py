@@ -349,8 +349,11 @@ def build_outputs() -> dict[Path, str]:
         "okf_version": "0.2",
         "core_conformance": "OKF Explorer large-corpus life-course projection",
         "title": "A Life in the UK — life-course discovery corpus",
-        "description": "Approved 293-family denominator with six dossier-backed families, typed linked sources, governed relationships and current authority infrastructure.",
-        "version": "life-course-authority-infrastructure.v1",
+        "description": (
+            f"Approved 293-family denominator with {validation['counts']['dossier_backed_families']} "
+            "population-complete dossiers, typed linked sources, governed relationships and current authority infrastructure."
+        ),
+        "version": "life-course-population-stage.v1",
         "status": "approved-for-local-evaluation",
         "assertion_scope": "real-world",
         "publisher": "owner:chris-page-gov",
@@ -418,7 +421,12 @@ def build_outputs() -> dict[Path, str]:
     }
     overview = {
         "title": "Life-course discovery corpus",
-        "description": "293 normalized families across 24 domains, six population-complete three-slice dossiers, 53 typed official links, 397 dated geographies and 438 shared organisations.",
+        "description": (
+            "293 normalized families across 24 domains, "
+            f"{validation['counts']['dossier_backed_families']} population-complete dossiers, "
+            f"{validation['counts']['resources']} typed official links, 397 dated geographies and "
+            "438 shared organisations."
+        ),
         "counts": counts,
         "status": "approved-for-local-evaluation",
         "notices": [

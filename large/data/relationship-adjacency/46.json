@@ -1,4 +1,45 @@
 {
+  "rule/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/arrange-newborn-screening.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/arrange-newborn-screening.v1.yaml",
+          "source_ids": [
+            "arrange-newborn-screening-primary",
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "birth-newborn-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2ced3ab64aa52f6e54df072f",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/arrange-newborn-screening-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "service-step/administer-an-estate-no-will-debt-dispute-cross-border-or-missing-evidence-stop-and-seek-applicable-authority": [
     {
       "assertion_scope": "real-world",
@@ -455,6 +496,496 @@
       "source_iri": "service-step/administer-an-estate-no-will-debt-dispute-cross-border-or-missing-evidence-stop-and-seek-applicable-authority",
       "target": "actor/role-estate-practitioner-or-court",
       "target_iri": "actor/role-estate-practitioner-or-court"
+    }
+  ],
+  "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:038cd5577dbbc9ffb5de33c8",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0ee28d438fb2f7e743fed5cf",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "actor/organisation-official-service-directory",
+      "target_iri": "actor/organisation-official-service-directory"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1bbb71af2e8eef45293693e4",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5b08d52d5cba44991150fcb1",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:774035b0204e8fc880b3e1be",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-birth-certificates-birth-newborn-scotland-handoff",
+      "target_iri": "resource/obtain-birth-certificates-birth-newborn-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8fc79425aa7d1a4d31c702ff",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9598a8a884c12d2364425260",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-birth-certificates-obtain-birth-certificates-primary",
+      "target_iri": "resource/obtain-birth-certificates-obtain-birth-certificates-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a6df826e4c6ffe30f677a31c",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-birth-certificates-birth-newborn-northern-ireland-handoff",
+      "target_iri": "resource/obtain-birth-certificates-birth-newborn-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b6ff27d66f31106732643ffd",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bf0cf52f5bfa0c5c5a16094f",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dfa28d40020364d1f73b248d",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/obtain-birth-certificates-ordinary-source-linked-route",
+      "source_iri": "service-episode/obtain-birth-certificates-ordinary-source-linked-route",
+      "target": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e083959ab8c00af80c40d2a7",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-birth-certificates.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "obtain-birth-certificates-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f4fb995f5a2be55fd9f203e7",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/obtain-birth-certificates-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ]
 }

@@ -146,5 +146,84 @@
       "target": "life-course-domain/finding-work-and-unemployment",
       "target_iri": "life-course-domain/finding-work-and-unemployment"
     }
+  ],
+  "evidence/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/arrange-adoption.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/arrange-adoption.v1.yaml",
+          "source_ids": [
+            "arrange-adoption-primary",
+            "before-birth-northern-ireland-handoff",
+            "before-birth-scotland-handoff",
+            "before-birth-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:34ab24f213253b942affdb42",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/arrange-adoption-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "user-need/use-tax-free-childcare-reconfirmation": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/use-tax-free-childcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/use-tax-free-childcare.v1.yaml",
+          "source_ids": [
+            "use-tax-free-childcare-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f64eee12316c409239199234",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-tax-free-childcare",
+      "source_iri": "dataset/use-tax-free-childcare",
+      "target": "user-need/use-tax-free-childcare-reconfirmation",
+      "target_iri": "user-need/use-tax-free-childcare-reconfirmation"
+    }
   ]
 }

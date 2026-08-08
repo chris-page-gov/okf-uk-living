@@ -103,6 +103,34 @@ identity, shared rules or four-nation equivalence. Material graph edges use the
 [governed predicates](../ontology/governed-predicates.v1.yaml) and retain
 assertion status, authority, evidence, derivation, observation time and rights.
 
+### Domain-register authoring and rendering
+
+Population packs are authored compactly in one
+`life-course-domain-register.v1` file per domain under
+`source/domain-registers/`. Each register contains its reviewed topic-specific
+source assertions, shared devolved handoffs, original family summaries,
+aliases, situations, user needs, applicable primary jurisdictions,
+private-dependency boundary and specialist-review state. It also names the
+body-free receipt directory for every link.
+
+`scripts/render_life_course_packs.py` deterministically renders three reviewed
+surfaces from those registers:
+
+- `source/life-course-families/<domain>/<family>.v1.yaml`;
+- `services/<family>.md`; and
+- `life-course/<domain>.md`.
+
+Do not hand-edit those rendered files. Change the domain register and rerun the
+renderer. `--check` rejects drift. A national discovery handoff may locate the
+current route, but it must be labelled as a handoff and may not support a leaf
+eligibility rule, cost, deadline or outcome.
+
+Each three-domain pack contributes at least 13 natural-language competency
+questions under `evaluation/competency-questions/`. The search acceptance check
+requires every canonical title and alias in the first five, each expected
+competency result in the first ten, staged process titles to be searchable and
+an unmatched query to return no invented result.
+
 Source-link receipts retain response metadata only. They never store response
 bodies. An automated block may be resolved by an explicit real-browser receipt;
 a discovery page is not sufficient evidence for a leaf-service rule.
@@ -192,6 +220,8 @@ Install [uv](https://docs.astral.sh/uv/getting-started/installation/). The
 locked project environment is created automatically when these commands run:
 
 ```sh
+uv run --locked python scripts/render_life_course_packs.py
+uv run --locked python scripts/render_life_course_packs.py --check
 uv run --locked python scripts/build_browser_handoff.py
 uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
@@ -203,12 +233,14 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_domain_registers.py
 uv run --locked python scripts/check_life_course_dossiers.py
 uv run --locked python scripts/check_authority_registry.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
 uv run --locked python scripts/check_large_projection.py
+uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python -m unittest discover -s tests
 ```
 

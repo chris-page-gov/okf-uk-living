@@ -1,4 +1,122 @@
 {
+  "outcome/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-connect-a-newborn-to-the-current-primary-care-and-child-health-record-routes-after-birth-registration": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/register-newborn-with-health-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/register-newborn-with-health-services.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "birth-newborn-wales-handoff",
+            "register-newborn-with-health-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:27cb06f13ca21ec413fece82",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-connect-a-newborn-to-the-current-primary-care-and-child-health-record-routes-after-birth-registration",
+      "target_iri": "outcome/register-newborn-with-health-services-ordinary-source-linked-route-follow-current-official-instructions-connect-a-newborn-to-the-current-primary-care-and-child-health-record-routes-after-birth-registration"
+    }
+  ],
+  "output/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/before-birth-and-starting-family/take-paternity-or-partner-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/before-birth-and-starting-family/take-paternity-or-partner-leave.v1.yaml",
+          "source_ids": [
+            "before-birth-northern-ireland-handoff",
+            "take-paternity-or-partner-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:96962fde86ef4eaf7fedf58a",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/take-paternity-or-partner-leave-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
+  "rule/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/obtain-child-passport.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/obtain-child-passport.v1.yaml",
+          "source_ids": [
+            "obtain-child-passport-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:815c13c0fa7dcedc126c9342",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/obtain-child-passport-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
   "rule/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-the-responsible-authority-controls-when-registration-can-continue": [
     {
       "assertion_scope": "real-world",

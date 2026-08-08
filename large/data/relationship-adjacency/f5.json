@@ -188,6 +188,46 @@
       "target_iri": "evidence/administer-an-estate-no-will-debt-dispute-cross-border-or-missing-evidence-stop-and-seek-applicable-authority-synthetic-issue-record-no-personal-estate-data"
     }
   ],
+  "outcome/correct-a-birth-registration-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/birth-and-newborn/correct-a-birth-registration.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/birth-and-newborn/correct-a-birth-registration.v1.yaml",
+          "source_ids": [
+            "birth-newborn-northern-ireland-handoff",
+            "birth-newborn-scotland-handoff",
+            "correct-a-birth-registration-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b3706295c19f8c9bb089c63d",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/correct-a-birth-registration-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/correct-a-birth-registration-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/correct-a-birth-registration-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/correct-a-birth-registration-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "output/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-authority-instruction-or-corrected-entry": [
     {
       "assertion_scope": "real-world",
@@ -226,6 +266,44 @@
       "source_iri": "service-step/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority",
       "target": "output/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-authority-instruction-or-corrected-entry",
       "target_iri": "output/register-a-death-investigation-or-correction-required-hand-to-investigation-or-correction-authority-authority-instruction-or-corrected-entry"
+    }
+  ],
+  "redress/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/use-tax-free-childcare.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/use-tax-free-childcare.v1.yaml",
+          "source_ids": [
+            "use-tax-free-childcare-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a328f78ba73f95ae62510378",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/use-tax-free-childcare-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ]
 }

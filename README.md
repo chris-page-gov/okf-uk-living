@@ -10,7 +10,7 @@ journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
 `life-course-population-contract.v1` contract now governs eight delivery packs,
 48 enclosing processes and the distinction between population-complete and
-specialist-reviewed release grade. Six reviewed families now expose authored
+specialist-reviewed release grade. Forty-two reviewed families now expose authored
 narratives, typed official links and governed journey graphs; the other
 families remain explicit planning records. The shared infrastructure now adds
 397 dated GSS geographies, 438 reusable authority/regulator/redress records,
@@ -35,6 +35,7 @@ explicit owner request.
 - [Large-corpus local review](evaluation/reviews/large-corpus-2026-08-07.md)
 - [Three-slice population migration review](evaluation/reviews/three-slice-population-migration-2026-08-08.md)
 - [Shared authority and source infrastructure review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md)
+- [Pack 1 family-beginnings review](evaluation/reviews/pack-1-family-beginnings-2026-08-08.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -48,6 +49,7 @@ explicit owner request.
 - [Full-population implementation contract](profiles/life-course-population-contract.v1.yaml)
 - [48 enclosing-process denominator](source/life-course-processes.v1.yaml)
 - [Migrated life-course family dossiers](source/life-course-families/)
+- [Compact domain source registers](source/domain-registers/)
 - [Current authority and geography registry](source/authority-registry.v1.yaml)
 - [Reviewed shared regulator and redress seeds](source/shared-authority-seeds.v1.yaml)
 - [Governed predicate registry](ontology/governed-predicates.v1.yaml)
@@ -89,6 +91,8 @@ uv sync --locked
 Build and verify the bundle:
 
 ```sh
+uv run --locked python scripts/render_life_course_packs.py
+uv run --locked python scripts/render_life_course_packs.py --check
 uv run --locked python scripts/build_browser_handoff.py
 uv run --locked python scripts/build_browser_handoff.py --check
 uv run --locked python scripts/build_okf_bundle.py
@@ -100,12 +104,14 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_domain_registers.py
 uv run --locked python scripts/check_life_course_dossiers.py
 uv run --locked python scripts/check_authority_registry.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
 uv run --locked python scripts/check_large_projection.py
+uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -115,7 +121,7 @@ default; pull requests and merges do not run remote CI or update GitHub Pages.
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
 bundle and `okf-explorer.json` for the 293-family discovery projection. The
 large descriptor distinguishes 293 service families from the larger typed
-concept count, currently 1,434 concepts, and exposes generated semantic and
+concept count, currently 2,485 concepts, and exposes generated semantic and
 validation entrypoints. Records and static-search results are sharded in
 1,000-record chunks so supporting infrastructure remains lazily hydratable. With a
 local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:

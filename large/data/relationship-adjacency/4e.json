@@ -1,4 +1,42 @@
 {
+  "evidence/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/get-childcare-cost-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/get-childcare-cost-support.v1.yaml",
+          "source_ids": [
+            "get-childcare-cost-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7bb704f3e05ce4a1a8a35528",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/get-childcare-cost-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "life-course-domain/police-and-legal-services": [
     {
       "assertion_scope": "real-world",
@@ -542,6 +580,47 @@
       "source_iri": "service-step/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding",
       "target": "redress/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding-court",
       "target_iri": "redress/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding-court"
+    }
+  ],
+  "redress/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/early-years/apply-for-adoption-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/early-years/apply-for-adoption-support.v1.yaml",
+          "source_ids": [
+            "apply-for-adoption-support-primary",
+            "early-years-northern-ireland-handoff",
+            "early-years-scotland-handoff",
+            "early-years-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fca3864268c7aa8e7dc9f5e5",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/apply-for-adoption-support-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
   "requirement/learn-to-drive-car-provisional-to-full-licence-learn-and-pass-tests-provisional-entitlement": [
