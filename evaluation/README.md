@@ -73,5 +73,10 @@ hashes and records six representative visible-Explorer journeys. It establishes
 the local population-complete gate with zero blocking omissions while retaining
 the separate specialist-review and publication gates.
 
+The [population-preview publication authorization](publication/population-preview-authorization-2026-08-08.md)
+records the explicit owner request, reconciled Explorer deployment, frozen
+candidate identity and non-release-grade publication scope. Deployment and
+public-browser verification require a separate evidence report.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

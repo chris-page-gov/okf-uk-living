@@ -90,6 +90,7 @@ uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python scripts/build_population_assurance.py
 uv run --locked python scripts/build_population_assurance.py --check
 uv run --locked python scripts/check_population_assurance.py
+uv run --locked python scripts/prepare_pages_publication.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -137,6 +138,14 @@ The eight packs and local population-assurance gate are complete. Treat
 freeze boundary and `generated/assurance/` as rebuild-only evidence. Population
 completion does not imply specialist-reviewed release grade or authorize
 publication.
+
+The owner authorized a public population-complete preview on 2026-08-08. The
+manual-only Pages workflow may promote only the files and hashes in
+`publication/pages-file-manifest.json`; it must not rebuild the corpus during
+deployment. Keep the non-release-grade and specialist-review warnings visible.
+Do not change repository visibility to obtain Pages without a separate owner
+decision. Record the exact deployment and real-browser result before labelling
+or sharing the public URL as verified.
 </pre>
 </body>
 </html>

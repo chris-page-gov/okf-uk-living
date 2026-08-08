@@ -6,6 +6,14 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Owner-authorized population-complete preview publication unit with an
+  original landing page, a publication-scoped Explorer descriptor and a
+  comprehensive 1,549-file SHA-256 manifest rooted in the frozen candidate.
+- Manual-only GitHub Pages workflow using pinned official actions; it validates
+  and copies frozen bytes without rebuilding the corpus or acquiring sources.
+- Publication contract tests preserving the non-release-grade boundary, 291
+  specialist-review warnings, zero snapshots and the exact public topology.
+
 - Deterministic whole-corpus coverage, omission, link-health, review-status,
   provenance and population-completion assurance reports, plus an offline drift
   checker and regression tests.
@@ -197,6 +205,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Completed `SCOPE-001`, `CAND-001` and `PUB-001` for the full
+  population-complete preview after explicit owner authorization; advanced
+  `PAGES-001` to active while public-browser verification remains pending.
 
 - Completed `ASSURE-001` after reconciling 293 families, 24 domains, 48
   processes, 104 competency questions, 9,757 concepts, 879 resources and 15,810
