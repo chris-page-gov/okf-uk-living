@@ -56,15 +56,15 @@ shapes:
     required: [id, interaction, provider, requirements, evidence, rule, channel, cost, time, output, outcome, redress, assertion_status, sources]
   - id: SourceReferenceShape
     target_path: sources.*
-    required: [id, title, owner, authority_role, resource, jurisdiction, observed_at, freshness, rights_decision, summary, limitations]
+    required: [id]
     rules:
+      - embedded_source_or_resolvable_canonical_register_reference_required
       - https_resource_required
       - source_snapshot_forbidden
       - original_summary_required
   - id: MaterialRelationshipShape
     target_schema: okf-relationship-assertion.v2
     required: [source, target, predicate, assertion_status, authority, derivation, observed_at, evidence, rights]
-
 </pre>
 </body>
 </html>

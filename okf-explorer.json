@@ -1,24 +1,31 @@
 {
   "assertion_scope": "real-world",
-  "core_conformance": "OKF Explorer large-corpus planning projection",
+  "core_conformance": "OKF Explorer large-corpus life-course projection",
   "counts": {
-    "datasets": 293,
+    "concepts": 602,
+    "datasets": 602,
     "publishers": 1,
-    "records": 293,
-    "relationships": 0,
-    "resources": 0
+    "records": 602,
+    "relationships": 1025,
+    "resources": 53,
+    "service_families": 293
   },
-  "description": "Owner-approved 293-family planning denominator with governed colour facets and no acquired source content.",
+  "description": "Approved 293-family denominator with six dossier-backed families, typed linked sources and governed semantic relationships.",
   "entrypoints": {
     "analysis_overview": "large/data/analysis/overview.json",
     "data_manifest": "large/data/manifest.json",
+    "json_ld": "generated/semantic/life-course-corpus.jsonld",
     "markdown_index": "generated/browser/index.html",
     "notes": "generated/browser/evidence/licensing-and-attribution.html",
     "overview_index": "large/data/overview.json",
     "presentation": "large/data/presentation.json",
-    "search_manifest": "large/data/search/manifest.json"
+    "record_locator": "large/data/record-locator.json",
+    "relationship_adjacency": "large/data/relationship-adjacency.json",
+    "search_manifest": "large/data/search/manifest.json",
+    "validation_report": "large/data/validation-report.json",
+    "yaml_ld": "generated/semantic/life-course-corpus.yamlld"
   },
-  "generated_at": "2026-08-07T00:00:00+01:00",
+  "generated_at": "2026-08-08T00:00:00+01:00",
   "kind": "okf-large-corpus",
   "license": "MIT",
   "okf_version": "0.2",
@@ -29,23 +36,23 @@
   },
   "publisher": "owner:chris-page-gov",
   "schema": "okf-explorer-large-corpus.v1",
-  "snapshot": "service-family-denominator-2026-08-07",
+  "snapshot": "life-course-three-slice-2026-08-08",
   "source": {
     "denominator": "generated/browser/source/service-family-denominator.v1.yaml.html",
-    "mode": "repository-authored-planning-projection",
+    "mode": "repository-authored-dossiers-plus-linked-references",
     "policy": "generated/browser/profiles/corpus-acquisition-policy.v1.yaml.html",
     "publication_authorized": false,
     "source_snapshots": false,
     "upstream_content_redistributed": false
   },
   "status": "approved-for-local-evaluation",
-  "title": "A Life in the UK — service-family planning denominator",
-  "version": "service-family-denominator.v1",
+  "title": "A Life in the UK — life-course discovery corpus",
+  "version": "life-course-three-slice.v1",
   "vocabulary": {
     "publisher_plural": "projects",
     "publisher_singular": "project",
-    "record_plural": "service families",
-    "record_singular": "service family",
-    "search_placeholder": "Search 293 planned service families"
+    "record_plural": "concepts",
+    "record_singular": "concept",
+    "search_placeholder": "Search 293 families and supporting concepts"
   }
 }

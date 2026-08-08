@@ -1,0 +1,116 @@
+{
+  "dataset/claim-bereavement-support": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b1056bf97e42bc6e7c382838",
+      "kind": "belongs-to-life-course-domain",
+      "label": "belongs to life course domain",
+      "observed_at": "2026-08-08",
+      "predicate": "belongs-to-life-course-domain",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-bereavement-support",
+      "source_iri": "dataset/claim-bereavement-support",
+      "target": "life-course-domain/death-and-bereavement",
+      "target_iri": "life-course-domain/death-and-bereavement"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "claim-bereavement-support"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fc90c625ccddf4851ed4510c",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-bereavement-support",
+      "source_iri": "dataset/claim-bereavement-support",
+      "target": "enclosing-process/certify-register-notify-and-arrange-after-death",
+      "target_iri": "enclosing-process/certify-register-notify-and-arrange-after-death"
+    }
+  ],
+  "requirement/register-a-death-certification-to-registration-output-register-and-retain-outputs-selected-route-s-evidence-and-informant-conditions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/register-a-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/register-a-death.v1.yaml",
+          "source_ids": [
+            "govuk-correcting-death-registration",
+            "nidirect-registering-a-death",
+            "nrs-registering-a-death"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3f83f8617f468aa22f190841",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/register-a-death-certification-to-registration-output-register-and-retain-outputs",
+      "source_iri": "service-step/register-a-death-certification-to-registration-output-register-and-retain-outputs",
+      "target": "requirement/register-a-death-certification-to-registration-output-register-and-retain-outputs-selected-route-s-evidence-and-informant-conditions",
+      "target_iri": "requirement/register-a-death-certification-to-registration-output-register-and-retain-outputs-selected-route-s-evidence-and-informant-conditions"
+    }
+  ]
+}

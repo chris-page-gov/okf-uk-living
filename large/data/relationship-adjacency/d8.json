@@ -1,0 +1,115 @@
+{
+  "dataset/consent-to-healthcare-as-young-person": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "consent-to-healthcare-as-young-person"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cc9067f2a080003381b18219",
+      "kind": "belongs-to-life-course-domain",
+      "label": "belongs to life course domain",
+      "observed_at": "2026-08-08",
+      "predicate": "belongs-to-life-course-domain",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/consent-to-healthcare-as-young-person",
+      "source_iri": "dataset/consent-to-healthcare-as-young-person",
+      "target": "life-course-domain/transition-to-adulthood",
+      "target_iri": "life-course-domain/transition-to-adulthood"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-processes.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-processes.v1.yaml",
+          "source_ids": [
+            "consent-to-healthcare-as-young-person"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e094ddf8a47968b423effe51",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/consent-to-healthcare-as-young-person",
+      "source_iri": "dataset/consent-to-healthcare-as-young-person",
+      "target": "enclosing-process/move-into-independent-mobility-health-and-care",
+      "target_iri": "enclosing-process/move-into-independent-mobility-health-and-care"
+    }
+  ],
+  "dependency/role-private-organisation-after-death": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml",
+          "source_ids": [
+            "govuk-tell-us-once",
+            "nidirect-who-to-tell"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b651b7b73c1421c4f0a9cffa",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/notify-organisations-after-a-death",
+      "source_iri": "dataset/notify-organisations-after-a-death",
+      "target": "dependency/role-private-organisation-after-death",
+      "target_iri": "dependency/role-private-organisation-after-death"
+    }
+  ]
+}

@@ -85,6 +85,13 @@ enclosing processes, eight delivery packs, governed predicates and separate
 population-complete and release-grade gates. Implementation remains staged,
 link-only and local; Pages publication is not authorized.
 
+The universal Explorer narrative and typed-source contract merged as
+OKF Explorer PR #72 on 2026-08-08. The three-slice migration now supplies six
+validated `life-course-family.v1` dossiers, per-record narratives, all 53
+existing references as link-only typed resources, and deterministic JSON-LD,
+YAML-LD, validation, locator, adjacency and provenance-bearing relationship
+projections. No source response body or snapshot was acquired.
+
 ## Phase 5 — release candidate and publication
 
 - Complete the initial-sample review, compatibility and scope gates.

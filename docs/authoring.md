@@ -191,3 +191,14 @@ uv run --locked python -m unittest discover -s tests
 Local validation does not authorize publication. Complete the domain profile,
 source/rights review, evaluation, frozen-candidate assurance and exact deployed
 browser journey before sharing a public bundle URL.
+
+### Life-course family source assertions
+
+Family dossiers under `source/life-course-families/` may embed a complete
+source assertion or point to a canonical linked-reference register with
+`id` and `register`. A register reference is not a shortcut around evidence:
+the named entry must resolve to its HTTPS URL, owner, authority role,
+observation date, rights basis, original coverage summary and limitations.
+Validation resolves every reference and rejects missing or duplicate IDs.
+Source responses remain link-only unless a typed, browser-readable response
+mode is explicitly declared; no response body or snapshot is retained.

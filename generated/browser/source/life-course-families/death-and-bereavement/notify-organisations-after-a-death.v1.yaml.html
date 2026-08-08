@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>schema: life-course-family.v1
+id: notify-organisations-after-a-death
+title: Notify organisations after a death
+aliases: [Tell Us Once, tell government about a death, close accounts after death, notify banks after death]
+description: &gt;-
+  Use Tell Us Once where its current coverage applies and preserve separate
+  notifications for public and private bodies outside that coverage.
+status: population_complete
+assertion_status: normalized
+life_course_domain: death-and-bereavement
+enclosing_processes:
+  - id: certify-register-notify-and-arrange-after-death
+    assertion_status: normalized
+    sources: [govuk-tell-us-once, nidirect-who-to-tell]
+situations:
+  - Government and private organisations need to be told after a death.
+  - Tell Us Once is unavailable, does not cover the residence, or does not cover a body.
+user_needs:
+  - Find whether Tell Us Once applies and what it covers.
+  - Notify every uncovered public or private organisation separately.
+  - Retain evidence of each notification and unresolved response.
+interaction_boundary: &gt;-
+  Discovery and notification tracking only; use of a route does not prove that
+  data sharing or a body-specific notification succeeded.
+applicability:
+  - jurisdiction: England, Scotland and Wales
+    state: supported
+    route_variants:
+      - {id: tell-us-once, provider: organisation:tell-us-once-service, primary_source: govuk-tell-us-once}
+    sources: [govuk-tell-us-once]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: manual-notifications, provider: organisation:northern-ireland-bereavement-service, primary_source: nidirect-who-to-tell}
+    sources: [nidirect-who-to-tell, nidirect-bereavement-service]
+actors:
+  - {id: organisation:tell-us-once-service, role: covered_government_notification_service, authority_status: official, sources: [govuk-tell-us-once]}
+  - {id: organisation:northern-ireland-bereavement-service, role: benefits_notification_service, authority_status: official, sources: [nidirect-bereavement-service]}
+  - {id: role:body-requiring-death-notification, role: public_or_private_recipient, authority_status: normalized, sources: [govuk-tell-us-once, nidirect-who-to-tell]}
+journeys:
+  ordinary:
+    id: notify-covered-and-uncovered-bodies
+    entry_state: A synthetic registration output and list of organisations are available.
+    outcome: Each notification is recorded as acknowledged, pending, failed or not yet made.
+    steps:
+      - id: determine-coverage
+        interaction: Check residence, service availability and the current covered-body list.
+        provider: organisation:notification-service
+        requirements: {state: supported, summary: Registration output, residence and service reference where supplied.}
+        evidence: {state: supported, summary: Synthetic reference and body list.}
+        rule: {state: supported, summary: Tell Us Once does not apply to Northern Ireland and does not cover every organisation.}
+        channel: {state: supported, summary: Current Tell Us Once or Northern Ireland guidance route.}
+        cost: {state: not_published_by_source, reason: No notification charge is modelled.}
+        time: {state: supported, summary: Follow current service and body-specific timing.}
+        output: {state: supported, summary: Covered and uncovered organisation lists.}
+        outcome: {state: supported, summary: Ready to make service or body-specific notifications.}
+        redress: {state: not_applicable, reason: Redress follows a failed or disputed notification.}
+        assertion_status: normalized
+        sources: [govuk-tell-us-once, nidirect-who-to-tell, nidirect-bereavement-service]
+      - id: notify-and-track-each-body
+        interaction: Use each applicable official or body-specific route and retain the result.
+        provider: role:body-requiring-death-notification
+        requirements: {state: supported, summary: Evidence requested by that body and authority to act where required.}
+        evidence: {state: supported, summary: Synthetic notification record and response.}
+        rule: {state: supported, summary: Each recipient&#x27;s current requirements control.}
+        channel: {state: supported, summary: Government service or body-specific official route.}
+        cost: {state: not_published_by_source, reason: Consult the recipient&#x27;s current route.}
+        time: {state: not_published_by_source, reason: Body-specific time limits are not generalized.}
+        output: {state: supported, summary: Acknowledgement, request for evidence, failure or pending state.}
+        outcome: {state: supported, summary: Notification matrix remains inspectable.}
+        redress: {state: supported, summary: Recipient complaint route for an unresolved notification.}
+        assertion_status: normalized
+        sources: [govuk-tell-us-once, nidirect-who-to-tell, nidirect-bereavement-service]
+  exceptions:
+    - id: service-unavailable-reference-missing-or-body-uncovered
+      entry_state: The service is unavailable, its reference is absent or an organisation is not covered.
+      outcome: A body-specific route is used or the unresolved gap is made explicit.
+      steps:
+        - id: fall-back-to-body-specific-route
+          interaction: Contact the body through its current official channel and record the result separately.
+          provider: role:body-requiring-death-notification
+          requirements: {state: supported, summary: Body-specific evidence and authority to act.}
+          evidence: {state: supported, summary: Synthetic contact and response record.}
+          rule: {state: supported, summary: No notification success is inferred.}
+          channel: {state: supported, summary: Recipient&#x27;s current official route.}
+          cost: {state: not_published_by_source, reason: Recipient-specific.}
+          time: {state: not_published_by_source, reason: Recipient-specific.}
+          output: {state: supported, summary: Acknowledged, pending, failed or unresolved notification.}
+          outcome: {state: supported, summary: Remaining work stays visible.}
+          redress: {state: supported, summary: Recipient complaint or regulated redress where applicable.}
+          assertion_status: normalized
+          sources: [govuk-tell-us-once, nidirect-who-to-tell]
+dependencies:
+  - {id: role:private-organisation-after-death, state: supported, selection_basis: account_or_contract_specific_not_provider_recommendation, sources: [govuk-tell-us-once, nidirect-who-to-tell]}
+sources:
+  - {id: govuk-tell-us-once, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-who-to-tell, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-bereavement-service, register: source/death-bereavement-estate.v1.yaml}
+limitations:
+  - Covered organisations and requirements can change and must be checked before use.
+  - Private organisations retain their own evidence and redress requirements.
+review: {population_gate: complete, specialist_review: required}
+narrative:
+  markdown: services/notify-organisations-after-a-death.md
+  process_context: Certify, register, notify and arrange after death
+</pre>
+</body>
+</html>

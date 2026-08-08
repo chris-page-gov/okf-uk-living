@@ -6,6 +6,17 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Six population-complete `life-course-family.v1` dossiers for the three
+  reviewed vertical slices, resolving exactly the existing 53 authoritative
+  reference records without acquiring source bodies or snapshots.
+- Per-family authored Explorer narratives, ordinary and exception episodes,
+  route variants, actors, jurisdictions, dependencies and regulator or
+  redress boundaries.
+- Deterministic 602-concept projection with 1,025 evidence-bearing governed
+  relationships, 53 typed link-only resources, record locator, relationship
+  adjacency, JSON-LD, YAML-LD and SHACL-style validation reports.
+- Offline dossier/source-resolution checks and regression tests.
+
 - Owner-authorized `life-course-population-contract.v1` for staged local
   implementation of all 293 families with separate population-complete,
   release-grade and publication-ready gates.
@@ -86,6 +97,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Recorded OKF Explorer PR #72 as merged with authored large-record narratives
+  and typed link/JSON/XML/text source access after the full three-browser gate.
+- Replaced the planning-only zero-resource and zero-relationship projection
+  for the six reviewed families while preserving all 293 family routes and
+  distinct family versus total-concept counts.
 
 - Superseded the three-slices-only implementation boundary with the explicit
   2026-08-08 owner authorization for the staged 293-family population while

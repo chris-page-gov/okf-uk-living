@@ -1,0 +1,42 @@
+{
+  "actor/organisation-notice-or-prosecution-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-speeding-notice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-speeding-notice.v1.yaml",
+          "source_ids": [
+            "copfs-prosecution-code",
+            "govuk-single-justice-procedure",
+            "nidirect-fixed-penalties"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3aa7b3cb03336e8aa6e6deb6",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-speeding-notice-identify-and-answer-notice-submit-response-and-classify-outcome",
+      "source_iri": "service-step/respond-to-speeding-notice-identify-and-answer-notice-submit-response-and-classify-outcome",
+      "target": "actor/organisation-notice-or-prosecution-authority",
+      "target_iri": "actor/organisation-notice-or-prosecution-authority"
+    }
+  ]
+}

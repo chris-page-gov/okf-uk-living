@@ -37,6 +37,7 @@ def handoff_paths() -> list[Path]:
     paths.update(ROOT / name for name in EXTRA_ROOT_FILES if (ROOT / name).is_file())
     for pattern in (
         "source/*.v1.yaml",
+        "source/life-course-families/**/*.v1.yaml",
         "profiles/*.v1.yaml",
         "ontology/*.v1.yaml",
         "shapes/*.v1.yaml",

@@ -28,8 +28,10 @@ journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
 `life-course-population-contract.v1` contract now governs eight delivery packs,
 48 enclosing processes and the distinction between population-complete and
-specialist-reviewed release grade. The current projection remains a planning
-view, not an official service corpus or publication candidate. The GitHub
+specialist-reviewed release grade. Six reviewed families now expose authored
+narratives, typed official links and governed journey graphs; the other
+families remain explicit planning records. This is not an official service
+corpus or publication candidate. The GitHub
 repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
 acquisition and CI remain disabled, and publication requires a separate
 explicit owner request.
@@ -47,6 +49,7 @@ explicit owner request.
 - <a href="evaluation/reviews/integrated-three-slice-2026-08-07.md">[2026-08-07 integrated Explorer review](evaluation/reviews/integrated-three-slice-2026-08-07.md)</a>
 - <a href="evaluation/compatibility/okf-explorer-local.v1.yaml.html">[Local Explorer input record](evaluation/compatibility/okf-explorer-local.v1.yaml)</a>
 - <a href="evaluation/reviews/large-corpus-2026-08-07.md">[Large-corpus local review](evaluation/reviews/large-corpus-2026-08-07.md)</a>
+- <a href="evaluation/reviews/three-slice-population-migration-2026-08-08.md">[Three-slice population migration review](evaluation/reviews/three-slice-population-migration-2026-08-08.md)</a>
 - <a href="profiles/okf-domain-profile.v1.md">[`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)</a>
 - <a href="evaluation/fixtures/README.md">[Three vertical-slice fixture contracts](evaluation/fixtures/README.md)</a>
 - <a href="journeys/missed-rubbish-collection.html">[Missed rubbish collection journey](journeys/missed-rubbish-collection.md)</a>
@@ -59,6 +62,7 @@ explicit owner request.
 - <a href="source/service-family-denominator.v1.yaml.html">[Approved 293-family denominator](source/service-family-denominator.v1.yaml)</a>
 - <a href="profiles/life-course-population-contract.v1.yaml.html">[Full-population implementation contract](profiles/life-course-population-contract.v1.yaml)</a>
 - <a href="source/life-course-processes.v1.yaml.html">[48 enclosing-process denominator](source/life-course-processes.v1.yaml)</a>
+- <a href="source/life-course-families/">[Migrated life-course family dossiers](source/life-course-families/)</a>
 - <a href="ontology/governed-predicates.v1.yaml.html">[Governed predicate registry](ontology/governed-predicates.v1.yaml)</a>
 - <a href="profiles/corpus-acquisition-policy.v1.yaml.html">[Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)</a>
 - <a href="REPOSITORY_STATUS.html">[Repository status](REPOSITORY_STATUS.md)</a>
@@ -109,6 +113,7 @@ uv run --locked python scripts/check_inventory.py
 uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_life_course_dossiers.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
@@ -120,7 +125,9 @@ uv run --locked python -m unittest discover -s tests
 default; pull requests and merges do not run remote CI or update GitHub Pages.
 
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
-bundle and `okf-explorer.json` for the 293-family planning projection. With a
+bundle and `okf-explorer.json` for the 293-family discovery projection. The
+large descriptor distinguishes 293 service families from the larger typed
+concept count and exposes generated semantic and validation entrypoints. With a
 local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:
 
 ```sh

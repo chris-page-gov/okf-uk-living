@@ -1,0 +1,80 @@
+{
+  "actor/role-personal-representative": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/administer-an-estate.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/administer-an-estate.v1.yaml",
+          "source_ids": [
+            "govuk-probate-estate",
+            "nidirect-debt-after-death"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f4ee94eb6066b8df0544f80b",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding",
+      "source_iri": "service-step/administer-an-estate-establish-authority-and-administer-settle-and-distribute-without-deciding",
+      "target": "actor/role-personal-representative",
+      "target_iri": "actor/role-personal-representative"
+    }
+  ],
+  "rule/notify-organisations-after-a-death-service-unavailable-reference-missing-or-body-uncovered-fall-back-to-body-specific-route-no-notification-success-is-inferred": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/death-and-bereavement/notify-organisations-after-a-death.v1.yaml",
+          "source_ids": [
+            "govuk-tell-us-once",
+            "nidirect-who-to-tell"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e88a27c1668463ac63a3a163",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/notify-organisations-after-a-death-service-unavailable-reference-missing-or-body-uncovered-fall-back-to-body-specific-route",
+      "source_iri": "service-step/notify-organisations-after-a-death-service-unavailable-reference-missing-or-body-uncovered-fall-back-to-body-specific-route",
+      "target": "rule/notify-organisations-after-a-death-service-unavailable-reference-missing-or-body-uncovered-fall-back-to-body-specific-route-no-notification-success-is-inferred",
+      "target_iri": "rule/notify-organisations-after-a-death-service-unavailable-reference-missing-or-body-uncovered-fall-back-to-body-specific-route-no-notification-success-is-inferred"
+    }
+  ]
+}

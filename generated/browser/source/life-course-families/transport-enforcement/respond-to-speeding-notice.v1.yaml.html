@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/life-course-families/transport-enforcement/respond-to-speeding-notice.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/life-course-families/transport-enforcement/respond-to-speeding-notice.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/life-course-families/transport-enforcement/respond-to-speeding-notice.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>schema: life-course-family.v1
+id: respond-to-speeding-notice
+title: Respond to a speeding notice
+aliases: [speeding ticket, notice of intended prosecution, section 172 notice, fixed penalty for speeding, identify the driver]
+description: &gt;-
+  Identify the notice and jurisdiction, respond to any driver-information
+  requirement and follow the applicable disposal, court and redress route.
+status: population_complete
+assertion_status: normalized
+life_course_domain: transport-enforcement
+enclosing_processes:
+  - id: respond-to-road-notices-and-penalties
+    assertion_status: normalized
+    sources: [govuk-speeding-penalties, nidirect-speeding-penalties]
+situations:
+  - A registered keeper or recipient has received a speeding-related notice.
+  - A later document offers a course or fixed penalty, or begins court proceedings.
+user_needs:
+  - Identify what the document requires and who issued it.
+  - Respond through the correct jurisdiction-specific route by the stated deadline.
+  - Find the correct court or appeal boundary without guessing liability or plea.
+interaction_boundary: &gt;-
+  Legal-process discovery only. The dossier does not identify a driver, decide
+  liability, select a plea, predict a disposal or give case-specific legal advice.
+applicability:
+  - jurisdiction: England and Wales
+    state: supported
+    route_variants:
+      - {id: great-britain-notice, provider: organisation:notice-issuing-police-force-great-britain, primary_source: govuk-speeding-penalties}
+      - {id: single-justice-procedure, provider: organisation:hm-courts-and-tribunals-service, primary_source: govuk-single-justice-procedure}
+    sources: [govuk-speeding-penalties, legislation-rta-1988-section-172, govuk-single-justice-procedure, govuk-appeal-magistrates-decision]
+  - jurisdiction: Scotland
+    state: supported
+    route_variants:
+      - {id: scottish-prosecution, provider: organisation:crown-office-and-procurator-fiscal-service, primary_source: copfs-prosecution-code}
+    sources: [govuk-speeding-penalties, legislation-rta-1988-section-172, copfs-prosecution-code, mygov-scotland-criminal-appeal]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: northern-ireland-notice, provider: organisation:northern-ireland-road-safety-partnership, primary_source: nidirect-speeding-penalties}
+    sources: [nidirect-speeding-penalties, nidirect-fixed-penalties, nidirect-appealing-verdict]
+actors:
+  - {id: organisation:notice-issuing-police-force-great-britain, role: notice_issuer, authority_status: normalized, sources: [govuk-speeding-penalties, legislation-rta-1988-section-172]}
+  - {id: organisation:hm-courts-and-tribunals-service, role: england_wales_court_provider, authority_status: official, sources: [govuk-single-justice-procedure, govuk-appeal-magistrates-decision]}
+  - {id: organisation:crown-office-and-procurator-fiscal-service, role: scottish_prosecution_authority, authority_status: official, sources: [copfs-prosecution-code]}
+  - {id: organisation:northern-ireland-road-safety-partnership, role: northern_ireland_notice_provider, authority_status: official, sources: [nidirect-speeding-penalties]}
+  - {id: organisation:northern-ireland-courts-and-tribunals-service, role: northern_ireland_court_provider, authority_status: official, sources: [nidirect-fixed-penalties, nidirect-appealing-verdict]}
+journeys:
+  ordinary:
+    id: identify-and-answer-notice
+    entry_state: A synthetic recipient has an actual speeding-related document.
+    outcome: The required response and later official outcome are retained without a liability decision.
+    steps:
+      - id: identify-document-and-information-duty
+        interaction: Identify the issuer, recipient role, jurisdiction and each distinct requirement.
+        provider: organisation:notice-issuer
+        requirements: {state: supported, summary: Actual notice, reference, alleged event, recipient role and response instructions.}
+        evidence: {state: supported, summary: Synthetic document metadata; no real vehicle or person data.}
+        rule: {state: supported, summary: The actual document and current applicable law control.}
+        channel: {state: supported, summary: Channel printed on or linked from the notice.}
+        cost: {state: not_applicable, reason: Supplying required information is not modelled as a purchase.}
+        time: {state: supported, summary: Use the notice deadline; the GB general statement is not imported into Northern Ireland.}
+        output: {state: supported, summary: Classified notice and required response.}
+        outcome: {state: supported, summary: Ready to respond or referred for legal advice where identity or duty is uncertain.}
+        redress: {state: not_applicable, reason: Later disposal or court document determines the redress route.}
+        assertion_status: normalized
+        sources: [govuk-speeding-penalties, legislation-rta-1988-section-172, nidirect-speeding-penalties]
+      - id: submit-response-and-classify-outcome
+        interaction: Submit the synthetic response and classify the next official document.
+        provider: organisation:notice-or-prosecution-authority
+        requirements: {state: supported, summary: Required information and the actual response channel.}
+        evidence: {state: supported, summary: Submission time, recipient and acknowledgement.}
+        rule: {state: supported, summary: A response record is not a legal-sufficiency decision.}
+        channel: {state: supported, summary: Notice-specific official channel.}
+        cost: {state: not_published_by_source, reason: Any later offer or court fee is document-specific.}
+        time: {state: supported, summary: Notice and later document deadlines remain separate.}
+        output: {state: supported, summary: Course invitation, offer, prosecution document, court notice or unresolved state.}
+        outcome: {state: supported, summary: Follow only the route supplied by the actual outcome.}
+        redress: {state: supported, summary: Applicable court, review or appeal route.}
+        assertion_status: normalized
+        sources: [govuk-single-justice-procedure, copfs-prosecution-code, nidirect-fixed-penalties]
+  exceptions:
+    - id: disputed-identity-allegation-disposal-or-court-outcome
+      entry_state: Driver identity, duty, allegation, disposal, plea or court outcome is disputed or a deadline may have been missed.
+      outcome: The case is handed to the current authority, court route or qualified legal adviser with deadlines visible.
+      steps:
+        - id: preserve-and-escalate-without-deciding
+          interaction: Preserve the document and evidence, then use the jurisdiction&#x27;s current dispute, court or appeal route.
+          provider: organisation:applicable-court-or-prosecution-authority
+          requirements: {state: supported, summary: Actual documents, dates and grounds supplied by the official process.}
+          evidence: {state: supported, summary: Synthetic document trail; no inferred driver identity.}
+          rule: {state: supported, summary: Case-specific legal questions require the current process and qualified advice.}
+          channel: {state: supported, summary: England and Wales, Scotland or Northern Ireland court route.}
+          cost: {state: not_published_by_source, reason: Court and advice costs are case-specific.}
+          time: {state: supported, summary: The actual court or appeal deadline controls.}
+          output: {state: supported, summary: Response, hearing, review or appeal record.}
+          outcome: {state: supported, summary: Official outcome retained without prediction.}
+          redress: {state: supported, summary: Current review or appeal route for the jurisdiction.}
+          assertion_status: normalized
+          sources: [govuk-appeal-magistrates-decision, mygov-scotland-criminal-appeal, nidirect-appealing-verdict]
+dependencies:
+  - {id: role:qualified-legal-adviser, state: supported, selection_basis: regulator_first_for_case_specific_advice, sources: [govuk-appeal-magistrates-decision, mygov-scotland-criminal-appeal, nidirect-appealing-verdict]}
+sources:
+  - {id: govuk-speeding-penalties, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: legislation-rta-1988-section-172, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-single-justice-procedure, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: govuk-appeal-magistrates-decision, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: copfs-prosecution-code, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: mygov-scotland-criminal-appeal, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-speeding-penalties, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-fixed-penalties, register: source/learning-to-drive-speeding.v1.yaml}
+  - {id: nidirect-appealing-verdict, register: source/learning-to-drive-speeding.v1.yaml}
+limitations:
+  - Actual notices and current law override this normalized discovery model.
+  - Specialist legal review is required before release-grade status.
+review: {population_gate: complete, specialist_review: required}
+narrative:
+  markdown: services/respond-to-speeding-notice.md
+  process_context: Respond to road notices and penalties
+</pre>
+</body>
+</html>

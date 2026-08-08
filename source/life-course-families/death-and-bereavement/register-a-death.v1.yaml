@@ -1,0 +1,113 @@
+schema: life-course-family.v1
+id: register-a-death
+title: Register a death
+aliases: [death registration, register someone who died, death certificate, registrar after a death]
+description: >-
+  Follow the certification or investigation handoff into the applicable
+  registration authority and retain the official registration outputs.
+status: population_complete
+assertion_status: normalized
+life_course_domain: death-and-bereavement
+enclosing_processes:
+  - id: certify-register-notify-and-arrange-after-death
+    assertion_status: normalized
+    sources: [govuk-register-a-death]
+situations:
+  - A death must be registered after the appropriate medical or investigation step.
+  - An informant needs the correct national or local registration route.
+user_needs:
+  - Identify the applicable registration authority and required evidence.
+  - Understand when a coroner or Procurator Fiscal process changes the next step.
+  - Retain the certificates and references needed for later arrangements.
+interaction_boundary: >-
+  Discovery and evidence handoff only; no cause-of-death, informant,
+  investigation or registration decision is made.
+applicability:
+  - jurisdiction: England and Wales
+    state: supported
+    route_variants:
+      - {id: england-wales-register-office, provider: organisation:local-register-office-england-wales, primary_source: govuk-register-a-death}
+    sources: [govuk-register-a-death, govuk-correcting-death-registration]
+  - jurisdiction: Scotland
+    state: supported
+    route_variants:
+      - {id: scotland-registration, provider: organisation:scottish-registration-authority, primary_source: nrs-registering-a-death}
+    sources: [nrs-registering-a-death, copfs-death-investigation]
+  - jurisdiction: Northern Ireland
+    state: supported
+    route_variants:
+      - {id: northern-ireland-registration, provider: organisation:general-register-office-northern-ireland, primary_source: nidirect-registering-a-death}
+    sources: [nidirect-registering-a-death, nidirect-coroners]
+actors:
+  - {id: organisation:local-register-office-england-wales, role: registration_authority, authority_status: normalized, sources: [govuk-register-a-death]}
+  - {id: organisation:scottish-registration-authority, role: registration_authority, authority_status: normalized, sources: [nrs-registering-a-death]}
+  - {id: organisation:general-register-office-northern-ireland, role: registration_authority, authority_status: official, sources: [nidirect-registering-a-death]}
+  - {id: organisation:death-investigation-authority, role: investigation_exception_authority, authority_status: normalized, sources: [copfs-death-investigation, nidirect-coroners]}
+journeys:
+  ordinary:
+    id: certification-to-registration-output
+    entry_state: A synthetic certification or investigation output permits registration to proceed.
+    outcome: Registration outputs and their next uses are retained.
+    steps:
+      - id: select-registration-route
+        interaction: Select the route from the place of death and applicable official instructions.
+        provider: organisation:registration-authority
+        requirements: {state: supported, summary: Applicable certification or investigation output and informant information.}
+        evidence: {state: supported, summary: Synthetic MCCD or authority handoff and registration details.}
+        rule: {state: supported, summary: National and registrar-specific rules remain separate.}
+        channel: {state: supported, summary: Current registrar booking or contact route.}
+        cost: {state: not_published_by_source, reason: Certificate fees and local arrangements remain on current routes.}
+        time: {state: supported, summary: Current jurisdiction-specific registration period applies.}
+        output: {state: supported, summary: Correct registrar route and evidence checklist.}
+        outcome: {state: supported, summary: Registration can proceed or an investigation route controls.}
+        redress: {state: supported, summary: Registrar correction or complaint route where applicable.}
+        assertion_status: normalized
+        sources: [govuk-register-a-death, nrs-registering-a-death, nidirect-registering-a-death]
+      - id: register-and-retain-outputs
+        interaction: Complete registration and retain the official certificates and references.
+        provider: organisation:registration-authority
+        requirements: {state: supported, summary: Selected route's evidence and informant conditions.}
+        evidence: {state: supported, summary: Synthetic information only.}
+        rule: {state: supported, summary: Registrar and investigation authority decide a real case.}
+        channel: {state: supported, summary: Official registration route.}
+        cost: {state: not_published_by_source, reason: Current service controls any certificate charge.}
+        time: {state: supported, summary: Jurisdiction-specific deadline and appointment arrangements.}
+        output: {state: supported, summary: Registration certificate, notification reference or burial/cremation document as applicable.}
+        outcome: {state: supported, summary: Ready for notification, funeral and estate processes.}
+        redress: {state: supported, summary: Current correction route where an entry needs amendment.}
+        assertion_status: normalized
+        sources: [govuk-correcting-death-registration, nrs-registering-a-death, nidirect-registering-a-death]
+  exceptions:
+    - id: investigation-or-correction-required
+      entry_state: A coroner or Procurator Fiscal process controls, or a completed entry may require correction.
+      outcome: The authority-specific instruction or correction outcome is retained.
+      steps:
+        - id: hand-to-investigation-or-correction-authority
+          interaction: Follow the investigation or correction route without deciding cause or sufficiency.
+          provider: organisation:death-investigation-or-registration-authority
+          requirements: {state: supported, summary: Authority-specific referral, investigation or correction evidence.}
+          evidence: {state: supported, summary: Synthetic authority output.}
+          rule: {state: supported, summary: The responsible authority controls when registration can continue.}
+          channel: {state: supported, summary: Official investigation or correction route.}
+          cost: {state: not_published_by_source, reason: Consult the current authority route.}
+          time: {state: not_published_by_source, reason: Investigation and correction timing is case-specific.}
+          output: {state: supported, summary: Authority instruction or corrected entry.}
+          outcome: {state: supported, summary: Return to registration or retain the unresolved authority state.}
+          redress: {state: supported, summary: Authority complaint or applicable legal route.}
+          assertion_status: normalized
+          sources: [govuk-correcting-death-registration, copfs-death-investigation, nidirect-coroners]
+dependencies: []
+sources:
+  - {id: govuk-register-a-death, register: source/death-bereavement-estate.v1.yaml}
+  - {id: govuk-correcting-death-registration, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nrs-registering-a-death, register: source/death-bereavement-estate.v1.yaml}
+  - {id: copfs-death-investigation, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-registering-a-death, register: source/death-bereavement-estate.v1.yaml}
+  - {id: nidirect-coroners, register: source/death-bereavement-estate.v1.yaml}
+limitations:
+  - Medical and investigation authorities remain responsible for real decisions.
+  - Specialist legal and operational review is required before release-grade status.
+review: {population_gate: complete, specialist_review: required}
+narrative:
+  markdown: services/register-a-death.md
+  process_context: Certify, register, notify and arrange after death

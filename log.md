@@ -5,6 +5,11 @@
 - Authorized staged implementation of all 293 approved service families.
 - Added 48 enclosing processes, governed predicates, dossier and link-receipt
   schemas, SHACL-style shapes and an executable population-contract check.
+- Merged the universal Explorer narrative and typed-source contract in
+  OKF Explorer PR #72 without updating GitHub Pages.
+- Migrated six reviewed families into `life-course-family.v1` dossiers and
+  projected 53 link-only sources, 602 concepts and 1,025 governed
+  relationships with JSON-LD, YAML-LD, locator, adjacency and validation data.
 - Kept source snapshots, copied source content, remote CI and publication
   disabled.
 
