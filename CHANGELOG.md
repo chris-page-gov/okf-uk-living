@@ -63,6 +63,16 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   exception local coverage, dated GSS and applicable ODS identifiers, manual
   health links, regulator-first private dependencies, governed sector redress
   and role-based specialist review.
+- Governed `okf-relationship-assertion.v2` projections with explicit authority,
+  assertion scope/status, derivation, evidence, observation and rights fields.
+- Deterministic browser-renderable handoffs for authored Markdown, YAML,
+  licensing decisions, notices and the machine rights register.
+- First-class licensing and attribution evidence in the small bundle.
+- Owner-approved `okf-explorer-large-corpus.v1` local projection with 293
+  searchable planning records, seven reconciled colour facets and filter
+  postings, zero acquired source content and publication disabled.
+- Visible-browser evidence closing `REV-001` through `REV-004` and validating
+  large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
 
@@ -84,10 +94,9 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   snapshot redistribution.
 - Recorded PR #5 and PR #6 as merged and advanced the bounded sample to
   integrated review, while keeping publication separately gated.
-- Executed the first visible-browser integrated review: all three Reader/query
-  journeys passed, while relationship provenance, node build provenance,
-  source handoff and licence-notice verification remain open and block a
-  frozen candidate.
+- Executed the first visible-browser integrated review, recording four real
+  provenance, source-handoff and licence-notice failures that were subsequently
+  remediated and closed by the local rerun.
 - Expanded dated rights decisions from 16 to 25 source hosts and added ONS,
   NHS ODS, W3C,
   LGSL and OKF Explorer determinations without relaxing link-and-summary-only
@@ -98,6 +107,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Recorded owner approval of all six corpus-governance decisions while keeping
   individual legal and clinical appointments, CI and publication separately
   gated.
+- Locked the small-bundle Explorer consumer contract for local evaluation and
+  activated the large-corpus approval after all four prerequisites passed.
 
 ## [0.0.0] - 2026-08-07
 

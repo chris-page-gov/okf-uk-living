@@ -122,11 +122,13 @@ def validate_corpus_policy(policy: dict[str, Any]) -> list[str]:
     explorer = policy.get("explorer_large_corpus", {})
     if not isinstance(explorer, dict) or explorer.get("target_contract") != "okf-explorer-large-corpus.v1":
         errors.append(f"{prefix}: large-corpus target contract is missing")
-    if not isinstance(explorer, dict) or explorer.get("decision") != "conditionally_approved":
-        errors.append(f"{prefix}: large-corpus approval must remain conditional")
-    prerequisites = set(explorer.get("approval_effective_when", [])) if isinstance(explorer, dict) else set()
+    if not isinstance(explorer, dict) or explorer.get("decision") != "approved_for_local_evaluation":
+        errors.append(f"{prefix}: large-corpus approval must be effective for local evaluation")
+    if not isinstance(explorer, dict) or explorer.get("approval_effective_on") != "2026-08-07":
+        errors.append(f"{prefix}: large-corpus approval must retain its effective date")
+    prerequisites = set(explorer.get("prerequisites_completed", [])) if isinstance(explorer, dict) else set()
     if prerequisites != EXPECTED_LARGE_PREREQUISITES:
-        errors.append(f"{prefix}: large-corpus approval must retain all four review prerequisites")
+        errors.append(f"{prefix}: large-corpus approval must record all four completed review prerequisites")
     if not isinstance(explorer, dict) or explorer.get("publication_allowed") is not False:
         errors.append(f"{prefix}: large-corpus policy must not authorize publication")
 

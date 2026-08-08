@@ -1,6 +1,6 @@
 contract_version: okf-explorer-consumer.v1
 id: okf-explorer-local
-status: evaluated_with_open_findings
+status: locked_for_local_evaluation
 decision_date: "2026-08-07"
 review: evaluation/reviews/integrated-three-slice-2026-08-07.md
 
@@ -15,15 +15,15 @@ consumer:
     height: 705
 
 bundle:
-  repository_commit: 1077883fb7950c7f553472472aaaafa760701b42
+  repository_commit: b36a574f55e3bbda0baaafd419712e0cee8738cf
   path: okf-bundle.json
-  sha256: 2371b1d3f17d521f0190ae9dd9457d5a26335bf872252a8f745fed1abcb88965
-  bytes: 281493
+  sha256: 8f39c38997cdc6048df60390dccecfafa43080d87b1ee209b2259315a7ea200a
+  bytes: 780134
   schema: okf-explorer-bundle.v0
   okf_version: "0.2"
   title: A Life in the UK
-  node_count: 78
-  edge_count: 313
+  node_count: 81
+  edge_count: 318
   generated_by: scripts/build_okf_bundle.py
   generated_at: "2026-08-07T00:00:00+01:00"
 
@@ -44,20 +44,21 @@ journeys:
       - Motor insurer
       - Tell Us Once
   - id: graph
-    status: partial
-    evidence: SVG rendered and deep link restored; relationship authority and provenance were unknown.
+    status: pass
+    evidence: SVG and relationship detail rendered normalized assertion status, real-world scope and deterministic authored-link authority/provenance with no unknown authorities.
   - id: authored-source-handoff
-    status: fail
-    evidence: Local target returned HTTP 200; target browser navigation returned net::ERR_BLOCKED_BY_CLIENT.
+    status: pass
+    evidence: Source opened deterministic generated/browser HTML with exact authored identity and no browser block.
   - id: licence-and-notice
-    status: fail
-    evidence: Evidence rendered relative licensing and rights links, but both browser navigations were blocked and NOTICE was not a first-class bundle record.
+    status: pass
+    evidence: First-class licensing record opened MIT, OGL, CPSV-AP, Open Referral/HSDS, NOTICE and machine rights handoffs without browser blocking.
 
-open_findings:
+closed_findings:
   - REV-001
   - REV-002
   - REV-003
   - REV-004
+open_findings: []
 
 publication:
   requested: false

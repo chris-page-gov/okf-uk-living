@@ -45,10 +45,10 @@ class CorpusAcquisitionPolicyTests(unittest.TestCase):
         self.assertEqual("regulator_first", self.policy["private_dependencies"]["decision"])
         self.assertEqual("governed_escalation_taxonomy", self.policy["sector_redress"]["decision"])
 
-    def test_large_projection_remains_conditional(self) -> None:
+    def test_large_projection_is_approved_for_local_evaluation(self) -> None:
         explorer = self.policy["explorer_large_corpus"]
-        self.assertEqual("conditionally_approved", explorer["decision"])
-        self.assertEqual(4, len(explorer["approval_effective_when"]))
+        self.assertEqual("approved_for_local_evaluation", explorer["decision"])
+        self.assertEqual(4, len(explorer["prerequisites_completed"]))
         self.assertFalse(explorer["publication_allowed"])
 
     def test_validator_rejects_health_scraping(self) -> None:

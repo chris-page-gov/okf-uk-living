@@ -1048,11 +1048,11 @@ gaps:
     blocks: trustworthy_bilingual_navigation
   - id: GAP-EXPLORER-LARGE-CORPUS
     severity: high
-    decision_status: conditionally_approved_pending_REV_001_through_REV_004
+    decision_status: closed_local_projection_built_and_reviewed
     scope: colour_facets_timeline_graph_and_large_bundle_loading
-    finding: Explorer 0.5.7 exposes the colour-facet interface through its large-corpus descriptor and projection contract, while this repository currently builds only a small bundle.
-    owner_follow_up: Close REV-001 through REV-004 locally, then activate the already approved projection for local evaluation.
-    blocks: colour_facet_review_and_phase_4_explorer_scale
+    finding: Explorer 0.5.7 loads the governed 293-family projection, seven colour facets, static search and filter postings locally; REV-001 through REV-004 are closed.
+    owner_follow_up: No further owner decision for local evaluation; publication remains separately gated.
+    blocks: none_for_local_colour_facet_review
   - id: GAP-SERVICE-FAMILY-DENOMINATOR
     severity: high
     decision_status: closed_owner_approved_293_families

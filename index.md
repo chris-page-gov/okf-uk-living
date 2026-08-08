@@ -26,6 +26,7 @@ life in the United Kingdom.
 
 ## Project records
 
+- [Licensing and attribution](evidence/licensing-and-attribution.md)
 - [OKF change log](log.md)
 - [Repository change log](CHANGELOG.md)
 - [Implementation roadmap](ROADMAP.md)

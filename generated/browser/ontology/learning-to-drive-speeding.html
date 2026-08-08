@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning to drive and speeding model — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Learning to drive and speeding model</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>ontology/learning-to-drive-speeding.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Ontology Module&quot;
+title: &quot;Learning to drive and speeding model&quot;
+description: &quot;Governed normalized concepts for entitlement, supervised practice, test evidence, speeding notices, driver information, disposal and court redress.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;driving-speeding-source-register&quot;
+    title: &quot;Learning-to-drive and speeding linked-reference register&quot;
+    resource: &quot;../source/learning-to-drive-speeding.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Learning to drive and speeding model
+
+This module supports the synthetic
+<a href="../journeys/learning-to-drive-speeding.html">[learning-to-drive journey](../journeys/learning-to-drive-speeding.md)</a>. It keeps
+the ordinary licensing evidence chain separate from the later enforcement
+episode while allowing the two to be traversed as one life-course story.
+
+## Ordinary-path concepts
+
+| Concept | Normalized meaning | Boundary |
+|---|---|---|
+| provisional entitlement | Authority-issued evidence that identifies a provisional vehicle-category entitlement | It does not itself prove that every practice episode meets supervision, vehicle or insurance conditions |
+| supervised practice episode | A bounded synthetic driving episode under the route-specific supervisor, vehicle, plate and insurance rules | A lesson provider is not the licensing or test authority |
+| theory-test output | An official pass, fail, cancellation or other result from the jurisdiction-appropriate test route | A pass becomes evidence for the practical stage only within its current validity and category rules |
+| practical-test output | An official pass certificate, failure result or reschedule state | The bundle does not predict or revise the result |
+| full-licence handoff | The evidence transfer from practical pass to the jurisdiction-appropriate licensing authority | Automatic issue and claimant action remain route-specific |
+
+## Speeding-exception concepts
+
+| Concept | Normalized meaning | Boundary |
+|---|---|---|
+| alleged speeding event | The time, place, vehicle and alleged speed recorded on a synthetic notice | It is an allegation, not a finding of liability |
+| notice of intended prosecution | A notice identified by its issuer, recipient, reference and jurisdiction | It is distinct from the accompanying driver-information request |
+| driver-information request | A legally sourced request for information about the driver | The person required to respond, deadline and channel come from the actual document and applicable law |
+| recipient role | Registered keeper, named recipient, company or another role stated by the source or notice | Recipient and driver are not assumed to be the same person |
+| response record | Synthetic evidence of what information was supplied, when and through which official channel | It makes no claim that the response is legally sufficient |
+| disposal offer | A course invitation, fixed or conditional offer, or another official option | Availability and eligibility are never predicted |
+| court document | A charge, citation, single justice procedure notice or other jurisdiction-specific document | Plea, defence, mitigation and outcome require the court route and legal advice |
+| court redress | Reopening, review or appeal route supported for the relevant court system | Grounds, deadlines, acceptance and result are case-specific |
+
+## Evidence lineage and authority
+
+The provisional entitlement supports lawful learning only when episode-level
+conditions are also met. A theory pass can support the practical-test stage; a
+practical pass can support the full-licence handoff. These are evidence
+relations, not identity relations.
+
+The <a href="../services/great-britain-learn-to-drive-car.html">[GB learning route](../services/great-britain-learn-to-drive-car.md)</a> uses
+DVLA and DVSA, while the
+<a href="../services/northern-ireland-learn-to-drive-car.html">[Northern Ireland route](../services/northern-ireland-learn-to-drive-car.md)</a>
+uses DVA. The <a href="../services/respond-to-speeding-notice.html">[speeding family](../services/respond-to-speeding-notice.md)</a>
+further separates the GB notice stage, England and Wales court process,
+Scottish prosecution process and Northern Ireland route.
+
+## From data to ontology
+
+- **Data** retains synthetic licence category, test references, result dates,
+  notice fields, response timestamp and later document identifiers.
+- **Information** combines those fields with the correct authority,
+  jurisdiction, current rule and observation time.
+- **Knowledge** records how one official output supports a later episode or why
+  an exception branch remains unresolved.
+- **Ontology** supplies the normalized concepts and relations above without
+  turning an editorial journey or generated link into an official decision.
+
+The <a href="../evidence/learning-to-drive-speeding-sources.html">[evidence set](../evidence/learning-to-drive-speeding-sources.md)</a> records
+source scope, freshness and limitations. Unknown identity, liability, policy
+cover, course eligibility, plea and outcome remain unknown.
+</pre>
+</body>
+</html>

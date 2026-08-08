@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administer an estate — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Administer an estate</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>services/administer-an-estate.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Service Family&quot;
+title: &quot;Administer an estate&quot;
+description: &quot;Normalized family for obtaining jurisdiction-specific estate authority and tracing assets, debts, tax and distribution boundaries.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+jurisdiction: &quot;nation-and-estate-specific&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;bereavement-source-register&quot;
+    title: &quot;Death, bereavement and estate linked-reference register&quot;
+    resource: &quot;../source/death-bereavement-estate.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Administer an estate
+
+This normalized family distinguishes an England and Wales grant of
+representation, Scottish confirmation and a Northern Ireland grant. It also
+separates the authority document from later asset, debt, tax and distribution
+work.
+
+The implementations are the <a href="england-wales-probate-estate.html">[England and Wales probate route](england-wales-probate-estate.md)</a>,
+<a href="scotland-confirmation-estate.html">[Scottish confirmation route](scotland-confirmation-estate.md)</a> and
+<a href="northern-ireland-probate-estate.html">[Northern Ireland probate route](northern-ireland-probate-estate.md)</a>. The bundle
+does not decide whether a grant is required, who may apply, tax liability,
+insolvency, a dispute or a beneficiary&#x27;s entitlement.
+</pre>
+</body>
+</html>

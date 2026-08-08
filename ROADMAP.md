@@ -38,13 +38,12 @@ PR #4 and the death-and-bereavement slice in PR #5. The third slice has
 separate national registration routes, the Tell Us Once/Northern Ireland
 notification boundary, three estate-authority routes, private dependencies and
 a 20-reference denominator. All three approved slices and their rights
-decisions now exist on main. The first integrated local Explorer review was
-executed on 2026-08-07: all three Reader/query journeys passed, but four open
-provenance, source-handoff and licence-notice findings keep the review and
-compatibility gates open. Those findings must be resolved or explicitly
-dispositioned and retested before a sample candidate. A separately authorized
-link-only reference-family inventory was completed without starting leaf
-corpus acquisition.
+decisions now exist on main. The integrated local Explorer remediation rerun
+passed on 2026-08-07: Reader/query, relationship and node provenance, browser
+source handoffs and licence/notice journeys all pass. Scope approval and
+candidate freezing remain separate gates. A separately authorized link-only
+reference-family inventory was completed without starting leaf corpus
+acquisition.
 
 ## Initial sample review and release track
 
@@ -71,6 +70,8 @@ for a clearly labelled non-conformance three-slice sample.
   policy: exhaustive-authority plus representative-and-exception local
   coverage, GSS/applicable ODS identifiers, manual health links,
   regulator-first dependencies and governed sector redress.
+- Use the locally approved `okf-explorer-large-corpus.v1` projection with seven
+  reconciled colour facets and static search to stage and measure implementation.
 - Expand against declared GOV.UK, devolved-government, NHS and local-service
   denominators.
 - Add 40–50 end-to-end journeys and 250–400 canonical service families.

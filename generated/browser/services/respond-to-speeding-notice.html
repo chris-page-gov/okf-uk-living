@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Respond to a speeding notice — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Respond to a speeding notice</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>services/respond-to-speeding-notice.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Service Family&quot;
+title: &quot;Respond to a speeding notice&quot;
+description: &quot;Normalized family for identifying a speeding notice, supplying driver information and following its disposal or court branch.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+jurisdiction: &quot;notice-and-court-specific&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;driving-speeding-source-register&quot;
+    title: &quot;Learning-to-drive and speeding linked-reference register&quot;
+    resource: &quot;../source/learning-to-drive-speeding.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Respond to a speeding notice
+
+This normalized family distinguishes a notice of intended prosecution, a
+driver-information request, a later fixed or conditional offer, and a criminal
+court document. It does not decide whether an allegation is valid, who drove,
+whether a course or fixed penalty will be offered, what plea to enter, or what
+a court will decide.
+
+The selected implementations are the
+<a href="great-britain-speeding-notice.html">[Great Britain notice route](great-britain-speeding-notice.md)</a>, its separate
+<a href="england-wales-speeding-court-route.html">[England and Wales court branch](england-wales-speeding-court-route.md)</a> and
+<a href="scotland-speeding-prosecution-route.html">[Scottish prosecution branch](scotland-speeding-prosecution-route.md)</a>, plus the
+<a href="northern-ireland-speeding-notice.html">[Northern Ireland notice and court route](northern-ireland-speeding-notice.md)</a>.
+
+For a real document, its issuer, reference, recipient role, alleged event,
+response channel and deadline control. The bundle hands disputed facts,
+identity uncertainty, defence, plea and appeal questions to the current
+official route and qualified legal advice.
+</pre>
+</body>
+</html>

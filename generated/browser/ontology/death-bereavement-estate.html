@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Death, bereavement and estate model — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Death, bereavement and estate model</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>ontology/death-bereavement-estate.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Ontology Module&quot;
+title: &quot;Death, bereavement and estate model&quot;
+description: &quot;Governed normalized concepts for certification, investigation, registration, notification coverage, estate authority and private dependencies.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;normalized&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;bereavement-source-register&quot;
+    title: &quot;Death, bereavement and estate linked-reference register&quot;
+    resource: &quot;../source/death-bereavement-estate.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Death, bereavement and estate model
+
+This module supports the synthetic
+<a href="../journeys/death-bereavement-estate.html">[death and bereavement journey](../journeys/death-bereavement-estate.md)</a>. It
+keeps public evidence handoffs, authority and private dependencies distinct.
+
+| Concept | Normalized meaning | Boundary |
+|---|---|---|
+| certification or investigation output | MCCD, coroner notification, Procurator Fiscal outcome or other officially identified input to registration | The bundle does not decide cause of death or whether investigation is required |
+| informant role | Person qualified under the selected registration route to supply information | Synthetic role only; qualification is checked by the registrar |
+| registration output | Jurisdiction-specific register entry, certificate or funeral handoff | Similar certificates are not assumed interchangeable for every consumer |
+| notification coverage record | Bodies covered and not covered by a service at the observation time | Tell Us Once coverage is not extended to Northern Ireland or private bodies |
+| manual notification record | Synthetic record of body, evidence, channel, time and result | It does not prove acceptance or close an account |
+| grant of representation | England and Wales or Northern Ireland court evidence of authority within its route | Need, applicant and effect remain case-specific |
+| confirmation | Scottish court document giving an executor authority to uplift and administer estate property | It remains Scottish terminology and authority, not an identity mapping to probate |
+| estate inventory | Synthetic list of assets, debts, holders, values and evidence state | It is not a legal or tax valuation |
+| private dependency | Funeral provider, account provider or practitioner outside the public authority chain | Selection, contract, price, evidence and complaint route remain provider-specific |
+| redress handoff | Registrar correction, service support, body complaint, court process or professional advice | Grounds, deadline, acceptance and result remain current and case-specific |
+
+## Evidence lineage
+
+The certification or investigation output can support registration. A
+registration output can support a notification service, funeral handoff and
+later evidence request. A will, death certificate, estate inventory and tax
+information can support a court-authority application, but no one artefact is
+treated as sufficient in every jurisdiction or case.
+
+Data retains only synthetic references, dates, roles and outcomes. Information
+adds the correct authority, jurisdiction and observation time. Knowledge
+records supported handoffs and unresolved exceptions. The ontology provides
+the normalized concepts above without presenting generated links as official.
+</pre>
+</body>
+</html>

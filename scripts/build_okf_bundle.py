@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import hashlib
 import json
 import os
 import re
@@ -139,11 +140,39 @@ def route_aliases(path_id: str, metadata: dict[str, Any]) -> list[str]:
     return sorted(aliases)
 
 
+def browser_source_url(path_id: str) -> str:
+    path = Path(path_id)
+    output = path.with_suffix(".html") if path.suffix == ".md" else path.with_name(f"{path.name}.html")
+    return (Path("generated") / "browser" / output).as_posix()
+
+
+def rewrite_body_links(source_id: str, body: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        href = match.group(1)
+        target_id = resolve_link(source_id, href)
+        if not target_id:
+            return match.group(0)
+        target = ROOT / target_id
+        if not target.is_file() or (target.suffix not in {".md", ".yaml", ".yml"} and target.name != "LICENSE"):
+            return match.group(0)
+        bare = href.split("#", 1)[0].split("?", 1)[0]
+        suffix = href[len(bare):]
+        return match.group(0).replace(f"({href})", f"({browser_source_url(target_id)}{suffix})", 1)
+
+    return LINK_RE.sub(replace, body)
+
+
+def relationship_id(source_id: str, target_id: str, kind: str) -> str:
+    digest = hashlib.sha256(f"{source_id}\0{target_id}\0{kind}".encode()).hexdigest()[:20]
+    return f"relationship:{digest}"
+
+
 def build_bundle() -> tuple[dict[str, Any], list[str]]:
     config = load_config()
     paths = markdown_paths(config)
     known_ids = {path.relative_to(ROOT).as_posix() for path in paths}
     nodes: dict[str, dict[str, Any]] = {}
+    authored_bodies: dict[str, str] = {}
     errors: list[str] = []
 
     for path in paths:
@@ -155,6 +184,7 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
             continue
         errors.extend(validate_document(path_id, raw_metadata, body))
         metadata = reserved_metadata(path_id, raw_metadata, body)
+        authored_bodies[path_id] = body
         generated = metadata.get("generated") if isinstance(metadata.get("generated"), dict) else {}
         timestamp = str(generated.get("at") or metadata.get("timestamp") or "")
         section = path_id.split("/", 1)[0] if "/" in path_id else "root"
@@ -166,13 +196,25 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
             "timestamp": timestamp,
             "route_aliases": route_aliases(path_id, metadata),
             "section": section,
-            "source": path_id,
-            "body": body,
+            "authored_source": path_id,
+            "source": browser_source_url(path_id),
+            "source_url": browser_source_url(path_id),
+            "body": rewrite_body_links(path_id, body),
         }
 
-    edges: list[dict[str, str]] = []
+    timestamps = sorted(node["timestamp"] for node in nodes.values() if node.get("timestamp"))
+    generated_at = timestamps[-1] if timestamps else ""
+    for node in nodes.values():
+        declared = node.get("generated") if isinstance(node.get("generated"), dict) else {}
+        node["generated"] = {
+            **declared,
+            "by": str(declared.get("by") or "process:okf-bundle-builder"),
+            "at": str(declared.get("at") or generated_at),
+        }
+
+    edges: list[dict[str, Any]] = []
     for source_id, node in sorted(nodes.items()):
-        for match in LINK_RE.finditer(str(node.get("body", ""))):
+        for match in LINK_RE.finditer(authored_bodies.get(source_id, "")):
             target_id = resolve_link(source_id, match.group(1))
             if not target_id or not target_id.endswith(".md"):
                 continue
@@ -181,11 +223,43 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
                 errors.append(f"{source_id}: link targets missing Markdown file {target_id}")
             elif target_id in known_ids:
                 kind = "lists" if node.get("type") == "Index" else "references"
-                edges.append({"source": source_id, "target": target_id, "kind": kind, "label": kind})
+                synthetic = node.get("assertion_status") == "editorial-example"
+                authority_class = "synthetic" if synthetic else "derived"
+                edges.append({
+                    "schema": "okf-relationship-assertion.v2",
+                    "id": relationship_id(source_id, target_id, kind),
+                    "source": source_id,
+                    "target": target_id,
+                    "source_iri": source_id,
+                    "target_iri": target_id,
+                    "kind": kind,
+                    "label": kind,
+                    "predicate": kind,
+                    "assertion_status": "normalized",
+                    "assertion_scope": "synthetic-fixture" if synthetic else "real-world",
+                    "authority": {
+                        "class": authority_class,
+                        "label": "Synthetic fixture link" if synthetic else "Deterministic authored-link projection",
+                        "source": browser_source_url(source_id),
+                    },
+                    "derivation": "repository-authored-markdown-link",
+                    "derivation_activity": "process:okf-bundle-builder",
+                    "observed_at": str(node.get("observed_at") or node.get("timestamp") or generated_at),
+                    "freshness": "unknown",
+                    "review_status": "generated_from_authored_link",
+                    "evidence": [{
+                        "type": "authored-markdown-link",
+                        "source_artifact": source_id,
+                        "locator": browser_source_url(source_id),
+                        "normalization": "deterministic Markdown link projection",
+                    }],
+                    "rights": {
+                        "source": "generated/browser/LICENSE_DECISIONS.html",
+                        "assertion": "Repository-authored relationship projection licensed MIT; linked upstream content is not redistributed.",
+                    },
+                })
 
     corpus_config = config["corpora"][0]
-    timestamps = sorted(node["timestamp"] for node in nodes.values() if node.get("timestamp"))
-    generated_at = timestamps[-1] if timestamps else ""
     corpus = {
         "id": corpus_config["id"],
         "label": corpus_config["label"],
@@ -210,6 +284,11 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
             "corpus_order": [corpus_config["id"]],
             "core_conformance": "OKF v0.2",
             "status": "research-and-implementation-scaffold",
+            "license": "MIT",
+            "license_record": "generated/browser/LICENSE_DECISIONS.html",
+            "attribution_notice": "generated/browser/NOTICE.html",
+            "rights_register": "generated/browser/source/rights-decisions.v1.yaml.html",
+            "publication_status": "local-validation-only",
         },
         "corpora": {corpus_config["id"]: corpus},
     }

@@ -68,7 +68,7 @@ evidence for all 25 registered source hosts plus the standards and Explorer
 references. The [exhaustive inventory](../source/exhaustive-reference-inventory.v1.yaml)
 contains 89 new references and includes the 53 implemented-slice references.
 
-## Unresolved gates
+## Remaining gates
 
 The repository and current source-family licensing gate is complete:
 
@@ -83,12 +83,14 @@ for all 120 domain/reference-jurisdiction cells: 96 national cells have an
 authoritative discovery family and 24 local cells remain partial. These
 implementation gates remain open:
 
-- the complete Explorer consumer inventory;
 - the governed predicate registry and SHACL shapes; and
 - the approved authority, service-family, regulator and redress mappings;
 - named legal and clinical reviewer acceptance for affected production-grade
-  claims; and
-- review of the three completed bounded source-family registers and slices.
+  claims.
+
+The OKF Explorer 0.5.7 consumer contract is locked for local evaluation. The
+three-slice remediation review and the 293-family colour-facet review pass;
+neither result authorizes candidate freezing or publication.
 
 The [corpus acquisition policy](corpus-acquisition-policy.v1.yaml) closes the
 local-coverage, identifier, health-permission, regulator-first and redress

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>evaluation/compatibility/okf-explorer-local.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>evaluation/compatibility/okf-explorer-local.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>evaluation/compatibility/okf-explorer-local.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>contract_version: okf-explorer-consumer.v1
+id: okf-explorer-local
+status: locked_for_local_evaluation
+decision_date: &quot;2026-08-07&quot;
+review: evaluation/reviews/integrated-three-slice-2026-08-07.md
+
+consumer:
+  package: &quot;@okf/explorer&quot;
+  version: &quot;0.5.7&quot;
+  commit: babd00c994ac8450480d1d4b128ccbe58f01cbe0
+  build_source: existing_local_static_build
+  browser: codex-in-app-browser
+  viewport:
+    width: 710
+    height: 705
+
+bundle:
+  repository_commit: b36a574f55e3bbda0baaafd419712e0cee8738cf
+  path: okf-bundle.json
+  sha256: 8f39c38997cdc6048df60390dccecfafa43080d87b1ee209b2259315a7ea200a
+  bytes: 780134
+  schema: okf-explorer-bundle.v0
+  okf_version: &quot;0.2&quot;
+  title: A Life in the UK
+  node_count: 81
+  edge_count: 318
+  generated_by: scripts/build_okf_bundle.py
+  generated_at: &quot;2026-08-07T00:00:00+01:00&quot;
+
+entrypoint:
+  pattern: &quot;?bundle={encoded-same-origin-bundle-url}#overview&quot;
+  publication_url: null
+  local_only: true
+
+journeys:
+  - id: overview
+    status: pass
+  - id: record-deep-link
+    status: pass
+  - id: query
+    status: pass
+    terms:
+      - continuing service failure
+      - Motor insurer
+      - Tell Us Once
+  - id: graph
+    status: pass
+    evidence: SVG and relationship detail rendered normalized assertion status, real-world scope and deterministic authored-link authority/provenance with no unknown authorities.
+  - id: authored-source-handoff
+    status: pass
+    evidence: Source opened deterministic generated/browser HTML with exact authored identity and no browser block.
+  - id: licence-and-notice
+    status: pass
+    evidence: First-class licensing record opened MIT, OGL, CPSV-AP, Open Referral/HSDS, NOTICE and machine rights handoffs without browser blocking.
+
+closed_findings:
+  - REV-001
+  - REV-002
+  - REV-003
+  - REV-004
+open_findings: []
+
+publication:
+  requested: false
+  pages_updated: false
+  public_url: null
+</pre>
+</body>
+</html>

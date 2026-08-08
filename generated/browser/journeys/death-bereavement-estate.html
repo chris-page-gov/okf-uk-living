@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Death and bereavement through estate administration — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Death and bereavement through estate administration</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored Markdown. Source identity: <code>journeys/death-bereavement-estate.md</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>---
+type: &quot;Citizen Journey&quot;
+title: &quot;Death and bereavement through estate administration&quot;
+description: &quot;Synthetic journey through certification or investigation, death registration, notification, funeral dependencies and jurisdiction-specific estate authority.&quot;
+status: &quot;implemented&quot;
+assertion_status: &quot;editorial-example&quot;
+synthetic: true
+jurisdiction: &quot;england-wales-scotland-or-northern-ireland&quot;
+observed_at: &quot;2026-08-07&quot;
+sources:
+  - id: &quot;bereavement-source-register&quot;
+    title: &quot;Death, bereavement and estate linked-reference register&quot;
+    resource: &quot;../source/death-bereavement-estate.v1.yaml&quot;
+    author: &quot;organisation:okf-uk-living&quot;
+    observed_at: &quot;2026-08-07&quot;
+---
+
+# Death and bereavement through estate administration
+
+This is a synthetic `editorial-example`. It contains no real death, person,
+will, account, asset, debt, tax return or beneficiary. It explains evidence
+and authority handoffs; it does not decide cause of death, informant status,
+notification sufficiency, probate or confirmation need, applicant authority,
+tax, insolvency, distribution or entitlement.
+
+The journey exercises the <a href="../ontology/death-bereavement-estate.html">[bereavement ontology](../ontology/death-bereavement-estate.md)</a>,
+the <a href="../services/register-a-death.html">[registration](../services/register-a-death.md)</a>,
+<a href="../services/notify-organisations-after-a-death.html">[notification](../services/notify-organisations-after-a-death.md)</a> and
+<a href="../services/administer-an-estate.html">[estate](../services/administer-an-estate.md)</a> families, and the
+<a href="../evidence/death-bereavement-estate-sources.html">[bounded evidence set](../evidence/death-bereavement-estate-sources.md)</a>.
+
+## Ordinary path
+
+1. **Choose the jurisdiction.** Use the place of death, residence and estate
+   context to select official routes; do not infer a national process from a
+   common label.
+2. **Retain the certification or investigation boundary.** Record only the
+   synthetic fact that an MCCD or authority output is available, or that a
+   coroner or Procurator Fiscal process controls the next step.
+3. **Register the death.** Supply the selected registrar&#x27;s required synthetic
+   information and retain the official registration outputs and observation
+   time.
+4. **Record the funeral dependency.** The registration or investigation
+   output can feed a <a href="../organisations/funeral-provider.html">[funeral provider](../organisations/funeral-provider.md)</a>,
+   but the provider is not the public registration authority.
+5. **Notify covered and uncovered bodies.** Use Tell Us Once only inside its
+   current coverage. Create separate synthetic notification records for every
+   uncovered public or <a href="../organisations/private-organisation-after-death.html">[private organisation](../organisations/private-organisation-after-death.md)</a>.
+6. **Obtain estate authority if required.** Preserve the will or no-will
+   context, inventory, court, tax handoff and exact jurisdictional document.
+7. **Administer without deciding.** Trace assets, debts, tax and later
+   distribution as unresolved or officially evidenced states; use an
+   <a href="../organisations/estate-practitioner.html">[estate practitioner](../organisations/estate-practitioner.md)</a> where the
+   current route or complexity requires professional help.
+
+| Registration context | Official route | Authority and time boundary |
+|---|---|---|
+| <a href="../jurisdictions/england.html">[England](../jurisdictions/england.md)</a> and <a href="../jurisdictions/wales.html">[Wales](../jurisdictions/wales.md)</a> | <a href="../services/england-wales-death-registration.html">[England and Wales registration](../services/england-wales-death-registration.md)</a> | The routed <a href="../organisations/local-register-office-england-wales.html">[local register office](../organisations/local-register-office-england-wales.md)</a>, current service and any coroner instructions control; no Scottish or NI deadline is imported |
+| <a href="../jurisdictions/scotland.html">[Scotland](../jurisdictions/scotland.md)</a> | <a href="../services/scotland-death-registration.html">[Scottish registration](../services/scotland-death-registration.md)</a> | The <a href="../organisations/scottish-registration-authority.html">[Scottish registration authority](../organisations/scottish-registration-authority.md)</a> uses the observed eight-day rule and MCCD route; <a href="../organisations/crown-office-and-procurator-fiscal-service.html">[COPFS](../organisations/crown-office-and-procurator-fiscal-service.md)</a> controls referred investigations |
+| <a href="../jurisdictions/northern-ireland.html">[Northern Ireland](../jurisdictions/northern-ireland.md)</a> | <a href="../services/northern-ireland-death-registration.html">[Northern Ireland registration](../services/northern-ireland-death-registration.md)</a> | <a href="../organisations/general-register-office-northern-ireland.html">[GRONI](../organisations/general-register-office-northern-ireland.md)</a> and the district registrar use the observed five-day rule except for the <a href="../organisations/coroners-service-northern-ireland.html">[Coroners Service](../organisations/coroners-service-northern-ireland.md)</a> boundary |
+
+## Notification exception path
+
+| Residence or coverage state | Route | Remaining work |
+|---|---|---|
+| Person lived in England, Scotland or Wales and service conditions are met | <a href="../services/tell-us-once.html">[Tell Us Once](../services/tell-us-once.md)</a> through the <a href="../organisations/tell-us-once-service.html">[Tell Us Once service](../organisations/tell-us-once-service.md)</a> | Retain the observed covered-body list and notify every uncovered public or private organisation separately |
+| Person lived in Northern Ireland | <a href="../services/northern-ireland-death-notifications.html">[Northern Ireland manual notifications](../services/northern-ireland-death-notifications.md)</a> | Use the <a href="../organisations/northern-ireland-bereavement-service.html">[Northern Ireland Bereavement Service](../organisations/northern-ireland-bereavement-service.md)</a> for its benefit-office scope and contact other bodies separately |
+| Tell Us Once unavailable, no reference supplied, or a body is uncovered | Body-specific current route | Record evidence, channel, time, result and complaint boundary without claiming successful data sharing |
+
+Tell Us Once is not treated as a universal UK notification service. Its
+absence or limited coverage never becomes evidence that no notification is
+required.
+
+## Estate-authority and exception path
+
+| Estate jurisdiction | Authority route | Exception boundary |
+|---|---|---|
+| England and Wales | <a href="../services/england-wales-probate-estate.html">[England and Wales probate](../services/england-wales-probate-estate.md)</a> administered by <a href="../organisations/hm-courts-and-tribunals-service.html">[HMCTS](../organisations/hm-courts-and-tribunals-service.md)</a>, with <a href="../organisations/hm-revenue-and-customs.html">[HMRC](../organisations/hm-revenue-and-customs.md)</a> tax dependencies | Will and no-will applicants, whether a grant is needed, caveat, dispute, debt and tax remain current and case-specific |
+| Scotland | <a href="../services/scotland-confirmation-estate.html">[Scottish confirmation](../services/scotland-confirmation-estate.md)</a> administered by <a href="../organisations/scottish-courts-and-tribunals-service.html">[Scottish Courts](../organisations/scottish-courts-and-tribunals-service.md)</a>, with HMRC tax dependencies | Confirmation, inventory, small or large estate and testate or intestate branches retain Scottish terminology and advice boundaries |
+| Northern Ireland | <a href="../services/northern-ireland-probate-estate.html">[Northern Ireland probate](../services/northern-ireland-probate-estate.md)</a> administered by <a href="../organisations/northern-ireland-courts-and-tribunals-service.html">[NICTS](../organisations/northern-ireland-courts-and-tribunals-service.md)</a>, with HMRC tax dependencies | Grant, letters of administration, no-will and debt branches remain Northern Ireland routes |
+
+These are not combined into one UK estate process. Disputed authority,
+insolvency, missing evidence, an unknown will, cross-border property or a
+missed court deadline is handed to the current official court, tax or
+qualified professional route.
+
+## Acceptance questions
+
+- Can the graph identify the certification or investigation output that feeds
+  the selected registrar without deciding cause of death?
+- Can it show Tell Us Once coverage and every uncovered notification without
+  implying that data sharing succeeded?
+- Can it distinguish probate in England and Wales, confirmation in Scotland
+  and probate in Northern Ireland, including their court and HMRC roles?
+- Can it distinguish public authorities from funeral, account and
+  professional dependencies while retaining evidence and redress boundaries?
+</pre>
+</body>
+</html>

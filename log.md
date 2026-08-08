@@ -39,3 +39,8 @@
 - Approved the local-authority coverage and geography identifier model, manual
   health links, regulator-first dependencies, five-level redress taxonomy and
   role-based specialist review gates without authorizing publication.
+- Closed all four local Explorer findings by adding governed relationship and
+  node build provenance, browser-safe authored-source handoffs and first-class
+  licence/notice evidence.
+- Built and browser-verified the approved 293-family large-corpus planning
+  projection with seven colour facets, static search and zero source snapshots.
