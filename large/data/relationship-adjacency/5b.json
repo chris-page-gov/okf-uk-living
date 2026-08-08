@@ -1,4 +1,82 @@
 {
+  "outcome/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-give-required-sickness-evidence-and-use-employer-hmrc-or-benefit-handoffs-when-payment-is-refused-or-ends": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-statutory-sick-pay.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-statutory-sick-pay.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-statutory-sick-pay-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:99caffba68002697f4e0f3d3",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-give-required-sickness-evidence-and-use-employer-hmrc-or-benefit-handoffs-when-payment-is-refused-or-ends",
+      "target_iri": "outcome/get-statutory-sick-pay-ordinary-source-linked-route-follow-current-official-instructions-give-required-sickness-evidence-and-use-employer-hmrc-or-benefit-handoffs-when-payment-is-refused-or-ends"
+    }
+  ],
+  "requirement/get-workplace-health-and-safety-protection-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/get-workplace-health-and-safety-protection.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "get-workplace-health-and-safety-protection-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e5e30175f6d14854b6560eb9",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-workplace-health-and-safety-protection-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/get-workplace-health-and-safety-protection-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/get-workplace-health-and-safety-protection-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/get-workplace-health-and-safety-protection-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    }
+  ],
   "requirement/register-to-vote-for-first-time-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [
     {
       "assertion_scope": "real-world",
@@ -79,6 +157,423 @@
       "source_iri": "service-step/get-disabled-students-allowance-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "rule/get-disabled-students-allowance-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
       "target_iri": "rule/get-disabled-students-allowance-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-while-unemployed-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:17306553aa40dbbd5d6b6044",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "source_iri": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "target": "enclosing-process/respond-to-unemployment-and-redundancy",
+      "target_iri": "enclosing-process/respond-to-unemployment-and-redundancy"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-while-unemployed-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4e896f7fe717af8318dee292",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "source_iri": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "target": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-while-unemployed-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:555b1ddf988fa59170bd4dea",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "source_iri": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "target": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/claim-universal-credit-while-unemployed-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-universal-credit-while-unemployed.v1.yaml",
+          "source_ids": [
+            "claim-universal-credit-while-unemployed-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ef97de7682275d7ffaae438f",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-universal-credit-while-unemployed",
+      "source_iri": "dataset/claim-universal-credit-while-unemployed",
+      "target": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route",
+      "target_iri": "service-episode/claim-universal-credit-while-unemployed-ordinary-source-linked-route"
+    }
+  ],
+  "service-episode/pay-council-tax-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:515a9f7939a367ec1f29059e",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/pay-council-tax",
+      "source_iri": "dataset/pay-council-tax",
+      "target": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "target_iri": "service-episode/pay-council-tax-ordinary-source-linked-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e83fe1ac550967002fbee9f",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "source_iri": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "target": "service-step/pay-council-tax-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/pay-council-tax-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7290293d882d94cc6453262e",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "source_iri": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "target": "enclosing-process/manage-personal-tax-and-contributions",
+      "target_iri": "enclosing-process/manage-personal-tax-and-contributions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/pay-council-tax.v1.yaml",
+          "source_ids": [
+            "pay-council-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fcc9eb46ce47f844a71a61a5",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "source_iri": "service-episode/pay-council-tax-ordinary-source-linked-route",
+      "target": "service-step/pay-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/pay-council-tax-ordinary-source-linked-route-select-current-jurisdiction-route"
+    }
+  ],
+  "service-episode/pay-paye-and-national-insurance-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "pay-paye-and-national-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:180754aae9091ecbaba455db",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure",
+      "source_iri": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure",
+      "target": "enclosing-process/establish-employment-terms-pay-and-leave",
+      "target_iri": "enclosing-process/establish-employment-terms-pay-and-leave"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "pay-paye-and-national-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:297893c1afaa7d93faa02a2e",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure",
+      "source_iri": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure",
+      "target": "service-step/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/pay-paye-and-national-insurance-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/pay-paye-and-national-insurance.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "pay-paye-and-national-insurance-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b2854e517c134e858b6d641a",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/pay-paye-and-national-insurance",
+      "source_iri": "dataset/pay-paye-and-national-insurance",
+      "target": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure",
+      "target_iri": "service-episode/pay-paye-and-national-insurance-exception-or-route-failure"
     }
   ],
   "service-step/receive-national-insurance-number-ordinary-source-linked-route-follow-current-official-instructions": [

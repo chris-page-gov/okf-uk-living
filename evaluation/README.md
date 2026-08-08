@@ -33,5 +33,10 @@ adds 13 questions across school, transition and post-school study/research. It
 accounts for all 36 Pack 2 families while preserving the deeper learning-to-drive
 vertical slice and adds 44 current body-free link receipts.
 
+The [Pack 3 work-and-money review](reviews/pack-3-work-money-2026-08-08.md)
+adds 36 families, 45 body-free official links and 13 questions across finding
+work, employment and money/tax/benefits, including explicit Great Britain and
+Northern Ireland employment boundaries.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

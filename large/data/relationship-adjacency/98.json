@@ -952,6 +952,45 @@
       "target_iri": "evidence/start-antenatal-care-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
     }
   ],
+  "outcome/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/take-statutory-leave.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/take-statutory-leave.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "take-statutory-leave-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7fb0bdaf097bb57572b0419d",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/take-statutory-leave-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
   "output/get-school-send-support-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
     {
       "assertion_scope": "real-world",
@@ -1510,6 +1549,83 @@
       "source_iri": "service-episode/seek-research-funding-ordinary-source-linked-route",
       "target": "service-step/seek-research-funding-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target_iri": "service-step/seek-research-funding-ordinary-source-linked-route-select-current-jurisdiction-route"
+    }
+  ],
+  "user-need/register-for-income-tax-find-the-responsible-tax-route-and-retain-hmrc-confirmation-without-calculating-liability-locally": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/register-for-income-tax.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/register-for-income-tax.v1.yaml",
+          "source_ids": [
+            "register-for-income-tax-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:90c1f04332ed601526a1f6b4",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/register-for-income-tax",
+      "source_iri": "dataset/register-for-income-tax",
+      "target": "user-need/register-for-income-tax-find-the-responsible-tax-route-and-retain-hmrc-confirmation-without-calculating-liability-locally",
+      "target_iri": "user-need/register-for-income-tax-find-the-responsible-tax-route-and-retain-hmrc-confirmation-without-calculating-liability-locally"
+    }
+  ],
+  "user-need/report-workplace-injury-distinguish-emergency-care": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f4461651d268b07a7fae4253",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-workplace-injury",
+      "source_iri": "dataset/report-workplace-injury",
+      "target": "user-need/report-workplace-injury-distinguish-emergency-care",
+      "target_iri": "user-need/report-workplace-injury-distinguish-emergency-care"
     }
   ]
 }

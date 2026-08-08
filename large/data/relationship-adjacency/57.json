@@ -77,6 +77,88 @@
       "target_iri": "actor/organisation-responsible-local-authority"
     }
   ],
+  "outcome/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-select-the-correct-criminal-record-disclosure-route-for-the-role-and-obtain-or-share-its-official-output": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-disclosure-or-dbs-check.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-disclosure-or-dbs-check-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7a5868af8248dae2e9474ed8",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-select-the-correct-criminal-record-disclosure-route-for-the-role-and-obtain-or-share-its-official-output",
+      "target_iri": "outcome/get-disclosure-or-dbs-check-ordinary-source-linked-route-follow-current-official-instructions-select-the-correct-criminal-record-disclosure-route-for-the-role-and-obtain-or-share-its-official-output"
+    }
+  ],
+  "outcome/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/get-redundancy-support.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "get-redundancy-support-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5cd24ad53f3c874406bd7815",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/get-redundancy-support-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
   "output/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
     {
       "assertion_scope": "real-world",
@@ -952,6 +1034,44 @@
       "source_iri": "dataset/claim-student-council-tax-disregard",
       "target": "user-need/claim-student-council-tax-disregard-evidence-and-challenge-route-without-calculating-the-bill-locally",
       "target_iri": "user-need/claim-student-council-tax-disregard-evidence-and-challenge-route-without-calculating-the-bill-locally"
+    }
+  ],
+  "user-need/get-national-insurance-record-access-the-official-record-and-keep-forecast": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-national-insurance-record.v1.yaml",
+          "source_ids": [
+            "get-national-insurance-record-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c7bdbe56680050d1be0dba10",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-national-insurance-record",
+      "source_iri": "dataset/get-national-insurance-record",
+      "target": "user-need/get-national-insurance-record-access-the-official-record-and-keep-forecast",
+      "target_iri": "user-need/get-national-insurance-record-access-the-official-record-and-keep-forecast"
     }
   ]
 }

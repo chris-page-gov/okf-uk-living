@@ -227,6 +227,44 @@
       "target_iri": "evidence/take-paternity-or-partner-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "outcome/file-self-assessment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/file-self-assessment.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/file-self-assessment.v1.yaml",
+          "source_ids": [
+            "file-self-assessment-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fa5a2b03e21e2930404c83b8",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/file-self-assessment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/file-self-assessment-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/file-self-assessment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/file-self-assessment-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    }
+  ],
   "outcome/take-maternity-leave-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
     {
       "assertion_scope": "real-world",
@@ -1067,6 +1105,44 @@
       "source_iri": "service-step/start-apprenticeship-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/start-apprenticeship-transition-adulthood-wales-handoff",
       "target_iri": "resource/start-apprenticeship-transition-adulthood-wales-handoff"
+    }
+  ],
+  "user-need/report-benefit-change-of-circumstances-find-current-notification-routes-and-avoid-assuming-one-report-updates-every-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/report-benefit-change-of-circumstances.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/report-benefit-change-of-circumstances.v1.yaml",
+          "source_ids": [
+            "report-benefit-change-of-circumstances-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:00e359a65108aef363eff2c9",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-benefit-change-of-circumstances",
+      "source_iri": "dataset/report-benefit-change-of-circumstances",
+      "target": "user-need/report-benefit-change-of-circumstances-find-current-notification-routes-and-avoid-assuming-one-report-updates-every-authority",
+      "target_iri": "user-need/report-benefit-change-of-circumstances-find-current-notification-routes-and-avoid-assuming-one-report-updates-every-authority"
     }
   ]
 }

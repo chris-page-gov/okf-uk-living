@@ -661,6 +661,47 @@
       "target_iri": "actor/organisation-wales-official-route-provider"
     }
   ],
+  "outcome/claim-new-style-jobseekers-allowance-ordinary-source-linked-route-follow-current-official-instructions-check-and-use-the-contribution-based-unemployment-support-route-and-its-decision-or-challenge-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-new-style-jobseekers-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-new-style-jobseekers-allowance.v1.yaml",
+          "source_ids": [
+            "claim-new-style-jobseekers-allowance-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d1d63decbac07247ef3a953f",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/claim-new-style-jobseekers-allowance-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/claim-new-style-jobseekers-allowance-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/claim-new-style-jobseekers-allowance-ordinary-source-linked-route-follow-current-official-instructions-check-and-use-the-contribution-based-unemployment-support-route-and-its-decision-or-challenge-handoff",
+      "target_iri": "outcome/claim-new-style-jobseekers-allowance-ordinary-source-linked-route-follow-current-official-instructions-check-and-use-the-contribution-based-unemployment-support-route-and-its-decision-or-challenge-handoff"
+    }
+  ],
   "outcome/start-childhood-vaccinations-ordinary-source-linked-route-follow-current-official-instructions-find-the-current-national-vaccination-schedule-and-provider-route-for-a-child": [
     {
       "assertion_scope": "real-world",
@@ -700,6 +741,45 @@
       "source_iri": "service-step/start-childhood-vaccinations-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "outcome/start-childhood-vaccinations-ordinary-source-linked-route-follow-current-official-instructions-find-the-current-national-vaccination-schedule-and-provider-route-for-a-child",
       "target_iri": "outcome/start-childhood-vaccinations-ordinary-source-linked-route-follow-current-official-instructions-find-the-current-national-vaccination-schedule-and-provider-route-for-a-child"
+    }
+  ],
+  "output/report-workplace-injury-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/employment/report-workplace-injury.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/employment/report-workplace-injury.v1.yaml",
+          "source_ids": [
+            "employment-northern-ireland-handoff",
+            "report-workplace-injury-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:40f8b2f3ff73cf62f9ba87d7",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-workplace-injury-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/report-workplace-injury-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/report-workplace-injury-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/report-workplace-injury-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
     }
   ],
   "requirement/appeal-school-admission-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary": [
@@ -928,6 +1008,85 @@
       "source_iri": "service-step/register-with-health-services-as-student-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/register-with-health-services-as-student-post-school-study-scotland-handoff",
       "target_iri": "resource/register-with-health-services-as-student-post-school-study-scotland-handoff"
+    }
+  ],
+  "rule/get-debt-advice-and-relief-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/money-tax-and-benefits/get-debt-advice-and-relief.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/money-tax-and-benefits/get-debt-advice-and-relief.v1.yaml",
+          "source_ids": [
+            "get-debt-advice-and-relief-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:54abb676c105518f4a4fb007",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/get-debt-advice-and-relief-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/get-debt-advice-and-relief-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/get-debt-advice-and-relief-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/get-debt-advice-and-relief-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    }
+  ],
+  "rule/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/use-public-job-search.v1.yaml",
+          "source_ids": [
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff",
+            "use-public-job-search-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7aaee5b972e53c74721613c5",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/use-public-job-search-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
   "service-episode/register-a-death-certification-to-registration-output": [

@@ -957,5 +957,46 @@
       "target": "user-need/check-child-nationality-status-find-the-authoritative-status-and-evidence-route-without-the-bundle-deciding-nationality",
       "target_iri": "user-need/check-child-nationality-status-find-the-authoritative-status-and-evidence-route-without-the-bundle-deciding-nationality"
     }
+  ],
+  "user-need/claim-new-style-jobseekers-allowance-evidence-and-review-requirements": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/finding-work-and-unemployment/claim-new-style-jobseekers-allowance.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/finding-work-and-unemployment/claim-new-style-jobseekers-allowance.v1.yaml",
+          "source_ids": [
+            "claim-new-style-jobseekers-allowance-primary",
+            "finding-work-northern-ireland-handoff",
+            "finding-work-scotland-handoff",
+            "finding-work-wales-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c90b74f0b5c0cb1bde3665a9",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/claim-new-style-jobseekers-allowance",
+      "source_iri": "dataset/claim-new-style-jobseekers-allowance",
+      "target": "user-need/claim-new-style-jobseekers-allowance-evidence-and-review-requirements",
+      "target_iri": "user-need/claim-new-style-jobseekers-allowance-evidence-and-review-requirements"
+    }
   ]
 }

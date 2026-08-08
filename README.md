@@ -10,7 +10,7 @@ journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
 `life-course-population-contract.v1` contract now governs eight delivery packs,
 48 enclosing processes and the distinction between population-complete and
-specialist-reviewed release grade. Seventy-seven reviewed families now expose authored
+specialist-reviewed release grade. One hundred and thirteen reviewed families now expose authored
 narratives, typed official links and governed journey graphs; the other
 families remain explicit planning records. The shared infrastructure now adds
 397 dated GSS geographies, 438 reusable authority/regulator/redress records,
@@ -37,6 +37,7 @@ explicit owner request.
 - [Shared authority and source infrastructure review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md)
 - [Pack 1 family-beginnings review](evaluation/reviews/pack-1-family-beginnings-2026-08-08.md)
 - [Pack 2 learning-and-transition review](evaluation/reviews/pack-2-learning-transition-2026-08-08.md)
+- [Pack 3 work-and-money review](evaluation/reviews/pack-3-work-money-2026-08-08.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -122,7 +123,7 @@ default; pull requests and merges do not run remote CI or update GitHub Pages.
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
 bundle and `okf-explorer.json` for the 293-family discovery projection. The
 large descriptor distinguishes 293 service families from the larger typed
-concept count, currently 3,496 concepts, and exposes generated semantic and
+concept count, currently 4,535 concepts, and exposes generated semantic and
 validation entrypoints. Records and static-search results are sharded in
 1,000-record chunks so supporting infrastructure remains lazily hydratable. With a
 local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:

@@ -32,8 +32,10 @@ source content.
 “Acquired” presently means a registered HTTPS reference. The exhaustive
 inventory contains 89 new references and includes the 53 links in the three
 bounded source registers: 142 external reference records and no downloaded
-snapshots. All 25 source hostnames, plus the standards and Explorer families,
-are mapped to dated evidence in the rights register.
+snapshots. Staged population packs add link-only source assertions without
+changing that inventory denominator. All 29 source hostnames currently used,
+plus the standards and Explorer families, are mapped to dated evidence in the
+rights register.
 
 The operative policy is deliberately uniform even where a source permits
 broader reuse: link to the authoritative page, summarize it in original words,
@@ -45,7 +47,7 @@ The registered families are:
 
 | Rights family | Registered providers | Determination |
 |---|---|---|
-| OGL v3.0 | GOV.UK and its agencies, legislation.gov.uk, Scottish Government, mygov.scot, COPFS, Scottish Courts, National Records of Scotland and nidirect | Text made available under OGL may be reused subject to attribution and exclusions; this project still uses links and original summaries only. |
+| OGL v3.0 | GOV.UK and its agencies, legislation.gov.uk, Scottish Government, mygov.scot, COPFS, Scottish Courts, National Records of Scotland, nidirect and the Health and Safety Executive | Text made available under OGL may be reused subject to attribution and exclusions; this project still uses links and original summaries only. HSE supplies a preferred provider acknowledgement and excludes logos and some visual, multimedia and product material. |
 | Coventry open-data terms / page-specific copyright | Coventry City Council | The council's open-data pages identify OGL v1.0, but that is not evidence that every service page is open data. The registered service pages remain link-and-summary only. |
 | Provider copyright restrictions | City of Edinburgh Council and Belfast City Council | Their website terms reserve rights and restrict copying; no redistribution is authorized here. |
 | Bespoke provider reuse | Local Government and Social Care Ombudsman | Website information may be reused only with source/copyright acknowledgement, accuracy, no amendment, no misleading use and no advertising-led use. This project uses only links and summaries. |
@@ -55,7 +57,7 @@ The registered families are:
 | Restricted national health portals | NHS inform, NHS 111 Wales and HSCNI online services | NHS inform limits use to personal/non-commercial purposes and prohibits scraping without permission; NHS 111 Wales reserves Crown copyright; HSCNI permits attributed non-commercial reproduction. No content is copied. |
 | Invest Northern Ireland bespoke terms | nibusinessinfo.co.uk | Crown and Invest NI material have distinct terms, republication needs written permission and images are excluded. Use links and original summaries only. |
 
-Evidence URLs and the observation date for each of the 25 host decisions are
+Evidence URLs and the observation date for each of the 29 host decisions are
 recorded in `source/rights-decisions.v1.yaml`. An unavailable or ambiguous
 licence is not interpreted as permission.
 
