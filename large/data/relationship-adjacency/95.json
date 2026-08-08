@@ -1,4 +1,44 @@
 {
+  "dependency/regulated-criminal-defence-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml",
+          "source_ids": [
+            "respond-to-transport-prosecution-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:033849fb1d229434d6d30cea",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/respond-to-transport-prosecution",
+      "source_iri": "dataset/respond-to-transport-prosecution",
+      "target": "dependency/regulated-criminal-defence-adviser",
+      "target_iri": "dependency/regulated-criminal-defence-adviser"
+    }
+  ],
   "enclosing-process/form-change-and-support-family-relationships": [
     {
       "assertion_scope": "real-world",
@@ -701,6 +741,46 @@
       "target_iri": "output/get-workplace-health-and-safety-protection-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
     }
   ],
+  "output/use-tribunal-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b4f194531dddd24a452cff2d",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-tribunal-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-tribunal-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "output/use-tribunal-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff",
+      "target_iri": "output/use-tribunal-ordinary-source-linked-route-select-current-jurisdiction-route-a-current-authoritative-route-and-provider-handoff"
+    }
+  ],
   "redress/volunteer-in-the-uk-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
     {
       "assertion_scope": "real-world",
@@ -966,6 +1046,46 @@
       "source_iri": "dataset/apply-for-home-adaptation",
       "target": "resource/apply-for-home-adaptation-apply-for-home-adaptation-primary",
       "target_iri": "resource/apply-for-home-adaptation-apply-for-home-adaptation-primary"
+    }
+  ],
+  "rule/appeal-court-or-tribunal-decision-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml",
+          "source_ids": [
+            "appeal-court-or-tribunal-decision-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6bd849cc8e7db3528ac721c9",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/appeal-court-or-tribunal-decision-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/appeal-court-or-tribunal-decision-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/appeal-court-or-tribunal-decision-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/appeal-court-or-tribunal-decision-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
     }
   ],
   "service-episode/seek-research-funding-exception-or-route-failure": [

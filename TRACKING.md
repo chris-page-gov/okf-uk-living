@@ -31,8 +31,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | PACK-002 | Populate learning and transition | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-2-learning-transition-2026-08-08.md): all 36 identities accounted for, 35 new dossiers, preserved driving slice, 44 active link-only sources and 13 competency questions |
 | PACK-003 | Populate work and money | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-3-work-money-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and dated HSE rights evidence |
 | PACK-004 | Populate home, place and transport | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-4-home-place-transport-2026-08-08.md): all 36 identities accounted for, 35 new dossiers, preserved missed-rubbish slice, 44 active link-only sources and 13 competency questions |
-| PACK-005 | Populate enforcement, consumer and justice | Active | 36 families across transport enforcement, consumer rights and police/legal services |
-| PACK-006 | Populate relationships, health and care | Planned | 36 families across relationships/family change, health and disability/care/support |
+| PACK-005 | Populate enforcement, consumer and justice | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-5-enforcement-consumer-justice-2026-08-08.md): all 36 identities accounted for, 35 new dossiers, preserved speeding slice, 44 active link-only sources and 13 competency questions |
+| PACK-006 | Populate relationships, health and care | Active | 36 families across relationships/family change, health and disability/care/support |
 | PACK-007 | Populate civic, enterprise and creativity | Planned | 36 families across citizenship/democracy, organisations and ideas/research |
 | PACK-008 | Populate mobility, later life and death | Planned | 41 families across overseas routes, later life and death/bereavement |
 | ASSURE-001 | Freeze a local population-complete candidate | Planned | Requires 293 complete dossiers, active required links, 100+ competency queries and passing graph/narrative/browser reconciliation; does not publish |
@@ -52,8 +52,8 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Remote CI: disabled.
 - GitHub Pages: not enabled and not updated.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
-  references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources and 44
-  Pack 4 sources give 320 source records and zero snapshots; all 29 source hosts
+  references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
+  sources and 44 Pack 5 sources give 364 source records and zero snapshots; all 29 source hosts
   and the standards families have dated rights decisions. Source content
   remains link-and-summary only. Staged link registration against the approved
   293 families is authorized; unbounded or unstaged acquisition stays disabled.
@@ -71,5 +71,5 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   reviewer acceptance remain implementation or external-review work.
 - Population implementation: owner-authorized on 2026-08-08 in eight packs;
   foundation, universal Explorer contract, six-family migration, shared
-  authority/source infrastructure and `PACK-001` through `PACK-004` complete;
-  `PACK-005` is active.
+  authority/source infrastructure and `PACK-001` through `PACK-005` complete;
+  `PACK-006` is active.

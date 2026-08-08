@@ -1,0 +1,240 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-5-enforcement-consumer-justice
+domain: transport-enforcement
+title: Transport enforcement
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-5-enforcement-consumer-justice-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: transport-enforcement-scotland-handoff
+    jurisdiction: Scotland
+    title: Road safety, parking tickets, fines and bans in Scotland
+    owner: Scottish Government
+    authority_role: scotland_transport_enforcement_handoff
+    resource: https://www.mygov.scot/browse/driving-transport/penalty-points-fines
+    coverage: Routes people to current Scottish road-safety, parking, fine and driving-ban information.
+    exclusions: Does not determine whether a notice, penalty, prosecution or appeal is valid.
+  - <<: *source_defaults
+    id: transport-enforcement-wales-handoff
+    jurisdiction: Wales
+    title: Transport in Wales
+    owner: Welsh Government
+    authority_role: wales_transport_enforcement_handoff
+    resource: https://www.gov.wales/transport
+    coverage: Routes people to current Welsh transport, road and local-authority information.
+    exclusions: Does not establish a deadline, appeal forum or outcome for a specific notice.
+  - <<: *source_defaults
+    id: transport-enforcement-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Motoring offences in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_transport_enforcement_handoff
+    resource: https://www.nidirect.gov.uk/articles/fixed-penalties-motoring-offences
+    coverage: Routes people to current Northern Ireland motoring-offence, penalty and court information.
+    exclusions: England, Wales and Scotland enforcement routes do not establish Northern Ireland procedure.
+families:
+  - id: respond-to-speeding-notice
+    title: Respond to a speeding notice
+    aliases: [notice of intended prosecution, speeding ticket response, section 172 driver notice]
+    description: Identify the issuing route and jurisdiction, preserve the notice and respond within the current official process without the bundle calculating a deadline.
+    situations: [A registered keeper or alleged driver has received a notice concerning a suspected speeding offence.]
+    user_needs: [Distinguish driver identification, disposal, court and jurisdictional branches.]
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    specialist_review: required
+    preserve_existing: true
+  - <<: *family_defaults
+    id: respond-to-council-parking-penalty
+    title: Respond to a council parking penalty
+    aliases: [parking penalty charge notice, PCN from council, challenge parking ticket]
+    description: Identify the statutory parking notice stage, preserve evidence and pay or use the issuing authority's current representation and appeal route.
+    situations: [A keeper or driver has received a local-authority parking or traffic penalty.]
+    user_needs: [Separate informal challenge, formal representation, tribunal and enforcement stages without calculating a deadline.]
+    source:
+      <<: *source_defaults
+      id: respond-to-council-parking-penalty-primary
+      title: Parking tickets
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_parking_penalty_guidance
+      resource: https://www.gov.uk/parking-tickets
+      coverage: Introduces council parking tickets, payment, challenge and tribunal handoffs in England and Wales.
+      exclusions: Does not interpret a notice, calculate time, assess evidence or decide an appeal.
+  - <<: *family_defaults
+    id: challenge-private-parking-charge
+    title: Challenge a private parking charge
+    aliases: [private parking ticket, parking company invoice, appeal parking charge notice]
+    description: Check the operator and land arrangement, preserve the signs and correspondence and use the applicable operator and independent appeal route.
+    situations: [A vehicle keeper or driver has received a charge from a private parking operator.]
+    user_needs: [Distinguish a contractual charge from a statutory penalty and start with accredited-operator redress.]
+    dependency: accredited-private-parking-operator-and-appeal-service
+    source:
+      <<: *source_defaults
+      id: challenge-private-parking-charge-primary
+      title: Private parking tickets
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_private_parking_guidance
+      resource: https://www.gov.uk/parking-tickets/private-parking-tickets
+      coverage: Explains private parking charge and accredited appeal handoffs.
+      exclusions: Does not decide contract formation, liability, keeper responsibility or a court defence.
+  - <<: *family_defaults
+    id: identify-driver-after-road-offence
+    title: Identify the driver after a road offence
+    aliases: [section 172 request, name the driver, driver information notice]
+    description: Preserve the information request and respond through the issuing police or enforcement route, raising inability or error through its stated boundary.
+    situations: [A vehicle keeper or other recipient is asked to identify who was driving at a stated time.]
+    user_needs: [Keep the information duty separate from accepting the alleged offence and avoid an invented time limit.]
+    source:
+      <<: *source_defaults
+      id: identify-driver-after-road-offence-primary
+      title: Speeding penalties
+      owner: Department for Transport
+      authority_role: england_wales_driver_identification_guidance
+      resource: https://www.gov.uk/speeding-penalties
+      coverage: Introduces England and Wales speeding notice, driver-identification and disposal stages.
+      exclusions: Does not determine who drove, notice validity, reasonable diligence or criminal liability.
+  - <<: *family_defaults
+    id: accept-fixed-penalty
+    title: Accept a fixed penalty
+    aliases: [pay fixed penalty notice, conditional offer, avoid prosecution by penalty]
+    description: Confirm the issuing jurisdiction and terms before using the official acceptance and payment route and retaining confirmation.
+    situations: [A person has received a fixed penalty or conditional offer for an alleged offence.]
+    user_needs: [Understand that acceptance, points, payment and court alternatives depend on the exact notice.]
+    source:
+      <<: *source_defaults
+      id: accept-fixed-penalty-primary
+      title: Fixed penalty notices
+      owner: Ministry of Justice
+      authority_role: england_wales_fixed_penalty_guidance
+      resource: https://www.gov.uk/speeding-penalties
+      coverage: Introduces fixed-penalty payment and court-election boundaries in England and Wales.
+      exclusions: Does not advise whether to accept, calculate time or decide liability or mitigation.
+  - <<: *family_defaults
+    id: attend-driver-awareness-course
+    title: Attend a driver awareness course
+    aliases: [speed awareness course, diversion course offer, book driver course]
+    description: Use the named police or approved-provider offer to book and complete the stated course, preserving eligibility and failure boundaries.
+    situations: [An enforcement authority has offered an educational course instead of another disposal.]
+    user_needs: [Verify that the offer is genuine and keep provider selection, attendance and non-completion with the issuing scheme.]
+    dependency: police-approved-driver-course-provider
+    source:
+      <<: *source_defaults
+      id: attend-driver-awareness-course-primary
+      title: Speeding penalties
+      owner: Department for Transport
+      authority_role: england_wales_speed_awareness_handoff
+      resource: https://www.gov.uk/speeding-penalties
+      coverage: Identifies the possible England and Wales speed-awareness course disposal.
+      exclusions: Does not create an offer, guarantee eligibility, select a provider or replace the notice instructions.
+  - <<: *family_defaults
+    id: manage-penalty-points
+    title: Manage penalty points
+    aliases: [driving licence endorsements, check points on licence, totting up]
+    description: Check the official driving record and use the authority or court route for endorsements, errors, expiry and disqualification consequences.
+    situations: [A driver needs to understand or correct points shown on the applicable licence record.]
+    user_needs: [Separate record facts from legal consequences and avoid calculating a disqualification locally.]
+    source:
+      <<: *source_defaults
+      id: manage-penalty-points-primary
+      title: Penalty points and endorsements
+      owner: Driver and Vehicle Licensing Agency
+      authority_role: great_britain_penalty_points_guidance
+      resource: https://www.gov.uk/penalty-points-endorsements
+      coverage: Explains Great Britain endorsement codes, points, record periods and disqualification handoffs.
+      exclusions: Does not establish Northern Ireland procedure or predict a court or insurance outcome.
+  - <<: *family_defaults
+    id: respond-to-driving-disqualification
+    title: Respond to driving disqualification
+    aliases: [driving ban, licence disqualified, apply to reduce driving ban]
+    description: Follow the court and licensing instructions that apply to the ban and use the current restoration or reduction route only where published.
+    situations: [A court has disqualified a person from driving or a driver needs to understand the resulting licence process.]
+    user_needs: [Keep the court order, licensing record, reapplication and legal-advice boundaries explicit.]
+    source:
+      <<: *source_defaults
+      id: respond-to-driving-disqualification-primary
+      title: Driving disqualifications
+      owner: Driver and Vehicle Licensing Agency
+      authority_role: great_britain_driving_disqualification_guidance
+      resource: https://www.gov.uk/driving-disqualifications
+      coverage: Explains Great Britain ban, licence return, retest and reapplication handoffs.
+      exclusions: Does not interpret an order, advise on appeal or establish Northern Ireland procedure.
+  - <<: *family_defaults
+    id: appeal-to-traffic-penalty-tribunal
+    title: Appeal to a traffic penalty tribunal
+    aliases: [parking tribunal appeal, traffic penalty adjudicator, appeal rejected PCN]
+    description: Use the tribunal named by the enforcement notice after the required authority stage and submit the evidence requested by that forum.
+    situations: [A statutory traffic or parking representation has been rejected and a tribunal appeal may be available.]
+    user_needs: [Identify the correct adjudication body and stage without assuming one tribunal serves every nation or notice type.]
+    source:
+      <<: *source_defaults
+      id: appeal-to-traffic-penalty-tribunal-primary
+      title: Challenge a parking ticket
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_parking_tribunal_guidance
+      resource: https://www.gov.uk/parking-tickets/challenging-a-ticket
+      coverage: Explains England and Wales council challenge stages and tribunal handoffs.
+      exclusions: Does not select the forum, calculate time, assess grounds or predict an adjudicator's decision.
+  - <<: *family_defaults
+    id: contest-road-user-charge
+    title: Contest a road-user charge
+    aliases: [challenge congestion charge, appeal clean air zone charge, road toll dispute]
+    description: Identify the exact charging scheme, preserve journey and payment evidence and use its representation and adjudication route.
+    situations: [A person disputes a road-user, congestion, emissions or crossing charge or penalty.]
+    user_needs: [Avoid combining distinct national and local schemes and find the scheme-specific redress body.]
+    source:
+      <<: *source_defaults
+      id: contest-road-user-charge-primary
+      title: Drive in a clean air zone
+      owner: Department for Transport
+      authority_role: england_clean_air_zone_handoff
+      resource: https://www.gov.uk/clean-air-zones
+      coverage: Routes users to England clean-air-zone checking, payment and local penalty information.
+      exclusions: Does not cover every road-user charge or determine payment, exemption, penalty or appeal.
+  - <<: *family_defaults
+    id: respond-to-vehicle-clamping-or-removal
+    title: Respond to vehicle clamping or removal
+    aliases: [car clamped, vehicle towed away, recover impounded vehicle]
+    description: Identify the public authority, police or lawful land route responsible, secure urgent access information and preserve payment and challenge evidence.
+    situations: [A vehicle has been immobilised, removed or impounded.]
+    user_needs: [Distinguish police, council, DVLA and private-land action and avoid unsafe or unlawful self-removal.]
+    source:
+      <<: *source_defaults
+      id: respond-to-vehicle-clamping-or-removal-primary
+      title: Getting your vehicle clamped or removed
+      owner: Driver and Vehicle Licensing Agency
+      authority_role: uk_vehicle_clamping_guidance
+      resource: https://www.gov.uk/get-a-clamped-or-impounded-vehicle-released
+      coverage: Routes users through common DVLA, council, police and private-land clamping or removal situations.
+      exclusions: Does not identify the actor for a real vehicle, authorize release or decide a refund or appeal.
+  - <<: *family_defaults
+    id: respond-to-transport-prosecution
+    title: Respond to a transport prosecution
+    aliases: [summons for driving offence, charged with motoring crime, road offence court case]
+    description: Preserve the charge or summons and obtain current legal and court information for plea, evidence, hearing and appeal boundaries.
+    situations: [A person faces a criminal court process for a driving or transport allegation.]
+    user_needs: [Find regulated legal help and the named court route without receiving a plea recommendation or outcome prediction.]
+    dependency: regulated-criminal-defence-adviser
+    source:
+      <<: *source_defaults
+      id: respond-to-transport-prosecution-primary
+      title: Charged with a crime
+      owner: Ministry of Justice
+      authority_role: england_wales_criminal_court_guidance
+      resource: https://www.gov.uk/charged-crime
+      coverage: Introduces England and Wales charge, legal-advice, plea and court handoffs.
+      exclusions: Does not provide legal advice, interpret evidence, calculate time or predict sentence or appeal.

@@ -1,4 +1,44 @@
 {
+  "dependency/regulated-appellate-legal-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml",
+          "source_ids": [
+            "appeal-court-or-tribunal-decision-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2e1416f2a41c62156724ad02",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/appeal-court-or-tribunal-decision",
+      "source_iri": "dataset/appeal-court-or-tribunal-decision",
+      "target": "dependency/regulated-appellate-legal-adviser",
+      "target_iri": "dependency/regulated-appellate-legal-adviser"
+    }
+  ],
   "enclosing-process/use-routine-and-preventive-healthcare": [
     {
       "assertion_scope": "real-world",
@@ -600,6 +640,86 @@
       "source_iri": "service-step/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff",
       "target": "requirement/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff-applicable-practical-test-pass-and-identity-or-licence-evidence",
       "target_iri": "requirement/learn-to-drive-car-provisional-to-full-licence-complete-full-licence-handoff-applicable-practical-test-pass-and-identity-or-licence-evidence"
+    }
+  ],
+  "requirement/resolve-consumer-credit-dispute-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/resolve-consumer-credit-dispute.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/resolve-consumer-credit-dispute.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "resolve-consumer-credit-dispute-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3ab14f47662af218db3c926e",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/resolve-consumer-credit-dispute-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/resolve-consumer-credit-dispute-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/resolve-consumer-credit-dispute-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/resolve-consumer-credit-dispute-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
+    }
+  ],
+  "requirement/respond-to-transport-prosecution-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml",
+          "source_ids": [
+            "respond-to-transport-prosecution-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d4237f22c9dc6bb0f750b043",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-transport-prosecution-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/respond-to-transport-prosecution-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "requirement/respond-to-transport-prosecution-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary",
+      "target_iri": "requirement/respond-to-transport-prosecution-ordinary-source-linked-route-select-current-jurisdiction-route-location-and-the-source-defined-situation-boundary"
     }
   ],
   "resource/apply-for-school-place-school-years-scotland-handoff": [

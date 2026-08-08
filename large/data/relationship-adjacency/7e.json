@@ -541,6 +541,46 @@
       "target_iri": "life-course-domain/early-years"
     }
   ],
+  "evidence/respond-to-transport-prosecution-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-transport-prosecution.v1.yaml",
+          "source_ids": [
+            "respond-to-transport-prosecution-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7099b06106adb5116ff0dfc0",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-transport-prosecution-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-transport-prosecution-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/respond-to-transport-prosecution-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/respond-to-transport-prosecution-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
   "outcome/volunteer-in-the-uk-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
     {
       "assertion_scope": "real-world",
@@ -1330,6 +1370,276 @@
       "source_iri": "service-episode/register-to-vote-for-first-time-exception-or-route-failure",
       "target": "enclosing-process/establish-adult-work-civic-and-identity-records",
       "target_iri": "enclosing-process/establish-adult-work-civic-and-identity-records"
+    }
+  ],
+  "service-episode/report-product-safety-issue-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "report-product-safety-issue-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:539bd5d589c9a61662691e42",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-product-safety-issue-exception-or-route-failure",
+      "source_iri": "service-episode/report-product-safety-issue-exception-or-route-failure",
+      "target": "enclosing-process/report-harm-and-use-consumer-redress",
+      "target_iri": "enclosing-process/report-harm-and-use-consumer-redress"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "report-product-safety-issue-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7f25768bba13b5ac6fda20f8",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-product-safety-issue-exception-or-route-failure",
+      "source_iri": "service-episode/report-product-safety-issue-exception-or-route-failure",
+      "target": "service-step/report-product-safety-issue-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/report-product-safety-issue-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/report-product-safety-issue.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "report-product-safety-issue-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b1946e38169f416300f62185",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/report-product-safety-issue",
+      "source_iri": "dataset/report-product-safety-issue",
+      "target": "service-episode/report-product-safety-issue-exception-or-route-failure",
+      "target_iri": "service-episode/report-product-safety-issue-exception-or-route-failure"
+    }
+  ],
+  "service-episode/use-sector-ombudsman-ordinary-source-linked-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "use-sector-ombudsman-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1415982bc70eb73011649abf",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-sector-ombudsman",
+      "source_iri": "dataset/use-sector-ombudsman",
+      "target": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "target_iri": "service-episode/use-sector-ombudsman-ordinary-source-linked-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "use-sector-ombudsman-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7c2dc26cf3f8c1cd20f11b36",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "source_iri": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "target": "service-step/use-sector-ombudsman-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/use-sector-ombudsman-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "use-sector-ombudsman-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7e5cc74e38701b95cce0ee79",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "source_iri": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "target": "service-step/use-sector-ombudsman-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/use-sector-ombudsman-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/use-sector-ombudsman.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "use-sector-ombudsman-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d56b5db8e68615d1a862cfcc",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "source_iri": "service-episode/use-sector-ombudsman-ordinary-source-linked-route",
+      "target": "enclosing-process/report-harm-and-use-consumer-redress",
+      "target_iri": "enclosing-process/report-harm-and-use-consumer-redress"
     }
   ],
   "service-step/appeal-school-admission-ordinary-source-linked-route-follow-current-official-instructions": [
@@ -2440,6 +2750,46 @@
       "source_iri": "dataset/enter-personal-insolvency",
       "target": "user-need/enter-personal-insolvency-understand-territorial-routes",
       "target_iri": "user-need/enter-personal-insolvency-understand-territorial-routes"
+    }
+  ],
+  "user-need/get-victim-or-witness-support-find-support-that-does-not-depend-on-a-conviction-while-keeping-criminal-justice-decisions-with-authorities": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml",
+          "source_ids": [
+            "get-victim-or-witness-support-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c77d1cb77f211133d0453b7c",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-victim-or-witness-support",
+      "source_iri": "dataset/get-victim-or-witness-support",
+      "target": "user-need/get-victim-or-witness-support-find-support-that-does-not-depend-on-a-conviction-while-keeping-criminal-justice-decisions-with-authorities",
+      "target_iri": "user-need/get-victim-or-witness-support-find-support-that-does-not-depend-on-a-conviction-while-keeping-criminal-justice-decisions-with-authorities"
     }
   ],
   "user-need/register-for-council-tax-reach-the-correct-local-authority-and-preserve-valuation": [

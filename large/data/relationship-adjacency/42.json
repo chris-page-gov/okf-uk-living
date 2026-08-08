@@ -73,6 +73,46 @@
       "target_iri": "life-course-domain/health-throughout-life"
     }
   ],
+  "dependency/regulated-legal-adviser": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-civil-or-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-civil-or-family-court.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-civil-or-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a8a1ab39941f6bcc9828e41d",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-civil-or-family-court",
+      "source_iri": "dataset/use-civil-or-family-court",
+      "target": "dependency/regulated-legal-adviser",
+      "target_iri": "dependency/regulated-legal-adviser"
+    }
+  ],
   "enclosing-process/assess-and-deliver-disability-and-care-support": [
     {
       "assertion_scope": "real-world",
@@ -334,6 +374,158 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-fraud.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-fraud.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-fraud-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:096988e440acfcec0830d9e5",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-fraud-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-fraud-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-crime.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-crime.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-crime-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0a6ed092066d9b7c2af39367",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-crime-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-crime-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml",
+          "source_ids": [
+            "get-victim-or-witness-support-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0cd8a393485d6f5cf9788737",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-victim-or-witness-support-exception-or-route-failure",
+      "source_iri": "service-episode/get-victim-or-witness-support-exception-or-route-failure",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-hate-crime.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-hate-crime.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-hate-crime-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0ceaa8670e7e50faddd27c73",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-hate-crime-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-hate-crime-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-processes.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -361,6 +553,120 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/report-missing-person",
       "source_iri": "dataset/report-missing-person",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/get-victim-or-witness-support.v1.yaml",
+          "source_ids": [
+            "get-victim-or-witness-support-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1c132116d8788b4a124ff358",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/get-victim-or-witness-support-ordinary-source-linked-route",
+      "source_iri": "service-episode/get-victim-or-witness-support-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-crime.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-crime.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-crime-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2d546fc718d279df6897b6a3",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-crime-exception-or-route-failure",
+      "source_iri": "service-episode/report-crime-exception-or-route-failure",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-missing-person.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-missing-person.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-missing-person-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:345caa7a0d8be3152825a47f",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-missing-person-exception-or-route-failure",
+      "source_iri": "service-episode/report-missing-person-exception-or-route-failure",
       "target": "enclosing-process/report-emergencies-crime-and-harm",
       "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
     },
@@ -442,6 +748,44 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml",
+          "source_ids": [
+            "call-emergency-services-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:57a4e31ef94e2b43432b7254",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/call-emergency-services-exception-or-route-failure",
+      "source_iri": "service-episode/call-emergency-services-exception-or-route-failure",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-processes.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -469,6 +813,44 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/get-victim-or-witness-support",
       "source_iri": "dataset/get-victim-or-witness-support",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-fraud.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-fraud.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-fraud-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6edc18a4cd1f947971ca0fdb",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-fraud-exception-or-route-failure",
+      "source_iri": "service-episode/report-fraud-exception-or-route-failure",
       "target": "enclosing-process/report-emergencies-crime-and-harm",
       "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
     },
@@ -514,6 +896,44 @@
       "authority": {
         "class": "derived",
         "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml",
+          "source_ids": [
+            "call-emergency-services-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:96d1e707f9f11b02d857d095",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/call-emergency-services-ordinary-source-linked-route",
+      "source_iri": "service-episode/call-emergency-services-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
         "source": "generated/browser/source/life-course-processes.v1.yaml.html"
       },
       "derivation": "deterministic-life-course-dossier-projection",
@@ -541,6 +961,82 @@
       "schema": "okf-relationship-assertion.v2",
       "source": "dataset/report-hate-crime",
       "source_iri": "dataset/report-hate-crime",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-missing-person.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-missing-person.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-missing-person-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:9b14d88dbe26c169921836cb",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-missing-person-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-missing-person-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-antisocial-behaviour.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-antisocial-behaviour.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-antisocial-behaviour-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a6b995d819d37ca8434dba10",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-antisocial-behaviour-exception-or-route-failure",
+      "source_iri": "service-episode/report-antisocial-behaviour-exception-or-route-failure",
       "target": "enclosing-process/report-emergencies-crime-and-harm",
       "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
     },
@@ -579,6 +1075,82 @@
       "source_iri": "enclosing-process/report-emergencies-crime-and-harm",
       "target": "life-course-domain/police-and-legal-services",
       "target_iri": "life-course-domain/police-and-legal-services"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-hate-crime.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-hate-crime.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-hate-crime-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e65e21ecd1f74201bbadc942",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-hate-crime-exception-or-route-failure",
+      "source_iri": "service-episode/report-hate-crime-exception-or-route-failure",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-antisocial-behaviour.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-antisocial-behaviour.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-antisocial-behaviour-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e66e7a913d913dcd3fb2ff76",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/report-antisocial-behaviour-ordinary-source-linked-route",
+      "source_iri": "service-episode/report-antisocial-behaviour-ordinary-source-linked-route",
+      "target": "enclosing-process/report-emergencies-crime-and-harm",
+      "target_iri": "enclosing-process/report-emergencies-crime-and-harm"
     },
     {
       "assertion_scope": "real-world",
@@ -697,6 +1269,46 @@
       "source_iri": "service-step/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "evidence/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
       "target_iri": "evidence/license-taxi-or-private-hire-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "outcome/use-civil-or-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-civil-or-family-court.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-civil-or-family-court.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-civil-or-family-court-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6ada7ed01ec745feba346178",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-civil-or-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/use-civil-or-family-court-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/use-civil-or-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/use-civil-or-family-court-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
   "output/meet-school-attendance-duty-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state": [
@@ -1130,6 +1742,152 @@
       "source_iri": "service-step/protect-tenancy-deposit-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "resource/protect-tenancy-deposit-housing-community-wales-handoff",
       "target_iri": "resource/protect-tenancy-deposit-housing-community-wales-handoff"
+    }
+  ],
+  "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:057f596ad0f213281812f5a0",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-council-parking-penalty-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-council-parking-penalty-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c564ff7bd3353d6114e7a7e1",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/respond-to-council-parking-penalty",
+      "source_iri": "dataset/respond-to-council-parking-penalty",
+      "target": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:dedd82e2b9a0a10fc276b1dc",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-council-parking-penalty-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/respond-to-council-parking-penalty-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-council-parking-penalty.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f95397707bee731ca1585572",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-council-parking-penalty-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-council-parking-penalty-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-council-parking-penalty-transport-enforcement-scotland-handoff"
     }
   ],
   "rule/get-redundancy-support-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
@@ -1567,6 +2325,122 @@
       "source_iri": "service-episode/get-school-send-support-ordinary-source-linked-route",
       "target": "enclosing-process/receive-school-support-and-outcomes",
       "target_iri": "enclosing-process/receive-school-support-and-outcomes"
+    }
+  ],
+  "service-episode/use-tribunal-exception-or-route-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2ce5c2ab4d790875775f724f",
+      "kind": "part-of-enclosing-process",
+      "label": "part of enclosing process",
+      "observed_at": "2026-08-08",
+      "predicate": "part-of-enclosing-process",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-tribunal-exception-or-route-failure",
+      "source_iri": "service-episode/use-tribunal-exception-or-route-failure",
+      "target": "enclosing-process/obtain-legal-help-and-use-adjudication",
+      "target_iri": "enclosing-process/obtain-legal-help-and-use-adjudication"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5e7d2d83abaa7b4933394523",
+      "kind": "has-episode",
+      "label": "has episode",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-tribunal",
+      "source_iri": "dataset/use-tribunal",
+      "target": "service-episode/use-tribunal-exception-or-route-failure",
+      "target_iri": "service-episode/use-tribunal-exception-or-route-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cce706ef9743a5606db98b1c",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/use-tribunal-exception-or-route-failure",
+      "source_iri": "service-episode/use-tribunal-exception-or-route-failure",
+      "target": "service-step/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/use-tribunal-exception-or-route-failure-resolve-route-boundary-or-failure"
     }
   ],
   "service-step/get-debt-advice-and-relief-exception-or-route-failure-resolve-route-boundary-or-failure": [
@@ -2967,6 +3841,910 @@
       "target_iri": "outcome/register-with-health-services-as-student-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
     }
   ],
+  "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:25f44175d84959e4207f9955",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:52a5cf5d94d3395f480f1eaf",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5de375b2a8ffa853b321dc12",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:61287ce126cc277f8eb1a533",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8177839594931e104da41942",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:927f87b1732fbf8b40f81636",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/respond-to-driving-disqualification-transport-enforcement-northern-ireland-handoff",
+      "target_iri": "resource/respond-to-driving-disqualification-transport-enforcement-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:94c8689a4b1bca489200a297",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/respond-to-driving-disqualification-respond-to-driving-disqualification-primary",
+      "target_iri": "resource/respond-to-driving-disqualification-respond-to-driving-disqualification-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b913c5cae87c1c69f93d2ab6",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/respond-to-driving-disqualification-exception-or-route-failure",
+      "source_iri": "service-episode/respond-to-driving-disqualification-exception-or-route-failure",
+      "target": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:db784cff4275a0486c2cac57",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ec39ab36844beda4b53bfc89",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/respond-to-driving-disqualification-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-driving-disqualification-transport-enforcement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-driving-disqualification.v1.yaml",
+          "source_ids": [
+            "respond-to-driving-disqualification-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f1e877bc9a5ace7eda0711d7",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/respond-to-driving-disqualification-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:112de413a51e73bfedeb3e9a",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-identify-the-public-authority-police-or-lawful-land-route-responsible-secure-urgent-access-information-and-preserve-payment-and-challenge-evidence",
+      "target_iri": "outcome/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-identify-the-public-authority-police-or-lawful-land-route-responsible-secure-urgent-access-information-and-preserve-payment-and-challenge-evidence"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:34f369e8bc35401ab1499579",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3dbaddf3dabe62f5c37e831b",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route",
+      "source_iri": "service-episode/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route",
+      "target": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4f55807a7f406da839fe5784",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/respond-to-vehicle-clamping-or-removal-transport-enforcement-northern-ireland-handoff",
+      "target_iri": "resource/respond-to-vehicle-clamping-or-removal-transport-enforcement-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:50d425c9d8dd800ada29da37",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5686bde152db3a93dcb235cd",
+      "kind": "follows",
+      "label": "follows",
+      "observed_at": "2026-08-08",
+      "predicate": "follows",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-select-current-jurisdiction-route"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6cbab4fa219fa4b69d925dc1",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/respond-to-vehicle-clamping-or-removal-transport-enforcement-scotland-handoff",
+      "target_iri": "resource/respond-to-vehicle-clamping-or-removal-transport-enforcement-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:93ffa781b8a47e4207d6d6a8",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a4f4a64db7c895278153a8ce",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "requirement/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction",
+      "target_iri": "requirement/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bac48f9459c6c01eb7f4c4cf",
+      "kind": "precedes",
+      "label": "precedes",
+      "observed_at": "2026-08-08",
+      "predicate": "precedes",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:bc00b1bd2d2969391359a1d8",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/respond-to-vehicle-clamping-or-removal-respond-to-vehicle-clamping-or-removal-primary",
+      "target_iri": "resource/respond-to-vehicle-clamping-or-removal-respond-to-vehicle-clamping-or-removal-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e0b07db74093ac964fcb00ad",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "actor/organisation-selected-authoritative-provider",
+      "target_iri": "actor/organisation-selected-authoritative-provider"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/respond-to-vehicle-clamping-or-removal.v1.yaml",
+          "source_ids": [
+            "respond-to-vehicle-clamping-or-removal-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:fb474a974c27a307337c20e9",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "redress/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route",
+      "target_iri": "redress/respond-to-vehicle-clamping-or-removal-ordinary-source-linked-route-follow-current-official-instructions-escalate-through-the-current-provider-s-review-complaint-or-statutory-redress-route"
+    }
+  ],
   "user-need/appeal-school-admission-evidence-boundary-and-decision-route": [
     {
       "assertion_scope": "real-world",
@@ -3006,6 +4784,46 @@
       "source_iri": "dataset/appeal-school-admission",
       "target": "user-need/appeal-school-admission-evidence-boundary-and-decision-route",
       "target_iri": "user-need/appeal-school-admission-evidence-boundary-and-decision-route"
+    }
+  ],
+  "user-need/manage-penalty-points-separate-record-facts-from-legal-consequences-and-avoid-calculating-a-disqualification-locally": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/manage-penalty-points.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/manage-penalty-points.v1.yaml",
+          "source_ids": [
+            "manage-penalty-points-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8716c426cd3486cb577881fe",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/manage-penalty-points",
+      "source_iri": "dataset/manage-penalty-points",
+      "target": "user-need/manage-penalty-points-separate-record-facts-from-legal-consequences-and-avoid-calculating-a-disqualification-locally",
+      "target_iri": "user-need/manage-penalty-points-separate-record-facts-from-legal-consequences-and-avoid-calculating-a-disqualification-locally"
     }
   ],
   "user-need/notify-organisations-after-a-death-notify-every-uncovered-public-or-private-organisation-separately": [

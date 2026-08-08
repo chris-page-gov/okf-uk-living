@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/police-and-legal-services.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/police-and-legal-services.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/police-and-legal-services.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-5-enforcement-consumer-justice
+domain: police-and-legal-services
+title: Police and legal services
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-5-enforcement-consumer-justice-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: police-legal-scotland-handoff
+    jurisdiction: Scotland
+    title: Crime, justice and the law in Scotland
+    owner: Scottish Government
+    authority_role: scotland_police_legal_handoff
+    resource: https://www.mygov.scot/browse/crime-justice-law
+    coverage: Routes people to current Scottish police, victim support, legal aid, courts and tribunal information.
+    exclusions: Does not provide emergency response, legal advice or an individual court or appeal route.
+  - &lt;&lt;: *source_defaults
+    id: police-legal-wales-handoff
+    jurisdiction: Wales
+    title: Justice in Wales
+    owner: Welsh Government
+    authority_role: wales_police_legal_handoff
+    resource: https://www.gov.wales/justice-and-law
+    coverage: Routes people to Welsh justice policy and applicable police, support and legal-service information.
+    exclusions: Does not establish the correct police force, court, tribunal, legal-aid or appeal process.
+  - &lt;&lt;: *source_defaults
+    id: police-legal-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Crime, justice and the law in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_police_legal_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/crime-justice-and-law
+    coverage: Routes people to current Northern Ireland policing, victims, legal help, courts and tribunal services.
+    exclusions: England, Wales and Scotland justice procedure does not establish Northern Ireland routes.
+families:
+  - &lt;&lt;: *family_defaults
+    id: call-emergency-services
+    title: Call emergency services
+    aliases: [call 999 or 112, immediate police fire ambulance, emergency help]
+    description: Use 999 or 112 for an immediate threat to life, serious injury, fire or crime in progress and give the call handler the requested location and facts.
+    situations: [A situation may require immediate police, fire, ambulance, coastguard or other emergency response.]
+    user_needs: [Recognise the emergency boundary and avoid delaying contact while searching the bundle.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: call-emergency-services-primary
+      title: Contact the police
+      owner: Home Office
+      authority_role: uk_police_contact_guidance
+      resource: https://www.gov.uk/contact-police
+      coverage: States the 999 emergency boundary and routes non-emergency police contact.
+      exclusions: Does not dispatch a service, assess urgency or replace 999 or 112.
+  - &lt;&lt;: *family_defaults
+    id: report-crime
+    title: Report a crime
+    aliases: [tell police about crime, non emergency police report, report offence online]
+    description: Preserve immediate safety and available evidence and report through the responsible police force&#x27;s emergency or non-emergency route.
+    situations: [A person has experienced, witnessed or has information about a possible crime.]
+    user_needs: [Identify emergency, local-force, anonymous and specialist reporting boundaries.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-crime-primary
+      title: Contact the police
+      owner: Home Office
+      authority_role: uk_police_reporting_handoff
+      resource: https://www.gov.uk/contact-police
+      coverage: Routes users to emergency, non-emergency and local police contact information.
+      exclusions: Does not decide whether a crime occurred, investigate, protect evidence or guarantee police action.
+  - &lt;&lt;: *family_defaults
+    id: report-fraud
+    title: Report fraud
+    aliases: [fraud police report, action fraud, financial crime report]
+    description: Secure accounts or payments where possible and use the current police or national fraud-reporting route for the jurisdiction.
+    situations: [A person or organisation suspects a deception or other fraud offence.]
+    user_needs: [Coordinate urgent loss prevention, formal reporting, evidence and victim support.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-fraud-primary
+      title: Contact the police about fraud
+      owner: Home Office
+      authority_role: england_wales_northern_ireland_fraud_reporting_handoff
+      resource: https://www.gov.uk/contact-police
+      coverage: Routes users to current emergency, non-emergency and local police contacts from which the applicable fraud-reporting handoff can be confirmed.
+      exclusions: Does not investigate, recover funds, secure accounts or replace an emergency call.
+  - &lt;&lt;: *family_defaults
+    id: report-antisocial-behaviour
+    title: Report antisocial behaviour
+    aliases: [ASB complaint, nuisance behaviour report, community trigger]
+    description: Record the location, pattern and immediate safety boundary and report to the responsible council, police, landlord or other local service.
+    situations: [Persistent or serious behaviour may be causing harassment, alarm, distress or community harm.]
+    user_needs: [Find the responsible actor and escalation route without the bundle classifying conduct or enforcement powers.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-antisocial-behaviour-primary
+      title: Report antisocial behaviour
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_wales_antisocial_behaviour_handoff
+      resource: https://www.gov.uk/how-report-antisocial-behaviour
+      coverage: Routes England and Wales users to council, police or housing-provider reporting and review information.
+      exclusions: Does not assess danger, classify conduct, identify the responsible local actor or decide action.
+  - &lt;&lt;: *family_defaults
+    id: report-hate-crime
+    title: Report hate crime
+    aliases: [hate incident report, report racist abuse, disability or religious hate crime]
+    description: Address immediate safety and report perceived hostility through police, third-party or support routes without requiring the victim to classify the law.
+    situations: [A person believes hostility related to identity or perceived identity is involved in an incident or crime.]
+    user_needs: [Find accessible reporting and victim-support options while preserving emergency and safeguarding routes.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-hate-crime-primary
+      title: Report hate crime
+      owner: Home Office
+      authority_role: england_wales_hate_crime_handoff
+      resource: https://www.gov.uk/report-hate-crime
+      coverage: Routes England and Wales users to police, online, third-party and support reporting options.
+      exclusions: Does not determine whether an incident is a crime, assess risk or investigate.
+  - &lt;&lt;: *family_defaults
+    id: report-missing-person
+    title: Report a missing person
+    aliases: [someone is missing, missing child report, absent person police]
+    description: Contact police promptly with the available identity, last-seen, vulnerability and contact information and preserve urgent safeguarding details.
+    situations: [Someone&#x27;s whereabouts are unknown and there is concern for safety or welfare.]
+    user_needs: [Use the correct urgent police route without waiting for an arbitrary period.]
+    source:
+      &lt;&lt;: *source_defaults
+      id: report-missing-person-primary
+      title: Report or find a missing person
+      owner: Home Office
+      authority_role: uk_missing_person_guidance
+      resource: https://www.gov.uk/report-missing-person
+      coverage: Explains UK police reporting, immediate-risk and support handoffs for a missing person.
+      exclusions: Does not search, assess risk, provide safeguarding advice or replace urgent police contact.
+  - &lt;&lt;: *family_defaults
+    id: get-victim-or-witness-support
+    title: Get victim or witness support
+    aliases: [help after crime, witness court support, victim services]
+    description: Use the relevant independent or commissioned support route and coordinate police, court, compensation and safeguarding needs.
+    situations: [A victim, witness or affected family member needs information, practical help or emotional support.]
+    user_needs: [Find support that does not depend on a conviction while keeping criminal-justice decisions with authorities.]
+    dependency: commissioned-victim-and-witness-support-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-victim-or-witness-support-primary
+      title: Get support as a victim of crime
+      owner: Ministry of Justice
+      authority_role: england_wales_victim_support_guidance
+      resource: https://www.gov.uk/get-support-as-a-victim-of-crime
+      coverage: Routes victims in England and Wales to support, rights, compensation and criminal-justice information.
+      exclusions: Does not assess safety, eligibility, evidence, compensation or a court outcome.
+  - &lt;&lt;: *family_defaults
+    id: obtain-police-station-legal-advice
+    title: Obtain police-station legal advice
+    aliases: [free solicitor at police station, legal advice in custody, duty solicitor]
+    description: Ask for independent legal advice through the custody or voluntary-interview route before answering questions where that right applies.
+    situations: [A person is arrested, detained or asked to attend a police interview as a suspect.]
+    user_needs: [Reach the duty or chosen solicitor without the bundle advising on silence, interview or plea.]
+    dependency: regulated-criminal-defence-solicitor
+    source:
+      &lt;&lt;: *source_defaults
+      id: obtain-police-station-legal-advice-primary
+      title: Legal advice at the police station
+      owner: Home Office
+      authority_role: england_wales_police_station_legal_advice
+      resource: https://www.gov.uk/arrested-your-rights/legal-advice-at-the-police-station
+      coverage: Explains England and Wales access to free independent legal advice at a police station.
+      exclusions: Does not provide legal advice, select a representative or establish Scotland or Northern Ireland procedure.
+  - &lt;&lt;: *family_defaults
+    id: get-legal-aid
+    title: Get legal aid
+    aliases: [help paying legal costs, civil legal advice, criminal legal aid]
+    description: Use the jurisdiction and problem-specific assessment route and provide the financial and merits evidence it currently requests.
+    situations: [A person needs legal help and may be unable to pay privately.]
+    user_needs: [Find the correct legal-aid authority and provider without a local eligibility calculation.]
+    dependency: contracted-or-registered-legal-aid-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-legal-aid-primary
+      title: Legal aid
+      owner: Ministry of Justice
+      authority_role: england_wales_legal_aid_guidance
+      resource: https://www.gov.uk/legal-aid
+      coverage: Introduces England and Wales civil and criminal legal-aid scope, checks and provider handoffs.
+      exclusions: Does not decide financial or merits eligibility, find a case outcome or replace urgent legal advice.
+  - &lt;&lt;: *family_defaults
+    id: use-civil-or-family-court
+    title: Use a civil or family court
+    aliases: [represent myself in court, start civil case, family court hearing]
+    description: Identify the correct claim or application, follow pre-action or safeguarding requirements and retain filing, service, order and appeal records.
+    situations: [A dispute, family issue or protective matter may require a civil or family court decision.]
+    user_needs: [Find jurisdiction-specific procedure and regulated help without drafting or recommending litigation.]
+    dependency: regulated-legal-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: use-civil-or-family-court-primary
+      title: Represent yourself in court
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_civil_family_court_guidance
+      resource: https://www.gov.uk/represent-yourself-in-court
+      coverage: Introduces England and Wales civil or family court preparation, hearing and support handoffs.
+      exclusions: Does not choose a claim, provide legal advice, draft documents or predict an order.
+  - &lt;&lt;: *family_defaults
+    id: use-tribunal
+    title: Use a tribunal
+    aliases: [appeal government decision tribunal, tribunal hearing, administrative justice claim]
+    description: Identify the specialist tribunal named by the disputed decision and follow its review, filing, evidence and hearing route.
+    situations: [A public, employment, property, immigration or other governed decision may be appealable to a tribunal.]
+    user_needs: [Select the exact jurisdiction and chamber rather than treating tribunals as one generic service.]
+    dependency: regulated-legal-or-representative-support
+    source:
+      &lt;&lt;: *source_defaults
+      id: use-tribunal-primary
+      title: Courts and tribunals
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_tribunal_directory
+      resource: https://www.gov.uk/courts-tribunals
+      coverage: Provides England and Wales court and tribunal service routes and contact information.
+      exclusions: Does not identify the correct tribunal for a case, calculate time or assess appeal rights or merits.
+  - &lt;&lt;: *family_defaults
+    id: appeal-court-or-tribunal-decision
+    title: Appeal a court or tribunal decision
+    aliases: [challenge court judgment, appeal tribunal outcome, permission to appeal]
+    description: Read the decision and named appeal route promptly, preserve the record and obtain specialist advice before using the applicable permission or appeal process.
+    situations: [A party wants a higher court or tribunal to review a decision.]
+    user_needs: [Identify forum, permission, grounds and time boundaries without receiving legal advice or a merits prediction.]
+    dependency: regulated-appellate-legal-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: appeal-court-or-tribunal-decision-primary
+      title: Appeal against a Crown Court conviction or sentence
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_criminal_appeal_example
+      resource: https://www.gov.uk/appeal-against-sentence-conviction
+      coverage: Shows one England and Wales appellate route and its permission, form and legal-help handoffs.
+      exclusions: It is not a generic route for every court or tribunal and the bundle does not calculate time or grounds.
+</pre>
+</body>
+</html>

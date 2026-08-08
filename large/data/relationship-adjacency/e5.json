@@ -1365,6 +1365,46 @@
       "target_iri": "evidence/find-registered-childcare-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
+  "evidence/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d7ec5c37fd4aca2f751b9845",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
   "evidence/report-noise-or-pest-nuisance-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
     {
       "assertion_scope": "real-world",
@@ -1404,6 +1444,46 @@
       "source_iri": "service-step/report-noise-or-pest-nuisance-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "evidence/report-noise-or-pest-nuisance-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
       "target_iri": "evidence/report-noise-or-pest-nuisance-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
+  "outcome/call-emergency-services-ordinary-source-linked-route-follow-current-official-instructions-use-999-or-112-for-an-immediate-threat-to-life-serious-injury-fire-or-crime-in-progress-and-give-the-call-handler-the-requested-location-and-facts": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/call-emergency-services.v1.yaml",
+          "source_ids": [
+            "call-emergency-services-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b5a52c5771a6823fffa273b5",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/call-emergency-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/call-emergency-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "outcome/call-emergency-services-ordinary-source-linked-route-follow-current-official-instructions-use-999-or-112-for-an-immediate-threat-to-life-serious-injury-fire-or-crime-in-progress-and-give-the-call-handler-the-requested-location-and-facts",
+      "target_iri": "outcome/call-emergency-services-ordinary-source-linked-route-follow-current-official-instructions-use-999-or-112-for-an-immediate-threat-to-life-serious-injury-fire-or-crime-in-progress-and-give-the-call-handler-the-requested-location-and-facts"
     }
   ],
   "outcome/get-workplace-health-and-safety-protection-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
@@ -1831,6 +1911,46 @@
       "source_iri": "service-step/register-a-birth-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "rule/register-a-birth-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
       "target_iri": "rule/register-a-birth-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    }
+  ],
+  "rule/use-tribunal-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:8c4bfe05a98b08983a5dd52d",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-tribunal-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/use-tribunal-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/use-tribunal-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/use-tribunal-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "service-episode/get-student-finance-ordinary-source-linked-route": [

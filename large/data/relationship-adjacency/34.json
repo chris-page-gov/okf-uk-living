@@ -147,6 +147,86 @@
       "target_iri": "life-course-domain/later-life"
     }
   ],
+  "dependency/regulated-legal-or-representative-support": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/use-tribunal.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "use-tribunal-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:d27d5f7a050ea2f280d4a942",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/use-tribunal",
+      "source_iri": "dataset/use-tribunal",
+      "target": "dependency/regulated-legal-or-representative-support",
+      "target_iri": "dependency/regulated-legal-or-representative-support"
+    }
+  ],
+  "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/challenge-unfair-contract-term.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/challenge-unfair-contract-term.v1.yaml",
+          "source_ids": [
+            "challenge-unfair-contract-term-primary",
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1f61526b978672b518abe8ff",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/challenge-unfair-contract-term-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/challenge-unfair-contract-term-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
+    }
+  ],
   "evidence/get-leaving-care-support-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
     {
       "assertion_scope": "real-world",
@@ -630,6 +710,46 @@
       "target_iri": "output/register-a-birth-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
     }
   ],
+  "output/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/seek-refund-repair-or-replacement.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/seek-refund-repair-or-replacement.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "seek-refund-repair-or-replacement-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cdf363204c5a449b818875a3",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "output/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information",
+      "target_iri": "output/seek-refund-repair-or-replacement-ordinary-source-linked-route-follow-current-official-instructions-source-defined-confirmation-referral-decision-or-next-step-information"
+    }
+  ],
   "redress/access-school-health-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable": [
     {
       "assertion_scope": "real-world",
@@ -791,6 +911,152 @@
       "target_iri": "requirement/get-parking-permit-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction"
     }
   ],
+  "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:6debd1a22cdc1b460458d8bc",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary",
+      "target_iri": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c42d6dc7eea6b49c792fffd4",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-police-station-legal-advice-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/obtain-police-station-legal-advice-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary",
+      "target_iri": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:cc7093215721c5c8b0a9b6ea",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/obtain-police-station-legal-advice-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary",
+      "target_iri": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:ef19cfd53ef8619d6bc5fe3b",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-police-station-legal-advice",
+      "source_iri": "dataset/obtain-police-station-legal-advice",
+      "target": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary",
+      "target_iri": "resource/obtain-police-station-legal-advice-obtain-police-station-legal-advice-primary"
+    }
+  ],
   "rule/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
     {
       "assertion_scope": "real-world",
@@ -830,6 +1096,46 @@
       "source_iri": "service-step/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route",
       "target": "rule/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
       "target_iri": "rule/arrange-adoption-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
+  "rule/make-small-money-claim-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:543c6c497c13c9ea4ef75f4f",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/make-small-money-claim-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "rule/make-small-money-claim-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case",
+      "target_iri": "rule/make-small-money-claim-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
   "rule/prove-right-to-work-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case": [
@@ -1189,6 +1495,420 @@
       "source_iri": "dataset/sit-public-examinations",
       "target": "service-episode/sit-public-examinations-exception-or-route-failure",
       "target_iri": "service-episode/sit-public-examinations-exception-or-route-failure"
+    }
+  ],
+  "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:007afc7e7a2b718956cf8409",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/make-small-money-claim-consumer-rights-northern-ireland-handoff",
+      "target_iri": "resource/make-small-money-claim-consumer-rights-northern-ireland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:08b0b249525bc8a04f543dc6",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "redress/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
+      "target_iri": "redress/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1366499be505b3576b6bacd5",
+      "kind": "produces",
+      "label": "produces",
+      "observed_at": "2026-08-08",
+      "predicate": "produces",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "output/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state",
+      "target_iri": "output/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-an-authority-decision-alternate-route-or-recorded-unresolved-state"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1c73185ab881888bc57e6bfc",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "rule/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle",
+      "target_iri": "rule/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-no-eligibility-clinical-safeguarding-or-legal-decision-is-made-by-this-bundle"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4bf9cdf29e4c0e5422992a6f",
+      "kind": "has-episode",
+      "label": "has step",
+      "observed_at": "2026-08-08",
+      "predicate": "has-episode",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-episode/make-small-money-claim-exception-or-route-failure",
+      "source_iri": "service-episode/make-small-money-claim-exception-or-route-failure",
+      "target": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:5d0acce732c39d35880c8ab2",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/make-small-money-claim-make-small-money-claim-primary",
+      "target_iri": "resource/make-small-money-claim-make-small-money-claim-primary"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:94e58e6d14ab634d17b727eb",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:a23fb58304f61978a2189b29",
+      "kind": "delivered-by",
+      "label": "delivered by",
+      "observed_at": "2026-08-08",
+      "predicate": "delivered-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "actor/organisation-responsible-authority-or-redress-body",
+      "target_iri": "actor/organisation-responsible-authority-or-redress-body"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:aba45df1038cb02dba489480",
+      "kind": "supported-by-source",
+      "label": "supported by source",
+      "observed_at": "2026-08-08",
+      "predicate": "supported-by-source",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "resource/make-small-money-claim-consumer-rights-scotland-handoff",
+      "target_iri": "resource/make-small-money-claim-consumer-rights-scotland-handoff"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:b381ba76141448a1ce3ceb1a",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    },
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/make-small-money-claim.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "make-small-money-claim-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:e08c01ea1d4bb491abd58eab",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "requirement/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary",
+      "target_iri": "requirement/make-small-money-claim-exception-or-route-failure-resolve-route-boundary-or-failure-the-source-defined-exception-or-failure-boundary"
     }
   ],
   "service-step/start-first-job-exception-or-route-failure-resolve-route-boundary-or-failure": [
@@ -1685,6 +2405,46 @@
       "source_iri": "dataset/claim-maternity-allowance",
       "target": "user-need/claim-maternity-allowance-decision-and-challenge-route-without-calculating-entitlement-locally",
       "target_iri": "user-need/claim-maternity-allowance-decision-and-challenge-route-without-calculating-entitlement-locally"
+    }
+  ],
+  "user-need/obtain-police-station-legal-advice-reach-the-duty-or-chosen-solicitor-without-the-bundle-advising-on-silence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:c84b6ab48dc637c25a4779c2",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-police-station-legal-advice",
+      "source_iri": "dataset/obtain-police-station-legal-advice",
+      "target": "user-need/obtain-police-station-legal-advice-reach-the-duty-or-chosen-solicitor-without-the-bundle-advising-on-silence",
+      "target_iri": "user-need/obtain-police-station-legal-advice-reach-the-duty-or-chosen-solicitor-without-the-bundle-advising-on-silence"
     }
   ],
   "user-need/obtain-research-ethics-approval-use-the-institution-and-relevant-statutory-authority-to-determine-and-evidence-required-approvals": [
