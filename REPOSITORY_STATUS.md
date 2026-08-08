@@ -38,8 +38,9 @@
 - Remote: private GitHub repository created after explicit owner authorization
 - Main protection: PR-only policy documented; server enforcement unavailable
   on the current private-repository plan and therefore deferred
-- GitHub Pages: population-preview publication authorized on 2026-08-08;
-  manual exact-byte deployment and public-browser verification pending
+- GitHub Pages: population-preview publication authorized on 2026-08-08; the
+  enablement attempt failed with HTTP 422 because the current plan does not
+  support Pages for this private repository; visibility is unchanged
 - Public bundle URL: none
 - First slice: missed rubbish merged in PR #3
 - Second slice: merged in PR #4 with separate GB and Northern Ireland learning routes, GB notice,
@@ -64,6 +65,11 @@
 - Publication readiness: the full corpus is a frozen population-complete
   preview with a 1,549-file exact-byte publication manifest; it is not
   release-grade, and deployment verification remains pending
+- UI efficiency: six concise representative queries ranked the intended family
+  first or second and the missed-rubbish journey reached Narrative, Graph, 13
+  official links and a live GOV.UK page; three conversational questions and
+  the unmatched-query domain-browse fallback failed and remain Explorer
+  follow-ups
 - Pack 1: 36 family-beginnings dossiers, service narratives, four-nation
   variants, ordinary and exception journeys, 45 active source links and 13
   competency questions passed local deterministic and Explorer review

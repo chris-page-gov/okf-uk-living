@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +21,8 @@ EXPECTED_CANDIDATE_ID = "life-course-population-complete-2026-08-08"
 EXPECTED_CANDIDATE_MANIFEST_SHA256 = "0b1df05a4eb440b9193d0906fbe2c071c6463bbe457f9a791472fee7f949b62e"
 EXPECTED_PUBLIC_BASE = "https://chris-page-gov.github.io/okf-uk-living/"
 ASSURANCE_COMMIT = "c8b13307e6278f54c89018c075f148781b7c5f44"
+PUBLICATION_SOURCE_COMMIT = "980c7a9ec19ddd4161cefa348de689d179d1992b"
+EXPECTED_PAGES_MANIFEST_SHA256 = "63be5185e0302c367afd338518c550adf5d453e1812ff12c784db8973be9bb1f"
 
 
 def json_text(value: Any) -> str:
@@ -28,6 +31,44 @@ def json_text(value: Any) -> str:
 
 def sha256_path(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def git_file_bytes(commit: str, path: Path) -> bytes:
+    completed = subprocess.run(
+        ["git", "show", f"{commit}:{path.as_posix()}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    )
+    return completed.stdout
+
+
+def load_frozen_manifest() -> dict[str, Any]:
+    content = git_file_bytes(PUBLICATION_SOURCE_COMMIT, Path("publication/pages-file-manifest.json"))
+    if hashlib.sha256(content).hexdigest() != EXPECTED_PAGES_MANIFEST_SHA256:
+        raise ValueError("frozen Pages manifest hash is unexpected")
+    return json.loads(content)
+
+
+def validate_frozen_publication(manifest: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    if not MANIFEST_PATH.is_file():
+        return ["publication/pages-file-manifest.json is missing"]
+    current = MANIFEST_PATH.read_bytes()
+    if hashlib.sha256(current).hexdigest() != EXPECTED_PAGES_MANIFEST_SHA256:
+        errors.append("tracked Pages manifest differs from the owner-authorized manifest")
+    if json.loads(current) != manifest:
+        errors.append("tracked Pages manifest differs from the frozen publication commit")
+    if manifest.get("file_count") != len(manifest.get("files", [])):
+        errors.append("frozen Pages manifest file count is inconsistent")
+    targets = [str(item.get("target", "")) for item in manifest.get("files", [])]
+    if len(targets) != len(set(targets)):
+        errors.append("frozen Pages manifest targets are not unique")
+    if any(Path(target).is_absolute() or ".." in Path(target).parts for target in targets):
+        errors.append("frozen Pages manifest contains an unsafe target")
+    if any("snapshot" in str(item.get("source", "")).lower() for item in manifest.get("files", [])):
+        errors.append("frozen Pages manifest must not contain source snapshots")
+    return errors
 
 
 def publication_files() -> list[tuple[Path, Path]]:
@@ -189,9 +230,28 @@ def copy_publication(destination: Path, manifest: dict[str, Any]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write-manifest", action="store_true")
+    parser.add_argument(
+        "--frozen",
+        action="store_true",
+        help="verify the exact owner-authorized manifest from the pinned publication commit",
+    )
     parser.add_argument("--destination", type=Path)
     args = parser.parse_args()
     try:
+        if args.frozen:
+            if args.write_manifest or args.destination:
+                raise ValueError("--frozen is verification-only")
+            manifest = load_frozen_manifest()
+            errors = validate_frozen_publication(manifest)
+            if errors:
+                for error in errors:
+                    print(error)
+                return 1
+            print(
+                f"Frozen Pages publication passed: commit={PUBLICATION_SOURCE_COMMIT} "
+                f"files={manifest['file_count']} bytes={manifest['total_bytes']}"
+            )
+            return 0
         manifest = build_manifest()
         if args.write_manifest:
             MANIFEST_PATH.write_text(json_text(manifest), encoding="utf-8")

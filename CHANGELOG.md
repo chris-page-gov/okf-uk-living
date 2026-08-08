@@ -6,6 +6,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Dated population-preview UI-efficiency review covering six concise keyword
+  queries, three conversational questions, one complete narrative/graph/source
+  journey and a real-browser GOV.UK handoff.
+- Publication-attempt evidence recording GitHub's HTTP 422 private-repository
+  Pages plan constraint without changing repository visibility or sharing an
+  unverified URL.
+
 - Owner-authorized population-complete preview publication unit with an
   original landing page, a publication-scoped Explorer descriptor and a
   comprehensive 1,549-file SHA-256 manifest rooted in the frozen candidate.
@@ -205,6 +212,15 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Publication authorization remains a separate descriptor envelope and dated
+  receipt so that the owner-authorized candidate bytes and hash are unchanged.
+- Manual Pages transport and local publication validation now pin publication
+  merge `980c7a9…`, so later lockstep documentation cannot alter the frozen
+  1,549-file unit.
+- `PAGES-001` is blocked on an explicit repository-visibility/publication-host
+  choice; conversational search, zero-result domain browsing and display
+  density remain tracked Explorer follow-ups.
 
 - Completed `SCOPE-001`, `CAND-001` and `PUB-001` for the full
   population-complete preview after explicit owner authorization; advanced

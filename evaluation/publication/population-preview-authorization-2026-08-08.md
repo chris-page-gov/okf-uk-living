@@ -43,3 +43,17 @@ After the publication workflow succeeds, record its run and deployment IDs,
 verify the exact deployed landing, descriptor and manifest, and exercise
 representative question journeys through search, details, Narrative, Graph,
 Resources and official-source handoff in the currently deployed OKF Explorer.
+
+## Deployment attempt
+
+After publication PR #23 merged at
+`980c7a9ec19ddd4161cefa348de689d179d1992b`, GitHub was asked to enable
+workflow-based Pages for the unchanged private repository. The API returned
+HTTP 422 with `Your current plan does not support GitHub Pages for this
+repository.` No deployment was created, repository visibility was not changed,
+and the public URL remains withheld.
+
+The exact staging bytes and the merged Explorer were evaluated locally. The
+[dated UI-efficiency review](../reviews/population-preview-ui-efficiency-2026-08-08.md)
+records the passing keyword-led search-to-source journey and the open
+natural-language search and zero-result browsing findings.

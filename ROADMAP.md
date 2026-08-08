@@ -188,3 +188,11 @@ without changing the release-grade boundary: the preview remains navigational,
 non-conformant and visibly subject to specialist review. The exact-byte Pages
 publication unit is manual-only and frozen from the population candidate;
 deployment and public-browser verification remain the next two gates.
+
+The first deployment attempt on 2026-08-08 was stopped by GitHub: the current
+plan does not support Pages for this private repository. Visibility remained
+private and no public URL was shared. Local evaluation of the exact staged
+candidate found efficient keyword-led discovery and a complete
+search-to-source journey, but also found that conversational queries can be
+over-constrained and that zero-result searches remove domain browsing. Those
+Explorer findings remain separate from the completed population gate.
