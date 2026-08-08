@@ -622,6 +622,46 @@
       "target_iri": "enclosing-process/move-into-independent-mobility-health-and-care"
     }
   ],
+  "dependency/accredited-private-parking-operator-and-appeal-service": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/transport-enforcement/challenge-private-parking-charge.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/transport-enforcement/challenge-private-parking-charge.v1.yaml",
+          "source_ids": [
+            "challenge-private-parking-charge-primary",
+            "transport-enforcement-northern-ireland-handoff",
+            "transport-enforcement-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:670d55cb49a17b96276d3be3",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/challenge-private-parking-charge",
+      "source_iri": "dataset/challenge-private-parking-charge",
+      "target": "dependency/accredited-private-parking-operator-and-appeal-service",
+      "target_iri": "dependency/accredited-private-parking-operator-and-appeal-service"
+    }
+  ],
   "dependency/role-private-organisation-after-death": [
     {
       "assertion_scope": "real-world",
@@ -659,6 +699,86 @@
       "source_iri": "dataset/notify-organisations-after-a-death",
       "target": "dependency/role-private-organisation-after-death",
       "target_iri": "dependency/role-private-organisation-after-death"
+    }
+  ],
+  "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/challenge-unfair-contract-term.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/challenge-unfair-contract-term.v1.yaml",
+          "source_ids": [
+            "challenge-unfair-contract-term-primary",
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:0768163b93bd23243ecf971a",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/challenge-unfair-contract-term-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/challenge-unfair-contract-term-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route",
+      "target_iri": "evidence/challenge-unfair-contract-term-ordinary-source-linked-route-select-current-jurisdiction-route-evidence-is-determined-by-the-selected-current-route"
+    }
+  ],
+  "evidence/exercise-consumer-rights-for-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/exercise-consumer-rights-for-services.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/exercise-consumer-rights-for-services.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "exercise-consumer-rights-for-services-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:4b1c9dced271150b04a6c5eb",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/exercise-consumer-rights-for-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "source_iri": "service-step/exercise-consumer-rights-for-services-ordinary-source-linked-route-follow-current-official-instructions",
+      "target": "evidence/exercise-consumer-rights-for-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source",
+      "target_iri": "evidence/exercise-consumer-rights-for-services-ordinary-source-linked-route-follow-current-official-instructions-only-the-evidence-requested-by-the-selected-current-source"
     }
   ],
   "evidence/report-street-cleaning-failure-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
@@ -864,6 +984,46 @@
       "source_iri": "service-step/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "redress/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable",
       "target_iri": "redress/get-careers-advice-exception-or-route-failure-resolve-route-boundary-or-failure-current-provider-complaint-statutory-review-regulator-or-ombudsman-route-as-applicable"
+    }
+  ],
+  "redress/report-crime-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/report-crime.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/report-crime.v1.yaml",
+          "source_ids": [
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff",
+            "report-crime-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:f8de32dd48ebfac7a16eed22",
+      "kind": "has-redress",
+      "label": "has redress",
+      "observed_at": "2026-08-08",
+      "predicate": "has-redress",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-crime-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-crime-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "redress/report-crime-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority",
+      "target_iri": "redress/report-crime-ordinary-source-linked-route-select-current-jurisdiction-route-use-the-complaint-review-or-urgent-route-published-by-the-selected-authority"
     }
   ],
   "requirement/apply-for-social-housing-ordinary-source-linked-route-follow-current-official-instructions-the-source-linked-route-identifies-the-responsible-service-and-publishes-the-current-requirements-evidence-channel-costs-and-timing-for-that-jurisdiction": [

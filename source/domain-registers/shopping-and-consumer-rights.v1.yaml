@@ -1,0 +1,246 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-5-enforcement-consumer-justice
+domain: shopping-and-consumer-rights
+title: Shopping and consumer rights
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-5-enforcement-consumer-justice-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: consumer-rights-scotland-handoff
+    jurisdiction: Scotland
+    title: Consumer rights in Scotland
+    owner: Scottish Government
+    authority_role: scotland_consumer_rights_handoff
+    resource: https://www.mygov.scot/consumer-rights
+    coverage: Routes people to current Scottish consumer advice, complaint and enforcement information.
+    exclusions: Does not decide whether goods, services, terms or credit breach a consumer's rights.
+  - <<: *source_defaults
+    id: consumer-rights-wales-handoff
+    jurisdiction: Wales
+    title: Consumer rights in Wales
+    owner: Competition and Markets Authority
+    authority_role: wales_consumer_rights_handoff
+    resource: https://www.gov.uk/consumer-protection-rights
+    coverage: Routes people to current Welsh consumer-protection and local enforcement information.
+    exclusions: Does not resolve an individual contract, refund, credit or product-safety case.
+  - <<: *source_defaults
+    id: consumer-rights-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Consumer rights in Northern Ireland
+    owner: Competition and Markets Authority
+    authority_role: northern_ireland_consumer_rights_handoff
+    resource: https://www.gov.uk/consumer-protection-rights
+    coverage: Routes people to current Northern Ireland consumer advice, complaints and enforcement.
+    exclusions: Great Britain civil and consumer procedure does not establish Northern Ireland redress.
+families:
+  - <<: *family_defaults
+    id: exercise-consumer-rights-for-goods
+    title: Exercise consumer rights for goods
+    aliases: [faulty item rights, goods not as described, consumer guarantee]
+    description: Preserve the purchase and defect evidence, state the requested statutory remedy to the trader and use the applicable escalation route.
+    situations: [Goods bought from a trader may be faulty, unsafe, misdescribed or unsuitable under the current consumer regime.]
+    user_needs: [Find the trader and remedy sequence without the bundle deciding breach or entitlement.]
+    source:
+      <<: *source_defaults
+      id: exercise-consumer-rights-for-goods-primary
+      title: Consumer rights
+      owner: Competition and Markets Authority
+      authority_role: uk_consumer_rights_guidance
+      resource: https://www.gov.uk/consumer-protection-rights
+      coverage: Introduces UK consumer rights for goods and public advice and enforcement handoffs.
+      exclusions: Does not determine whether a product breaches contract or which remedy is due.
+  - <<: *family_defaults
+    id: exercise-consumer-rights-for-services
+    title: Exercise consumer rights for services
+    aliases: [poor service complaint, reasonable care and skill, service not completed]
+    description: Record the agreement and performance problem, ask the trader for the applicable repeat performance or price remedy and retain its response.
+    situations: [A paid service may not match the contract, information, care, skill, price or timing promised.]
+    user_needs: [Keep evidence, trader complaint, sector scheme and court boundaries in the correct order.]
+    source:
+      <<: *source_defaults
+      id: exercise-consumer-rights-for-services-primary
+      title: Consumer rights
+      owner: Competition and Markets Authority
+      authority_role: uk_consumer_service_rights_guidance
+      resource: https://www.gov.uk/consumer-protection-rights
+      coverage: Introduces consumer protection and advice routes relevant to paid services.
+      exclusions: Does not interpret a service contract, assess reasonable care or calculate a price reduction.
+  - <<: *family_defaults
+    id: exercise-digital-content-rights
+    title: Exercise digital content rights
+    aliases: [faulty app refund, digital download rights, streaming service not working]
+    description: Preserve account, payment and fault evidence and use the trader or platform route for repair, replacement, refund or damage claims where applicable.
+    situations: [Paid or supplied digital content may be faulty, incompatible, misdescribed or damaging.]
+    user_needs: [Distinguish digital content, services, goods and platform-provider responsibility.]
+    source:
+      <<: *source_defaults
+      id: exercise-digital-content-rights-primary
+      title: Consumer rights
+      owner: Competition and Markets Authority
+      authority_role: uk_digital_content_rights_guidance
+      resource: https://www.gov.uk/consumer-protection-rights
+      coverage: Routes consumers to current rights and advice covering goods, services and digital transactions.
+      exclusions: Does not diagnose software, establish trader identity, decide a remedy or assess consequential damage.
+  - <<: *family_defaults
+    id: seek-refund-repair-or-replacement
+    title: Seek a refund, repair or replacement
+    aliases: [return faulty purchase, ask shop for refund, replace broken product]
+    description: Present purchase and condition evidence to the responsible trader and retain the remedy offered, refused or escalated.
+    situations: [A consumer wants a trader to refund, repair or replace a purchase.]
+    user_needs: [Identify the responsible seller and remedy stage without treating a shop policy as the statutory test.]
+    source:
+      <<: *source_defaults
+      id: seek-refund-repair-or-replacement-primary
+      title: Accepting returns and giving refunds
+      owner: Department for Business and Trade
+      authority_role: uk_returns_and_refunds_guidance
+      resource: https://www.gov.uk/accepting-returns-and-giving-refunds
+      coverage: Explains trader refund duties and the distinction between faulty goods and change of mind.
+      exclusions: Written for businesses and does not decide a consumer's facts or remedy.
+  - <<: *family_defaults
+    id: report-scam-or-fraud
+    title: Report a scam or fraud
+    aliases: [online scam report, money stolen by fraud, phishing report]
+    description: Take immediate account or payment-security action and report the event through the current police, fraud and platform routes for the jurisdiction.
+    situations: [A person suspects deception, unauthorized payment, identity misuse or another fraud.]
+    user_needs: [Place urgent financial protection, evidence, reporting and support handoffs in a safe order.]
+    source:
+      <<: *source_defaults
+      id: report-scam-or-fraud-primary
+      title: Consumer rights and scam advice
+      owner: Competition and Markets Authority
+      authority_role: uk_consumer_scam_advice_handoff
+      resource: https://www.gov.uk/consumer-protection-rights
+      coverage: Routes people to national consumer advice services that handle fraud and scam concerns and can identify current reporting handoffs.
+      exclusions: Does not investigate, recover money, secure an account or replace an emergency police route.
+  - <<: *family_defaults
+    id: resolve-consumer-credit-dispute
+    title: Resolve a consumer credit dispute
+    aliases: [complain about lender, credit agreement dispute, financial ombudsman complaint]
+    description: Complain to the authorised firm first, retain its final response and use the current regulator, ombudsman or court route where applicable.
+    situations: [A borrower or customer disputes a regulated loan, hire, card, debt collection or credit-service outcome.]
+    user_needs: [Verify the provider and separate complaint, ombudsman, regulatory and legal remedies.]
+    dependency: fca-authorised-credit-provider
+    source:
+      <<: *source_defaults
+      id: resolve-consumer-credit-dispute-primary
+      title: Complain about a financial service
+      owner: HM Treasury
+      authority_role: uk_financial_service_complaint_guidance
+      resource: https://www.gov.uk/complain-financial-service
+      coverage: Routes consumers through firm complaint and Financial Ombudsman Service handoffs.
+      exclusions: Does not decide authorization, affordability, enforceability, redress or court time limits.
+  - <<: *family_defaults
+    id: contact-trading-standards
+    title: Contact Trading Standards
+    aliases: [report rogue trader, local consumer enforcement, report illegal sale]
+    description: Give the designated consumer-advice or local enforcement route facts about a trader, product or practice and retain the referral boundary.
+    situations: [A consumer or business has information about a potentially unlawful trading practice.]
+    user_needs: [Use the correct advice gateway and understand that enforcement action is an authority decision.]
+    source:
+      <<: *source_defaults
+      id: contact-trading-standards-primary
+      title: Find your local Trading Standards office
+      owner: Department for Business and Trade
+      authority_role: england_wales_scotland_trading_standards_locator
+      resource: https://www.gov.uk/find-local-trading-standards-office
+      coverage: Routes Great Britain users to the designated consumer service or local Trading Standards contact.
+      exclusions: Does not create an investigation, decide an offence or promise individual redress.
+  - <<: *family_defaults
+    id: use-sector-ombudsman
+    title: Use a sector ombudsman
+    aliases: [independent complaint reviewer, ombudsman after final response, escalate unresolved service complaint]
+    description: Complete the provider's complaint stage, identify the recognized scheme for the sector and submit within its current jurisdiction and scope.
+    situations: [A consumer complaint remains unresolved after the responsible provider's required internal process.]
+    user_needs: [Verify the ombudsman or redress scheme and keep sectors, jurisdictions and binding powers distinct.]
+    dependency: recognized-sector-ombudsman-or-redress-scheme
+    source:
+      <<: *source_defaults
+      id: use-sector-ombudsman-primary
+      title: Consumer rights
+      owner: Competition and Markets Authority
+      authority_role: uk_consumer_redress_handoff
+      resource: https://www.gov.uk/consumer-protection-rights
+      coverage: Routes consumers to public advice that can identify sector-specific complaint and redress services.
+      exclusions: Does not identify one ombudsman for every issue or establish scheme jurisdiction or acceptance.
+  - <<: *family_defaults
+    id: make-small-money-claim
+    title: Make a small money claim
+    aliases: [small claims court, claim money owed, county court money claim]
+    description: Send the required pre-action information, use the correct court or online claim route and retain service, response and judgment records.
+    situations: [A person or organisation seeks a civil money remedy within the applicable court process.]
+    user_needs: [Find the jurisdiction-specific claim route without legal advice or an outcome prediction.]
+    source:
+      <<: *source_defaults
+      id: make-small-money-claim-primary
+      title: Make a court claim for money
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_money_claim_service
+      resource: https://www.gov.uk/make-court-claim-for-money
+      coverage: Provides England and Wales online and paper money-claim handoffs and fee information.
+      exclusions: Does not advise whether to sue, calculate limitation or interest, draft a claim or predict judgment or recovery.
+  - <<: *family_defaults
+    id: cancel-distance-contract
+    title: Cancel a distance contract
+    aliases: [online purchase cooling off period, cancel phone order, return internet purchase]
+    description: Notify the trader through a durable route and preserve dispatch, delivery, cancellation and return evidence under the applicable contract rules.
+    situations: [A consumer wants to cancel goods or services bought online, by telephone or away from business premises.]
+    user_needs: [Identify exemptions, trader information and return responsibilities without calculating a deadline.]
+    source:
+      <<: *source_defaults
+      id: cancel-distance-contract-primary
+      title: Online and distance selling
+      owner: Department for Business and Trade
+      authority_role: uk_distance_selling_guidance
+      resource: https://www.gov.uk/online-and-distance-selling-for-businesses
+      coverage: Explains trader information, cancellation and refund duties for UK distance selling.
+      exclusions: Written for businesses and does not decide whether a transaction or exemption applies.
+  - <<: *family_defaults
+    id: challenge-unfair-contract-term
+    title: Challenge an unfair contract term
+    aliases: [unfair small print, excessive cancellation clause, consumer contract term complaint]
+    description: Preserve the contract and trader communications, state the disputed effect and use advice, regulator, ombudsman or court routes as applicable.
+    situations: [A standard consumer term may create a significant and non-transparent imbalance.]
+    user_needs: [Find authoritative guidance while leaving fairness and enforceability to the accountable body.]
+    source:
+      <<: *source_defaults
+      id: challenge-unfair-contract-term-primary
+      title: Unfair terms in consumer contracts
+      owner: Competition and Markets Authority
+      authority_role: uk_unfair_terms_guidance
+      resource: https://www.gov.uk/government/publications/unfair-contract-terms-cma37
+      coverage: Publishes CMA guidance on the UK unfair-terms regime and enforcement approach.
+      exclusions: Does not provide legal advice, interpret an individual term or determine enforceability or remedy.
+  - <<: *family_defaults
+    id: report-product-safety-issue
+    title: Report a product safety issue
+    aliases: [dangerous product report, product recall concern, unsafe item complaint]
+    description: Stop unsafe use where necessary, preserve product and incident details and report to the seller and designated safety authority route.
+    situations: [A consumer product may present an injury, fire, electrical, chemical or other safety risk.]
+    user_needs: [Identify urgent care, fire, seller, Trading Standards and product-safety reporting boundaries.]
+    source:
+      <<: *source_defaults
+      id: report-product-safety-issue-primary
+      title: Product safety for consumers
+      owner: Office for Product Safety and Standards
+      authority_role: uk_product_safety_guidance
+      resource: https://www.gov.uk/guidance/consumer-products-reporting-product-safety-issues
+      coverage: Routes consumers to product-safety alerts, recall checks and reporting information.
+      exclusions: Does not assess a product, diagnose injury, order a recall or determine liability or compensation.

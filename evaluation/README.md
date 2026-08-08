@@ -43,5 +43,10 @@ accounts for all 36 families while preserving the deeper missed-rubbish slice,
 and adds 44 body-free official links plus 13 questions across housing, local
 environmental services and accessible or private transport.
 
+The [Pack 5 enforcement/consumer/justice review](reviews/pack-5-enforcement-consumer-justice-2026-08-08.md)
+accounts for all 36 families while preserving the reviewed speeding-notice
+slice, and adds 44 body-free official links plus 13 questions across transport
+penalties, consumer remedies and police or adjudication routes.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

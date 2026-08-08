@@ -73,6 +73,86 @@
       "target_iri": "life-course-domain/relationships-and-family-change"
     }
   ],
+  "dependency/regulated-criminal-defence-solicitor": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/obtain-police-station-legal-advice.v1.yaml",
+          "source_ids": [
+            "obtain-police-station-legal-advice-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3538acac3e63a7c76710cba9",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/obtain-police-station-legal-advice",
+      "source_iri": "dataset/obtain-police-station-legal-advice",
+      "target": "dependency/regulated-criminal-defence-solicitor",
+      "target_iri": "dependency/regulated-criminal-defence-solicitor"
+    }
+  ],
+  "outcome/exercise-digital-content-rights-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/exercise-digital-content-rights.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/exercise-digital-content-rights.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "exercise-digital-content-rights-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:7bb79bbc512e9ac0066de71e",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/exercise-digital-content-rights-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/exercise-digital-content-rights-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "outcome/exercise-digital-content-rights-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence",
+      "target_iri": "outcome/exercise-digital-content-rights-ordinary-source-linked-route-select-current-jurisdiction-route-the-user-can-continue-without-assuming-four-nation-equivalence"
+    }
+  ],
   "outcome/report-workplace-injury-ordinary-source-linked-route-follow-current-official-instructions-record-the-incident-and-use-employer-enforcing-authority-and-injury-reporting-routes-applicable-to-the-event": [
     {
       "assertion_scope": "real-world",

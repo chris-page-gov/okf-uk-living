@@ -831,6 +831,46 @@
       "target_iri": "rule/register-for-council-tax-ordinary-source-linked-route-follow-current-official-instructions-the-responsible-authority-or-provider-decides-the-real-case"
     }
   ],
+  "rule/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/shopping-and-consumer-rights/report-scam-or-fraud.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/shopping-and-consumer-rights/report-scam-or-fraud.v1.yaml",
+          "source_ids": [
+            "consumer-rights-northern-ireland-handoff",
+            "consumer-rights-scotland-handoff",
+            "report-scam-or-fraud-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:1f821e4ca648d92297fb21e6",
+      "kind": "governed-by",
+      "label": "governed by",
+      "observed_at": "2026-08-08",
+      "predicate": "governed-by",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "source_iri": "service-step/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route",
+      "target": "rule/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined",
+      "target_iri": "rule/report-scam-or-fraud-ordinary-source-linked-route-select-current-jurisdiction-route-jurisdiction-and-provider-rules-remain-separate-and-source-defined"
+    }
+  ],
   "user-need/access-health-visiting-find-the-responsible-local-health-team-and-know-where-urgent-or-specialist-concerns-are-escalated": [
     {
       "assertion_scope": "real-world",
@@ -870,6 +910,86 @@
       "source_iri": "dataset/access-health-visiting",
       "target": "user-need/access-health-visiting-find-the-responsible-local-health-team-and-know-where-urgent-or-specialist-concerns-are-escalated",
       "target_iri": "user-need/access-health-visiting-find-the-responsible-local-health-team-and-know-where-urgent-or-specialist-concerns-are-escalated"
+    }
+  ],
+  "user-need/appeal-court-or-tribunal-decision-identify-forum": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/appeal-court-or-tribunal-decision.v1.yaml",
+          "source_ids": [
+            "appeal-court-or-tribunal-decision-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:41c2294a44c04c24eb2034a5",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/appeal-court-or-tribunal-decision",
+      "source_iri": "dataset/appeal-court-or-tribunal-decision",
+      "target": "user-need/appeal-court-or-tribunal-decision-identify-forum",
+      "target_iri": "user-need/appeal-court-or-tribunal-decision-identify-forum"
+    }
+  ],
+  "user-need/get-legal-aid-find-the-correct-legal-aid-authority-and-provider-without-a-local-eligibility-calculation": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/police-and-legal-services/get-legal-aid.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/police-and-legal-services/get-legal-aid.v1.yaml",
+          "source_ids": [
+            "get-legal-aid-primary",
+            "police-legal-northern-ireland-handoff",
+            "police-legal-scotland-handoff"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:eb0157e119aa047244686599",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/get-legal-aid",
+      "source_iri": "dataset/get-legal-aid",
+      "target": "user-need/get-legal-aid-find-the-correct-legal-aid-authority-and-provider-without-a-local-eligibility-calculation",
+      "target_iri": "user-need/get-legal-aid-find-the-correct-legal-aid-authority-and-provider-without-a-local-eligibility-calculation"
     }
   ]
 }
