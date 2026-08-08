@@ -12,7 +12,9 @@ also exposes seven reconciled colour facets and static search. The
 48 enclosing processes and the distinction between population-complete and
 specialist-reviewed release grade. Six reviewed families now expose authored
 narratives, typed official links and governed journey graphs; the other
-families remain explicit planning records. This is not an official service
+families remain explicit planning records. The shared infrastructure now adds
+397 dated GSS geographies, 438 reusable authority/regulator/redress records,
+ten sector maps and metadata-only source-link receipts. This is not an official service
 corpus or publication candidate. The GitHub
 repository is private; validation remains local-only, snapshots, unbounded or unstaged leaf
 acquisition and CI remain disabled, and publication requires a separate
@@ -32,6 +34,7 @@ explicit owner request.
 - [Local Explorer input record](evaluation/compatibility/okf-explorer-local.v1.yaml)
 - [Large-corpus local review](evaluation/reviews/large-corpus-2026-08-07.md)
 - [Three-slice population migration review](evaluation/reviews/three-slice-population-migration-2026-08-08.md)
+- [Shared authority and source infrastructure review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
 - [Missed rubbish collection journey](journeys/missed-rubbish-collection.md)
@@ -45,6 +48,8 @@ explicit owner request.
 - [Full-population implementation contract](profiles/life-course-population-contract.v1.yaml)
 - [48 enclosing-process denominator](source/life-course-processes.v1.yaml)
 - [Migrated life-course family dossiers](source/life-course-families/)
+- [Current authority and geography registry](source/authority-registry.v1.yaml)
+- [Reviewed shared regulator and redress seeds](source/shared-authority-seeds.v1.yaml)
 - [Governed predicate registry](ontology/governed-predicates.v1.yaml)
 - [Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
@@ -96,6 +101,7 @@ uv run --locked python scripts/check_service_denominator.py
 uv run --locked python scripts/check_corpus_policy.py
 uv run --locked python scripts/check_population_contract.py
 uv run --locked python scripts/check_life_course_dossiers.py
+uv run --locked python scripts/check_authority_registry.py
 uv run --locked python scripts/check_rights.py
 uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
@@ -109,7 +115,9 @@ default; pull requests and merges do not run remote CI or update GitHub Pages.
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
 bundle and `okf-explorer.json` for the 293-family discovery projection. The
 large descriptor distinguishes 293 service families from the larger typed
-concept count and exposes generated semantic and validation entrypoints. With a
+concept count, currently 1,434 concepts, and exposes generated semantic and
+validation entrypoints. Records and static-search results are sharded in
+1,000-record chunks so supporting infrastructure remains lazily hydratable. With a
 local OKF Explorer build at `../okf-explorer/_site`, start the no-cache overlay:
 
 ```sh
@@ -138,6 +146,17 @@ repository-authored structure, original summaries, facts and links. Source
 snapshots remain non-redistributable until an exact source-specific licence
 decision is recorded. These decisions do not change the separate explicit
 owner gate for publication.
+
+The reviewed authority refresh is a separate live metadata acquisition step:
+
+```sh
+uv run --locked python scripts/refresh_authority_registry.py --check
+uv run --locked python scripts/audit_source_links.py
+```
+
+It is not part of deterministic offline validation. The refresh transforms
+official ONS names, codes and dates in memory; the audit stores response
+metadata only. Neither retains a source response body, geometry or snapshot.
 
 ## Authority boundary
 

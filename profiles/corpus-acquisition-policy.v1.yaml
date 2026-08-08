@@ -24,6 +24,9 @@ local_coverage:
   decision: approved
   authority_layer:
     completeness: every_active_principal_authority_and_functional_body_in_the_approved_official_denominators
+    registry: source/authority-registry.v1.yaml
+    registry_observed_at: "2026-08-08"
+    implementation_status: current_reviewed_denominator_implemented
     sources:
       - govuk-find-local-council
       - mygov-organisations
@@ -89,6 +92,19 @@ geography_and_organisation_identifiers:
     storage_allowed: false
     identity_rule: A postcode lookup is routing evidence, not a stable service or authority identity.
   lifecycle_rule: Never overwrite predecessor, successor, boundary vintage or effective dates.
+  language_variant_identity:
+    rule: Treat Welsh and English labels or pages as variants of one identity only when the publisher explicitly pairs them.
+    prohibited_evidence:
+      - label_similarity
+      - translated_slug_similarity
+      - parallel_url_pattern_without_publisher_pairing
+  local_service_identifiers:
+    vocabulary: esd_local_government_services_list
+    current_location: https://standards.esd.org.uk/?uri=list%2Fservices
+    evidence: https://help.esd.org.uk/standards/faqs/where-can-i-find-latest-local-government-services-list-lgsl
+    observed_at: "2026-08-08"
+    use: optional_mapping_vocabulary_only
+    establishes_current_service_availability: false
 
 health_source_permissions:
   decision: keep_manual_link_and_original_summary_only
@@ -137,6 +153,8 @@ private_dependencies:
 
 sector_redress:
   decision: governed_escalation_taxonomy
+  registry: source/authority-registry.v1.yaml
+  registry_status: ten_sector_regulator_and_redress_map_implemented
   sequence:
     - provider_internal_review_or_complaint
     - statutory_reconsideration_or_review
@@ -205,3 +223,12 @@ explorer_large_corpus:
     - assertion_status
     - rights_state
   publication_allowed: false
+
+link_verification:
+  decision: metadata_only_live_audit_separate_from_deterministic_offline_checks
+  command: uv run --locked python scripts/audit_source_links.py
+  receipt_contract: source-link-receipt.v1
+  response_body_retained: false
+  offline_build_network_access: false
+  primary_failure_effect: blocks_affected_family
+  secondary_failure_effect: records_explicit_gap

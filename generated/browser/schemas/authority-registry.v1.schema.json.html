@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/authority-registry.v1.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/authority-registry.v1.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/authority-registry.v1.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/authority-registry.v1.schema.json&quot;,
+  &quot;title&quot;: &quot;A Life in the UK authority and geography registry&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;authority_registry_version&quot;, &quot;status&quot;, &quot;observed_at&quot;, &quot;identity_rules&quot;, &quot;sources&quot;, &quot;denominators&quot;, &quot;geographies&quot;, &quot;organisations&quot;, &quot;sector_maps&quot;],
+  &quot;properties&quot;: {
+    &quot;authority_registry_version&quot;: {&quot;const&quot;: &quot;authority-registry.v1&quot;},
+    &quot;status&quot;: {&quot;enum&quot;: [&quot;current_reviewed&quot;, &quot;superseded&quot;]},
+    &quot;observed_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date&quot;},
+    &quot;identity_rules&quot;: {&quot;type&quot;: &quot;object&quot;},
+    &quot;sources&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1},
+    &quot;denominators&quot;: {&quot;type&quot;: &quot;object&quot;},
+    &quot;geographies&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 382},
+    &quot;organisations&quot;: {&quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 401},
+    &quot;sector_maps&quot;: {&quot;type&quot;: &quot;object&quot;, &quot;minProperties&quot;: 10}
+  },
+  &quot;additionalProperties&quot;: false
+}
+</pre>
+</body>
+</html>

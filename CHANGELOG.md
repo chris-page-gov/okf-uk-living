@@ -6,6 +6,18 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Current shared authority registry with 382 principal-authority areas, 19
+  strategic/combined authorities, 397 dated GSS geographies and 438 reusable
+  authority, regulator, redress and provider-role records.
+- Ten-sector regulator/register and redress mappings, explicit publisher-paired
+  bilingual identity rules and current ESD Services mapping-only policy.
+- Reviewed metadata-only authority refresh and link-audit commands plus seven
+  active `source-link-receipt.v1` records with no retained response bodies.
+- Searchable authority/geography concepts in the JSON-LD and YAML-LD data plane,
+  with shared identities reused by existing dossier graph relationships.
+- Deterministic multi-chunk record and search-result hydration with a
+  real-browser regression for corpora larger than 1,000 concepts.
+
 - Six population-complete `life-course-family.v1` dossiers for the three
   reviewed vertical slices, resolving exactly the existing 53 authoritative
   reference records without acquiring source bodies or snapshots.
@@ -97,6 +109,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Expanded dated host decisions from 25 to 28 for the ONS Open Geography
+  portal, its ArcGIS query service and the ESD standards help service without
+  relaxing link-and-summary-only source use.
+- Advanced `POP-004` to complete after offline validation, live metadata
+  receipts and local Explorer search, detail, bilingual and graph journeys.
 
 - Recorded OKF Explorer PR #72 as merged with authored large-record narratives
   and typed link/JSON/XML/text source access after the full three-browser gate.

@@ -1,0 +1,277 @@
+shared_authority_seeds_version: shared-authority-seeds.v1
+status: reviewed_for_population_infrastructure
+decision_date: "2026-08-08"
+assertion_status: normalized
+limitations:
+  - These records support discovery and route modelling; they do not prove that an organisation handles a particular case.
+  - A regulator, ombudsman or tribunal entry does not establish admissibility, jurisdiction, prerequisites or deadlines for an individual complaint.
+  - Source titles, URLs and unprotected identity facts are retained; no source response body is acquired or redistributed.
+
+post_ons_strategic_authorities:
+  - id: organisation:cheshire-and-warrington-combined-authority
+    title: Cheshire and Warrington Combined Authority
+    jurisdiction: england
+    organisation_type: combined_authority
+    source_native_id: legislation:uksi/2026/159
+    effective_from: "2026-02-24"
+    official_url: https://www.legislation.gov.uk/uksi/2026/159/contents/made
+  - id: organisation:cumbria-combined-authority
+    title: Cumbria Combined Authority
+    jurisdiction: england
+    organisation_type: combined_authority
+    source_native_id: legislation:uksi/2026/158
+    effective_from: "2026-02-24"
+    official_url: https://www.legislation.gov.uk/uksi/2026/158/contents/made
+  - id: organisation:sussex-and-brighton-combined-county-authority
+    title: Sussex and Brighton Combined County Authority
+    jurisdiction: england
+    organisation_type: combined_county_authority
+    source_native_id: legislation:uksi/2026/362
+    effective_from: "2026-03-25"
+    official_url: https://www.legislation.gov.uk/uksi/2026/362/contents/made
+  - id: organisation:hampshire-and-the-solent-combined-county-authority
+    title: Hampshire and the Solent Combined County Authority
+    jurisdiction: england
+    organisation_type: combined_county_authority
+    source_native_id: official-domain:hantsandsolent-ca.gov.uk
+    effective_from: "2026-06-05"
+    official_url: https://hantsandsolent-ca.gov.uk/
+
+transition_bodies:
+  - id: organisation:east-surrey-shadow-authority
+    title: East Surrey Shadow Authority
+    jurisdiction: england
+    organisation_type: shadow_authority
+    source_native_id: legislation:uksi/2026/surrey-structural-changes
+    effective_from: "2026-05-11"
+    effective_to: "2027-03-31"
+    service_delivery_status: preparatory_only_existing_councils_remain_responsible_until_2027-04-01
+    official_url: https://www.gov.uk/government/collections/surrey-local-government-reorganisation
+  - id: organisation:west-surrey-shadow-authority
+    title: West Surrey Shadow Authority
+    jurisdiction: england
+    organisation_type: shadow_authority
+    source_native_id: legislation:uksi/2026/surrey-structural-changes
+    effective_from: "2026-05-11"
+    effective_to: "2027-03-31"
+    service_delivery_status: preparatory_only_existing_councils_remain_responsible_until_2027-04-01
+    official_url: https://www.gov.uk/government/collections/surrey-local-government-reorganisation
+
+shared_actors:
+  - id: organisation:government-digital-service
+    title: Government Digital Service
+    jurisdictions: [uk-wide]
+    roles: [citizen_service_routing, digital_service_standard]
+    official_url: https://www.gov.uk/government/organisations/government-digital-service
+  - id: organisation:hm-courts-and-tribunals-service
+    title: HM Courts & Tribunals Service
+    jurisdictions: [england, wales]
+    roles: [court_and_tribunal_administration, specialist_appeal]
+    official_url: https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service
+  - id: organisation:scottish-courts-and-tribunals-service
+    title: Scottish Courts and Tribunals Service
+    jurisdictions: [scotland]
+    roles: [court_and_tribunal_administration, specialist_appeal]
+    official_url: https://www.scotcourts.gov.uk/
+  - id: organisation:northern-ireland-courts-and-tribunals-service
+    title: Northern Ireland Courts and Tribunals Service
+    jurisdictions: [northern-ireland]
+    roles: [court_and_tribunal_administration, specialist_appeal]
+    official_url: https://www.justice-ni.gov.uk/topics/courts-and-tribunals
+  - id: organisation:local-government-and-social-care-ombudsman
+    title: Local Government and Social Care Ombudsman
+    jurisdictions: [england]
+    roles: [public_service_ombudsman, regulator_or_ombudsman]
+    official_url: https://www.lgo.org.uk/
+  - id: organisation:scottish-public-services-ombudsman
+    title: Scottish Public Services Ombudsman
+    jurisdictions: [scotland]
+    roles: [public_service_ombudsman, regulator_or_ombudsman]
+    official_url: https://www.spso.org.uk/
+  - id: organisation:public-services-ombudsman-for-wales
+    title: Public Services Ombudsman for Wales
+    title_cy: Ombwdsmon Gwasanaethau Cyhoeddus Cymru
+    language_identity_basis: publisher_paired_language_variant
+    jurisdictions: [wales]
+    roles: [public_service_ombudsman, regulator_or_ombudsman]
+    official_url: https://www.ombudsman.wales/
+  - id: organisation:northern-ireland-public-services-ombudsman
+    title: Northern Ireland Public Services Ombudsman
+    jurisdictions: [northern-ireland]
+    roles: [public_service_ombudsman, regulator_or_ombudsman]
+    official_url: https://www.nipso.org.uk/
+  - id: organisation:parliamentary-and-health-service-ombudsman
+    title: Parliamentary and Health Service Ombudsman
+    jurisdictions: [england, uk-wide]
+    roles: [health_ombudsman, parliamentary_ombudsman, regulator_or_ombudsman]
+    official_url: https://www.ombudsman.org.uk/
+  - id: organisation:financial-conduct-authority
+    title: Financial Conduct Authority
+    jurisdictions: [uk-wide]
+    roles: [financial_services_regulator, mandatory_register]
+    official_url: https://register.fca.org.uk/
+  - id: organisation:financial-ombudsman-service
+    title: Financial Ombudsman Service
+    jurisdictions: [uk-wide]
+    roles: [financial_services_redress, regulator_or_ombudsman]
+    official_url: https://www.financial-ombudsman.org.uk/
+  - id: organisation:regulator-of-social-housing
+    title: Regulator of Social Housing
+    jurisdictions: [england]
+    roles: [social_housing_regulator]
+    official_url: https://www.gov.uk/government/organisations/regulator-of-social-housing
+  - id: organisation:housing-ombudsman-service
+    title: Housing Ombudsman Service
+    jurisdictions: [england]
+    roles: [social_housing_redress, regulator_or_ombudsman]
+    official_url: https://www.housing-ombudsman.org.uk/
+  - id: organisation:ofgem
+    title: Office of Gas and Electricity Markets
+    jurisdictions: [great-britain]
+    roles: [energy_regulator]
+    official_url: https://www.ofgem.gov.uk/
+  - id: organisation:energy-ombudsman
+    title: Energy Ombudsman
+    jurisdictions: [great-britain]
+    roles: [energy_redress, regulator_or_ombudsman]
+    official_url: https://www.energyombudsman.org/
+  - id: organisation:ofcom
+    title: Office of Communications
+    jurisdictions: [uk-wide]
+    roles: [communications_and_post_regulator]
+    official_url: https://www.ofcom.org.uk/
+  - id: organisation:civil-aviation-authority
+    title: Civil Aviation Authority
+    jurisdictions: [uk-wide]
+    roles: [aviation_regulator, travel_redress_directory]
+    official_url: https://www.caa.co.uk/
+  - id: organisation:office-of-rail-and-road
+    title: Office of Rail and Road
+    jurisdictions: [great-britain]
+    roles: [rail_and_road_regulator]
+    official_url: https://www.orr.gov.uk/
+  - id: organisation:transport-focus
+    title: Transport Focus
+    jurisdictions: [great-britain]
+    roles: [transport_user_watchdog, transport_complaint_handoff]
+    official_url: https://www.transportfocus.org.uk/
+  - id: organisation:care-quality-commission
+    title: Care Quality Commission
+    jurisdictions: [england]
+    roles: [health_and_social_care_regulator]
+    official_url: https://www.cqc.org.uk/
+  - id: organisation:healthcare-improvement-scotland
+    title: Healthcare Improvement Scotland
+    jurisdictions: [scotland]
+    roles: [healthcare_quality_body]
+    official_url: https://www.healthcareimprovementscotland.scot/
+  - id: organisation:healthcare-inspectorate-wales
+    title: Healthcare Inspectorate Wales
+    title_cy: Arolygiaeth Gofal Iechyd Cymru
+    language_identity_basis: publisher_paired_language_variant
+    jurisdictions: [wales]
+    roles: [healthcare_regulator]
+    official_url: https://www.hiw.org.uk/
+  - id: organisation:regulation-and-quality-improvement-authority
+    title: Regulation and Quality Improvement Authority
+    jurisdictions: [northern-ireland]
+    roles: [health_and_social_care_regulator]
+    official_url: https://www.rqia.org.uk/
+  - id: organisation:ofsted
+    title: Office for Standards in Education, Children's Services and Skills
+    jurisdictions: [england]
+    roles: [education_and_childcare_regulator]
+    official_url: https://www.gov.uk/government/organisations/ofsted
+  - id: organisation:estyn
+    title: Estyn
+    jurisdictions: [wales]
+    roles: [education_inspectorate]
+    official_url: https://www.estyn.gov.wales/
+  - id: organisation:education-scotland
+    title: Education Scotland
+    jurisdictions: [scotland]
+    roles: [education_inspectorate_and_improvement]
+    official_url: https://education.gov.scot/
+  - id: organisation:education-and-training-inspectorate
+    title: Education and Training Inspectorate
+    jurisdictions: [northern-ireland]
+    roles: [education_inspectorate]
+    official_url: https://www.etini.gov.uk/
+  - id: organisation:office-of-the-independent-adjudicator
+    title: Office of the Independent Adjudicator for Higher Education
+    jurisdictions: [england, wales]
+    roles: [higher_education_redress, regulator_or_ombudsman]
+    official_url: https://www.oiahe.org.uk/
+  - id: organisation:solicitors-regulation-authority
+    title: Solicitors Regulation Authority
+    jurisdictions: [england, wales]
+    roles: [legal_services_regulator, mandatory_register]
+    official_url: https://www.sra.org.uk/consumers/register/
+  - id: organisation:legal-ombudsman
+    title: Legal Ombudsman
+    jurisdictions: [england, wales]
+    roles: [legal_services_redress, regulator_or_ombudsman]
+    official_url: https://www.legalombudsman.org.uk/
+  - id: organisation:acas
+    title: Advisory, Conciliation and Arbitration Service
+    jurisdictions: [great-britain]
+    roles: [employment_conciliation, employment_redress_handoff]
+    official_url: https://www.acas.org.uk/
+  - id: organisation:health-and-safety-executive
+    title: Health and Safety Executive
+    jurisdictions: [great-britain]
+    roles: [workplace_safety_regulator]
+    official_url: https://www.hse.gov.uk/
+  - id: organisation:competition-and-markets-authority
+    title: Competition and Markets Authority
+    jurisdictions: [uk-wide]
+    roles: [competition_and_consumer_regulator]
+    official_url: https://www.gov.uk/government/organisations/competition-and-markets-authority
+  - id: organisation:information-commissioners-office
+    title: Information Commissioner's Office
+    jurisdictions: [uk-wide]
+    roles: [data_protection_and_information_rights_regulator, regulator_or_ombudsman]
+    official_url: https://ico.org.uk/
+  - id: organisation:electoral-commission
+    title: Electoral Commission
+    jurisdictions: [uk-wide]
+    roles: [elections_and_political_finance_regulator]
+    official_url: https://www.electoralcommission.org.uk/
+
+sector_maps:
+  financial_services_and_insurance:
+    regulator_or_register: [organisation:financial-conduct-authority]
+    redress: [organisation:financial-ombudsman-service]
+  housing_and_property:
+    regulator_or_register: [organisation:regulator-of-social-housing]
+    redress: [organisation:housing-ombudsman-service, organisation:local-government-and-social-care-ombudsman]
+  energy_and_utilities:
+    regulator_or_register: [organisation:ofgem]
+    redress: [organisation:energy-ombudsman]
+  communications_and_post:
+    regulator_or_register: [organisation:ofcom]
+    redress: [organisation:ofcom]
+  transport_and_travel:
+    regulator_or_register: [organisation:civil-aviation-authority, organisation:office-of-rail-and-road]
+    redress: [organisation:transport-focus]
+  health_and_social_care:
+    regulator_or_register: [organisation:care-quality-commission, organisation:healthcare-improvement-scotland, organisation:healthcare-inspectorate-wales, organisation:regulation-and-quality-improvement-authority]
+    redress: [organisation:parliamentary-and-health-service-ombudsman, organisation:scottish-public-services-ombudsman, organisation:public-services-ombudsman-for-wales, organisation:northern-ireland-public-services-ombudsman]
+  education_and_training:
+    regulator_or_register: [organisation:ofsted, organisation:estyn, organisation:education-scotland, organisation:education-and-training-inspectorate]
+    redress: [organisation:office-of-the-independent-adjudicator]
+  legal_and_professional_services:
+    regulator_or_register: [organisation:solicitors-regulation-authority]
+    redress: [organisation:legal-ombudsman]
+  employment:
+    regulator_or_register: [organisation:health-and-safety-executive]
+    redress: [organisation:acas]
+  consumer_goods_and_services:
+    regulator_or_register: [organisation:competition-and-markets-authority]
+    redress: [organisation:local-government-and-social-care-ombudsman]
+
+source_policy:
+  rights_decision: link_only_no_source_expression_acquired
+  response_body_retained: false
+  recheck_before_use: true
+  specialist_route_rule: The family dossier must cite the actual route and may not infer a procedure from this sector map.

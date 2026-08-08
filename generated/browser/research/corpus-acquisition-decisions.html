@@ -49,6 +49,7 @@ Machine-readable decisions:
 - <a href="../source/service-family-denominator.v1.yaml.html">[293-family denominator](../source/service-family-denominator.v1.yaml)</a>
 - <a href="../profiles/corpus-acquisition-policy.v1.yaml.html">[corpus acquisition policy](../profiles/corpus-acquisition-policy.v1.yaml)</a>
 - <a href="../source/exhaustive-reference-inventory.v1.yaml.html">[external reference inventory](../source/exhaustive-reference-inventory.v1.yaml)</a>
+- <a href="../source/authority-registry.v1.yaml.html">[current authority and geography registry](../source/authority-registry.v1.yaml)</a>
 
 ## 1. Service-family denominator
 
@@ -80,6 +81,15 @@ The project will not copy the same family across every council and call that
 meaningful coverage. A claim about a named place still requires the responsible
 provider&#x27;s current page.
 
+This layer was implemented and re-observed on 2026-08-08. It records 382
+principal-authority areas and normalized actors, 19 strategic/combined
+authorities, 397 dated GSS geographies and 438 organizations. The 382 total is
+the May 2026 local-authority-district denominator plus the 21 separately
+retained December 2024 English county areas needed for two-tier topology.
+Strategic authorities comprise 15 May 2025 GSS combined-authority areas and
+four later official source-native identities. Surrey shadow bodies remain
+explicitly preparatory until the 2027 service transfer.
+
 The primary administrative-geography identifier is the dated nine-character
 GSS code published through the ONS names, codes, lookups and history products.
 Every geography record retains its type, official name, vintage or effective
@@ -87,6 +97,12 @@ date, source and observation date. ODS codes identify health and social-care
 organisations where the declared ODS coverage applies; source-native IDs are
 retained elsewhere. Postcodes may be used transiently to discover an authority
 but are never stored and never become stable service identity.
+
+ONS-published Welsh labels are variants of the same geography only because
+they occur in the same official GSS record. For other sources, explicit
+publisher pairing is required; label and URL similarity are prohibited. The
+current ESD Services list is an optional mapping vocabulary and never proves
+current service availability.
 
 ## 3. Health permissions
 
@@ -120,7 +136,20 @@ The redress taxonomy is:
 This is not a universal procedure. Each family must cite its actual sequence,
 prerequisites, jurisdiction and deadlines.
 
-## 5. Review nominations
+The shared registry now implements reusable regulator/register and redress
+identities across the ten approved sectors. This closes the common identity
+infrastructure; it does not complete any family&#x27;s dependency, admissibility or
+deadline claims.
+
+## 5. Source-link verification
+
+Live link verification is a reviewed metadata-only acquisition check, separate
+from deterministic offline builds. The 2026-08-08 authority-source audit
+recorded seven active external sources with HTTP metadata and no response body.
+Primary-link failure blocks the affected family; secondary-link failure becomes
+an explicit gap. No source snapshot or response content is retained.
+
+## 6. Review nominations
 
 `owner:chris-page-gov` is nominated as editorial and release-gate coordinator.
 Three specialist roles are approved:
@@ -135,7 +164,7 @@ unconsenting person. Their individual appointments remain visible blockers for
 production-grade legal and medical claims. Educational examples may proceed
 only with normalized or `editorial-example` status and explicit limitations.
 
-## 6. Explorer large-corpus projection
+## 7. Explorer large-corpus projection
 
 `okf-explorer-large-corpus.v1` is approved for local evaluation. On 2026-08-07,
 `REV-001` through `REV-004` were closed by local browser evidence for

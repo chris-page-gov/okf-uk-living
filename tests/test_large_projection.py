@@ -13,6 +13,15 @@ from build_large_corpus import build_outputs  # noqa: E402
 from check_large_projection import validate_large_projection  # noqa: E402
 
 
+def projected_rows(outputs: dict[Path, str]) -> list[dict[str, object]]:
+    manifest = json.loads(outputs[Path("large/data/manifest.json")])
+    return [
+        row
+        for path in manifest["chunks"]["datasets"]
+        for row in json.loads(outputs[Path(path)])
+    ]
+
+
 class LargeProjectionTests(unittest.TestCase):
     def test_projection_is_valid(self) -> None:
         self.assertEqual([], validate_large_projection())
@@ -21,7 +30,7 @@ class LargeProjectionTests(unittest.TestCase):
         self.assertEqual(build_outputs(), build_outputs())
 
     def test_projection_distinguishes_families_from_supporting_concepts(self) -> None:
-        rows = json.loads(build_outputs()[Path("large/data/records-0.json")])
+        rows = projected_rows(build_outputs())
         families = [row for row in rows if row["record_type"] == "Service Family"]
         self.assertEqual(293, len(families))
         self.assertGreater(len(rows), len(families))
@@ -30,7 +39,7 @@ class LargeProjectionTests(unittest.TestCase):
 
     def test_three_slices_project_narratives_sources_and_provenance(self) -> None:
         outputs = build_outputs()
-        rows = json.loads(outputs[Path("large/data/records-0.json")])
+        rows = projected_rows(outputs)
         resources = json.loads(outputs[Path("large/data/resources-0.json")])
         relationships = json.loads(outputs[Path("large/data/relationships-0.json")])
         migrated = [
@@ -46,9 +55,25 @@ class LargeProjectionTests(unittest.TestCase):
         for relationship in relationships:
             self.assertTrue({"assertion_status", "authority", "derivation", "evidence", "rights"} <= set(relationship))
 
+    def test_shared_authority_infrastructure_is_searchable_and_reused(self) -> None:
+        outputs = build_outputs()
+        rows = projected_rows(outputs)
+        relationships = json.loads(outputs[Path("large/data/relationships-0.json")])
+        geographies = [row for row in rows if row["record_type"] == "Administrative Geography"]
+        organisations = [row for row in rows if row["record_type"] == "Organisation"]
+        self.assertEqual(397, len(geographies))
+        self.assertEqual(438, len(organisations))
+        hmcts = next(row for row in organisations if row["title"] == "HM Courts & Tribunals Service")
+        self.assertTrue(any(edge["target"] == hmcts["route"] and edge["predicate"] == "offered-by" for edge in relationships))
+        postings = json.loads(outputs[Path("large/data/search/postings.json")])["tokens"]
+        ordinal = rows.index(next(row for row in organisations if row["title"] == "Financial Conduct Authority"))
+        self.assertIn(ordinal, {item[0] for item in postings["financial"]})
+        anglesey = rows.index(next(row for row in geographies if row["title"] == "Isle of Anglesey"))
+        self.assertIn(anglesey, {item[0] for item in postings["mon"]})
+
     def test_static_search_indexes_all_planning_families(self) -> None:
         outputs = build_outputs()
-        rows = json.loads(outputs[Path("large/data/records-0.json")])
+        rows = projected_rows(outputs)
         search = json.loads(outputs[Path("large/data/search/manifest.json")])
         postings = json.loads(outputs[Path("large/data/search/postings.json")])["tokens"]
         ordinal = next(index for index, row in enumerate(rows) if row["name"] == "report-missed-rubbish-collection")

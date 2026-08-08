@@ -35,6 +35,8 @@ class CorpusAcquisitionPolicyTests(unittest.TestCase):
         self.assertEqual("GSS_nine_character_code", identifiers["administrative_geography"]["primary_identifier"])
         self.assertEqual("ODS_code", identifiers["health_organisations"]["primary_identifier_where_covered"])
         self.assertFalse(identifiers["postcode"]["storage_allowed"])
+        self.assertFalse(identifiers["local_service_identifiers"]["establishes_current_service_availability"])
+        self.assertIn("label_similarity", identifiers["language_variant_identity"]["prohibited_evidence"])
 
     def test_health_sources_remain_manual(self) -> None:
         decision = self.policy["health_source_permissions"]
@@ -44,6 +46,12 @@ class CorpusAcquisitionPolicyTests(unittest.TestCase):
     def test_regulator_and_redress_rules_are_governed(self) -> None:
         self.assertEqual("regulator_first", self.policy["private_dependencies"]["decision"])
         self.assertEqual("governed_escalation_taxonomy", self.policy["sector_redress"]["decision"])
+        self.assertEqual("source/authority-registry.v1.yaml", self.policy["sector_redress"]["registry"])
+
+    def test_metadata_link_audits_remain_separate_and_body_free(self) -> None:
+        links = self.policy["link_verification"]
+        self.assertFalse(links["response_body_retained"])
+        self.assertFalse(links["offline_build_network_access"])
 
     def test_large_projection_is_approved_for_local_evaluation(self) -> None:
         explorer = self.policy["explorer_large_corpus"]
