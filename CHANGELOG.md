@@ -6,6 +6,16 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Pack 2 population for all 36 approved identities across school years,
+  transition to adulthood and further education/university/research, adding 35
+  compact dossiers and narratives while preserving the deeper learning-to-drive
+  vertical slice.
+- Three further domain registers, domain narratives, 44 current official
+  link-only sources with body-free receipts and 13 natural-language competency
+  questions across the three domains and all four nations.
+- Explicit `preserve_existing` validation and rendering behaviour so later
+  corpus packs cannot overwrite a reviewed vertical-slice dossier or narrative.
+
 - Pack 1 population for all 36 approved families across before birth, the
   newborn period and early years, with original summaries, aliases,
   four-nation route variants, ordinary and exception journeys, actors,
@@ -125,6 +135,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Advanced `PACK-002` to complete and `PACK-003` to active after the 77-family,
+  3,496-concept, 300-resource and 4,850-relationship projection passed locked
+  local validation.
 
 - Advanced `PACK-001` to complete and `PACK-002` to active after the 42-family,
   2,485-concept, 160-resource and 2,894-relationship projection passed all

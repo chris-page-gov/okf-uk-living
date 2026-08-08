@@ -144,9 +144,26 @@ def validate_domain_registers() -> list[str]:
             if not isinstance(family, dict):
                 errors.append(f"{item_prefix} must be a mapping")
                 continue
-            for field in ("id", "title", "aliases", "description", "situations", "user_needs", "primary_jurisdictions", "specialist_review", "source"):
+            preserved = family.get("preserve_existing") is True
+            required_fields = (
+                "id", "title", "aliases", "description", "situations", "user_needs",
+                "primary_jurisdictions", "specialist_review",
+            )
+            if not preserved:
+                required_fields = (*required_fields, "source")
+            for field in required_fields:
                 if not _nonempty(family.get(field)):
                     errors.append(f"{item_prefix}: {field} must be non-empty")
+            if preserved:
+                dossier_path = (
+                    ROOT / "source" / "life-course-families" / domain /
+                    f"{family.get('id')}.v1.yaml"
+                )
+                narrative_path = ROOT / "services" / f"{family.get('id')}.md"
+                if not dossier_path.is_file() or not narrative_path.is_file():
+                    errors.append(
+                        f"{item_prefix}: preserve_existing requires an authored dossier and narrative"
+                    )
             jurisdictions = set(family.get("primary_jurisdictions", []))
             if not jurisdictions or not jurisdictions <= NATIONS:
                 errors.append(f"{item_prefix}: primary_jurisdictions must use the four governed nations")

@@ -237,7 +237,10 @@ def narrative(
     route_sources = source_ids_for_family(register, family)
     source_by_id = {
         str(source["id"]): source
-        for source in [*register.get("route_sources", []), *(item["source"] for item in register["families"])]
+        for source in [
+            *register.get("route_sources", []),
+            *(item["source"] for item in register["families"] if isinstance(item.get("source"), dict)),
+        ]
     }
     source_lines = "\n".join(
         f"- [{nation}: {source_by_id[source_id]['title']}]({source_by_id[source_id]['resource']})"
@@ -346,6 +349,8 @@ def expected_outputs() -> dict[Path, str]:
             family_id = str(family["id"])
             process = process_by_family[family_id]
             domain_processes[str(process["id"])] = process
+            if family.get("preserve_existing") is True:
+                continue
             outputs[DOSSIER_ROOT / str(register["domain"]) / f"{family_id}.v1.yaml"] = yaml_text(
                 dossier(register_path=register_path, register=register, family=family, process=process)
             )
@@ -363,6 +368,8 @@ def managed_paths() -> set[Path]:
     for _, register in registers():
         for family in register["families"]:
             family_id = str(family["id"])
+            if family.get("preserve_existing") is True:
+                continue
             result.add(DOSSIER_ROOT / str(register["domain"]) / f"{family_id}.v1.yaml")
             result.add(NARRATIVE_ROOT / f"{family_id}.md")
         result.add(DOMAIN_NARRATIVE_ROOT / f"{register['domain']}.md")

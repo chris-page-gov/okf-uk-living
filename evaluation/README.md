@@ -28,5 +28,10 @@ adds 13 questions and proves alias search, per-record Narrative, family-centred
 Graph and active official-source handoffs across the first three domains. Pack
 completion remains local and does not make the corpus release-grade or public.
 
+The [Pack 2 learning-and-transition review](reviews/pack-2-learning-transition-2026-08-08.md)
+adds 13 questions across school, transition and post-school study/research. It
+accounts for all 36 Pack 2 families while preserving the deeper learning-to-drive
+vertical slice and adds 44 current body-free link receipts.
+
 Contract validation is not domain validation, and a local Explorer result is
 not publication authorization.

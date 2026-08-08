@@ -125,6 +125,13 @@ renderer. `--check` rejects drift. A national discovery handoff may locate the
 current route, but it must be labelled as a handoff and may not support a leaf
 eligibility rule, cost, deadline or outcome.
 
+If a contracted pack contains one of the six previously authored vertical
+slices, include that identity in the domain register with
+`preserve_existing: true`. The validator requires its existing dossier and
+narrative, the renderer skips those two files, and cumulative reconciliation
+still counts the family exactly once. Do not replace a deeper reviewed slice
+with the compact population template.
+
 Each three-domain pack contributes at least 13 natural-language competency
 questions under `evaluation/competency-questions/`. The search acceptance check
 requires every canonical title and alias in the first five, each expected

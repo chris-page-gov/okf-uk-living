@@ -1,0 +1,221 @@
+schema: life-course-family.v1
+id: arrange-school-transport
+title: Arrange school transport
+aliases:
+- free school transport
+- travel assistance to school
+description: Find the council or education authority route for school travel assistance and any review
+  process.
+status: population_complete
+assertion_status: normalized
+life_course_domain: school-years
+enclosing_processes:
+- id: enter-and-attend-school
+  assertion_status: normalized
+  sources: &id001
+  - arrange-school-transport-primary
+  - school-years-scotland-handoff
+  - school-years-wales-handoff
+  - school-years-northern-ireland-handoff
+situations:
+- A child may need help travelling safely to and from school.
+user_needs:
+- Locate the responsible authority
+- current criteria
+- application and review route.
+interaction_boundary: Source-linked discovery and process navigation only; the bundle does not decide
+  eligibility, diagnosis, treatment, safeguarding action or legal outcome.
+applicability:
+- jurisdiction: England
+  state: supported
+  route_variants:
+  - id: england-current-official-route
+    provider: organisation:england-official-route-provider
+    primary_source: arrange-school-transport-primary
+    route_kind: topic-specific-authoritative-page
+  sources:
+  - arrange-school-transport-primary
+- jurisdiction: Scotland
+  state: supported
+  route_variants:
+  - id: scotland-current-official-route
+    provider: organisation:scotland-official-route-provider
+    primary_source: school-years-scotland-handoff
+    route_kind: authoritative-national-discovery-handoff
+  sources:
+  - school-years-scotland-handoff
+- jurisdiction: Wales
+  state: supported
+  route_variants:
+  - id: wales-current-official-route
+    provider: organisation:wales-official-route-provider
+    primary_source: school-years-wales-handoff
+    route_kind: authoritative-national-discovery-handoff
+  sources:
+  - school-years-wales-handoff
+- jurisdiction: Northern Ireland
+  state: supported
+  route_variants:
+  - id: northern-ireland-current-official-route
+    provider: organisation:northern-ireland-official-route-provider
+    primary_source: school-years-northern-ireland-handoff
+    route_kind: authoritative-national-discovery-handoff
+  sources:
+  - school-years-northern-ireland-handoff
+actors:
+- id: organisation:england-official-route-provider
+  role: authoritative_service_or_discovery_handoff
+  authority_status: normalized
+  sources:
+  - arrange-school-transport-primary
+- id: organisation:scotland-official-route-provider
+  role: authoritative_service_or_discovery_handoff
+  authority_status: normalized
+  sources:
+  - school-years-scotland-handoff
+- id: organisation:wales-official-route-provider
+  role: authoritative_service_or_discovery_handoff
+  authority_status: normalized
+  sources:
+  - school-years-wales-handoff
+- id: organisation:northern-ireland-official-route-provider
+  role: authoritative_service_or_discovery_handoff
+  authority_status: normalized
+  sources:
+  - school-years-northern-ireland-handoff
+journeys:
+  ordinary:
+    id: ordinary-source-linked-route
+    entry_state: A child may need help travelling safely to and from school.
+    outcome: Find the council or education authority route for school travel assistance and any review
+      process.
+    steps:
+    - id: select-current-jurisdiction-route
+      interaction: Select the current official route for the place and situation.
+      provider: organisation:official-service-directory
+      requirements:
+        state: supported
+        summary: Location and the source-defined situation boundary.
+      evidence:
+        state: not_published_by_source
+        reason: Evidence is determined by the selected current route.
+      rule:
+        state: supported
+        summary: Jurisdiction and provider rules remain separate and source-defined.
+      channel:
+        state: supported
+        summary: Official web, telephone or local handoff shown by the selected source.
+      cost:
+        state: not_published_by_source
+        reason: No cross-route cost is asserted; check the current official source.
+      time:
+        state: not_published_by_source
+        reason: No cross-route deadline is asserted; check the current official source.
+      output:
+        state: supported
+        summary: A current authoritative route and provider handoff.
+      outcome:
+        state: supported
+        summary: The user can continue without assuming four-nation equivalence.
+      redress:
+        state: supported
+        summary: Use the complaint, review or urgent route published by the selected authority.
+      assertion_status: normalized
+      sources: *id001
+    - id: follow-current-official-instructions
+      interaction: Follow the selected source to arrange school transport and retain its output or reference.
+      provider: organisation:selected-authoritative-provider
+      requirements:
+        state: supported
+        summary: The source-linked route identifies the responsible service and publishes the current
+          requirements, evidence, channel, costs and timing for that jurisdiction.
+      evidence:
+        state: supported
+        summary: Only the evidence requested by the selected current source.
+      rule:
+        state: supported
+        summary: The responsible authority or provider decides the real case.
+      channel:
+        state: supported
+        summary: The channel published by the current source.
+      cost:
+        state: not_published_by_source
+        reason: Cost is deliberately not generalized across routes.
+      time:
+        state: not_published_by_source
+        reason: Timing is deliberately not generalized across routes.
+      output:
+        state: supported
+        summary: Source-defined confirmation, referral, decision or next-step information.
+      outcome:
+        state: supported
+        summary: Find the council or education authority route for school travel assistance and any review
+          process.
+      redress:
+        state: supported
+        summary: Escalate through the current provider's review, complaint or statutory redress route.
+      assertion_status: normalized
+      sources: *id001
+  exceptions:
+  - id: exception-or-route-failure
+    entry_state: The standard route is unavailable, does not fit, or indicates an urgent or specialist
+      boundary.
+    outcome: The accountable exception, urgent or redress route is identified without making the decision
+      locally.
+    steps:
+    - id: resolve-route-boundary-or-failure
+      interaction: Stop and use the current authority's exception, urgent, safeguarding or complaint handoff
+        when the ordinary route does not fit.
+      provider: organisation:responsible-authority-or-redress-body
+      requirements:
+        state: supported
+        summary: The source-defined exception or failure boundary.
+      evidence:
+        state: not_published_by_source
+        reason: The responsible authority states what evidence is needed for the exception.
+      rule:
+        state: supported
+        summary: No eligibility, clinical, safeguarding or legal decision is made by this bundle.
+      channel:
+        state: supported
+        summary: Current official exception, urgent or complaint route.
+      cost:
+        state: not_published_by_source
+        reason: Consult the current authority route.
+      time:
+        state: not_published_by_source
+        reason: Urgency and deadlines are case- and route-specific.
+      output:
+        state: supported
+        summary: An authority decision, alternate route or recorded unresolved state.
+      outcome:
+        state: supported
+        summary: The user is handed to the accountable route without a fabricated answer.
+      redress:
+        state: supported
+        summary: Current provider complaint, statutory review, regulator or ombudsman route as applicable.
+      assertion_status: normalized
+      sources: *id001
+dependencies: []
+sources:
+- id: arrange-school-transport-primary
+  register: source/domain-registers/school-years.v1.yaml
+- id: school-years-scotland-handoff
+  register: source/domain-registers/school-years.v1.yaml
+- id: school-years-wales-handoff
+  register: source/domain-registers/school-years.v1.yaml
+- id: school-years-northern-ireland-handoff
+  register: source/domain-registers/school-years.v1.yaml
+limitations:
+- Original summaries and links only; no upstream source response or snapshot is retained.
+- A national discovery handoff locates the current route but does not establish a leaf rule, eligibility
+  condition, cost or deadline.
+- Jurisdictions, providers and exceptions remain separate even where labels are similar.
+- Specialist review is required before legal, clinical, safeguarding or high-impact operational claims
+  are release-grade.
+review:
+  population_gate: complete
+  specialist_review: required
+narrative:
+  markdown: services/arrange-school-transport.md
+  process_context: Enter and attend school
