@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/relationships-and-family-change.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/relationships-and-family-change.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/relationships-and-family-change.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-6-family-health-care
+domain: relationships-and-family-change
+title: Relationships and family change
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-6-family-health-care-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: family-change-scotland-handoff
+    jurisdiction: Scotland
+    title: Births, deaths and family in Scotland
+    owner: Scottish Government
+    authority_role: scotland_family_change_handoff
+    resource: https://www.mygov.scot/browse/birth-death-family
+    coverage: Routes people to current Scottish marriage, civil partnership, family, care and representation information.
+    exclusions: Does not determine status, legal rights, eligibility, safeguarding action or an individual court route.
+  - &lt;&lt;: *source_defaults
+    id: family-change-wales-handoff
+    jurisdiction: Wales
+    title: Find your local Family Information Service in Wales
+    owner: Welsh Government
+    authority_role: wales_family_support_handoff
+    resource: https://www.gov.wales/find-your-local-family-information-service
+    coverage: Routes parents and prospective parents to the responsible Welsh local family-information service and related support handoffs.
+    exclusions: Does not establish that England and Wales registration, court or care routes are identical.
+  - &lt;&lt;: *source_defaults
+    id: family-change-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Find out your rights in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_family_change_handoff
+    resource: https://www.nidirect.gov.uk/articles/find-out-your-rights
+    coverage: Introduces Northern Ireland marriage, civil partnership, separation, parental-responsibility, family-safety and wider rights handoffs.
+    exclusions: Does not establish the applicable court, safeguarding, care or representation route.
+families:
+  - &lt;&lt;: *family_defaults
+    id: marry
+    title: Marry
+    aliases: [get married, wedding legal requirements, give notice of marriage]
+    description: Select the law and registration route for the place of marriage, give any required notice and complete the source-defined ceremony and registration steps.
+    situations:
+      - Two people intend to enter a legally recognised marriage.
+    user_needs:
+      - Find the correct registration authority, preliminaries and exception route without assuming one UK process.
+    source:
+      &lt;&lt;: *source_defaults
+      id: marry-primary
+      title: Marriages and civil partnerships in England and Wales
+      owner: General Register Office
+      authority_role: england_wales_marriage_guidance
+      resource: https://www.gov.uk/marriages-civil-partnerships
+      coverage: Introduces England and Wales notice, document, ceremony and registration routes.
+      exclusions: Does not establish Scotland or Northern Ireland procedure or decide capacity or immigration status.
+  - &lt;&lt;: *family_defaults
+    id: form-civil-partnership
+    title: Form a civil partnership
+    aliases: [register civil partnership, civil partnership notice, become civil partners]
+    description: Select the applicable registration route, give any required notice and complete the source-defined formation and registration steps.
+    situations:
+      - Two people intend to form a legally recognised civil partnership.
+    user_needs:
+      - Identify the correct territorial rules, registrar and document route.
+    source:
+      &lt;&lt;: *source_defaults
+      id: form-civil-partnership-primary
+      title: Marriages and civil partnerships in England and Wales
+      owner: General Register Office
+      authority_role: england_wales_civil_partnership_guidance
+      resource: https://www.gov.uk/marriages-civil-partnerships
+      coverage: Introduces England and Wales notice, eligibility, ceremony and registration routes.
+      exclusions: Does not establish Scotland or Northern Ireland procedure or decide an individual application.
+  - &lt;&lt;: *family_defaults
+    id: change-name
+    title: Change name
+    aliases: [change legal name, deed poll, update records after name change]
+    description: Choose an accepted evidence route for the intended name change and update each public or private record through its current process.
+    situations:
+      - A person wants organisations and official records to use a different name.
+    user_needs:
+      - Distinguish evidence of a name change from the separate work of updating each record.
+    source:
+      &lt;&lt;: *source_defaults
+      id: change-name-primary
+      title: Change your name by deed poll
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_deed_poll_guidance
+      resource: https://www.gov.uk/change-name-deed-poll
+      coverage: Explains England and Wales enrolled and unenrolled deed-poll routes and related evidence.
+      exclusions: Does not update records automatically or establish Scotland or Northern Ireland evidence rules.
+  - &lt;&lt;: *family_defaults
+    id: divorce-or-dissolve-partnership
+    title: Divorce or dissolve a partnership
+    aliases: [get divorced, end civil partnership, apply for divorce]
+    description: Use the applicable court route to end the legal relationship and handle children, money, property and immigration consequences through their separate processes.
+    situations:
+      - A spouse or civil partner wants to end the legal relationship.
+    user_needs:
+      - Find the correct court, application and linked family arrangements without receiving legal advice.
+    dependency: regulated-family-law-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: divorce-or-dissolve-partnership-primary
+      title: Get a divorce
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_divorce_service
+      resource: https://www.gov.uk/divorce
+      coverage: Routes England and Wales applicants through current divorce eligibility, application and order stages.
+      exclusions: Does not provide legal advice, decide financial or child arrangements or establish devolved procedure.
+  - &lt;&lt;: *family_defaults
+    id: resolve-parental-responsibility
+    title: Resolve parental responsibility
+    aliases: [get parental responsibility, parental rights agreement, apply for parental responsibility]
+    description: Identify whether responsibility already exists and use the applicable registration, agreement or court route if a formal change or decision is needed.
+    situations:
+      - A parent or carer needs to establish, record or resolve legal responsibility for a child.
+    user_needs:
+      - Separate status evidence from child-arrangements, safeguarding and adoption decisions.
+    dependency: regulated-family-law-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: resolve-parental-responsibility-primary
+      title: Parental rights and responsibilities
+      owner: Ministry of Justice
+      authority_role: england_wales_parental_responsibility_guidance
+      resource: https://www.gov.uk/parental-rights-responsibilities
+      coverage: Introduces England and Wales responsibility status, agreements and court application routes.
+      exclusions: Does not decide status, child arrangements, safeguarding action or Scotland or Northern Ireland law.
+  - &lt;&lt;: *family_defaults
+    id: arrange-child-maintenance
+    title: Arrange child maintenance
+    aliases: [child support payments, child maintenance service, calculate child maintenance]
+    description: Choose a private or statutory maintenance route, keep the calculation and payment record and use the current review or enforcement path if arrangements fail.
+    situations:
+      - Separated parents or carers need to arrange financial support for a child.
+    user_needs:
+      - Find the jurisdiction-specific calculation, application, payment and dispute route.
+    source:
+      &lt;&lt;: *source_defaults
+      id: arrange-child-maintenance-primary
+      title: Child Maintenance Service
+      owner: Department for Work and Pensions
+      authority_role: great_britain_child_maintenance_service
+      resource: https://www.gov.uk/child-maintenance-service
+      coverage: Routes Great Britain users to statutory maintenance information, calculation and application services.
+      exclusions: Does not calculate a personal amount locally or establish the Northern Ireland service route.
+  - &lt;&lt;: *family_defaults
+    id: adopt-child
+    title: Adopt a child
+    aliases: [apply to adopt a child, adoption agency assessment, become an adoptive parent]
+    description: Start with the responsible adoption agency, complete its assessment and approvals and use the applicable court route for the legal order.
+    situations:
+      - A person or household is considering adopting a child.
+    user_needs:
+      - Navigate agency assessment, matching, placement, court and post-adoption support boundaries.
+    dependency: registered-or-statutory-adoption-agency
+    source:
+      &lt;&lt;: *source_defaults
+      id: adopt-child-primary
+      title: Child adoption
+      owner: Department for Education
+      authority_role: england_wales_adoption_guidance
+      resource: https://www.gov.uk/child-adoption
+      coverage: Introduces England and Wales agency, assessment, matching and adoption-order stages.
+      exclusions: Does not assess suitability, match a child, make an order or establish devolved procedure.
+  - &lt;&lt;: *family_defaults
+    id: get-domestic-abuse-support
+    title: Get domestic abuse support
+    aliases: [domestic violence help, coercive control support, emergency refuge help]
+    description: Use emergency services for immediate danger and a current specialist route for safety, accommodation, legal protection and ongoing support.
+    situations:
+      - A person may be experiencing domestic abuse or supporting someone at risk.
+    user_needs:
+      - Reach urgent and specialist help without requiring the bundle to classify risk or disclose personal information.
+    dependency: commissioned-domestic-abuse-support-provider
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-domestic-abuse-support-primary
+      title: Domestic abuse how to get help
+      owner: Home Office
+      authority_role: uk_domestic_abuse_support_guidance
+      resource: https://www.gov.uk/guidance/domestic-abuse-how-to-get-help
+      coverage: Provides UK emergency, helpline and specialist support handoffs with nation-specific routes.
+      exclusions: Does not assess safety, create a safety plan, provide legal advice or replace emergency services.
+  - &lt;&lt;: *family_defaults
+    id: use-family-court
+    title: Use a family court
+    aliases: [family court application, child arrangements order, represent myself family court]
+    description: Identify the exact family application, complete any required safeguarding or mediation step and follow the applicable filing, hearing and order route.
+    situations:
+      - A family dispute or protection issue may require a court decision.
+    user_needs:
+      - Find the responsible court and procedure without the bundle selecting a remedy or predicting an order.
+    dependency: regulated-family-law-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: use-family-court-primary
+      title: Looking after children if you divorce or separate
+      owner: Ministry of Justice
+      authority_role: england_wales_family_court_handoff
+      resource: https://www.gov.uk/looking-after-children-divorce
+      coverage: Routes England and Wales users to child arrangements, mediation and family-court information.
+      exclusions: Does not provide legal advice, assess safeguarding risk or cover every family application.
+  - &lt;&lt;: *family_defaults
+    id: register-lasting-power-of-attorney
+    title: Register lasting power of attorney
+    aliases: [make an LPA, appoint attorney, register power of attorney]
+    description: Choose the applicable authority and instrument, complete the donor and attorney steps and register it before relying on the authority it grants.
+    situations:
+      - A person wants to appoint others to make specified decisions if needed.
+    user_needs:
+      - Distinguish the territorial instruments, capacity boundary, registration and objection routes.
+    dependency: regulated-legal-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: register-lasting-power-of-attorney-primary
+      title: Make, register or end a lasting power of attorney
+      owner: Office of the Public Guardian
+      authority_role: england_wales_lasting_power_of_attorney_service
+      resource: https://www.gov.uk/power-of-attorney
+      coverage: Explains England and Wales health, welfare, property and financial LPA creation and registration.
+      exclusions: Does not assess capacity, provide legal advice or establish Scottish or Northern Ireland instruments.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-deputyship
+    title: Apply for deputyship
+    aliases: [become court appointed deputy, court of protection deputy, manage affairs without LPA]
+    description: Use the applicable court or guardianship route when a person cannot make specified decisions and no adequate existing authority is available.
+    situations:
+      - Someone may lack capacity for decisions that require formal continuing authority.
+    user_needs:
+      - Find the correct application, evidence, supervision and objection route without a capacity decision by the bundle.
+    dependency: regulated-capacity-law-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-deputyship-primary
+      title: Become a deputy
+      owner: Office of the Public Guardian
+      authority_role: england_wales_deputyship_guidance
+      resource: https://www.gov.uk/become-deputy
+      coverage: Introduces England and Wales Court of Protection deputy applications and supervision.
+      exclusions: Does not assess capacity, decide whether deputyship is needed or establish devolved instruments.
+  - &lt;&lt;: *family_defaults
+    id: get-family-carer-support
+    title: Get family carer support
+    aliases: [help for unpaid family carer, carers support, carer benefits and respite]
+    description: Ask the responsible health or social-care body for a carer assessment and use the current support, benefits, respite and complaint routes that apply.
+    situations:
+      - A relative or friend provides unpaid care and needs practical, financial or wellbeing support.
+    user_needs:
+      - Connect assessment, commissioned support and benefits without assuming eligibility or local provision.
+    source:
+      &lt;&lt;: *source_defaults
+      id: get-family-carer-support-primary
+      title: Support and benefits for carers
+      owner: NHS England
+      authority_role: england_carer_support_guidance
+      resource: https://www.nhs.uk/social-care-and-support/support-and-benefits-for-carers/
+      coverage: Introduces England carer assessments, practical help, breaks, benefits and support handoffs.
+      exclusions: Does not determine eligibility, local provision, a benefit award or the devolved care route.
+</pre>
+</body>
+</html>

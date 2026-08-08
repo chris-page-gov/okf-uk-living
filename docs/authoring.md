@@ -138,6 +138,12 @@ requires every canonical title and alias in the first five, each expected
 competency result in the first ten, staged process titles to be searchable and
 an unmatched query to return no invented result.
 
+Health and care domain registers remain manually selected, metadata-audited
+and link-only. A health source can support a discovery handoff and original
+summary, but its response body is never retained and the generated dossier may
+not diagnose, triage, interpret results, decide capacity or safeguarding, or
+generalize one nation's clinical route to another.
+
 Source-link receipts retain response metadata only. They never store response
 bodies. An automated block may be resolved by an explicit real-browser receipt;
 a discovery page is not sufficient evidence for a leaf-service rule.

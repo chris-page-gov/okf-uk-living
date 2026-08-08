@@ -1,0 +1,275 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-6-family-health-care
+domain: health-throughout-life
+title: Health throughout life
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-6-family-health-care-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: health-scotland-handoff
+    jurisdiction: Scotland
+    title: NHS services in Scotland
+    owner: NHS 24
+    authority_role: scotland_health_service_handoff
+    resource: https://www.nhsinform.scot/care-support-and-rights/nhs-services/
+    coverage: Routes people to current NHS Scotland primary, community, urgent and specialist services.
+    exclusions: Does not diagnose, triage or establish the correct service for an individual situation.
+  - <<: *source_defaults
+    id: health-wales-handoff
+    jurisdiction: Wales
+    title: NHS 111 Wales
+    owner: Welsh Ambulance Services NHS University Trust
+    authority_role: wales_health_service_handoff
+    resource: https://111.wales.nhs.uk/
+    coverage: Routes people to current NHS Wales service, symptom and urgent-care information.
+    exclusions: Does not replace emergency services or establish that NHS England routes apply in Wales.
+  - <<: *source_defaults
+    id: health-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Health and Social Care Northern Ireland online
+    owner: Department of Health Northern Ireland
+    authority_role: northern_ireland_health_service_handoff
+    resource: https://online.hscni.net/
+    coverage: Routes people to current Northern Ireland health and social-care organisations and services.
+    exclusions: Does not diagnose, triage or establish the responsible trust for an individual situation.
+families:
+  - <<: *family_defaults
+    id: register-with-gp
+    title: Register with a GP
+    aliases: [join a doctor surgery, find local GP, change GP practice]
+    description: Find a practice using the current territorial route, submit its registration information and use the published refusal or access route if registration fails.
+    situations:
+      - A person needs an ongoing primary-care registration or wants to change practice.
+    user_needs:
+      - Find a current GP route while preserving homelessness, temporary-patient and refusal boundaries.
+    source:
+      <<: *source_defaults
+      id: register-with-gp-primary
+      title: Register with a GP surgery
+      owner: NHS England
+      authority_role: england_gp_registration_guidance
+      resource: https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/
+      coverage: Explains England GP registration, temporary-patient and refusal routes.
+      exclusions: Does not register a patient, recommend a practice or establish devolved routes.
+  - <<: *family_defaults
+    id: use-pharmacy-services
+    title: Use pharmacy services
+    aliases: [find a pharmacy, ask pharmacist, community pharmacy help]
+    description: Use the current NHS route to locate a pharmacy and confirm whether it can supply, advise, refer or provide the needed commissioned service.
+    situations:
+      - A person needs medicines, minor-illness advice or another community pharmacy service.
+    user_needs:
+      - Distinguish pharmacy discovery from prescribing, diagnosis, emergency and local commissioning decisions.
+    dependency: registered-pharmacy-and-pharmacist
+    source:
+      <<: *source_defaults
+      id: use-pharmacy-services-primary
+      title: Pharmacies
+      owner: NHS England
+      authority_role: england_pharmacy_service_guidance
+      resource: https://www.nhs.uk/nhs-services/pharmacies/
+      coverage: Introduces England pharmacy finding, medicines and commissioned service routes.
+      exclusions: Does not diagnose, prescribe in every case, guarantee stock or establish devolved provision.
+  - <<: *family_defaults
+    id: get-prescription
+    title: Get a prescription
+    aliases: [order repeat prescription, prescription charges, emergency medicine supply]
+    description: Use the responsible prescriber and dispensing route, follow current charge or exemption information and escalate urgent supply problems through the health service.
+    situations:
+      - A person needs a new, repeat or emergency medicine supply through a prescription route.
+    user_needs:
+      - Connect prescribing, ordering, dispensing, charges and urgent exceptions without clinical advice.
+    dependency: registered-prescriber-and-dispensing-pharmacy
+    source:
+      <<: *source_defaults
+      id: get-prescription-primary
+      title: Prescriptions
+      owner: NHS England
+      authority_role: england_prescription_guidance
+      resource: https://www.nhs.uk/nhs-services/prescriptions/
+      coverage: Routes England users to repeat, emergency, charge and exemption information.
+      exclusions: Does not prescribe, confirm clinical suitability, guarantee supply or establish devolved charging rules.
+  - <<: *family_defaults
+    id: access-dental-care
+    title: Access dental care
+    aliases: [find NHS dentist, emergency dental appointment, NHS dental treatment]
+    description: Find a dental provider using the current NHS route, confirm the appointment basis and use the urgent or commissioning handoff when routine access is unavailable.
+    situations:
+      - A person needs routine, urgent or specialist dental assessment or treatment.
+    user_needs:
+      - Find the correct NHS or private boundary, current charges and urgent route without diagnosis.
+    dependency: registered-dental-provider
+    source:
+      <<: *source_defaults
+      id: access-dental-care-primary
+      title: How to find an NHS dentist
+      owner: NHS England
+      authority_role: england_dental_access_guidance
+      resource: https://www.nhs.uk/nhs-services/dentists/how-to-find-an-nhs-dentist/
+      coverage: Explains England NHS dental access, waiting, additional-needs and urgent handoffs.
+      exclusions: Does not guarantee an appointment, diagnose, quote a personal charge or establish devolved services.
+  - <<: *family_defaults
+    id: access-eye-care
+    title: Access eye care
+    aliases: [find optician, NHS sight test, urgent eye problem]
+    description: Use the territorial eye-care route for routine testing, eligibility information, treatment referral or urgent assessment as the situation requires.
+    situations:
+      - A person needs a sight test, optical service or assessment of an eye problem.
+    user_needs:
+      - Distinguish routine optical care, NHS help with costs and urgent clinical routes.
+    dependency: registered-optometrist-or-ophthalmic-provider
+    source:
+      <<: *source_defaults
+      id: access-eye-care-primary
+      title: Opticians and sight tests
+      owner: NHS England
+      authority_role: england_eye_care_guidance
+      resource: https://www.nhs.uk/nhs-services/opticians/
+      coverage: Routes England users to sight tests, optical services and NHS help-with-costs information.
+      exclusions: Does not diagnose an eye condition, decide eligibility, quote a charge or establish devolved routes.
+  - <<: *family_defaults
+    id: get-vaccination
+    title: Get a vaccination
+    aliases: [book vaccine, immunisation schedule, vaccination eligibility]
+    description: Check the current nation, age, risk and programme route and contact the named NHS provider for clinical assessment and vaccination.
+    situations:
+      - A person wants to understand or access a routine, seasonal, occupational or travel vaccination route.
+    user_needs:
+      - Find the current programme while leaving eligibility and clinical suitability to the health service.
+    source:
+      <<: *source_defaults
+      id: get-vaccination-primary
+      title: NHS vaccinations and when to have them
+      owner: NHS England
+      authority_role: england_vaccination_programme_guidance
+      resource: https://www.nhs.uk/vaccinations/
+      coverage: Introduces current England NHS vaccination programmes and service handoffs.
+      exclusions: Does not decide eligibility, consent, contraindications or devolved programme coverage.
+  - <<: *family_defaults
+    id: use-screening-service
+    title: Use a screening service
+    aliases: [NHS screening programme, screening invitation, screening results]
+    description: Use the relevant population screening programme, invitation or provider route and follow its information, test, result and referral steps.
+    situations:
+      - A person receives an invitation or wants information about a governed screening programme.
+    user_needs:
+      - Distinguish programme screening from diagnosis and route questions to the responsible service.
+    source:
+      <<: *source_defaults
+      id: use-screening-service-primary
+      title: NHS screening
+      owner: NHS England
+      authority_role: england_screening_programme_guidance
+      resource: https://www.nhs.uk/conditions/nhs-screening/
+      coverage: Introduces England population screening programmes and their information routes.
+      exclusions: Does not diagnose, decide suitability, interpret results or establish devolved programmes.
+  - <<: *family_defaults
+    id: get-sexual-and-reproductive-healthcare
+    title: Get sexual and reproductive healthcare
+    aliases: [find sexual health clinic, contraception service, STI testing]
+    description: Use a confidential local NHS route for contraception, testing, treatment or reproductive healthcare and use urgent or safeguarding services where indicated.
+    situations:
+      - A person needs sexual or reproductive health information, testing, contraception, treatment or referral.
+    user_needs:
+      - Find a confidential service while keeping clinical, consent, urgent and safeguarding decisions with professionals.
+    dependency: commissioned-sexual-and-reproductive-health-provider
+    source:
+      <<: *source_defaults
+      id: get-sexual-and-reproductive-healthcare-primary
+      title: Sexual health services
+      owner: NHS England
+      authority_role: england_sexual_health_service_guidance
+      resource: https://www.nhs.uk/nhs-services/sexual-health-services/
+      coverage: Routes England users to confidential sexual health testing, treatment and clinic information.
+      exclusions: Does not diagnose, assess consent or safeguarding risk, or establish devolved provision.
+  - <<: *family_defaults
+    id: access-mental-healthcare
+    title: Access mental healthcare
+    aliases: [mental health support, crisis mental health help, talking therapies]
+    description: Select the routine, self-referral, urgent or emergency mental-health route for the nation and contact the current responsible service.
+    situations:
+      - A person needs information, assessment, treatment or urgent support for mental health.
+    user_needs:
+      - Recognise urgent boundaries and find the commissioned service without diagnosis or triage by the bundle.
+    dependency: commissioned-mental-health-provider
+    source:
+      <<: *source_defaults
+      id: access-mental-healthcare-primary
+      title: NHS mental health services
+      owner: NHS England
+      authority_role: england_mental_health_service_guidance
+      resource: https://www.nhs.uk/nhs-services/mental-health-services/
+      coverage: Routes England users to urgent help, talking therapies and specialist mental-health services.
+      exclusions: Does not diagnose, assess risk, provide crisis support or establish devolved services.
+  - <<: *family_defaults
+    id: receive-hospital-referral-and-treatment
+    title: Receive hospital referral and treatment
+    aliases: [specialist hospital referral, choose hospital, waiting for NHS treatment]
+    description: Follow the responsible referrer's and hospital's pathway for referral, choice, appointment, consent, treatment and follow-up.
+    situations:
+      - A clinician or service is considering or has made a referral for specialist hospital care.
+    user_needs:
+      - Understand referral and provider handoffs without clinical advice, waiting-time promises or treatment decisions.
+    dependency: commissioned-hospital-provider
+    source:
+      <<: *source_defaults
+      id: receive-hospital-referral-and-treatment-primary
+      title: Referrals for specialist care
+      owner: NHS England
+      authority_role: england_hospital_referral_guidance
+      resource: https://www.nhs.uk/nhs-services/hospitals/referrals-for-specialist-care/
+      coverage: Explains England referral, provider-choice and appointment handoffs for specialist care.
+      exclusions: Does not make a referral, recommend treatment, calculate waiting time or establish devolved routes.
+  - <<: *family_defaults
+    id: use-urgent-and-emergency-health-services
+    title: Use urgent and emergency health services
+    aliases: [NHS 111, accident and emergency, urgent treatment centre]
+    description: Use emergency services for life-threatening danger and the current territorial urgent-care route for needs that cannot wait but are not emergencies.
+    situations:
+      - A person believes a health need is urgent or an emergency.
+    user_needs:
+      - Find immediate authoritative triage and emergency routes without relying on the bundle for risk assessment.
+    source:
+      <<: *source_defaults
+      id: use-urgent-and-emergency-health-services-primary
+      title: Urgent and emergency care services
+      owner: NHS England
+      authority_role: england_urgent_emergency_care_guidance
+      resource: https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/
+      coverage: Routes England users to 999, NHS 111, urgent treatment and accident-and-emergency services.
+      exclusions: Does not triage, assess danger, dispatch help or establish devolved urgent routes.
+  - <<: *family_defaults
+    id: complain-about-nhs-care
+    title: Complain about NHS care
+    aliases: [NHS complaint, complain about GP or hospital, health service ombudsman]
+    description: Start with the responsible provider or commissioner, keep the complaint record and use the applicable independent review or ombudsman route if unresolved.
+    situations:
+      - A person is dissatisfied with NHS service, care, access or complaint handling.
+    user_needs:
+      - Identify the accountable body, territorial procedure and escalation route without judging clinical care.
+    source:
+      <<: *source_defaults
+      id: complain-about-nhs-care-primary
+      title: How to complain to the NHS
+      owner: NHS England
+      authority_role: england_nhs_complaint_guidance
+      resource: https://www.nhs.uk/using-the-nhs/about-the-nhs/how-to-complain-to-the-nhs/
+      coverage: Introduces England provider, commissioner, advocacy and ombudsman complaint routes.
+      exclusions: Does not investigate, assess clinical quality, decide remedy or establish devolved procedures.
