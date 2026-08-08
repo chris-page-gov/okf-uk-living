@@ -270,11 +270,32 @@ uv run --locked python scripts/build_large_corpus.py
 uv run --locked python scripts/build_large_corpus.py --check
 uv run --locked python scripts/check_large_projection.py
 uv run --locked python scripts/check_search_acceptance.py
+uv run --locked python scripts/build_population_assurance.py
+uv run --locked python scripts/build_population_assurance.py --check
+uv run --locked python scripts/check_population_assurance.py
 uv run --locked python -m unittest discover -s tests
 ```
 
-`generated/browser/`, `okf-bundle.json`, `large/data/` and
-`okf-explorer.json` are reproducible output. Never patch them directly.
+`generated/browser/`, `generated/assurance/`, `okf-bundle.json`, `large/data/`
+and `okf-explorer.json` are reproducible output. Never patch them directly.
+
+## Population assurance and candidate freeze
+
+`evaluation/candidates/population-complete-candidate.v1.yaml` declares the
+authored freeze boundary: basis commit, exact data-plane artifact list,
+population/release/publication gates, browser journeys and gap dispositions.
+Run `build_population_assurance.py` only after rebuilding and checking the
+authored dossiers and generated large-corpus projection. It derives the
+coverage, omission, link-health, review-status and provenance reports and then
+hashes the candidate artifacts into `generated/assurance/candidate-manifest.json`.
+
+Population completion means the discovery contract is fully navigable; it does
+not waive a dossier's `specialist_review_required` state. Release grade requires
+named acceptance and current source re-observation for applicable legal,
+clinical and high-impact operational claims. Publication requires a separate
+owner request and a subsequent exact-deployment browser check. Never change a
+generated assurance report or manifest by hand, and never rebuild a frozen
+publication candidate during promotion.
 
 ## Publication boundary
 

@@ -161,8 +161,17 @@ families, adding 38 compact dossiers while preserving the three deeper
 death/notification/estate slices. Forty-seven active body-free official links
 and 13 additional competency questions complete coverage across all 24
 domains. The 9,757-concept projection contains all 293 dossier-backed families,
-879 resources and 15,810 governed relationships. Population assurance is the
-next gate; release grade and publication remain separate.
+879 resources and 15,810 governed relationships.
+
+`ASSURE-001` completed locally on 2026-08-08. Deterministic assurance reconciles
+all 293 families, 24 domains, 48 processes, 104 competency questions, 879 typed
+source links and 15,810 governed relationships with zero blocking omissions.
+Six visible Explorer journeys cover national, devolved, local, health, legal
+and private-dependency routes from search through Narrative, Graph and official
+source. The exact data-plane artifacts are frozen by SHA-256 in the local
+candidate manifest. Population completion is met; release grade is not met
+because named specialist acceptance and current source re-observation remain,
+and publication is neither authorized nor ready.
 
 ## Phase 5 — release candidate and publication
 
