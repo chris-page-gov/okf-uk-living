@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -8,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_browser_handoff import build_outputs  # noqa: E402
+from build_browser_handoff import build_outputs, remove_output_tree  # noqa: E402
 
 
 class BrowserHandoffTests(unittest.TestCase):
@@ -31,6 +32,14 @@ class BrowserHandoffTests(unittest.TestCase):
             Path("source/rights-decisions.v1.yaml.html"),
         }
         self.assertTrue(required <= set(self.outputs))
+
+    def test_output_cleanup_ignores_finder_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "browser"
+            root.mkdir()
+            (root / ".DS_Store").write_bytes(b"finder metadata")
+            remove_output_tree(root)
+            self.assertFalse(root.exists())
 
     def test_handoff_preserves_source_identity_and_non_redistribution_boundary(self) -> None:
         content = self.outputs[Path("curriculum/index.html")]

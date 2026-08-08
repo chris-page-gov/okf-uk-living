@@ -1,0 +1,289 @@
+register_version: life-course-domain-register.v1
+pack_id: pack-7-civic-enterprise-creativity
+domain: starting-and-running-organisation
+title: Starting and running an organisation
+status: population_complete
+observed_at: "2026-08-08"
+link_receipts: evaluation/link-receipts/pack-7-civic-enterprise-creativity-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: "2026-08-08"
+  checksum: not_applicable_no_snapshot
+_family_defaults: &family_defaults
+  primary_jurisdictions: [England, Wales]
+  specialist_review: required
+route_sources:
+  - <<: *source_defaults
+    id: organisation-scotland-handoff
+    jurisdiction: Scotland
+    title: Business support in Scotland
+    owner: Scottish Government
+    authority_role: scotland_business_support_handoff
+    resource: https://www.mygov.scot/business-support
+    coverage: Routes organisations to current Scottish startup, funding, licensing and operating support.
+    exclusions: Does not choose a legal form, register an organisation, decide tax or grant eligibility or replace regulators.
+  - <<: *source_defaults
+    id: organisation-wales-handoff
+    jurisdiction: Wales
+    title: Business support in Wales
+    owner: Welsh Government
+    authority_role: wales_business_support_handoff
+    resource: https://www.gov.wales/business-support
+    coverage: Routes organisations to current Welsh business, funding, skills, licensing and operating support.
+    exclusions: Does not choose a legal form, register an organisation or decide tax, licence or funding eligibility.
+  - <<: *source_defaults
+    id: organisation-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Starting a business in Northern Ireland
+    owner: Invest Northern Ireland
+    authority_role: northern_ireland_business_support_handoff
+    resource: https://www.nibusinessinfo.co.uk/starting-business
+    coverage: Routes organisations to Northern Ireland startup, structure, tax, licensing and business-support guidance.
+    exclusions: Does not register an organisation, decide legal form or replace Companies House, HMRC or a licensing authority.
+families:
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: register-as-sole-trader
+    title: Register as a sole trader
+    aliases: [become self employed, start sole trader business, register self employment]
+    description: Confirm the chosen structure, start the required records and use the current HMRC registration and reporting route.
+    situations:
+      - One person intends to run a business personally rather than through an incorporated entity.
+    user_needs:
+      - Understand personal liability, tax registration and operating duties without structural or tax advice.
+    dependency: regulated-accounting-or-tax-adviser
+    source:
+      <<: *source_defaults
+      id: register-as-sole-trader-primary
+      title: Set up as a sole trader
+      owner: HM Revenue and Customs
+      authority_role: uk_sole_trader_registration_guidance
+      resource: https://www.gov.uk/set-up-sole-trader
+      coverage: Explains UK sole-trader setup, Self Assessment, records, naming and operating responsibilities.
+      exclusions: Does not recommend a structure, register automatically, provide tax advice or assess liability.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: form-business-partnership
+    title: Form a business partnership
+    aliases: [set up partnership, register business partners, partnership tax registration]
+    description: Agree the structure and responsibilities, nominate the responsible partner and complete registration, records and reporting steps.
+    situations:
+      - Two or more people intend to carry on a business together as partners.
+    user_needs:
+      - Distinguish ordinary, limited and limited-liability partnerships and their separate registrations.
+    dependency: regulated-legal-accounting-or-tax-adviser
+    source:
+      <<: *source_defaults
+      id: form-business-partnership-primary
+      title: Set up a business partnership
+      owner: HM Revenue and Customs
+      authority_role: uk_business_partnership_guidance
+      resource: https://www.gov.uk/set-up-business-partnership
+      coverage: Explains UK ordinary partnership naming, nominated-partner, tax and reporting duties.
+      exclusions: Does not form an LLP, draft an agreement, provide advice or allocate liability between partners.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: incorporate-company
+    title: Incorporate a company
+    aliases: [register limited company, form company at Companies House, create UK company]
+    description: Choose the company structure and name, identify officers and control, prepare governing information and register with Companies House.
+    situations:
+      - Founders intend to create a company as a legal entity separate from its members.
+    user_needs:
+      - Navigate incorporation and public-register consequences without legal, tax or investment advice.
+    dependency: authorized-company-formation-or-legal-adviser
+    source:
+      <<: *source_defaults
+      id: incorporate-company-primary
+      title: Set up a limited company
+      owner: Companies House
+      authority_role: uk_company_incorporation_service
+      resource: https://www.gov.uk/limited-company-formation
+      coverage: Routes UK founders through company naming, officers, control, documents and incorporation.
+      exclusions: Does not recommend structure, draft bespoke documents, provide advice or guarantee registration.
+  - <<: *family_defaults
+    id: register-charity
+    title: Register a charity
+    aliases: [set up charity, charity regulator registration, create charitable organisation]
+    description: Select the jurisdiction, charitable purposes and structure and apply to the responsible charity regulator and any other register required.
+    situations:
+      - Trustees intend to establish an organisation for charitable purposes and public benefit.
+    user_needs:
+      - Identify the correct regulator and thresholds without a local charitable-status decision.
+    dependency: regulated-charity-law-or-accounting-adviser
+    source:
+      <<: *source_defaults
+      id: register-charity-primary
+      title: Set up a charity
+      owner: Charity Commission for England and Wales
+      authority_role: england_wales_charity_setup_guidance
+      resource: https://www.gov.uk/setting-up-charity
+      coverage: Introduces England and Wales charitable purposes, structures, trustees, public benefit and registration.
+      exclusions: Does not establish Scottish or Northern Ireland regulation, approve purposes or provide legal advice.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: establish-social-enterprise
+    title: Establish a social enterprise
+    aliases: [set up community interest company, start social business, choose social enterprise structure]
+    description: Define the social purpose, choose a legal structure and use its company, charity, co-operative, tax and regulator routes as applicable.
+    situations:
+      - Founders want an organisation to trade for a social, community or environmental purpose.
+    user_needs:
+      - Distinguish mission from legal form and use the regulator for the chosen structure.
+    dependency: regulated-legal-or-social-enterprise-adviser
+    source:
+      <<: *source_defaults
+      id: establish-social-enterprise-primary
+      title: Setting up a social enterprise
+      owner: Department for Business and Trade
+      authority_role: uk_social_enterprise_structure_guidance
+      resource: https://www.gov.uk/set-up-a-social-enterprise
+      coverage: Introduces UK structures including CIC, company, charity, co-operative, partnership and sole trader.
+      exclusions: Does not choose a form, certify social impact, provide advice or register the organisation automatically.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: register-business-taxes
+    title: Register business taxes
+    aliases: [register company tax, business Self Assessment VAT, tell HMRC new business]
+    description: Identify the taxes and schemes that apply to the chosen structure and activity and complete each current HMRC registration and reporting route.
+    situations:
+      - A new or changed organisation needs to establish its tax registrations and records.
+    user_needs:
+      - Connect structure, employment, turnover and activity to authoritative routes without tax advice.
+    dependency: regulated-accounting-or-tax-adviser
+    source:
+      <<: *source_defaults
+      id: register-business-taxes-primary
+      title: Set up a business
+      owner: HM Revenue and Customs
+      authority_role: uk_business_tax_setup_handoff
+      resource: https://www.gov.uk/set-up-business
+      coverage: Routes UK businesses among structure, Self Assessment, Corporation Tax, VAT and employment setup.
+      exclusions: Does not calculate liability, recommend structure, complete returns or provide tax advice.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: run-payroll
+    title: Run payroll
+    aliases: [PAYE for employers, report employee pay, payroll submissions HMRC]
+    description: Register as an employer where required, maintain payroll records and send current pay, deduction and final reports through the HMRC route.
+    situations:
+      - An organisation employs people or pays directors through payroll.
+    user_needs:
+      - Find PAYE registration, reporting, payment and correction routes without payroll or tax advice.
+    dependency: regulated-payroll-or-accounting-provider
+    source:
+      <<: *source_defaults
+      id: run-payroll-primary
+      title: PAYE and payroll for employers
+      owner: HM Revenue and Customs
+      authority_role: uk_employer_payroll_guidance
+      resource: https://www.gov.uk/paye-for-employers
+      coverage: Introduces UK PAYE registration, payroll records, reporting, payments and year-end tasks.
+      exclusions: Does not calculate pay or deductions, operate payroll, classify workers or provide tax advice.
+  - <<: *family_defaults
+    id: obtain-business-licence
+    title: Obtain a business licence
+    aliases: [find business permit, apply for trading licence, licence finder]
+    description: Identify every activity and place that may require consent and apply to the named national, devolved or local licensing authority.
+    situations:
+      - An organisation plans an activity that may require a licence, registration, permit or consent.
+    user_needs:
+      - Find the competent authority without assuming the GOV.UK finder covers every territorial or sector route.
+    dependency: regulated-sector-or-licensing-adviser
+    source:
+      <<: *source_defaults
+      id: obtain-business-licence-primary
+      title: Licence finder
+      owner: Department for Business and Trade
+      authority_role: england_wales_business_licence_handoff
+      resource: https://www.gov.uk/licence-finder
+      coverage: Routes England and Wales businesses to many activity-specific licence authorities.
+      exclusions: Does not identify every local, Scottish or Northern Ireland licence or grant consent.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales]
+    id: meet-workplace-safety-duties
+    title: Meet workplace safety duties
+    aliases: [business health and safety, employer risk assessment, workplace safety responsibilities]
+    description: Identify the enforcing authority, assess and control work risks and maintain the current records, consultation and reporting arrangements.
+    situations:
+      - An organisation controls work activity, premises, workers or risks to others.
+    user_needs:
+      - Find regulator-first guidance without the bundle performing a risk assessment or certifying compliance.
+    dependency: competent-occupational-health-and-safety-adviser
+    source:
+      <<: *source_defaults
+      id: meet-workplace-safety-duties-primary
+      title: Health and safety basics for your business
+      owner: Health and Safety Executive
+      authority_role: great_britain_workplace_safety_guidance
+      resource: https://www.hse.gov.uk/simple-health-safety/
+      coverage: Introduces Great Britain employer and self-employed risk, policy, consultation, reporting and insurance duties.
+      exclusions: Does not assess risk, certify compliance, identify every local enforcer or establish Northern Ireland duties.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: register-data-protection-fee
+    title: Register a data-protection fee
+    aliases: [pay ICO fee, data controller fee registration, ICO public register]
+    description: Check the current exemption and fee route and register or renew with the Information Commissioner when required.
+    situations:
+      - An organisation or sole trader processes personal data and needs to check the fee requirement.
+    user_needs:
+      - Reach the regulator's current assessment without the bundle deciding exemption or fee tier.
+    source:
+      <<: *source_defaults
+      id: register-data-protection-fee-primary
+      title: Pay the data protection fee
+      owner: Information Commissioner's Office
+      authority_role: uk_data_protection_fee_handoff
+      resource: https://www.gov.uk/data-protection-register-notify-ico-personal-data
+      coverage: Routes UK organisations to the Information Commissioner fee check, registration and public-register service.
+      exclusions: Does not decide exemption, calculate a tier, register an organisation or establish wider compliance.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: bid-for-public-contract
+    title: Bid for a public contract
+    aliases: [find government tender, public procurement bid, supplier contract opportunity]
+    description: Find the platform and procurement procedure for the contracting authority, read the notice and submit through its stated clarification and bid route.
+    situations:
+      - An organisation wants to find or compete for a public-sector contract.
+    user_needs:
+      - Distinguish procurement platforms, thresholds and authorities without bid-writing or award prediction.
+    dependency: regulated-procurement-legal-or-bid-adviser
+    source:
+      <<: *source_defaults
+      id: bid-for-public-contract-primary
+      title: Find a Tender
+      owner: Cabinet Office
+      authority_role: uk_high_value_procurement_notice_service
+      resource: https://www.gov.uk/find-tender
+      coverage: Provides the UK Find a Tender notice search and supplier handoff for covered public procurements.
+      exclusions: Does not include every low-value or devolved portal, prepare a bid, decide compliance or award a contract.
+  - <<: *family_defaults
+    primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+    id: close-or-insolvent-business
+    title: Close or make a business insolvent
+    aliases: [close limited company, stop self employment, business insolvency route]
+    description: Identify the entity, solvency and creditor position and use the exact cessation, strike-off, liquidation, administration or insolvency route.
+    situations:
+      - An organisation is ceasing activity or may be unable to pay its debts.
+    user_needs:
+      - Find the entity-specific authority and urgent professional boundary without an insolvency decision.
+    dependency: licensed-insolvency-practitioner-or-regulated-adviser
+    source:
+      <<: *source_defaults
+      id: close-or-insolvent-business-primary
+      title: Closing a limited company
+      owner: Companies House
+      authority_role: uk_company_closure_handoff
+      resource: https://www.gov.uk/closing-a-limited-company
+      coverage: Routes UK companies among strike-off, liquidation, insolvency and dormant-company information.
+      exclusions: Does not cover every entity, assess solvency, protect directors from liability or provide legal advice.

@@ -144,7 +144,15 @@ narratives, 45 active link-only sources and 13 additional competency
 questions. Manual health acquisition remains typed and link-only; clinical,
 capacity, safeguarding and legal decisions remain with the current authority
 or provider. The 7,613-concept projection contains 219 dossier-backed
-families, 761 resources and 12,377 governed relationships. Pack 7 is the next
+families, 761 resources and 12,377 governed relationships.
+
+`PACK-007` completed locally on 2026-08-08. Citizenship/democracy,
+starting/running an organisation and ideas/creativity/research add 36 dossiers
+and narratives, 45 active link-only sources and 13 additional competency
+questions. Immigration, electoral, tax, corporate, intellectual-property and
+research-publication boundaries remain with the current authority, institution
+or regulated adviser. The 8,645-concept projection contains 255 dossier-backed
+families, 802 resources and 13,972 governed relationships. Pack 8 is the final
 bounded population unit.
 
 ## Phase 5 — release candidate and publication

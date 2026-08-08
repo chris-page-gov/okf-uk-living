@@ -776,6 +776,44 @@
       "target_iri": "life-course-domain/later-life"
     }
   ],
+  "dependency/regulated-payroll-or-accounting-provider": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/starting-and-running-organisation/run-payroll.v1.yaml",
+          "source_ids": [
+            "run-payroll-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:db7a8a30b89638f8a9e653ee",
+      "kind": "depends-on",
+      "label": "depends on",
+      "observed_at": "2026-08-08",
+      "predicate": "depends-on",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/run-payroll",
+      "source_iri": "dataset/run-payroll",
+      "target": "dependency/regulated-payroll-or-accounting-provider",
+      "target_iri": "dependency/regulated-payroll-or-accounting-provider"
+    }
+  ],
   "evidence/claim-child-benefit-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
     {
       "assertion_scope": "real-world",
@@ -851,6 +889,44 @@
       "source_iri": "service-step/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure",
       "target": "evidence/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
       "target_iri": "evidence/get-pregnancy-workplace-protection-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
+    }
+  ],
+  "evidence/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/use-university-technology-transfer.v1.yaml",
+          "source_ids": [
+            "use-university-technology-transfer-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3d194a606ecfccb7d5c96eed",
+      "kind": "requires",
+      "label": "requires",
+      "observed_at": "2026-08-08",
+      "predicate": "requires",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "evidence/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception",
+      "target_iri": "evidence/use-university-technology-transfer-exception-or-route-failure-resolve-route-boundary-or-failure-the-responsible-authority-states-what-evidence-is-needed-for-the-exception"
     }
   ],
   "outcome/adopt-child-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
@@ -972,6 +1048,44 @@
       "source_iri": "service-step/find-registered-childcare-ordinary-source-linked-route-follow-current-official-instructions",
       "target": "outcome/find-registered-childcare-ordinary-source-linked-route-follow-current-official-instructions-start-from-the-accountable-public-register-or-local-service-to-find-childcare-providers-and-verify-current-registration",
       "target_iri": "outcome/find-registered-childcare-ordinary-source-linked-route-follow-current-official-instructions-start-from-the-accountable-public-register-or-local-service-to-find-childcare-providers-and-verify-current-registration"
+    }
+  ],
+  "outcome/protect-confidential-information-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/ideas-creativity-and-research/protect-confidential-information.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/ideas-creativity-and-research/protect-confidential-information.v1.yaml",
+          "source_ids": [
+            "protect-confidential-information-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:2618c7f05b88e20587120acf",
+      "kind": "has-outcome",
+      "label": "has outcome",
+      "observed_at": "2026-08-08",
+      "predicate": "has-outcome",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "service-step/protect-confidential-information-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "source_iri": "service-step/protect-confidential-information-exception-or-route-failure-resolve-route-boundary-or-failure",
+      "target": "outcome/protect-confidential-information-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer",
+      "target_iri": "outcome/protect-confidential-information-exception-or-route-failure-resolve-route-boundary-or-failure-the-user-is-handed-to-the-accountable-route-without-a-fabricated-answer"
     }
   ],
   "outcome/respond-to-transport-prosecution-ordinary-source-linked-route-follow-current-official-instructions-preserve-the-charge-or-summons-and-obtain-current-legal-and-court-information-for-plea-evidence-hearing-and-appeal-boundaries": [
@@ -3212,6 +3326,44 @@
       "source_iri": "dataset/pay-clean-air-zone-charge",
       "target": "user-need/pay-clean-air-zone-charge-congestion-and-low-emission-schemes",
       "target_iri": "user-need/pay-clean-air-zone-charge-congestion-and-low-emission-schemes"
+    }
+  ],
+  "user-need/perform-jury-service-find-the-jurisdiction-and-court-specific-route-without-legal-advice-or-a-local-decision-on-excusal": [
+    {
+      "assertion_scope": "real-world",
+      "assertion_status": "normalized",
+      "authority": {
+        "class": "derived",
+        "label": "Repository-authored normalized discovery model",
+        "source": "generated/browser/source/life-course-families/citizenship-democracy-and-rights/perform-jury-service.v1.yaml.html"
+      },
+      "derivation": "deterministic-life-course-dossier-projection",
+      "derivation_activity": "process:life-course-projection",
+      "evidence": [
+        {
+          "normalization": "repository-authored governed relationship",
+          "source_artifact": "source/life-course-families/citizenship-democracy-and-rights/perform-jury-service.v1.yaml",
+          "source_ids": [
+            "perform-jury-service-primary"
+          ],
+          "type": "authored-dossier-or-contract"
+        }
+      ],
+      "freshness": "source-observation-governed",
+      "id": "relationship:3df0fae69b3086b0fd3b87c2",
+      "kind": "addresses-user-need",
+      "label": "addresses user need",
+      "observed_at": "2026-08-08",
+      "predicate": "addresses-user-need",
+      "rights": {
+        "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+        "source": "generated/browser/evidence/licensing-and-attribution.html"
+      },
+      "schema": "okf-relationship-assertion.v2",
+      "source": "dataset/perform-jury-service",
+      "source_iri": "dataset/perform-jury-service",
+      "target": "user-need/perform-jury-service-find-the-jurisdiction-and-court-specific-route-without-legal-advice-or-a-local-decision-on-excusal",
+      "target_iri": "user-need/perform-jury-service-find-the-jurisdiction-and-court-specific-route-without-legal-advice-or-a-local-decision-on-excusal"
     }
   ],
   "user-need/plan-accessible-public-transport-interchange-and-passenger-rights-handoffs": [

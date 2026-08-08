@@ -188,9 +188,22 @@ def check_outputs(outputs: dict[Path, str]) -> list[str]:
     return errors
 
 
+def remove_output_tree(root: Path) -> None:
+    if root.exists():
+        for attempt in range(3):
+            try:
+                shutil.rmtree(root)
+                break
+            except OSError:
+                finder_metadata = list(root.rglob(".DS_Store")) if root.exists() else []
+                if not finder_metadata or attempt == 2:
+                    raise
+                for path in finder_metadata:
+                    path.unlink(missing_ok=True)
+
+
 def write_outputs(outputs: dict[Path, str]) -> None:
-    if OUTPUT_ROOT.exists():
-        shutil.rmtree(OUTPUT_ROOT)
+    remove_output_tree(OUTPUT_ROOT)
     for path, content in outputs.items():
         destination = OUTPUT_ROOT / path
         destination.parent.mkdir(parents=True, exist_ok=True)

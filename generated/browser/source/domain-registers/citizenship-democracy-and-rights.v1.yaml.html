@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>source/domain-registers/citizenship-democracy-and-rights.v1.yaml — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>source/domain-registers/citizenship-democracy-and-rights.v1.yaml</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored YAML. Source identity: <code>source/domain-registers/citizenship-democracy-and-rights.v1.yaml</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>register_version: life-course-domain-register.v1
+pack_id: pack-7-civic-enterprise-creativity
+domain: citizenship-democracy-and-rights
+title: Citizenship, democracy and rights
+status: population_complete
+observed_at: &quot;2026-08-08&quot;
+link_receipts: evaluation/link-receipts/pack-7-civic-enterprise-creativity-2026-08-08
+acquisition:
+  mode: linked_reference_only
+  snapshots_acquired: false
+  source_response_bodies_retained: false
+  publication_allowed: false
+  rights_policy: link_and_summarize_source_family_decisions_recorded
+_source_defaults: &amp;source_defaults
+  access_method: public_html
+  version_model: live_service_guidance
+  update_cadence: check_before_each_use
+  rights_basis: linked_reference_summary_only_source_family_decision_recorded
+  observed_at: &quot;2026-08-08&quot;
+  checksum: not_applicable_no_snapshot
+_family_defaults: &amp;family_defaults
+  primary_jurisdictions: [England, Scotland, Wales, Northern Ireland]
+  specialist_review: required
+route_sources:
+  - &lt;&lt;: *source_defaults
+    id: civic-rights-scotland-handoff
+    jurisdiction: Scotland
+    title: Voting in elections in Scotland
+    owner: Scottish Government
+    authority_role: scotland_democracy_handoff
+    resource: https://www.mygov.scot/vote-elections-scotland
+    coverage: Routes people to current Scottish electoral registration, voting and election information.
+    exclusions: Does not decide franchise, candidacy, immigration status or an individual rights claim.
+  - &lt;&lt;: *source_defaults
+    id: civic-rights-wales-handoff
+    jurisdiction: Wales
+    title: Senedd reform in Wales
+    owner: Welsh Government
+    authority_role: wales_democracy_handoff
+    resource: https://www.gov.wales/senedd-reform
+    coverage: Provides the Welsh Government route to current Senedd reform, representation and election-system information.
+    exclusions: Does not cover every election or participation route and does not decide franchise, candidacy, immigration status or a rights complaint.
+  - &lt;&lt;: *source_defaults
+    id: civic-rights-northern-ireland-handoff
+    jurisdiction: Northern Ireland
+    title: Government, citizens and rights in Northern Ireland
+    owner: Northern Ireland Executive
+    authority_role: northern_ireland_civic_rights_handoff
+    resource: https://www.nidirect.gov.uk/information-and-services/government-citizens-and-rights
+    coverage: Routes people to current Northern Ireland government, election, citizenship and rights information.
+    exclusions: Does not decide immigration status, franchise, candidacy or an individual rights claim.
+families:
+  - &lt;&lt;: *family_defaults
+    id: apply-for-visa-or-immigration-permission
+    title: Apply for visa or immigration permission
+    aliases: [apply to come to UK, UK visa application, immigration permission route]
+    description: Identify the exact immigration route and use its current application, identity, evidence, fee, decision and review process.
+    situations:
+      - A person wants permission to enter, remain, work, study or join family in the United Kingdom.
+    user_needs:
+      - Find the correct current route without the bundle assessing eligibility, evidence or prospects.
+    dependency: regulated-immigration-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-visa-or-immigration-permission-primary
+      title: Check if you need a UK visa
+      owner: Home Office
+      authority_role: uk_visa_route_handoff
+      resource: https://www.gov.uk/check-uk-visa
+      coverage: Routes people to current UK entry and visa categories based on stated travel purpose and nationality.
+      exclusions: Does not decide eligibility, grant permission, provide legal advice or cover every in-country application.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-settlement
+    title: Apply for settlement
+    aliases: [indefinite leave to remain, settle permanently in UK, ILR application]
+    description: Identify the settlement route linked to the person&#x27;s existing status and use its current residence, evidence, application and review process.
+    situations:
+      - A person with immigration permission wants to explore permanent settlement in the United Kingdom.
+    user_needs:
+      - Find the route-specific conditions without a local residence, absence or eligibility calculation.
+    dependency: regulated-immigration-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-settlement-primary
+      title: Check if you can get indefinite leave to remain
+      owner: Home Office
+      authority_role: uk_settlement_route_handoff
+      resource: https://www.gov.uk/indefinite-leave-to-remain
+      coverage: Routes applicants to current UK settlement categories and application guidance.
+      exclusions: Does not calculate residence, assess absences, decide eligibility or grant status.
+  - &lt;&lt;: *family_defaults
+    id: apply-for-citizenship
+    title: Apply for citizenship
+    aliases: [become British citizen, British citizenship application, naturalisation route]
+    description: Select the current registration or naturalisation route and follow its status, residence, identity, evidence, ceremony and review steps.
+    situations:
+      - A person wants to establish whether and how they may acquire British citizenship.
+    user_needs:
+      - Distinguish automatic status, registration, naturalisation and nationality advice boundaries.
+    dependency: regulated-nationality-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: apply-for-citizenship-primary
+      title: British citizenship
+      owner: Home Office
+      authority_role: uk_citizenship_route_handoff
+      resource: https://www.gov.uk/british-citizenship
+      coverage: Routes people to current British citizenship status, registration and naturalisation guidance.
+      exclusions: Does not decide nationality, calculate residence, assess good character or grant citizenship.
+  - &lt;&lt;: *family_defaults
+    id: obtain-uk-passport
+    title: Obtain a UK passport
+    aliases: [apply for British passport, first adult passport, replace UK passport]
+    description: Select the first, renewal, replacement or urgent passport route and follow its identity, document, referee, fee and delivery process.
+    situations:
+      - A British national needs a first, renewed, replacement or otherwise updated passport.
+    user_needs:
+      - Find the correct passport route without treating a passport as proof that citizenship must be granted.
+    source:
+      &lt;&lt;: *source_defaults
+      id: obtain-uk-passport-primary
+      title: Passports
+      owner: HM Passport Office
+      authority_role: uk_passport_service_handoff
+      resource: https://www.gov.uk/browse/abroad/passports
+      coverage: Routes people to first, renewal, replacement, urgent and overseas UK passport services.
+      exclusions: Does not establish nationality, guarantee processing time or issue a passport.
+  - &lt;&lt;: *family_defaults
+    id: maintain-electoral-registration
+    title: Maintain electoral registration
+    aliases: [register to vote, update electoral register, electoral roll address change]
+    description: Use the current registration service when eligible and update the relevant electoral-registration office after changes that affect the record.
+    situations:
+      - A person wants to register, update details or confirm the responsible electoral-registration route.
+    user_needs:
+      - Find the correct territorial franchise and registration office without a local eligibility decision.
+    source:
+      &lt;&lt;: *source_defaults
+      id: maintain-electoral-registration-primary
+      title: Register to vote
+      owner: Department for Levelling Up, Housing and Communities
+      authority_role: uk_electoral_registration_service
+      resource: https://www.gov.uk/register-to-vote
+      coverage: Provides the UK registration service and territorial eligibility handoffs.
+      exclusions: Does not confirm registration, decide franchise or replace the local electoral-registration office.
+  - &lt;&lt;: *family_defaults
+    id: stand-for-election
+    title: Stand for election
+    aliases: [become election candidate, stand as councillor, election nomination]
+    description: Identify the exact election and jurisdiction, obtain its current candidate guidance and complete nomination, agent, finance and reporting steps.
+    situations:
+      - A person is considering becoming a candidate in a governed UK election.
+    user_needs:
+      - Find election-specific eligibility and administration without the bundle deciding qualification or compliance.
+    source:
+      &lt;&lt;: *source_defaults
+      id: stand-for-election-primary
+      title: Elections in the UK
+      owner: Cabinet Office
+      authority_role: uk_elections_handoff
+      resource: https://www.gov.uk/elections-in-the-uk
+      coverage: Introduces UK election types and routes to current election information.
+      exclusions: Does not provide a complete candidate pack, decide qualification or identify every returning officer.
+  - &lt;&lt;: *family_defaults
+    id: petition-government
+    title: Petition government
+    aliases: [start government petition, sign Parliament petition, submit public petition]
+    description: Select the institution with power over the issue, use its current petition rules and retain submission, moderation and response information.
+    situations:
+      - A person or group wants a public body or legislature to consider a proposed action.
+    user_needs:
+      - Distinguish UK Parliament, devolved legislature and local petition routes.
+    source:
+      &lt;&lt;: *source_defaults
+      id: petition-government-primary
+      title: Petitions and government
+      owner: UK Government
+      authority_role: uk_public_participation_handoff
+      resource: https://www.gov.uk/petition-government
+      coverage: Routes people to public petition processes and explains the responsible-government boundary.
+      exclusions: Does not guarantee publication, debate, response or policy change and is not every devolved route.
+  - &lt;&lt;: *family_defaults
+    id: respond-to-public-consultation
+    title: Respond to a public consultation
+    aliases: [find government consultations, submit consultation response, comment on policy proposal]
+    description: Confirm the responsible public body, scope and closing information and submit evidence or views through its current channel.
+    situations:
+      - A public body is seeking views or evidence on a proposal.
+    user_needs:
+      - Find open and closed consultations without assuming a response changes the decision.
+    source:
+      &lt;&lt;: *source_defaults
+      id: respond-to-public-consultation-primary
+      title: Consultations and calls for evidence
+      owner: UK Government
+      authority_role: uk_government_consultation_search
+      resource: https://www.gov.uk/search/policy-papers-and-consultations
+      coverage: Provides searchable current and closed UK government consultations and calls for evidence.
+      exclusions: Does not include every devolved or local consultation, accept a response itself or determine impact.
+  - &lt;&lt;: *family_defaults
+    id: contact-elected-representative
+    title: Contact an elected representative
+    aliases: [contact my MP, find councillor or representative, write to elected member]
+    description: Identify which elected office represents the relevant place or issue and use its published contact and casework route.
+    situations:
+      - A person wants to raise an issue with an MP, devolved member, mayor or councillor.
+    user_needs:
+      - Match office, geography and responsibility without sending personal information to the bundle.
+    source:
+      &lt;&lt;: *source_defaults
+      id: contact-elected-representative-primary
+      title: Find your local councillors
+      owner: Ministry of Housing, Communities and Local Government
+      authority_role: england_local_representative_contact_handoff
+      resource: https://www.gov.uk/find-your-local-councillors
+      coverage: Routes people in England to their council website to identify local elected representatives.
+      exclusions: Does not identify MPs or devolved representatives, submit casework or guarantee a response.
+  - &lt;&lt;: *family_defaults
+    id: perform-jury-service
+    title: Perform jury service
+    aliases: [jury summons, respond to jury service letter, claim juror expenses]
+    description: Read the exact summons, use the court service named on it and follow attendance, deferral, excusal, support and expense steps.
+    situations:
+      - A person has received a jury summons or needs information about jury service.
+    user_needs:
+      - Find the jurisdiction and court-specific route without legal advice or a local decision on excusal.
+    source:
+      &lt;&lt;: *source_defaults
+      id: perform-jury-service-primary
+      title: Jury service
+      owner: HM Courts and Tribunals Service
+      authority_role: england_wales_jury_service_guidance
+      resource: https://www.gov.uk/jury-service
+      coverage: Explains England and Wales summons response, attendance, support, expenses and deferral handoffs.
+      exclusions: Does not establish Scotland or Northern Ireland procedure or decide deferral, excusal or an individual case.
+  - &lt;&lt;: *family_defaults
+    id: exercise-data-protection-rights
+    title: Exercise data-protection rights
+    aliases: [subject access request, correct personal data, object to data processing]
+    description: Identify the controller and right, make a clear request, retain the response and use the complaint or court route if unresolved.
+    situations:
+      - A person wants access, correction, deletion, restriction, objection or another governed personal-data right.
+    user_needs:
+      - Find the controller and remedy without the bundle deciding whether an exemption applies.
+    dependency: regulated-data-protection-adviser
+    source:
+      &lt;&lt;: *source_defaults
+      id: exercise-data-protection-rights-primary
+      title: Data protection
+      owner: Department for Science, Innovation and Technology
+      authority_role: uk_data_protection_rights_guidance
+      resource: https://www.gov.uk/data-protection
+      coverage: Introduces UK personal-data rights, controller requests and Information Commissioner complaint handoffs.
+      exclusions: Does not identify the controller, decide an exemption, provide legal advice or order a remedy.
+  - &lt;&lt;: *family_defaults
+    id: make-freedom-of-information-request
+    title: Make a freedom of information request
+    aliases: [FOI request, ask public authority for records, environmental information request]
+    description: Identify the public authority, describe the recorded information sought and use its review and commissioner route if access is refused.
+    situations:
+      - A person wants recorded information held by a public authority.
+    user_needs:
+      - Distinguish FOI, environmental-information, personal-data and routine-publication routes.
+    source:
+      &lt;&lt;: *source_defaults
+      id: make-freedom-of-information-request-primary
+      title: How to make a freedom of information request
+      owner: Cabinet Office
+      authority_role: uk_freedom_of_information_guidance
+      resource: https://www.gov.uk/make-a-freedom-of-information-request
+      coverage: Explains UK public-authority request, response, review and regulator handoffs.
+      exclusions: Does not identify every covered authority, decide exemptions or obtain information on a person&#x27;s behalf.
+</pre>
+</body>
+</html>

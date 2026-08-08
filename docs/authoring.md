@@ -144,6 +144,14 @@ summary, but its response body is never retained and the generated dossier may
 not diagnose, triage, interpret results, decide capacity or safeguarding, or
 generalize one nation's clinical route to another.
 
+Civic, organisation and ideas/research registers must keep decision authority
+with the current public body, institution or regulated adviser. A devolved
+business or democracy page is a discovery handoff, not evidence that
+immigration status, franchise, tax, corporate form, intellectual-property
+rights, funding eligibility or publication rules are uniform. When one current
+official page illustrates only a funder, institution or jurisdiction-specific
+route, state that scope and exclusion directly in the source assertion.
+
 Source-link receipts retain response metadata only. They never store response
 bodies. An automated block may be resolved by an explicit real-browser receipt;
 a discovery page is not sufficient evidence for a leaf-service rule.

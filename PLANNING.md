@@ -74,15 +74,15 @@ local evaluation; it does not claim leaf-service completeness.
 The foundation and Explorer contract are complete. The three-slice migration,
 shared authority/source infrastructure, `PACK-001` family-beginnings,
 `PACK-002` learning-and-transition, `PACK-003` work-and-money, `PACK-004`
-home/place/transport, `PACK-005` enforcement/consumer/justice and `PACK-006`
-family/health/care corpora are
+home/place/transport, `PACK-005` enforcement/consumer/justice, `PACK-006`
+family/health/care and `PACK-007` civic/enterprise/creativity corpora are
 locally complete and supply the
 proving fixtures, reusable identities and repeatable domain-register renderer
 for the remaining packs. The renderer now preserves richer vertical-slice
 dossiers when a later pack accounts for those approved identities.
 The active complete-corpus sequence is now:
 
-1. `PACK-007` and `PACK-008` — populate the two remaining contracted domain packs, beginning with civic, enterprise and creativity.
+1. `PACK-008` — populate the final contracted overseas, later-life and death/bereavement domains.
 2. `ASSURE-001` — reconcile search, graph, provenance, source links and local browser journeys and freeze a local population candidate.
 
 Population-complete permits a visible `specialist_review_required` state.
