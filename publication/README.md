@@ -19,7 +19,8 @@ The preview is not release-grade. Its descriptor and landing page retain the
 291 specialist-review warnings and direct readers to current official sources.
 
 The 2026-08-08 enablement attempt failed before deployment because the current
-GitHub plan does not support Pages for the private repository. Visibility was
-not changed and no public URL is verified. Deployment now requires an explicit
-owner choice between public visibility and a separate public publication
-repository.
+GitHub plan did not support Pages for the private repository. On 2026-08-09 the
+owner explicitly made the existing repository public. Manual run `31297841419`
+then deployed the pinned publication successfully, and exact-byte plus
+real-browser verification passed. See the
+[deployment evidence](../evaluation/publication/pages-deployment-verification-2026-08-09.md).

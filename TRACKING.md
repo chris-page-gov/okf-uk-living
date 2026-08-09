@@ -39,23 +39,25 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | SCOPE-001 | Approve publication claims and limitations | Complete | Owner authorized the full population-complete corpus as an educational preview; not release-grade, official advice or formal CPSV-AP/Open Referral/OWL/SHACL conformance |
 | CAND-001 | Freeze a reproducible publication candidate | Complete: local pass | The publication unit contains 1,549 exact files (about 179 MB) rooted in candidate manifest `0b1df05a…`; no corpus rebuild or source snapshot |
 | PUB-001 | Authorize publication of the frozen candidate | Complete | Owner explicitly authorized GitHub Pages publication and OKF Explorer evaluation on 2026-08-08 |
-| PAGES-001 | Deploy frozen candidate bytes to GitHub Pages | Blocked: owner choice | GitHub returned HTTP 422 because the current plan does not support Pages for this private repository; choose public visibility or a separate public publication repository |
-| VERIFY-001 | Verify the exact public sample in a real browser | Blocked on publication | Local staging and Explorer review passed the keyword-led search-to-source journey; exact public identity and journeys require a deployment |
-| RELEASE-001 | Hand off a verified initial sample | Blocked on verification | Label and share the public URL only after VERIFY-001 passes; retain explicit sample limitations |
+| PAGES-001 | Deploy frozen candidate bytes to GitHub Pages | Complete | Owner authorized public repository visibility; workflow run `31297841419` and deployment `5815993749` promoted the pinned 1,549-file unit successfully |
+| VERIFY-001 | Verify the exact public sample in a real browser | Complete | Landing and descriptor hashes matched; public Explorer passed search, Narrative, 37-edge Graph, 13-source Resources and GOV.UK handoff |
+| RELEASE-001 | Hand off a verified initial sample | Complete: population preview | Verified URLs may be shared with the visible non-release-grade and 291-specialist-review limitations |
 | UI-001 | Make conversational static search bounded and useful | Open: Explorer follow-up | Three ordinary-language questions returned zero results while concise governed terms ranked the intended families first or second |
 | UI-002 | Preserve domain browsing for unmatched queries | Open: Explorer follow-up | Zero-result search currently reduces all facets to zero instead of offering the approved 24-domain fallback |
 | UI-003 | Reduce facet and graph interpretation cost | Open: design follow-up | Group display-equivalent jurisdiction identities, prioritize journey edges and collapse non-discriminating facets without erasing provenance |
 
 ## Current operating state
 
-- GitHub remote: private repository under `chris-page-gov/okf-uk-living`.
-- Main protection: PR-only by project policy; server enforcement is deferred
-  because the current private-repository plan does not provide branch protection.
+- GitHub remote: public repository under `chris-page-gov/okf-uk-living` after
+  explicit owner authorization on 2026-08-09.
+- Main protection: server-enforced pull requests with zero required approvals;
+  administrators included, conversation resolution required, force-pushes and
+  deletion disabled.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
-- GitHub Pages: publication authorized; deployment blocked because the current
-  plan does not support Pages for the private repository. Visibility is
-  unchanged and no public URL is verified.
+- GitHub Pages: exact 1,549-file population preview deployed and verified by
+  manual run `31297841419`; ordinary pushes, merges and pull requests do not
+  update Pages.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
   references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
   sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8
@@ -66,13 +68,14 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 - Licensing: repository-authored code, documentation, ontology terms and
   eligible generated projections are MIT; third-party material is not
   relicensed and snapshot redistribution is disabled.
-- Public bundle URL: none.
+- Public bundle URL:
+  `https://chris-page-gov.github.io/okf-uk-living/okf-explorer.json`.
 - Review state: the integrated local Explorer remediation rerun passed on
   2026-08-07 and `REV-001` through `REV-004` are closed. The 293-family
   colour-facet projection also passes local search and filter journeys. The
   full corpus is a frozen population-complete publication preview, not a
-  release-grade candidate. Owner authorization is recorded; exact deployment
-  and public verification remain pending. Local UI-efficiency review passes
+  release-grade candidate. Owner authorization, exact deployment and public
+  verification are recorded. UI-efficiency review passes
   concise keyword discovery and a representative search-to-source journey but
   leaves conversational search and zero-result browsing findings open.
 - Reference readiness: all 120 declared domain/reference-jurisdiction cells are

@@ -24,6 +24,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Public deployment evidence for workflow run `31297841419`, deployment
+  `5815993749`, the exact manifest and descriptor hashes, and the verified
+  search-to-GOV.UK Explorer journey.
+- Server-enforced sole-developer `main` protection requiring pull requests and
+  resolved conversations while requiring zero approvals or remote checks.
+
 - Dated population-preview UI-efficiency review covering six concise keyword
   queries, three conversational questions, one complete narrative/graph/source
   journey and a real-browser GOV.UK handoff.
@@ -230,6 +236,11 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.
 
 ### Changed
+
+- Repository visibility changed from private to public after explicit owner
+  authorization, exposing the complete source and history and unblocking Pages.
+- `PAGES-001`, `VERIFY-001` and the verified preview handoff are complete; the
+  preview remains non-release-grade and the Explorer UI findings remain open.
 
 - Publication authorization remains a separate descriptor envelope and dated
   receipt so that the owner-authorized candidate bytes and hash are unchanged.

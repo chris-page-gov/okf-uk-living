@@ -14,9 +14,9 @@ GitHub Pages deployment runs unless the owner explicitly requests publication.
    separate, explicit publication request.
 
 Changes to `main` remain pull-request-only by project policy. Server-side
-branch protection is deferred while the private repository plan does not
-provide it; the repository must not be made public merely to obtain that
-feature because public visibility is a separate owner decision.
+branch protection is now active after the owner separately authorized public
+visibility on 2026-08-09. The sole-developer rule requires pull requests and
+resolved conversations but zero approving reviews or remote status checks.
 
 ## Lockstep documentation
 
@@ -68,6 +68,12 @@ public and using a separate public publication repository. Local UI review
 continues to count as evaluation evidence, not public verification.
 The manual workflow checks out publication merge `980c7a9…` so later tracking
 and review evidence cannot change the frozen transport bytes.
+
+The owner resolved the blocker on 2026-08-09 by authorizing public visibility
+for the existing repository. Manual run `31297841419` deployed the pinned unit;
+deployment `5815993749` and exact-browser verification passed. `PAGES-001` and
+`VERIFY-001` are complete. The published population preview is not release
+grade, and publication does not close the recorded Explorer UI findings.
 
 For the complete-corpus track, `CORPUS-001`, `ACQPOL-001` and `POP-001` are complete.
 The owner approved 293 named families, exhaustive-authority plus representative
@@ -130,6 +136,9 @@ This authorized publication pull request instead records the owner request and
 frozen candidate. A follow-up evidence pull request must record the deployment
 and browser-verification result. A failed verification remains failed and the
 public link is withheld.
+
+The 2026-08-09 verification passed, so the exact landing, descriptor, manifest
+and Explorer URLs recorded in the publication evidence may now be shared.
 
 The local 2026-08-08 UI-efficiency review also establishes two Explorer
 follow-ups before question-answering acceptance can be claimed: bounded
