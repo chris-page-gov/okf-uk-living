@@ -57,3 +57,18 @@ The exact staging bytes and the merged Explorer were evaluated locally. The
 [dated UI-efficiency review](../reviews/population-preview-ui-efficiency-2026-08-08.md)
 records the passing keyword-led search-to-source journey and the open
 natural-language search and zero-result browsing findings.
+
+## Owner visibility decision and successful deployment
+
+On 2026-08-09 the owner explicitly authorized making the existing
+`chris-page-gov/okf-uk-living` repository public and exposing its complete
+source and history. This superseded only the earlier visibility prohibition; it
+did not broaden the frozen publication unit, enable automatic publishing or
+change the release-grade boundary.
+
+After GitHub confirmed public visibility, manual workflow run
+[`31297841419`](https://github.com/chris-page-gov/okf-uk-living/actions/runs/31297841419)
+successfully created deployment `5815993749`. Exact public hashes and the
+real-browser search-to-source journey passed. The full evidence and verified
+URLs are recorded in the
+[Pages deployment verification](pages-deployment-verification-2026-08-09.md).

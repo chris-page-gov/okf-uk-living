@@ -79,7 +79,9 @@ evidence and original summaries recorded in
 
 The first run, remediation rerun, eight pack reviews and population assurance
 are recorded under `evaluation/reviews/`. `REVIEW-001`, `COMPAT-001`,
-`SCOPE-001`, `CAND-001` and `PUB-001` are complete for the population preview.
+`SCOPE-001`, `CAND-001`, `PUB-001`, `PAGES-001`, `VERIFY-001` and the verified
+preview handoff are complete. The 2026-08-09 deployment evidence records the
+exact public identities and remaining non-release-grade boundary.
 
 ## Candidate and publication controls
 
@@ -88,8 +90,9 @@ are recorded under `evaluation/reviews/`. `REVIEW-001`, `COMPAT-001`,
 - Promote the same files; never rebuild during deployment.
 - Keep remote CI disabled. If GitHub Actions is selected solely as the Pages
   transport, it must be manual-only and consume the frozen artefact.
-- Do not change repository visibility. `PUB-001` authorizes only the
-  manual Pages workflow for the frozen preview.
+- Repository visibility may change only through a separate explicit owner
+  decision. The owner made that decision on 2026-08-09; it did not authorize
+  automatic publishing or a different candidate.
 - Do not label or share a deployed URL as verified until `VERIFY-001` passes in
   a real browser.
 
@@ -99,6 +102,6 @@ are recorded under `evaluation/reviews/`. `REVIEW-001`, `COMPAT-001`,
 - **Publication candidate:** achieved when this exact-byte manifest and
   manual-only workflow pass review on `main`.
 - **Published preview:** achieved only after the authorized Pages deployment
-  and successful real-browser verification.
+  and successful real-browser verification; achieved on 2026-08-09.
 - **Release grade:** remains a later gate requiring named specialist acceptance
   and current source re-observation for applicable claims.

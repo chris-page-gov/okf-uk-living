@@ -196,3 +196,11 @@ candidate found efficient keyword-led discovery and a complete
 search-to-source journey, but also found that conversational queries can be
 over-constrained and that zero-result searches remove domain browsing. Those
 Explorer findings remain separate from the completed population gate.
+
+On 2026-08-09 the owner authorized making the existing repository public.
+GitHub Pages deployment run `31297841419` then promoted the pinned 1,549-file
+unit successfully. Exact landing and descriptor hashes matched the manifest;
+the public Explorer passed search, Narrative, Graph, Resources and official
+source handoff. `PAGES-001`, `VERIFY-001` and the preview handoff are complete.
+Release grade remains a separate future phase, and the recorded Explorer UI
+findings remain open.

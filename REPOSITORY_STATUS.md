@@ -27,21 +27,24 @@
 - Deterministic local generation: Markdown bundle plus 9,757-concept sharded large
   projection, 879 typed source assertions, 15,810 relationships, record locator,
   adjacency, JSON-LD, YAML-LD and SHACL-style validation report
-- Evaluation: local `uv` environment and visible OKF Explorer 0.5.7 review;
-  Reader/query, graph provenance, browser source, licence/notice and large
-  search/facet journeys pass
+- Evaluation: locked local `uv` validation plus visible public OKF Explorer
+  0.5.7 review; Reader/query, Narrative, Graph, Resources, browser source,
+  licence/notice and large search/facet journeys pass
 - Population assurance: deterministic coverage, omission, link-health,
   review-status and provenance reports pass with zero blocking omissions; six
   visible search-to-source journeys cover national, devolved, local, health,
   legal and private-dependency cases
 - CI: scaffolded but disabled; pull requests do not run remote checks
-- Remote: private GitHub repository created after explicit owner authorization
-- Main protection: PR-only policy documented; server enforcement unavailable
-  on the current private-repository plan and therefore deferred
-- GitHub Pages: population-preview publication authorized on 2026-08-08; the
-  enablement attempt failed with HTTP 422 because the current plan does not
-  support Pages for this private repository; visibility is unchanged
-- Public bundle URL: none
+- Remote: public GitHub repository after explicit owner authorization on
+  2026-08-09; complete source and history are visible
+- Main protection: server-enforced pull requests with zero required approvals;
+  administrators included, conversation resolution required, force-pushes and
+  branch deletion disabled
+- GitHub Pages: exact population preview deployed by manual run `31297841419`
+  and deployment `5815993749`; HTTPS enabled and public-browser verification
+  passed
+- Public bundle URL:
+  `https://chris-page-gov.github.io/okf-uk-living/okf-explorer.json`
 - First slice: missed rubbish merged in PR #3
 - Second slice: merged in PR #4 with separate GB and Northern Ireland learning routes, GB notice,
   England-and-Wales court, Scottish prosecution and Northern Ireland speeding
@@ -64,7 +67,8 @@
   separate gates
 - Publication readiness: the full corpus is a frozen population-complete
   preview with a 1,549-file exact-byte publication manifest; it is not
-  release-grade, and deployment verification remains pending
+  release-grade; landing, descriptor, manifest and public Explorer verification
+  passed on 2026-08-09
 - UI efficiency: six concise representative queries ranked the intended family
   first or second and the missed-rubbish journey reached Narrative, Graph, 13
   official links and a live GOV.UK page; three conversational questions and

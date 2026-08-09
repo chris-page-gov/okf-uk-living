@@ -4,7 +4,7 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **293-family population-complete preview authorized for publication**.
+Status: **293-family population-complete preview published and verified**.
 The Reader, query, graph provenance, browser source handoff and licence-notice
 journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
 also exposes seven reconciled colour facets and static search. The
@@ -15,15 +15,16 @@ authored narratives, typed official links and governed journey graphs across
 all 24 life-course domains. The shared infrastructure now adds
 397 dated GSS geographies, 438 reusable authority/regulator/redress records,
 ten sector maps and metadata-only source-link receipts. Deterministic population
-assurance records zero blocking omissions and freezes the exact local data-plane
+assurance records zero blocking omissions and freezes the exact data-plane
 artifacts. This is not an official service corpus, a release-grade candidate or
-a release-grade service. GitHub rejected Pages enablement because the current
-plan does not support Pages for this private repository, so exact-byte
-deployment and public-browser verification are blocked on an owner choice of
-publication host or visibility. The GitHub repository remains private;
-deterministic evaluation remains local-only, snapshots,
-unbounded or unstaged leaf acquisition and remote CI remain disabled. The only
-authorized hosted action is the manual exact-byte Pages transport.
+a release-grade service. The owner authorized public repository visibility on
+2026-08-09; the exact 1,549-file Pages unit and its Explorer journey then passed
+public-browser verification. Deterministic evaluation remains local-only;
+snapshots, unbounded or unstaged leaf acquisition and remote CI remain disabled.
+The only authorized hosted action is the manual exact-byte Pages transport.
+
+- [Open the verified population preview](https://chris-page-gov.github.io/okf-uk-living/)
+- [Explore the published bundle in OKF Explorer](https://chris-page-gov.github.io/okf-explorer/?bundle=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-uk-living%2Fokf-explorer.json#overview)
 
 ## Start here
 
@@ -53,6 +54,7 @@ authorized hosted action is the manual exact-byte Pages transport.
 - [Frozen local population candidate](evaluation/candidates/population-complete-candidate.v1.yaml)
 - [Generated candidate manifest](generated/assurance/candidate-manifest.json)
 - [Publication authorization](evaluation/publication/population-preview-authorization-2026-08-08.md)
+- [Public deployment verification](evaluation/publication/pages-deployment-verification-2026-08-09.md)
 - [Pages publication unit](publication/README.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
 - [Three vertical-slice fixture contracts](evaluation/fixtures/README.md)
