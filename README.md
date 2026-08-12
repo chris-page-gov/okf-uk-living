@@ -17,11 +17,14 @@ all 24 life-course domains. The shared infrastructure now adds
 ten sector maps and metadata-only source-link receipts. Deterministic population
 assurance records zero blocking omissions and freezes the exact data-plane
 artifacts. This is not an official service corpus, a release-grade candidate or
-a release-grade service. The owner authorized public repository visibility on
+a release-grade service. The owner authorised public repository visibility on
 2026-08-09; the exact 1,549-file Pages unit and its Explorer journey then passed
-public-browser verification. Deterministic evaluation remains local-only;
+public-browser verification. A bounded 1,814-file correction now freezes the
+reviewed `c38f927…` rich relationship runtime; the previously verified site
+remains unchanged until that correction's exact merge is deployed and checked
+in a cache-bypassed browser. Deterministic evaluation remains local-only;
 snapshots, unbounded or unstaged leaf acquisition and remote CI remain disabled.
-The only authorized hosted action is the manual exact-byte Pages transport.
+The only authorised hosted action is the manual exact-byte Pages transport.
 
 - [Open the verified population preview](https://chris-page-gov.github.io/okf-uk-living/)
 - [Explore the published bundle in OKF Explorer](https://chris-page-gov.github.io/okf-explorer/?bundle=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-uk-living%2Fokf-explorer.json#overview)

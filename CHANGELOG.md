@@ -6,6 +6,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- A 1,814-file publication freeze for the rich relationship runtime generated
+  at reviewed main commit `c38f927…`. The manifest pins every served SHA-256,
+  262 rich-runtime files and the updated population-assurance identity without
+  changing semantic authority, corpus scope, release grade or the zero-snapshot
+  boundary. The manual workflow now requires the exact protected-main merge
+  commit and will not deploy on a pull request or ordinary merge.
+
 - Cross-repository OKF 0.2 semantic contract in `okf.semantic.json` plus
   repository-local agent guidance for the additive Bundle Wiki YAML-LD
   profile. The deterministic large-corpus build now emits all 15,810 directed

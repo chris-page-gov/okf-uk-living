@@ -72,22 +72,22 @@ acquisition, CI or publication.
 The original sample sequence is defined in the
 <a href="docs/review-and-publication-plan.md">[three-slice review and publication plan](docs/review-and-publication-plan.md)</a>:
 
-The owner superseded that proposed sample on 2026-08-08 by authorizing the
+The owner superseded that proposed sample on 2026-08-08 by authorising the
 population-complete corpus as a public preview. `SCOPE-001`, `CAND-001` and
-`PUB-001` are therefore complete for the preview. `PAGES-001` must promote the
-exact 1,549-file manifest through the manual-only workflow, after which
-`VERIFY-001` must test the exact deployed landing page, bundle identity,
-search, Narrative, Graph, Resources and official-source handoff.
+`PUB-001` are therefore complete for the preview. The first 1,549-file
+publication completed `PAGES-001` and `VERIFY-001`. `CAND-002` now freezes the
+rich-runtime correction as 1,814 exact files from reviewed data commit
+`c38f927…`; `PAGES-002` and `VERIFY-002` remain separate exact-merge deployment
+and cache-bypassed browser gates.
 
 The manual Pages enablement attempt failed with GitHub HTTP 422 because the
-current plan does not support Pages for the private repository. `PAGES-001` is
-therefore blocked on an explicit owner choice between making this repository
-public and using a separate public publication repository. Local UI review
-continues to count as evaluation evidence, not public verification.
-The manual workflow checks out publication merge `980c7a9…` so later tracking
-and review evidence cannot change the frozen transport bytes.
+current plan did not support Pages for the private repository. The owner made
+the repository public on 2026-08-09 and resolved that historical blocker. The
+current manual workflow accepts an exact protected-main merge commit, verifies
+the event and checkout identities against it, and transports only hashes in the
+reviewed manifest; later commits cannot be substituted implicitly.
 
-The owner resolved the blocker on 2026-08-09 by authorizing public visibility
+The owner resolved the blocker on 2026-08-09 by authorising public visibility
 for the existing repository. Manual run `31297841419` deployed the pinned unit;
 deployment `5815993749` and exact-browser verification passed. `PAGES-001` and
 `VERIFY-001` are complete. The published population preview is not release
@@ -128,9 +128,11 @@ plus Bundle Wiki YAML-LD contract: absolute semantic identities and predicates,
 validated local routes, direct triples, evidence-bearing reified assertions,
 authority, derivation, freshness and rights. This is an interoperability and
 authoring-boundary improvement, not a new scope, release-grade decision or
-publication authorization. The already frozen and verified Pages preview is
-unchanged; a future publication candidate must be rebuilt and reviewed through
-the existing freeze and exact-byte gates.
+publication authorisation. The already frozen and verified Pages preview is
+unchanged by that migration itself. The owner subsequently authorised a bounded
+publication correction: its manifest freezes the `c38f927…` rich-runtime bytes,
+and it must pass the existing exact-merge and real-browser gates before the new
+public descriptor is labelled verified.
 
 The local producer and checker validate every semantic assertion and its
 runtime projection against the digest-pinned shared Draft 2020-12 schema.

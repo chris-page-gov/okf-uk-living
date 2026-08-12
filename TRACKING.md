@@ -43,6 +43,9 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | VERIFY-001 | Verify the exact public sample in a real browser | Complete | Landing and descriptor hashes matched; public Explorer passed search, Narrative, 37-edge Graph, 13-source Resources and GOV.UK handoff |
 | RELEASE-001 | Hand off a verified initial sample | Complete: population preview | Verified URLs may be shared with the visible non-release-grade and 291-specialist-review limitations |
 | SEM-001 | Reconcile the large corpus with the shared OKF 0.2 plus Bundle Wiki YAML-LD relationship contract | Complete: strict local pass | `okf.semantic.json` declares the source/build/Reader boundary; the canonical 16-file profile, vendor lock and assertion schema are byte-exact; one deterministic source emits 15,810 direct triples, reified assertions and bounded official/normalised runtime planes with a SHA-256 route locator; the merged Explorer reconciler reports conformance with zero warnings; frozen publication bytes were not changed |
+| CAND-002 | Freeze the rich-runtime publication correction | Complete: local pass | The 1,814-file manifest pins reviewed data commit `c38f927…`, 262 rich-runtime files, about 312 MB, candidate manifest `55f84282…`, zero snapshots and release grade false |
+| PAGES-002 | Deploy the rich-runtime correction | Pending exact merge | The owner authorised one manual run for the protected-main merge of the bounded freeze; pull requests and ordinary merges do not deploy |
+| VERIFY-002 | Verify the rich-runtime publication | Pending deployment | Cache-bypassed browser checks must match the exact descriptor and runtime identities and complete a citizen search-to-source journey before the corrected URLs are labelled verified |
 | UI-001 | Make conversational static search bounded and useful | Open: Explorer follow-up | Three ordinary-language questions returned zero results while concise governed terms ranked the intended families first or second |
 | UI-002 | Preserve domain browsing for unmatched queries | Open: Explorer follow-up | Zero-result search currently reduces all facets to zero instead of offering the approved 24-domain fallback |
 | UI-003 | Reduce facet and graph interpretation cost | Open: design follow-up | Group display-equivalent jurisdiction identities, prioritize journey edges and collapse non-discriminating facets without erasing provenance |
@@ -56,9 +59,10 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   deletion disabled.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
-- GitHub Pages: exact 1,549-file population preview deployed and verified by
-  manual run `31297841419`; ordinary pushes, merges and pull requests do not
-  update Pages.
+- GitHub Pages: the historical 1,549-file population preview remains deployed
+  and verified by manual run `31297841419`. The 1,814-file rich-runtime
+  correction is frozen but not yet deployed; ordinary pushes, merges and pull
+  requests do not update Pages.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
   references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
   sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8

@@ -371,8 +371,13 @@ handoffs, semantic projections, assurance reports, licence and notice. It does
 not publish authored source dossiers, research working files or acquired
 source content.
 
+The workflow also requires the exact protected-main merge commit as its
+`publication_commit` input and rejects a different workflow event or checkout.
+The manifest records the reviewed data commit separately, so a transport-only
+descriptor envelope cannot silently change the semantic or rich-runtime bytes.
+
 The publication descriptor may differ from the local descriptor only in its
-description, status, owner authorization flag and the explicit publication
+description, status, owner authorisation flag and the explicit publication
 envelope. The validator rejects any other drift. Keep `release_grade: false`,
 the specialist-review count and zero-snapshot boundary visible until a later
 review changes them.

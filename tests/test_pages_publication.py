@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from prepare_pages_publication import (  # noqa: E402
     EXPECTED_CANDIDATE_ID,
-    PUBLICATION_SOURCE_COMMIT,
+    PUBLICATION_DATA_COMMIT,
     descriptor_errors,
     load_frozen_manifest,
     validate_frozen_publication,
@@ -28,10 +28,20 @@ class PagesPublicationTests(unittest.TestCase):
     def test_manifest_is_complete_and_synchronized(self) -> None:
         self.assertEqual([], validate_frozen_publication(self.manifest))
         self.assertEqual(EXPECTED_CANDIDATE_ID, self.manifest["candidate_id"])
-        self.assertGreater(self.manifest["file_count"], 1_500)
+        self.assertEqual(1_814, self.manifest["file_count"])
         self.assertFalse(self.manifest["release_grade"])
         self.assertFalse(self.manifest["source_snapshots_acquired"])
         self.assertFalse(self.manifest["source_response_bodies_retained"])
+        self.assertEqual(PUBLICATION_DATA_COMMIT, self.manifest["publication_data_commit"])
+        targets = {item["target"] for item in self.manifest["files"]}
+        self.assertIn("large/data/relationship-runtime/manifest.json", targets)
+        self.assertIn(
+            "large/data/relationship-runtime/route-locator/manifest.json", targets
+        )
+        self.assertEqual(
+            262,
+            sum("relationship-runtime" in target for target in targets),
+        )
 
     def test_manifest_has_unique_safe_targets(self) -> None:
         targets = [item["target"] for item in self.manifest["files"]]
@@ -45,7 +55,10 @@ class PagesPublicationTests(unittest.TestCase):
         landing = (ROOT / "publication/index.html").read_text(encoding="utf-8")
         self.assertIn("workflow_dispatch:", workflow)
         self.assertNotIn("\n  push:", workflow)
-        self.assertIn(f"ref: {PUBLICATION_SOURCE_COMMIT}", workflow)
+        self.assertIn("publication_commit:", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
+        self.assertIn("EXPECTED_PUBLICATION_COMMIT: ${{ inputs.publication_commit }}", workflow)
+        self.assertIn('test "$GITHUB_SHA" = "$EXPECTED_PUBLICATION_COMMIT"', workflow)
         self.assertIn("population-complete preview", landing)
         self.assertIn("https://chris-page-gov.github.io/okf-explorer/", landing)
         self.assertIn("okf-uk-living%2Fokf-explorer.json", landing)
