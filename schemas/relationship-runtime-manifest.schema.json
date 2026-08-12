@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-runtime-manifest.schema.json",
+  "title": "A Life in the UK rich relationship runtime manifest",
+  "type": "object",
+  "required": [
+    "@id", "schema", "snapshot", "generated_at", "semantic_manifest",
+    "assertion_contract", "row_contract", "default_planes", "route_locator",
+    "planes", "totals", "loading_policy"
+  ],
+  "properties": {
+    "@id": {"$ref": "#/$defs/iri"},
+    "schema": {"const": "okf-rich-relationship-runtime-manifest.v1"},
+    "snapshot": {"$ref": "#/$defs/nonEmpty"},
+    "generated_at": {"$ref": "#/$defs/nonEmpty"},
+    "semantic_manifest": {"$ref": "#/$defs/path"},
+    "assertion_contract": {"$ref": "#/$defs/path"},
+    "row_contract": {"$ref": "#/$defs/path"},
+    "default_planes": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"$ref": "#/$defs/nonEmpty"}
+    },
+    "planes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "id", "active", "lifecycle", "authority_classes", "assertions", "chunks"],
+        "properties": {
+          "name": {"$ref": "#/$defs/nonEmpty"},
+          "id": {"$ref": "#/$defs/iri"},
+          "active": {"type": "boolean"},
+          "lifecycle": {"enum": ["active", "historical", "rejected"]},
+          "authority_classes": {
+            "type": "array", "uniqueItems": true,
+            "items": {"enum": ["official", "derived", "model-assisted", "synthetic", "unclassified"]}
+          },
+          "assertions": {"type": "integer", "minimum": 0},
+          "chunks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "path", "media_type", "content_encoding", "bytes", "sha256", "count", "records"],
+              "properties": {
+                "id": {"$ref": "#/$defs/iri"},
+                "path": {"$ref": "#/$defs/path"},
+                "media_type": {"const": "application/json"},
+                "content_encoding": {"const": "gzip"},
+                "bytes": {"type": "integer", "minimum": 1},
+                "sha256": {"$ref": "#/$defs/sha256"},
+                "count": {"type": "integer", "minimum": 0},
+                "records": {"type": "integer", "minimum": 0}
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": ["active_assertions", "historical_assertions", "rejected_assertions", "all_assertions", "chunks"],
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "loading_policy": {"$ref": "#/$defs/nonEmpty"},
+    "route_locator": {
+      "type": "object",
+      "required": ["id", "path", "routes", "buckets", "sha256"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"},
+        "path": {"$ref": "#/$defs/path"},
+        "routes": {"type": "integer", "minimum": 1},
+        "buckets": {"type": "integer", "minimum": 1, "maximum": 256},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "nonEmpty": {"type": "string", "minLength": 1},
+    "iri": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$"},
+    "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\s]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

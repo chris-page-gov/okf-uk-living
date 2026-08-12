@@ -6,6 +6,25 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Cross-repository OKF 0.2 semantic contract in `okf.semantic.json` plus
+  repository-local agent guidance for the additive Bundle Wiki YAML-LD
+  profile. The deterministic large-corpus build now emits all 15,810 directed
+  relationships with absolute entity, predicate and assertion IRIs, validated
+  local routes, preferred and inverse labels, status, scope, authority,
+  derivation, observation time, evidence and rights. The YAML-LD/JSON-LD graph
+  carries both each direct triple and its evidence-bearing reified assertion;
+  a digest-pinned local copy of the shared Draft 2020-12 assertion schema now
+  validates all 15,810 semantic assertions and all 15,810 runtime rows before
+  a conformance receipt can be emitted. The finalized pin requires both `kind`
+  and `label` and canonical, credential-free HTTP(S) authority, evidence,
+  evidence-resource and rights URLs. The canonical 16-file profile is now
+  vendored with its digest lock, and the canonical assertion schema is pinned
+  byte for byte. Explorer can hydrate the same assertions from two bounded,
+  active authority planes through digest-bound gzip shards and a SHA-256 route
+  locator whose per-plane commitments cover every incident assertion.
+  Projection checks and the full unit suite pass. This local regeneration does
+  not modify or republish the frozen population preview.
+
 - Public deployment evidence for workflow run `31297841419`, deployment
   `5815993749`, the exact manifest and descriptor hashes, and the verified
   search-to-GOV.UK Explorer journey.

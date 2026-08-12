@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/semantic-assertion.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/semantic-assertion.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/semantic-assertion.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/semantic-assertion.schema.json&quot;,
+  &quot;title&quot;: &quot;OKF evidence-bearing semantic relationship assertion&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;@id&quot;,
+    &quot;@type&quot;,
+    &quot;source&quot;,
+    &quot;predicate&quot;,
+    &quot;target&quot;,
+    &quot;kind&quot;,
+    &quot;label&quot;,
+    &quot;inverse_label&quot;,
+    &quot;assertion_status&quot;,
+    &quot;assertion_scope&quot;,
+    &quot;authority&quot;,
+    &quot;derivation&quot;,
+    &quot;observed_at&quot;,
+    &quot;evidence&quot;,
+    &quot;rights&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;@id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;},
+    &quot;@type&quot;: {
+      &quot;oneOf&quot;: [
+        {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+        {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+          &quot;minItems&quot;: 1,
+          &quot;uniqueItems&quot;: true
+        }
+      ]
+    },
+    &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;predicate&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;target&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;kind&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+    &quot;label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+    &quot;inverse_label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+    &quot;assertion_status&quot;: {
+      &quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;model-derived&quot;]
+    },
+    &quot;assertion_scope&quot;: {
+      &quot;enum&quot;: [&quot;real-world&quot;, &quot;synthetic-fixture&quot;]
+    },
+    &quot;authority&quot;: {&quot;$ref&quot;: &quot;#/$defs/authority&quot;},
+    &quot;derivation&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;derivation_activity&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;rule&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+    &quot;supporting_assertions&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+      &quot;minItems&quot;: 1,
+      &quot;uniqueItems&quot;: true
+    },
+    &quot;confidence_score&quot;: {
+      &quot;type&quot;: &quot;number&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 1
+    },
+    &quot;strength&quot;: {&quot;type&quot;: &quot;number&quot;},
+    &quot;count&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0},
+    &quot;observed_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot;},
+    &quot;stale_after&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot;},
+    &quot;review_status&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+    &quot;evidence&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/evidence&quot;},
+      &quot;minItems&quot;: 1
+    },
+    &quot;rights&quot;: {&quot;$ref&quot;: &quot;#/$defs/rights&quot;}
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {&quot;assertion_scope&quot;: {&quot;const&quot;: &quot;synthetic-fixture&quot;}},
+        &quot;required&quot;: [&quot;assertion_scope&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;properties&quot;: {
+          &quot;authority&quot;: {
+            &quot;properties&quot;: {&quot;class&quot;: {&quot;const&quot;: &quot;synthetic&quot;}},
+            &quot;required&quot;: [&quot;class&quot;]
+          }
+        }
+      }
+    },
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {
+          &quot;assertion_scope&quot;: {&quot;const&quot;: &quot;real-world&quot;},
+          &quot;assertion_status&quot;: {&quot;const&quot;: &quot;official&quot;}
+        },
+        &quot;required&quot;: [&quot;assertion_scope&quot;, &quot;assertion_status&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;properties&quot;: {
+          &quot;authority&quot;: {
+            &quot;properties&quot;: {&quot;class&quot;: {&quot;const&quot;: &quot;official&quot;}},
+            &quot;required&quot;: [&quot;class&quot;]
+          }
+        }
+      }
+    },
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {
+          &quot;assertion_scope&quot;: {&quot;const&quot;: &quot;real-world&quot;},
+          &quot;assertion_status&quot;: {&quot;enum&quot;: [&quot;normalized&quot;, &quot;inferred&quot;]}
+        },
+        &quot;required&quot;: [&quot;assertion_scope&quot;, &quot;assertion_status&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;properties&quot;: {
+          &quot;authority&quot;: {
+            &quot;properties&quot;: {&quot;class&quot;: {&quot;const&quot;: &quot;derived&quot;}},
+            &quot;required&quot;: [&quot;class&quot;]
+          }
+        }
+      }
+    },
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {
+          &quot;assertion_scope&quot;: {&quot;const&quot;: &quot;real-world&quot;},
+          &quot;assertion_status&quot;: {&quot;const&quot;: &quot;model-derived&quot;}
+        },
+        &quot;required&quot;: [&quot;assertion_scope&quot;, &quot;assertion_status&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;properties&quot;: {
+          &quot;authority&quot;: {
+            &quot;properties&quot;: {&quot;class&quot;: {&quot;const&quot;: &quot;model-assisted&quot;}},
+            &quot;required&quot;: [&quot;class&quot;]
+          }
+        }
+      }
+    },
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {&quot;assertion_status&quot;: {&quot;const&quot;: &quot;inferred&quot;}},
+        &quot;required&quot;: [&quot;assertion_status&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;required&quot;: [&quot;rule&quot;, &quot;supporting_assertions&quot;, &quot;confidence_score&quot;, &quot;derivation_activity&quot;]
+      }
+    },
+    {
+      &quot;if&quot;: {
+        &quot;properties&quot;: {&quot;assertion_status&quot;: {&quot;const&quot;: &quot;model-derived&quot;}},
+        &quot;required&quot;: [&quot;assertion_status&quot;]
+      },
+      &quot;then&quot;: {
+        &quot;required&quot;: [&quot;confidence_score&quot;, &quot;derivation_activity&quot;, &quot;review_status&quot;]
+      }
+    }
+  ],
+  &quot;additionalProperties&quot;: true,
+  &quot;$defs&quot;: {
+    &quot;nonEmptyString&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1,
+      &quot;pattern&quot;: &quot;\\S&quot;
+    },
+    &quot;iriValue&quot;: {
+      &quot;oneOf&quot;: [
+        {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$&quot;},
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;required&quot;: [&quot;@id&quot;],
+          &quot;properties&quot;: {
+            &quot;@id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$&quot;}
+          },
+          &quot;additionalProperties&quot;: true
+        }
+      ]
+    },
+    &quot;authority&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;class&quot;, &quot;label&quot;, &quot;source&quot;],
+      &quot;properties&quot;: {
+        &quot;class&quot;: {
+          &quot;enum&quot;: [&quot;official&quot;, &quot;derived&quot;, &quot;model-assisted&quot;, &quot;synthetic&quot;, &quot;unclassified&quot;]
+        },
+        &quot;label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/canonicalWebUrl&quot;}
+      },
+      &quot;additionalProperties&quot;: false
+    },
+    &quot;sha256&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;},
+    &quot;evidence&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;@id&quot;, &quot;type&quot;, &quot;url&quot;, &quot;source_field&quot;, &quot;source_value_sha256&quot;, &quot;retrieved_at&quot;],
+      &quot;properties&quot;: {
+        &quot;@id&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;},
+        &quot;type&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;url&quot;: {&quot;$ref&quot;: &quot;#/$defs/canonicalWebUrl&quot;},
+        &quot;resource&quot;: {&quot;$ref&quot;: &quot;#/$defs/canonicalWebUrl&quot;},
+        &quot;source_artifact&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;source_sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;},
+        &quot;source_field&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;field_provenance&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;source_value&quot;: {},
+        &quot;source_value_sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;},
+        &quot;source_value_hash_canonicalization&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;literal_sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;},
+        &quot;locator&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;normalization&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+        &quot;rule_id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iriValue&quot;},
+        &quot;rationale&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;},
+        &quot;retrieved_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;date-time&quot;}
+      },
+      &quot;additionalProperties&quot;: true
+    },
+    &quot;rights&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;source&quot;, &quot;assertion&quot;],
+      &quot;properties&quot;: {
+        &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/canonicalWebUrl&quot;},
+        &quot;assertion&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmptyString&quot;}
+      },
+      &quot;additionalProperties&quot;: true
+    },
+    &quot;canonicalWebUrl&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;uri&quot;,
+      &quot;allOf&quot;: [
+        {&quot;pattern&quot;: &quot;^https?://(?:\\[[0-9A-Fa-f:.]+\\]|<a href="?:[A-Za-z0-9.-]*[A-Za-z0-9]">[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])</a>?)(?::(?:[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?(?:[/?#]|$)&quot;},
+        {&quot;pattern&quot;: &quot;^[\\u0021-\\u007e]+$&quot;},
+        {&quot;pattern&quot;: &quot;^(?!.*[\\\&quot;&#x27;&lt;&gt;\\\\^`{|}])&quot;},
+        {&quot;pattern&quot;: &quot;^(?!.*%(?![0-9A-Fa-f]{2}))&quot;},
+        {&quot;pattern&quot;: &quot;^https?://(?![^/?#]*@)&quot;}
+      ]
+    }
+  }
+}
+</pre>
+</body>
+</html>

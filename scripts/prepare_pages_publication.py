@@ -51,12 +51,12 @@ def load_frozen_manifest() -> dict[str, Any]:
 
 
 def validate_frozen_publication(manifest: dict[str, Any]) -> list[str]:
-    errors: list[str] = []
+    errors = descriptor_errors(frozen=True)
     if not MANIFEST_PATH.is_file():
         return ["publication/pages-file-manifest.json is missing"]
     current = MANIFEST_PATH.read_bytes()
     if hashlib.sha256(current).hexdigest() != EXPECTED_PAGES_MANIFEST_SHA256:
-        errors.append("tracked Pages manifest differs from the owner-authorized manifest")
+        errors.append("tracked Pages manifest differs from the owner-authorised manifest")
     if json.loads(current) != manifest:
         errors.append("tracked Pages manifest differs from the frozen publication commit")
     if manifest.get("file_count") != len(manifest.get("files", [])):
@@ -96,13 +96,25 @@ def publication_files() -> list[tuple[Path, Path]]:
     return files
 
 
-def descriptor_errors() -> list[str]:
+def descriptor_errors(*, frozen: bool = False) -> list[str]:
     errors: list[str] = []
-    local = json.loads(LOCAL_DESCRIPTOR_PATH.read_text(encoding="utf-8"))
-    public = json.loads(PUBLIC_DESCRIPTOR_PATH.read_text(encoding="utf-8"))
-    candidate = json.loads(CANDIDATE_MANIFEST_PATH.read_text(encoding="utf-8"))
-    if sha256_path(CANDIDATE_MANIFEST_PATH) != EXPECTED_CANDIDATE_MANIFEST_SHA256:
-        errors.append("candidate manifest hash differs from the owner-authorized candidate")
+    if frozen:
+        local_bytes = git_file_bytes(ASSURANCE_COMMIT, Path("okf-explorer.json"))
+        public_bytes = git_file_bytes(
+            PUBLICATION_SOURCE_COMMIT, Path("publication/okf-explorer.json")
+        )
+        candidate_bytes = git_file_bytes(
+            ASSURANCE_COMMIT, Path("generated/assurance/candidate-manifest.json")
+        )
+    else:
+        local_bytes = LOCAL_DESCRIPTOR_PATH.read_bytes()
+        public_bytes = PUBLIC_DESCRIPTOR_PATH.read_bytes()
+        candidate_bytes = CANDIDATE_MANIFEST_PATH.read_bytes()
+    local = json.loads(local_bytes)
+    public = json.loads(public_bytes)
+    candidate = json.loads(candidate_bytes)
+    if hashlib.sha256(candidate_bytes).hexdigest() != EXPECTED_CANDIDATE_MANIFEST_SHA256:
+        errors.append("candidate manifest hash differs from the owner-authorised candidate")
     if candidate.get("candidate_id") != EXPECTED_CANDIDATE_ID:
         errors.append("candidate manifest identity is unexpected")
     if candidate.get("gates", {}).get("population_complete") is not True:
@@ -118,7 +130,7 @@ def descriptor_errors() -> list[str]:
     comparable_public["status"] = local.get("status")
     comparable_public.setdefault("source", {})["publication_authorized"] = False
     if comparable_public != local:
-        errors.append("public descriptor changes fields outside the authorized publication envelope")
+        errors.append("public descriptor changes fields outside the authorised publication envelope")
 
     publication = public.get("publication", {})
     expected_publication = {
@@ -133,7 +145,7 @@ def descriptor_errors() -> list[str]:
         if publication.get(field) != expected:
             errors.append(f"publication.{field} must be {expected!r}")
     if public.get("source", {}).get("publication_authorized") is not True:
-        errors.append("public descriptor must record owner publication authorization")
+        errors.append("public descriptor must record owner publication authorisation")
     if public.get("source", {}).get("source_snapshots") is not False:
         errors.append("public descriptor must retain zero source snapshots")
     return errors
@@ -233,7 +245,7 @@ def main() -> int:
     parser.add_argument(
         "--frozen",
         action="store_true",
-        help="verify the exact owner-authorized manifest from the pinned publication commit",
+        help="verify the exact owner-authorised manifest from the pinned publication commit",
     )
     parser.add_argument("--destination", type=Path)
     args = parser.parse_args()

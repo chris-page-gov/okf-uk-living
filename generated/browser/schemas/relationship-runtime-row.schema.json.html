@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/relationship-runtime-row.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/relationship-runtime-row.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/relationship-runtime-row.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-runtime-row.schema.json&quot;,
+  &quot;title&quot;: &quot;A Life in the UK rich relationship runtime row&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;schema&quot;, &quot;id&quot;, &quot;assertion_id&quot;, &quot;source&quot;, &quot;target&quot;, &quot;source_route&quot;,
+    &quot;target_route&quot;, &quot;source_iri&quot;, &quot;target_iri&quot;, &quot;predicate&quot;, &quot;predicate_iri&quot;,
+    &quot;kind&quot;, &quot;label&quot;, &quot;inverse_label&quot;, &quot;direction&quot;, &quot;assertion_status&quot;,
+    &quot;assertion_scope&quot;, &quot;authority&quot;, &quot;derivation&quot;, &quot;observed_at&quot;, &quot;evidence&quot;,
+    &quot;rights&quot;, &quot;plane&quot;, &quot;lifecycle&quot;, &quot;active&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;schema&quot;: {&quot;const&quot;: &quot;okf-relationship-runtime-row.v1&quot;},
+    &quot;id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;assertion_id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/route&quot;},
+    &quot;target&quot;: {&quot;$ref&quot;: &quot;#/$defs/route&quot;},
+    &quot;source_route&quot;: {&quot;$ref&quot;: &quot;#/$defs/route&quot;},
+    &quot;target_route&quot;: {&quot;$ref&quot;: &quot;#/$defs/route&quot;},
+    &quot;source_iri&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;target_iri&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;predicate&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;predicate_iri&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;kind&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;inverse_label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;direction&quot;: {&quot;const&quot;: &quot;source-to-target&quot;},
+    &quot;assertion_status&quot;: {
+      &quot;enum&quot;: [&quot;official&quot;, &quot;normalized&quot;, &quot;inferred&quot;, &quot;model-derived&quot;]
+    },
+    &quot;assertion_scope&quot;: {&quot;enum&quot;: [&quot;real-world&quot;, &quot;synthetic-fixture&quot;]},
+    &quot;authority&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;class&quot;, &quot;label&quot;, &quot;source&quot;],
+      &quot;properties&quot;: {
+        &quot;class&quot;: {
+          &quot;enum&quot;: [&quot;official&quot;, &quot;derived&quot;, &quot;model-assisted&quot;, &quot;synthetic&quot;, &quot;unclassified&quot;]
+        },
+        &quot;label&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+        &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/httpUrl&quot;}
+      },
+      &quot;additionalProperties&quot;: true
+    },
+    &quot;derivation&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;observed_at&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;evidence&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;minItems&quot;: 1,
+      &quot;maxItems&quot;: 16,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;required&quot;: [&quot;@id&quot;, &quot;type&quot;, &quot;url&quot;, &quot;source_field&quot;, &quot;source_value_sha256&quot;, &quot;retrieved_at&quot;],
+        &quot;properties&quot;: {
+          &quot;@id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+          &quot;type&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+          &quot;url&quot;: {&quot;$ref&quot;: &quot;#/$defs/httpUrl&quot;},
+          &quot;source_field&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+          &quot;source_value_sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;},
+          &quot;retrieved_at&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;}
+        },
+        &quot;additionalProperties&quot;: true
+      }
+    },
+    &quot;rights&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;source&quot;, &quot;assertion&quot;],
+      &quot;properties&quot;: {
+        &quot;source&quot;: {&quot;$ref&quot;: &quot;#/$defs/httpUrl&quot;},
+        &quot;assertion&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;}
+      },
+      &quot;additionalProperties&quot;: true
+    },
+    &quot;plane&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;lifecycle&quot;: {&quot;enum&quot;: [&quot;active&quot;, &quot;historical&quot;, &quot;rejected&quot;]},
+    &quot;active&quot;: {&quot;type&quot;: &quot;boolean&quot;}
+  },
+  &quot;additionalProperties&quot;: true,
+  &quot;$defs&quot;: {
+    &quot;nonEmpty&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;iri&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1,
+      &quot;pattern&quot;: &quot;^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$&quot;
+    },
+    &quot;route&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^[^\\s?#]+$&quot;},
+    &quot;httpUrl&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;, &quot;pattern&quot;: &quot;^https?://&quot;},
+    &quot;sha256&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;}
+  }
+}
+</pre>
+</body>
+</html>

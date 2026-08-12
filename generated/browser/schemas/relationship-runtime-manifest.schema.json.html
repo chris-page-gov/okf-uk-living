@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/relationship-runtime-manifest.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/relationship-runtime-manifest.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/relationship-runtime-manifest.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-runtime-manifest.schema.json&quot;,
+  &quot;title&quot;: &quot;A Life in the UK rich relationship runtime manifest&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;@id&quot;, &quot;schema&quot;, &quot;snapshot&quot;, &quot;generated_at&quot;, &quot;semantic_manifest&quot;,
+    &quot;assertion_contract&quot;, &quot;row_contract&quot;, &quot;default_planes&quot;, &quot;route_locator&quot;,
+    &quot;planes&quot;, &quot;totals&quot;, &quot;loading_policy&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;@id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+    &quot;schema&quot;: {&quot;const&quot;: &quot;okf-rich-relationship-runtime-manifest.v1&quot;},
+    &quot;snapshot&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;generated_at&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;semantic_manifest&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;},
+    &quot;assertion_contract&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;},
+    &quot;row_contract&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;},
+    &quot;default_planes&quot;: {
+      &quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;uniqueItems&quot;: true,
+      &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;}
+    },
+    &quot;planes&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;minItems&quot;: 1,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;required&quot;: [&quot;name&quot;, &quot;id&quot;, &quot;active&quot;, &quot;lifecycle&quot;, &quot;authority_classes&quot;, &quot;assertions&quot;, &quot;chunks&quot;],
+        &quot;properties&quot;: {
+          &quot;name&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+          &quot;id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+          &quot;active&quot;: {&quot;type&quot;: &quot;boolean&quot;},
+          &quot;lifecycle&quot;: {&quot;enum&quot;: [&quot;active&quot;, &quot;historical&quot;, &quot;rejected&quot;]},
+          &quot;authority_classes&quot;: {
+            &quot;type&quot;: &quot;array&quot;, &quot;uniqueItems&quot;: true,
+            &quot;items&quot;: {&quot;enum&quot;: [&quot;official&quot;, &quot;derived&quot;, &quot;model-assisted&quot;, &quot;synthetic&quot;, &quot;unclassified&quot;]}
+          },
+          &quot;assertions&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0},
+          &quot;chunks&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;required&quot;: [&quot;id&quot;, &quot;path&quot;, &quot;media_type&quot;, &quot;content_encoding&quot;, &quot;bytes&quot;, &quot;sha256&quot;, &quot;count&quot;, &quot;records&quot;],
+              &quot;properties&quot;: {
+                &quot;id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+                &quot;path&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;},
+                &quot;media_type&quot;: {&quot;const&quot;: &quot;application/json&quot;},
+                &quot;content_encoding&quot;: {&quot;const&quot;: &quot;gzip&quot;},
+                &quot;bytes&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1},
+                &quot;sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;},
+                &quot;count&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0},
+                &quot;records&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0}
+              },
+              &quot;additionalProperties&quot;: true
+            }
+          }
+        },
+        &quot;additionalProperties&quot;: true
+      }
+    },
+    &quot;totals&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;active_assertions&quot;, &quot;historical_assertions&quot;, &quot;rejected_assertions&quot;, &quot;all_assertions&quot;, &quot;chunks&quot;],
+      &quot;additionalProperties&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0}
+    },
+    &quot;loading_policy&quot;: {&quot;$ref&quot;: &quot;#/$defs/nonEmpty&quot;},
+    &quot;route_locator&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;path&quot;, &quot;routes&quot;, &quot;buckets&quot;, &quot;sha256&quot;],
+      &quot;properties&quot;: {
+        &quot;id&quot;: {&quot;$ref&quot;: &quot;#/$defs/iri&quot;},
+        &quot;path&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;},
+        &quot;routes&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1},
+        &quot;buckets&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1, &quot;maximum&quot;: 256},
+        &quot;sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;}
+      },
+      &quot;additionalProperties&quot;: true
+    }
+  },
+  &quot;additionalProperties&quot;: true,
+  &quot;$defs&quot;: {
+    &quot;nonEmpty&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;iri&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$&quot;},
+    &quot;path&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\s]+$&quot;},
+    &quot;sha256&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;}
+  }
+}
+</pre>
+</body>
+</html>

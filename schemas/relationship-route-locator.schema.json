@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-route-locator.schema.json",
+  "title": "A Life in the UK relationship route locator",
+  "type": "object",
+  "required": ["schema", "generated_at", "hash_algorithm", "bucket_path_template", "buckets", "counts"],
+  "properties": {
+    "schema": {"const": "okf-rich-relationship-route-locator.v1"},
+    "generated_at": {"type": "string", "minLength": 1},
+    "hash_algorithm": {"const": "sha256-utf8-first-byte-hex"},
+    "bucket_path_template": {"type": "string", "pattern": "\\{prefix\\}"},
+    "buckets": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "required": ["bucket", "path", "content_encoding", "bytes", "sha256", "routes", "chunk_references"],
+        "properties": {
+          "bucket": {"$ref": "#/$defs/prefix"},
+          "path": {"$ref": "#/$defs/path"},
+          "content_encoding": {"const": "gzip"},
+          "bytes": {"type": "integer", "minimum": 1},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "routes": {"type": "integer", "minimum": 1},
+          "chunk_references": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": true
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["routes", "buckets", "chunk_references"],
+      "properties": {
+        "routes": {"type": "integer", "minimum": 1},
+        "buckets": {"type": "integer", "minimum": 1, "maximum": 256},
+        "chunk_references": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "prefix": {"type": "string", "pattern": "^[0-9a-f]{2}$"},
+    "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\s]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

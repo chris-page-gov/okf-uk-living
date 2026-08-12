@@ -3,14 +3,22 @@
 
 from __future__ import annotations
 
+import gzip
+import hashlib
 import json
 import math
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from build_large_corpus import FACETS, ROOT, build_outputs
+from build_large_corpus import FACETS, ROOT, build_outputs, relationship_bucket
 from check_service_denominator import load_service_denominator, validate_service_denominator
 from life_course_dossiers import load_dossiers, resolve_sources
+from life_course_projection import PREDICATE_BASE
+from semantic_assertion_validation import (
+    runtime_relationship_as_assertion,
+    validate_relationship_planes,
+)
 
 
 def load_json(path: str) -> Any:
@@ -27,6 +35,9 @@ def validate_large_projection() -> list[str]:
         target = ROOT / path
         if not target.is_file():
             errors.append(f"{path.as_posix()} is missing")
+        elif isinstance(content, bytes):
+            if target.read_bytes() != content:
+                errors.append(f"{path.as_posix()} is stale")
         elif target.read_text(encoding="utf-8") != content:
             errors.append(f"{path.as_posix()} is stale")
     if errors:
@@ -42,6 +53,12 @@ def validate_large_projection() -> list[str]:
     search_postings = load_json("large/data/search/postings.json").get("tokens", {})
     resources = load_json("large/data/resources-0.json")
     relationships = load_json("large/data/relationships-0.json")
+    runtime_reference = descriptor.get("entrypoints", {}).get(
+        "relationship_runtime", {}
+    )
+    runtime_path = str(runtime_reference.get("path", ""))
+    runtime = load_json(runtime_path) if runtime_path else {}
+    semantic = load_json("generated/semantic/life-course-corpus.jsonld")
     locator = load_json("large/data/record-locator.json")
     adjacency = load_json("large/data/relationship-adjacency.json")
     validation = load_json("large/data/validation-report.json")
@@ -65,6 +82,50 @@ def validate_large_projection() -> list[str]:
         errors.append("descriptor must preserve the publication gate")
     if manifest.get("indexes", {}).get("overview") != "large/data/overview.json":
         errors.append("manifest must expose an overview index")
+    runtime_bytes = (ROOT / runtime_path).read_bytes() if runtime_path else b""
+    runtime_integrity = descriptor.get("entrypoint_integrity", {}).get(
+        "relationship_runtime"
+    )
+    if (
+        runtime.get("schema") != "okf-rich-relationship-runtime-manifest.v1"
+        or runtime_reference != runtime_integrity
+        or runtime_reference != manifest.get("indexes", {}).get("relationship_runtime")
+        or runtime_reference.get("bytes") != len(runtime_bytes)
+        or runtime_reference.get("sha256")
+        != hashlib.sha256(runtime_bytes).hexdigest()
+    ):
+        errors.append("rich relationship runtime must be digest-bound from both manifests")
+    runtime_rows: list[dict[str, Any]] = []
+    for plane in runtime.get("planes", []):
+        for chunk in plane.get("chunks", []):
+            path = ROOT / str(chunk.get("path", ""))
+            compressed = path.read_bytes() if path.is_file() else b""
+            if (
+                not compressed
+                or chunk.get("bytes") != len(compressed)
+                or chunk.get("sha256") != hashlib.sha256(compressed).hexdigest()
+            ):
+                errors.append("rich relationship runtime chunk digest does not reconcile")
+                continue
+            chunk_rows = json.loads(gzip.decompress(compressed))
+            if len(chunk_rows) != chunk.get("count"):
+                errors.append("rich relationship runtime chunk count does not reconcile")
+            runtime_rows.extend(chunk_rows)
+    if (
+        len(runtime_rows) != len(relationships)
+        or {row.get("assertion_id") for row in runtime_rows}
+        != {row.get("id") for row in relationships}
+    ):
+        errors.append("rich relationship runtime must cover every relationship assertion")
+    locator_reference = runtime.get("route_locator", {})
+    locator_path = ROOT / str(locator_reference.get("path", ""))
+    locator_bytes = locator_path.read_bytes() if locator_path.is_file() else b""
+    if (
+        not locator_bytes
+        or locator_reference.get("sha256")
+        != hashlib.sha256(locator_bytes).hexdigest()
+    ):
+        errors.append("rich relationship route locator must be SHA-256-bound")
     service_families = [row for row in rows if row.get("record_type") == "Service Family"]
     if len(service_families) != 293 or descriptor.get("counts", {}).get("service_families") != 293:
         errors.append("large projection must distinguish exactly the approved 293 service families")
@@ -106,11 +167,66 @@ def validate_large_projection() -> list[str]:
         errors.append("all migrated sources must use link-only typed access")
     if any(resource.get("provenance", {}).get("response_body_retained") is not False for resource in resources):
         errors.append("source resource provenance must record that no response body was retained")
-    required_edge_fields = {"predicate", "assertion_status", "authority", "derivation", "observed_at", "evidence", "rights"}
+    required_edge_fields = {
+        "id", "source", "target", "source_iri", "target_iri", "predicate",
+        "label", "inverse_label", "assertion_status", "assertion_scope",
+        "authority", "derivation", "observed_at", "evidence", "rights",
+    }
     if not relationships or any(required_edge_fields - set(edge) for edge in relationships):
         errors.append("every generated relationship must carry governed provenance and evidence")
+    if any(not edge.get("source_iri", "").startswith("https://") or not edge.get("target_iri", "").startswith("https://") for edge in relationships):
+        errors.append("every generated relationship must separate absolute semantic IRIs from local routes")
+    if any(not edge.get("predicate", "").startswith(PREDICATE_BASE) for edge in relationships):
+        errors.append("every generated relationship predicate must use the governed absolute IRI namespace")
+    semantic_graph = semantic.get("@graph", [])
+    semantic_nodes = {
+        node.get("@id"): node
+        for node in semantic_graph
+        if isinstance(node, dict)
+        and "okf:RelationshipAssertion" not in node.get("@type", [])
+    }
+    semantic_assertions = {
+        node.get("@id"): node
+        for node in semantic_graph
+        if isinstance(node, dict)
+        and "okf:RelationshipAssertion" in node.get("@type", [])
+    }
+    semantic_validation, semantic_violations = validate_relationship_planes(
+        semantic, relationships
+    )
+    if semantic_violations:
+        errors.extend(
+            "shared semantic assertion schema violation: "
+            f"{violation['plane']} {violation['assertion_id']}"
+            f"{violation['instance_path']}: {violation['message']}"
+            for violation in semantic_violations
+        )
+    if validation.get("semantic_assertion_validation") != semantic_validation:
+        errors.append(
+            "validation report must bind exhaustive semantic and runtime "
+            "assertion schema validation"
+        )
+    if semantic.get("okf_version") != "0.2" or semantic.get("@type") != "okf:Bundle":
+        errors.append("semantic graph must identify itself as an OKF 0.2 bundle")
+    if len(semantic_nodes) != len(rows) or len(semantic_assertions) != len(relationships):
+        errors.append("semantic entities and assertions must reconcile runtime node and relationship counts")
+    for edge in relationships:
+        source_node = semantic_nodes.get(edge["source_iri"], {})
+        direct_values = source_node.get(edge["predicate"], [])
+        if not isinstance(direct_values, list):
+            direct_values = [direct_values]
+        if {"@id": edge["target_iri"]} not in direct_values:
+            errors.append(f"semantic graph is missing direct triple for {edge['id']}")
+            break
+        assertion = semantic_assertions.get(edge["id"], {})
+        if assertion != runtime_relationship_as_assertion(edge):
+            errors.append(f"semantic assertion differs from runtime projection for {edge['id']}")
+            break
     process_edges = {
-        edge["source"] for edge in relationships if edge.get("predicate") == "part-of-enclosing-process" and edge.get("source", "").startswith("dataset/")
+        edge["source"]
+        for edge in relationships
+        if edge.get("predicate") == f"{PREDICATE_BASE}part-of-enclosing-process"
+        and edge.get("source", "").startswith("dataset/")
     }
     if len(process_edges) != 293:
         errors.append("all 293 families must be reachable from an approved enclosing process")
@@ -134,9 +250,49 @@ def validate_large_projection() -> list[str]:
     if (
         adjacency.get("schema") != "okf-relationship-adjacency.v1"
         or adjacency.get("algorithm") != "fnv1a32-prefix-2"
+        or adjacency.get("relationships") != len(relationships)
         or any(edge["source"] not in adjacency_routes or edge["target"] not in adjacency_routes for edge in relationships)
     ):
         errors.append("sharded relationship adjacency must cover every relationship endpoint")
+    runtime_by_id = {edge["id"]: edge for edge in relationships}
+    adjacency_incidence: Counter[str] = Counter()
+    adjacency_payload_mismatches = 0
+    adjacency_route_mismatches = 0
+    adjacency_bucket_mismatches = 0
+    for bucket, path in adjacency.get("buckets", {}).items():
+        for route, edges in load_json(path).items():
+            if relationship_bucket(route) != bucket:
+                adjacency_bucket_mismatches += 1
+            for edge in edges:
+                assertion_id = str(edge.get("id", ""))
+                adjacency_incidence[assertion_id] += 1
+                if route not in {edge.get("source"), edge.get("target")}:
+                    adjacency_route_mismatches += 1
+                if runtime_by_id.get(assertion_id) != edge:
+                    adjacency_payload_mismatches += 1
+    adjacency_incidence_mismatches = sum(
+        adjacency_incidence[edge["id"]]
+        != (1 if edge["source"] == edge["target"] else 2)
+        for edge in relationships
+    )
+    if set(adjacency_incidence) != set(runtime_by_id):
+        errors.append("relationship adjacency and runtime assertion identities differ")
+    if adjacency_bucket_mismatches:
+        errors.append(
+            f"{adjacency_bucket_mismatches} adjacency routes are in the wrong hash bucket"
+        )
+    if adjacency_route_mismatches:
+        errors.append(
+            f"{adjacency_route_mismatches} adjacency rows are not incident on their route"
+        )
+    if adjacency_payload_mismatches:
+        errors.append(
+            f"{adjacency_payload_mismatches} adjacency rows differ from runtime assertions"
+        )
+    if adjacency_incidence_mismatches:
+        errors.append(
+            f"{adjacency_incidence_mismatches} runtime assertions have incorrect adjacency incidence"
+        )
     if validation.get("status") != "conformant" or validation.get("counts", {}).get("dossier_backed_families") != len(dossiers):
         errors.append("SHACL-style validation report must reconcile the current dossier population stage")
     expected_keys = [key for key, _, _ in FACETS]
