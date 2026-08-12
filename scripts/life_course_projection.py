@@ -16,11 +16,35 @@ from life_course_dossiers import load_dossiers, resolve_sources
 
 
 GENERATED_AT = "2026-08-08T00:00:00+01:00"
+PUBLIC_BASE = "https://chris-page-gov.github.io/okf-uk-living/"
+IDENTIFIER_BASE = f"{PUBLIC_BASE}id/"
+PREDICATE_BASE = f"{PUBLIC_BASE}terms/"
+RELATIONSHIP_DERIVATION_RULE = (
+    f"{PUBLIC_BASE}rules/deterministic-life-course-dossier-projection-v1"
+)
 PROCESS_PATH = ROOT / "source" / "life-course-processes.v1.yaml"
 AUTHORITY_REGISTRY_PATH = ROOT / "source" / "authority-registry.v1.yaml"
 RIGHTS = {
-    "source": "generated/browser/evidence/licensing-and-attribution.html",
-    "assertion": "Repository-authored normalized structure is MIT; linked upstream source content is not redistributed.",
+    "source": f"{PUBLIC_BASE}generated/browser/evidence/licensing-and-attribution.html",
+    "assertion": "Repository-authored normalised structure is MIT; linked upstream source content is not redistributed.",
+}
+INVERSE_LABELS = {
+    "addresses-user-need": "need addressed by",
+    "applies-in-jurisdiction": "jurisdiction for",
+    "belongs-to-life-course-domain": "contains enclosing process",
+    "delivered-by": "delivers",
+    "depends-on": "dependency of",
+    "follows": "precedes",
+    "governed-by": "governs",
+    "has-episode": "episode of",
+    "has-outcome": "outcome of",
+    "has-redress": "redress for",
+    "offered-by": "offers",
+    "part-of-enclosing-process": "contains service family or episode",
+    "precedes": "follows",
+    "produces": "produced by",
+    "requires": "required by",
+    "supported-by-source": "supports",
 }
 
 
@@ -50,6 +74,10 @@ def load_authority_registry() -> dict[str, Any]:
 
 def route(kind: str, identifier: str) -> str:
     return f"{kind}/{slug(identifier)}"
+
+
+def semantic_iri(local_route: str) -> str:
+    return f"{IDENTIFIER_BASE}{local_route}"
 
 
 def base_record(
@@ -104,36 +132,53 @@ def relationship(
     source_artifact: str = "source/life-course-processes.v1.yaml",
     label: str | None = None,
 ) -> dict[str, Any]:
+    evidence_ids = sorted(set(evidence))
     digest = hashlib.sha256(
         "\0".join((source, target, predicate, source_artifact)).encode("utf-8")
     ).hexdigest()[:24]
+    evidence_value = "\n".join(evidence_ids)
+    display_label = label or predicate.replace("-", " ")
+    authority_class = "official" if assertion_status == "official" else "derived"
+    source_url = f"{PUBLIC_BASE}generated/browser/{source_artifact}.html"
     return {
         "schema": "okf-relationship-assertion.v2",
-        "id": f"relationship:{digest}",
+        "id": f"{PUBLIC_BASE}assertions/{digest}",
         "source": source,
         "target": target,
-        "source_iri": source,
-        "target_iri": target,
-        "kind": predicate,
-        "label": label or predicate.replace("-", " "),
-        "predicate": predicate,
+        "source_iri": semantic_iri(source),
+        "target_iri": semantic_iri(target),
+        "kind": display_label,
+        "label": display_label,
+        "inverse_label": INVERSE_LABELS[predicate],
+        "predicate": f"{PREDICATE_BASE}{predicate}",
         "assertion_status": assertion_status,
         "assertion_scope": "real-world",
         "authority": {
-            "class": "derived",
-            "label": "Repository-authored normalized discovery model",
-            "source": f"generated/browser/{source_artifact}.html",
+            "class": authority_class,
+            "label": (
+                "Official relationship represented by the reviewed dossier"
+                if authority_class == "official"
+                else "Repository-authored normalised discovery model"
+            ),
+            "source": source_url,
         },
-        "derivation": "deterministic-life-course-dossier-projection",
-        "derivation_activity": "process:life-course-projection",
-        "observed_at": "2026-08-08",
-        "freshness": "source-observation-governed",
+        "derivation": RELATIONSHIP_DERIVATION_RULE,
+        "derivation_activity": f"{PUBLIC_BASE}activities/life-course-projection-2026-08-08",
+        "observed_at": GENERATED_AT,
+        "freshness": "unknown",
         "evidence": [
             {
+                "@id": f"{PUBLIC_BASE}evidence/relationship/{digest}",
                 "type": "authored-dossier-or-contract",
+                "url": source_url,
                 "source_artifact": source_artifact,
-                "source_ids": sorted(set(evidence)),
-                "normalization": "repository-authored governed relationship",
+                "source_field": "relationship source identifiers",
+                "source_ids": evidence_ids,
+                "source_value_sha256": hashlib.sha256(evidence_value.encode("utf-8")).hexdigest(),
+                "source_value_hash_canonicalization": "sorted-unique-utf8-lines",
+                "normalization": RELATIONSHIP_DERIVATION_RULE,
+                "rationale": "Repository-authored governed relationship.",
+                "retrieved_at": GENERATED_AT,
             }
         ],
         "rights": RIGHTS,
@@ -299,7 +344,7 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
         family_route = route("dataset", family_id)
         delivery_scopes = scopes[family_id]
         notes = dossier["description"] if dossier else (
-            "Owner-approved normalized planning family. Current leaf routes, jurisdictions, authority, "
+            "Owner-approved normalised planning family. Current leaf routes, jurisdictions, authority, "
             "deadlines and exceptions require staged source evidence."
         )
         record = base_record(
@@ -534,7 +579,7 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
     report = {
         "schema": "life-course-validation-report.v1",
         "generated_at": GENERATED_AT,
-        "status": "conformant",
+        "status": "pending-semantic-validation",
         "counts": {
             "service_families": len(families),
             "dossier_backed_families": len(dossiers),
@@ -554,37 +599,75 @@ def project(denominator: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dic
 
 
 def semantic_graph(rows: list[dict[str, Any]], relationships: list[dict[str, Any]]) -> dict[str, Any]:
-    graph: list[dict[str, Any]] = [
-        {
-            "@id": row["route"],
-            "@type": row["record_type"],
+    graph_by_iri: dict[str, dict[str, Any]] = {
+        semantic_iri(row["route"]): {
+            "@id": semantic_iri(row["route"]),
+            "@type": f"{PUBLIC_BASE}types/{slug(row['record_type'])}",
+            "route": row["route"],
             "title": row["title"],
             "description": row["notes"],
-            "assertionStatus": row["assertion_status"],
+            "assertion_status": row["assertion_status"],
         }
         for row in rows
-    ]
+    }
+    for edge in relationships:
+        source_node = graph_by_iri[edge["source_iri"]]
+        target_value = {"@id": edge["target_iri"]}
+        direct = source_node.get(edge["predicate"])
+        if direct is None:
+            source_node[edge["predicate"]] = target_value
+        elif isinstance(direct, list):
+            direct.append(target_value)
+        else:
+            source_node[edge["predicate"]] = [direct, target_value]
+    graph: list[dict[str, Any]] = list(graph_by_iri.values())
     graph.extend(
         {
             "@id": edge["id"],
-            "@type": "RelationshipAssertion",
-            "source": {"@id": edge["source"]},
-            "target": {"@id": edge["target"]},
-            "predicate": edge["predicate"],
-            "assertionStatus": edge["assertion_status"],
-            "evidence": edge["evidence"],
+            "@type": ["rdf:Statement", "okf:RelationshipAssertion"],
+            "source": {"@id": edge["source_iri"]},
+            "source_route": edge["source"],
+            "predicate": {"@id": edge["predicate"]},
+            "target": {"@id": edge["target_iri"]},
+            "target_route": edge["target"],
+            **{
+                key: value
+                for key, value in edge.items()
+                if key
+                not in {
+                    "schema", "id", "source", "source_iri", "predicate",
+                    "target", "target_iri",
+                }
+            },
         }
         for edge in relationships
     )
     return {
         "@context": {
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "okf": "https://chris-page-gov.github.io/okf-explorer/ns#",
             "title": "http://purl.org/dc/terms/title",
             "description": "http://purl.org/dc/terms/description",
+            "route": "https://chris-page-gov.github.io/okf-explorer/ns#route",
             "source": {"@id": "http://www.w3.org/ns/prov#subject", "@type": "@id"},
             "target": {"@id": "http://www.w3.org/ns/prov#object", "@type": "@id"},
-            "predicate": "http://www.w3.org/ns/prov#predicate",
-            "assertionStatus": "https://chris-page-gov.github.io/okf-uk-living/terms/assertionStatus",
+            "predicate": {"@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate", "@type": "@id"},
+            "source_route": "https://chris-page-gov.github.io/okf-explorer/ns#sourceRoute",
+            "target_route": "https://chris-page-gov.github.io/okf-explorer/ns#targetRoute",
+            "label": "http://www.w3.org/2000/01/rdf-schema#label",
+            "inverse_label": "https://chris-page-gov.github.io/okf-explorer/ns#inverseLabel",
+            "assertion_status": "https://chris-page-gov.github.io/okf-explorer/ns#assertionStatus",
+            "assertion_scope": "https://chris-page-gov.github.io/okf-explorer/ns#assertionScope",
+            "authority": "https://chris-page-gov.github.io/okf-explorer/ns#authority",
+            "derivation": {"@id": "https://chris-page-gov.github.io/okf-explorer/ns#derivationMethod", "@type": "@id"},
+            "derivation_activity": {"@id": "http://www.w3.org/ns/prov#wasGeneratedBy", "@type": "@id"},
+            "observed_at": {"@id": "http://www.w3.org/ns/prov#generatedAtTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime"},
             "evidence": "http://www.w3.org/ns/prov#wasDerivedFrom",
+            "rights": "http://purl.org/dc/terms/rights",
         },
+        "@id": f"{PUBLIC_BASE}semantic/life-course-corpus",
+        "@type": "okf:Bundle",
+        "okf_version": "0.2",
+        "title": "A Life in the UK semantic graph",
         "@graph": graph,
     }

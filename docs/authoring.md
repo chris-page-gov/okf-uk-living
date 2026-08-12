@@ -23,10 +23,12 @@ sources:
 ---
 ```
 
-Use ordinary Markdown links between local concepts. Link direction is
-meaningful: the source record references the target record. The builder emits
-these as compatibility relationships; later semantic work will add governed
-predicate identifiers and evidence.
+Use ordinary Markdown links between local concepts for narrative navigation.
+Link direction is meaningful: the source record references the target record.
+The small-bundle builder may emit these as compatibility relationships, but a
+Markdown link alone does not establish a domain predicate. Governed
+large-corpus relationships are generated from the structured dossiers,
+registers and predicate registry described below.
 
 ## Required domain fields
 
@@ -102,6 +104,60 @@ membership supports navigation and never establishes official service
 identity, shared rules or four-nation equivalence. Material graph edges use the
 [governed predicates](../ontology/governed-predicates.v1.yaml) and retain
 assertion status, authority, evidence, derivation, observation time and rights.
+
+### Semantic projection and directed assertions
+
+[`okf.semantic.json`](../okf.semantic.json) is the machine-readable contract
+for the repository's OKF 0.2 core, additive Bundle Wiki YAML-LD profile,
+authoritative inputs, generated outputs, Reader delivery plane and exact
+checks. Read it before changing ontology or relationship generation.
+
+`scripts/life_course_projection.py` normalises each governed relationship once
+and deterministically emits four synchronised views:
+
+- a direct semantic triple in the YAML-LD/JSON-LD entity graph;
+- an evidence-bearing reified `okf:RelationshipAssertion`; and
+- a route-scoped `okf-relationship-assertion.v2` runtime row for Explorer and
+  its legacy hash-sharded adjacency; and
+- a bounded `okf-relationship-runtime-row.v1` in an authority-preserving gzip
+  plane, indexed by the SHA-256 route locator.
+
+Every material directed relationship retains a stable absolute assertion IRI,
+absolute source and target IRIs, an absolute predicate IRI, validated local
+source and target routes, preferred and inverse labels, assertion status and
+scope, authority, derivation, observation time, evidence and rights. Semantic
+identity and navigation identity are separate: never manufacture an IRI from a
+route in the Reader, and never replace an external IRI with a convenient local
+slug.
+
+The direct triple and reified assertion must describe the same source,
+predicate and target. The reified node carries the provenance needed to judge
+the statement; it does not create a second fact. Reverse Explorer navigation
+uses `inverse_label` for presentation and does not reverse the asserted triple.
+Confidence, similarity and display grouping never upgrade an assertion's
+authority.
+
+The build uses pinned contexts and emits deterministic YAML-LD and JSON-LD.
+The browser may parse an explicit route-bearing YAML-LD graph, but it does not
+fetch arbitrary remote contexts or perform OWL inference. Fix authored inputs
+or the generator when semantic checks fail; do not edit `generated/semantic/`,
+`large/data/relationships-0.json` or adjacency shards by hand.
+
+The shared assertion contract is pinned locally at
+[`schemas/semantic-assertion.schema.json`](../schemas/semantic-assertion.schema.json).
+It is byte-identical to the canonical copy in the vendored, locked 16-file
+[`profiles/bundle-wiki/v1`](../profiles/bundle-wiki/v1/) mirror. Do not edit the
+mirror locally; use the Explorer reconciler's reviewed profile synchronisation
+command. The four authored rich-runtime schemas define runtime rows, the
+control manifest, the locator and its buckets.
+The producer and checker apply its Draft 2020-12 rules exhaustively to both the
+semantic assertions and the corresponding runtime rows. Evidence
+`normalization` identifies the stable derivation rule with an absolute IRI;
+put its human explanation in `rationale`, not in the IRI field. The validation
+report records the schema URL, local path, digest, counts and violations before
+it can claim `conformant`. The finalized pin requires both `kind` and `label`;
+authority, evidence, optional evidence-resource and rights source URLs must be
+canonical, credential-free HTTP(S) URLs with a non-empty host and valid port.
 
 ### Domain-register authoring and rendering
 

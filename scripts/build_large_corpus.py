@@ -5,6 +5,9 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import gzip
+import hashlib
+import io
 import json
 import re
 import shutil
@@ -24,6 +27,7 @@ from check_service_denominator import (
     validate_service_denominator,
 )
 from life_course_projection import project, semantic_graph
+from semantic_assertion_validation import validate_relationship_planes
 
 
 DESCRIPTOR_PATH = ROOT / "okf-explorer.json"
@@ -53,6 +57,15 @@ SEARCH_STOP_WORDS = {
     "is", "it", "of", "on", "or", "the", "to", "with",
 }
 RECORD_CHUNK_SIZE = 1000
+RELATIONSHIP_RUNTIME_CHUNK_SIZE = 50_000
+RELATIONSHIP_RUNTIME_ROOT = "large/data/relationship-runtime"
+RELATIONSHIP_RUNTIME_MANIFEST = f"{RELATIONSHIP_RUNTIME_ROOT}/manifest.json"
+RELATIONSHIP_RUNTIME_LOCATOR = (
+    f"{RELATIONSHIP_RUNTIME_ROOT}/route-locator/manifest.json"
+)
+RELATIONSHIP_RUNTIME_PLANE_BASE = (
+    "https://chris-page-gov.github.io/okf-uk-living/planes/"
+)
 
 
 def titleize(identifier: str) -> str:
@@ -86,7 +99,7 @@ def records(denominator: dict[str, Any]) -> list[dict[str, Any]]:
                 "route": f"dataset/{family_id}",
                 "title": titleize(family_id),
                 "notes": (
-                    "Owner-approved normalized planning family. Current leaf routes, jurisdictions, "
+                    "Owner-approved normalised planning family. Current leaf routes, jurisdictions, "
                     "authority, deadlines and exceptions require staged source evidence."
                 ),
                 "publisher": "okf-uk-living",
@@ -266,6 +279,292 @@ def json_text(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
 
 
+def gzip_json(value: Any) -> bytes:
+    """Return deterministic gzip-compressed canonical JSON bytes."""
+
+    raw = (
+        json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        + "\n"
+    ).encode("utf-8")
+    output = io.BytesIO()
+    with gzip.GzipFile(fileobj=output, mode="wb", filename="", mtime=0) as handle:
+        handle.write(raw)
+    return output.getvalue()
+
+
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def rich_runtime_assertion_digest(identifiers: list[str]) -> str:
+    canonical = json.dumps(
+        sorted(identifiers), ensure_ascii=False, separators=(",", ":")
+    ).encode("utf-8")
+    return sha256_bytes(canonical)
+
+
+def rich_runtime_route_bucket(route: str) -> str:
+    return hashlib.sha256(route.encode("utf-8")).hexdigest()[:2]
+
+
+def rich_runtime_row(
+    relationship: dict[str, Any], *, plane_id: str, lifecycle: str
+) -> dict[str, Any]:
+    evidence = [
+        {
+            key: item[key]
+            for key in (
+                "@id",
+                "type",
+                "url",
+                "source_field",
+                "source_value_sha256",
+                "retrieved_at",
+            )
+        }
+        for item in relationship["evidence"]
+    ]
+    row = {
+        "schema": "okf-relationship-runtime-row.v1",
+        "id": relationship["id"],
+        "assertion_id": relationship["id"],
+        "source": relationship["source"],
+        "target": relationship["target"],
+        "source_route": relationship["source"],
+        "target_route": relationship["target"],
+        "source_iri": relationship["source_iri"],
+        "target_iri": relationship["target_iri"],
+        "predicate": relationship["predicate"],
+        "predicate_iri": relationship["predicate"],
+        "kind": relationship["kind"],
+        "label": relationship["label"],
+        "inverse_label": relationship["inverse_label"],
+        "direction": "source-to-target",
+        "assertion_status": relationship["assertion_status"],
+        "assertion_scope": relationship["assertion_scope"],
+        "authority": relationship["authority"],
+        "derivation": relationship["derivation"],
+        "observed_at": relationship["observed_at"],
+        "evidence": evidence,
+        "rights": relationship["rights"],
+        "plane": plane_id,
+        "lifecycle": lifecycle,
+        "active": lifecycle == "active",
+    }
+    for field in (
+        "confidence",
+        "freshness",
+        "official_legal_classification",
+        "review_status",
+        "stale_after",
+        "strength",
+        "support_profile",
+    ):
+        if field in relationship:
+            row[field] = relationship[field]
+    return row
+
+
+def rich_relationship_runtime_outputs(
+    relationships: list[dict[str, Any]],
+) -> tuple[dict[Path, str | bytes], dict[str, Any]]:
+    """Build the digest-bound rich runtime and its SHA-256 route locator."""
+
+    grouped: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    for relationship in relationships:
+        status = str(relationship["assertion_status"])
+        if status not in {"official", "normalized", "inferred", "model-derived"}:
+            raise ValueError(f"unsupported relationship assertion status: {status}")
+        lifecycle = str(relationship.get("lifecycle", "active"))
+        if lifecycle not in {"active", "historical", "rejected"}:
+            raise ValueError(f"unsupported relationship lifecycle: {lifecycle}")
+        grouped[(status, lifecycle)].append(relationship)
+
+    outputs: dict[Path, str | bytes] = {}
+    route_planes: dict[str, dict[str, dict[str, set[str]]]] = defaultdict(
+        lambda: defaultdict(lambda: {"chunks": set(), "assertions": set()})
+    )
+    plane_manifests: list[dict[str, Any]] = []
+    total_chunks = 0
+    totals = Counter()
+    for status, lifecycle in sorted(
+        grouped,
+        key=lambda item: (
+            item[1] != "active",
+            {"official": 0, "normalized": 1, "inferred": 2, "model-derived": 3}[item[0]],
+            item[1],
+        ),
+    ):
+        plane_name = status if lifecycle == "active" else f"{status}-{lifecycle}"
+        plane_id = f"{RELATIONSHIP_RUNTIME_PLANE_BASE}{plane_name}"
+        relationships_for_plane = sorted(grouped[(status, lifecycle)], key=lambda row: row["id"])
+        rows = [
+            rich_runtime_row(item, plane_id=plane_id, lifecycle=lifecycle)
+            for item in relationships_for_plane
+        ]
+        chunks: list[dict[str, Any]] = []
+        for index in range(0, len(rows), RELATIONSHIP_RUNTIME_CHUNK_SIZE):
+            chunk_rows = rows[index:index + RELATIONSHIP_RUNTIME_CHUNK_SIZE]
+            chunk_number = index // RELATIONSHIP_RUNTIME_CHUNK_SIZE
+            chunk_path = (
+                f"{RELATIONSHIP_RUNTIME_ROOT}/planes/{plane_name}/"
+                f"relationships-{chunk_number:03d}.json.gz"
+            )
+            compressed = gzip_json(chunk_rows)
+            outputs[Path(chunk_path)] = compressed
+            chunks.append(
+                {
+                    "id": (
+                        "https://chris-page-gov.github.io/okf-uk-living/"
+                        f"chunks/relationship-runtime/{plane_name}/{chunk_number:03d}"
+                    ),
+                    "path": chunk_path,
+                    "media_type": "application/json",
+                    "content_encoding": "gzip",
+                    "bytes": len(compressed),
+                    "sha256": sha256_bytes(compressed),
+                    "count": len(chunk_rows),
+                    "records": len(chunk_rows),
+                }
+            )
+            total_chunks += 1
+            for row in chunk_rows:
+                for route in {row["source"], row["target"]}:
+                    commitment = route_planes[route][plane_name]
+                    commitment["chunks"].add(chunk_path)
+                    commitment["assertions"].add(row["assertion_id"])
+        authority_classes = sorted(
+            {str(row["authority"]["class"]) for row in relationships_for_plane}
+        )
+        plane_manifests.append(
+            {
+                "name": plane_name,
+                "id": plane_id,
+                "active": lifecycle == "active",
+                "lifecycle": lifecycle,
+                "authority_classes": authority_classes,
+                "assertions": len(rows),
+                "chunks": chunks,
+            }
+        )
+        totals[lifecycle] += len(rows)
+
+    locator_buckets: dict[str, list[str]] = defaultdict(list)
+    for route in sorted(route_planes):
+        locator_buckets[rich_runtime_route_bucket(route)].append(route)
+    locator_metadata: list[dict[str, Any]] = []
+    locator_chunk_references = 0
+    for prefix, routes in sorted(locator_buckets.items()):
+        route_entries: list[dict[str, Any]] = []
+        for route in routes:
+            commitments: list[dict[str, Any]] = []
+            route_chunks: set[str] = set()
+            for plane_name, values in sorted(route_planes[route].items()):
+                chunks = sorted(values["chunks"])
+                identifiers = sorted(values["assertions"])
+                route_chunks.update(chunks)
+                commitments.append(
+                    {
+                        "name": plane_name,
+                        "chunks": chunks,
+                        "assertions": len(identifiers),
+                        "assertion_ids_sha256": rich_runtime_assertion_digest(identifiers),
+                    }
+                )
+            chunks = sorted(route_chunks)
+            locator_chunk_references += len(chunks)
+            route_entries.append(
+                {"route": route, "chunks": chunks, "planes": commitments}
+            )
+        bucket_value = {
+            "schema": "okf-rich-relationship-route-locator-bucket.v1",
+            "hash_algorithm": "sha256-utf8-first-byte-hex",
+            "bucket": prefix,
+            "generated_at": GENERATED_AT,
+            "routes": route_entries,
+            "counts": {
+                "routes": len(route_entries),
+                "chunk_references": sum(len(item["chunks"]) for item in route_entries),
+            },
+        }
+        bucket_path = (
+            f"{RELATIONSHIP_RUNTIME_ROOT}/route-locator/bucket-{prefix}.json.gz"
+        )
+        compressed = gzip_json(bucket_value)
+        outputs[Path(bucket_path)] = compressed
+        locator_metadata.append(
+            {
+                "bucket": prefix,
+                "path": bucket_path,
+                "content_encoding": "gzip",
+                "bytes": len(compressed),
+                "sha256": sha256_bytes(compressed),
+                "routes": len(route_entries),
+                "chunk_references": bucket_value["counts"]["chunk_references"],
+            }
+        )
+
+    locator = {
+        "schema": "okf-rich-relationship-route-locator.v1",
+        "hash_algorithm": "sha256-utf8-first-byte-hex",
+        "generated_at": GENERATED_AT,
+        "bucket_path_template": (
+            f"{RELATIONSHIP_RUNTIME_ROOT}/route-locator/bucket-{{prefix}}.json.gz"
+        ),
+        "buckets": locator_metadata,
+        "counts": {
+            "routes": len(route_planes),
+            "buckets": len(locator_metadata),
+            "chunk_references": locator_chunk_references,
+        },
+    }
+    locator_text = json_text(locator)
+    outputs[Path(RELATIONSHIP_RUNTIME_LOCATOR)] = locator_text
+    runtime = {
+        "schema": "okf-rich-relationship-runtime-manifest.v1",
+        "@id": (
+            "https://chris-page-gov.github.io/okf-uk-living/"
+            f"runtime/relationships/{SNAPSHOT}"
+        ),
+        "snapshot": SNAPSHOT,
+        "generated_at": GENERATED_AT,
+        "semantic_manifest": "generated/semantic/life-course-corpus.jsonld",
+        "assertion_contract": "schemas/semantic-assertion.schema.json",
+        "row_contract": "schemas/relationship-runtime-row.schema.json",
+        "default_planes": [
+            plane["name"] for plane in plane_manifests if plane["active"]
+        ],
+        "planes": plane_manifests,
+        "totals": {
+            "active_assertions": totals["active"],
+            "historical_assertions": totals["historical"],
+            "rejected_assertions": totals["rejected"],
+            "all_assertions": len(relationships),
+            "chunks": total_chunks,
+        },
+        "loading_policy": "bounded-route-hydration",
+        "route_locator": {
+            "id": (
+                "https://chris-page-gov.github.io/okf-uk-living/"
+                f"runtime/relationship-route-locator/{SNAPSHOT}"
+            ),
+            "path": RELATIONSHIP_RUNTIME_LOCATOR,
+            "routes": len(route_planes),
+            "buckets": len(locator_metadata),
+            "sha256": sha256_bytes(locator_text.encode("utf-8")),
+        },
+    }
+    runtime_text = json_text(runtime)
+    outputs[Path(RELATIONSHIP_RUNTIME_MANIFEST)] = runtime_text
+    runtime_bytes = runtime_text.encode("utf-8")
+    runtime_reference = {
+        "path": RELATIONSHIP_RUNTIME_MANIFEST,
+        "sha256": sha256_bytes(runtime_bytes),
+        "bytes": len(runtime_bytes),
+    }
+    return outputs, runtime_reference
+
+
 def relationship_bucket(route: str) -> str:
     value = 0x811C9DC5
     for byte in route.encode("utf-8"):
@@ -332,7 +631,47 @@ def build_outputs() -> dict[Path, str]:
     rows, resources, relationships, validation = project(denominator)
     locator, locator_shards = locator_outputs(rows)
     adjacency, adjacency_shards = adjacency_outputs(relationships)
+    rich_runtime_outputs, rich_runtime_reference = rich_relationship_runtime_outputs(
+        relationships
+    )
     validation.pop("relationship_adjacency", None)
+    semantic = semantic_graph(rows, relationships)
+    semantic_validation, semantic_violations = validate_relationship_planes(
+        semantic, relationships
+    )
+    if semantic_validation["semantic_assertions_checked"] != len(relationships):
+        semantic_violations.append(
+            {
+                "code": "semantic.assertion-count",
+                "plane": "semantic",
+                "assertion_id": "",
+                "instance_path": "/@graph",
+                "schema_path": "",
+                "message": (
+                    "semantic assertion count differs from runtime relationships: "
+                    f"{semantic_validation['semantic_assertions_checked']} != "
+                    f"{len(relationships)}"
+                ),
+            }
+        )
+    semantic_validation["violation_count"] = len(semantic_violations)
+    semantic_validation["status"] = (
+        "conformant" if not semantic_violations else "non-conformant"
+    )
+    validation["semantic_assertion_validation"] = semantic_validation
+    validation["violations"].extend(semantic_violations)
+    validation["status"] = (
+        "conformant" if not validation["violations"] else "non-conformant"
+    )
+    if semantic_violations:
+        details = "; ".join(
+            f"{item['plane']} {item['assertion_id']}"
+            f"{item['instance_path']}: {item['message']}"
+            for item in semantic_violations[:10]
+        )
+        if len(semantic_violations) > 10:
+            details += f"; and {len(semantic_violations) - 10} more"
+        raise ValueError(f"semantic assertion validation failed: {details}")
     service_family_count = sum(row.get("record_type") == "Service Family" for row in rows)
     counts = {
         "datasets": len(rows),
@@ -368,11 +707,15 @@ def build_outputs() -> dict[Path, str]:
             "search_manifest": "large/data/search/manifest.json",
             "record_locator": "large/data/record-locator.json",
             "relationship_adjacency": "large/data/relationship-adjacency.json",
+            "relationship_runtime": rich_runtime_reference,
             "validation_report": "large/data/validation-report.json",
             "json_ld": "generated/semantic/life-course-corpus.jsonld",
             "yaml_ld": "generated/semantic/life-course-corpus.yamlld",
             "markdown_index": "generated/browser/index.html",
             "notes": "generated/browser/evidence/licensing-and-attribution.html",
+        },
+        "entrypoint_integrity": {
+            "relationship_runtime": rich_runtime_reference,
         },
         "counts": counts,
         "source": {
@@ -410,6 +753,7 @@ def build_outputs() -> dict[Path, str]:
             "search": "large/data/search/manifest.json",
             "record_locator": "large/data/record-locator.json",
             "relationship_adjacency": "large/data/relationship-adjacency.json",
+            "relationship_runtime": rich_runtime_reference,
             "validation": "large/data/validation-report.json",
         },
         "chunks": {
@@ -422,7 +766,7 @@ def build_outputs() -> dict[Path, str]:
     overview = {
         "title": "Life-course discovery corpus",
         "description": (
-            "293 normalized families across 24 domains, "
+            "293 normalised families across 24 domains, "
             f"{validation['counts']['dossier_backed_families']} population-complete dossiers, "
             f"{validation['counts']['resources']} typed official links, 397 dated geographies and "
             "438 shared organisations."
@@ -432,7 +776,7 @@ def build_outputs() -> dict[Path, str]:
         "notices": [
             "Normalized records are discovery aids, not official service assertions or personal decisions.",
             "Source content is linked and summarized, not redistributed.",
-            "GitHub Pages publication has not been authorized.",
+            "GitHub Pages publication has not been authorised.",
         ],
     }
     analysis = {
@@ -494,7 +838,7 @@ def build_outputs() -> dict[Path, str]:
     })
     outputs.update(locator_shards)
     outputs.update(adjacency_shards)
-    semantic = semantic_graph(rows, relationships)
+    outputs.update(rich_runtime_outputs)
     outputs[Path("generated/semantic/life-course-corpus.jsonld")] = json_text(semantic)
     outputs[Path("generated/semantic/life-course-corpus.yamlld")] = yaml.safe_dump(
         semantic, allow_unicode=True, sort_keys=True, width=120
@@ -504,12 +848,17 @@ def build_outputs() -> dict[Path, str]:
     return outputs
 
 
-def check_outputs(outputs: dict[Path, str]) -> list[str]:
+def check_outputs(outputs: dict[Path, str | bytes]) -> list[str]:
     errors: list[str] = []
     for path, expected in outputs.items():
         target = ROOT / path
         if not target.is_file():
             errors.append(f"{path.as_posix()} is missing")
+            continue
+        if isinstance(expected, bytes):
+            current_bytes = target.read_bytes()
+            if current_bytes != expected:
+                errors.append(f"{path.as_posix()} has stale binary content")
             continue
         current = target.read_text(encoding="utf-8")
         if current != expected:
@@ -535,12 +884,15 @@ def remove_generated_tree(root: Path) -> None:
                     path.unlink(missing_ok=True)
 
 
-def write_outputs(outputs: dict[Path, str]) -> None:
+def write_outputs(outputs: dict[Path, str | bytes]) -> None:
     remove_generated_tree(DATA_ROOT)
     for path, content in outputs.items():
         target = ROOT / path
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(content, encoding="utf-8")
+        if isinstance(content, bytes):
+            target.write_bytes(content)
+        else:
+            target.write_text(content, encoding="utf-8")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -559,7 +911,7 @@ def main(argv: list[str] | None = None) -> int:
             for error in errors:
                 print(f"- {error}", file=sys.stderr)
             return 1
-        print("Large-corpus projection is synchronized: 293 service families and 7 governed facets")
+        print("Large-corpus projection is synchronised: 293 service families and 7 governed facets")
         return 0
     write_outputs(outputs)
     print("wrote local life-course discovery projection")

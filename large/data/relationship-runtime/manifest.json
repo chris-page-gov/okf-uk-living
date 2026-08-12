@@ -1,0 +1,74 @@
+{
+  "@id": "https://chris-page-gov.github.io/okf-uk-living/runtime/relationships/life-course-authority-infrastructure-2026-08-08",
+  "assertion_contract": "schemas/semantic-assertion.schema.json",
+  "default_planes": [
+    "official",
+    "normalized"
+  ],
+  "generated_at": "2026-08-08T00:00:00+01:00",
+  "loading_policy": "bounded-route-hydration",
+  "planes": [
+    {
+      "active": true,
+      "assertions": 14,
+      "authority_classes": [
+        "official"
+      ],
+      "chunks": [
+        {
+          "bytes": 2362,
+          "content_encoding": "gzip",
+          "count": 14,
+          "id": "https://chris-page-gov.github.io/okf-uk-living/chunks/relationship-runtime/official/000",
+          "media_type": "application/json",
+          "path": "large/data/relationship-runtime/planes/official/relationships-000.json.gz",
+          "records": 14,
+          "sha256": "f0c457857fd46160eb0b52f2e76553e0fd1c117756301d595d0ce1ed56f19dd1"
+        }
+      ],
+      "id": "https://chris-page-gov.github.io/okf-uk-living/planes/official",
+      "lifecycle": "active",
+      "name": "official"
+    },
+    {
+      "active": true,
+      "assertions": 15796,
+      "authority_classes": [
+        "derived"
+      ],
+      "chunks": [
+        {
+          "bytes": 2627396,
+          "content_encoding": "gzip",
+          "count": 15796,
+          "id": "https://chris-page-gov.github.io/okf-uk-living/chunks/relationship-runtime/normalized/000",
+          "media_type": "application/json",
+          "path": "large/data/relationship-runtime/planes/normalized/relationships-000.json.gz",
+          "records": 15796,
+          "sha256": "129616c23aada00e51606c8cfbc61a11ac8e80013ff09a36ee9e9ca05d28f990"
+        }
+      ],
+      "id": "https://chris-page-gov.github.io/okf-uk-living/planes/normalized",
+      "lifecycle": "active",
+      "name": "normalized"
+    }
+  ],
+  "route_locator": {
+    "buckets": 256,
+    "id": "https://chris-page-gov.github.io/okf-uk-living/runtime/relationship-route-locator/life-course-authority-infrastructure-2026-08-08",
+    "path": "large/data/relationship-runtime/route-locator/manifest.json",
+    "routes": 8638,
+    "sha256": "fd1f052ea69b0b5f6654defdb937d43824f8e6f70ce07e1ed1564dc22347bfde"
+  },
+  "row_contract": "schemas/relationship-runtime-row.schema.json",
+  "schema": "okf-rich-relationship-runtime-manifest.v1",
+  "semantic_manifest": "generated/semantic/life-course-corpus.jsonld",
+  "snapshot": "life-course-authority-infrastructure-2026-08-08",
+  "totals": {
+    "active_assertions": 15810,
+    "all_assertions": 15810,
+    "chunks": 2,
+    "historical_assertions": 0,
+    "rejected_assertions": 0
+  }
+}

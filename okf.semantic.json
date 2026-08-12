@@ -1,0 +1,182 @@
+{
+  "okf_core": {
+    "specification": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
+    "status": "conformant",
+    "version": "0.2"
+  },
+  "reader": {
+    "consumer": "https://chris-page-gov.github.io/okf-explorer/",
+    "delivery": "json-large-corpus-adjacency",
+    "preserves": [
+      "direction",
+      "semantic-identities",
+      "local-routes",
+      "predicate",
+      "relationship-kind",
+      "preferred-and-inverse-labels",
+      "assertion-status-and-scope",
+      "authority",
+      "derivation",
+      "supporting-assertions",
+      "confidence",
+      "review-status",
+      "evidence",
+      "rights",
+      "freshness",
+      "lifecycle"
+    ]
+  },
+  "relationship_contract": {
+    "authoring": "generated-yaml-ld-assertion-graph",
+    "direct_triple_policy": "generated-from-one-assertion-source",
+    "predicate_policy": "absolute-iri",
+    "required_fields": [
+      "id",
+      "source",
+      "target",
+      "source_iri",
+      "target_iri",
+      "predicate",
+      "kind",
+      "label",
+      "inverse_label",
+      "assertion_status",
+      "assertion_scope",
+      "authority",
+      "derivation",
+      "observed_at",
+      "evidence",
+      "rights"
+    ],
+    "schema": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/semantic-assertion.schema.json"
+  },
+  "repository": {
+    "name": "okf-uk-living",
+    "role": "large-corpus-producer",
+    "root_index": "index.md"
+  },
+  "schema": "okf-repository-semantic-contract.v1",
+  "semantic_layer": {
+    "authoritative_inputs": [
+      "source/",
+      "ontology/",
+      "profiles/",
+      "schemas/"
+    ],
+    "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
+    "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
+    "limitations": [
+      "Relationship assertions use absolute semantic IDs and predicates while retaining local Explorer routes; publication remains subject to the repository's existing review and release gates."
+    ],
+    "outputs": [
+      {
+        "generated": true,
+        "path": "generated/semantic/life-course-corpus.yamlld",
+        "required": true,
+        "role": "semantic-yaml-ld"
+      },
+      {
+        "generated": true,
+        "path": "generated/semantic/life-course-corpus.jsonld",
+        "required": true,
+        "role": "semantic-json-ld"
+      },
+      {
+        "generated": true,
+        "path": "okf-explorer.json",
+        "required": true,
+        "role": "explorer-runtime"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationships-0.json",
+        "required": true,
+        "role": "relationship-runtime"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationship-adjacency/*.json",
+        "required": true,
+        "role": "relationship-route-locator"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationship-runtime/manifest.json",
+        "required": true,
+        "role": "relationship-runtime-manifest"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationship-runtime/planes/*/relationships-*.json.gz",
+        "required": true,
+        "role": "relationship-runtime"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationship-runtime/route-locator/manifest.json",
+        "required": true,
+        "role": "relationship-route-locator"
+      },
+      {
+        "generated": true,
+        "path": "large/data/relationship-runtime/route-locator/bucket-*.json.gz",
+        "required": true,
+        "role": "relationship-route-locator"
+      },
+      {
+        "generated": false,
+        "path": "schemas/relationship-runtime-row.schema.json",
+        "required": true,
+        "role": "relationship-runtime-schema"
+      },
+      {
+        "generated": false,
+        "path": "schemas/relationship-runtime-manifest.schema.json",
+        "required": true,
+        "role": "relationship-runtime-schema"
+      },
+      {
+        "generated": false,
+        "path": "schemas/relationship-route-locator.schema.json",
+        "required": true,
+        "role": "relationship-runtime-schema"
+      },
+      {
+        "generated": false,
+        "path": "schemas/relationship-route-locator-bucket.schema.json",
+        "required": true,
+        "role": "relationship-runtime-schema"
+      },
+      {
+        "generated": false,
+        "path": "schemas/semantic-assertion.schema.json",
+        "required": true,
+        "role": "relationship-schema"
+      },
+      {
+        "generated": true,
+        "path": "generated/semantic/validation-report.json",
+        "required": true,
+        "role": "semantic-validation"
+      },
+      {
+        "generated": true,
+        "path": "large/data/validation-report.json",
+        "required": true,
+        "role": "semantic-validation"
+      }
+    ],
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/",
+    "state": "generated-yaml-ld-graph"
+  },
+  "tooling": {
+    "build": [
+      "uv run --locked python scripts/build_large_corpus.py"
+    ],
+    "check": [
+      "uv run --locked python scripts/build_large_corpus.py --check",
+      "uv run --locked python scripts/check_large_projection.py",
+      "uv run --locked python -m unittest discover -s tests"
+    ]
+  }
+}

@@ -23,7 +23,7 @@ class PagesPublicationTests(unittest.TestCase):
         cls.manifest = load_frozen_manifest()
 
     def test_public_descriptor_changes_only_publication_envelope(self) -> None:
-        self.assertEqual([], descriptor_errors())
+        self.assertEqual([], descriptor_errors(frozen=True))
 
     def test_manifest_is_complete_and_synchronized(self) -> None:
         self.assertEqual([], validate_frozen_publication(self.manifest))

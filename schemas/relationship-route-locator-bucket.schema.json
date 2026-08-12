@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-route-locator-bucket.schema.json",
+  "title": "A Life in the UK relationship route locator bucket",
+  "type": "object",
+  "required": ["schema", "generated_at", "hash_algorithm", "bucket", "routes", "counts"],
+  "properties": {
+    "schema": {"const": "okf-rich-relationship-route-locator-bucket.v1"},
+    "generated_at": {"type": "string", "minLength": 1},
+    "hash_algorithm": {"const": "sha256-utf8-first-byte-hex"},
+    "bucket": {"$ref": "#/$defs/prefix"},
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["route", "chunks", "planes"],
+        "properties": {
+          "route": {"$ref": "#/$defs/route"},
+          "chunks": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"$ref": "#/$defs/path"}
+          },
+          "planes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["name", "chunks", "assertions", "assertion_ids_sha256"],
+              "properties": {
+                "name": {"type": "string", "minLength": 1},
+                "chunks": {
+                  "type": "array", "minItems": 1, "uniqueItems": true,
+                  "items": {"$ref": "#/$defs/path"}
+                },
+                "assertions": {"type": "integer", "minimum": 1},
+                "assertion_ids_sha256": {"$ref": "#/$defs/sha256"}
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["routes", "chunk_references"],
+      "properties": {
+        "routes": {"type": "integer", "minimum": 1},
+        "chunk_references": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "prefix": {"type": "string", "pattern": "^[0-9a-f]{2}$"},
+    "route": {"type": "string", "minLength": 1, "pattern": "^[^\\s?#]+$"},
+    "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\s]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

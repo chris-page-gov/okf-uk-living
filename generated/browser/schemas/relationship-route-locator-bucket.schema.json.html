@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/relationship-route-locator-bucket.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/relationship-route-locator-bucket.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/relationship-route-locator-bucket.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-route-locator-bucket.schema.json&quot;,
+  &quot;title&quot;: &quot;A Life in the UK relationship route locator bucket&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;schema&quot;, &quot;generated_at&quot;, &quot;hash_algorithm&quot;, &quot;bucket&quot;, &quot;routes&quot;, &quot;counts&quot;],
+  &quot;properties&quot;: {
+    &quot;schema&quot;: {&quot;const&quot;: &quot;okf-rich-relationship-route-locator-bucket.v1&quot;},
+    &quot;generated_at&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+    &quot;hash_algorithm&quot;: {&quot;const&quot;: &quot;sha256-utf8-first-byte-hex&quot;},
+    &quot;bucket&quot;: {&quot;$ref&quot;: &quot;#/$defs/prefix&quot;},
+    &quot;routes&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;required&quot;: [&quot;route&quot;, &quot;chunks&quot;, &quot;planes&quot;],
+        &quot;properties&quot;: {
+          &quot;route&quot;: {&quot;$ref&quot;: &quot;#/$defs/route&quot;},
+          &quot;chunks&quot;: {
+            &quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;uniqueItems&quot;: true,
+            &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;}
+          },
+          &quot;planes&quot;: {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;minItems&quot;: 1,
+            &quot;items&quot;: {
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;required&quot;: [&quot;name&quot;, &quot;chunks&quot;, &quot;assertions&quot;, &quot;assertion_ids_sha256&quot;],
+              &quot;properties&quot;: {
+                &quot;name&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1},
+                &quot;chunks&quot;: {
+                  &quot;type&quot;: &quot;array&quot;, &quot;minItems&quot;: 1, &quot;uniqueItems&quot;: true,
+                  &quot;items&quot;: {&quot;$ref&quot;: &quot;#/$defs/path&quot;}
+                },
+                &quot;assertions&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1},
+                &quot;assertion_ids_sha256&quot;: {&quot;$ref&quot;: &quot;#/$defs/sha256&quot;}
+              },
+              &quot;additionalProperties&quot;: true
+            }
+          }
+        },
+        &quot;additionalProperties&quot;: true
+      }
+    },
+    &quot;counts&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;routes&quot;, &quot;chunk_references&quot;],
+      &quot;properties&quot;: {
+        &quot;routes&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1},
+        &quot;chunk_references&quot;: {&quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1}
+      },
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;additionalProperties&quot;: true,
+  &quot;$defs&quot;: {
+    &quot;prefix&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[0-9a-f]{2}$&quot;},
+    &quot;route&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^[^\\s?#]+$&quot;},
+    &quot;path&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1, &quot;pattern&quot;: &quot;^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\s]+$&quot;},
+    &quot;sha256&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;}
+  }
+}
+</pre>
+</body>
+</html>

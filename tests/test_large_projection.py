@@ -1,21 +1,39 @@
 from __future__ import annotations
 
+import copy
 import json
 import sys
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_large_corpus import build_outputs, remove_generated_tree  # noqa: E402
+from build_large_corpus import (  # noqa: E402
+    build_outputs,
+    relationship_bucket,
+    remove_generated_tree,
+)
 from check_large_projection import validate_large_projection  # noqa: E402
 from life_course_dossiers import load_dossiers, resolve_sources  # noqa: E402
+from life_course_projection import (  # noqa: E402
+    PREDICATE_BASE,
+    RELATIONSHIP_DERIVATION_RULE,
+)
+from semantic_assertion_validation import (  # noqa: E402
+    SEMANTIC_ASSERTION_SCHEMA_BYTES,
+    SEMANTIC_ASSERTION_SCHEMA_PATH,
+    SEMANTIC_ASSERTION_SCHEMA_SHA256,
+    runtime_relationship_as_assertion,
+    validate_assertions,
+    validate_relationship_planes,
+)
 
 
-def projected_rows(outputs: dict[Path, str]) -> list[dict[str, object]]:
+def projected_rows(outputs: dict[Path, str | bytes]) -> list[dict[str, object]]:
     manifest = json.loads(outputs[Path("large/data/manifest.json")])
     return [
         row
@@ -68,7 +86,124 @@ class LargeProjectionTests(unittest.TestCase):
         self.assertTrue(all(resource["source_access"]["display_mode"] == "link" for resource in resources))
         self.assertTrue(all(resource["provenance"]["response_body_retained"] is False for resource in resources))
         for relationship in relationships:
-            self.assertTrue({"assertion_status", "authority", "derivation", "evidence", "rights"} <= set(relationship))
+            self.assertTrue({
+                "id", "source_iri", "target_iri", "predicate", "label",
+                "inverse_label", "assertion_status", "assertion_scope",
+                "authority", "derivation", "evidence", "rights",
+            } <= set(relationship))
+            self.assertTrue(relationship["source_iri"].startswith("https://"))
+            self.assertTrue(relationship["target_iri"].startswith("https://"))
+            self.assertTrue(relationship["predicate"].startswith(PREDICATE_BASE))
+
+    def test_shared_schema_validates_every_relationship_plane(self) -> None:
+        outputs = build_outputs()
+        relationships = json.loads(outputs[Path("large/data/relationships-0.json")])
+        semantic = json.loads(
+            outputs[Path("generated/semantic/life-course-corpus.jsonld")]
+        )
+        validation = json.loads(outputs[Path("large/data/validation-report.json")])
+        receipt, violations = validate_relationship_planes(semantic, relationships)
+        self.assertEqual([], violations)
+        self.assertEqual(
+            SEMANTIC_ASSERTION_SCHEMA_SHA256,
+            receipt["schema_sha256"],
+        )
+        self.assertEqual(SEMANTIC_ASSERTION_SCHEMA_BYTES, receipt["schema_bytes"])
+        self.assertEqual(
+            SEMANTIC_ASSERTION_SCHEMA_BYTES,
+            len(SEMANTIC_ASSERTION_SCHEMA_PATH.read_bytes()),
+        )
+        self.assertEqual(len(relationships), receipt["semantic_assertions_checked"])
+        self.assertEqual(len(relationships), receipt["runtime_relationships_checked"])
+        self.assertEqual(receipt, validation["semantic_assertion_validation"])
+        self.assertEqual("conformant", validation["status"])
+        self.assertEqual([], validation["violations"])
+        self.assertTrue(all(
+            evidence["normalization"] == RELATIONSHIP_DERIVATION_RULE
+            and evidence["rationale"] == "Repository-authored governed relationship."
+            for relationship in relationships
+            for evidence in relationship["evidence"]
+        ))
+
+    def test_shared_schema_rejects_prose_normalization(self) -> None:
+        outputs = build_outputs()
+        relationship = json.loads(
+            outputs[Path("large/data/relationships-0.json")]
+        )[0]
+        assertion = copy.deepcopy(runtime_relationship_as_assertion(relationship))
+        assertion["evidence"][0]["normalization"] = (
+            "repository-authored governed relationship"
+        )
+        checked, violations = validate_assertions([assertion], plane="runtime")
+        self.assertEqual(1, checked)
+        self.assertEqual(1, len(violations))
+        self.assertEqual("/evidence/0/normalization", violations[0]["instance_path"])
+
+    def test_shared_schema_rejects_missing_label_and_unsafe_source_urls(self) -> None:
+        outputs = build_outputs()
+        relationship = json.loads(
+            outputs[Path("large/data/relationships-0.json")]
+        )[0]
+        base = runtime_relationship_as_assertion(relationship)
+
+        missing_label = copy.deepcopy(base)
+        missing_label.pop("label")
+        empty_host = copy.deepcopy(base)
+        empty_host["authority"]["source"] = "https:///missing-host"
+        credentials = copy.deepcopy(base)
+        credentials["evidence"][0]["url"] = "https://user@example.org/evidence"
+        unsafe_resource = copy.deepcopy(base)
+        unsafe_resource["evidence"][0]["resource"] = "https://example.org/it's"
+        invalid_port = copy.deepcopy(base)
+        invalid_port["rights"]["source"] = "https://example.org:0/rights"
+
+        cases = (
+            (missing_label, ""),
+            (empty_host, "/authority/source"),
+            (credentials, "/evidence/0/url"),
+            (unsafe_resource, "/evidence/0/resource"),
+            (invalid_port, "/rights/source"),
+        )
+        for assertion, expected_path in cases:
+            with self.subTest(expected_path=expected_path):
+                checked, violations = validate_assertions(
+                    [assertion], plane="runtime"
+                )
+                self.assertEqual(1, checked)
+                self.assertTrue(violations)
+                self.assertIn(
+                    expected_path,
+                    {violation["instance_path"] for violation in violations},
+                )
+
+    def test_relationship_adjacency_exactly_repeats_runtime_assertions(self) -> None:
+        outputs = build_outputs()
+        relationships = json.loads(
+            outputs[Path("large/data/relationships-0.json")]
+        )
+        manifest = json.loads(
+            outputs[Path("large/data/relationship-adjacency.json")]
+        )
+        runtime_by_id = {edge["id"]: edge for edge in relationships}
+        self.assertEqual(len(relationships), len(runtime_by_id))
+        self.assertEqual(len(relationships), manifest["relationships"])
+
+        incidence: Counter[str] = Counter()
+        for bucket, path in manifest["buckets"].items():
+            routes = json.loads(outputs[Path(path)])
+            for route, edges in routes.items():
+                self.assertEqual(bucket, relationship_bucket(route))
+                for edge in edges:
+                    self.assertIn(route, {edge["source"], edge["target"]})
+                    self.assertEqual(runtime_by_id[edge["id"]], edge)
+                    incidence[edge["id"]] += 1
+
+        self.assertEqual(set(runtime_by_id), set(incidence))
+        self.assertTrue(all(
+            incidence[edge["id"]]
+            == (1 if edge["source"] == edge["target"] else 2)
+            for edge in relationships
+        ))
 
     def test_shared_authority_infrastructure_is_searchable_and_reused(self) -> None:
         outputs = build_outputs()
@@ -79,7 +214,11 @@ class LargeProjectionTests(unittest.TestCase):
         self.assertEqual(397, len(geographies))
         self.assertEqual(438, len(organisations))
         hmcts = next(row for row in organisations if row["title"] == "HM Courts & Tribunals Service")
-        self.assertTrue(any(edge["target"] == hmcts["route"] and edge["predicate"] == "offered-by" for edge in relationships))
+        self.assertTrue(any(
+            edge["target"] == hmcts["route"]
+            and edge["predicate"] == f"{PREDICATE_BASE}offered-by"
+            for edge in relationships
+        ))
         postings = json.loads(outputs[Path("large/data/search/postings.json")])["tokens"]
         ordinal = rows.index(next(row for row in organisations if row["title"] == "Financial Conduct Authority"))
         self.assertIn(ordinal, {item[0] for item in postings["financial"]})

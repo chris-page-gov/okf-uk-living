@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/relationship-runtime-row.schema.json",
+  "title": "A Life in the UK rich relationship runtime row",
+  "type": "object",
+  "required": [
+    "schema", "id", "assertion_id", "source", "target", "source_route",
+    "target_route", "source_iri", "target_iri", "predicate", "predicate_iri",
+    "kind", "label", "inverse_label", "direction", "assertion_status",
+    "assertion_scope", "authority", "derivation", "observed_at", "evidence",
+    "rights", "plane", "lifecycle", "active"
+  ],
+  "properties": {
+    "schema": {"const": "okf-relationship-runtime-row.v1"},
+    "id": {"$ref": "#/$defs/iri"},
+    "assertion_id": {"$ref": "#/$defs/iri"},
+    "source": {"$ref": "#/$defs/route"},
+    "target": {"$ref": "#/$defs/route"},
+    "source_route": {"$ref": "#/$defs/route"},
+    "target_route": {"$ref": "#/$defs/route"},
+    "source_iri": {"$ref": "#/$defs/iri"},
+    "target_iri": {"$ref": "#/$defs/iri"},
+    "predicate": {"$ref": "#/$defs/iri"},
+    "predicate_iri": {"$ref": "#/$defs/iri"},
+    "kind": {"$ref": "#/$defs/nonEmpty"},
+    "label": {"$ref": "#/$defs/nonEmpty"},
+    "inverse_label": {"$ref": "#/$defs/nonEmpty"},
+    "direction": {"const": "source-to-target"},
+    "assertion_status": {
+      "enum": ["official", "normalized", "inferred", "model-derived"]
+    },
+    "assertion_scope": {"enum": ["real-world", "synthetic-fixture"]},
+    "authority": {
+      "type": "object",
+      "required": ["class", "label", "source"],
+      "properties": {
+        "class": {
+          "enum": ["official", "derived", "model-assisted", "synthetic", "unclassified"]
+        },
+        "label": {"$ref": "#/$defs/nonEmpty"},
+        "source": {"$ref": "#/$defs/httpUrl"}
+      },
+      "additionalProperties": true
+    },
+    "derivation": {"$ref": "#/$defs/iri"},
+    "observed_at": {"$ref": "#/$defs/nonEmpty"},
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["@id", "type", "url", "source_field", "source_value_sha256", "retrieved_at"],
+        "properties": {
+          "@id": {"$ref": "#/$defs/iri"},
+          "type": {"$ref": "#/$defs/nonEmpty"},
+          "url": {"$ref": "#/$defs/httpUrl"},
+          "source_field": {"$ref": "#/$defs/nonEmpty"},
+          "source_value_sha256": {"$ref": "#/$defs/sha256"},
+          "retrieved_at": {"$ref": "#/$defs/nonEmpty"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["source", "assertion"],
+      "properties": {
+        "source": {"$ref": "#/$defs/httpUrl"},
+        "assertion": {"$ref": "#/$defs/nonEmpty"}
+      },
+      "additionalProperties": true
+    },
+    "plane": {"$ref": "#/$defs/iri"},
+    "lifecycle": {"enum": ["active", "historical", "rejected"]},
+    "active": {"type": "boolean"}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "nonEmpty": {"type": "string", "minLength": 1},
+    "iri": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$"
+    },
+    "route": {"type": "string", "minLength": 1, "pattern": "^[^\\s?#]+$"},
+    "httpUrl": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}
