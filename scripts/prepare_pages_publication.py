@@ -18,11 +18,10 @@ CANDIDATE_MANIFEST_PATH = ROOT / "generated" / "assurance" / "candidate-manifest
 PUBLIC_DESCRIPTOR_PATH = ROOT / "publication" / "okf-explorer.json"
 LOCAL_DESCRIPTOR_PATH = ROOT / "okf-explorer.json"
 EXPECTED_CANDIDATE_ID = "life-course-population-complete-2026-08-08"
-EXPECTED_CANDIDATE_MANIFEST_SHA256 = "0b1df05a4eb440b9193d0906fbe2c071c6463bbe457f9a791472fee7f949b62e"
+EXPECTED_CANDIDATE_MANIFEST_SHA256 = "55f8428248b06646e0995f5230207c9006bf4d583d29157fb010ad7e69e416a1"
 EXPECTED_PUBLIC_BASE = "https://chris-page-gov.github.io/okf-uk-living/"
-ASSURANCE_COMMIT = "c8b13307e6278f54c89018c075f148781b7c5f44"
-PUBLICATION_SOURCE_COMMIT = "980c7a9ec19ddd4161cefa348de689d179d1992b"
-EXPECTED_PAGES_MANIFEST_SHA256 = "63be5185e0302c367afd338518c550adf5d453e1812ff12c784db8973be9bb1f"
+PUBLICATION_DATA_COMMIT = "c38f927944dedc56b6454dba4d4463d419f85ee8"
+EXPECTED_PAGES_MANIFEST_SHA256 = "8c6f7176f9aff31af65714a70d8d436d741548a2b186e6722ab6ce94ca49df18"
 
 
 def json_text(value: Any) -> str:
@@ -44,7 +43,7 @@ def git_file_bytes(commit: str, path: Path) -> bytes:
 
 
 def load_frozen_manifest() -> dict[str, Any]:
-    content = git_file_bytes(PUBLICATION_SOURCE_COMMIT, Path("publication/pages-file-manifest.json"))
+    content = MANIFEST_PATH.read_bytes()
     if hashlib.sha256(content).hexdigest() != EXPECTED_PAGES_MANIFEST_SHA256:
         raise ValueError("frozen Pages manifest hash is unexpected")
     return json.loads(content)
@@ -58,7 +57,9 @@ def validate_frozen_publication(manifest: dict[str, Any]) -> list[str]:
     if hashlib.sha256(current).hexdigest() != EXPECTED_PAGES_MANIFEST_SHA256:
         errors.append("tracked Pages manifest differs from the owner-authorised manifest")
     if json.loads(current) != manifest:
-        errors.append("tracked Pages manifest differs from the frozen publication commit")
+        errors.append("tracked Pages manifest differs from the loaded frozen manifest")
+    if manifest.get("publication_data_commit") != PUBLICATION_DATA_COMMIT:
+        errors.append("frozen Pages manifest has an unexpected publication data commit")
     if manifest.get("file_count") != len(manifest.get("files", [])):
         errors.append("frozen Pages manifest file count is inconsistent")
     targets = [str(item.get("target", "")) for item in manifest.get("files", [])]
@@ -68,6 +69,32 @@ def validate_frozen_publication(manifest: dict[str, Any]) -> list[str]:
         errors.append("frozen Pages manifest contains an unsafe target")
     if any("snapshot" in str(item.get("source", "")).lower() for item in manifest.get("files", [])):
         errors.append("frozen Pages manifest must not contain source snapshots")
+    expected = build_manifest()
+    if manifest != expected:
+        errors.append("frozen Pages manifest does not match the current publication sources")
+    changed = subprocess.run(
+        ["git", "diff", "--name-only", PUBLICATION_DATA_COMMIT, "--"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    publication_sources = {str(item.get("source", "")) for item in manifest.get("files", [])}
+    permitted_transport_changes = {
+        "generated/browser/CHANGELOG.html",
+        "generated/browser/PLANNING.html",
+        "generated/browser/README.html",
+        "generated/browser/REPOSITORY_STATUS.html",
+        "generated/browser/ROADMAP.html",
+        "generated/browser/TRACKING.html",
+        "publication/okf-explorer.json",
+    }
+    drift = sorted((set(changed) & publication_sources) - permitted_transport_changes)
+    if drift:
+        errors.append(
+            "publication sources differ from the pinned rich-runtime data commit: "
+            + ", ".join(drift)
+        )
     return errors
 
 
@@ -99,12 +126,10 @@ def publication_files() -> list[tuple[Path, Path]]:
 def descriptor_errors(*, frozen: bool = False) -> list[str]:
     errors: list[str] = []
     if frozen:
-        local_bytes = git_file_bytes(ASSURANCE_COMMIT, Path("okf-explorer.json"))
-        public_bytes = git_file_bytes(
-            PUBLICATION_SOURCE_COMMIT, Path("publication/okf-explorer.json")
-        )
+        local_bytes = git_file_bytes(PUBLICATION_DATA_COMMIT, Path("okf-explorer.json"))
+        public_bytes = PUBLIC_DESCRIPTOR_PATH.read_bytes()
         candidate_bytes = git_file_bytes(
-            ASSURANCE_COMMIT, Path("generated/assurance/candidate-manifest.json")
+            PUBLICATION_DATA_COMMIT, Path("generated/assurance/candidate-manifest.json")
         )
     else:
         local_bytes = LOCAL_DESCRIPTOR_PATH.read_bytes()
@@ -166,7 +191,7 @@ def build_manifest() -> dict[str, Any]:
         "schema": "life-course-pages-publication-manifest.v1",
         "candidate_id": EXPECTED_CANDIDATE_ID,
         "candidate_manifest_sha256": EXPECTED_CANDIDATE_MANIFEST_SHA256,
-        "assurance_commit": ASSURANCE_COMMIT,
+        "publication_data_commit": PUBLICATION_DATA_COMMIT,
         "publication_kind": "population-complete-preview",
         "publication_authorized_at": "2026-08-08T22:40:40+01:00",
         "public_base_url": EXPECTED_PUBLIC_BASE,
@@ -250,6 +275,8 @@ def main() -> int:
     parser.add_argument("--destination", type=Path)
     args = parser.parse_args()
     try:
+        if args.write_manifest and args.destination:
+            raise ValueError("--write-manifest and --destination cannot be combined")
         if args.frozen:
             if args.write_manifest or args.destination:
                 raise ValueError("--frozen is verification-only")
@@ -260,8 +287,21 @@ def main() -> int:
                     print(error)
                 return 1
             print(
-                f"Frozen Pages publication passed: commit={PUBLICATION_SOURCE_COMMIT} "
+                f"Frozen Pages publication passed: data_commit={PUBLICATION_DATA_COMMIT} "
                 f"files={manifest['file_count']} bytes={manifest['total_bytes']}"
+            )
+            return 0
+        if args.destination:
+            manifest = load_frozen_manifest()
+            errors = validate_frozen_publication(manifest)
+            if errors:
+                for error in errors:
+                    print(error)
+                return 1
+            copy_publication(args.destination.resolve(), manifest)
+            print(
+                f"prepared {manifest['file_count']} frozen Pages files "
+                f"({manifest['total_bytes']} bytes)"
             )
             return 0
         manifest = build_manifest()
@@ -272,17 +312,10 @@ def main() -> int:
             for error in errors:
                 print(error)
             return 1
-        if args.destination:
-            copy_publication(args.destination.resolve(), manifest)
-            print(
-                f"prepared {manifest['file_count']} frozen Pages files "
-                f"({manifest['total_bytes']} bytes)"
-            )
-        else:
-            print(
-                f"Pages publication manifest passed: {manifest['file_count']} files, "
-                "population preview, release grade false, 0 snapshots"
-            )
+        print(
+            f"Pages publication manifest passed: {manifest['file_count']} files, "
+            "population preview, release grade false, 0 snapshots"
+        )
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print(error)
         return 1

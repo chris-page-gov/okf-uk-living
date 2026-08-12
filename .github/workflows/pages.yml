@@ -7,6 +7,9 @@ on:
         description: Frozen population candidate to publish
         required: true
         default: life-course-population-complete-2026-08-08
+      publication_commit:
+        description: Exact protected-main merge commit to deploy
+        required: true
 
 concurrency:
   group: pages
@@ -21,14 +24,19 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
-          ref: 980c7a9ec19ddd4161cefa348de689d179d1992b
+          fetch-depth: 0
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
       - name: Require the reviewed main candidate
+        env:
+          EXPECTED_CANDIDATE_ID: ${{ inputs.candidate_id }}
+          EXPECTED_PUBLICATION_COMMIT: ${{ inputs.publication_commit }}
         run: |
           test "$GITHUB_REF" = "refs/heads/main"
-          test "${{ inputs.candidate_id }}" = "life-course-population-complete-2026-08-08"
+          test "$EXPECTED_CANDIDATE_ID" = "life-course-population-complete-2026-08-08"
+          test "$GITHUB_SHA" = "$EXPECTED_PUBLICATION_COMMIT"
+          test "$(git rev-parse HEAD)" = "$EXPECTED_PUBLICATION_COMMIT"
       - name: Promote exact frozen bytes
         run: python3 scripts/prepare_pages_publication.py --destination _site
       - name: Configure Pages
