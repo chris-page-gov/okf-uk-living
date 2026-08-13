@@ -4,33 +4,34 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **293-family population-complete preview published and verified**.
-The Reader, query, graph provenance, browser source handoff and licence-notice
-journeys pass in OKF Explorer 0.5.7. The approved 293-family local projection
-also exposes seven reconciled colour facets and static search. The
-`life-course-population-contract.v1` contract now governs eight delivery packs,
-48 enclosing processes and the distinction between population-complete and
-specialist-reviewed release grade. All 293 reviewed families now expose
-authored narratives, typed official links and governed journey graphs across
-all 24 life-course domains. The shared infrastructure now adds
-397 dated GSS geographies, 438 reusable authority/regulator/redress records,
-ten sector maps and metadata-only source-link receipts. Deterministic population
-assurance records zero blocking omissions and freezes the exact data-plane
-artifacts. This is not an official service corpus, a release-grade candidate or
-a release-grade service. The owner authorised public repository visibility on
-2026-08-09; the exact 1,549-file Pages unit and its Explorer journey then passed
-public-browser verification. A bounded 1,814-file correction now freezes the
-reviewed `c38f927…` rich relationship runtime; the previously verified site
-remains unchanged until that correction's exact merge is deployed and checked
-in a cache-bypassed browser. Deterministic evaluation remains local-only;
-snapshots, unbounded or unstaged leaf acquisition and remote CI remain disabled.
-The only authorised hosted action is the manual exact-byte Pages transport.
+Status: **the existing 1,814-file population-complete publication passed its
+exact-byte review; an expanded Explore OKF public-review surface is
+owner-authorised and awaiting deployment verification**. The pending overlay
+will replace the root landing-page bytes, so the mutable root URL is not
+labelled verified here. Population-complete means reconciled against this
+project's declared service-family denominator, not every UK public service or
+every local variation. None of the 293 families has named specialist
+acceptance; specialist review is not required for 2 and remains required for
+291. This is independent exploratory research, not an official service,
+released data product or source of personalised advice.
 
-- [Open the verified population preview](https://chris-page-gov.github.io/okf-uk-living/)
+The unchanged corpus exposes 24 life-course domains, 48 process groupings,
+authored narratives, typed official links and governed journey graphs. The
+additive review surface provides a secure standalone interface, a
+beginner-readable learning library and machine-readable evidence without
+changing the previously tested descriptor or corpus/runtime bytes. Publication
+remains manual and exact-byte bound. No new URL is labelled verified until its
+deployed identity and representative journeys pass a cache-bypassed real-browser
+check.
+
+- [Open the Pages site](https://chris-page-gov.github.io/okf-uk-living/)
 - [Explore the published bundle in OKF Explorer](https://chris-page-gov.github.io/okf-explorer/?bundle=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-uk-living%2Fokf-explorer.json#overview)
 
 ## Start here
 
+- [Beginner learning plan source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/start-here.md)
+- [Copy-and-paste AI prompt source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/ask-an-ai.md)
+- [Explore OKF public-review authorisation source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/explore-okf-review-authorization-2026-08-13.md)
 - [Research overview and generating prompt](research/overview.md)
 - [Exhaustive reference-family inventory and gap analysis](research/exhaustive-reference-gap-analysis.md)
 - [Approved corpus acquisition and review decisions](research/corpus-acquisition-decisions.md)
@@ -56,7 +57,7 @@ The only authorised hosted action is the manual exact-byte Pages transport.
 - [Population-preview UI-efficiency review](evaluation/reviews/population-preview-ui-efficiency-2026-08-08.md)
 - [Frozen local population candidate](evaluation/candidates/population-complete-candidate.v1.yaml)
 - [Generated candidate manifest](generated/assurance/candidate-manifest.json)
-- [Publication authorization](evaluation/publication/population-preview-authorization-2026-08-08.md)
+- [Publication authorisation](evaluation/publication/population-preview-authorization-2026-08-08.md)
 - [Public deployment verification](evaluation/publication/pages-deployment-verification-2026-08-09.md)
 - [Pages publication unit](publication/README.md)
 - [`okf-domain-profile.v1` review handoff](profiles/okf-domain-profile.v1.md)
@@ -168,7 +169,7 @@ until an exact deployed URL passes a real-browser identity and journey check.
 
 Repository-authored code, documentation and ontology terms are licensed under
 the [MIT License](LICENSE). That does not relicense third-party material.
-Official source pages are linked and summarized in original words rather than
+Official source pages are linked and summarised in original words rather than
 redistributed, and no page snapshots have been acquired. Dated provider,
 OGL, CPSV-AP, Open Referral UK and HSDS determinations are recorded in
 [the licensing decisions](LICENSE_DECISIONS.md), [NOTICE.md](NOTICE.md) and the

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Changelog — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project are recorded here. Dates use ISO 8601.</p>
+<h2 id="unreleased">[Unreleased]</h2>
+<h3 id="added">Added</h3>
+<ul>
+  <li>Owner-authorised Explore OKF public-review surface comprising the root <code>explore-okf.json</code> descriptor, secure standalone <code>en-GB</code> journey view, governed projection and schema, endpoint-label index, data manifest, review hub and a curated beginner-readable documentation library. The overlay replaces only the root landing page after matching its frozen SHA-256 and adds all other review targets without changing the exact <code>okf-explorer.json</code> descriptor or any corpus and relationship-runtime byte. The documentation- only re-freeze synchronises affected browser handoffs and their manifest bindings. The interface exposes all 293 families, 24 domains, 48 processes, 586 episodes, 881 steps and 879 linked official sources with explicit ordering, jurisdiction, review and provenance boundaries. Local deterministic build/check, publication- overlay, documentation, schema, security and unit validation pass. The surface remains exploratory, noindex and not release-grade; exact public URLs remain unverified until the authorised deployment passes browser checks. The learning route includes provider-neutral copy-and-paste AI prompts that use direct public JSON URLs, require evidence-bearing answers and abstention, warn against personal information and treat embedded commands as untrusted data rather than executable instructions. British English is used throughout affected prose; exact schema values, identifiers and legacy filenames retain their contract spellings.</li>
+</ul>
+<ul>
+  <li>Provider-neutral AI-consumer gold pack, structured answer contract, bounded offline evaluator and isolated two-condition runner for all 104 governed competency questions. The answer-blind development preflight records exact runner, prompt, schema, question-source, descriptor, projection and publication-closure identities. Local answer-blind development runs were used to diagnose prompt, jurisdiction and decision-boundary ambiguities; the receipt boundary does not support a published behavioural result. Two later no-retry comparison attempts were preserved privately and stopped before completion. The evaluator does not yet bind each supplied answer to its immutable runner receipt, so no response counts, scores or model comparison from those attempts are published as evidence. Raw model prose and run artefacts remain ignored. All 104 questions are now development-calibration material, promotion claims are disabled, and a new held-out set, receipt binding and independent review are required for any future performance or product-promotion claim.</li>
+</ul>
+<ul>
+  <li>A 1,814-file publication freeze for the rich relationship runtime generated at reviewed main commit <code>c38f927…</code>. The manifest pins every served SHA-256, 262 rich-runtime files and the updated population-assurance identity without changing semantic authority, corpus scope, release grade or the zero-snapshot boundary. The manual workflow now requires the exact protected-main merge commit and will not deploy on a pull request or ordinary merge.</li>
+</ul>
+<ul>
+  <li>Cross-repository OKF 0.2 semantic contract in <code>okf.semantic.json</code> plus repository-local agent guidance for the additive Bundle Wiki YAML-LD profile. The deterministic large-corpus build now emits all 15,810 directed relationships with absolute entity, predicate and assertion IRIs, validated local routes, preferred and inverse labels, status, scope, authority, derivation, observation time, evidence and rights. The YAML-LD/JSON-LD graph carries both each direct triple and its evidence-bearing reified assertion; a digest-pinned local copy of the shared Draft 2020-12 assertion schema now validates all 15,810 semantic assertions and all 15,810 runtime rows before a conformance receipt can be emitted. The finalized pin requires both <code>kind</code> and <code>label</code> and canonical, credential-free HTTP(S) authority, evidence, evidence-resource and rights URLs. The canonical 16-file profile is now vendored with its digest lock, and the canonical assertion schema is pinned byte for byte. Explorer can hydrate the same assertions from two bounded, active authority planes through digest-bound gzip shards and a SHA-256 route locator whose per-plane commitments cover every incident assertion. Projection checks and the full unit suite pass. This local regeneration does not modify or republish the frozen population preview.</li>
+</ul>
+<ul>
+  <li>Public deployment evidence for workflow run <code>31297841419</code>, deployment <code>5815993749</code>, the exact manifest and descriptor hashes, and the verified search-to-GOV.UK Explorer journey.</li>
+  <li>Server-enforced sole-developer <code>main</code> protection requiring pull requests and resolved conversations while requiring zero approvals or remote checks.</li>
+</ul>
+<ul>
+  <li>Dated population-preview UI-efficiency review covering six concise keyword queries, three conversational questions, one complete narrative/graph/source journey and a real-browser GOV.UK handoff.</li>
+  <li>Publication-attempt evidence recording GitHub's HTTP 422 private-repository Pages plan constraint without changing repository visibility or sharing an unverified URL.</li>
+</ul>
+<ul>
+  <li>Owner-authorised population-complete preview publication unit with an original landing page, a publication-scoped Explorer descriptor and a comprehensive 1,549-file SHA-256 manifest rooted in the frozen candidate.</li>
+  <li>Manual-only GitHub Pages workflow using pinned official actions; it validates and copies frozen bytes without rebuilding the corpus or acquiring sources.</li>
+  <li>Publication contract tests preserving the non-release-grade boundary, 291 specialist-review warnings, zero snapshots and the exact public topology.</li>
+</ul>
+<ul>
+  <li>Deterministic whole-corpus coverage, omission, link-health, review-status, provenance and population-completion assurance reports, plus an offline drift checker and regression tests.</li>
+  <li>Frozen local population-complete candidate with SHA-256 identities for the exact Explorer descriptor, search, relationship, resource, validation, JSON-LD and YAML-LD artefacts.</li>
+  <li>Six visible Explorer acceptance journeys spanning national, devolved, local, health, legal and private-dependency discovery from search through Narrative, Graph and official source.</li>
+</ul>
+<ul>
+  <li>Pack 8 population for all 41 approved identities across holidays/volunteering/ living overseas, later life and death/bereavement, adding 38 compact dossiers and narratives while preserving the three deeper death/notification/estate vertical slices.</li>
+  <li>Forty-seven current official link-only sources with body-free receipts and 13 natural-language competency questions, completing 293-family search coverage across all 24 life-course domains.</li>
+</ul>
+<ul>
+  <li>Pack 7 population for all 36 approved families across citizenship/democracy, starting/running an organisation and ideas/creativity/research, with original summaries, jurisdiction variants, ordinary and exception journeys and specialist-review boundaries.</li>
+  <li>Forty-five current official link-only sources with body-free receipts and 13 natural-language competency questions covering immigration, elections, participation, organisation operation, intellectual property, funding and research publication.</li>
+  <li>Deterministic browser-handoff replacement now tolerates the macOS Finder race that can recreate <code>.DS_Store</code> during removal, while still failing on any other unexpected generated-file residue.</li>
+</ul>
+<ul>
+  <li>Pack 6 population for all 36 approved families across relationships/family change, health throughout life and disability/care/support, with original summaries, four-nation variants, ordinary and exception journeys and specialist-review boundaries.</li>
+  <li>Forty-five current official link-only sources with body-free receipts and 13 natural-language competency questions covering family change, routine and urgent health, care assessment, capacity, safeguarding and redress.</li>
+</ul>
+<ul>
+  <li>Pack 5 population for all 36 approved identities across transport enforcement, shopping/consumer rights and police/legal services, adding 35 compact dossiers and narratives while preserving the reviewed speeding-notice vertical slice.</li>
+  <li>Forty-four current official link-only sources with body-free receipts and 13 natural-language competency questions covering statutory and private penalties, consumer remedies, emergencies, legal help and appeals.</li>
+</ul>
+<ul>
+  <li>Pack 4 population for all 36 approved identities across housing/community, rubbish/street and public/private transport, adding 35 compact dossiers and narratives while preserving the deeper missed-rubbish vertical slice.</li>
+  <li>Forty-four current official link-only sources with body-free receipts and 13 natural-language competency questions covering all three domains, four nations, local delivery, exceptions and redress.</li>
+</ul>
+<ul>
+  <li>Pack 3 population for all 36 approved families across finding work, employment and money/tax/benefits, with original summaries, four-nation variants, ordinary and exception journeys and specialist-review boundaries.</li>
+  <li>Forty-five current official link-only sources with body-free receipts, 13 natural-language competency questions and a dated HSE OGL rights decision.</li>
+  <li>Deterministic large-data replacement now tolerates the macOS Finder race that can recreate <code>.DS_Store</code> during removal, while still failing on any other unexpected generated-file residue.</li>
+</ul>
+<ul>
+  <li>Pack 2 population for all 36 approved identities across school years, transition to adulthood and further education/university/research, adding 35 compact dossiers and narratives while preserving the deeper learning-to-drive vertical slice.</li>
+  <li>Three further domain registers, domain narratives, 44 current official link-only sources with body-free receipts and 13 natural-language competency questions across the three domains and all four nations.</li>
+  <li>Explicit <code>preserve_existing</code> validation and rendering behaviour so later corpus packs cannot overwrite a reviewed vertical-slice dossier or narrative.</li>
+</ul>
+<ul>
+  <li>Pack 1 population for all 36 approved families across before birth, the newborn period and early years, with original summaries, aliases, four-nation route variants, ordinary and exception journeys, actors, dependencies, evidence dimensions, redress and specialist-review status.</li>
+  <li>Three compact <code>life-course-domain-register.v1</code> authoring registers, a deterministic renderer for 36 family dossiers, 36 service narratives and three domain narratives, and drift checks that keep those surfaces aligned.</li>
+  <li>Forty-five current official links with body-free metadata receipts, dated host-rights decisions and explicit national-discovery limitations; no source response body or snapshot is retained.</li>
+  <li>Thirteen natural-language Pack 1 competency questions and executable search acceptance for every canonical title and alias, process retrieval, expected top-ten results and unmatched-query behaviour.</li>
+  <li>Local visible-Explorer evidence for alias search, authored Narrative, family-centred Graph and typed official-source access.</li>
+</ul>
+<ul>
+  <li>Current shared authority registry with 382 principal-authority areas, 19 strategic/combined authorities, 397 dated GSS geographies and 438 reusable authority, regulator, redress and provider-role records.</li>
+  <li>Ten-sector regulator/register and redress mappings, explicit publisher-paired bilingual identity rules and current ESD Services mapping-only policy.</li>
+  <li>Reviewed metadata-only authority refresh and link-audit commands plus seven active <code>source-link-receipt.v1</code> records with no retained response bodies.</li>
+  <li>Searchable authority/geography concepts in the JSON-LD and YAML-LD data plane, with shared identities reused by existing dossier graph relationships.</li>
+  <li>Deterministic multi-chunk record and search-result hydration with a real-browser regression for corpora larger than 1,000 concepts.</li>
+</ul>
+<ul>
+  <li>Six population-complete <code>life-course-family.v1</code> dossiers for the three reviewed vertical slices, resolving exactly the existing 53 authoritative reference records without acquiring source bodies or snapshots.</li>
+  <li>Per-family authored Explorer narratives, ordinary and exception episodes, route variants, actors, jurisdictions, dependencies and regulator or redress boundaries.</li>
+  <li>Deterministic 602-concept projection with 1,025 evidence-bearing governed relationships, 53 typed link-only resources, record locator, relationship adjacency, JSON-LD, YAML-LD and SHACL-style validation reports.</li>
+  <li>Offline dossier/source-resolution checks and regression tests.</li>
+</ul>
+<ul>
+  <li>Owner-authorised <code>life-course-population-contract.v1</code> for staged local implementation of all 293 families with separate population-complete, release-grade and publication-ready gates.</li>
+  <li>Forty-eight normalised enclosing processes that map every approved family exactly once without asserting official classification or jurisdictional equivalence.</li>
+  <li><code>life-course-family.v1</code>, metadata-only source-link receipt and SHACL-style validation contracts plus a 16-predicate governed semantic registry.</li>
+  <li>Offline population-contract validation and regression tests for all 293 family mappings, eight pack counts, zero snapshots and the publication gate.</li>
+</ul>
+<ul>
+  <li>Planned domain profile, source inventory and three vertical-slice fixtures.</li>
+  <li>Delivery planning and tracking ledgers with lockstep documentation rules.</li>
+  <li>Pull-request publication-status template and explicit manual GitHub Pages gate.</li>
+  <li>Locked <code>uv</code> project environment and local-only validation commands.</li>
+  <li>Draft <code>okf-domain-profile.v1</code> machine contract and human review handoff.</li>
+  <li>Three synthetic vertical-slice fixture contracts covering ordinary and exception journeys for rubbish collection, driving enforcement and death.</li>
+  <li>Executable profile and fixture-contract validation with unit tests.</li>
+  <li>Bounded missed-rubbish source register containing 13 official linked references and no acquired snapshots.</li>
+  <li>First vertical slice with four local service routes, four jurisdiction contexts, responsible councils, external-redress bodies, a normalised service family and ontology module, and a synthetic journey.</li>
+  <li>Semantic slice validation and regression tests for authority, jurisdiction, provenance, assertion status and anti-generalization boundaries.</li>
+  <li>Bounded learning-to-drive and speeding register with 20 official linked references and no acquired snapshots.</li>
+  <li>Second vertical slice with separate Great Britain and Northern Ireland learning routes; GB notice, England-and-Wales court, Scottish prosecution and Northern Ireland speeding branches; public/private actor boundaries; normalised ontology; and a synthetic evidence-lineage journey.</li>
+  <li>Driving-slice semantic checks for exact providers, jurisdictions, source sets, assertion status, graph completeness and non-universal deadlines.</li>
+  <li>Bounded death, bereavement and estate register with 20 official linked references and no acquired snapshots.</li>
+  <li>Third vertical slice with separate national registration routes; Tell Us Once and Northern Ireland manual notification boundaries; England-and-Wales probate, Scottish confirmation and Northern Ireland probate routes; private dependencies; normalised ontology; and a synthetic journey.</li>
+  <li>Bereavement semantic checks for exact authority, jurisdiction, source-set, notification-coverage, estate-process and graph-completeness boundaries.</li>
+  <li>MIT licence for repository-authored code, documentation and ontology terms.</li>
+  <li>Dated machine-readable rights decisions covering every registered source host, OGL attribution, CPSV-AP, Open Referral UK and HSDS.</li>
+  <li>Rights validation and regression tests for source-host coverage, exact OGL attribution, standards terms, zero snapshots and generated projections.</li>
+  <li>Attribution and third-party notices for downstream users.</li>
+  <li>Explicit three-slice review-to-publication plan with integrated-review, Explorer-compatibility, release-scope, frozen-candidate, manual Pages and real-browser verification gates.</li>
+  <li>Dated local OKF Explorer 0.5.7 review evidence, exact consumer and bundle inputs, fixture traceability, and a four-item finding ledger.</li>
+  <li>Owner-authorised exhaustive reference-family inventory with 89 new external references, inclusion of the 53 implemented-slice references, 120 assessed domain/jurisdiction cells, original summaries and zero snapshots.</li>
+  <li>Actionable twelve-item gap analysis covering local topology and leaf routes, Welsh delivery sources, health permissions, private dependencies, redress, legal review, freshness, bilingual identity and Explorer large-corpus facets.</li>
+  <li>Offline inventory validation and regression tests for the declared denominator, source metadata, dated rights decisions and publication limits.</li>
+  <li>Owner-approved 293-family denominator with 24 domains, three staged waves and executable count, identity, scope and authorisation checks.</li>
+  <li>Corpus-acquisition policy for exhaustive-authority plus representative and exception local coverage, dated GSS and applicable ODS identifiers, manual health links, regulator-first private dependencies, governed sector redress and role-based specialist review.</li>
+  <li>Governed <code>okf-relationship-assertion.v2</code> projections with explicit authority, assertion scope/status, derivation, evidence, observation and rights fields.</li>
+  <li>Deterministic browser-renderable handoffs for authored Markdown, YAML, licensing decisions, notices and the machine rights register.</li>
+  <li>First-class licensing and attribution evidence in the small bundle.</li>
+  <li>Owner-approved <code>okf-explorer-large-corpus.v1</code> local projection with 293 searchable planning records, seven reconciled colour facets and filter postings, zero acquired source content and publication disabled.</li>
+  <li>Visible-browser evidence closing <code>REV-001</code> through <code>REV-004</code> and validating large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+  <li>Repository visibility changed from private to public after explicit owner authorisation, exposing the complete source and history and unblocking Pages.</li>
+  <li><code>PAGES-001</code>, <code>VERIFY-001</code> and the verified preview handoff are complete; the preview remains non-release-grade and the Explorer UI findings remain open.</li>
+</ul>
+<ul>
+  <li>Publication authorisation remains a separate descriptor envelope and dated receipt so that the owner-authorised candidate bytes and hash are unchanged.</li>
+  <li>Manual Pages transport and local publication validation now pin publication merge <code>980c7a9…</code>, so later lockstep documentation cannot alter the frozen 1,549-file unit.</li>
+  <li><code>PAGES-001</code> is blocked on an explicit repository-visibility/publication-host choice; conversational search, zero-result domain browsing and display density remain tracked Explorer follow-ups.</li>
+</ul>
+<ul>
+  <li>Completed <code>SCOPE-001</code>, <code>CAND-001</code> and <code>PUB-001</code> for the full population-complete preview after explicit owner authorisation; advanced <code>PAGES-001</code> to active while public-browser verification remains pending.</li>
+</ul>
+<ul>
+  <li>Completed <code>ASSURE-001</code> after reconciling 293 families, 24 domains, 48 processes, 104 competency questions, 9,757 concepts, 879 resources and 15,810 relationships with zero blocking omissions. Population completion is true; release grade and publication remain false.</li>
+  <li>Disposed all twelve historical reference gaps against the population gate while retaining named specialist review, reviewed freshness, bilingual and future-automation boundaries for later work.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-008</code> to complete and <code>ASSURE-001</code> to active after the full 293-family, 9,757-concept, 879-resource and 15,810-relationship projection passed locked local validation and visible Explorer review.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-007</code> to complete and <code>PACK-008</code> to active after the 255-family, 8,645-concept, 802-resource and 13,972-relationship projection passed locked local validation and visible Explorer review.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-006</code> to complete and <code>PACK-007</code> to active after the 219-family, 7,613-concept, 761-resource and 12,377-relationship projection passed locked local validation and visible Explorer review.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-005</code> to complete and <code>PACK-006</code> to active after the 183-family, 6,587-concept, 629-resource and 10,424-relationship projection passed locked local validation.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-004</code> to complete and <code>PACK-005</code> to active after the 148-family, 5,567-concept, 524-resource and 8,599-relationship projection passed locked local validation.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-003</code> to complete and <code>PACK-004</code> to active after the 113-family, 4,535-concept, 384-resource and 6,622-relationship projection passed locked local validation.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-002</code> to complete and <code>PACK-003</code> to active after the 77-family, 3,496-concept, 300-resource and 4,850-relationship projection passed locked local validation.</li>
+</ul>
+<ul>
+  <li>Advanced <code>PACK-001</code> to complete and <code>PACK-002</code> to active after the 42-family, 2,485-concept, 160-resource and 2,894-relationship projection passed all deterministic and visible-browser checks.</li>
+  <li>Replaced six-family/53-resource projection assertions with current-stage reconciliation derived from authored dossiers and 1,000-record chunks.</li>
+</ul>
+<ul>
+  <li>Expanded dated host decisions from 25 to 28 for the ONS Open Geography portal, its ArcGIS query service and the ESD standards help service without relaxing link-and-summary-only source use.</li>
+  <li>Advanced <code>POP-004</code> to complete after offline validation, live metadata receipts and local Explorer search, detail, bilingual and graph journeys.</li>
+</ul>
+<ul>
+  <li>Recorded OKF Explorer PR #72 as merged with authored large-record narratives and typed link/JSON/XML/text source access after the full three-browser gate.</li>
+  <li>Replaced the planning-only zero-resource and zero-relationship projection for the six reviewed families while preserving all 293 family routes and distinct family versus total-concept counts.</li>
+</ul>
+<ul>
+  <li>Superseded the three-slices-only implementation boundary with the explicit 2026-08-08 owner authorisation for the staged 293-family population while keeping link-and-summary-only acquisition, local evaluation and no Pages publication.</li>
+</ul>
+<ul>
+  <li>Recorded owner approval of <code>okf-domain-profile.v1</code> and the three fixture contracts, authorising bounded source registration and slice implementation.</li>
+  <li>Connected the explicitly authorised private GitHub repository while keeping remote CI and GitHub Pages disabled.</li>
+  <li>Recorded the private-plan branch-protection limitation while retaining the sole-developer PR-only policy for <code>main</code>.</li>
+  <li>Advanced the missed-rubbish fixture acquisition state to <code>linked_references_registered</code>.</li>
+  <li>Advanced the driving fixture to <code>linked_references_registered</code> before its implementation merged in PR #4.</li>
+  <li>Recorded PR #4 as merged and advanced the bereavement fixture to <code>linked_references_registered</code>; all three approved denominators are now registered.</li>
+  <li>Replaced pending reuse markers with recorded source-family decisions while retaining link-and-summary-only use and prohibiting source-content and snapshot redistribution.</li>
+  <li>Recorded PR #5 and PR #6 as merged and advanced the bounded sample to integrated review, while keeping publication separately gated.</li>
+  <li>Executed the first visible-browser integrated review, recording four real provenance, source-handoff and licence-notice failures that were subsequently remediated and closed by the local rerun.</li>
+  <li>Expanded dated rights decisions from 16 to 25 source hosts and added ONS, NHS ODS, W3C, LGSL and OKF Explorer determinations without relaxing link-and-summary-only source use or authorising publication.</li>
+  <li>Recorded explicit owner authorisation for exhaustive link-only reference discovery while preserving the snapshot, redistribution, unbounded or unstaged leaf acquisition, CI and GitHub Pages gates.</li>
+  <li>Recorded owner approval of all six corpus-governance decisions while keeping individual legal and clinical appointments, CI and publication separately gated.</li>
+  <li>Locked the small-bundle Explorer consumer contract for local evaluation and activated the large-corpus approval after all four prerequisites passed.</li>
+</ul>
+<h2 id="0-0-0-2026-08-07">[0.0.0] - 2026-08-07</h2>
+<h3 id="added-2">Added</h3>
+<ul>
+  <li>Fail-safe local repository bootstrap with source/generated boundaries.</li>
+  <li>OKF v0.2 root, section indexes and deterministic small-bundle builder.</li>
+  <li>Citizen life-course research overview with the original generating prompt.</li>
+  <li>Authoring guidance, implementation roadmap, validation tests and disabled CI scaffold.</li>
+</ul>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.</p>
+    </div>
+  </footer>
+</body>
+</html>

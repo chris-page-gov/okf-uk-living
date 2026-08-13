@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/evaluation/ai-consumer/answer.schema.json",
+  "title": "Provider-neutral AI consumer evaluation answer",
+  "type": "object",
+  "required": [
+    "schema",
+    "run_id",
+    "response_id",
+    "observed_at",
+    "model",
+    "condition",
+    "input_binding",
+    "question_id",
+    "answer_mode",
+    "answer_text",
+    "selected_family",
+    "journey",
+    "jurisdictions",
+    "source_urls",
+    "assertion_ids",
+    "assertion_provenance",
+    "specialist_review",
+    "related_family_ids",
+    "sequenced_family_ids",
+    "decision_claims",
+    "abstention"
+  ],
+  "properties": {
+    "schema": {"const": "okf-ai-consumer-answer.v1"},
+    "run_id": {"$ref": "#/$defs/identifier"},
+    "response_id": {"$ref": "#/$defs/identifier"},
+    "observed_at": {"type": "string", "format": "date-time", "maxLength": 64},
+    "model": {
+      "type": "object",
+      "required": ["provider", "name", "version"],
+      "properties": {
+        "provider": {"$ref": "#/$defs/shortString"},
+        "name": {"$ref": "#/$defs/shortString"},
+        "version": {"$ref": "#/$defs/shortString"}
+      },
+      "additionalProperties": false
+    },
+    "condition": {"enum": ["with_bundle", "without_bundle"]},
+    "input_binding": {
+      "type": "object",
+      "required": [
+        "bundle_sha256",
+        "journey_projection_sha256",
+        "publication_closure_sha256",
+        "pages_manifest_sha256",
+        "explore_manifest_sha256",
+        "bundle_supplied",
+        "journey_projection_supplied",
+        "publication_closure_supplied"
+      ],
+      "properties": {
+        "bundle_sha256": {"$ref": "#/$defs/sha256"},
+        "journey_projection_sha256": {"$ref": "#/$defs/sha256"},
+        "publication_closure_sha256": {"$ref": "#/$defs/sha256"},
+        "pages_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "explore_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "bundle_supplied": {"type": "boolean"},
+        "journey_projection_supplied": {"type": "boolean"},
+        "publication_closure_supplied": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "question_id": {"type": "string", "pattern": "^pack[1-8]-[a-z0-9-]+$", "maxLength": 128},
+    "answer_mode": {"enum": ["navigation-only", "abstention"]},
+    "answer_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192,
+      "pattern": "\\S"
+    },
+    "selected_family": {
+      "type": ["string", "null"],
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 256
+    },
+    "journey": {
+      "type": "object",
+      "required": ["episode_order", "first_step_id"],
+      "properties": {
+        "episode_order": {
+          "type": "array",
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {"enum": ["ordinary", "exception"]}
+        },
+        "first_step_id": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 256
+        }
+      },
+      "additionalProperties": false
+    },
+    "jurisdictions": {
+      "type": "array",
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {"enum": ["England", "Scotland", "Wales", "Northern Ireland"]}
+    },
+    "source_urls": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"type": "string", "format": "uri", "maxLength": 4096}
+    },
+    "assertion_ids": {
+      "type": "array",
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {"type": "string", "format": "uri", "maxLength": 4096}
+    },
+    "assertion_provenance": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "authority_source",
+          "evidence_sources",
+          "observed_at",
+          "rights_source"
+        ],
+        "properties": {
+          "id": {"$ref": "#/$defs/httpUrl"},
+          "authority_source": {"$ref": "#/$defs/httpUrl"},
+          "evidence_sources": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 64,
+            "uniqueItems": true,
+            "items": {"$ref": "#/$defs/httpUrl"}
+          },
+          "observed_at": {"type": "string", "format": "date-time", "maxLength": 64},
+          "rights_source": {"$ref": "#/$defs/httpUrl"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "specialist_review": {"enum": ["accepted", "not_required", "required", "unknown"]},
+    "corpus_review": {
+      "type": "object",
+      "required": [
+        "specialist_review_accepted",
+        "specialist_review_not_required",
+        "specialist_review_required"
+      ],
+      "properties": {
+        "specialist_review_accepted": {"type": "integer", "minimum": 0, "maximum": 1000000},
+        "specialist_review_not_required": {"type": "integer", "minimum": 0, "maximum": 1000000},
+        "specialist_review_required": {"type": "integer", "minimum": 0, "maximum": 1000000}
+      },
+      "additionalProperties": false
+    },
+    "related_family_ids": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 256}
+    },
+    "sequenced_family_ids": {
+      "type": "array",
+      "maxItems": 0,
+      "items": {"type": "string"}
+    },
+    "decision_claims": {
+      "type": "array",
+      "maxItems": 0,
+      "items": {"type": "string"}
+    },
+    "abstention": {
+      "type": "object",
+      "required": ["decision_abstained", "reason"],
+      "properties": {
+        "decision_abstained": {
+          "description": "True when the answer abstains from making the underlying substantive decision, including when it still provides a supported navigation route.",
+          "type": "boolean"
+        },
+        "reason": {"type": "string", "minLength": 1, "maxLength": 2048, "pattern": "\\S"}
+      },
+      "additionalProperties": false
+    },
+    "manual_review": {
+      "type": "object",
+      "required": ["status", "reviewer", "reviewed_at", "no_invented_decisions", "notes"],
+      "properties": {
+        "status": {"enum": ["pending", "passed", "failed"]},
+        "reviewer": {"$ref": "#/$defs/shortString"},
+        "reviewed_at": {"type": "string", "format": "date-time", "maxLength": 64},
+        "no_invented_decisions": {"type": "boolean"},
+        "notes": {"type": "string", "maxLength": 2048}
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"condition": {"const": "with_bundle"}}, "required": ["condition"]},
+      "then": {
+        "properties": {
+          "answer_mode": {"const": "navigation-only"},
+          "selected_family": {"type": "string"},
+          "jurisdictions": {"minItems": 1},
+          "source_urls": {"minItems": 1},
+          "assertion_ids": {"minItems": 1},
+          "assertion_provenance": {"minItems": 1},
+          "input_binding": {
+            "properties": {
+              "bundle_supplied": {"const": true},
+              "journey_projection_supplied": {"const": true},
+              "publication_closure_supplied": {"const": true}
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "input_binding": {
+            "properties": {
+              "bundle_supplied": {"const": false},
+              "journey_projection_supplied": {"const": false},
+              "publication_closure_supplied": {"const": false}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"answer_mode": {"const": "abstention"}},
+        "required": ["answer_mode"]
+      },
+      "then": {
+        "properties": {
+          "abstention": {
+            "properties": {"decision_abstained": {"const": true}}
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "shortString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "\\S"
+    },
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "httpUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "maxLength": 4096
+    }
+  }
+}

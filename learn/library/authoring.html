@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Authoring and validation — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="authoring-and-validation">Authoring and validation</h1>
+<h2 id="concept-records">Concept records</h2>
+<p>The bundle root is <code>index.md</code> and declares <code>okf_version: "0.2"</code>. Section <code>index.md</code> files have no frontmatter. Every other concept uses:</p>
+<pre><code class="language-yaml">---
+type: Public Service
+title: Report a missed rubbish collection
+description: Report that a scheduled household waste collection did not occur.
+status: draft
+generated:
+  by: human:author-id
+  at: 2026-08-07T12:00:00+01:00
+sources:
+  - id: official-service-page
+    title: Official service page
+    resource: https://www.gov.uk/missed-bin-collection
+    author: organisation:government-digital-service
+    observed_at: 2026-08-07
+---
+</code></pre>
+<p>Use ordinary Markdown links between local concepts for narrative navigation. Link direction is meaningful: the source record references the target record. The small-bundle builder may emit these as compatibility relationships, but a Markdown link alone does not establish a domain predicate. Governed large-corpus relationships are generated from the structured dossiers, registers and predicate registry described below.</p>
+<h2 id="required-domain-fields">Required domain fields</h2>
+<p>A service record should eventually declare:</p>
+<ul>
+  <li>source-native and local identifiers;</li>
+  <li>citizen-facing description and aliases;</li>
+  <li>service family and interaction kind;</li>
+  <li>relevant life event, situation and user need;</li>
+  <li>jurisdiction and geographic coverage;</li>
+  <li>responsible provider and other actor roles;</li>
+  <li>legal or policy rule where supported;</li>
+  <li>requirements and evidence;</li>
+  <li>channels, costs, deadlines and validity;</li>
+  <li>output and wider outcome;</li>
+  <li>review, appeal, complaint and emergency routes;</li>
+  <li>assertion status, provenance, observation time and freshness policy; and</li>
+  <li>explicit limitations and known omissions.</li>
+</ul>
+<p>Unknown is not false. Do not invent missing eligibility, cost, authority, identity or legal relationships.</p>
+<h2 id="domain-profile-and-fixture-contracts">Domain profile and fixture contracts</h2>
+<p>The approved <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/profiles/okf-domain-profile.v1.md" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>okf-domain-profile.v1</code></a> governs the first three slice contracts under <code>evaluation/fixtures/</code>. Those fixtures are synthetic <code>editorial-example</code> acceptance boundaries, not official service records. A fixture moves from <code>authorized_not_started</code> to <code>linked_references_registered</code> only when its exact bounded denominator is recorded under <code>source/</code>; this state does not authorize snapshots, broad acquisition or redistribution.</p>
+<p>The owner separately authorized the exhaustive link-only reference-family inventory on 2026-08-07. That authorization covers URLs, owners, jurisdictions, dates, dated rights decisions, original summaries and gaps for the 24-domain denominator. It does not authorize snapshots, source-content redistribution, unbounded or unstaged leaf acquisition or publication.</p>
+<p>The owner-approved <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/service-family-denominator.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>service-family-denominator.v1</code></a> contains 293 normalized planning families in three waves. The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/profiles/corpus-acquisition-policy.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>corpus-acquisition-policy.v1</code></a> governs local-authority coverage, GSS and applicable ODS identifiers, manual health links, regulator-first private dependencies, sector redress and specialist-review gates. A family name authorizes staged source registration; it is not an official assertion that routes or rules are uniform.</p>
+<p>The owner-approved <code>okf-explorer-large-corpus.v1</code> projection renders those 293 planning families with seven colour facets. It must remain generated from the denominator, contain no acquired source content, and keep publication disabled. The static search and every facet posting must reconcile with the same ordered record set.</p>
+<p>The approved <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/rights-decisions.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer">rights register</a> now resolves the repository and current linked-source decisions without expanding the use boundary. Repository-authored code, documentation and ontology terms are MIT. Official pages remain linked references with original summaries; do not copy page text, images, logos or other assets into authored or generated output.</p>
+<h2 id="full-population-dossiers">Full-population dossiers</h2>
+<p>The owner-authorized <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/profiles/life-course-population-contract.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>life-course-population-contract.v1</code></a> governs the staged 293-family implementation. Each family is authored as a <code>life-course-family.v1</code> dossier under <code>source/life-course-families/&lt;domain&gt;/</code> and has a matching service narrative. The dossier retains structured applicability, actors, an ordinary journey, at least one exception or failure journey, dependencies, sources, limitations and review state.</p>
+<p>Every family references one of the 48 normalized processes in <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/life-course-processes.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>life-course-processes.v1</code></a>. Process membership supports navigation and never establishes official service identity, shared rules or four-nation equivalence. Material graph edges use the <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/ontology/governed-predicates.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer">governed predicates</a> and retain assertion status, authority, evidence, derivation, observation time and rights.</p>
+<h3 id="semantic-projection-and-directed-assertions">Semantic projection and directed assertions</h3>
+<p><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/okf.semantic.json" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>okf.semantic.json</code></a> is the machine-readable contract for the repository's OKF 0.2 core, additive Bundle Wiki YAML-LD profile, authoritative inputs, generated outputs, Reader delivery plane and exact checks. Read it before changing ontology or relationship generation.</p>
+<p><code>scripts/life_course_projection.py</code> normalises each governed relationship once and deterministically emits four synchronised views:</p>
+<ul>
+  <li>a direct semantic triple in the YAML-LD/JSON-LD entity graph;</li>
+  <li>an evidence-bearing reified <code>okf:RelationshipAssertion</code>; and</li>
+  <li>a route-scoped <code>okf-relationship-assertion.v2</code> runtime row for Explorer and its legacy hash-sharded adjacency; and</li>
+  <li>a bounded <code>okf-relationship-runtime-row.v1</code> in an authority-preserving gzip plane, indexed by the SHA-256 route locator.</li>
+</ul>
+<p>Every material directed relationship retains a stable absolute assertion IRI, absolute source and target IRIs, an absolute predicate IRI, validated local source and target routes, preferred and inverse labels, assertion status and scope, authority, derivation, observation time, evidence and rights. Semantic identity and navigation identity are separate: never manufacture an IRI from a route in the Reader, and never replace an external IRI with a convenient local slug.</p>
+<p>The direct triple and reified assertion must describe the same source, predicate and target. The reified node carries the provenance needed to judge the statement; it does not create a second fact. Reverse Explorer navigation uses <code>inverse_label</code> for presentation and does not reverse the asserted triple. Confidence, similarity and display grouping never upgrade an assertion's authority.</p>
+<p>The build uses pinned contexts and emits deterministic YAML-LD and JSON-LD. The browser may parse an explicit route-bearing YAML-LD graph, but it does not fetch arbitrary remote contexts or perform OWL inference. Fix authored inputs or the generator when semantic checks fail; do not edit <code>generated/semantic/</code>, <code>large/data/relationships-0.json</code> or adjacency shards by hand.</p>
+<p>The shared assertion contract is pinned locally at <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/schemas/semantic-assertion.schema.json" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>schemas/semantic-assertion.schema.json</code></a>. It is byte-identical to the canonical copy in the vendored, locked 16-file <code>profiles/bundle-wiki/v1</code> mirror. Do not edit the mirror locally; use the Explorer reconciler's reviewed profile synchronisation command. The four authored rich-runtime schemas define runtime rows, the control manifest, the locator and its buckets. The producer and checker apply its Draft 2020-12 rules exhaustively to both the semantic assertions and the corresponding runtime rows. Evidence <code>normalization</code> identifies the stable derivation rule with an absolute IRI; put its human explanation in <code>rationale</code>, not in the IRI field. The validation report records the schema URL, local path, digest, counts and violations before it can claim <code>conformant</code>. The finalized pin requires both <code>kind</code> and <code>label</code>; authority, evidence, optional evidence-resource and rights source URLs must be canonical, credential-free HTTP(S) URLs with a non-empty host and valid port.</p>
+<h3 id="domain-register-authoring-and-rendering">Domain-register authoring and rendering</h3>
+<p>Population packs are authored compactly in one <code>life-course-domain-register.v1</code> file per domain under <code>source/domain-registers/</code>. Each register contains its reviewed topic-specific source assertions, shared devolved handoffs, original family summaries, aliases, situations, user needs, applicable primary jurisdictions, private-dependency boundary and specialist-review state. It also names the body-free receipt directory for every link.</p>
+<p><code>scripts/render_life_course_packs.py</code> deterministically renders three reviewed surfaces from those registers:</p>
+<ul>
+  <li><code>source/life-course-families/&lt;domain&gt;/&lt;family&gt;.v1.yaml</code>;</li>
+  <li><code>services/&lt;family&gt;.md</code>; and</li>
+  <li><code>life-course/&lt;domain&gt;.md</code>.</li>
+</ul>
+<p>Do not hand-edit those rendered files. Change the domain register and rerun the renderer. <code>--check</code> rejects drift. A national discovery handoff may locate the current route, but it must be labelled as a handoff and may not support a leaf eligibility rule, cost, deadline or outcome.</p>
+<p>If a contracted pack contains one of the six previously authored vertical slices, include that identity in the domain register with <code>preserve_existing: true</code>. The validator requires its existing dossier and narrative, the renderer skips those two files, and cumulative reconciliation still counts the family exactly once. Do not replace a deeper reviewed slice with the compact population template.</p>
+<p>Each three-domain pack contributes at least 13 natural-language competency questions under <code>evaluation/competency-questions/</code>. The search acceptance check requires every canonical title and alias in the first five, each expected competency result in the first ten, staged process titles to be searchable and an unmatched query to return no invented result.</p>
+<p>Health and care domain registers remain manually selected, metadata-audited and link-only. A health source can support a discovery handoff and original summary, but its response body is never retained and the generated dossier may not diagnose, triage, interpret results, decide capacity or safeguarding, or generalize one nation's clinical route to another.</p>
+<p>Civic, organisation and ideas/research registers must keep decision authority with the current public body, institution or regulated adviser. A devolved business or democracy page is a discovery handoff, not evidence that immigration status, franchise, tax, corporate form, intellectual-property rights, funding eligibility or publication rules are uniform. When one current official page illustrates only a funder, institution or jurisdiction-specific route, state that scope and exclusion directly in the source assertion.</p>
+<p>Overseas, later-life and death/bereavement registers must separate UK consular or national discovery handoffs from destination law, devolved health and care routes, local delivery and territorial succession or registration rules. Clinical, capacity, cause-of-death, probate, insolvency and tax decisions remain with the current authority or regulated adviser. A national or devolved topic page may support navigation across a process but cannot establish an individual deadline, entitlement, treatment, estate priority or provider recommendation.</p>
+<p>Source-link receipts retain response metadata only. They never store response bodies. An automated block may be resolved by an explicit real-browser receipt; a discovery page is not sufficient evidence for a leaf-service rule.</p>
+<h2 id="shared-authority-and-source-infrastructure">Shared authority and source infrastructure</h2>
+<p><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/authority-registry.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>authority-registry.v1</code></a> is the dated identity denominator for the population packs. It contains 382 principal local authority areas and normalized actors, 19 strategic/combined authorities, 397 GSS geographies in total, and shared national, regulator and redress actors. A GSS code identifies an administrative area and does not by itself name the legal body or prove that it delivers a service. ODS and source-native identities are added only within their declared coverage.</p>
+<p>English and Welsh labels share identity only when the publisher places them in the same official record or explicitly pairs the pages. Similar text, translated slugs or parallel URLs are never identity evidence. ESD Services/LGSL identifiers are optional mappings and never evidence that a current authority offers a route.</p>
+<p>The reviewed live refresh is:</p>
+<pre><code class="language-sh">uv run --locked python scripts/refresh_authority_registry.py --check
+</code></pre>
+<p>This parses official metadata in memory and retains only identifiers, names, dates and links. It is deliberately separate from the offline build. Live link audits use <code>scripts/audit_source_links.py</code> and write <code>source-link-receipt.v1</code> metadata; they never retain response bodies. A failed primary family link blocks that family, while a failed secondary link creates a visible gap.</p>
+<p>Contract validation checks structure, jurisdiction coverage, ordinary and exception paths, assertion status and publication gates. A passing contract check does not approve the profile or validate a real service route.</p>
+<h2 id="linked-reference-source-registers">Linked-reference source registers</h2>
+<p>The three versioned source registers preserve source owner, authority role, URL, jurisdictional coverage, exclusions, observation date, freshness policy and rights basis. <code>source/rights-decisions.v1.yaml</code> maps every registered host to its dated licence evidence. A <code>linked_reference_only</code> register stores no source snapshot: its checksum must remain <code>not_applicable_no_snapshot</code>, and authored summaries must be original, narrow, attributed and rechecked before use.</p>
+<p>Do not acquire, commit or redistribute a snapshot until the exact source, licence version, required attribution, exclusions, acquisition time and checksum are approved. Generated projections can be MIT only when upstream expression is not embedded; otherwise preserve the upstream terms and record a new compatibility decision.</p>
+<p>Official facts belong on the exact local service or authority record they support. Normalized service families and ontology modules may compare those facts, but must not turn local times, exclusions, providers or remedies into a UK-wide rule. Synthetic journeys remain <code>editorial-example</code> even when their branches cite official service facts.</p>
+<p>Each implemented slice must add a semantic regression check for its exact route nodes, responsible providers, jurisdictions, approved source sets, assertion statuses and required journey links. For enforcement or legal paths, the check must also preserve the notice-specific or court-specific deadline boundary and reject a synthetic journey presented as official advice. For bereavement paths, it must also preserve Tell Us Once coverage, the Northern Ireland manual-notification boundary, the exact national registration authority and the distinction between probate and Scottish confirmation.</p>
+<h2 id="exhaustive-reference-family-inventory">Exhaustive reference-family inventory</h2>
+<p><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/exhaustive-reference-inventory.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>source/exhaustive-reference-inventory.v1.yaml</code></a> is the Phase 4 discovery denominator. It accounts for 24 life-course domains across UK-or-England, Scotland, Wales, Northern Ireland and local reference scope. A <code>covered</code> cell means an authoritative discovery family has been identified; it does not make the category page evidence for a leaf-service claim. Local cells remain <code>partial</code> until current responsible-provider and redress pages are selected.</p>
+<p>Every inventory reference requires an HTTPS URL, owner, jurisdiction, authority role, observation date, source update value or explicit absence, dated rights decision and original summary. <code>scripts/check_inventory.py</code> enforces the denominator, rights links, reference identity and gap ledger offline; live freshness is a separate reviewed acquisition activity.</p>
+<h2 id="build-and-check">Build and check</h2>
+<p>Install <a href="https://docs.astral.sh/uv/getting-started/installation/" rel="noopener noreferrer external" referrerpolicy="no-referrer">uv</a>. The locked project environment is created automatically when these commands run:</p>
+<pre><code class="language-sh">uv run --locked python scripts/render_life_course_packs.py
+uv run --locked python scripts/render_life_course_packs.py --check
+uv run --locked python scripts/build_browser_handoff.py
+uv run --locked python scripts/build_browser_handoff.py --check
+uv run --locked python scripts/build_okf_bundle.py
+uv run --locked python scripts/build_okf_bundle.py --check
+uv run --locked python scripts/check_okf.py
+uv run --locked python scripts/check_contracts.py
+uv run --locked python scripts/check_sources.py
+uv run --locked python scripts/check_inventory.py
+uv run --locked python scripts/check_service_denominator.py
+uv run --locked python scripts/check_corpus_policy.py
+uv run --locked python scripts/check_population_contract.py
+uv run --locked python scripts/check_domain_registers.py
+uv run --locked python scripts/check_life_course_dossiers.py
+uv run --locked python scripts/check_authority_registry.py
+uv run --locked python scripts/check_rights.py
+uv run --locked python scripts/build_large_corpus.py
+uv run --locked python scripts/build_large_corpus.py --check
+uv run --locked python scripts/check_large_projection.py
+uv run --locked python scripts/check_search_acceptance.py
+uv run --locked python scripts/build_population_assurance.py
+uv run --locked python scripts/build_population_assurance.py --check
+uv run --locked python scripts/check_population_assurance.py
+uv run --locked python scripts/prepare_pages_publication.py
+uv run --locked python -m unittest discover -s tests
+</code></pre>
+<p><code>generated/browser/</code>, <code>generated/assurance/</code>, <code>okf-bundle.json</code>, <code>large/data/</code> and <code>okf-explorer.json</code> are reproducible output. Never patch them directly.</p>
+<h2 id="population-assurance-and-candidate-freeze">Population assurance and candidate freeze</h2>
+<p><code>evaluation/candidates/population-complete-candidate.v1.yaml</code> declares the authored freeze boundary: basis commit, exact data-plane artifact list, population/release/publication gates, browser journeys and gap dispositions. Run <code>build_population_assurance.py</code> only after rebuilding and checking the authored dossiers and generated large-corpus projection. It derives the coverage, omission, link-health, review-status and provenance reports and then hashes the candidate artifacts into <code>generated/assurance/candidate-manifest.json</code>.</p>
+<p>Population completion means the discovery contract is fully navigable; it does not waive a dossier's <code>specialist_review_required</code> state. Release grade requires named acceptance and current source re-observation for applicable legal, clinical and high-impact operational claims. Publication requires a separate owner request and a subsequent exact-deployment browser check. Never change a generated assurance report or manifest by hand, and never rebuild a frozen publication candidate during promotion.</p>
+<h2 id="pages-publication-unit">Pages publication unit</h2>
+<p>The public preview is assembled only from files listed in <code>publication/pages-file-manifest.json</code>. Regenerate that manifest deliberately with <code>uv run --locked python scripts/prepare_pages_publication.py --write-manifest</code>, review its count, total bytes and hashes, and commit it with the publication descriptor. Ordinary builds do not rewrite it.</p>
+<p>The manual Pages workflow calls the same script with <code>--destination _site</code>. That operation verifies every source hash and copies the frozen bytes; it does not invoke a corpus generator. The only permitted destination is the ignored repository <code>_site/</code> directory. The workflow publishes only the landing page, the publication descriptor, the small bundle, large-corpus data, browser handoffs, semantic projections, assurance reports, licence and notice. It does not publish authored source dossiers, research working files or acquired source content.</p>
+<p>The workflow also requires the exact protected-main merge commit as its <code>publication_commit</code> input and rejects a different workflow event or checkout. The manifest records the reviewed data commit separately, so a transport-only descriptor envelope cannot silently change the semantic or rich-runtime bytes.</p>
+<p>The publication descriptor may differ from the local descriptor only in its description, status, owner authorisation flag and the explicit publication envelope. The validator rejects any other drift. Keep <code>release_grade: false</code>, the specialist-review count and zero-snapshot boundary visible until a later review changes them.</p>
+<h2 id="publication-boundary">Publication boundary</h2>
+<p>Local validation does not authorize publication. Complete the domain profile, source/rights review, evaluation, frozen-candidate assurance and exact deployed browser journey before sharing a public bundle URL.</p>
+<h3 id="life-course-family-source-assertions">Life-course family source assertions</h3>
+<p>Family dossiers under <code>source/life-course-families/</code> may embed a complete source assertion or point to a canonical linked-reference register with <code>id</code> and <code>register</code>. A register reference is not a shortcut around evidence: the named entry must resolve to its HTTPS URL, owner, authority role, observation date, rights basis, original coverage summary and limitations. Validation resolves every reference and rejects missing or duplicate IDs. Source responses remain link-only unless a typed, browser-readable response mode is explicitly declared; no response body or snapshot is retained.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.</p>
+    </div>
+  </footer>
+</body>
+</html>

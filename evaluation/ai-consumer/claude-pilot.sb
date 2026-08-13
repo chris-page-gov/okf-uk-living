@@ -1,0 +1,19 @@
+(version 1)
+
+; Defence-in-depth deny-list for the user home and temporary-data roots, with
+; the isolated workspace and exact Claude launcher/runtime reopened. This is
+; not a filesystem-wide workspace allow-list: paths outside the explicit denies
+; inherit the default policy. The evaluated model separately receives only the
+; declared read tools inside the workspace. Authentication is supplied only
+; through the separately scoped process environment token.
+(allow default)
+(deny file-read* (subpath (param "HOME_ROOT")))
+(deny file-read* (subpath "/private/tmp"))
+(deny file-read* (subpath "/var/folders"))
+(deny file-write* (subpath (param "HOME_ROOT")))
+(deny file-write* (subpath "/private/tmp"))
+(deny file-write* (subpath "/var/folders"))
+(allow file-read* (subpath (param "WORKSPACE")))
+(allow file-write* (subpath (param "WORKSPACE")))
+(allow file-read* (literal (param "CLAUDE_LAUNCHER")))
+(allow file-read* (literal (param "CLAUDE_BINARY")))

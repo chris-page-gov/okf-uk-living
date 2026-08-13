@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Generating prompt — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="generating-prompt">Generating prompt</h1>
+<blockquote>
+<p>The <a href="https://chris-page-gov.github.io/okf-explorer/?bundle=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-heritage-coventry-warwickshire%2Fokf-explorer.json#overview" rel="noopener noreferrer external" referrerpolicy="no-referrer">Coventry and Warwickshire heritage OKF Explorer</a> is a great technical example, how about thinking of an educational example - maybe a detailed curriculum with ontology. It would be great if that's available for how Data / Information / Knowledge is researched and studied but I'd also be open to what you find which would be understandable by anyone who would then get the idea of what an ontology was from the everyday example. How about the way Government information is managed from the perspective of a citizen, including stages of life, everything they interact with the state for from emptying the rubbish bins, speeding, parking, shopping, rights, etc.. Think of it as the ultimate user journey from birth to death including nursery provision, education, interacting with the medical and care services, interacting with police and legal services, public transport, private transport requirements (tax, insurance, fuel duty), driving licenses, career and apprenticeships, university and research, applying for jobs, volunteering (including overseas), job seeker support, travel to work, employment (tax, national insurance, progression, health and safety), starting a company, patenting an idea, marriage and civil partnerships, holidays (UK and overseas), support from embassy when overseas, you get the idea but I want it to be meticulous and exhaustive.</p>
+</blockquote>
+<h1 id="a-life-in-the-uk">A Life in the UK</h1>
+<p>This is a stronger educational example than a purely academic curriculum.</p>
+<p><strong>A Life in the UK</strong> is a citizen-centred ontology of public services, rights, responsibilities and life events—from before birth to death and bereavement.</p>
+<p>The important conceptual adjustment is that it should not depict one implausible person doing everything. It should be a chronological spine surrounded by branching possible journeys: becoming a parent, moving, becoming disabled, starting a company, receiving a speeding notice, caring for someone, emigrating, being a victim or witness, and so on.</p>
+<h1 id="why-it-teaches-ontology-well">Why it teaches ontology well</h1>
+<p>Consider a missed rubbish collection:</p>
+<ul>
+  <li><strong>Data:</strong> address, collection date, bin type, scheduled status and reported status.</li>
+  <li><strong>Information:</strong> the recycling bin was scheduled for Thursday but was not collected.</li>
+  <li><strong>Knowledge:</strong> the household can probably report a missed collection to the authority responsible for waste collection, subject to that council's reporting window.</li>
+  <li><strong>Ontology:</strong> explains that a household occupies an address; an address falls within an authority area; an authority delivers a waste-collection service; a schedule governs an expected collection; a missed collection is a service failure; and that failure permits a report and potentially a complaint.</li>
+</ul>
+<p>A taxonomy merely puts “missed bin collection” below “Recycling and rubbish.” An ontology explains how the resident, property, council, service, schedule, failure, evidence, report and outcome relate.</p>
+<p>The same pattern scales naturally to parking tickets, school admissions, passports, benefits, patents and probate.</p>
+<h1 id="the-semantic-model">The semantic model</h1>
+<p>The central path should be:</p>
+<pre><code class="language-mermaid">flowchart LR
+    E["Life event or situation"] --&gt; N["User need"]
+    N --&gt; S["Public service"]
+    S --&gt; T["Transaction or service episode"]
+    T --&gt; O["Outcome"]
+
+    A["Person or representative"] --&gt; T
+    P["Public authority or provider"] --&gt; S
+    J["Jurisdiction and geography"] --&gt; S
+    R["Rule, right or obligation"] --&gt; S
+    V["Evidence or document"] --&gt; T
+    C["Channel"] --&gt; T
+    T --&gt; D["Decision, payment or artefact"]
+    D --&gt; AP["Appeal, review or complaint"]
+    SRC["Authoritative source and version"] --&gt; R
+    SRC --&gt; S
+</code></pre>
+<p>The main concepts would be:</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Concept</th>
+      <th scope="col">Everyday meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Life stage</td>
+      <td>Childhood, working age, later life</td>
+    </tr>
+    <tr>
+      <td>Life event</td>
+      <td>Birth, moving home, marriage, redundancy, death</td>
+    </tr>
+    <tr>
+      <td>Situation</td>
+      <td>Disability, low income, caring, victim of crime</td>
+    </tr>
+    <tr>
+      <td>User need</td>
+      <td>“I need to register my child”</td>
+    </tr>
+    <tr>
+      <td>Service</td>
+      <td>What government collectively provides to achieve an outcome</td>
+    </tr>
+    <tr>
+      <td>Transaction</td>
+      <td>Applying, reporting, paying, appealing or updating</td>
+    </tr>
+    <tr>
+      <td>Person role</td>
+      <td>Parent, applicant, carer, driver, tenant, victim, executor</td>
+    </tr>
+    <tr>
+      <td>Provider</td>
+      <td>Council, NHS body, police force, court, agency or department</td>
+    </tr>
+    <tr>
+      <td>Jurisdiction</td>
+      <td>UK-wide, England, Scotland, Wales, Northern Ireland or local</td>
+    </tr>
+    <tr>
+      <td>Rule</td>
+      <td>The legal or policy basis governing the service</td>
+    </tr>
+    <tr>
+      <td>Relationship to state</td>
+      <td>Right, entitlement, obligation, prohibition, permission, enforcement or discretionary support</td>
+    </tr>
+    <tr>
+      <td>Requirement</td>
+      <td>A condition that must be satisfied</td>
+    </tr>
+    <tr>
+      <td>Evidence</td>
+      <td>Certificate, identifier, address proof, medical evidence or form</td>
+    </tr>
+    <tr>
+      <td>Channel</td>
+      <td>Online, telephone, post, face-to-face, intermediary or emergency</td>
+    </tr>
+    <tr>
+      <td>Cost or transfer</td>
+      <td>Fee, tax, duty, benefit, grant, pension, refund or fine</td>
+    </tr>
+    <tr>
+      <td>Outcome</td>
+      <td>Permission, payment, registration, decision, information or support</td>
+    </tr>
+    <tr>
+      <td>Redress</td>
+      <td>Reconsideration, appeal, tribunal, complaint or ombudsman</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>Deadline, validity, renewal, review date or statutory period</td>
+    </tr>
+    <tr>
+      <td>Provenance</td>
+      <td>Who said it, where it came from and when it was checked</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>This aligns unusually well with the EU's <a href="https://semiceu.github.io/CPSV-AP/releases/3.2.0/" rel="noopener noreferrer external" referrerpolicy="no-referrer">CPSV-AP 3.2.0</a>, which was specifically designed to describe public services around life and business events, including evidence, requirements, rules, channels, costs and outputs.</p>
+<p>For locally delivered services, the current UK-government-endorsed standard is <a href="https://www.gov.uk/government/publications/open-standards-for-government/record-and-share-information-about-public-services-in-local-authorities" rel="noopener noreferrer external" referrerpolicy="no-referrer">Open Referral UK</a>. It covers services, organisations, locations, eligibility, schedules, costs and required documents. CPSV-AP and Open Referral UK should therefore be mapped together rather than inventing everything locally.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/LICENSE_DECISIONS.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">rights decision</a> records the licensing boundary for those references: CPSV-AP 3.2.0 is CC BY 4.0; the Open Referral UK website places most content under the OGL but does not state a Creative Commons version for its GitHub “CC BY-SA” label; and the current HSDS documentation is CC BY-SA 4.0. This project currently links to the standards and maps terminology in original words. It does not copy their specification text or claim conformance.</p>
+<p>SKOS would handle controlled vocabularies and broader/narrower navigation; OWL/RDFS would define classes and relationships; PROV-O would record derivation; SHACL would validate publication rules. These roles match the relevant <a href="https://www.w3.org/TR/skos-primer/" rel="noopener noreferrer external" referrerpolicy="no-referrer">W3C SKOS</a>, <a href="https://www.w3.org/TR/2009/REC-owl2-primer-20091027/" rel="noopener noreferrer external" referrerpolicy="no-referrer">OWL</a>, <a href="https://www.w3.org/TR/prov-o/" rel="noopener noreferrer external" referrerpolicy="no-referrer">PROV-O</a> and <a href="https://www.w3.org/TR/shacl/" rel="noopener noreferrer external" referrerpolicy="no-referrer">SHACL</a> standards.</p>
+<h1 id="life-course-coverage">Life-course coverage</h1>
+<p>The chronological spine should cover at least these areas:</p>
+<ol>
+  <li><strong>Before birth and starting a family</strong> Fertility and sexual health; pregnancy registration; antenatal and maternity care; workplace protections; maternity, paternity and adoption leave; financial support; surrogacy, fostering and adoption.</li>
+</ol>
+<ol start="2">
+  <li><strong>Birth and the newborn period</strong> Registering a birth or stillbirth; certificates; naming; parental responsibility; nationality and citizenship implications; NHS records; Child Benefit; Healthy Start; neonatal care; vaccinations; passports.</li>
+</ol>
+<ol start="3">
+  <li><strong>Early years</strong> Health visitors; childcare eligibility and funding; nursery provision; Tax-Free Childcare; childminders; early-years development; disability and special educational needs; safeguarding; libraries and children's centres.</li>
+</ol>
+<ol start="4">
+  <li><strong>School years</strong> Admissions; school transport; attendance; home education; free school meals; school health; SEND and nation-specific equivalents; exclusions; appeals; examinations; children in care; safeguarding and youth services.</li>
+</ol>
+<ol start="5">
+  <li><strong>Transition to adulthood</strong> National Insurance number; first employment; careers advice; apprenticeships; qualifications; voting eligibility; provisional driving licence; independent healthcare consent; leaving care; transition from children's to adult services.</li>
+</ol>
+<ol start="6">
+  <li><strong>Further education, university and research</strong> Courses and qualifications; applications; student finance by nation; disabled students' support; accommodation and Council Tax status; registering with health services; research funding, ethics and intellectual property.</li>
+</ol>
+<ol start="7">
+  <li><strong>Finding work and unemployment</strong> Job search; Jobcentre support; right-to-work evidence; apprenticeships; volunteering; DBS checks; Universal Credit and Jobseeker's Allowance; Access to Work; redundancy support and retraining.</li>
+</ol>
+<ol start="8">
+  <li><strong>Employment</strong> Contracts; employment status; minimum wage; PAYE; National Insurance; workplace pensions; leave; sickness; parental leave; health and safety; workplace injury; trade unions; progression; disputes, dismissal and employment tribunals. GOV.UK's current overview illustrates the breadth of this area in <a href="https://www.gov.uk/browse/working" rel="noopener noreferrer external" referrerpolicy="no-referrer">Working, jobs and pensions</a>.</li>
+</ol>
+<ol start="9">
+  <li><strong>Housing and community life</strong> Renting, owning, moving and homelessness; tenancy deposits; right-to-rent differences; Council Tax; electoral registration; planning and building regulations; social housing; adaptations; energy support; noise; pests; roads; libraries; allotments; parks and community facilities.</li>
+</ol>
+<ol start="10">
+  <li><strong>Rubbish, recycling and the street</strong> Collection schedules; missed bins; recycling containers; garden, bulky, hazardous and clinical waste; fly-tipping; litter; dog fouling; abandoned vehicles; street cleaning; lighting; potholes and pavements. These are represented in the current official <a href="https://www.gov.uk/browse/housing-local-services/recycling-rubbish" rel="noopener noreferrer external" referrerpolicy="no-referrer">Recycling and rubbish</a> and <a href="https://www.gov.uk/browse/housing-local-services/local-councils" rel="noopener noreferrer external" referrerpolicy="no-referrer">Local councils and services</a> collections.</li>
+</ol>
+<ol start="11">
+  <li><strong>Public and private transport</strong> Walking and cycling; buses, rail and concessionary travel; community transport; taxis; accessibility; Blue Badges; learning to drive; licences; buying and registering a vehicle; V5C; tax; SORN; MOT; compulsory insurance; fuel duty; parking permits; tolls and clean-air zones; collisions.</li>
+</ol>
+<ol start="12">
+  <li><strong>Transport enforcement</strong> Parking notices; private versus council tickets; speeding; notices of intended prosecution; identifying the driver; fixed penalties; awareness courses; points; disqualification; appeals and courts. The relationship between offences, notices, deadlines, points and redress is an excellent ontology lesson; see <a href="https://www.gov.uk/browse/driving/penalty-points-fines-bans" rel="noopener noreferrer external" referrerpolicy="no-referrer">Penalty points, fines and driving bans</a>.</li>
+</ol>
+<ol start="13">
+  <li><strong>Money, tax and benefits</strong> Income Tax; National Insurance; Self Assessment; VAT encountered through purchases; Council Tax; savings and pensions; student loan repayment; benefits; grants; debt; insolvency; refunds; tax credits and changes of circumstances.</li>
+</ol>
+<ol start="14">
+  <li><strong>Shopping and consumer rights</strong> Goods, services and digital content; contracts; faulty purchases; refunds, repair and replacement; scams; credit; Trading Standards; sector regulators; ombudsmen and court claims. The official <a href="https://www.gov.uk/consumer-protection-rights" rel="noopener noreferrer external" referrerpolicy="no-referrer">consumer-rights guidance</a> already demonstrates jurisdiction-specific advice routes.</li>
+</ol>
+<ol start="15">
+  <li><strong>Relationships and family change</strong> Marriage and civil partnership; changes of name; divorce and dissolution; parental responsibility; child maintenance; adoption; domestic abuse; family courts; caring responsibilities; powers of attorney and deputyship.</li>
+</ol>
+<ol start="16">
+  <li><strong>Health throughout life</strong> NHS identity and login; GPs; pharmacies; prescriptions; dentists; opticians; vaccination; screening; sexual and reproductive health; maternity; mental health; referrals; hospitals; rehabilitation; complaints; records; health costs; 111 and 999. The <a href="https://www.nhs.uk/nhs-services/" rel="noopener noreferrer external" referrerpolicy="no-referrer">NHS services directory</a> supplies the England baseline, with separate national sources required elsewhere.</li>
+</ol>
+<ol start="17">
+  <li><strong>Disability, care and support</strong> Disability benefits; assessments; Access to Work; mobility support; social-care needs assessments; carers' assessments; direct payments; home adaptations; residential care; safeguarding; mental capacity and representation.</li>
+</ol>
+<ol start="18">
+  <li><strong>Citizenship, democracy and rights</strong> Immigration status; settlement; citizenship; passports; voting and candidacy; petitions; consultations; contacting representatives; jury service; equality rights; data-protection rights; Freedom of Information; complaints; honours; charities and volunteering.</li>
+</ol>
+<ol start="19">
+  <li><strong>Police and legal services</strong> Emergencies; reporting crime, fraud, antisocial behaviour, hate crime, abuse and missing people; victim and witness support; arrest and legal representation; legal aid; criminal, civil and family courts; tribunals; jury service; fines; probation; appeals and compensation. GOV.UK separates, for example, <a href="https://www.gov.uk/browse/justice/reporting-crimes" rel="noopener noreferrer external" referrerpolicy="no-referrer">reporting crimes</a> from <a href="https://www.gov.uk/browse/justice/courts-sentencing-tribunals" rel="noopener noreferrer external" referrerpolicy="no-referrer">courts, tribunals and appeals</a>; the ontology would connect them into actual journeys.</li>
+</ol>
+<ol start="20">
+  <li><strong>Starting and running an organisation</strong> Sole trader, partnership, company, charity and social enterprise; Companies House; identity verification; tax; VAT; payroll; licences; premises; insurance; health and safety; data protection; procurement; grants; exporting; employing people; annual filings; insolvency and closure.</li>
+</ol>
+<ol start="21">
+  <li><strong>Ideas, creativity and research</strong> Confidentiality; prior-art searches; patents; copyright; trade marks; registered designs; ownership and licensing; grants; university technology transfer; publication and commercialisation. The IPO is the responsible government body for these rights, and patent search, filing, publication, examination and grant must be modelled as distinct stages—not simply “patent an idea.” <a href="https://www.gov.uk/government/organisations/intellectual-property-office/about" rel="noopener noreferrer external" referrerpolicy="no-referrer">IPO overview</a>, <a href="https://www.gov.uk/patent-your-invention/request-your-search-and-examination" rel="noopener noreferrer external" referrerpolicy="no-referrer">patent process</a>.</li>
+</ol>
+<ol start="22">
+  <li><strong>Holidays, volunteering and living overseas</strong> Passports; entry requirements; country advice; vaccinations; GHIC/EHIC; insurance; customs; driving abroad; studying and volunteering; working overseas; tax and National Insurance; benefits and pensions; voting from abroad; consular assistance; emergency travel documents; arrest, hospitalisation, crime and death abroad. The FCDO's <a href="https://www.gov.uk/government/collections/support-for-british-nationals-abroad" rel="noopener noreferrer external" referrerpolicy="no-referrer">support collection</a> usefully distinguishes help it may provide from things it cannot do.</li>
+</ol>
+<ol start="23">
+  <li><strong>Later life</strong> State Pension forecast and claim; Pension Credit; workplace pensions; concessionary travel; Attendance Allowance; housing adaptations; social care; carers; powers of attorney; advance planning; wills; end-of-life and palliative care.</li>
+</ol>
+<ol start="24">
+  <li><strong>Death and bereavement</strong> Medical certification or coroner involvement; registering the death; Tell Us Once and its Northern Ireland exception; funeral, burial or cremation; bereavement benefits; wills; probate, confirmation and jurisdictional equivalents; Inheritance Tax; debts; estate administration; property records and notifying private organisations. The official <a href="https://www.gov.uk/browse/births-deaths-marriages/death" rel="noopener noreferrer external" referrerpolicy="no-referrer">death and bereavement</a> material already exposes an unusually rich chain of dependent services.</li>
+</ol>
+<p>Cross-cutting disruptive events—disability, unemployment, homelessness, domestic abuse, flooding, crime, caring and bereavement—must appear as branches from every relevant age, rather than being assigned to one stage.</p>
+<h1 id="educational-curriculum">Educational curriculum</h1>
+<p>A twelve-part course could run through the same corpus:</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Lesson</th>
+      <th scope="col">Everyday case</th>
+      <th scope="col">What it teaches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Bin collection</td>
+      <td>Data, records and identifiers</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>“Rubbish”, “refuse” and “recycling”</td>
+      <td>Terminology and controlled vocabulary</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>GOV.UK browse categories</td>
+      <td>Taxonomy and hierarchy</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Reporting a missed bin</td>
+      <td>Classes, properties and instances</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Finding the responsible council</td>
+      <td>Geography, jurisdiction and authority</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Applying for a school place</td>
+      <td>Rules, eligibility and evidence</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Learning to drive</td>
+      <td>End-to-end journeys and dependencies</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Receiving a speeding notice</td>
+      <td>Events, state transitions, deadlines and redress</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Moving home</td>
+      <td>One event triggering many services</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Starting a company and protecting an invention</td>
+      <td>Business events and service composition</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Death and Tell Us Once</td>
+      <td>Data sharing, provenance, exceptions and boundaries</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Compare equivalent journeys across four nations</td>
+      <td>Federation, semantic mapping and incomplete knowledge</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>The final exercise should ask learners to answer graph questions such as:</p>
+<ul>
+  <li>Which services can be triggered by moving home?</li>
+  <li>Which outputs from one service become evidence for another?</li>
+  <li>Who is responsible for rubbish collection at a given type of address?</li>
+  <li>Which steps in learning to drive involve government, police, courts or private compulsory services?</li>
+  <li>Where do England, Scotland, Wales and Northern Ireland differ?</li>
+  <li>Which decisions can be challenged, through what route, and before what deadline?</li>
+  <li>Which facts are official, normalized, inferred or merely unknown?</li>
+</ul>
+<h1 id="important-source-and-governance-decisions">Important source and governance decisions</h1>
+<p>There is no single current, authoritative ontology that already provides this entire UK view. The best design is a carefully governed synthesis:</p>
+<ul>
+  <li>Use the <a href="https://www.gov.uk/browse" rel="noopener noreferrer external" referrerpolicy="no-referrer">GOV.UK services taxonomy</a> as a coverage checklist, not as the ontology. GOV.UK explicitly says its topic taxonomy describes GOV.UK content and is not intended to model the world or represent tasks and user groups.</li>
+  <li>Use the <a href="https://content-api.publishing.service.gov.uk/" rel="noopener noreferrer external" referrerpolicy="no-referrer">GOV.UK Content API</a> for source identifiers, links and update metadata.</li>
+  <li>Use CPSV-AP for public-service and life-event semantics.</li>
+  <li>Use Open Referral UK for local service-directory detail.</li>
+  <li>Retain Local Government Services List identifiers where useful, but treat the older catalogue as a mapping source rather than proof that a service is currently available.</li>
+  <li>Model the four nations and local authorities separately. Even England contains county, district and unitary arrangements with different responsibilities, as the official <a href="https://www.gov.uk/understand-how-your-council-works/types-of-council" rel="noopener noreferrer external" referrerpolicy="no-referrer">council-types guidance</a> explains.</li>
+  <li>Never publish personal dossiers. Personas and service episodes should be synthetic.</li>
+  <li>Never turn the bundle into an eligibility, medical or legal decision engine. It should explain routes and evidence, then hand users to the current authoritative source.</li>
+  <li>Distinguish official assertions, normalized mappings, derived relationships and editorial examples.</li>
+</ul>
+<h1 id="recommended-okf-product">Recommended OKF product</h1>
+<p>This should be a separate publication unit—<code>okf-uk-living</code>—rather than being mixed into the AI-infrastructure sample corpus.</p>
+<p>A serious first release would contain roughly:</p>
+<ul>
+  <li>12 curriculum lessons;</li>
+  <li>24 life-stage and cross-life maps;</li>
+  <li>40–50 detailed end-to-end journeys;</li>
+  <li>250–400 canonical service-family records;</li>
+  <li>explicit jurisdiction, authority, evidence, outcome and redress concepts;</li>
+  <li>a governed SKOS/OWL vocabulary and SHACL validation shapes;</li>
+  <li>at least 100 competency questions;</li>
+  <li>coverage and omission matrices;</li>
+  <li>several synthetic personas exercising different nations and circumstances;</li>
+  <li>an Explorer overview, chronological timeline, graph, facets and narrative.</li>
+</ul>
+<p>The right first three “vertical slices” would be:</p>
+<ol>
+  <li>missed bin collection;</li>
+  <li>learning to drive through a speeding or parking exception;</li>
+  <li>death and bereavement through Tell Us Once, probate and estate administration.</li>
+</ol>
+<p>Together they exercise local variation, ordinary services, private compulsory dependencies, enforcement, evidence, deadlines, data sharing, appeals and multi-agency journeys. Once those work, the remainder can expand systematically against the declared coverage denominators.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.</p>
+    </div>
+  </footer>
+</body>
+</html>

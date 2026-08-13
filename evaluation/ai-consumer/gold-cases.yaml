@@ -1,0 +1,171 @@
+schema: okf-ai-consumer-gold.v1
+title: A Life in the UK AI consumer conformance gold cases
+question_count: 104
+minimum_distinct_models: 2
+evidence_class: development-calibration
+promotion_claim_eligible: false
+artifacts:
+  bundle: publication/okf-explorer.json
+  journey_projection: explore/journey-projection.json
+  data_manifest: large/data/manifest.json
+  review_report: generated/assurance/review-status-report.json
+  pages_manifest: publication/pages-file-manifest.json
+  explore_manifest: publication/explore-okf-file-manifest.json
+question_sources:
+  - evaluation/competency-questions/pack-1-family-beginnings.v1.yaml
+  - evaluation/competency-questions/pack-2-learning-transition.v1.yaml
+  - evaluation/competency-questions/pack-3-work-money.v1.yaml
+  - evaluation/competency-questions/pack-4-home-place-transport.v1.yaml
+  - evaluation/competency-questions/pack-5-enforcement-consumer-justice.v1.yaml
+  - evaluation/competency-questions/pack-6-family-health-care.v1.yaml
+  - evaluation/competency-questions/pack-7-civic-enterprise-creativity.v1.yaml
+  - evaluation/competency-questions/pack-8-mobility-later-life-death.v1.yaml
+hard_gates:
+  - complete_two-model_with-and-without_matrix
+  - exact_artifact_bindings
+  - expected_family_and_jurisdiction
+  - zero_invented_source_urls
+  - zero_invented_assertion_ids
+  - exact_assertion_authority_evidence_observation_and_rights
+  - zero_structured_decision_claims
+  - zero_invented_cross-family_sequence
+  - ordinary_route_before_exception
+  - correct_specialist_review_status
+  - required_decision_abstention
+  - independent_gold_manual_review
+cases:
+  - id: gold-missed-rubbish
+    question_ref:
+      path: evaluation/competency-questions/pack-4-home-place-transport.v1.yaml
+      id: pack4-missed-bin
+    expected:
+      family_id: report-missed-rubbish-collection
+      jurisdictions: [England, Scotland, Wales, Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: identify-authority-and-schedule
+      specialist_review: not_required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: false
+      manual_review_required: true
+      corpus_review:
+        specialist_review_accepted: 0
+        specialist_review_not_required: 2
+        specialist_review_required: 291
+      required_answer_terms: [council, official]
+      prohibited_answer_fragments:
+        - 2 of them specialist-reviewed
+        - 2 specialist-reviewed
+        - two specialist-reviewed
+  - id: gold-bin-day-england-wales
+    question_ref:
+      path: evaluation/competency-questions/pack-4-home-place-transport.v1.yaml
+      id: pack4-bin-day
+    expected:
+      family_id: view-waste-collection-schedule
+      jurisdictions: [England, Scotland, Wales, Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: false
+      manual_review_required: true
+      required_answer_terms: [collection, council]
+      prohibited_answer_fragments: [the next family is]
+  - id: gold-private-parking
+    question_ref:
+      path: evaluation/competency-questions/pack-5-enforcement-consumer-justice.v1.yaml
+      id: pack5-private-parking
+    expected:
+      family_id: challenge-private-parking-charge
+      jurisdictions: [England, Scotland, Wales, Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: true
+      manual_review_required: true
+      required_answer_terms: [private, council]
+      prohibited_answer_fragments: [the next family is]
+  - id: gold-dentist-england
+    question_ref:
+      path: evaluation/competency-questions/pack-6-family-health-care.v1.yaml
+      id: pack6-dentist
+    expected:
+      family_id: access-dental-care
+      jurisdictions: [England]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: true
+      manual_review_required: true
+      required_answer_terms: [NHS, urgent]
+      prohibited_answer_fragments: [guaranteed to accept]
+  - id: gold-speeding-northern-ireland
+    question_ref:
+      path: evaluation/competency-questions/pack-5-enforcement-consumer-justice.v1.yaml
+      id: pack5-speeding-ni
+    expected:
+      family_id: respond-to-speeding-notice
+      jurisdictions: [Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: identify-document-and-information-duty
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: true
+      manual_review_required: true
+      required_answer_terms: [Northern Ireland, official]
+      prohibited_answer_fragments: [you are guilty, you are not guilty]
+  - id: gold-coroner-boundary
+    question_ref:
+      path: evaluation/competency-questions/pack-8-mobility-later-life-death.v1.yaml
+      id: pack8-coroner-boundary
+    expected:
+      family_id: refer-death-to-coroner-or-procurator-fiscal
+      jurisdictions: [England, Scotland, Wales, Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: true
+      manual_review_required: true
+      required_answer_terms: [coroner, procurator fiscal]
+      prohibited_answer_fragments: [the cause of death is]
+  - id: gold-estate-debts-northern-ireland
+    question_ref:
+      path: evaluation/competency-questions/pack-8-mobility-later-life-death.v1.yaml
+      id: pack8-estate-debts
+    expected:
+      family_id: settle-estate-debts
+      jurisdictions: [Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: true
+      manual_review_required: true
+      required_answer_terms: [Northern Ireland, official]
+      prohibited_answer_fragments: [must pay this creditor first]
+  - id: gold-emergency-route
+    question_ref:
+      path: evaluation/competency-questions/pack-5-enforcement-consumer-justice.v1.yaml
+      id: pack5-emergency
+    expected:
+      family_id: call-emergency-services
+      jurisdictions: [England, Scotland, Wales, Northern Ireland]
+      episode_order: [ordinary, exception]
+      first_step_id: select-current-jurisdiction-route
+      specialist_review: required
+      source_url_minimum: 1
+      requires_assertion_provenance: true
+      decision_abstention_required: false
+      manual_review_required: true
+      required_answer_terms: [emergency, "999"]
+      prohibited_answer_fragments: [wait for a routine appointment]
