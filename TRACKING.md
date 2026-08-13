@@ -55,7 +55,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | AI-EVAL-003 | Establish a promotion-grade model comparison | Pending new held-out set and receipt binding | Freeze questions before either model sees them; bind every answer to its immutable runner receipt; retain prose-free failed-attempt receipts atomically; apply a symmetric predeclared attempt policy; and obtain independent assisted-gold review. Do not retry or combine the preserved incomplete matrices |
 | EXPLORE-PAGES-001 | Authorise and deploy the Explore OKF review overlay | Complete | Manual workflow run `31737084740` deployed the exact reviewed overlay from merge `d1efb6b...` after the explicit `EXPLORATORY-NOT-RELEASE-GRADE` acknowledgement |
 | EXPLORE-VERIFY-001 | Verify the exact deployed Explore OKF publication | Complete | Ten public artefacts matched their local SHA-256 identities. Real Chromium passed the hub, learning route, AI prompts, missed-bin and NHS-dentist searches, Scotland emphasis, authored ordinary/exception order, provenance, narrow viewport and zero-runtime-request checks |
-| AI-ACCESS-001 | Provide small complete family records for web-grounded AI tools | Ready: strict local pass, deployment pending | A Microsoft 365 Copilot review found the correct school family and source titles but could not retrieve the 7.2 MB raw projection or expose stable ID, steps, route IDs and review state. The bounded fix retains that audit file and generates one compact HTML catalogue plus 293 complete, digest-bound family records. Deterministic build, all-family equality, security, narrow-viewport and unit checks pass; protected-main merge, manual Pages deployment and exact public verification remain required |
+| AI-ACCESS-001 | Provide small complete family records for web-grounded AI tools | Complete: deployed and verified | A Microsoft 365 Copilot review found the correct school family and source titles but could not retrieve the 7.2 MB raw projection or expose stable ID, steps, route IDs and review state. The bounded fix retains that audit file and generates one compact HTML catalogue plus 293 complete, digest-bound family records. PR #30 merged as `aa6afca...`; manual run `31746462699` succeeded; ten public identities matched; and real Chromium passed the catalogue-to-school journey at 375 pixels with no scripts, forms, storage, console errors or third-party requests. A provider retest remains evaluation evidence rather than a publication gate |
 
 ## Current operating state
 
@@ -66,15 +66,15 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
   deletion disabled.
 - Default evaluation: local `uv` environment only.
 - Remote CI: disabled.
-- GitHub Pages: manual run `31737084740` deployed and verified the 1,814-file
-  rich-runtime base plus the Explore OKF overlay from exact protected-main
-  merge `d1efb6b...`. Ordinary pushes, merges and pull requests do not update
-  Pages.
+- GitHub Pages: manual run `31746462699` deployed and verified the 1,814-file
+  rich-runtime base, Explore OKF overlay and AI-retrieval records from exact
+  protected-main merge `aa6afca...`. Ordinary pushes, merges and pull requests
+  do not update Pages.
 - Explore OKF: the deployed review overlay preserves the exact Claude-tested
   descriptor and all corpus/runtime bytes, replaces only the hash-bound root
-  landing target and adds the Explore and learning routes. Its exact deployed
-  bytes and representative browser journeys passed. The later AI-retrieval
-  remediation remains subject to a new exact deployment and verification gate.
+  landing target and adds the Explore, learning and AI-retrieval routes. Its
+  exact deployed bytes and representative browser journeys passed, including
+  the 293-link catalogue and complete school-place record.
 - Acquisition: 89 exhaustive-inventory references, 53 implemented-slice
   references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4
   sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8
