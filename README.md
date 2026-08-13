@@ -4,13 +4,12 @@ A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
-Status: **the 1,814-file population-complete publication and the Explore OKF
-surface deployed from merge `d1efb6b...` passed exact-byte and real-browser
-verification on 13 August 2026**. The small AI-retrieval records in the current
-source still require their own manual deployment and exact public verification
-before those new URLs are labelled verified. Population-complete means
-reconciled against this
-project's declared service-family denominator, not every UK public service or
+Status: **the 1,814-file population-complete publication, Explore OKF surface
+and HTML-first AI retrieval layer passed exact-byte and real-browser
+verification on 13 August 2026**. The AI layer was deployed by manual run
+`31746462699` from exact protected-main merge `aa6afca...`. Population-complete
+means reconciled against this project's declared service-family denominator,
+not every UK public service or
 every local variation. None of the 293 families has named specialist
 acceptance; specialist review is not required for 2 and remains required for
 291. This is independent exploratory research, not an official service,
