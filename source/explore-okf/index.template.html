@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="@@CSP@@">
+  <title>Explore OKF journeys — A Life in the UK</title>
+  <style>@@STYLE@@</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to journey</a>
+  <div class="research-banner" role="note" aria-label="Exploratory publication warning">
+    <div class="banner-inner">
+      <strong>Exploratory</strong>
+      <span>This is an incomplete research view, not an authoritative service or released data product. Content and links may change. Check the cited official source before making a decision.</span>
+    </div>
+  </div>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div>
+        <nav class="context-nav" aria-label="Explore OKF navigation">
+          <a href="../">Home</a>
+          <a href="../learn/">Learn how it works</a>
+          <a href="../explore-okf.json">Data descriptor</a>
+          <a href="https://github.com/chris-page-gov/okf-uk-living">Source on GitHub</a>
+        </nav>
+        <p class="eyebrow">A Life in the UK · Explore OKF</p>
+        <h1>Understand a citizen journey</h1>
+        <p class="lede">A secure, standalone reference view of the governed journey structure across all 293 records in this project's declared service-family denominator.</p>
+      </div>
+      <div class="masthead-stat" aria-label="Corpus summary">
+        <strong id="family-total">293</strong>
+        <span>service families</span>
+      </div>
+    </div>
+  </header>
+
+  <noscript>
+    <div class="noscript">This standalone explorer needs JavaScript to render its embedded, network-free projection.</div>
+  </noscript>
+
+  <main id="main-content" class="workspace">
+    <aside class="finder" aria-label="Find a service family">
+      <div class="finder-sticky">
+        <label class="search-label" for="journey-search">Search journeys</label>
+        <p class="hint" id="search-hint">Try an everyday phrase such as “missed bin” or “find NHS dentist”.</p>
+        <input id="journey-search" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-hint result-count">
+
+        <fieldset class="nation-fieldset">
+          <legend>Show official routes for</legend>
+          <div id="nation-options" class="nation-options"></div>
+        </fieldset>
+
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+        <ul id="family-results" class="family-results"></ul>
+      </div>
+    </aside>
+
+    <article class="dossier" aria-label="Journey details">
+      <div id="journey-empty" class="empty-state">
+        <p class="eyebrow">Choose a service family</p>
+        <h2>Explore the authored ordinary route, exceptions and evidence.</h2>
+        <p>Searches include governed aliases. Choosing a nation changes source routing, not which families exist.</p>
+      </div>
+
+      <div id="journey-view" class="journey-view" hidden>
+        <header class="journey-header">
+          <p id="journey-context" class="eyebrow"></p>
+          <h2 id="journey-title" tabindex="-1"></h2>
+          <p id="journey-description" class="journey-description"></p>
+          <div id="journey-badges" class="badges"></div>
+        </header>
+
+        <section class="guardrail" aria-labelledby="guardrail-title">
+          <h3 id="guardrail-title">What this view can and cannot do</h3>
+          <p id="interaction-boundary"></p>
+          <ul id="limitations"></ul>
+        </section>
+
+        <section aria-labelledby="needs-title">
+          <h3 id="needs-title">Situation and user needs</h3>
+          <div class="needs-grid">
+            <div>
+              <h4>Situations</h4>
+              <ul id="situations"></ul>
+            </div>
+            <div>
+              <h4>User needs</h4>
+              <ul id="user-needs"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="routes-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Explicit applicability</p>
+              <h3 id="routes-title">Official routes</h3>
+            </div>
+            <p id="route-note" class="section-note"></p>
+          </div>
+          <div id="official-routes" class="official-routes"></div>
+        </section>
+
+        <section aria-labelledby="journeys-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Authored order</p>
+              <h3 id="journeys-title">Journey episodes</h3>
+            </div>
+            <p class="section-note">The ordinary route is always shown first. Exceptions remain separate.</p>
+          </div>
+          <div id="journey-episodes" class="journey-episodes"></div>
+        </section>
+
+        <section id="related-section" aria-labelledby="related-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Grouping, not sequence</p>
+              <h3 id="related-title">Related families in the same process</h3>
+            </div>
+            <p class="section-note">These are not asserted as next steps.</p>
+          </div>
+          <ul id="related-families" class="related-families"></ul>
+        </section>
+
+        <details class="provenance">
+          <summary>Inspect bundle identity and provenance</summary>
+          <dl id="provenance-list"></dl>
+        </details>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Review state</strong>
+        <p id="review-summary">0 accepted · 2 not required · 291 required</p>
+      </div>
+      <div>
+        <strong>Network-free reference</strong>
+        <p>No fetch, analytics, remote assets, storage or service worker.</p>
+      </div>
+      <div>
+        <strong>Projection SHA-256</strong>
+        <p id="projection-digest" class="digest"></p>
+      </div>
+      <div>
+        <strong>Continue the review</strong>
+        <p><a href="../learn/">Follow the beginner learning plan</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <template id="projection-data">@@PROJECTION@@</template>
+  <script>@@SCRIPT@@</script>
+</body>
+</html>

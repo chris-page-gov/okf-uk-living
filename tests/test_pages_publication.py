@@ -50,18 +50,30 @@ class PagesPublicationTests(unittest.TestCase):
         self.assertFalse(any(".." in Path(target).parts for target in targets))
         self.assertFalse(any("snapshot" in item["source"].lower() for item in self.manifest["files"]))
 
-    def test_workflow_is_manual_only_and_landing_links_explorer(self) -> None:
+    def test_retired_base_workflow_cannot_overwrite_the_explore_overlay(self) -> None:
         workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
         landing = (ROOT / "publication/index.html").read_text(encoding="utf-8")
-        self.assertIn("workflow_dispatch:", workflow)
+        self.assertIn("on: {}", workflow)
+        self.assertNotIn("workflow_dispatch:", workflow)
         self.assertNotIn("\n  push:", workflow)
-        self.assertIn("publication_commit:", workflow)
+        self.assertNotIn("publication_commit:", workflow)
         self.assertIn("fetch-depth: 0", workflow)
-        self.assertIn("EXPECTED_PUBLICATION_COMMIT: ${{ inputs.publication_commit }}", workflow)
-        self.assertIn('test "$GITHUB_SHA" = "$EXPECTED_PUBLICATION_COMMIT"', workflow)
         self.assertIn("population-complete preview", landing)
         self.assertIn("https://chris-page-gov.github.io/okf-explorer/", landing)
         self.assertIn("okf-uk-living%2Fokf-explorer.json", landing)
+
+    def test_additive_workflow_is_the_only_manual_pages_route(self) -> None:
+        workflow = (ROOT / ".github/workflows/pages-explore-okf.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertNotIn("\n  push:", workflow)
+        self.assertIn("publication_commit:", workflow)
+        self.assertIn(
+            "EXPECTED_PUBLICATION_COMMIT: ${{ inputs.publication_commit }}",
+            workflow,
+        )
+        self.assertIn('test "$GITHUB_SHA" = "$EXPECTED_PUBLICATION_COMMIT"', workflow)
 
 
 if __name__ == "__main__":

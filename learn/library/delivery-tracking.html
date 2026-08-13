@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Delivery tracking — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="delivery-tracking">Delivery tracking</h1>
+<p>Last updated: 2026-08-13</p>
+<p>This is the current delivery ledger. Update it in the same pull request as the work it tracks; <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/ROADMAP.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">ROADMAP.md</a> remains the phase-level view.</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Delivery item</th>
+      <th scope="col">State</th>
+      <th scope="col">Evidence or next gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BOOT-001</td>
+      <td>Reviewed local initialization</td>
+      <td>Complete</td>
+      <td>Initialization commit <code>5572d0c</code>; deterministic local bundle and tests</td>
+    </tr>
+    <tr>
+      <td>OPS-001</td>
+      <td>Standardize local execution on locked <code>uv</code> commands</td>
+      <td>Complete</td>
+      <td>Merged in PR #1; <code>make validate</code> is the local assurance entrypoint</td>
+    </tr>
+    <tr>
+      <td>GOV-001</td>
+      <td>Establish planning, tracking and lockstep documentation</td>
+      <td>Complete</td>
+      <td>Merged in PR #1 with mandatory publication-status reporting</td>
+    </tr>
+    <tr>
+      <td>GOV-002</td>
+      <td>Protect remote <code>main</code> for the sole-developer workflow</td>
+      <td>Deferred by platform</td>
+      <td>GitHub returned HTTP 403: private-repository branch protection requires GitHub Pro or public visibility; operational PR-only policy remains in force</td>
+    </tr>
+    <tr>
+      <td>PROF-001</td>
+      <td>Approve <code>okf-domain-profile.v1</code></td>
+      <td>Complete</td>
+      <td>Approved by <code>owner:chris-page-gov</code> on 2026-08-07; bounded source registration authorised</td>
+    </tr>
+    <tr>
+      <td>FIX-001</td>
+      <td>Contract the three vertical-slice fixtures</td>
+      <td>Complete</td>
+      <td>Three synthetic v1 contracts approved with PROF-001 and validated locally</td>
+    </tr>
+    <tr>
+      <td>RIGHTS-001</td>
+      <td>Resolve repository and bounded source-family licensing</td>
+      <td>Complete</td>
+      <td>Merged in PR #6 with 16 slice hosts; later inventory, authority and Pack 3 decisions extend dated evidence to 29 hosts while retaining link-and-summary use and zero snapshots</td>
+    </tr>
+    <tr>
+      <td>SLICE-001</td>
+      <td>Missed rubbish collection</td>
+      <td>Complete</td>
+      <td>Merged in PR #3 with four local routes and a 13-reference denominator</td>
+    </tr>
+    <tr>
+      <td>SLICE-002</td>
+      <td>Learning to drive and speeding exception</td>
+      <td>Complete</td>
+      <td>Merged in PR #4 with GB/NI learning routes, three speeding court boundaries and a 20-reference denominator</td>
+    </tr>
+    <tr>
+      <td>SLICE-003</td>
+      <td>Death, Tell Us Once and estate administration</td>
+      <td>Complete</td>
+      <td>Merged in PR #5 with three registration routes, Tell Us Once/NI notification split, three estate-authority routes and a 20-reference denominator</td>
+    </tr>
+    <tr>
+      <td>REVIEW-001</td>
+      <td>Integrated three-slice sample review</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/integrated-three-slice-2026-08-07.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-07 local review</a> records passing Reader, query, graph-provenance, browser-source and licence-notice journeys; <code>REV-001</code> through <code>REV-004</code> are closed</td>
+    </tr>
+    <tr>
+      <td>COMPAT-001</td>
+      <td>Lock the actual OKF Explorer consumer contract</td>
+      <td>Complete: local lock</td>
+      <td>Explorer 0.5.7, exact bundle bytes and all required journeys are recorded in <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/compatibility/okf-explorer-local.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>okf-explorer-local.v1</code></a></td>
+    </tr>
+    <tr>
+      <td>INVENTORY-001</td>
+      <td>Exhaustive external reference-family inventory</td>
+      <td>Complete</td>
+      <td>Owner authorised link-only discovery on 2026-08-07; 142 external reference records, 120 assessed domain/jurisdiction cells, 25 source-host rights decisions, 12 tracked gaps and zero snapshots</td>
+    </tr>
+    <tr>
+      <td>CORPUS-001</td>
+      <td>Approve the staged 250–400 service-family denominator</td>
+      <td>Complete</td>
+      <td>Owner approved <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/source/service-family-denominator.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>service-family-denominator.v1</code></a> on 2026-08-07: 293 named normalised families in three staged waves</td>
+    </tr>
+    <tr>
+      <td>ACQPOL-001</td>
+      <td>Approve corpus acquisition and specialist-review policy</td>
+      <td>Complete</td>
+      <td>Local authority coverage, GSS/ODS identifiers, manual health links, regulator-first dependencies, sector redress and role-based review nominations approved on 2026-08-07</td>
+    </tr>
+    <tr>
+      <td>LARGE-001</td>
+      <td>Build and review the local colour-facet planning projection</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/large-corpus-2026-08-07.md" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>okf-explorer-large-corpus.v1</code></a> exposes 293 searchable planning records and seven reconciled facets with zero snapshots and publication disabled</td>
+    </tr>
+    <tr>
+      <td>POP-001</td>
+      <td>Contract the full 293-family population</td>
+      <td>Complete</td>
+      <td>Owner-authorised <code>life-course-population-contract.v1</code>; 48 processes map all 293 families exactly once; dossier, source-link, predicate and shape contracts validate locally</td>
+    </tr>
+    <tr>
+      <td>POP-002</td>
+      <td>Extend the universal Explorer contract</td>
+      <td>Complete</td>
+      <td>Merged as OKF Explorer PR #72: authored record narratives and typed link/JSON/XML/text source access, with full three-browser assurance and no Pages update</td>
+    </tr>
+    <tr>
+      <td>POP-003</td>
+      <td>Migrate the six reviewed families</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/three-slice-population-migration-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Local deterministic and browser review</a>: six population-complete dossiers, 53 link-only resources, 602 concepts, 1,025 governed relationships and zero snapshots</td>
+    </tr>
+    <tr>
+      <td>POP-004</td>
+      <td>Implement shared authority and source infrastructure</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: 382 principal areas, 19 strategic authorities, 397 GSS geographies, 438 organizations, ten sector maps and seven active metadata-only receipts</td>
+    </tr>
+    <tr>
+      <td>PACK-001</td>
+      <td>Populate family beginnings</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-1-family-beginnings-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: 36 dossiers and narratives, 45 active link-only sources, 13 competency questions, four-nation handoffs and passing local Explorer journeys</td>
+    </tr>
+    <tr>
+      <td>PACK-002</td>
+      <td>Populate learning and transition</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-2-learning-transition-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: all 36 identities accounted for, 35 new dossiers, preserved driving slice, 44 active link-only sources and 13 competency questions</td>
+    </tr>
+    <tr>
+      <td>PACK-003</td>
+      <td>Populate work and money</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-3-work-money-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and dated HSE rights evidence</td>
+    </tr>
+    <tr>
+      <td>PACK-004</td>
+      <td>Populate home, place and transport</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-4-home-place-transport-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: all 36 identities accounted for, 35 new dossiers, preserved missed-rubbish slice, 44 active link-only sources and 13 competency questions</td>
+    </tr>
+    <tr>
+      <td>PACK-005</td>
+      <td>Populate enforcement, consumer and justice</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-5-enforcement-consumer-justice-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: all 36 identities accounted for, 35 new dossiers, preserved speeding slice, 44 active link-only sources and 13 competency questions</td>
+    </tr>
+    <tr>
+      <td>PACK-006</td>
+      <td>Populate relationships, health and care</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-6-family-health-care-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and passing manual health-source and Explorer journeys</td>
+    </tr>
+    <tr>
+      <td>PACK-007</td>
+      <td>Populate civic, enterprise and creativity</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and passing local Explorer journey</td>
+    </tr>
+    <tr>
+      <td>PACK-008</td>
+      <td>Populate mobility, later life and death</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">2026-08-08 review</a>: all 41 identities accounted for, 38 new dossiers, three preserved death/notification/estate slices, 47 active link-only sources and 13 competency questions</td>
+    </tr>
+    <tr>
+      <td>ASSURE-001</td>
+      <td>Freeze a local population-complete candidate</td>
+      <td>Complete: local pass</td>
+      <td><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/population-assurance-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Population assurance</a> reconciles 293 dossiers, 24 domains, 48 processes, 104 questions, 879 links and 15,810 relationships with zero blocking omissions; exact artefacts are hashed and publication remains disabled</td>
+    </tr>
+    <tr>
+      <td>SCOPE-001</td>
+      <td>Approve publication claims and limitations</td>
+      <td>Complete</td>
+      <td>Owner authorised the full population-complete corpus as an educational preview; not release-grade, official advice or formal CPSV-AP/Open Referral/OWL/SHACL conformance</td>
+    </tr>
+    <tr>
+      <td>CAND-001</td>
+      <td>Freeze a reproducible publication candidate</td>
+      <td>Complete: local pass</td>
+      <td>The publication unit contains 1,549 exact files (about 179 MB) rooted in candidate manifest <code>0b1df05a…</code>; no corpus rebuild or source snapshot</td>
+    </tr>
+    <tr>
+      <td>PUB-001</td>
+      <td>Authorise publication of the frozen candidate</td>
+      <td>Complete</td>
+      <td>Owner explicitly authorised GitHub Pages publication and OKF Explorer evaluation on 2026-08-08</td>
+    </tr>
+    <tr>
+      <td>PAGES-001</td>
+      <td>Deploy frozen candidate bytes to GitHub Pages</td>
+      <td>Complete</td>
+      <td>Owner authorised public repository visibility; workflow run <code>31297841419</code> and deployment <code>5815993749</code> promoted the pinned 1,549-file unit successfully</td>
+    </tr>
+    <tr>
+      <td>VERIFY-001</td>
+      <td>Verify the exact public sample in a real browser</td>
+      <td>Complete</td>
+      <td>Landing and descriptor hashes matched; public Explorer passed search, Narrative, 37-edge Graph, 13-source Resources and GOV.UK handoff</td>
+    </tr>
+    <tr>
+      <td>RELEASE-001</td>
+      <td>Hand off a verified initial sample</td>
+      <td>Complete: population preview</td>
+      <td>Verified URLs may be shared with the visible non-release-grade and 291-specialist-review limitations</td>
+    </tr>
+    <tr>
+      <td>SEM-001</td>
+      <td>Reconcile the large corpus with the shared OKF 0.2 plus Bundle Wiki YAML-LD relationship contract</td>
+      <td>Complete: strict local pass</td>
+      <td><code>okf.semantic.json</code> declares the source/build/Reader boundary; the canonical 16-file profile, vendor lock and assertion schema are byte-exact; one deterministic source emits 15,810 direct triples, reified assertions and bounded official/normalised runtime planes with a SHA-256 route locator; the merged Explorer reconciler reports conformance with zero warnings; frozen publication bytes were not changed</td>
+    </tr>
+    <tr>
+      <td>CAND-002</td>
+      <td>Freeze the rich-runtime publication correction</td>
+      <td>Complete: local pass</td>
+      <td>The 1,814-file manifest pins reviewed data commit <code>c38f927…</code>, 262 rich-runtime files, about 312 MB, candidate manifest <code>55f84282…</code>, zero snapshots and release grade false</td>
+    </tr>
+    <tr>
+      <td>PAGES-002</td>
+      <td>Deploy the rich-runtime correction</td>
+      <td>Pending exact merge</td>
+      <td>The owner authorised one manual run for the protected-main merge of the bounded freeze; pull requests and ordinary merges do not deploy</td>
+    </tr>
+    <tr>
+      <td>VERIFY-002</td>
+      <td>Verify the rich-runtime publication</td>
+      <td>Pending deployment</td>
+      <td>Cache-bypassed browser checks must match the exact descriptor and runtime identities and complete a citizen search-to-source journey before the corrected URLs are labelled verified</td>
+    </tr>
+    <tr>
+      <td>UI-001</td>
+      <td>Make conversational static search bounded and useful</td>
+      <td>Open: Explorer follow-up</td>
+      <td>Three ordinary-language questions returned zero results while concise governed terms ranked the intended families first or second</td>
+    </tr>
+    <tr>
+      <td>UI-002</td>
+      <td>Preserve domain browsing for unmatched queries</td>
+      <td>Open: Explorer follow-up</td>
+      <td>Zero-result search currently reduces all facets to zero instead of offering the approved 24-domain fallback</td>
+    </tr>
+    <tr>
+      <td>UI-003</td>
+      <td>Reduce facet and graph interpretation cost</td>
+      <td>Open: design follow-up</td>
+      <td>Group display-equivalent jurisdiction identities, prioritize journey edges and collapse non-discriminating facets without erasing provenance</td>
+    </tr>
+    <tr>
+      <td>EXPLORE-001</td>
+      <td>Build the Explore OKF reference and review surface</td>
+      <td>Complete: strict local pass</td>
+      <td>A manifest-pinned standalone interface, machine sidecar, review hub, curated learning library and provider-neutral AI prompt route preserve descriptor SHA-256 <code>ff69f016…</code> and every corpus/runtime byte. The overlay may replace only the frozen root landing page after matching its old SHA-256; every other target is additive or preserved. Deterministic projection, overlay, documentation, schema, security and unit checks cover 293 families, explicit ordinary/exception order, composite-jurisdiction routing, provenance, no active network or storage and safe rendering</td>
+    </tr>
+    <tr>
+      <td>AI-EVAL-001</td>
+      <td>Establish isolated AI-consumer evaluation and run a Codex development preflight</td>
+      <td>Complete: local harness pass, not a conformance pass</td>
+      <td>Answer-blind local runs diagnose prompt, jurisdiction and decision-boundary ambiguities. Evaluator inputs are not yet receipt-bound, so no behavioural or comparative result is published; raw model prose remains ignored, independent review and the complete matrix remain open, and promotion eligibility is false</td>
+    </tr>
+    <tr>
+      <td>AI-EVAL-002</td>
+      <td>Complete the two-model, two-condition 104-question comparison</td>
+      <td>Closed: incomplete private diagnostic attempts</td>
+      <td>Two no-retry attempts stopped before completion and independent review remains pending. Current evaluator inputs are not yet bound to their immutable runner receipts, so no response counts, scores or model comparison are published as evidence. All packs are now development-calibration material and promotion eligibility is false</td>
+    </tr>
+    <tr>
+      <td>AI-EVAL-003</td>
+      <td>Establish a promotion-grade model comparison</td>
+      <td>Pending new held-out set and receipt binding</td>
+      <td>Freeze questions before either model sees them; bind every answer to its immutable runner receipt; retain prose-free failed-attempt receipts atomically; apply a symmetric predeclared attempt policy; and obtain independent assisted-gold review. Do not retry or combine the preserved incomplete matrices</td>
+    </tr>
+    <tr>
+      <td>EXPLORE-PAGES-001</td>
+      <td>Authorise and deploy the Explore OKF review overlay</td>
+      <td>Active: owner-authorised, deployment pending</td>
+      <td>The owner authorised public review on 13 August 2026. A manual dispatch will package the frozen 1,814-file base, one hash-bound root landing replacement and the additive Explore and learning files. It requires the exact protected-main merge plus <code>EXPLORATORY-NOT-RELEASE-GRADE</code>; no dispatch or Pages update has yet occurred</td>
+    </tr>
+    <tr>
+      <td>EXPLORE-VERIFY-001</td>
+      <td>Verify the exact deployed Explore OKF publication</td>
+      <td>Pending deployment</td>
+      <td>Match the deployed descriptor, projection and overlay hashes and pass real-browser identity, alias-search, jurisdiction, ordinary/exception, provenance and official-source journeys before any Explore OKF URL is labelled verified</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="current-operating-state">Current operating state</h2>
+<ul>
+  <li>GitHub remote: public repository under <code>chris-page-gov/okf-uk-living</code> after explicit owner authorisation on 2026-08-09.</li>
+  <li>Main protection: server-enforced pull requests with zero required approvals; administrators included, conversation resolution required, force-pushes and deletion disabled.</li>
+  <li>Default evaluation: local <code>uv</code> environment only.</li>
+  <li>Remote CI: disabled.</li>
+  <li>GitHub Pages: the historical 1,549-file population preview remains deployed and verified by manual run <code>31297841419</code>. The 1,814-file rich-runtime correction is frozen but not yet deployed; ordinary pushes, merges and pull requests do not update Pages.</li>
+  <li>Explore OKF: the owner-authorised review overlay passes local deterministic, documentation, security and publication validation. It preserves the exact Claude-tested descriptor and all corpus/runtime bytes, replaces only the hash-bound root landing target and adds the Explore and learning routes. It has not yet been deployed or verified publicly; do not describe an Explore OKF URL as verified.</li>
+  <li>Acquisition: 89 exhaustive-inventory references, 53 implemented-slice references, 45 Pack 1 sources, 44 Pack 2 sources, 45 Pack 3 sources, 44 Pack 4 sources, 44 Pack 5 sources, 45 Pack 6 sources, 45 Pack 7 sources and 47 Pack 8 sources give 501 source records and zero snapshots; all 29 source hosts and the standards families have dated rights decisions. Source content remains link-and-summary only. Staged link registration against the approved 293 families is authorised; unbounded or unstaged acquisition stays disabled.</li>
+  <li>Licensing: repository-authored code, documentation, ontology terms and eligible generated projections are MIT; third-party material is not relicensed and snapshot redistribution is disabled.</li>
+  <li>Public bundle URL: <code>https://chris-page-gov.github.io/okf-uk-living/okf-explorer.json</code>.</li>
+  <li>Review state: the integrated local Explorer remediation rerun passed on 2026-08-07 and <code>REV-001</code> through <code>REV-004</code> are closed. The 293-family colour-facet projection also passes local search and filter journeys. The full corpus is a frozen population-complete publication preview, not a release-grade candidate. Owner authorisation, exact deployment and public verification are recorded. UI-efficiency review passes concise keyword discovery and a representative search-to-source journey but leaves conversational search and zero-result browsing findings open.</li>
+  <li>AI-consumer evaluation: two private no-retry comparison attempts were preserved but remained incomplete. All 104 questions are now development-calibration material. No response counts, model score or comparison are published until evaluator inputs are receipt-bound and independent review is complete.</li>
+  <li>Reference readiness: all 120 declared domain/reference-jurisdiction cells are assessed (96 national covered, 24 local discovery/archetype cells). The six requested owner decisions are complete and every tracked gap has a population-gate disposition; named specialist reviewer acceptance remains a release-grade external-review gate.</li>
+  <li>Population implementation: owner-authorised on 2026-08-08 in eight packs; foundation, universal Explorer contract, six-family migration, shared authority/source infrastructure, <code>PACK-001</code> through <code>PACK-008</code> and <code>ASSURE-001</code> complete. No population delivery item remains active.</li>
+</ul>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Evaluation — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="evaluation">Evaluation</h1>
+<p>The implemented evaluation assets include:</p>
+<ul>
+  <li>at least 100 competency questions;</li>
+  <li>executable Explorer journeys for overview, search, graph, links, timeline, type, resources and narrative views;</li>
+  <li>four-nation and local-jurisdiction comparison cases;</li>
+  <li>ordinary, exception, appeal and degraded-source paths;</li>
+  <li>accessibility and plain-language review; and</li>
+  <li>provenance checks that distinguish official, normalised, inferred and editorial-example assertions.</li>
+</ul>
+<p>The first executable boundary is the set of three <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/fixtures/README.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">vertical-slice fixture contracts</a>. They define synthetic ordinary and exception journeys and are validated locally against the draft domain profile. The owner approved this boundary on 2026-08-07.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/integrated-three-slice-2026-08-07.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">integrated three-slice Explorer review</a> was rerun locally on 2026-08-07 against the exact consumer recorded under <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/compatibility/README.md" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>compatibility/</code></a>. Reader, query, relationship and node provenance, browser source and licence/notice journeys pass; all four original findings are closed. The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/large-corpus-2026-08-07.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">large-corpus review</a> also passes 293-family search and seven colour facets locally.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-1-family-beginnings-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 1 family-beginnings review</a> adds 13 questions and proves alias search, per-record Narrative, family-centred Graph and active official-source handoffs across the first three domains. Pack completion remains local and does not make the corpus release-grade or public.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-2-learning-transition-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 2 learning-and-transition review</a> adds 13 questions across school, transition and post-school study/research. It accounts for all 36 Pack 2 families while preserving the deeper learning-to-drive vertical slice and adds 44 current body-free link receipts.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-3-work-money-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 3 work-and-money review</a> adds 36 families, 45 body-free official links and 13 questions across finding work, employment and money/tax/benefits, including explicit Great Britain and Northern Ireland employment boundaries.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-4-home-place-transport-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 4 home/place/transport review</a> accounts for all 36 families while preserving the deeper missed-rubbish slice, and adds 44 body-free official links plus 13 questions across housing, local environmental services and accessible or private transport.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-5-enforcement-consumer-justice-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 5 enforcement/consumer/justice review</a> accounts for all 36 families while preserving the reviewed speeding-notice slice, and adds 44 body-free official links plus 13 questions across transport penalties, consumer remedies and police or adjudication routes.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-6-family-health-care-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 6 family/health/care review</a> adds 36 dossiers, 45 body-free official links and 13 questions across family change, health throughout life and disability/care/support. It proves that manual health references remain typed, link-only resources and that clinical, capacity, safeguarding and legal decisions remain outside the bundle.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-7-civic-enterprise-creativity-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 7 civic/enterprise/creativity review</a> adds 36 dossiers, 45 body-free official links and 13 questions across civic participation, organisation operation and ideas/research. It proves alias search, enclosing-process Narrative, family-centred Graph and typed official source access while retaining immigration, legal, tax, electoral and intellectual-property review boundaries.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/pack-8-mobility-later-life-death-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Pack 8 mobility/later-life/death review</a> accounts for the final 41 approved identities through 38 compact dossiers and the three preserved death/notification/estate slices. It adds 47 body-free official links and 13 questions, bringing acceptance to 293 families, 104 questions and all 24 life-course domains.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/reviews/population-assurance-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">population assurance review</a> reconciles the whole authored and generated corpus, freezes exact artefact hashes and records six representative visible-Explorer journeys. It establishes the local population-complete gate with zero blocking omissions while retaining the separate specialist-review and publication gates.</p>
+<p>The <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/population-preview-authorization-2026-08-08.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">population-preview publication authorisation</a> records the explicit owner request, reconciled Explorer deployment, frozen candidate identity and non-release-grade publication scope. Deployment and public-browser verification require a separate evidence report.</p>
+<p>Contract validation is not domain validation, and a local Explorer result is not publication authorisation.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.</p>
+    </div>
+  </footer>
+</body>
+</html>

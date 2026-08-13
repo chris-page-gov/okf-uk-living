@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/evaluation/ai-consumer/pilot-output.schema.json",
+  "title": "AI consumer pilot substantive output",
+  "type": "object",
+  "required": ["answers"],
+  "properties": {
+    "answers": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {"$ref": "#/$defs/answer"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 256
+    },
+    "httpUrl": {
+      "type": "string",
+      "pattern": "^https?://[^\\s\"'<>\\\\^`{|}]+$",
+      "maxLength": 256
+    },
+    "answer": {
+      "type": "object",
+      "required": [
+        "question_id",
+        "answer_mode",
+        "answer_text",
+        "selected_family",
+        "journey",
+        "jurisdictions",
+        "source_urls",
+        "assertion_ids",
+        "assertion_provenance",
+        "specialist_review",
+        "corpus_review",
+        "related_family_ids",
+        "sequenced_family_ids",
+        "decision_claims",
+        "abstention"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^pack[1-8]-[a-z0-9-]+$",
+          "maxLength": 128
+        },
+        "answer_mode": {
+          "description": "Use the literal navigation-only for every assisted answer; use abstention only in the without-bundle condition.",
+          "type": "string",
+          "enum": ["navigation-only", "abstention"]
+        },
+        "answer_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "\\S"
+        },
+        "selected_family": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 256
+        },
+        "journey": {
+          "type": "object",
+          "required": ["episode_order", "first_step_id"],
+          "properties": {
+            "episode_order": {
+              "description": "Semantic episode-kind literals, never episode identifiers. A supported journey is exactly [ordinary, exception].",
+              "type": "array",
+              "maxItems": 2,
+              "items": {
+                "type": "string",
+                "enum": ["ordinary", "exception"]
+              }
+            },
+            "first_step_id": {
+              "description": "The id of the first step inside the family episode whose kind is ordinary; do not use an episode id.",
+              "type": ["string", "null"],
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 256
+            }
+          },
+          "additionalProperties": false
+        },
+        "jurisdictions": {
+          "description": "Copy the governed jurisdiction list supplied with the question exactly.",
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "enum": ["England", "Scotland", "Wales", "Northern Ireland"]
+          }
+        },
+        "source_urls": {
+          "description": "One exact families[].sources[].url value for the selected family.",
+          "type": "array",
+          "maxItems": 1,
+          "items": {"$ref": "#/$defs/httpUrl"}
+        },
+        "assertion_ids": {
+          "description": "One exact assertion URL for the selected family; this must equal assertion_provenance[0].id.",
+          "type": "array",
+          "maxItems": 1,
+          "items": {"$ref": "#/$defs/httpUrl"}
+        },
+        "assertion_provenance": {
+          "description": "One exact relationship row mapped from large/data/relationships-0.json; use only the five named properties.",
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "authority_source",
+              "evidence_sources",
+              "observed_at",
+              "rights_source"
+            ],
+            "properties": {
+              "id": {"$ref": "#/$defs/httpUrl"},
+              "authority_source": {"$ref": "#/$defs/httpUrl"},
+              "evidence_sources": {
+                "description": "Exactly one exact URL from the relationship-row evidence[].url values.",
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 1,
+                "items": {"$ref": "#/$defs/httpUrl"}
+              },
+              "observed_at": {
+                "description": "Exact relationship-row observed_at value.",
+                "type": "string",
+                "maxLength": 64
+              },
+              "rights_source": {"$ref": "#/$defs/httpUrl"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "specialist_review": {
+          "type": "string",
+          "enum": ["accepted", "not_required", "required", "unknown"]
+        },
+        "corpus_review": {
+          "type": ["object", "null"],
+          "required": [
+            "specialist_review_accepted",
+            "specialist_review_not_required",
+            "specialist_review_required"
+          ],
+          "properties": {
+            "specialist_review_accepted": {"type": "integer", "minimum": 0},
+            "specialist_review_not_required": {"type": "integer", "minimum": 0},
+            "specialist_review_required": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        },
+        "related_family_ids": {
+          "type": "array",
+          "maxItems": 0,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "sequenced_family_ids": {
+          "type": "array",
+          "maxItems": 0,
+          "items": {"type": "string"}
+        },
+        "decision_claims": {
+          "type": "array",
+          "maxItems": 0,
+          "items": {"type": "string"}
+        },
+        "abstention": {
+          "type": "object",
+          "required": ["decision_abstained", "reason"],
+          "properties": {
+            "decision_abstained": {
+              "description": "Every answer must abstain from making the underlying substantive decision, including when it still provides a supported navigation route.",
+              "type": "boolean",
+              "enum": [true]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "\\S"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

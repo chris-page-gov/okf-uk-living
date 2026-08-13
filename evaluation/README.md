@@ -1,6 +1,6 @@
 # Evaluation
 
-Planned evaluation assets:
+The implemented evaluation assets include:
 
 - at least 100 competency questions;
 - executable Explorer journeys for overview, search, graph, links, timeline,
@@ -8,7 +8,7 @@ Planned evaluation assets:
 - four-nation and local-jurisdiction comparison cases;
 - ordinary, exception, appeal and degraded-source paths;
 - accessibility and plain-language review; and
-- provenance checks that distinguish official, normalized, inferred and
+- provenance checks that distinguish official, normalised, inferred and
   editorial-example assertions.
 
 The first executable boundary is the set of three
@@ -68,15 +68,15 @@ official links and 13 questions, bringing acceptance to 293 families, 104
 questions and all 24 life-course domains.
 
 The [population assurance review](reviews/population-assurance-2026-08-08.md)
-reconciles the whole authored and generated corpus, freezes exact artifact
+reconciles the whole authored and generated corpus, freezes exact artefact
 hashes and records six representative visible-Explorer journeys. It establishes
 the local population-complete gate with zero blocking omissions while retaining
 the separate specialist-review and publication gates.
 
-The [population-preview publication authorization](publication/population-preview-authorization-2026-08-08.md)
+The [population-preview publication authorisation](publication/population-preview-authorization-2026-08-08.md)
 records the explicit owner request, reconciled Explorer deployment, frozen
 candidate identity and non-release-grade publication scope. Deployment and
 public-browser verification require a separate evidence report.
 
 Contract validation is not domain validation, and a local Explorer result is
-not publication authorization.
+not publication authorisation.

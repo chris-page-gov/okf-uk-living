@@ -6,6 +6,44 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Owner-authorised Explore OKF public-review surface comprising the root
+  `explore-okf.json` descriptor, secure standalone `en-GB` journey view,
+  governed projection and schema, endpoint-label index, data manifest, review
+  hub and a curated beginner-readable documentation library. The overlay
+  replaces only the root landing page after matching its frozen SHA-256 and
+  adds all other review targets without changing the exact `okf-explorer.json`
+  descriptor or any corpus and relationship-runtime byte. The documentation-
+  only re-freeze synchronises affected browser handoffs and their manifest
+  bindings. The interface
+  exposes all 293 families, 24 domains, 48 processes, 586 episodes, 881 steps
+  and 879 linked official sources with explicit ordering, jurisdiction, review
+  and provenance boundaries. Local deterministic build/check, publication-
+  overlay, documentation, schema, security and unit validation pass. The
+  surface remains exploratory, noindex and not release-grade; exact public URLs
+  remain unverified until the authorised deployment passes browser checks.
+  The learning route includes provider-neutral copy-and-paste AI prompts that
+  use direct public JSON URLs, require evidence-bearing answers and abstention,
+  warn against personal information and treat embedded commands as untrusted
+  data rather than executable instructions.
+  British English is used throughout affected prose; exact schema values,
+  identifiers and legacy filenames retain their contract spellings.
+
+- Provider-neutral AI-consumer gold pack, structured answer contract, bounded
+  offline evaluator and isolated two-condition runner for all 104 governed
+  competency questions. The answer-blind development preflight records exact
+  runner, prompt, schema, question-source, descriptor, projection and
+  publication-closure identities. Local answer-blind development runs were
+  used to diagnose prompt, jurisdiction and decision-boundary ambiguities; the
+  receipt boundary does not support a published behavioural result. Two later
+  no-retry comparison attempts were preserved privately
+  and stopped before completion. The evaluator does not yet bind each supplied
+  answer to its immutable runner receipt, so no response counts, scores or
+  model comparison from those attempts are published as evidence. Raw model
+  prose and run artefacts remain ignored. All 104 questions are now
+  development-calibration material, promotion claims are disabled, and a new
+  held-out set, receipt binding and independent review are required for any
+  future performance or product-promotion claim.
+
 - A 1,814-file publication freeze for the rich relationship runtime generated
   at reviewed main commit `c38f927…`. The manifest pins every served SHA-256,
   262 rich-runtime files and the updated population-assurance identity without
@@ -45,7 +83,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   Pages plan constraint without changing repository visibility or sharing an
   unverified URL.
 
-- Owner-authorized population-complete preview publication unit with an
+- Owner-authorised population-complete preview publication unit with an
   original landing page, a publication-scoped Explorer descriptor and a
   comprehensive 1,549-file SHA-256 manifest rooted in the frozen candidate.
 - Manual-only GitHub Pages workflow using pinned official actions; it validates
@@ -58,7 +96,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   checker and regression tests.
 - Frozen local population-complete candidate with SHA-256 identities for the
   exact Explorer descriptor, search, relationship, resource, validation,
-  JSON-LD and YAML-LD artifacts.
+  JSON-LD and YAML-LD artefacts.
 - Six visible Explorer acceptance journeys spanning national, devolved, local,
   health, legal and private-dependency discovery from search through Narrative,
   Graph and official source.
@@ -164,10 +202,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   adjacency, JSON-LD, YAML-LD and SHACL-style validation reports.
 - Offline dossier/source-resolution checks and regression tests.
 
-- Owner-authorized `life-course-population-contract.v1` for staged local
+- Owner-authorised `life-course-population-contract.v1` for staged local
   implementation of all 293 families with separate population-complete,
   release-grade and publication-ready gates.
-- Forty-eight normalized enclosing processes that map every approved family
+- Forty-eight normalised enclosing processes that map every approved family
   exactly once without asserting official classification or jurisdictional
   equivalence.
 - `life-course-family.v1`, metadata-only source-link receipt and SHACL-style
@@ -187,7 +225,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Bounded missed-rubbish source register containing 13 official linked
   references and no acquired snapshots.
 - First vertical slice with four local service routes, four jurisdiction
-  contexts, responsible councils, external-redress bodies, a normalized
+  contexts, responsible councils, external-redress bodies, a normalised
   service family and ontology module, and a synthetic journey.
 - Semantic slice validation and regression tests for authority, jurisdiction,
   provenance, assertion status and anti-generalization boundaries.
@@ -196,7 +234,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Second vertical slice with separate Great Britain and Northern Ireland
   learning routes; GB notice, England-and-Wales court, Scottish prosecution
   and Northern Ireland speeding branches; public/private actor boundaries;
-  normalized ontology; and a synthetic evidence-lineage journey.
+  normalised ontology; and a synthetic evidence-lineage journey.
 - Driving-slice semantic checks for exact providers, jurisdictions, source
   sets, assertion status, graph completeness and non-universal deadlines.
 - Bounded death, bereavement and estate register with 20 official linked
@@ -204,7 +242,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Third vertical slice with separate national registration routes; Tell Us
   Once and Northern Ireland manual notification boundaries; England-and-Wales
   probate, Scottish confirmation and Northern Ireland probate routes; private
-  dependencies; normalized ontology; and a synthetic journey.
+  dependencies; normalised ontology; and a synthetic journey.
 - Bereavement semantic checks for exact authority, jurisdiction, source-set,
   notification-coverage, estate-process and graph-completeness boundaries.
 - MIT licence for repository-authored code, documentation and ontology terms.
@@ -218,7 +256,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   real-browser verification gates.
 - Dated local OKF Explorer 0.5.7 review evidence, exact consumer and bundle
   inputs, fixture traceability, and a four-item finding ledger.
-- Owner-authorized exhaustive reference-family inventory with 89 new external
+- Owner-authorised exhaustive reference-family inventory with 89 new external
   references, inclusion of the 53 implemented-slice references, 120 assessed
   domain/jurisdiction cells, original summaries and zero snapshots.
 - Actionable twelve-item gap analysis covering local topology and leaf routes,
@@ -227,7 +265,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Offline inventory validation and regression tests for the declared
   denominator, source metadata, dated rights decisions and publication limits.
 - Owner-approved 293-family denominator with 24 domains, three staged waves and
-  executable count, identity, scope and authorization checks.
+  executable count, identity, scope and authorisation checks.
 - Corpus-acquisition policy for exhaustive-authority plus representative and
   exception local coverage, dated GSS and applicable ODS identifiers, manual
   health links, regulator-first private dependencies, governed sector redress
@@ -246,12 +284,12 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 ### Changed
 
 - Repository visibility changed from private to public after explicit owner
-  authorization, exposing the complete source and history and unblocking Pages.
+  authorisation, exposing the complete source and history and unblocking Pages.
 - `PAGES-001`, `VERIFY-001` and the verified preview handoff are complete; the
   preview remains non-release-grade and the Explorer UI findings remain open.
 
-- Publication authorization remains a separate descriptor envelope and dated
-  receipt so that the owner-authorized candidate bytes and hash are unchanged.
+- Publication authorisation remains a separate descriptor envelope and dated
+  receipt so that the owner-authorised candidate bytes and hash are unchanged.
 - Manual Pages transport and local publication validation now pin publication
   merge `980c7a9…`, so later lockstep documentation cannot alter the frozen
   1,549-file unit.
@@ -260,7 +298,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   density remain tracked Explorer follow-ups.
 
 - Completed `SCOPE-001`, `CAND-001` and `PUB-001` for the full
-  population-complete preview after explicit owner authorization; advanced
+  population-complete preview after explicit owner authorisation; advanced
   `PAGES-001` to active while public-browser verification remains pending.
 
 - Completed `ASSURE-001` after reconciling 293 families, 24 domains, 48
@@ -318,13 +356,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   distinct family versus total-concept counts.
 
 - Superseded the three-slices-only implementation boundary with the explicit
-  2026-08-08 owner authorization for the staged 293-family population while
+  2026-08-08 owner authorisation for the staged 293-family population while
   keeping link-and-summary-only acquisition, local evaluation and no Pages
   publication.
 
 - Recorded owner approval of `okf-domain-profile.v1` and the three fixture
-  contracts, authorizing bounded source registration and slice implementation.
-- Connected the explicitly authorized private GitHub repository while keeping
+  contracts, authorising bounded source registration and slice implementation.
+- Connected the explicitly authorised private GitHub repository while keeping
   remote CI and GitHub Pages disabled.
 - Recorded the private-plan branch-protection limitation while retaining the
   sole-developer PR-only policy for `main`.
@@ -346,8 +384,8 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 - Expanded dated rights decisions from 16 to 25 source hosts and added ONS,
   NHS ODS, W3C,
   LGSL and OKF Explorer determinations without relaxing link-and-summary-only
-  source use or authorizing publication.
-- Recorded explicit owner authorization for exhaustive link-only reference
+  source use or authorising publication.
+- Recorded explicit owner authorisation for exhaustive link-only reference
   discovery while preserving the snapshot, redistribution, unbounded or unstaged leaf
   acquisition, CI and GitHub Pages gates.
 - Recorded owner approval of all six corpus-governance decisions while keeping

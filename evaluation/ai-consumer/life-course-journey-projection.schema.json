@@ -1,0 +1,501 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/explore/life-course-journey-projection.schema.json",
+  "title": "A Life in the UK deterministic journey projection",
+  "type": "object",
+  "required": [
+    "schema",
+    "generated_at",
+    "default_language",
+    "snapshot",
+    "normalisation",
+    "source_identity",
+    "counts",
+    "families"
+  ],
+  "properties": {
+    "schema": {"const": "life-course-journey-projection.v1"},
+    "generated_at": {"type": "string", "format": "date-time", "maxLength": 64},
+    "default_language": {"const": "en-GB"},
+    "snapshot": {"$ref": "#/$defs/nonEmptyShortString"},
+    "normalisation": {
+      "type": "object",
+      "required": ["comma_fragments", "step_fact_flow_mapping_fragments"],
+      "properties": {
+        "comma_fragments": {"const": "join-consecutive-fragments-until-terminal-punctuation-v1"},
+        "step_fact_flow_mapping_fragments": {
+          "const": "append-null-key-fragments-to-step-fact-narrative-with-comma-space-v1"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_identity": {"$ref": "#/$defs/sourceIdentity"},
+    "counts": {"$ref": "#/$defs/counts"},
+    "families": {
+      "type": "array",
+      "minItems": 293,
+      "maxItems": 293,
+      "items": {"$ref": "#/$defs/family"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192,
+      "pattern": "\\S"
+    },
+    "nonEmptyShortString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "\\S"
+    },
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._~:-]*(?:[ /][A-Za-z0-9][A-Za-z0-9._~:/-]*)*$"
+    },
+    "localRoute": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 1024,
+      "pattern": "^[a-z][a-z0-9-]*(?:/(?:[A-Za-z0-9._~-]|%(?!(?:2D|2E|3[0-9]|4[1-9A-F]|5[0-9A]|5F|6[1-9A-F]|7[0-9A]|7E))[0-9A-F]{2})+)+$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 4096,
+      "pattern": "^https://"
+    },
+    "artifactReference": {
+      "type": "object",
+      "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._~/-]+$"
+        },
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    },
+    "sourceIdentity": {
+      "type": "object",
+      "required": [
+        "bundle_url",
+        "candidate_id",
+        "bundle_descriptor",
+        "data_manifest",
+        "relationship_runtime",
+        "candidate_manifest",
+        "review_status"
+      ],
+      "properties": {
+        "bundle_url": {"$ref": "#/$defs/httpsUrl"},
+        "candidate_id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "bundle_descriptor": {"$ref": "#/$defs/artifactReference"},
+        "data_manifest": {"$ref": "#/$defs/artifactReference"},
+        "relationship_runtime": {"$ref": "#/$defs/artifactReference"},
+        "candidate_manifest": {"$ref": "#/$defs/artifactReference"},
+        "review_status": {"$ref": "#/$defs/artifactReference"}
+      },
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "families",
+        "domains",
+        "processes",
+        "aliases",
+        "sources",
+        "episodes",
+        "steps",
+        "relationship_assertion_references",
+        "specialist_review_accepted",
+        "specialist_review_not_required",
+        "specialist_review_required"
+      ],
+      "properties": {
+        "families": {"const": 293},
+        "domains": {"const": 24},
+        "processes": {"const": 48},
+        "aliases": {"type": "integer", "minimum": 1},
+        "sources": {"type": "integer", "minimum": 1},
+        "episodes": {"type": "integer", "minimum": 293},
+        "steps": {"type": "integer", "minimum": 293},
+        "relationship_assertion_references": {"type": "integer", "minimum": 1},
+        "specialist_review_accepted": {"const": 0},
+        "specialist_review_not_required": {"const": 2},
+        "specialist_review_required": {"const": 291}
+      },
+      "additionalProperties": false
+    },
+    "domain": {
+      "type": "object",
+      "required": ["id", "route", "title"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"}
+      },
+      "additionalProperties": false
+    },
+    "process": {
+      "type": "object",
+      "required": ["id", "route", "title"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"}
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["population_gate", "specialist_review"],
+      "properties": {
+        "population_gate": {"const": "complete"},
+        "specialist_review": {"enum": ["required", "not_required", "accepted"]}
+      },
+      "additionalProperties": false
+    },
+    "routeVariant": {
+      "type": "object",
+      "required": ["id", "provider", "primary_source"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "provider": {"$ref": "#/$defs/nonEmptyShortString"},
+        "primary_source": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route_kind": {"$ref": "#/$defs/nonEmptyShortString"},
+        "geographic_identifier": {"$ref": "#/$defs/nonEmptyShortString"}
+      },
+      "additionalProperties": false
+    },
+    "applicability": {
+      "type": "object",
+      "required": ["jurisdiction", "state", "source_ids", "route_variants"],
+      "properties": {
+        "jurisdiction": {"$ref": "#/$defs/nonEmptyShortString"},
+        "state": {"enum": ["supported", "not_applicable", "not_published_by_source"]},
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyShortString"}
+        },
+        "route_variants": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/routeVariant"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "id",
+        "resource_id",
+        "route",
+        "position",
+        "relationship_assertion",
+        "title",
+        "owner",
+        "authority_role",
+        "url",
+        "jurisdictions",
+        "jurisdiction_basis",
+        "observed_at",
+        "freshness",
+        "rights_decision",
+        "summary",
+        "limitations"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "resource_id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "position": {"type": "integer", "minimum": 0},
+        "relationship_assertion": {"$ref": "#/$defs/httpsUrl"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"},
+        "owner": {"$ref": "#/$defs/nonEmptyShortString"},
+        "authority_role": {"$ref": "#/$defs/nonEmptyShortString"},
+        "url": {"$ref": "#/$defs/httpsUrl"},
+        "jurisdictions": {
+          "type": "array",
+          "minItems": 0,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyShortString"}
+        },
+        "jurisdiction_basis": {"const": "explicit-family-applicability"},
+        "observed_at": {"type": "string", "format": "date"},
+        "freshness": {"$ref": "#/$defs/nonEmptyShortString"},
+        "rights_decision": {"$ref": "#/$defs/nonEmptyShortString"},
+        "summary": {"$ref": "#/$defs/nonEmptyString"},
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "familyRelationshipAssertions": {
+      "type": "object",
+      "required": ["life_course_domain", "enclosing_process"],
+      "properties": {
+        "life_course_domain": {"$ref": "#/$defs/httpsUrl"},
+        "enclosing_process": {"$ref": "#/$defs/httpsUrl"}
+      },
+      "additionalProperties": false
+    },
+    "episodeRelationshipAssertions": {
+      "type": "object",
+      "required": ["family_episode", "enclosing_process"],
+      "properties": {
+        "family_episode": {"$ref": "#/$defs/httpsUrl"},
+        "enclosing_process": {"$ref": "#/$defs/httpsUrl"}
+      },
+      "additionalProperties": false
+    },
+    "sourceAssertion": {
+      "type": "object",
+      "required": ["source_id", "resource_route", "assertion_id"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "resource_route": {"$ref": "#/$defs/localRoute"},
+        "assertion_id": {"$ref": "#/$defs/httpsUrl"}
+      },
+      "additionalProperties": false
+    },
+    "stepRelationshipAssertions": {
+      "type": "object",
+      "required": ["episode_step", "sources"],
+      "properties": {
+        "episode_step": {"$ref": "#/$defs/httpsUrl"},
+        "follows_previous": {"$ref": "#/$defs/httpsUrl"},
+        "precedes_next": {"$ref": "#/$defs/httpsUrl"},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sourceAssertion"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "stepFact": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["state", "summary"],
+          "properties": {
+            "state": {"const": "supported"},
+            "summary": {"$ref": "#/$defs/nonEmptyString"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["state", "reason"],
+          "properties": {
+            "state": {
+              "enum": ["not_published_by_source", "not_applicable"]
+            },
+            "reason": {"$ref": "#/$defs/nonEmptyString"}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "step": {
+      "type": "object",
+      "required": [
+        "id",
+        "route",
+        "order",
+        "interaction",
+        "provider",
+        "requirements",
+        "evidence",
+        "rule",
+        "channel",
+        "cost",
+        "time",
+        "output",
+        "outcome",
+        "redress",
+        "assertion_status",
+        "source_ids",
+        "relationship_assertions"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "order": {"type": "integer", "minimum": 0},
+        "interaction": {"$ref": "#/$defs/nonEmptyString"},
+        "provider": {"$ref": "#/$defs/nonEmptyShortString"},
+        "requirements": {"$ref": "#/$defs/stepFact"},
+        "evidence": {"$ref": "#/$defs/stepFact"},
+        "rule": {"$ref": "#/$defs/stepFact"},
+        "channel": {"$ref": "#/$defs/stepFact"},
+        "cost": {"$ref": "#/$defs/stepFact"},
+        "time": {"$ref": "#/$defs/stepFact"},
+        "output": {"$ref": "#/$defs/stepFact"},
+        "outcome": {"$ref": "#/$defs/stepFact"},
+        "redress": {"$ref": "#/$defs/stepFact"},
+        "assertion_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyShortString"}
+        },
+        "relationship_assertions": {"$ref": "#/$defs/stepRelationshipAssertions"}
+      },
+      "additionalProperties": false
+    },
+    "episode": {
+      "type": "object",
+      "required": [
+        "id",
+        "route",
+        "title",
+        "kind",
+        "order",
+        "entry_state",
+        "outcome",
+        "relationship_assertions",
+        "steps"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"},
+        "kind": {"enum": ["ordinary", "exception"]},
+        "order": {"type": "integer", "minimum": 0},
+        "entry_state": {"$ref": "#/$defs/nonEmptyString"},
+        "outcome": {"$ref": "#/$defs/nonEmptyString"},
+        "relationship_assertions": {"$ref": "#/$defs/episodeRelationshipAssertions"},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/step"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "relatedFamily": {
+      "type": "object",
+      "required": ["id", "route", "title", "relationship", "sequenced"],
+      "properties": {
+        "id": {"$ref": "#/$defs/nonEmptyShortString"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"},
+        "relationship": {"const": "shared-enclosing-process"},
+        "sequenced": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "narrative": {
+      "type": "object",
+      "required": ["source", "process_context", "title", "body"],
+      "properties": {
+        "source": {"type": "string", "pattern": "^services/.+\\.md$"},
+        "process_context": {"$ref": "#/$defs/nonEmptyShortString"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"},
+        "body": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": false
+    },
+    "family": {
+      "type": "object",
+      "required": [
+        "id",
+        "route",
+        "title",
+        "description",
+        "aliases",
+        "situations",
+        "user_needs",
+        "interaction_boundary",
+        "status",
+        "assertion_status",
+        "domain",
+        "process",
+        "review",
+        "limitations",
+        "applicability",
+        "sources",
+        "episodes",
+        "related_families",
+        "narrative",
+        "relationship_assertions"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "route": {"$ref": "#/$defs/localRoute"},
+        "title": {"$ref": "#/$defs/nonEmptyShortString"},
+        "description": {"$ref": "#/$defs/nonEmptyString"},
+        "aliases": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyShortString"}
+        },
+        "situations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "user_needs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "interaction_boundary": {"$ref": "#/$defs/nonEmptyString"},
+        "status": {"enum": ["population_complete", "release_grade"]},
+        "assertion_status": {"enum": ["official", "normalized", "inferred", "editorial-example"]},
+        "domain": {"$ref": "#/$defs/domain"},
+        "process": {"$ref": "#/$defs/process"},
+        "review": {"$ref": "#/$defs/review"},
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "applicability": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/applicability"}
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/source"}
+        },
+        "episodes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/episode"}
+        },
+        "related_families": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/relatedFamily"}
+        },
+        "narrative": {"$ref": "#/$defs/narrative"},
+        "relationship_assertions": {"$ref": "#/$defs/familyRelationshipAssertions"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

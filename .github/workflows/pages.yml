@@ -1,15 +1,9 @@
 name: Publish GitHub Pages
 
-on:
-  workflow_dispatch:
-    inputs:
-      candidate_id:
-        description: Frozen population candidate to publish
-        required: true
-        default: life-course-population-complete-2026-08-08
-      publication_commit:
-        description: Exact protected-main merge commit to deploy
-        required: true
+# Retained as a historical record. The additive Explore OKF workflow is the
+# only manual Pages deployment route; re-enabling this base-only transport
+# could overwrite its public-review routes.
+on: {}
 
 concurrency:
   group: pages
