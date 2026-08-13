@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import build_explore_okf  # noqa: E402
 BASE_DESCRIPTOR_SHA256 = "ff69f0162a4ba93156b150ae4eea0070c8c8a81187ed5cc7d2425f37b8db34dc"
 BASE_DATA_MANIFEST_SHA256 = "fe0e11219ceec88702ca8a5d536d6d0ac0425f3bb29c7586884cfb0e56c957b4"
-BASE_PUBLICATION_MANIFEST_SHA256 = "1a43f5fa0b8a4c4d3489891dce27f711d3f370f3dcca7ae7b6d4f5ec22249ee7"
+BASE_PUBLICATION_MANIFEST_SHA256 = "316122b49b937b1afb390e36b62a4fe44c11d40027d7821e1881b588581fd5fc"
 
 
 def sha256(path: Path) -> str:
@@ -51,6 +51,12 @@ class ExploreOkfSidecarTests(unittest.TestCase):
         )
         cls.learn = (ROOT / "learn/index.html").read_text(encoding="utf-8")
         cls.ask_ai = (ROOT / "learn/ask-an-ai.html").read_text(encoding="utf-8")
+        cls.ai_catalogue = (ROOT / "explore/ai/index.html").read_text(
+            encoding="utf-8"
+        )
+        cls.ai_manifest = json.loads(
+            (ROOT / "explore/ai/manifest.json").read_text(encoding="utf-8")
+        )
 
     def test_claude_tested_descriptor_and_corpus_identity_are_preserved(self) -> None:
         self.assertEqual(
@@ -144,6 +150,8 @@ class ExploreOkfSidecarTests(unittest.TestCase):
             "home",
             "learn",
             "ai_prompts",
+            "ai_family_catalogue",
+            "ai_retrieval_manifest",
         ):
             reference = entrypoints[key]
             self.assertEqual(reference, self.descriptor["entrypoint_integrity"][key])
@@ -170,7 +178,7 @@ class ExploreOkfSidecarTests(unittest.TestCase):
         self.assertIn("Ask an AI about a journey", self.home)
         self.assertIn(
             "https://chris-page-gov.github.io/okf-uk-living/"
-            "explore/journey-projection.json",
+            "explore/ai/index.html",
             self.home,
         )
         self.assertIn('href="../learn/"', self.page)
@@ -183,6 +191,86 @@ class ExploreOkfSidecarTests(unittest.TestCase):
         self.assertLess(len(self.home.encode("utf-8")), 64 * 1024)
         self.assertLess(len(self.learn.encode("utf-8")), 128 * 1024)
         self.assertLess(len(self.page.encode("utf-8")), 6 * 1024 * 1024)
+
+    def test_ai_retrieval_layer_is_complete_small_and_projection_bound(self) -> None:
+        self.assertEqual("explore-okf-ai-retrieval-manifest.v1", self.ai_manifest["schema"])
+        self.assertEqual(293, self.ai_manifest["family_count"])
+        self.assertEqual(293, len(self.ai_manifest["records"]))
+        projection_reference = self.ai_manifest["source_projection"]
+        self.assertEqual(
+            sha256(ROOT / "explore/journey-projection.json"),
+            projection_reference["sha256"],
+        )
+        self.assertEqual(
+            self.descriptor["entrypoints"]["ai_family_catalogue"],
+            self.ai_manifest["catalogue"],
+        )
+        records = {record["id"]: record for record in self.ai_manifest["records"]}
+        projected_families = {
+            family["id"]: family for family in self.projection["families"]
+        }
+        self.assertEqual(
+            set(projected_families),
+            set(records),
+        )
+        self.assertLess(len(self.ai_catalogue.encode("utf-8")), 160 * 1024)
+        self.assertNotIn("<script", self.ai_catalogue.casefold())
+        self.assertIn('content="noindex,noarchive"', self.ai_catalogue)
+        for record in records.values():
+            path = ROOT / record["path"]
+            self.assertTrue(path.is_file())
+            self.assertLess(record["bytes"], 128 * 1024)
+            self.assertEqual(record["bytes"], path.stat().st_size)
+            self.assertEqual(record["sha256"], sha256(path))
+            self.assertIn(
+                f'href="families/{record["id"]}.html"', self.ai_catalogue
+            )
+            page = path.read_text(encoding="utf-8")
+            self.assertIn('<html lang="en-GB">', page)
+            self.assertIn('content="noindex,noarchive"', page)
+            self.assertNotIn("<script", page.casefold())
+            self.assertNotIn("<form", page.casefold())
+            self.assertNotRegex(page, r"\son[a-z]+\s*=")
+            match = re.search(
+                r'<pre id="governed-family-record"><code class="language-json">(.*?)</code></pre>',
+                page,
+                flags=re.DOTALL,
+            )
+            self.assertIsNotNone(match)
+            envelope = json.loads(html.unescape(match.group(1)))
+            self.assertEqual(projected_families[record["id"]], envelope["family"])
+            self.assertEqual(projection_reference, envelope["source_projection"])
+
+    def test_ai_school_record_contains_every_field_copilot_could_not_retrieve(self) -> None:
+        page = (
+            ROOT / "explore/ai/families/apply-for-school-place.html"
+        ).read_text(encoding="utf-8")
+        match = re.search(
+            r'<pre id="governed-family-record"><code class="language-json">(.*?)</code></pre>',
+            page,
+            flags=re.DOTALL,
+        )
+        self.assertIsNotNone(match)
+        envelope = json.loads(html.unescape(match.group(1)))
+        family = envelope["family"]
+        expected = next(
+            item
+            for item in self.projection["families"]
+            if item["id"] == "apply-for-school-place"
+        )
+        self.assertEqual(expected, family)
+        self.assertEqual("apply-for-school-place", family["id"])
+        self.assertEqual("required", family["review"]["specialist_review"])
+        self.assertEqual("ordinary", family["episodes"][0]["kind"])
+        self.assertEqual("exception", family["episodes"][1]["kind"])
+        self.assertEqual(
+            ["England", "Scotland", "Wales", "Northern Ireland"],
+            [route["jurisdiction"] for route in family["applicability"]],
+        )
+        self.assertEqual(4, len(family["sources"]))
+        self.assertTrue(all(source["url"].startswith("https://") for source in family["sources"]))
+        self.assertNotIn("<script", page.casefold())
+        self.assertLess(len(page.encode("utf-8")), 128 * 1024)
 
     def test_authored_publication_copy_uses_planned_urls_and_exact_identity(self) -> None:
         template = (ROOT / "source/explore-okf/home.template.html").read_text(
@@ -199,9 +287,10 @@ class ExploreOkfSidecarTests(unittest.TestCase):
             "Snapshot <code>life-course-population-complete-2026-08-08</code>",
             template,
         )
-        self.assertIn("After this review surface is deployed", prompt_guide)
-        self.assertIn("post-deployment copy-and-paste URLs", prompt_guide)
-        self.assertNotIn("Pages URLs above return the JSON", prompt_guide)
+        self.assertIn("AI family catalogue", prompt_guide)
+        self.assertIn("Microsoft 365 Copilot: reliable two-step test", prompt_guide)
+        self.assertIn("no longer the default prompt input", prompt_guide)
+        self.assertIn("If the AI stops at the catalogue", prompt_guide)
         for repository_url in (
             "https://github.com/chris-page-gov/okf-uk-living/blob/main/"
             "docs/start-here.md",
