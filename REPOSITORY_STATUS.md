@@ -39,8 +39,9 @@
   digest-bound official and normalised gzip planes and a SHA-256 route locator
   with exact per-route assertion commitments. The merged Explorer strict
   reconciler reports conformance with zero warnings. A reviewed 1,814-file
-  publication manifest now freezes these bytes from `c38f927…`; deployment and
-  cache-bypassed public verification remain separate gates.
+  publication manifest freezes these bytes from `c38f927…`; manual workflow
+  run `31737084740` deployed them with the Explore overlay from exact merge
+  `d1efb6b...`, and cache-bypassed public verification passed.
 - Evaluation: locked local `uv` validation plus visible public OKF Explorer
   0.5.7 review; Reader/query, Narrative, Graph, Resources, browser source,
   licence/notice and large search/facet journeys pass
@@ -54,10 +55,10 @@
 - Main protection: server-enforced pull requests with zero required approvals;
   administrators included, conversation resolution required, force-pushes and
   branch deletion disabled
-- GitHub Pages: the original population preview was deployed by manual run
-  `31297841419` and deployment `5815993749`; HTTPS and browser verification
-  passed for that superseded file set. The rich-runtime correction is frozen
-  locally and awaits its exact protected-main merge deployment.
+- GitHub Pages: manual run `31737084740` deployed and verified the 1,814-file
+  rich-runtime base and Explore OKF overlay from exact merge `d1efb6b...`.
+  Ordinary pushes, merges and pull requests do not update Pages. The new small
+  AI-retrieval records require their own exact deployment and verification.
 - Public bundle URL:
   `https://chris-page-gov.github.io/okf-uk-living/okf-explorer.json`
 - First slice: missed rubbish merged in PR #3
@@ -81,9 +82,14 @@
   processes in eight review packs; population completion and release grade are
   separate gates
 - Publication readiness: the full corpus remains a non-release-grade,
-  population-complete preview. A 1,814-file exact-byte manifest now includes
-  the rich runtime and pins reviewed data commit `c38f927…`; the earlier
-  landing and Explorer verification does not verify this correction.
+  population-complete preview. The deployed 1,814-file exact-byte manifest
+  includes the rich runtime and pins reviewed data commit `c38f927…`; the base
+  and Explore overlay identities and representative browser journeys passed.
+- AI retrieval: Microsoft 365 Copilot could retrieve the short narrative for
+  the school-place family but not the 7.2 MB raw projection, so it correctly
+  abstained on stable ID, ordered steps, route IDs and review state. The
+  deterministic remediation keeps the full projection as the audit artefact
+  and adds one compact catalogue plus 293 complete family HTML records.
 - UI efficiency: six concise representative queries ranked the intended family
   first or second and the missed-rubbish journey reached Narrative, Graph, 13
   official links and a live GOV.UK page; three conversational questions and

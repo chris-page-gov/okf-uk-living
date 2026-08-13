@@ -26,9 +26,10 @@ a background in data, government services or the semantic web.
 6. Repeat the exercise with `find NHS dentist`.
 
 If you prefer to test the data through an AI, use the
-[provider-neutral copy-and-paste prompts](ask-an-ai.md). They point directly to
-the public descriptor and governed journey projection and include a safe
-download-and-attach fallback.
+[provider-neutral copy-and-paste prompts](ask-an-ai.md). They start with a
+small HTML catalogue and one complete family record rather than expecting an
+AI to retrieve the 7.2 MB audit projection in one request. They also include a
+safe save-and-attach fallback.
 
 The point is not that a person follows every journey in the corpus. The model
 connects possible life events, needs, services, steps, authorities,

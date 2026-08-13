@@ -24,6 +24,17 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- HTML-first AI retrieval layer generated deterministically from the governed
+  journey projection: one compact catalogue and 293 complete family records
+  carrying stable IDs, explicit applicability, ordinary and exception steps,
+  official source URLs, provenance, review state and limitations. This fixes a
+  public-review finding in which Microsoft 365 Copilot could retrieve short
+  narrative material but not the 7.2 MB raw projection, and therefore
+  correctly abstained on several requested fields. The full projection remains
+  unchanged as the canonical audit artefact. Provider-neutral prompts now use
+  catalogue selection followed by one small complete record, with a visible
+  save-and-attach fallback for approved organisational use.
+
 - Owner-authorised Explore OKF public-review surface comprising the root
   `explore-okf.json` descriptor, secure standalone `en-GB` journey view,
   governed projection and schema, endpoint-label index, data manifest, review
@@ -40,7 +51,7 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   surface remains exploratory, noindex and not release-grade; exact public URLs
   remain unverified until the authorised deployment passes browser checks.
   The learning route includes provider-neutral copy-and-paste AI prompts that
-  use direct public JSON URLs, require evidence-bearing answers and abstention,
+  use direct public entry points, require evidence-bearing answers and abstention,
   warn against personal information and treat embedded commands as untrusted
   data rather than executable instructions.
   British English is used throughout affected prose; exact schema values,
