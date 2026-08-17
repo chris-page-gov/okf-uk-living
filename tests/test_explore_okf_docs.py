@@ -224,7 +224,10 @@ Paragraph with *emphasis*, **strong text** and `inline <code>`.
             1, rendered.count('href="../../index.html"')
         )
         self.assertEqual(1, rendered.count('href="../../../learn/index.html"'))
-        self.assertIn('href="../../../LICENSE">MIT licence</a>', rendered)
+        self.assertIn(
+            'href="../../../generated/browser/NOTICE.html">licence and attribution notices</a>',
+            rendered,
+        )
         self.assertIn('<html lang="en-GB">', rendered)
 
     def test_output_is_deterministic(self) -> None:

@@ -213,7 +213,7 @@ uv run --locked python -m unittest discover -s tests
   order: 10
 </code></pre>
 <p>The block is validated against <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/schemas/site-document-publication.schema.json" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>site-document-publication.schema.json</code></a>. The path must be a safe site-relative HTML path below <code>learn/</code>. <code>title</code>, <code>description</code> and <code>status</code> frontmatter must also be non-empty. Do not add a document to the generator's Python mapping: nominated documents are discovered deterministically and added to the generated <a href="index.html"><code>published document index</code></a>.</p>
-<p>Run <code>uv run --locked python scripts/build_site_documents.py</code>, then <code>--check</code>. The generator writes only safe rendered HTML and <code>learn/documentation-manifest.json</code>; it does not rebuild the corpus. The manifest records each source and output digest and states that deployment is not automatic.</p>
+<p>Run <code>uv run --locked python scripts/build_site_documents.py</code>, then <code>--check</code>. The generator writes only safe rendered HTML and <code>learn/documentation-manifest.json</code>; it does not rebuild the corpus. The manifest records each source and output digest and states that deployment is not automatic. Every rendered document links to the browser-rendered <code>generated/browser/NOTICE.html</code> page for the MIT licence boundary and source attribution terms; do not link a review page directly to the extensionless repository <code>LICENSE</code> path.</p>
 <p>The base publication transporter resolves every one of the 1,814 frozen files against its manifest. If a repository-generated documentation handoff has legitimately changed in the working tree, the transporter reads the exact old byte sequence from verified publication commit <code>736d7dc…</code> instead. It never substitutes the new handoff into the base layer. This allows the additive documentation overlay to evolve without re-freezing corpus bytes.</p>
 <p>For a pull request confined to this dependency graph, run <code>BASE_REF=origin/main make validate-documentation-overlay</code>. The gate allows only published or curated Markdown, their generated HTML and the two additive manifests. It rejects every other changed path and directs the change to <code>make validate</code>. Nomination, validation and merge do not deploy Pages.</p>
 <p>The public preview is assembled only from files listed in <code>publication/pages-file-manifest.json</code>. Regenerate that manifest deliberately with <code>uv run --locked python scripts/prepare_pages_publication.py --write-manifest</code>, review its count, total bytes and hashes, and commit it with the publication descriptor. Ordinary builds do not rewrite it.</p>
@@ -229,8 +229,8 @@ uv run --locked python -m unittest discover -s tests
   <footer class="site-footer">
     <div class="footer-inner">
       <p>Check the cited official source before making a decision.
-      Repository-authored documentation is available under the
-      <a href="../../LICENSE">MIT licence</a>.</p>
+      Repository-authored documentation is available under the MIT licence.
+      See the <a href="../../generated/browser/NOTICE.html">licence and attribution notices</a>.</p>
     </div>
   </footer>
 </body>

@@ -189,7 +189,9 @@ the frozen public preview remains unchanged.
   static-document layer. A declared documentation-only dependency graph may use
   targeted validation, but any corpus, semantic, schema or workflow change
   falls back to full release assurance. Document nomination and pull-request
-  merge never trigger publication.
+  merge never trigger publication. Rendered pages link to the existing
+  browser-safe HTML licence and attribution notice rather than an extensionless
+  repository file.
 - Complete the initial-sample review, compatibility and scope gates.
 - Freeze one reproducible candidate and run all release gates against it.
 - Require an explicit owner request before any GitHub Pages deployment.
@@ -224,3 +226,10 @@ On 2026-08-12 the owner authorised a bounded correction to expose the reviewed
 rich relationship runtime. Its 1,814-file manifest pins data commit
 `c38f927…`; an exact protected-main merge deployment and cache-bypassed browser
 journey remain required before the correction is labelled verified.
+
+On 17 August 2026 the owner approved a bounded static-document correction after
+the first product-requirements deployment passed its identity and content
+checks but Edge blocked the extensionless `LICENSE` route. The renderer now
+uses the existing browser-safe licence and attribution notice. Corpus,
+semantic, source, workflow and frozen-base bytes remain unchanged; exact-head
+redeployment and browser verification remain the final gates.
