@@ -181,6 +181,7 @@ th { background: var(--teal-pale); }
   <li>Keep remote CI disabled. If GitHub Actions is selected solely as the Pages transport, it must be manual-only and consume the frozen artefact.</li>
   <li>Repository visibility may change only through a separate explicit owner decision. The owner made that decision on 2026-08-09; it did not authorize automatic publishing or a different candidate.</li>
   <li>Do not label or share a deployed URL as verified until <code>VERIFY-001</code> passes in a real browser.</li>
+  <li>Repository-authored static review documents may be added through the validated documentation overlay without rebuilding the frozen corpus. The documentation-only dependency gate must pass, the additive manifest must bind the rendered bytes, and deployment remains an explicit exact-head manual operation followed by the same browser gate.</li>
 </ul>
 <h2 id="completion-definitions">Completion definitions</h2>
 <ul>
@@ -193,7 +194,9 @@ th { background: var(--teal-pale); }
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Check the cited official source before making a decision.</p>
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="../../LICENSE">MIT licence</a>.</p>
     </div>
   </footer>
 </body>

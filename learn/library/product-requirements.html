@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; script-src-attr 'none'; style-src 'sha256-AItaoFZiyIJxirrxwWmEu8a6XK5V97K/v2vgk5P6fXY='; style-src-attr 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Product requirements for A Life in the UK — Explore OKF review library</title>
+  <style>:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --ink: #17212b;
+  --soft-ink: #465766;
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --line: #c8d3cf;
+  --teal: #006b62;
+  --teal-dark: #004d47;
+  --teal-pale: #e2f4f0;
+  --amber: #9c4d00;
+  --amber-pale: #fff1d8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { min-width: 19rem; margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--teal-dark); text-decoration-thickness: 0.1em; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 0.16em; }
+:focus-visible { outline: 0.2rem solid #ffbf47; outline-offset: 0.18rem; }
+.skip-link { position: absolute; top: 0.5rem; left: 0.5rem; padding: 0.6rem 0.9rem; color: #fff; background: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { color: #fff; border-bottom: 0.3rem solid #21b39e; background: #103c39; }
+.header-inner, main, .footer-inner { width: min(100% - 2rem, 52rem); margin-inline: auto; }
+.header-inner { display: flex; flex-wrap: wrap; gap: 0.8rem 2rem; align-items: baseline; justify-content: space-between; padding-block: 1.1rem; }
+.brand { color: #fff; font-size: 1.15rem; font-weight: 750; text-decoration: none; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.primary-nav a { color: #fff; }
+main { padding-block: clamp(2rem, 6vw, 4.5rem); }
+.review-state { margin: 0 0 1.2rem; padding: 0.7rem 0.9rem; color: #513000; border-left: 0.3rem solid var(--amber); background: var(--amber-pale); }
+.markdown-body { overflow-wrap: anywhere; }
+h1, h2, h3, h4, h5, h6 { margin: 2rem 0 0.65rem; line-height: 1.18; scroll-margin-top: 1rem; }
+h1 { margin-top: 0; font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -0.035em; }
+h2 { padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); font-size: clamp(1.5rem, 4vw, 2.15rem); }
+h3 { font-size: 1.35rem; }
+p, ul, ol, blockquote, pre, table { margin: 0 0 1.2rem; }
+ul, ol { padding-left: 1.6rem; }
+li + li { margin-top: 0.3rem; }
+blockquote { padding: 0.15rem 0 0.15rem 1rem; color: var(--soft-ink); border-left: 0.3rem solid var(--teal); }
+blockquote > :last-child { margin-bottom: 0; }
+code { padding: 0.1em 0.3em; border-radius: 0.2rem; background: var(--teal-pale); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.92em; }
+pre { overflow-x: auto; padding: 1rem; color: #f4f7f6; border-radius: 0.35rem; background: #172b2a; }
+pre code { padding: 0; color: inherit; background: transparent; font-size: 0.88rem; }
+.table-wrap { max-width: 100%; overflow-x: auto; margin-bottom: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); }
+th, td { padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; border: 1px solid var(--line); }
+th { background: var(--teal-pale); }
+.align-centre { text-align: center; }
+.align-right { text-align: right; }
+.image-omitted { color: var(--soft-ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--soft-ink); background: var(--surface); }
+.footer-inner { padding-block: 1.3rem; }
+.footer-inner p { margin: 0; }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">A Life in the UK</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../explore/index.html">Explore journeys</a>
+        <a href="../index.html">Learning library</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <p class="review-state"><strong>Review material.</strong> Document status: <strong>draft</strong>. This is exploratory research, not an authoritative service or released data product.</p>
+    <article class="markdown-body">
+<h1 id="product-requirements-for-a-life-in-the-uk">Product requirements for A Life in the UK</h1>
+<h2 id="document-purpose">Document purpose</h2>
+<p>This document defines what <strong>A Life in the UK</strong> must do for its users. It organises the existing approved corpus, safety, semantic and publication contracts into one product view. It does not replace those contracts or authorise a new release.</p>
+<p>The product baseline is <code>main</code> at <code>736d7dc4dbb4e44082f6b7786dd88afd55954792</code>. The public population-complete preview and its retrieval records passed exact-byte and real-browser verification on 13 August 2026. The corpus is not release grade: 291 of 293 service families still require specialist review and none has named specialist acceptance.</p>
+<p>When this document and a more specific governed contract disagree, the contract controls. The main controlling sources are:</p>
+<ul>
+  <li>the <a href="idea-and-semantic-model.html">life-course research overview</a>;</li>
+  <li>the <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/profiles/life-course-population-contract.v1.yaml" rel="noopener noreferrer external" referrerpolicy="no-referrer">population contract</a>;</li>
+  <li>the <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/okf.semantic.json" rel="noopener noreferrer external" referrerpolicy="no-referrer">semantic contract</a>;</li>
+  <li>the <a href="authoring.html">authoring guide</a>;</li>
+  <li>the <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/PLANNING.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">delivery plan</a>; and</li>
+  <li>the <a href="repository-status.html">current repository status</a>.</li>
+</ul>
+<h2 id="product-summary">Product summary</h2>
+<p>A Life in the UK is an independent, citizen-centred discovery and learning product about public services, rights, responsibilities and life events in the United Kingdom. It helps a person move from a topic or situation to:</p>
+<ol>
+  <li>an understandable service-family overview;</li>
+  <li>its place within a wider life-course domain and enclosing process;</li>
+  <li>ordinary and exception journeys;</li>
+  <li>explicit national, devolved and applicable local variants;</li>
+  <li>the authorities, providers, evidence, rules, outcomes and redress involved;</li>
+  <li>inspectable relationships and their provenance; and</li>
+  <li>current official source links for further action.</li>
+</ol>
+<p>The product is a map, not the territory. It supports discovery and education; it does not perform a government transaction or make a personal decision.</p>
+<h2 id="the-problem">The problem</h2>
+<p>Information about one life event is often distributed across departments, devolved administrations, councils, health bodies, regulators and private dependencies. Publisher websites usually describe the part owned by one organisation. A person may still need to work out:</p>
+<ul>
+  <li>which process encloses the page they found;</li>
+  <li>what normally happens before and after the current step;</li>
+  <li>whether a different route applies in another UK nation or locality;</li>
+  <li>what evidence, deadline, cost, output or redress route matters;</li>
+  <li>which organisation is accountable and which merely delivers a step;</li>
+  <li>whether a relationship is official, normalised, inferred or illustrative; and</li>
+  <li>whether the information is current enough to rely on.</li>
+</ul>
+<p>Search engines can find pages but do not reliably expose that structure or its evidence. Large graphs can expose structure but become difficult to interpret without hierarchy, grouping and a clear selected route.</p>
+<h2 id="product-vision">Product vision</h2>
+<p>Anyone exploring a topic within the governed life-course vocabulary should be able to find the relevant family, understand its context, inspect its journey and evidence, and continue to an authoritative source without needing to know which public body owns the subject or how an ontology works.</p>
+<h2 id="intended-users-and-needs">Intended users and needs</h2>
+<h3 id="people-exploring-a-public-service-situation">People exploring a public-service situation</h3>
+<p>They need plain-language orientation and a safe handoff to the current official service. They may not know the service name, responsible organisation or jurisdiction.</p>
+<h3 id="learners-and-educators">Learners and educators</h3>
+<p>They need familiar examples that explain the difference between data, information, knowledge, taxonomy, ontology and provenance. They need to move between narrative and graph views without losing context.</p>
+<h3 id="researchers-service-designers-and-policy-professionals">Researchers, service designers and policy professionals</h3>
+<p>They need to compare routes, authorities, dependencies, exceptions and gaps across domains and jurisdictions. They need stable identities and evidence for material relationships.</p>
+<h3 id="specialist-reviewers">Specialist reviewers</h3>
+<p>Legal, clinical, safeguarding and service-owner reviewers need to see the exact claim, source, observation date, jurisdiction, assertion status and review state before accepting or rejecting it.</p>
+<h3 id="developers-and-ai-assisted-research-users">Developers and AI-assisted research users</h3>
+<p>They need bounded, machine-readable records with stable identifiers, explicit ordering and provenance. They need the product to make unsupported answers and missing evidence detectable rather than rewarding a plausible guess.</p>
+<h3 id="maintainers-and-publishers">Maintainers and publishers</h3>
+<p>They need authored source, deterministic generation, locked local validation and an exact-byte manual publication path. They must be able to update a claim without hand-editing a generated projection.</p>
+<h2 id="product-principles">Product principles</h2>
+<ol>
+  <li><strong>Start with the person's situation.</strong> Organisational structure is useful evidence, not the primary navigation model.</li>
+  <li><strong>Show context before complexity.</strong> Domain, enclosing process, selected family and selected episode should remain clear as a person opens detail.</li>
+  <li><strong>Keep variants explicit.</strong> Similar labels, a GOV.UK route or a shared provider never prove UK-wide equivalence.</li>
+  <li><strong>Keep ordinary and exception journeys separate.</strong> Failure, enforcement, complaint and appeal routes must not be hidden inside an idealised path.</li>
+  <li><strong>Make trust inspectable.</strong> Material claims and graph edges retain authority, evidence, rights, observation time, derivation and review status.</li>
+  <li><strong>Hand off before advising.</strong> Summaries orient the user and active links send them to the current authoritative service.</li>
+  <li><strong>Reveal uncertainty.</strong> Unknown, not applicable, not published by a source and awaiting review are different states.</li>
+  <li><strong>Do not collect personal data.</strong> Review situations and personas are synthetic. The public product does not need a user account or case details.</li>
+  <li><strong>Remain static and reproducible.</strong> The main experience must not depend on a hosted search service, analytics, a remote model or a runtime source fetch.</li>
+  <li><strong>Teach through use.</strong> A user should learn what an ontology contributes by following an everyday journey, not by reading definitions first.</li>
+</ol>
+<h2 id="goals">Goals</h2>
+<h3 id="g1-reliable-discovery">G1. Reliable discovery</h3>
+<p>Find every governed family, domain, process and supporting concept through titles, aliases and plain-language topic terms. When there is no supported match, preserve useful domain browsing and do not invent a result.</p>
+<h3 id="g2-process-orientation">G2. Process orientation</h3>
+<p>Explain where the selected family sits in an enclosing process and life-course domain. Show what is explicitly authored as preceding, current, following or exception behaviour without turning mere relatedness into sequence.</p>
+<h3 id="g3-journey-understanding">G3. Journey understanding</h3>
+<p>Present at least one ordinary path and one exception or failure path for every family, including applicable jurisdiction, provider, requirements, evidence, rules, channel, cost, time, output, outcome and redress states.</p>
+<h3 id="g4-trustworthy-source-handoff">G4. Trustworthy source handoff</h3>
+<p>Give every applicable route variant at least one verified authoritative link or a sourced non-applicability decision. Make the source identity, observation date, rights basis and limitations visible before the user acts.</p>
+<h3 id="g5-navigable-semantic-relationships">G5. Navigable semantic relationships</h3>
+<p>Provide a graph in which people can move from domain to process to family to episode, then inspect supporting actors, jurisdictions, evidence, rules, dependencies, outcomes, redress and sources.</p>
+<h3 id="g6-accessible-learning">G6. Accessible learning</h3>
+<p>Use the same corpus to teach ontology and public-service modelling to a beginner, while retaining sufficient evidence and precision for expert review.</p>
+<h3 id="g7-safe-reuse">G7. Safe reuse</h3>
+<p>Provide human-readable and machine-readable records that preserve identity, ordering, provenance, rights and review limits for downstream tools.</p>
+<h3 id="g8-reproducible-maintenance-and-publication">G8. Reproducible maintenance and publication</h3>
+<p>Build and check all projections locally through locked <code>uv</code> commands. Publish only a frozen, explicitly authorised candidate and verify its exact public identity and representative journeys in a real browser.</p>
+<h2 id="non-goals">Non-goals</h2>
+<p>The product will not:</p>
+<ul>
+  <li>claim to enumerate every real UK public service, provider page or local variation beyond the governed 293-family denominator;</li>
+  <li>calculate eligibility, liability, diagnosis, treatment, entitlement or a legal outcome;</li>
+  <li>replace an emergency route, professional adviser or official service;</li>
+  <li>submit applications, payments, reports, appeals or complaints;</li>
+  <li>store profiles, case histories, addresses, health information or other real personal data;</li>
+  <li>redistribute official page content, response bodies or snapshots;</li>
+  <li>use label similarity to merge identities or jurisdictions;</li>
+  <li>infer a cross-family sequence from display grouping or adjacency;</li>
+  <li>use a hosted large language model as the search or answer engine;</li>
+  <li>claim formal CPSV-AP, Open Referral, OWL, RDF or SHACL conformance without a separate approved conformance gate; or</li>
+  <li>describe population completion as specialist-reviewed release grade.</li>
+</ul>
+<h2 id="governed-product-baseline">Governed product baseline</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Measure</th>
+      <th scope="col" class="align-right">Current governed baseline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Life-course domains</td>
+      <td class="align-right">24</td>
+    </tr>
+    <tr>
+      <td>Enclosing processes</td>
+      <td class="align-right">48</td>
+    </tr>
+    <tr>
+      <td>Service families</td>
+      <td class="align-right">293</td>
+    </tr>
+    <tr>
+      <td>Ordinary and exception episodes</td>
+      <td class="align-right">586</td>
+    </tr>
+    <tr>
+      <td>Ordered journey steps</td>
+      <td class="align-right">881</td>
+    </tr>
+    <tr>
+      <td>Typed official-source links</td>
+      <td class="align-right">879</td>
+    </tr>
+    <tr>
+      <td>Governed directed relationships</td>
+      <td class="align-right">15,810</td>
+    </tr>
+    <tr>
+      <td>Competency questions</td>
+      <td class="align-right">104</td>
+    </tr>
+    <tr>
+      <td>Families requiring specialist review</td>
+      <td class="align-right">291</td>
+    </tr>
+    <tr>
+      <td>Families with named specialist acceptance</td>
+      <td class="align-right">0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Population-complete means reconciled against these declared denominators. It does not mean that the real-world subject is exhausted.</p>
+<h2 id="product-surfaces">Product surfaces</h2>
+<h3 id="start-and-learning-route">Start and learning route</h3>
+<p>The landing page and <a href="../index.html">beginner learning plan</a> must explain what the product is, what it contains, how to try it and what it does not claim.</p>
+<h3 id="explore-okf">Explore OKF</h3>
+<p>The self-contained review interface must provide in-browser search, explicit jurisdiction emphasis, ordinary and exception episodes, ordered steps, official-source links and provenance without runtime data calls.</p>
+<h3 id="okf-explorer">OKF Explorer</h3>
+<p>The full Explorer must provide Reader, Narrative, Graph, Resources and other compatible views over the large-corpus descriptor. It must preserve deep links and selected context as the user moves between views.</p>
+<h3 id="compact-human-and-ai-retrieval-records">Compact human and AI retrieval records</h3>
+<p>The catalogue and one complete HTML record per family must expose stable identity, description, jurisdiction routes, episode order, sources and review state in small, directly retrievable documents. The full projection remains the audit artefact.</p>
+<h3 id="repository-source-and-evidence">Repository source and evidence</h3>
+<p>Authored Markdown and structured files under <code>source/</code>, <code>ontology/</code>, <code>profiles/</code> and <code>schemas/</code> remain inspectable. Generated data, manifests and validation reports must point back to their governed inputs.</p>
+<h2 id="required-product-behaviour">Required product behaviour</h2>
+<h3 id="epic-a-orientation-and-discovery">Epic A: orientation and discovery</h3>
+<h4 id="prd-disc-001-first-use-orientation">PRD-DISC-001 — First-use orientation</h4>
+<p>As a first-time visitor, I want to understand the product before searching so that I do not mistake it for an official or personalised service.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>The first view names A Life in the UK and describes it as independent, educational and navigational.</li>
+  <li>It states the 293-family denominator and distinguishes it from every real UK service or local variation.</li>
+  <li>It shows that the corpus is population-complete but not release grade.</li>
+  <li>It provides a visible route to search, browse, learning material and source or provenance information.</li>
+  <li>The safety warning does not depend on colour, hover or opening a secondary panel.</li>
+</ul>
+<h4 id="prd-disc-002-search-by-governed-topic">PRD-DISC-002 — Search by governed topic</h4>
+<p>As a person who knows a situation but not a service name, I want to search in ordinary words so that I can find the relevant family.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Every canonical family title and registered alias returns the intended family within the first five results.</li>
+  <li>Every domain, process and supporting concept is searchable.</li>
+  <li>The 104 governed competency questions each return the expected family within the first ten results where the current acceptance fixture declares one.</li>
+  <li>Prefix matching and bounded typo tolerance do not manufacture semantic relationships.</li>
+  <li>Each result shows enough context to distinguish similar families, including its domain, process, summary and relevant jurisdiction information.</li>
+  <li>A concise explanation identifies which indexed terms supported the match.</li>
+</ul>
+<h4 id="prd-disc-003-empty-and-unmatched-searches">PRD-DISC-003 — Empty and unmatched searches</h4>
+<p>As a person whose words do not match the corpus, I want a useful recovery path so that a failed query is not a dead end.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>An unmatched query returns no invented family or semantic answer.</li>
+  <li>The interface says that no governed match was found.</li>
+  <li>All 24 life-course domains remain available for browsing.</li>
+  <li>The user can clear or revise the query without losing their prior route.</li>
+  <li>A blocked or malformed index produces a specific error and a route back to the start, not an empty results panel presented as success.</li>
+</ul>
+<h4 id="prd-disc-004-browse-without-searching">PRD-DISC-004 — Browse without searching</h4>
+<p>As a learner or reviewer, I want to browse from domain to process to family so that I can understand the coverage model without guessing keywords.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>All 24 domains expose their governed process groups.</li>
+  <li>All 48 processes expose their mapped families.</li>
+  <li>All 293 families are reachable from exactly one approved population mapping.</li>
+  <li>Counts distinguish service families from the larger supporting-concept total.</li>
+</ul>
+<h3 id="epic-b-understand-one-family-in-context">Epic B: understand one family in context</h3>
+<h4 id="prd-fam-001-plain-language-family-overview">PRD-FAM-001 — Plain-language family overview</h4>
+<p>As a user who selects a family, I want a concise explanation of the situation and interaction boundary so that I know whether I am in the right place.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>The family view shows the canonical title, stable ID, original summary, aliases, life-course domain and enclosing process.</li>
+  <li>It names applicable jurisdictions and route variants without guessing from a website hostname.</li>
+  <li>It shows accountable authority and provider roles separately where the source supports that distinction.</li>
+  <li>It displays specialist-review state and important limitations before the user follows a route.</li>
+</ul>
+<h4 id="prd-fam-002-enclosing-process-narrative">PRD-FAM-002 — Enclosing process narrative</h4>
+<p>As a person trying to understand a process, I want the selected family placed within its wider context so that I can see what may come before and after.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Narrative identifies the domain and enclosing process.</li>
+  <li>It distinguishes authored preceding or following relationships from merely related families.</li>
+  <li>It explains what happens within the selected family in plain language.</li>
+  <li>It links to explicitly governed related routes without presenting them as a mandatory personal journey.</li>
+  <li>Moving between Narrative, Graph, Resources and the family detail preserves the selected family and browser history.</li>
+</ul>
+<h4 id="prd-fam-003-ordinary-and-exception-journeys">PRD-FAM-003 — Ordinary and exception journeys</h4>
+<p>As a person reviewing a family, I want ordinary and exception paths separated so that failure, enforcement or redress is not hidden.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Every family exposes at least one ordinary episode and one exception or failure episode.</li>
+  <li>Steps appear in their authored order and retain stable identifiers.</li>
+  <li>Each step reports supported values or an explicit <code>not_applicable</code> or <code>not_published_by_source</code> state for the required journey dimensions.</li>
+  <li>Switching episodes or jurisdiction variants does not silently combine their steps.</li>
+  <li>Emergency, safeguarding, appeal and deadline boundaries are visibly signposted when authored.</li>
+</ul>
+<h4 id="prd-fam-004-jurisdiction-and-local-variation">PRD-FAM-004 — Jurisdiction and local variation</h4>
+<p>As a user in a UK nation or locality, I want variants shown explicitly so that I do not follow a route that applies elsewhere.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>UK-wide, England, Scotland, Wales, Northern Ireland and local applicability remain distinct.</li>
+  <li>Welsh and English pages are treated as language variants only when the publisher explicitly pairs them.</li>
+  <li>Local coverage identifies responsibility types and structural archetypes; it does not duplicate equivalent council pages merely to increase counts.</li>
+  <li>Missing coverage is shown as a gap, not as evidence that a route is shared.</li>
+</ul>
+<h3 id="epic-c-navigate-the-graph">Epic C: navigate the graph</h3>
+<h4 id="prd-graph-001-hierarchical-graph-entry">PRD-GRAPH-001 — Hierarchical graph entry</h4>
+<p>As a user opening a graph, I want the hierarchy to remain visible so that I understand where I am.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>The primary hierarchy is life-course domain, enclosing process, service family, then ordinary or exception episode.</li>
+  <li>Opening a domain shows grouped processes; opening a process shows grouped families; opening a family centres its journey.</li>
+  <li>The active hierarchy path and opened level remain visible outside the graph drawing area.</li>
+  <li>Browser Back reverses graph-opening actions in the order they occurred.</li>
+  <li>A copied deep link restores the selected view, family and opened hierarchy.</li>
+</ul>
+<h4 id="prd-graph-002-supporting-relationships">PRD-GRAPH-002 — Supporting relationships</h4>
+<p>As a reviewer, I want to inspect the concepts supporting an episode so that I can understand its authority, requirements and outcomes.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Actors, jurisdictions, evidence, rules, dependencies, outcomes, redress and sources branch from the relevant family or episode.</li>
+  <li>Every material edge exposes its stable assertion ID, direction, predicate, preferred and inverse labels, assertion status, scope, authority, derivation, observation time, evidence and rights.</li>
+  <li>Reverse navigation changes the display label but does not reverse the asserted triple.</li>
+  <li>Official, normalised, inferred, model-derived, synthetic and historical planes remain distinguishable.</li>
+</ul>
+<h4 id="prd-graph-003-dense-graph-handling">PRD-GRAPH-003 — Dense graph handling</h4>
+<p>As a mouse, keyboard or touch user, I want dense relationships grouped and selectable so that labels and hit areas do not obscure each other.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Large sibling sets open as labelled groups before rendering every child.</li>
+  <li>A selected group clearly indicates whether all or only some children are open below it.</li>
+  <li>Labels use available width and do not overlap another node's active target.</li>
+  <li>The selected node has one unambiguous visual and programmatic identity.</li>
+  <li>Controls for clearing filters, closing opened hierarchy and resetting layout use distinct labels and are placed together by purpose.</li>
+  <li>Relationship and hierarchy controls can collapse to preserve graph space without hiding the current route.</li>
+</ul>
+<h3 id="epic-d-evidence-trust-and-official-sources">Epic D: evidence, trust and official sources</h3>
+<h4 id="prd-src-001-source-summary-and-handoff">PRD-SRC-001 — Source summary and handoff</h4>
+<p>As a user, I want to know what supports the overview and reach the official source so that I can verify current information before acting.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Every applicable route has at least one current authoritative source or a sourced non-applicability decision.</li>
+  <li>The resource view shows source label, publisher or owner, jurisdiction, observation date, media type, display mode, rights basis and original summary.</li>
+  <li>Browser-readable text, JSON or XML may be displayed only through the typed source contract and within its safety limits.</li>
+  <li>A browser-blocked or unsupported response is presented as <strong>Open official source</strong>, not as an empty or broken inline viewer.</li>
+  <li>A failed primary source is a blocking family issue; a failed secondary source is recorded as an explicit gap.</li>
+</ul>
+<h4 id="prd-src-002-provenance-and-rights">PRD-SRC-002 — Provenance and rights</h4>
+<p>As a reviewer, I want to inspect where a statement came from so that I can judge its authority and permitted use.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Material assertions show source identity, evidence, observation time, derivation, assertion status, authority and rights.</li>
+  <li>Repository-authored code, documentation and ontology terms are labelled MIT.</li>
+  <li>Third-party source material remains linked and summarised rather than redistributed.</li>
+  <li>OGL attribution and applicable third-party licence notices remain reachable in the browser.</li>
+  <li>Generated projections never imply that third-party source content has been relicensed.</li>
+</ul>
+<h4 id="prd-src-003-freshness-and-review-state">PRD-SRC-003 — Freshness and review state</h4>
+<p>As a person considering whether to rely on a route, I want its freshness and review state disclosed so that I know when to check further.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Every source assertion carries an observation date and freshness state.</li>
+  <li>Material legal, clinical and high-impact operational claims identify the required reviewer role.</li>
+  <li>Missing named acceptance remains visible and prevents a release-grade claim.</li>
+  <li>The interface tells the user to check the current authoritative service before acting.</li>
+</ul>
+<h3 id="epic-e-learning-and-explanation">Epic E: learning and explanation</h3>
+<h4 id="prd-learn-001-beginner-route">PRD-LEARN-001 — Beginner route</h4>
+<p>As a learner, I want a guided route from a familiar situation to an ontology so that I can understand the concept without prior semantic-web knowledge.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>A ten-minute route demonstrates search, jurisdiction, ordinary and exception paths, provenance and official-source handoff.</li>
+  <li>Longer routes introduce the semantic model, ontology, evidence, licensing, evaluation and publication controls in a clear order.</li>
+  <li>Missed rubbish collection, learning to drive and speeding, and death and bereavement remain worked vertical slices.</li>
+  <li>Definitions use plain English and link to a concrete record or journey.</li>
+</ul>
+<h4 id="prd-learn-002-narrative-and-graph-together">PRD-LEARN-002 — Narrative and graph together</h4>
+<p>As a learner, I want narrative and graph views to explain the same governed relationships so that I can move between prose and structure.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Narrative labels and graph predicates refer to the same stable concepts and assertions.</li>
+  <li>Opening a graph from a narrative centres the selected concept and adds the action to browser history.</li>
+  <li>Returning to Narrative restores the prior reading position or selected record context.</li>
+  <li>The product explains when a displayed relationship is a normalised planning relationship rather than an official claim.</li>
+</ul>
+<h3 id="epic-f-machine-and-ai-assisted-use">Epic F: machine and AI-assisted use</h3>
+<h4 id="prd-mach-001-bounded-machine-retrieval">PRD-MACH-001 — Bounded machine retrieval</h4>
+<p>As a developer or AI-assisted researcher, I want small complete records and a full audit projection so that I can retrieve safely without losing evidence.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>A compact catalogue links to one complete human-readable record per family.</li>
+  <li>Each family record includes stable identity, summary, jurisdiction routes, ordered ordinary and exception episodes, sources, provenance and review state.</li>
+  <li>The full YAML-LD, JSON-LD and relationship runtime remain available as deterministic audit artefacts.</li>
+  <li>Every generated record is bound by SHA-256 to the frozen source projection.</li>
+  <li>A downstream tool can abstain when the record does not support a requested answer.</li>
+</ul>
+<h4 id="prd-mach-002-safe-answer-boundary">PRD-MACH-002 — Safe answer boundary</h4>
+<p>As a reviewer of an AI-assisted answer, I want material statements traceable to records and sources so that unsupported fluency is visible.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Stable family, episode, step, source and assertion identifiers can be cited from the published records.</li>
+  <li>Explicit jurisdiction fields take precedence over hostname or label guesses.</li>
+  <li>Related-family grouping cannot be interpreted as authored sequence without a governed sequence assertion.</li>
+  <li>The record exposes limitations and specialist-review state alongside the answerable content.</li>
+  <li>No product acceptance measure rewards an invented answer to an unsupported question.</li>
+</ul>
+<h3 id="epic-g-inclusive-and-resilient-use">Epic G: inclusive and resilient use</h3>
+<h4 id="prd-use-001-operable-interface">PRD-USE-001 — Operable interface</h4>
+<p>As a user with different access needs or input methods, I want the interface to remain understandable and operable.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>All interactive controls are reachable and usable by keyboard.</li>
+  <li>Focus is visible and follows the opened content without trapping the user.</li>
+  <li>Controls and graph nodes have programmatic names that match their visible purpose.</li>
+  <li>Colour is never the only indicator of selection, authority, status or relationship type.</li>
+  <li>Core content remains readable at a narrow 375-pixel viewport without hidden horizontal controls.</li>
+  <li>Relative text sizing can emphasise the selected context without making supporting labels unreadable.</li>
+</ul>
+<h4 id="prd-use-002-static-and-managed-device-resilience">PRD-USE-002 — Static and managed-device resilience</h4>
+<p>As a user on a managed laptop, I want a low-dependency experience so that I can review the corpus within common network restrictions.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>The standalone Explore OKF interface makes no runtime API or data request after the document has loaded.</li>
+  <li>It uses no analytics, cookies, service worker, persistent browser storage, third-party font, remote image or installation step.</li>
+  <li>If GitHub Pages or an official source is blocked by organisational policy, the product explains the boundary and provides a repository or download alternative where permitted.</li>
+  <li>A failed source fetch does not alter the governed family record.</li>
+</ul>
+<h3 id="epic-h-maintenance-and-release-governance">Epic H: maintenance and release governance</h3>
+<h4 id="prd-gov-001-reproducible-change">PRD-GOV-001 — Reproducible change</h4>
+<p>As a maintainer, I want one governed authoring path so that generated surfaces cannot drift from their evidence.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Markdown and structured files under the declared authored roots remain the source of truth.</li>
+  <li>Generated bundle, semantic, search, graph, retrieval and publication files are rebuilt rather than hand-edited.</li>
+  <li>Required local checks run through <code>uv run --locked</code> and pass offline.</li>
+  <li>Live link audits remain a separate metadata-only reviewed acquisition step.</li>
+  <li>A material change updates its planning, tracking, status, change log and authoring documentation in the same pull request where required by <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/PLANNING.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">the delivery plan</a>.</li>
+</ul>
+<h4 id="prd-gov-002-controlled-publication">PRD-GOV-002 — Controlled publication</h4>
+<p>As the product owner, I want publication separated from implementation so that untested bytes cannot become public implicitly.</p>
+<p>Acceptance criteria:</p>
+<ul>
+  <li>Pull requests, pushes and merges do not trigger remote CI or GitHub Pages.</li>
+  <li>A publication request names one frozen candidate and exact protected-main merge.</li>
+  <li>The Pages workflow transports only files and hashes in the reviewed manifest and does not rebuild the corpus.</li>
+  <li>The exact deployed URL passes cache-bypassed identity and representative citizen-journey checks before it is labelled verified.</li>
+  <li>A failed verification remains recorded as failed and the URL remains unverified.</li>
+</ul>
+<h2 id="end-to-end-acceptance-journeys">End-to-end acceptance journeys</h2>
+<p>The following visible journeys are required across the product surfaces.</p>
+<h3 id="local-service-failure">Local-service failure</h3>
+<p>Search for a missed bin, find <strong>Report a missed rubbish collection</strong>, identify the local-authority responsibility boundary, compare ordinary and failure episodes, inspect complaint or redress relationships, and open the official postcode route.</p>
+<h3 id="four-nation-health-discovery">Four-nation health discovery</h3>
+<p>Search for finding an NHS dentist, identify the family and its nation-specific routes, preserve the manual link-only health boundary, and open a current official source without generating clinical advice.</p>
+<h3 id="enforcement-exception">Enforcement exception</h3>
+<p>Search for a speeding notice, distinguish Great Britain and Northern Ireland routes, inspect the notice, deadline, evidence, penalty and court or challenge branches, and avoid making a legal decision for the user.</p>
+<h3 id="death-and-bereavement">Death and bereavement</h3>
+<p>Search after a death, distinguish registration, Tell Us Once or manual notification, estate authority and administration, compare national variants, and show private dependencies without recommending a provider.</p>
+<h3 id="education-and-evidence">Education and evidence</h3>
+<p>Search for applying for a school place, recover the stable family identity, ordinary and exception steps, jurisdiction routes, sources and review state in both the human interface and compact retrieval record.</p>
+<h3 id="unmatched-question">Unmatched question</h3>
+<p>Enter a conversational question outside the governed vocabulary. Receive no invented answer, retain the 24-domain browse route, revise the query and return to the previous context with browser Back.</p>
+<h3 id="source-unavailable">Source unavailable</h3>
+<p>Open a family whose official page blocks inline browser access. Retain the family summary and evidence, explain why inline display is unavailable, and offer a labelled official-source handoff without claiming the source was verified in that session.</p>
+<h3 id="dense-hierarchy">Dense hierarchy</h3>
+<p>Open a high-count format or domain group, reveal grouped children one level at a time, see which level is open, select one node unambiguously, then use Back to undo each opening action.</p>
+<h2 id="product-success-measures">Product success measures</h2>
+<h3 id="discovery">Discovery</h3>
+<ul>
+  <li>293 of 293 canonical titles and registered aliases meet the top-five result rule.</li>
+  <li>104 of 104 governed competency questions meet their declared top-ten rule.</li>
+  <li>24 of 24 domains and 48 of 48 processes are browseable and searchable.</li>
+  <li>An unmatched query produces zero invented semantic results and always offers domain browsing.</li>
+</ul>
+<h3 id="comprehension">Comprehension</h3>
+<ul>
+  <li>In moderated review, a participant can identify the selected family's domain, process, jurisdiction, ordinary path, exception path and official source without opening repository code.</li>
+  <li>A participant can distinguish an official assertion from a normalised or inferred relationship.</li>
+  <li>A participant can explain that related families are not automatically an authored sequence.</li>
+</ul>
+<h3 id="trust-and-handoff">Trust and handoff</h3>
+<ul>
+  <li>Every applicable route variant has an active authoritative link or a sourced non-applicability decision.</li>
+  <li>Every material graph edge passes provenance and evidence validation.</li>
+  <li>Representative national, devolved, local, health, legal and private-dependency journeys reach an official source.</li>
+  <li>No source response body or snapshot is retained.</li>
+</ul>
+<h3 id="reliability-and-governance">Reliability and governance</h3>
+<ul>
+  <li>Authored inputs and all generated projections reconcile deterministically.</li>
+  <li>Locked local checks pass before review.</li>
+  <li>Published files match the authorised manifest byte for byte.</li>
+  <li>Real-browser verification reports no unexpected runtime request, storage use or console error on the representative journeys.</li>
+</ul>
+<h2 id="completion-and-release-gates">Completion and release gates</h2>
+<h3 id="population-complete">Population-complete</h3>
+<p>All 293 governed families satisfy the discovery, process, journey, source and relationship contract. Specialist-review warnings may remain. This gate is met.</p>
+<h3 id="product-experience-complete">Product-experience complete</h3>
+<p>The current population is reliably discoverable and understandable through search, domain browsing, Narrative, Graph and Resources. The open search fallback and graph-interpretation requirements in this PRD must pass their visible acceptance journeys before this gate is met.</p>
+<h3 id="release-grade">Release grade</h3>
+<p>Every applicable legal, clinical and high-impact operational claim has current source re-observation and named reviewer acceptance. This gate is not met.</p>
+<h3 id="publication-ready">Publication-ready</h3>
+<p>A candidate for the intended release class is frozen, explicitly authorised, deployed without rebuilding and verified at its exact public URLs. The current population-complete preview has passed this gate for its stated non-release- grade scope; any later change requires a new candidate and verification.</p>
+<h2 id="current-assessment">Current assessment</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Product outcome</th>
+      <th scope="col">Status at this baseline</th>
+      <th scope="col">Evidence or remaining need</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Governed population and process mapping</td>
+      <td>Met</td>
+      <td>293 families, 24 domains and 48 processes reconcile locally.</td>
+    </tr>
+    <tr>
+      <td>Ordinary and exception journeys</td>
+      <td>Met</td>
+      <td>586 authored episodes and 881 ordered steps are present.</td>
+    </tr>
+    <tr>
+      <td>Source-linked discovery</td>
+      <td>Met for the frozen preview</td>
+      <td>879 typed links and representative search-to-source journeys passed.</td>
+    </tr>
+    <tr>
+      <td>Exact-title and governed-alias search</td>
+      <td>Met</td>
+      <td>Local search acceptance and representative browser queries passed.</td>
+    </tr>
+    <tr>
+      <td>Conversational-query recovery</td>
+      <td>Partly met</td>
+      <td>Several ordinary-language questions returned no result.</td>
+    </tr>
+    <tr>
+      <td>Unmatched-query domain browsing</td>
+      <td>Not met in the full Explorer</td>
+      <td>A zero-result query currently reduces all facets to zero.</td>
+    </tr>
+    <tr>
+      <td>Family narrative and provenance</td>
+      <td>Met on representative journeys</td>
+      <td>Narrative, graph edge evidence and source handoff passed.</td>
+    </tr>
+    <tr>
+      <td>Dense graph and facet interpretation</td>
+      <td>Partly met</td>
+      <td>Hierarchy, grouping, target size and control-density improvements remain.</td>
+    </tr>
+    <tr>
+      <td>Compact AI retrieval</td>
+      <td>Met for deployed records</td>
+      <td>Catalogue and 293 family records passed identity and browser verification.</td>
+    </tr>
+    <tr>
+      <td>Specialist-reviewed release grade</td>
+      <td>Not met</td>
+      <td>291 families require review; none has named acceptance.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+  <li><strong>OKF Explorer:</strong> universal Narrative, Graph, Resources, browser history and large-corpus behaviour are implemented in the separate Explorer repository.</li>
+  <li><strong>Official publishers:</strong> source availability, language pairing and current service content remain outside this product's control.</li>
+  <li><strong>Authority and geography registers:</strong> applicable GSS, ODS and source-native identifiers support explicit responsibility and jurisdiction.</li>
+  <li><strong>Specialist reviewers:</strong> release grade depends on named legal, clinical, safeguarding and service-owner acceptance.</li>
+  <li><strong>GitHub and GitHub Pages:</strong> repository review and the current public preview depend on those services, although local build and validation do not.</li>
+  <li><strong>Locked local toolchain:</strong> <code>uv.lock</code>, repository scripts and vendored schema and profile files establish deterministic production.</li>
+</ul>
+<h2 id="risks-and-mitigations">Risks and mitigations</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Risk</th>
+      <th scope="col">Product effect</th>
+      <th scope="col">Required mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Official pages change or disappear</td>
+      <td>A route may become stale or unusable.</td>
+      <td>Show observation dates, run reviewed metadata-only link audits and block a family when its primary link fails.</td>
+    </tr>
+    <tr>
+      <td>Similar services differ by nation or locality</td>
+      <td>A user may follow an inapplicable route.</td>
+      <td>Model variants explicitly and never infer applicability from labels or domains.</td>
+    </tr>
+    <tr>
+      <td>Graph density hides meaning</td>
+      <td>A user cannot tell what is selected or how they arrived.</td>
+      <td>Open grouped hierarchy progressively, preserve a visible route and make Back undo each opening.</td>
+    </tr>
+    <tr>
+      <td>Static search misses natural phrasing</td>
+      <td>A user assumes the corpus has no relevant topic.</td>
+      <td>Add bounded governed variants, explain no-match states and retain domain browsing without a generative answer.</td>
+    </tr>
+    <tr>
+      <td>A polished summary is mistaken for advice</td>
+      <td>A user acts on unreviewed material.</td>
+      <td>Keep independent, non-release-grade and official-source warnings visible at decision points.</td>
+    </tr>
+    <tr>
+      <td>Machine consumers invent sequence or authority</td>
+      <td>Downstream answers appear supported when they are not.</td>
+      <td>Preserve stable assertions, explicit order, authority planes and abstention-oriented evaluation.</td>
+    </tr>
+    <tr>
+      <td>Publication drifts from reviewed bytes</td>
+      <td>Public evidence no longer proves the live site.</td>
+      <td>Freeze manifests, deploy manually and verify exact URLs after each authorised change.</td>
+    </tr>
+    <tr>
+      <td>Specialist review does not scale to 293 families</td>
+      <td>Release grade remains indefinitely incomplete.</td>
+      <td>Prioritise high-impact claims, record reviewer roles and accept partial reviewed subsets without relabelling the whole corpus.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="priorities-after-this-prd">Priorities after this PRD</h2>
+<ol>
+  <li>Close the bounded discovery gaps: conversational-query handling and the 24-domain fallback for unmatched searches.</li>
+  <li>Reduce graph and facet interpretation cost while preserving provenance, hierarchy and browser history.</li>
+  <li>Run inclusive usability review across the representative national, devolved, local, health, legal and private-dependency journeys.</li>
+  <li>Define and staff the specialist-review programme for legal, clinical and high-impact operational claims.</li>
+  <li>Re-observe sources and freeze a new candidate only when an explicitly scoped release or publication change is requested.</li>
+</ol>
+<h2 id="decisions-still-required-for-a-release-grade-product">Decisions still required for a release-grade product</h2>
+<ul>
+  <li>Which user group is primary when citizen simplicity and expert evidence density compete in one view.</li>
+  <li>Which legal, clinical, safeguarding and service-owner reviewers will accept each high-impact claim family.</li>
+  <li>What freshness intervals apply by source and claim type.</li>
+  <li>Whether release grade will be declared only for the whole corpus or for clearly labelled reviewed subsets first.</li>
+  <li>What independent accessibility and departmental managed-device evidence is required beyond repository browser tests.</li>
+  <li>What bounded conversational vocabulary can be added without turning static lexical search into an inferred or generative answer system.</li>
+</ul>
+<p>These decisions do not block the current population-complete educational preview. They block only the relevant stronger product or release claims.</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="../../LICENSE">MIT licence</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -356,6 +356,46 @@ publication candidate during promotion.
 
 ## Pages publication unit
 
+### Static review documents
+
+A repository-authored Markdown document under `docs/` can be nominated for the
+public review library with this frontmatter:
+
+```yaml
+publication:
+  include: true
+  path: learn/library/example.html
+  section: Product and delivery
+  order: 10
+```
+
+The block is validated against
+[`site-document-publication.schema.json`](../schemas/site-document-publication.schema.json).
+The path must be a safe site-relative HTML path below `learn/`. `title`,
+`description` and `status` frontmatter must also be non-empty. Do not add a
+document to the generator's Python mapping: nominated documents are discovered
+deterministically and added to the generated
+[`published document index`](published-documents.md).
+
+Run `uv run --locked python scripts/build_site_documents.py`, then `--check`.
+The generator writes only safe rendered HTML and
+`learn/documentation-manifest.json`; it does not rebuild the corpus. The
+manifest records each source and output digest and states that deployment is
+not automatic.
+
+The base publication transporter resolves every one of the 1,814 frozen files
+against its manifest. If a repository-generated documentation handoff has
+legitimately changed in the working tree, the transporter reads the exact old
+byte sequence from verified publication commit `736d7dc…` instead. It never
+substitutes the new handoff into the base layer. This allows the additive
+documentation overlay to evolve without re-freezing corpus bytes.
+
+For a pull request confined to this dependency graph, run
+`BASE_REF=origin/main make validate-documentation-overlay`. The gate allows
+only published or curated Markdown, their generated HTML and the two additive
+manifests. It rejects every other changed path and directs the change to
+`make validate`. Nomination, validation and merge do not deploy Pages.
+
 The public preview is assembled only from files listed in
 `publication/pages-file-manifest.json`. Regenerate that manifest deliberately
 with `uv run --locked python scripts/prepare_pages_publication.py

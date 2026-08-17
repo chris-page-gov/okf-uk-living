@@ -76,6 +76,18 @@ uv run --locked python scripts/prepare_pages_publication.py
 uv run --locked python -m unittest discover -s tests
 ```
 
+A change confined to the declared static-document publication graph may use:
+
+```sh
+BASE_REF=origin/main make validate-documentation-overlay
+```
+
+The dependency-graph check must pass before this replaces `make validate`. It
+permits only curated or frontmatter-nominated Markdown, their generated HTML,
+the documentation manifest and the additive Explore manifest. Any other path
+fails closed and requires the full checks above. This shortcut never rebuilds
+or republishes corpus and semantic authority.
+
 Before any publication change, also validate the approved domain profile,
 source inventory, rights decisions, evaluation journeys and frozen candidate.
 

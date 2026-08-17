@@ -1,4 +1,4 @@
-.PHONY: build build-assurance build-explore-okf check check-ai-consumer-gold check-authorities check-browser-handoff check-contracts check-corpus-policy check-denominator check-domain-registers check-dossiers check-explore-okf check-inventory check-large-projection check-pages-publication check-population-assurance check-population-contract check-rights check-search-acceptance check-sources render-packs test validate
+.PHONY: build build-assurance build-explore-okf build-site-documents check check-ai-consumer-gold check-authorities check-browser-handoff check-contracts check-corpus-policy check-denominator check-domain-registers check-dossiers check-explore-okf check-inventory check-large-projection check-pages-publication check-population-assurance check-population-contract check-rights check-search-acceptance check-site-documents check-sources render-packs test validate validate-documentation-overlay
 
 render-packs:
 	uv run --locked python scripts/render_life_course_packs.py
@@ -15,6 +15,9 @@ build-assurance:
 
 build-explore-okf:
 	uv run --locked python scripts/build_explore_okf.py
+
+build-site-documents:
+	uv run --locked python scripts/build_site_documents.py
 
 check:
 	uv run --locked python scripts/render_life_course_packs.py --check
@@ -44,6 +47,19 @@ check:
 check-explore-okf:
 	uv run --locked python scripts/build_explore_okf.py --check
 	uv run --locked python scripts/prepare_explore_okf_publication.py --check
+
+check-site-documents:
+	uv run --locked python scripts/build_site_documents.py --check
+	uv run --locked python -m unittest tests.test_site_document_publications tests.test_explore_okf_docs
+
+validate-documentation-overlay:
+	uv run --locked python scripts/check_documentation_only_change.py --base-ref $${BASE_REF:-origin/main}
+	uv run --locked python scripts/build_site_documents.py
+	uv run --locked python scripts/build_explore_okf.py
+	uv run --locked python scripts/build_site_documents.py --check
+	uv run --locked python scripts/build_explore_okf.py --check
+	uv run --locked python scripts/prepare_explore_okf_publication.py --check
+	uv run --locked python -m unittest tests.test_site_document_publications tests.test_explore_okf_docs tests.test_explore_okf_publication tests.test_explore_okf_sidecar
 
 check-ai-consumer-gold:
 	uv run --locked python scripts/evaluate_ai_consumer_answers.py --check-gold

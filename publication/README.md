@@ -38,6 +38,23 @@ release grade or make a URL verified.
 The preview is not release-grade. Its descriptor and landing page retain the
 291 specialist-review warnings and direct readers to current official sources.
 
+Repository-authored review documents use the additive
+`okf-site-document-publication.v1` contract. A document is nominated in its
+frontmatter, rendered as safe static HTML and indexed automatically. The
+generated `learn/documentation-manifest.json` binds each nominated Markdown
+source to its output hash. `BASE_REF=origin/main make
+validate-documentation-overlay` is permitted only when its changed-path gate
+proves that corpus, semantic, schema and workflow inputs are unaffected. The
+manual Pages workflow still transports the complete frozen base plus overlay;
+there is no incremental or automatic deployment.
+
+The base transporter resolves each manifest entry from the current checkout
+only when its byte count and SHA-256 still match. Otherwise it reads the exact
+manifest-bound blob from verified publication commit `736d7dc…`. A changed
+repository document therefore cannot mutate a frozen browser handoff or add a
+new base file; the new rendered page can enter only through the additive
+overlay manifest.
+
 The 2026-08-08 enablement attempt failed before deployment because the current
 GitHub plan did not support Pages for the private repository. On 2026-08-09 the
 owner explicitly made the existing repository public. Manual run `31297841419`

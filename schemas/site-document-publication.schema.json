@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-uk-living/schemas/site-document-publication.schema.json",
+  "title": "OKF site document publication nomination",
+  "description": "Additive publication metadata for a repository-authored Markdown document. Nomination does not deploy the document or authorise automatic publication.",
+  "type": "object",
+  "required": [
+    "include",
+    "path",
+    "section",
+    "order"
+  ],
+  "properties": {
+    "include": {
+      "const": true
+    },
+    "path": {
+      "type": "string",
+      "pattern": "^learn/(?:[a-z0-9][a-z0-9._-]*/)*[a-z0-9][a-z0-9._-]*\\.html$"
+    },
+    "section": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000
+    }
+  },
+  "additionalProperties": false
+}

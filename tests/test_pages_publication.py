@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import sys
 import unittest
 from pathlib import Path
@@ -10,8 +11,10 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from prepare_pages_publication import (  # noqa: E402
     EXPECTED_CANDIDATE_ID,
+    FROZEN_PUBLICATION_SOURCE_COMMIT,
     PUBLICATION_DATA_COMMIT,
     descriptor_errors,
+    frozen_manifest_source_bytes,
     load_frozen_manifest,
     validate_frozen_publication,
 )
@@ -49,6 +52,20 @@ class PagesPublicationTests(unittest.TestCase):
         self.assertFalse(any(Path(target).is_absolute() for target in targets))
         self.assertFalse(any(".." in Path(target).parts for target in targets))
         self.assertFalse(any("snapshot" in item["source"].lower() for item in self.manifest["files"]))
+
+    def test_changed_worktree_documentation_uses_the_verified_base_blob(self) -> None:
+        entry = next(
+            item
+            for item in self.manifest["files"]
+            if item["source"] == "generated/browser/AGENTS.html"
+        )
+        data = frozen_manifest_source_bytes(entry)
+        self.assertEqual(entry["bytes"], len(data))
+        self.assertEqual(entry["sha256"], hashlib.sha256(data).hexdigest())
+        self.assertEqual(
+            "736d7dc4dbb4e44082f6b7786dd88afd55954792",
+            FROZEN_PUBLICATION_SOURCE_COMMIT,
+        )
 
     def test_retired_base_workflow_cannot_overwrite_the_explore_overlay(self) -> None:
         workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")

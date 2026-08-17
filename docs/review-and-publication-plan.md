@@ -95,6 +95,11 @@ exact public identities and remaining non-release-grade boundary.
   automatic publishing or a different candidate.
 - Do not label or share a deployed URL as verified until `VERIFY-001` passes in
   a real browser.
+- Repository-authored static review documents may be added through the
+  validated documentation overlay without rebuilding the frozen corpus. The
+  documentation-only dependency gate must pass, the additive manifest must
+  bind the rendered bytes, and deployment remains an explicit exact-head manual
+  operation followed by the same browser gate.
 
 ## Completion definitions
 

@@ -144,6 +144,14 @@ acceptance, accessibility testing or independent evaluation.
 
 ## Detailed documentation library
 
+The [published document index](published-documents.md) is generated from
+explicit publication metadata. Adding a nominated repository-authored document
+does not rebuild the corpus or deploy the site automatically.
+
+### Product and delivery
+
+- [Product requirements](product-requirements.md)
+
 ### Orientation and worked examples
 
 - [Repository guide and current status](../README.md)

@@ -51,6 +51,15 @@ class ExploreOkfSidecarTests(unittest.TestCase):
         )
         cls.learn = (ROOT / "learn/index.html").read_text(encoding="utf-8")
         cls.ask_ai = (ROOT / "learn/ask-an-ai.html").read_text(encoding="utf-8")
+        cls.document_library = (ROOT / "learn/library/index.html").read_text(
+            encoding="utf-8"
+        )
+        cls.product_requirements = (
+            ROOT / "learn/library/product-requirements.html"
+        ).read_text(encoding="utf-8")
+        cls.document_manifest = json.loads(
+            (ROOT / "learn/documentation-manifest.json").read_text(encoding="utf-8")
+        )
         cls.ai_catalogue = (ROOT / "explore/ai/index.html").read_text(
             encoding="utf-8"
         )
@@ -158,7 +167,13 @@ class ExploreOkfSidecarTests(unittest.TestCase):
             self.assertEqual(reference["sha256"], by_target[reference["path"]]["sha256"])
 
     def test_review_home_and_learning_route_are_honest_static_pages(self) -> None:
-        for page in (self.home, self.learn, self.ask_ai):
+        for page in (
+            self.home,
+            self.learn,
+            self.ask_ai,
+            self.document_library,
+            self.product_requirements,
+        ):
             self.assertIn('<html lang="en-GB">', page)
             self.assertIn('content="noindex,nofollow,noarchive"', page)
             self.assertNotIn("<script", page.casefold())
@@ -185,6 +200,15 @@ class ExploreOkfSidecarTests(unittest.TestCase):
         self.assertIn("Choose how much time you have", self.learn)
         self.assertIn("How this was built", self.learn)
         self.assertIn("Detailed documentation library", self.learn)
+        self.assertIn('href="library/index.html"', self.learn)
+        self.assertIn('href="library/product-requirements.html"', self.learn)
+        self.assertIn('href="product-requirements.html"', self.document_library)
+        self.assertIn("Product requirements for A Life in the UK", self.product_requirements)
+        self.assertEqual(
+            "okf-site-document-publication-manifest.v1",
+            self.document_manifest["schema"],
+        )
+        self.assertEqual(1, self.document_manifest["document_count"])
         self.assertIn("Start with one simple prompt", self.ask_ai)
         self.assertIn("Do not include names, addresses", self.ask_ai)
         self.assertIn("A fluent answer can still be wrong", self.ask_ai)

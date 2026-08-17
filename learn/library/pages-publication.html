@@ -86,12 +86,16 @@ th { background: var(--teal-pale); }
 <p>The manual workflow requires the exact protected-main merge commit as an input, checks it against both the workflow event and the checked-out revision, then transports only the frozen bytes. A pull request or merge does not deploy the site.</p>
 <p>The owner authorised the Explore OKF public-review overlay on 13 August 2026. Its v2 manifest preserves every frozen target except <code>index.html</code>, which may be replaced only after its old SHA-256 matches the frozen base manifest. The standalone interface, machine sidecar and curated learning library are hash-pinned additions. The manual workflow also requires the explicit <code>EXPLORATORY-NOT-RELEASE-GRADE</code> acknowledgement and reconstructs the overlay in check mode before transporting it. This authorisation does not make the preview release grade or make a URL verified.</p>
 <p>The preview is not release-grade. Its descriptor and landing page retain the 291 specialist-review warnings and direct readers to current official sources.</p>
+<p>Repository-authored review documents use the additive <code>okf-site-document-publication.v1</code> contract. A document is nominated in its frontmatter, rendered as safe static HTML and indexed automatically. The generated <code>learn/documentation-manifest.json</code> binds each nominated Markdown source to its output hash. <code>BASE_REF=origin/main make validate-documentation-overlay</code> is permitted only when its changed-path gate proves that corpus, semantic, schema and workflow inputs are unaffected. The manual Pages workflow still transports the complete frozen base plus overlay; there is no incremental or automatic deployment.</p>
+<p>The base transporter resolves each manifest entry from the current checkout only when its byte count and SHA-256 still match. Otherwise it reads the exact manifest-bound blob from verified publication commit <code>736d7dc…</code>. A changed repository document therefore cannot mutate a frozen browser handoff or add a new base file; the new rendered page can enter only through the additive overlay manifest.</p>
 <p>The 2026-08-08 enablement attempt failed before deployment because the current GitHub plan did not support Pages for the private repository. On 2026-08-09 the owner explicitly made the existing repository public. Manual run <code>31297841419</code> then deployed the pinned publication successfully, and exact-byte plus real-browser verification passed. See the <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/pages-deployment-verification-2026-08-09.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">deployment evidence</a>. That evidence applies to the superseded 1,549-file preview. The 1,814-file rich-runtime correction requires its own exact-merge deployment and cache-bypassed browser verification before its URLs may be labelled verified.</p>
     </article>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Check the cited official source before making a decision.</p>
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="../../LICENSE">MIT licence</a>.</p>
     </div>
   </footer>
 </body>
