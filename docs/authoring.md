@@ -381,7 +381,10 @@ Run `uv run --locked python scripts/build_site_documents.py`, then `--check`.
 The generator writes only safe rendered HTML and
 `learn/documentation-manifest.json`; it does not rebuild the corpus. The
 manifest records each source and output digest and states that deployment is
-not automatic.
+not automatic. Every rendered document links to the browser-rendered
+`generated/browser/NOTICE.html` page for the MIT licence boundary and source
+attribution terms; do not link a review page directly to the extensionless
+repository `LICENSE` path.
 
 The base publication transporter resolves every one of the 1,814 frozen files
 against its manifest. If a repository-generated documentation handoff has

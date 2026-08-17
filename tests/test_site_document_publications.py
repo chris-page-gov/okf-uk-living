@@ -53,7 +53,7 @@ class SiteDocumentPublicationTests(unittest.TestCase):
             'href="product-requirements.html"', outputs[LIBRARY_PUBLIC_PATH]
         )
         self.assertIn(
-            'href="../../LICENSE">MIT licence</a>',
+            'href="../../generated/browser/NOTICE.html">licence and attribution notices</a>',
             outputs[publication.public_path],
         )
         self.assertIn(

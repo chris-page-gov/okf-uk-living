@@ -4,6 +4,13 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ## [Unreleased]
 
+### Fixed
+
+- Static review-document footers now link to the existing browser-rendered
+  licence and attribution notice instead of the extensionless repository
+  `LICENSE` path. This keeps the MIT boundary visible in browsers that block
+  extensionless file responses, without changing corpus or semantic bytes.
+
 ### Added
 
 - Governed static-document publication through validated frontmatter,

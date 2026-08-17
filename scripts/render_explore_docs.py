@@ -779,7 +779,9 @@ def render_markdown_content(
         renderer.public_path, DEFAULT_EXPLORE_PATH
     )
     default_learn = _public_relative_href(renderer.public_path, DEFAULT_LEARN_PATH)
-    default_licence = _public_relative_href(renderer.public_path, Path("LICENSE"))
+    default_notice = _public_relative_href(
+        renderer.public_path, Path("generated/browser/NOTICE.html")
+    )
     safe_home = _normalise_navigation_href(
         default_home if home_href is None else home_href
     )
@@ -789,7 +791,7 @@ def render_markdown_content(
     safe_learn = _normalise_navigation_href(
         default_learn if learn_href is None else learn_href
     )
-    safe_licence = _normalise_navigation_href(default_licence)
+    safe_notice = _normalise_navigation_href(default_notice)
     title = html.escape(renderer.document_title, quote=False)
     status_text = ""
     if document_status is not None:
@@ -851,8 +853,8 @@ def render_markdown_content(
   <footer class="site-footer">
     <div class="footer-inner">
       <p>Check the cited official source before making a decision.
-      Repository-authored documentation is available under the
-      <a href="{html.escape(safe_licence, quote=True)}">MIT licence</a>.</p>
+      Repository-authored documentation is available under the MIT licence.
+      See the <a href="{html.escape(safe_notice, quote=True)}">licence and attribution notices</a>.</p>
     </div>
   </footer>
 </body>

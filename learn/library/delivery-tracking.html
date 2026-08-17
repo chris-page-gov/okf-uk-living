@@ -80,7 +80,7 @@ th { background: var(--teal-pale); }
     <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
     <article class="markdown-body">
 <h1 id="delivery-tracking">Delivery tracking</h1>
-<p>Last updated: 2026-08-13</p>
+<p>Last updated: 2026-08-17</p>
 <p>This is the current delivery ledger. Update it in the same pull request as the work it tracks; <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/ROADMAP.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">ROADMAP.md</a> remains the phase-level view.</p>
 <div class="table-wrap">
 <table>
@@ -390,8 +390,8 @@ th { background: var(--teal-pale); }
     <tr>
       <td>DOC-PUB-001</td>
       <td>Add a governed static-document publication fast path and publish the PRD</td>
-      <td>Ready for exact-head deployment</td>
-      <td>Explicit frontmatter discovers nominated documents, safe deterministic HTML and a generated document index and manifest. The dependency-graph gate rejects corpus, semantic, schema and workflow changes. The PRD is rendered as draft review material; merge does not update Pages and the owner-requested manual exact-head deployment plus browser verification remain required.</td>
+      <td>Complete: correction ready for exact-head deployment</td>
+      <td>Explicit frontmatter discovers nominated documents, safe deterministic HTML and a generated document index and manifest. The first deployment exposed an Edge block on the extensionless <code>LICENSE</code> route; the owner-approved bounded correction links every footer to the existing browser-safe licence and attribution notice. Corpus and semantic bytes remain unchanged. Merge does not update Pages; the authorised exact-head redeployment and browser verification remain external gates.</td>
     </tr>
   </tbody>
 </table>
@@ -417,8 +417,8 @@ th { background: var(--teal-pale); }
   <footer class="site-footer">
     <div class="footer-inner">
       <p>Check the cited official source before making a decision.
-      Repository-authored documentation is available under the
-      <a href="../../LICENSE">MIT licence</a>.</p>
+      Repository-authored documentation is available under the MIT licence.
+      See the <a href="../../generated/browser/NOTICE.html">licence and attribution notices</a>.</p>
     </div>
   </footer>
 </body>

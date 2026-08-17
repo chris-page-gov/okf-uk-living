@@ -27,3 +27,17 @@ manual workflow must name the exact protected-main commit, retain the
 The product-requirements URL may be labelled verified only after a
 cache-bypassed real-browser check confirms site identity, navigation, draft
 status and the MIT notice boundary.
+
+## Bounded verification correction
+
+The first exact-head deployment passed the site-identity, navigation, draft
+status and document-content checks. Microsoft Edge blocked the footer's
+extensionless `/LICENSE` target before the MIT boundary could be verified, so
+the document URL remained unverified.
+
+On 17 August 2026 the owner approved the bounded correction. Generated review
+documents now link to the existing browser-rendered
+`generated/browser/NOTICE.html` page, which exposes the repository MIT grant
+and the source-family attribution terms. This changes no corpus, semantic,
+source, workflow or frozen-base byte. The corrected URL remains unverified
+until an exact-head manual deployment and cache-bypassed browser journey pass.

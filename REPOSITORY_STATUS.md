@@ -60,10 +60,14 @@
   exact merge `aa6afca...`. Ordinary pushes, merges and pull requests do not
   update Pages.
 - Static documents: the `okf-site-document-publication.v1` nomination contract,
-  generated document index and documentation-only dependency gate are ready for
-  exact-head deployment. The draft product requirements render at
-  `learn/library/product-requirements.html`; this source state does not claim
-  that URL is deployed or verified.
+  generated document index and documentation-only dependency gate are
+  implemented. The draft product requirements render at
+  `learn/library/product-requirements.html`. A first exact-head deployment
+  passed identity and document checks but Edge blocked the extensionless
+  `LICENSE` route; the owner-approved bounded correction uses the existing
+  browser-safe licence and attribution notice. Exact-head redeployment and
+  browser verification remain required before the document URL is labelled
+  verified.
 - Public bundle URL:
   `https://chris-page-gov.github.io/okf-uk-living/okf-explorer.json`
 - First slice: missed rubbish merged in PR #3
