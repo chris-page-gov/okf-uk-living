@@ -6,6 +6,11 @@ status: draft
 version: "0.1"
 document_date: "2026-08-15"
 owner: owner:chris-page-gov
+publication:
+  include: true
+  path: learn/library/product-requirements.html
+  section: Product and delivery
+  order: 10
 ---
 
 # Product requirements for A Life in the UK

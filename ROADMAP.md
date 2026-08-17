@@ -185,6 +185,11 @@ the frozen public preview remains unchanged.
 
 ## Phase 5 — release candidate and publication
 
+- Keep repository-authored review documents in an additive, manifest-bound
+  static-document layer. A declared documentation-only dependency graph may use
+  targeted validation, but any corpus, semantic, schema or workflow change
+  falls back to full release assurance. Document nomination and pull-request
+  merge never trigger publication.
 - Complete the initial-sample review, compatibility and scope gates.
 - Freeze one reproducible candidate and run all release gates against it.
 - Require an explicit owner request before any GitHub Pages deployment.

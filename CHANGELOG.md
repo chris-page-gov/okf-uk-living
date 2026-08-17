@@ -6,6 +6,18 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Governed static-document publication through validated frontmatter,
+  deterministic safe HTML, an automatically generated document index and a
+  source-to-output SHA-256 manifest. A changed-path dependency gate permits a
+  smaller local validation route only when the diff is confined to the
+  documentation overlay and fails closed for corpus, semantic, schema,
+  workflow or other changes. The draft product requirements are nominated and
+  rendered for the review library. Pull requests and merges remain
+  publication-free; the frozen corpus is not rebuilt or modified. The base
+  transporter now recovers a drifted documentation handoff from the exact
+  verified publication commit, preventing later repository documentation from
+  changing any manifest-bound base byte.
+
 - HTML-first AI retrieval layer generated deterministically from the governed
   journey projection: one compact catalogue and 293 complete family records
   carrying stable IDs, explicit applicability, ordinary and exception steps,

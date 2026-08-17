@@ -91,7 +91,9 @@ th { background: var(--teal-pale); }
 <ul>
   <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/start-here.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Beginner learning plan source on GitHub</a></li>
   <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/ask-an-ai.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Copy-and-paste AI prompt source on GitHub</a></li>
+  <li><a href="product-requirements.html">Product requirements</a></li>
   <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/explore-okf-review-authorization-2026-08-13.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Explore OKF public-review authorisation source on GitHub</a></li>
+  <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/documentation-overlay-authorization-2026-08-17.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Static-document overlay authorisation</a></li>
   <li><a href="idea-and-semantic-model.html">Research overview and generating prompt</a></li>
   <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/research/exhaustive-reference-gap-analysis.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Exhaustive reference-family inventory and gap analysis</a></li>
   <li><a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/research/corpus-acquisition-decisions.md" rel="noopener noreferrer external" referrerpolicy="no-referrer">Approved corpus acquisition and review decisions</a></li>
@@ -242,6 +244,10 @@ uv run --locked python scripts/prepare_pages_publication.py --frozen
 uv run --locked python -m unittest discover -s tests
 </code></pre>
 <p><code>make validate</code> runs the same required sequence. Validation is local-only by default; pull requests and merges do not run remote CI or update GitHub Pages.</p>
+<p>Repository-authored Markdown under <code>docs/</code> can opt into the additive review site with validated <code>publication</code> frontmatter. For a change that affects only nominated documents, their rendered pages and lockstep documentation, use:</p>
+<pre><code class="language-sh">BASE_REF=origin/main make validate-documentation-overlay
+</code></pre>
+<p>The command fails closed if the diff leaves the documentation dependency graph. It regenerates the site-document pages, document index and manifests without rebuilding the frozen 293-family corpus. Deployment remains a separate manual exact-head operation.</p>
 <p>The generated entrypoints are <code>okf-bundle.json</code> for the reviewed three-slice bundle and <code>okf-explorer.json</code> for the 293-family discovery projection. The large descriptor distinguishes 293 service families from the larger typed concept count, currently 9,757 concepts, and exposes generated semantic and validation entrypoints. Records and static-search results are sharded in 1,000-record chunks so supporting infrastructure remains lazily hydratable. With a local OKF Explorer build at <code>../okf-explorer/_site</code>, start the no-cache overlay:</p>
 <pre><code class="language-sh">uv run --locked python scripts/serve_local_explorer.py --port 8003
 </code></pre>
@@ -260,7 +266,9 @@ uv run --locked python scripts/audit_source_links.py
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Check the cited official source before making a decision.</p>
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="../../LICENSE">MIT licence</a>.</p>
     </div>
   </footer>
 </body>

@@ -13,6 +13,13 @@ GitHub Pages deployment runs unless the owner explicitly requests publication.
 5. Review and merge without updating GitHub Pages unless the owner has made a
    separate, explicit publication request.
 
+For a change confined to the declared site-document dependency graph, step 3
+may instead use `BASE_REF=origin/main make validate-documentation-overlay`.
+The checker must prove the changed paths are limited to nominated or curated
+Markdown, their generated HTML and documentation publication manifests. It
+fails closed to `make validate` for code, corpus, semantic, schema or workflow
+changes.
+
 Changes to `main` remain pull-request-only by project policy. Server-side
 branch protection is now active after the owner separately authorized public
 visibility on 2026-08-09. The sole-developer rule requires pull requests and
@@ -35,6 +42,20 @@ describe. The minimum update set is:
 The pull-request description must explain either which documents changed or
 why a listed document is unaffected. Documentation follow-up is not deferred
 to a later pull request.
+
+## Static-document publication fast path
+
+Repository-authored Markdown under `docs/` may declare the additive
+`okf-site-document-publication.v1` frontmatter contract. The generator renders
+safe static HTML, updates the generated published-document index and records
+source and output SHA-256 identities in
+`learn/documentation-manifest.json`. Nomination never authorises deployment.
+
+The frozen 1,814-file corpus remains the base layer. Site documents are part of
+the additive Explore overlay, so a documentation-only change neither rebuilds
+the corpus nor modifies semantic authority. Pull requests and merges remain
+publication-free; an owner-requested deployment must still name the exact
+protected-main commit and pass the real-browser verification gate.
 
 ## Near-term delivery units
 

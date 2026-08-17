@@ -21,6 +21,7 @@ EXPECTED_CANDIDATE_ID = "life-course-population-complete-2026-08-08"
 EXPECTED_CANDIDATE_MANIFEST_SHA256 = "55f8428248b06646e0995f5230207c9006bf4d583d29157fb010ad7e69e416a1"
 EXPECTED_PUBLIC_BASE = "https://chris-page-gov.github.io/okf-uk-living/"
 PUBLICATION_DATA_COMMIT = "c38f927944dedc56b6454dba4d4463d419f85ee8"
+FROZEN_PUBLICATION_SOURCE_COMMIT = "736d7dc4dbb4e44082f6b7786dd88afd55954792"
 EXPECTED_PAGES_MANIFEST_SHA256 = "7ad5714e3462d0e57599f430301b34e916d607ac8afae68a34d9b8567f26832d"
 
 
@@ -40,6 +41,39 @@ def git_file_bytes(commit: str, path: Path) -> bytes:
         capture_output=True,
     )
     return completed.stdout
+
+
+def frozen_manifest_source_bytes(item: dict[str, Any]) -> bytes:
+    source_value = item.get("source")
+    expected_bytes = item.get("bytes")
+    expected_sha256 = item.get("sha256")
+    if not isinstance(source_value, str) or not source_value:
+        raise ValueError("frozen Pages manifest source is missing")
+    source = Path(source_value)
+    if source.is_absolute() or ".." in source.parts:
+        raise ValueError(f"frozen Pages manifest source is unsafe: {source_value}")
+    if type(expected_bytes) is not int or expected_bytes < 0:
+        raise ValueError(f"frozen Pages manifest byte count is invalid: {source_value}")
+    if not isinstance(expected_sha256, str) or len(expected_sha256) != 64:
+        raise ValueError(f"frozen Pages manifest digest is invalid: {source_value}")
+
+    current = ROOT / source
+    if current.is_file() and not current.is_symlink():
+        data = current.read_bytes()
+        if len(data) == expected_bytes and hashlib.sha256(data).hexdigest() == expected_sha256:
+            return data
+
+    try:
+        data = git_file_bytes(FROZEN_PUBLICATION_SOURCE_COMMIT, source)
+    except subprocess.CalledProcessError as error:
+        raise ValueError(
+            f"frozen publication source is unavailable: {source_value}"
+        ) from error
+    if len(data) != expected_bytes or hashlib.sha256(data).hexdigest() != expected_sha256:
+        raise ValueError(
+            f"frozen publication source differs from its manifest: {source_value}"
+        )
+    return data
 
 
 def load_frozen_manifest() -> dict[str, Any]:
@@ -69,32 +103,14 @@ def validate_frozen_publication(manifest: dict[str, Any]) -> list[str]:
         errors.append("frozen Pages manifest contains an unsafe target")
     if any("snapshot" in str(item.get("source", "")).lower() for item in manifest.get("files", [])):
         errors.append("frozen Pages manifest must not contain source snapshots")
-    expected = build_manifest()
-    if manifest != expected:
-        errors.append("frozen Pages manifest does not match the current publication sources")
-    changed = subprocess.run(
-        ["git", "diff", "--name-only", PUBLICATION_DATA_COMMIT, "--"],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout.splitlines()
-    publication_sources = {str(item.get("source", "")) for item in manifest.get("files", [])}
-    permitted_transport_changes = {
-        "generated/browser/CHANGELOG.html",
-        "generated/browser/PLANNING.html",
-        "generated/browser/README.html",
-        "generated/browser/REPOSITORY_STATUS.html",
-        "generated/browser/ROADMAP.html",
-        "generated/browser/TRACKING.html",
-        "publication/okf-explorer.json",
-    }
-    drift = sorted((set(changed) & publication_sources) - permitted_transport_changes)
-    if drift:
-        errors.append(
-            "publication sources differ from the pinned rich-runtime data commit: "
-            + ", ".join(drift)
-        )
+    for item in manifest.get("files", []):
+        if not isinstance(item, dict):
+            errors.append("frozen Pages manifest contains a malformed file entry")
+            continue
+        try:
+            frozen_manifest_source_bytes(item)
+        except ValueError as error:
+            errors.append(str(error))
     return errors
 
 
@@ -246,10 +262,9 @@ def copy_publication(destination: Path, manifest: dict[str, Any]) -> None:
     remove_output_tree(destination)
     destination.mkdir(parents=True)
     for item in manifest["files"]:
-        source = ROOT / item["source"]
         target = destination / item["target"]
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source, target)
+        target.write_bytes(frozen_manifest_source_bytes(item))
         if sha256_path(target) != item["sha256"]:
             raise ValueError(f"copied file hash mismatch: {item['target']}")
     shutil.copyfile(MANIFEST_PATH, destination / "publication-manifest.json")

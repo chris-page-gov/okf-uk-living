@@ -31,7 +31,9 @@ journeys pass a cache-bypassed real-browser check.
 
 - [Beginner learning plan source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/start-here.md)
 - [Copy-and-paste AI prompt source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/docs/ask-an-ai.md)
+- [Product requirements](docs/product-requirements.md)
 - [Explore OKF public-review authorisation source on GitHub](https://github.com/chris-page-gov/okf-uk-living/blob/main/evaluation/publication/explore-okf-review-authorization-2026-08-13.md)
+- [Static-document overlay authorisation](evaluation/publication/documentation-overlay-authorization-2026-08-17.md)
 - [Research overview and generating prompt](research/overview.md)
 - [Exhaustive reference-family inventory and gap analysis](research/exhaustive-reference-gap-analysis.md)
 - [Approved corpus acquisition and review decisions](research/corpus-acquisition-decisions.md)
@@ -145,6 +147,19 @@ uv run --locked python -m unittest discover -s tests
 
 `make validate` runs the same required sequence. Validation is local-only by
 default; pull requests and merges do not run remote CI or update GitHub Pages.
+
+Repository-authored Markdown under `docs/` can opt into the additive review
+site with validated `publication` frontmatter. For a change that affects only
+nominated documents, their rendered pages and lockstep documentation, use:
+
+```sh
+BASE_REF=origin/main make validate-documentation-overlay
+```
+
+The command fails closed if the diff leaves the documentation dependency
+graph. It regenerates the site-document pages, document index and manifests
+without rebuilding the frozen 293-family corpus. Deployment remains a separate
+manual exact-head operation.
 
 The generated entrypoints are `okf-bundle.json` for the reviewed three-slice
 bundle and `okf-explorer.json` for the 293-family discovery projection. The

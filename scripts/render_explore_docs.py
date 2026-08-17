@@ -750,16 +750,18 @@ def _style_hash() -> str:
     return base64.b64encode(digest).decode("ascii")
 
 
-def render_markdown_document(
+def render_markdown_content(
     source_path: Path,
+    markdown: str,
     public_path: Path,
     public_mapping: dict[Path, Path],
     *,
     home_href: str | None = None,
     explore_href: str | None = None,
     learn_href: str | None = None,
+    document_status: str | None = None,
 ) -> str:
-    """Render one curated Markdown document as a self-contained HTML page.
+    """Render supplied Markdown as a self-contained HTML page.
 
     ``public_path`` and all mapping values are paths relative to the published
     site root. Mapping keys may be absolute paths or repository-relative paths.
@@ -770,7 +772,6 @@ def render_markdown_document(
 
     path = _validated_authored_source_path(Path(source_path))
     renderer = _MarkdownRenderer(path, Path(public_path), public_mapping)
-    markdown = renderer.source_path.read_text(encoding="utf-8")
     article = renderer.render(markdown)
 
     default_home = _public_relative_href(renderer.public_path, DEFAULT_HOME_PATH)
@@ -778,6 +779,7 @@ def render_markdown_document(
         renderer.public_path, DEFAULT_EXPLORE_PATH
     )
     default_learn = _public_relative_href(renderer.public_path, DEFAULT_LEARN_PATH)
+    default_licence = _public_relative_href(renderer.public_path, Path("LICENSE"))
     safe_home = _normalise_navigation_href(
         default_home if home_href is None else home_href
     )
@@ -787,7 +789,17 @@ def render_markdown_document(
     safe_learn = _normalise_navigation_href(
         default_learn if learn_href is None else learn_href
     )
+    safe_licence = _normalise_navigation_href(default_licence)
     title = html.escape(renderer.document_title, quote=False)
+    status_text = ""
+    if document_status is not None:
+        if not isinstance(document_status, str) or not document_status.strip():
+            raise ValueError("document_status must be a non-empty string")
+        status_text = (
+            " Document status: <strong>"
+            + html.escape(document_status.strip(), quote=False)
+            + "</strong>."
+        )
     csp = "; ".join(
         (
             "default-src 'none'",
@@ -831,14 +843,16 @@ def render_markdown_document(
     </div>
   </header>
   <main id="main-content">
-    <p class="review-state"><strong>Review material.</strong> This is exploratory research, not an authoritative service or released data product.</p>
+    <p class="review-state"><strong>Review material.</strong>{status_text} This is exploratory research, not an authoritative service or released data product.</p>
     <article class="markdown-body">
 {article}
     </article>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Check the cited official source before making a decision.</p>
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="{html.escape(safe_licence, quote=True)}">MIT licence</a>.</p>
     </div>
   </footer>
 </body>
@@ -846,4 +860,29 @@ def render_markdown_document(
 """
 
 
-__all__ = ["render_markdown_document"]
+def render_markdown_document(
+    source_path: Path,
+    public_path: Path,
+    public_mapping: dict[Path, Path],
+    *,
+    home_href: str | None = None,
+    explore_href: str | None = None,
+    learn_href: str | None = None,
+    document_status: str | None = None,
+) -> str:
+    """Render one curated Markdown document as a self-contained HTML page."""
+
+    path = _validated_authored_source_path(Path(source_path))
+    return render_markdown_content(
+        path,
+        path.read_text(encoding="utf-8"),
+        public_path,
+        public_mapping,
+        home_href=home_href,
+        explore_href=explore_href,
+        learn_href=learn_href,
+        document_status=document_status,
+    )
+
+
+__all__ = ["render_markdown_content", "render_markdown_document"]

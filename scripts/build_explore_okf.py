@@ -27,7 +27,10 @@ from explore_okf_projection import (
     validate_endpoint_label_index,
     validate_journey_projection,
 )
-from render_explore_docs import render_markdown_document
+from site_document_publications import (
+    DOCUMENT_MANIFEST_PATH,
+    build_site_document_outputs,
+)
 
 
 PUBLIC_BASE = "https://chris-page-gov.github.io/okf-uk-living/"
@@ -48,29 +51,6 @@ HOME_PUBLIC_PATH = Path("index.html")
 DESCRIPTOR_PATH = Path("explore-okf.json")
 OVERLAY_MANIFEST_PATH = Path("publication/explore-okf-file-manifest.json")
 BASE_HOME_SHA256 = "584ded105f3eeded3b12410289ab3596b5dbf28e2ad610617f12480717ef1be6"
-DOCUMENT_PUBLICATIONS = {
-    Path("docs/start-here.md"): Path("learn/index.html"),
-    Path("docs/ask-an-ai.md"): Path("learn/ask-an-ai.html"),
-    Path("README.md"): Path("learn/library/repository-guide.html"),
-    Path("research/overview.md"): Path("learn/library/idea-and-semantic-model.html"),
-    Path("journeys/missed-rubbish-collection.md"): Path("learn/library/missed-rubbish-journey.html"),
-    Path("journeys/learning-to-drive-speeding.md"): Path("learn/library/driving-and-speeding-journey.html"),
-    Path("journeys/death-bereavement-estate.md"): Path("learn/library/bereavement-and-estate-journey.html"),
-    Path("ontology/index.md"): Path("learn/library/ontology.html"),
-    Path("jurisdictions/index.md"): Path("learn/library/jurisdictions.html"),
-    Path("evidence/index.md"): Path("learn/library/evidence.html"),
-    Path("evidence/licensing-and-attribution.md"): Path("learn/library/licensing-and-attribution.html"),
-    Path("evaluation/README.md"): Path("learn/library/evaluation.html"),
-    Path("evaluation/ai-consumer/claude-journey-walker-case-study.md"): Path("learn/library/claude-journey-walker-case-study.html"),
-    Path("evaluation/ai-consumer/README.md"): Path("learn/library/ai-consumer-evaluation.html"),
-    Path("evaluation/publication/explore-okf-review-authorization-2026-08-13.md"): Path("learn/library/public-review-authorisation.html"),
-    Path("docs/authoring.md"): Path("learn/library/authoring.html"),
-    Path("docs/review-and-publication-plan.md"): Path("learn/library/review-and-publication-plan.html"),
-    Path("publication/README.md"): Path("learn/library/pages-publication.html"),
-    Path("REPOSITORY_STATUS.md"): Path("learn/library/repository-status.html"),
-    Path("TRACKING.md"): Path("learn/library/delivery-tracking.html"),
-    Path("CHANGELOG.md"): Path("learn/library/change-log.html"),
-}
 EXPECTED_BASE_DESCRIPTOR_SHA256 = "ff69f0162a4ba93156b150ae4eea0070c8c8a81187ed5cc7d2425f37b8db34dc"
 EXPECTED_BASE_MANIFEST_SHA256 = "fe0e11219ceec88702ca8a5d536d6d0ac0425f3bb29c7586884cfb0e56c957b4"
 EXPECTED_BASE_PUBLICATION_MANIFEST_SHA256 = "7ad5714e3462d0e57599f430301b34e916d607ac8afae68a34d9b8567f26832d"
@@ -663,28 +643,6 @@ def build_home(projection_sha256: str) -> str:
     return rendered.rstrip() + "\n"
 
 
-def build_learning_documents() -> dict[Path, str]:
-    public_mapping = dict(DOCUMENT_PUBLICATIONS)
-    public_mapping.update(
-        {
-            Path("explore/index.html"): HTML_PATH,
-            Path("explore-okf.json"): DESCRIPTOR_PATH,
-            Path("generated/browser/README.html"): Path("generated/browser/README.html"),
-            Path("generated/assurance/population-complete-report.json"): Path(
-                "generated/assurance/population-complete-report.json"
-            ),
-        }
-    )
-    return {
-        public_path: render_markdown_document(
-            ROOT / source_path,
-            public_path,
-            public_mapping,
-        )
-        for source_path, public_path in DOCUMENT_PUBLICATIONS.items()
-    }
-
-
 def build_exploratory_publication(plane_roots: dict[str, str]) -> dict[str, Any]:
     return {
         "schema": "okf-exploratory-publication.v1",
@@ -816,7 +774,9 @@ def build_descriptor_and_manifest(
     return json_text(descriptor), manifest_text
 
 
-def overlay_manifest(outputs: dict[Path, str | bytes]) -> str:
+def overlay_manifest(
+    outputs: dict[Path, str | bytes], document_public_paths: list[Path]
+) -> str:
     ai_public_paths = sorted(
         path
         for path in outputs
@@ -832,10 +792,8 @@ def overlay_manifest(outputs: dict[Path, str | bytes]) -> str:
         (LABELS_PATH, LABELS_PATH, None),
         (MANIFEST_PATH, MANIFEST_PATH, None),
         *((path, path, None) for path in ai_public_paths),
-        *(
-            (public_path, public_path, None)
-            for public_path in DOCUMENT_PUBLICATIONS.values()
-        ),
+        *((public_path, public_path, None) for public_path in document_public_paths),
+        (DOCUMENT_MANIFEST_PATH, DOCUMENT_MANIFEST_PATH, None),
     ]
     files = []
     for source, target, replaces_sha256 in public_paths:
@@ -872,6 +830,10 @@ def overlay_manifest(outputs: dict[Path, str | bytes]) -> str:
         "authorisation_record": (
             "evaluation/publication/"
             "explore-okf-review-authorization-2026-08-13.md"
+        ),
+        "documentation_authorisation_record": (
+            "evaluation/publication/"
+            "documentation-overlay-authorization-2026-08-17.md"
         ),
         "deployment_automatic": False,
         "file_count": len(files),
@@ -962,7 +924,17 @@ def build_outputs() -> dict[Path, str | bytes]:
     html_reference = resource_reference(HTML_PATH, html_text)
     home_text = build_home(projection_reference["sha256"])
     home_reference = resource_reference(HOME_PUBLIC_PATH, home_text)
-    learning_documents = build_learning_documents()
+    learning_documents, document_publications, _ = build_site_document_outputs(
+        ROOT,
+        extra_mapping={
+            Path("explore/index.html"): HTML_PATH,
+            Path("explore-okf.json"): DESCRIPTOR_PATH,
+            Path("generated/browser/README.html"): Path("generated/browser/README.html"),
+            Path("generated/assurance/population-complete-report.json"): Path(
+                "generated/assurance/population-complete-report.json"
+            ),
+        },
+    )
     learn_text = learning_documents[Path("learn/index.html")]
     learn_reference = resource_reference(Path("learn/index.html"), learn_text)
     ai_prompts_text = learning_documents[Path("learn/ask-an-ai.html")]
@@ -995,7 +967,9 @@ def build_outputs() -> dict[Path, str | bytes]:
         **ai_family_pages,
         **learning_documents,
     }
-    outputs[OVERLAY_MANIFEST_PATH] = overlay_manifest(outputs)
+    outputs[OVERLAY_MANIFEST_PATH] = overlay_manifest(
+        outputs, list(document_publications.values())
+    )
     return outputs
 
 

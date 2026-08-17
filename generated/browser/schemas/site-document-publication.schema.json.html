@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schemas/site-document-publication.schema.json — A Life in the UK</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0 auto; max-width: 78rem; padding: 2rem; line-height: 1.5; }
+    .banner { border-left: .35rem solid #6b5cff; padding: .75rem 1rem; background: color-mix(in srgb, Canvas 92%, #6b5cff 8%); }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 1rem; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: .35rem; }
+    a { color: #6957e8; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>schemas/site-document-publication.schema.json</h1>
+  <p class="banner">Browser-rendered handoff of repository-authored JSON. Source identity: <code>schemas/site-document-publication.schema.json</code>. Links and original summaries are shown; external source content is not redistributed.</p>
+  <pre>{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://chris-page-gov.github.io/okf-uk-living/schemas/site-document-publication.schema.json&quot;,
+  &quot;title&quot;: &quot;OKF site document publication nomination&quot;,
+  &quot;description&quot;: &quot;Additive publication metadata for a repository-authored Markdown document. Nomination does not deploy the document or authorise automatic publication.&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [
+    &quot;include&quot;,
+    &quot;path&quot;,
+    &quot;section&quot;,
+    &quot;order&quot;
+  ],
+  &quot;properties&quot;: {
+    &quot;include&quot;: {
+      &quot;const&quot;: true
+    },
+    &quot;path&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^learn/(?:[a-z0-9][a-z0-9._-]*/)*[a-z0-9][a-z0-9._-]*\\.html$&quot;
+    },
+    &quot;section&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1,
+      &quot;maxLength&quot;: 80
+    },
+    &quot;order&quot;: {
+      &quot;type&quot;: &quot;integer&quot;,
+      &quot;minimum&quot;: 0,
+      &quot;maximum&quot;: 10000
+    }
+  },
+  &quot;additionalProperties&quot;: false
+}
+</pre>
+</body>
+</html>

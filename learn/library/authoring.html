@@ -204,6 +204,18 @@ uv run --locked python -m unittest discover -s tests
 <p><code>evaluation/candidates/population-complete-candidate.v1.yaml</code> declares the authored freeze boundary: basis commit, exact data-plane artifact list, population/release/publication gates, browser journeys and gap dispositions. Run <code>build_population_assurance.py</code> only after rebuilding and checking the authored dossiers and generated large-corpus projection. It derives the coverage, omission, link-health, review-status and provenance reports and then hashes the candidate artifacts into <code>generated/assurance/candidate-manifest.json</code>.</p>
 <p>Population completion means the discovery contract is fully navigable; it does not waive a dossier's <code>specialist_review_required</code> state. Release grade requires named acceptance and current source re-observation for applicable legal, clinical and high-impact operational claims. Publication requires a separate owner request and a subsequent exact-deployment browser check. Never change a generated assurance report or manifest by hand, and never rebuild a frozen publication candidate during promotion.</p>
 <h2 id="pages-publication-unit">Pages publication unit</h2>
+<h3 id="static-review-documents">Static review documents</h3>
+<p>A repository-authored Markdown document under <code>docs/</code> can be nominated for the public review library with this frontmatter:</p>
+<pre><code class="language-yaml">publication:
+  include: true
+  path: learn/library/example.html
+  section: Product and delivery
+  order: 10
+</code></pre>
+<p>The block is validated against <a href="https://github.com/chris-page-gov/okf-uk-living/blob/main/schemas/site-document-publication.schema.json" rel="noopener noreferrer external" referrerpolicy="no-referrer"><code>site-document-publication.schema.json</code></a>. The path must be a safe site-relative HTML path below <code>learn/</code>. <code>title</code>, <code>description</code> and <code>status</code> frontmatter must also be non-empty. Do not add a document to the generator's Python mapping: nominated documents are discovered deterministically and added to the generated <a href="index.html"><code>published document index</code></a>.</p>
+<p>Run <code>uv run --locked python scripts/build_site_documents.py</code>, then <code>--check</code>. The generator writes only safe rendered HTML and <code>learn/documentation-manifest.json</code>; it does not rebuild the corpus. The manifest records each source and output digest and states that deployment is not automatic.</p>
+<p>The base publication transporter resolves every one of the 1,814 frozen files against its manifest. If a repository-generated documentation handoff has legitimately changed in the working tree, the transporter reads the exact old byte sequence from verified publication commit <code>736d7dc…</code> instead. It never substitutes the new handoff into the base layer. This allows the additive documentation overlay to evolve without re-freezing corpus bytes.</p>
+<p>For a pull request confined to this dependency graph, run <code>BASE_REF=origin/main make validate-documentation-overlay</code>. The gate allows only published or curated Markdown, their generated HTML and the two additive manifests. It rejects every other changed path and directs the change to <code>make validate</code>. Nomination, validation and merge do not deploy Pages.</p>
 <p>The public preview is assembled only from files listed in <code>publication/pages-file-manifest.json</code>. Regenerate that manifest deliberately with <code>uv run --locked python scripts/prepare_pages_publication.py --write-manifest</code>, review its count, total bytes and hashes, and commit it with the publication descriptor. Ordinary builds do not rewrite it.</p>
 <p>The manual Pages workflow calls the same script with <code>--destination _site</code>. That operation verifies every source hash and copies the frozen bytes; it does not invoke a corpus generator. The only permitted destination is the ignored repository <code>_site/</code> directory. The workflow publishes only the landing page, the publication descriptor, the small bundle, large-corpus data, browser handoffs, semantic projections, assurance reports, licence and notice. It does not publish authored source dossiers, research working files or acquired source content.</p>
 <p>The workflow also requires the exact protected-main merge commit as its <code>publication_commit</code> input and rejects a different workflow event or checkout. The manifest records the reviewed data commit separately, so a transport-only descriptor envelope cannot silently change the semantic or rich-runtime bytes.</p>
@@ -216,7 +228,9 @@ uv run --locked python -m unittest discover -s tests
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Check the cited official source before making a decision.</p>
+      <p>Check the cited official source before making a decision.
+      Repository-authored documentation is available under the
+      <a href="../../LICENSE">MIT licence</a>.</p>
     </div>
   </footer>
 </body>
