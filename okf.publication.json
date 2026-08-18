@@ -1,0 +1,1142 @@
+{
+  "schema": "okf-repository-publication-contract.v1",
+  "modified": "2026-08-18",
+  "locale": "en-GB",
+  "time_zone": "Europe/London",
+  "repository": {
+    "name": "okf-uk-living",
+    "url": "https://github.com/chris-page-gov/okf-uk-living",
+    "role": "large-corpus-producer",
+    "root_index": "index.md",
+    "lifecycle": "active"
+  },
+  "semantic_contract": {
+    "path": "okf.semantic.json",
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
+  },
+  "source_families": [
+    {
+      "id": "governed-life-course-registers",
+      "label": "Governed life-course registers and semantic policy",
+      "description": "Authored YAML, JSON, ontology, schema and policy inputs for the 293-family life-course corpus.",
+      "kind": "structured-data-folder",
+      "paths": [
+        "source/",
+        "ontology/",
+        "profiles/",
+        "schemas/",
+        "shapes/"
+      ],
+      "formats": [
+        "application/json",
+        "application/schema+json",
+        "application/yaml",
+        "text/markdown"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "okf.publication.json",
+        "identity": [
+          "relative-path",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-uk-living/blob/main/LICENSE_DECISIONS.md",
+          "https://github.com/chris-page-gov/okf-uk-living/blob/main/NOTICE.md"
+        ],
+        "limitations": [
+          "Repository-authored structure and summaries are MIT; linked official sources retain their own rights and are not redistributed."
+        ]
+      },
+      "sensitivity": {
+        "status": "assessed-no-personal-data",
+        "assessment": "The corpus contains synthetic personas and public-service metadata; repository policy prohibits real personal data.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-uk-living/blob/main/AGENTS.md"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "render-life-course-packs",
+          "build-large-corpus"
+        ],
+        "limitations": [
+          "Live source observation is a separate owner-authorised activity and is not part of deterministic publication generation."
+        ]
+      },
+      "invalidates": [
+        "source",
+        "semantic",
+        "runtime",
+        "application",
+        "release",
+        "deployment",
+        "browser"
+      ],
+      "limitations": [
+        "Authored inputs are pinned by reviewed Git revision; candidate output hashes are recorded separately in generated assurance and publication manifests."
+      ]
+    },
+    {
+      "id": "okf-markdown-corpus",
+      "label": "OKF Markdown and citizen-journey narratives",
+      "description": "Browser-compatible Markdown that explains the model and provides the small-bundle and narrative surfaces.",
+      "kind": "markdown-tree",
+      "paths": [
+        "index.md",
+        "curriculum/",
+        "evidence/",
+        "journeys/",
+        "jurisdictions/",
+        "life-course/",
+        "organisations/",
+        "services/"
+      ],
+      "formats": [
+        "text/markdown"
+      ],
+      "origin": "authored",
+      "authority": "editorial",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "okf.publication.json",
+        "identity": [
+          "relative-path",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "approved",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-uk-living/blob/main/LICENSE"
+        ],
+        "limitations": [
+          "The MIT grant covers repository-authored prose and structure, not linked third-party source material."
+        ]
+      },
+      "sensitivity": {
+        "status": "public-no-personal-data",
+        "assessment": "Narratives describe public routes and explicitly synthetic journeys without personal case data."
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "build-small-bundle",
+          "build-browser-handoff"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "application",
+        "release",
+        "deployment",
+        "browser"
+      ],
+      "limitations": [
+        "The source tree is pinned by reviewed Git revision; generated browser and semantic projections carry their own exact identities."
+      ]
+    },
+    {
+      "id": "review-and-publication-governance",
+      "label": "Review, documentation and publication governance",
+      "description": "Authored plans, evidence, documentation and owner decisions governing validation and manual publication.",
+      "kind": "document-folder",
+      "paths": [
+        "docs/",
+        "evaluation/",
+        "research/",
+        "publication/*.html",
+        "README.md",
+        "AGENTS.md",
+        "PLANNING.md",
+        "ROADMAP.md",
+        "TRACKING.md",
+        "REPOSITORY_STATUS.md",
+        "CHANGELOG.md"
+      ],
+      "formats": [
+        "text/html",
+        "text/markdown",
+        "application/json",
+        "application/yaml"
+      ],
+      "origin": "authored",
+      "authority": "editorial",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "okf.publication.json",
+        "identity": [
+          "relative-path",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "approved",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-uk-living/blob/main/LICENSE"
+        ]
+      },
+      "sensitivity": {
+        "status": "public-no-personal-data",
+        "assessment": "Publication decisions and review evidence are repository records and contain no personal case data."
+      },
+      "extraction": {
+        "mode": "manual-reviewed",
+        "network_access": "prohibited",
+        "command_ids": [
+          "build-explore-okf"
+        ],
+        "limitations": [
+          "Nomination for the documentation overlay does not authorise deployment."
+        ]
+      },
+      "invalidates": [
+        "documentation",
+        "application",
+        "deployment",
+        "browser"
+      ],
+      "limitations": [
+        "The lifecycle contract inventories governance inputs by path and reviewed revision; only authorised published projections enter the additive checksum manifest."
+      ]
+    }
+  ],
+  "boundaries": {
+    "authored": [
+      {
+        "path": "source/",
+        "role": "source-register",
+        "source_family_id": "governed-life-course-registers"
+      },
+      {
+        "path": "ontology/",
+        "role": "policy",
+        "source_family_id": "governed-life-course-registers"
+      },
+      {
+        "path": "profiles/",
+        "role": "profile",
+        "source_family_id": "governed-life-course-registers"
+      },
+      {
+        "path": "schemas/",
+        "role": "schema",
+        "source_family_id": "governed-life-course-registers"
+      },
+      {
+        "path": "shapes/",
+        "role": "schema",
+        "source_family_id": "governed-life-course-registers"
+      },
+      {
+        "path": "index.md",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "curriculum/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "evidence/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "journeys/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "jurisdictions/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "life-course/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "organisations/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "services/",
+        "role": "content",
+        "source_family_id": "okf-markdown-corpus"
+      },
+      {
+        "path": "scripts/",
+        "role": "generator"
+      },
+      {
+        "path": "tests/",
+        "role": "test"
+      },
+      {
+        "path": "okf.semantic.json",
+        "role": "policy"
+      },
+      {
+        "path": "okf.publication.json",
+        "role": "publication-contract"
+      },
+      {
+        "path": "README.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "docs/",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "evaluation/",
+        "role": "release-authorisation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "research/",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "AGENTS.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "PLANNING.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "ROADMAP.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "TRACKING.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "REPOSITORY_STATUS.md",
+        "role": "documentation",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "role": "changelog",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": ".github/workflows/",
+        "role": "workflow"
+      },
+      {
+        "path": "publication/index.html",
+        "role": "content",
+        "source_family_id": "review-and-publication-governance"
+      },
+      {
+        "path": "publication/explore-okf-index.html",
+        "role": "content",
+        "source_family_id": "review-and-publication-governance"
+      }
+    ],
+    "generated": [
+      {
+        "path": "okf-bundle.json",
+        "role": "explorer-runtime",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "build-small-bundle"
+        ],
+        "check_command_ids": [
+          "check-small-bundle"
+        ]
+      },
+      {
+        "path": "generated/semantic/",
+        "role": "semantic-shards",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "build-large-corpus"
+        ],
+        "check_command_ids": [
+          "check-large-corpus"
+        ]
+      },
+      {
+        "path": "okf-explorer.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-large-corpus"
+        ],
+        "check_command_ids": [
+          "check-large-projection"
+        ]
+      },
+      {
+        "path": "large/",
+        "role": "relationship-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-large-corpus"
+        ],
+        "check_command_ids": [
+          "check-large-corpus",
+          "check-large-projection"
+        ]
+      },
+      {
+        "path": "generated/browser/",
+        "role": "site",
+        "plane": "documentation",
+        "required": true,
+        "build_command_ids": [
+          "build-browser-handoff"
+        ],
+        "check_command_ids": [
+          "check-browser-handoff"
+        ]
+      },
+      {
+        "path": "generated/assurance/",
+        "role": "validation-receipt",
+        "plane": "release",
+        "required": true,
+        "build_command_ids": [
+          "build-population-assurance"
+        ],
+        "check_command_ids": [
+          "check-population-assurance"
+        ]
+      },
+      {
+        "path": "explore/",
+        "role": "site",
+        "plane": "application",
+        "required": true,
+        "build_command_ids": [
+          "build-explore-okf"
+        ],
+        "check_command_ids": [
+          "check-explore-okf"
+        ]
+      },
+      {
+        "path": "learn/",
+        "role": "site",
+        "plane": "application",
+        "required": true,
+        "build_command_ids": [
+          "build-explore-okf"
+        ],
+        "check_command_ids": [
+          "check-explore-okf"
+        ]
+      },
+      {
+        "path": "publication/pages-file-manifest.json",
+        "role": "checksum-manifest",
+        "plane": "release",
+        "required": true,
+        "build_command_ids": [],
+        "check_command_ids": [
+          "check-frozen-pages"
+        ]
+      },
+      {
+        "path": "publication/explore-okf-file-manifest.json",
+        "role": "checksum-manifest",
+        "plane": "application",
+        "required": true,
+        "build_command_ids": [
+          "build-explore-okf"
+        ],
+        "check_command_ids": [
+          "check-explore-okf-publication"
+        ]
+      },
+      {
+        "path": "_site/",
+        "role": "site",
+        "plane": "deployment",
+        "required": false,
+        "build_command_ids": [
+          "prepare-explore-okf-publication"
+        ],
+        "check_command_ids": [
+          "check-explore-okf-publication"
+        ]
+      }
+    ]
+  },
+  "planes": [
+    {
+      "id": "source",
+      "depends_on": [],
+      "paths": [
+        "source/",
+        "ontology/",
+        "profiles/",
+        "schemas/",
+        "shapes/",
+        "scripts/render_life_course_packs.py"
+      ],
+      "command_ids": [
+        "render-life-course-packs",
+        "check-life-course-packs",
+        "check-source-contracts"
+      ]
+    },
+    {
+      "id": "semantic",
+      "depends_on": [
+        "source"
+      ],
+      "paths": [
+        "index.md",
+        "curriculum/",
+        "evidence/",
+        "journeys/",
+        "jurisdictions/",
+        "life-course/",
+        "organisations/",
+        "services/",
+        "okf.semantic.json",
+        "okf-bundle.json",
+        "generated/semantic/"
+      ],
+      "command_ids": [
+        "build-small-bundle",
+        "check-small-bundle",
+        "build-large-corpus",
+        "check-large-corpus",
+        "check-large-projection"
+      ]
+    },
+    {
+      "id": "runtime",
+      "depends_on": [
+        "semantic"
+      ],
+      "paths": [
+        "okf-explorer.json",
+        "large/",
+        "scripts/build_large_corpus.py"
+      ],
+      "command_ids": [
+        "build-large-corpus",
+        "check-large-corpus",
+        "check-large-projection"
+      ]
+    },
+    {
+      "id": "documentation",
+      "depends_on": [
+        "source"
+      ],
+      "paths": [
+        "README.md",
+        "AGENTS.md",
+        "PLANNING.md",
+        "ROADMAP.md",
+        "TRACKING.md",
+        "REPOSITORY_STATUS.md",
+        "CHANGELOG.md",
+        "docs/",
+        "research/",
+        "evaluation/",
+        "okf.publication.json",
+        "generated/browser/",
+        "scripts/build_browser_handoff.py",
+        "scripts/check_documentation_lockstep.py",
+        "scripts/check_publication_method.py",
+        "tests/test_publication_method.py"
+      ],
+      "command_ids": [
+        "build-browser-handoff",
+        "check-browser-handoff",
+        "check-publication-method",
+        "check-documentation-lockstep"
+      ]
+    },
+    {
+      "id": "application",
+      "depends_on": [
+        "runtime",
+        "documentation"
+      ],
+      "paths": [
+        "explore/",
+        "learn/",
+        "README.md",
+        "REPOSITORY_STATUS.md",
+        "TRACKING.md",
+        "CHANGELOG.md",
+        "docs/start-here.md",
+        "docs/ask-an-ai.md",
+        "docs/authoring.md",
+        "docs/published-documents.md",
+        "docs/product-requirements.md",
+        "docs/review-and-publication-plan.md",
+        "research/overview.md",
+        "journeys/missed-rubbish-collection.md",
+        "journeys/learning-to-drive-speeding.md",
+        "journeys/death-bereavement-estate.md",
+        "ontology/index.md",
+        "jurisdictions/index.md",
+        "evidence/index.md",
+        "evidence/licensing-and-attribution.md",
+        "evaluation/README.md",
+        "evaluation/ai-consumer/README.md",
+        "evaluation/ai-consumer/claude-journey-walker-case-study.md",
+        "evaluation/publication/explore-okf-review-authorization-2026-08-13.md",
+        "publication/README.md",
+        "publication/explore-okf-index.html",
+        "publication/explore-okf-file-manifest.json",
+        "scripts/build_explore_okf.py",
+        "scripts/build_site_documents.py"
+      ],
+      "command_ids": [
+        "build-explore-okf",
+        "check-explore-okf",
+        "check-explore-okf-publication"
+      ]
+    },
+    {
+      "id": "release",
+      "depends_on": [
+        "semantic",
+        "runtime"
+      ],
+      "paths": [
+        "generated/assurance/",
+        "publication/pages-file-manifest.json",
+        "publication/okf-explorer.json",
+        "publication/index.html",
+        "scripts/build_population_assurance.py",
+        "scripts/prepare_pages_publication.py",
+        "scripts/prepare_explore_okf_publication.py",
+        "Makefile",
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "command_ids": [
+        "build-population-assurance",
+        "check-population-assurance",
+        "check-frozen-pages",
+        "test-full-suite"
+      ]
+    },
+    {
+      "id": "deployment",
+      "depends_on": [
+        "release",
+        "application"
+      ],
+      "paths": [
+        ".github/workflows/",
+        "_site/"
+      ],
+      "command_ids": [
+        "prepare-explore-okf-publication",
+        "check-explore-okf-publication",
+        "manual-installed-chrome-verification"
+      ]
+    },
+    {
+      "id": "browser",
+      "depends_on": [
+        "deployment"
+      ],
+      "paths": [
+        "evaluation/publication/",
+        "docs/okf-publication-method.md"
+      ],
+      "command_ids": [
+        "manual-installed-chrome-verification"
+      ]
+    }
+  ],
+  "tooling": {
+    "commands": [
+      {
+        "id": "sync-locked-environment",
+        "kind": "setup",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime",
+          "documentation",
+          "application",
+          "release"
+        ],
+        "command": "uv sync --locked",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "dependency-install",
+        "mutates": "external-state",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "render-life-course-packs",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/render_life_course_packs.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-life-course-packs",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/render_life_course_packs.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-source-contracts",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/check_contracts.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-small-bundle",
+        "kind": "build",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_okf_bundle.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-small-bundle",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_okf_bundle.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-large-corpus",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_large_corpus.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "check-large-corpus",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_large_corpus.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "check-large-projection",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/check_large_projection.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-browser-handoff",
+        "kind": "build",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/build_browser_handoff.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "check-browser-handoff",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/build_browser_handoff.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "build-population-assurance",
+        "kind": "build",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_population_assurance.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-population-assurance",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_population_assurance.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-explore-okf",
+        "kind": "build",
+        "planes": [
+          "documentation",
+          "application"
+        ],
+        "command": "uv run --locked python scripts/build_explore_okf.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "check-explore-okf",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "application"
+        ],
+        "command": "uv run --locked python scripts/build_explore_okf.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "check-frozen-pages",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/prepare_pages_publication.py --frozen",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-explore-okf-publication",
+        "kind": "check",
+        "planes": [
+          "application",
+          "deployment"
+        ],
+        "command": "uv run --locked python scripts/prepare_explore_okf_publication.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "prepare-explore-okf-publication",
+        "kind": "build",
+        "planes": [
+          "application",
+          "deployment"
+        ],
+        "command": "uv run --locked python scripts/prepare_explore_okf_publication.py --destination _site",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "check-publication-method",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_publication_method.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-documentation-lockstep",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_documentation_lockstep.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "test-full-suite",
+        "kind": "test",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime",
+          "documentation",
+          "application",
+          "release"
+        ],
+        "command": "uv run --locked python -m unittest discover -s tests",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 30
+      },
+      {
+        "id": "manual-installed-chrome-verification",
+        "kind": "verify",
+        "planes": [
+          "deployment",
+          "browser"
+        ],
+        "command": "Follow docs/okf-publication-method.md#live-browser-gate in installed Google Chrome and record exact-commit, manifest, route, journey and console evidence.",
+        "source": "docs/okf-publication-method.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "bounded-read",
+        "mutates": "none",
+        "timeout_minutes": 15
+      }
+    ]
+  },
+  "lockstep": {
+    "controlled_paths": [
+      "source/",
+      "ontology/",
+      "profiles/",
+      "schemas/",
+      "shapes/",
+      "curriculum/",
+      "evidence/",
+      "journeys/",
+      "jurisdictions/",
+      "life-course/",
+      "organisations/",
+      "services/",
+      "scripts/",
+      "tests/",
+      "docs/",
+      "evaluation/",
+      "research/",
+      "publication/",
+      "explore/",
+      "learn/",
+      "generated/",
+      "large/",
+      ".github/workflows/",
+      "index.md",
+      "README.md",
+      "AGENTS.md",
+      "PLANNING.md",
+      "ROADMAP.md",
+      "TRACKING.md",
+      "REPOSITORY_STATUS.md",
+      "Makefile",
+      "pyproject.toml",
+      "uv.lock",
+      "okf.semantic.json",
+      "okf.publication.json",
+      "okf-bundle.json",
+      "okf-explorer.json"
+    ],
+    "documentation_paths": [
+      "README.md",
+      "AGENTS.md",
+      "PLANNING.md",
+      "ROADMAP.md",
+      "TRACKING.md",
+      "REPOSITORY_STATUS.md",
+      "docs/",
+      "evaluation/publication/",
+      "publication/README.md"
+    ],
+    "changelog_path": "CHANGELOG.md",
+    "check_command_id": "check-documentation-lockstep",
+    "dependency_update_policy": "assess-release-bound-bytes-no-blanket-exemption",
+    "unknown_path_policy": "fail-closed"
+  },
+  "ci": {
+    "provider": "github-actions",
+    "workflow_paths": [
+      ".github/workflows/pages.yml",
+      ".github/workflows/pages-explore-okf.yml"
+    ],
+    "impact_routing": "not-applicable",
+    "parallelism": "serial",
+    "unknown_path_policy": "not-applicable",
+    "browser": {
+      "ordinary": {
+        "policy": "installed-chrome",
+        "engines": [
+          "chrome"
+        ],
+        "command_ids": [
+          "manual-installed-chrome-verification"
+        ]
+      },
+      "cross_engine": {
+        "policy": "not-applicable",
+        "engines": [],
+        "command_ids": [],
+        "installation": {
+          "policy": "none",
+          "command_ids": []
+        }
+      }
+    }
+  },
+  "publication": {
+    "mode": "manual",
+    "scope": "bounded-demonstrator",
+    "authority": {
+      "decision": "Only the owner's dated Explore OKF authorisation permits a manual deployment of the exact protected-main candidate; ordinary repository activity does not publish.",
+      "evidence_paths": [
+        "evaluation/publication/explore-okf-review-authorization-2026-08-13.md"
+      ]
+    },
+    "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
+    "targets": [
+      {
+        "id": "github-pages",
+        "kind": "github-pages",
+        "workflow_path": ".github/workflows/pages-explore-okf.yml",
+        "public_base_url": "https://chris-page-gov.github.io/okf-uk-living/",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true
+      }
+    ]
+  },
+  "verification": {
+    "required": true,
+    "browser": "real-browser",
+    "exact_commit_required": true,
+    "identity_checks": [
+      "commit",
+      "descriptor",
+      "sha256",
+      "record-count",
+      "route"
+    ],
+    "journeys": [
+      {
+        "id": "explore-missed-rubbish",
+        "url": "https://chris-page-gov.github.io/okf-uk-living/explore/",
+        "expected_identity": "The deployed base and Explore manifests match the exact promoted candidate and the standalone interface exposes 293 families.",
+        "steps": [
+          "Open the root review hub and confirm the independent exploratory boundary.",
+          "Open Explore journeys and search for missed bin.",
+          "Open Report a missed rubbish collection and confirm ordinary and exception episodes, provenance and official-source routes.",
+          "Confirm the installed-Chrome console has no errors and record the exact protected-main commit and served manifest hashes."
+        ]
+      }
+    ],
+    "console_policy": "no-errors",
+    "command_ids": [
+      "manual-installed-chrome-verification"
+    ]
+  },
+  "limitations": [
+    "Local-only validation and manual publication are deliberate trust boundaries; this contract does not enable routine remote CI or deployment on push, pull request or merge.",
+    "The current static publication manifests bind frozen corpus and overlay bytes but do not expose the latest deployment commit as a served identity. An unattended post-deploy exact-head browser receipt therefore remains a backlog item requiring a separately authorised identity-envelope change; this adoption does not simulate that evidence.",
+    "This adoption changes lifecycle controls, documentation and workflow timeouts only; it does not regenerate or alter frozen-base, corpus, semantic or assurance bytes. Only affected browser handoffs, additive documentation projections and their overlay manifest change.",
+    "Population completeness remains separate from specialist acceptance and release grade."
+  ]
+}

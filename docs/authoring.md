@@ -58,22 +58,22 @@ governs the first three slice contracts under `evaluation/fixtures/`. Those
 fixtures are synthetic `editorial-example` acceptance boundaries, not official
 service records. A fixture moves from `authorized_not_started` to
 `linked_references_registered` only when its exact bounded denominator is
-recorded under `source/`; this state does not authorize snapshots, broad
+recorded under `source/`; this state does not authorise snapshots, broad
 acquisition or redistribution.
 
-The owner separately authorized the exhaustive link-only reference-family
-inventory on 2026-08-07. That authorization covers URLs, owners,
+The owner separately authorised the exhaustive link-only reference-family
+inventory on 2026-08-07. That authorisation covers URLs, owners,
 jurisdictions, dates, dated rights decisions, original summaries and gaps for
-the 24-domain denominator. It does not authorize snapshots, source-content
+the 24-domain denominator. It does not authorise snapshots, source-content
 redistribution, unbounded or unstaged leaf acquisition or publication.
 
 The owner-approved
 [`service-family-denominator.v1`](../source/service-family-denominator.v1.yaml)
-contains 293 normalized planning families in three waves. The
+contains 293 normalised planning families in three waves. The
 [`corpus-acquisition-policy.v1`](../profiles/corpus-acquisition-policy.v1.yaml)
 governs local-authority coverage, GSS and applicable ODS identifiers, manual
 health links, regulator-first private dependencies, sector redress and
-specialist-review gates. A family name authorizes staged source registration;
+specialist-review gates. A family name authorises staged source registration;
 it is not an official assertion that routes or rules are uniform.
 
 The owner-approved `okf-explorer-large-corpus.v1` projection renders those 293
@@ -90,7 +90,7 @@ page text, images, logos or other assets into authored or generated output.
 
 ## Full-population dossiers
 
-The owner-authorized
+The owner-authorised
 [`life-course-population-contract.v1`](../profiles/life-course-population-contract.v1.yaml)
 governs the staged 293-family implementation. Each family is authored as a
 `life-course-family.v1` dossier under `source/life-course-families/<domain>/`
@@ -98,7 +98,7 @@ and has a matching service narrative. The dossier retains structured
 applicability, actors, an ordinary journey, at least one exception or failure
 journey, dependencies, sources, limitations and review state.
 
-Every family references one of the 48 normalized processes in
+Every family references one of the 48 normalised processes in
 [`life-course-processes.v1`](../source/life-course-processes.v1.yaml). Process
 membership supports navigation and never establishes official service
 identity, shared rules or four-nation equivalence. Material graph edges use the
@@ -224,7 +224,7 @@ a discovery page is not sufficient evidence for a leaf-service rule.
 
 [`authority-registry.v1`](../source/authority-registry.v1.yaml) is the dated
 identity denominator for the population packs. It contains 382 principal local
-authority areas and normalized actors, 19 strategic/combined authorities, 397
+authority areas and normalised actors, 19 strategic/combined authorities, 397
 GSS geographies in total, and shared national, regulator and redress actors.
 A GSS code identifies an administrative area and does not by itself name the
 legal body or prove that it delivers a service. ODS and source-native identities
@@ -427,7 +427,25 @@ review changes them.
 
 ## Publication boundary
 
-Local validation does not authorize publication. Complete the domain profile,
+[`okf.publication.json`](../okf.publication.json) is the lifecycle companion to
+the semantic contract. Read it before changing a source family, generator,
+generated projection, workflow, release gate or publication evidence. Its
+dependency planes identify the checks affected by a change; command strings
+are untrusted declarations and still require review against `AGENTS.md`.
+
+Run the repository policy and lockstep checks for every lifecycle change:
+
+```sh
+uv run --locked python scripts/check_publication_method.py
+uv run --locked python scripts/check_documentation_lockstep.py
+```
+
+The second command requires both declared documentation and `CHANGELOG.md`.
+It does not grant a cheap route through semantic or corpus assurance. Use the
+documentation-overlay path only when its existing dependency checker proves
+that narrower scope.
+
+Local validation does not authorise publication. Complete the domain profile,
 source/rights review, evaluation, frozen-candidate assurance and exact deployed
 browser journey before sharing a public bundle URL.
 

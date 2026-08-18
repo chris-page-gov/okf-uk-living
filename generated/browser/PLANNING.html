@@ -39,7 +39,7 @@ fails closed to `make validate` for code, corpus, semantic, schema or workflow
 changes.
 
 Changes to `main` remain pull-request-only by project policy. Server-side
-branch protection is now active after the owner separately authorized public
+branch protection is now active after the owner separately authorised public
 visibility on 2026-08-09. The sole-developer rule requires pull requests and
 resolved conversations but zero approving reviews or remote status checks.
 
@@ -60,6 +60,13 @@ describe. The minimum update set is:
 The pull-request description must explain either which documents changed or
 why a listed document is unaffected. Documentation follow-up is not deferred
 to a later pull request.
+
+`okf.publication.json` now makes this lockstep boundary machine-readable. The
+local checker requires both declared documentation and `CHANGELOG.md` for a
+controlled change, including dependency and workflow changes. The shared
+Explorer profile validates the complete cross-repository contract; the local
+checker protects this repository&#x27;s manual-only, exact-byte policy without
+introducing routine hosted CI.
 
 ## Static-document publication fast path
 
@@ -84,13 +91,13 @@ The owner approved `okf-domain-profile.v1` and the three fixture contracts on
 2026-08-07. All three slices and the licensing decisions are merged. The local
 Explorer remediation rerun passed: relationship and node provenance,
 browser-safe source handoffs, and the first-class licence/notice surface are
-verified. That bounded sample proposal was superseded by the later authorized
+verified. That bounded sample proposal was superseded by the later authorised
 population-complete preview.
 
-The owner separately authorized exhaustive link-only reference-family
+The owner separately authorised exhaustive link-only reference-family
 discovery on 2026-08-07. `INVENTORY-001` is complete with 142 external records,
 120 assessed coverage cells and 12 tracked gaps. This planning asset does
-not change the sample release gates or authorize snapshots, broad leaf
+not change the sample release gates or authorise snapshots, broad leaf
 acquisition, CI or publication.
 
 The original sample sequence is defined in the
@@ -143,7 +150,7 @@ candidate reconciles the 293 dossiers, 104 competency questions, source links,
 provenance and six representative browser journeys. No population item remains
 active. A later release-grade track may begin only with named reviewer
 acceptance and current re-observation of applicable legal, clinical and
-high-impact operational claims. The owner has separately authorized the frozen
+high-impact operational claims. The owner has separately authorised the frozen
 population preview for publication without changing that review boundary.
 
 `SEM-001` completed locally on 2026-08-12. The large-corpus generator now
@@ -174,7 +181,7 @@ Population-complete permits a visible `specialist_review_required` state.
 Release grade separately requires named legal, clinical or service-owner
 acceptance for affected high-impact claims.
 
-The authorized publication scope is the population-complete educational
+The authorised publication scope is the population-complete educational
 preview without a formal CPSV-AP, Open Referral, OWL or SHACL conformance claim.
 It retains all 291 specialist-review warnings and does not claim release grade,
 official-service status or personalised advice.
@@ -193,12 +200,12 @@ publish the frozen candidate without rebuilding it. The exact deployed site
 must then pass real-browser identity and journey checks before any public
 bundle link is shared.
 
-Before publication authorization, pull requests used this statement:
+Before publication authorisation, pull requests used this statement:
 
 &gt; Publication status: local validation only. GitHub Pages was not updated.
 &gt; Publication requires an explicit owner request.
 
-This authorized publication pull request instead records the owner request and
+This authorised publication pull request instead records the owner request and
 frozen candidate. A follow-up evidence pull request must record the deployment
 and browser-verification result. A failed verification remains failed and the
 public link is withheld.

@@ -1,6 +1,6 @@
 # Delivery tracking
 
-Last updated: 2026-08-17
+Last updated: 2026-08-18
 
 This is the current delivery ledger. Update it in the same pull request as the
 work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
@@ -10,6 +10,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | BOOT-001 | Reviewed local initialization | Complete | Initialization commit `5572d0c`; deterministic local bundle and tests |
 | OPS-001 | Standardize local execution on locked `uv` commands | Complete | Merged in PR #1; `make validate` is the local assurance entrypoint |
 | GOV-001 | Establish planning, tracking and lockstep documentation | Complete | Merged in PR #1 with mandatory publication-status reporting |
+| GOV-003 | Adopt the estate publication lifecycle contract | Complete: local pass | `okf.publication.json`, repository methodology, local policy and lockstep tests map affected planes without widening local-only trust. Manual Pages packaging and deployment are time-bounded and non-cancelling. Frozen-base, corpus, semantic and assurance bytes remain unchanged; affected browser handoffs and additive documentation projections move in lockstep, and a served exact-head identity for unattended Chrome receipts remains backlogged rather than simulated |
 | GOV-002 | Protect remote `main` for the sole-developer workflow | Deferred by platform | GitHub returned HTTP 403: private-repository branch protection requires GitHub Pro or public visibility; operational PR-only policy remains in force |
 | PROF-001 | Approve `okf-domain-profile.v1` | Complete | Approved by `owner:chris-page-gov` on 2026-08-07; bounded source registration authorised |
 | FIX-001 | Contract the three vertical-slice fixtures | Complete | Three synthetic v1 contracts approved with PROF-001 and validated locally |
@@ -26,7 +27,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 | POP-001 | Contract the full 293-family population | Complete | Owner-authorised `life-course-population-contract.v1`; 48 processes map all 293 families exactly once; dossier, source-link, predicate and shape contracts validate locally |
 | POP-002 | Extend the universal Explorer contract | Complete | Merged as OKF Explorer PR #72: authored record narratives and typed link/JSON/XML/text source access, with full three-browser assurance and no Pages update |
 | POP-003 | Migrate the six reviewed families | Complete: local pass | [Local deterministic and browser review](evaluation/reviews/three-slice-population-migration-2026-08-08.md): six population-complete dossiers, 53 link-only resources, 602 concepts, 1,025 governed relationships and zero snapshots |
-| POP-004 | Implement shared authority and source infrastructure | Complete: local pass | [2026-08-08 review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md): 382 principal areas, 19 strategic authorities, 397 GSS geographies, 438 organizations, ten sector maps and seven active metadata-only receipts |
+| POP-004 | Implement shared authority and source infrastructure | Complete: local pass | [2026-08-08 review](evaluation/reviews/shared-authority-source-infrastructure-2026-08-08.md): 382 principal areas, 19 strategic authorities, 397 GSS geographies, 438 organisations, ten sector maps and seven active metadata-only receipts |
 | PACK-001 | Populate family beginnings | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-1-family-beginnings-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions, four-nation handoffs and passing local Explorer journeys |
 | PACK-002 | Populate learning and transition | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-2-learning-transition-2026-08-08.md): all 36 identities accounted for, 35 new dossiers, preserved driving slice, 44 active link-only sources and 13 competency questions |
 | PACK-003 | Populate work and money | Complete: local pass | [2026-08-08 review](evaluation/reviews/pack-3-work-money-2026-08-08.md): 36 dossiers and narratives, 45 active link-only sources, 13 competency questions and dated HSE rights evidence |

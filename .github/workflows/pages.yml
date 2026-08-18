@@ -6,12 +6,13 @@ name: Publish GitHub Pages
 on: {}
 
 concurrency:
-  group: pages
+  group: okf-uk-living-pages-publication
   cancel-in-progress: false
 
 jobs:
   package:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
       pages: read
@@ -42,6 +43,7 @@ jobs:
 
   deploy:
     needs: package
+    timeout-minutes: 10
     permissions:
       pages: write
       id-token: write

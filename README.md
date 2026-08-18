@@ -82,6 +82,7 @@ journeys pass a cache-bypassed real-browser check.
 - [Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)
 - [Repository status](REPOSITORY_STATUS.md)
 - [Authoring and validation guide](docs/authoring.md)
+- [Build and publication method](docs/okf-publication-method.md)
 - [Licensing decisions](LICENSE_DECISIONS.md)
 - [Attribution and third-party notices](NOTICE.md)
 - [Change log](CHANGELOG.md)
@@ -147,6 +148,24 @@ uv run --locked python -m unittest discover -s tests
 
 `make validate` runs the same required sequence. Validation is local-only by
 default; pull requests and merges do not run remote CI or update GitHub Pages.
+
+The separate [`okf.publication.json`](okf.publication.json) lifecycle contract
+maps source families to build, documentation, release, deployment and browser
+planes. It does not change semantic authority in `okf.semantic.json`. Check the
+repository-specific policy and documentation lockstep without rebuilding the
+frozen corpus:
+
+```sh
+uv run --locked python scripts/check_publication_method.py
+uv run --locked python scripts/check_documentation_lockstep.py
+```
+
+Read the [build and publication method](docs/okf-publication-method.md) before
+changing a source family, generator, workflow, publication manifest or release
+gate. The method keeps local-only assurance, exact-byte manual publication and
+the owner's existing authorisation intact. It also records why an unattended
+post-deploy exact-head browser receipt needs a separately authorised identity
+envelope rather than being simulated by this adoption.
 
 Repository-authored Markdown under `docs/` can opt into the additive review
 site with validated `publication` frontmatter. For a change that affects only
