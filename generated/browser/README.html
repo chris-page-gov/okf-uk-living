@@ -100,6 +100,7 @@ journeys pass a cache-bypassed real-browser check.
 - <a href="profiles/corpus-acquisition-policy.v1.yaml.html">[Corpus acquisition policy](profiles/corpus-acquisition-policy.v1.yaml)</a>
 - <a href="REPOSITORY_STATUS.html">[Repository status](REPOSITORY_STATUS.md)</a>
 - <a href="docs/authoring.md">[Authoring and validation guide](docs/authoring.md)</a>
+- <a href="docs/okf-publication-method.md">[Build and publication method](docs/okf-publication-method.md)</a>
 - <a href="LICENSE_DECISIONS.html">[Licensing decisions](LICENSE_DECISIONS.md)</a>
 - <a href="NOTICE.html">[Attribution and third-party notices](NOTICE.md)</a>
 - <a href="CHANGELOG.html">[Change log](CHANGELOG.md)</a>
@@ -165,6 +166,24 @@ uv run --locked python -m unittest discover -s tests
 
 `make validate` runs the same required sequence. Validation is local-only by
 default; pull requests and merges do not run remote CI or update GitHub Pages.
+
+The separate <a href="okf.publication.json">[`okf.publication.json`](okf.publication.json)</a> lifecycle contract
+maps source families to build, documentation, release, deployment and browser
+planes. It does not change semantic authority in `okf.semantic.json`. Check the
+repository-specific policy and documentation lockstep without rebuilding the
+frozen corpus:
+
+```sh
+uv run --locked python scripts/check_publication_method.py
+uv run --locked python scripts/check_documentation_lockstep.py
+```
+
+Read the <a href="docs/okf-publication-method.md">[build and publication method](docs/okf-publication-method.md)</a> before
+changing a source family, generator, workflow, publication manifest or release
+gate. The method keeps local-only assurance, exact-byte manual publication and
+the owner&#x27;s existing authorisation intact. It also records why an unattended
+post-deploy exact-head browser receipt needs a separately authorised identity
+envelope rather than being simulated by this adoption.
 
 Repository-authored Markdown under `docs/` can opt into the additive review
 site with validated `publication` frontmatter. For a change that affects only

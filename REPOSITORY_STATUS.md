@@ -5,7 +5,7 @@
   authority/source infrastructure and all eight corpus packs complete
 - Corpus: root, research overview, 293-family denominator and all 293
   population-complete family dossiers across 24 domains
-- Ontology: three normalized slice modules plus the 16-predicate governed
+- Ontology: three normalised slice modules plus the 16-predicate governed
   cross-domain registry and SHACL-style family shapes; RDF conformance is not claimed
 - Domain profile: v1 approved by the owner on 2026-08-07
 - Fixture contracts: three synthetic v1 contracts approved and validated
@@ -22,7 +22,7 @@
   terms; source content remains link-and-summary only; snapshot redistribution
   is disabled; eligible repository-authored projections are MIT
 - Authority infrastructure: 382 principal areas, 19 strategic/combined
-  authorities, 397 dated GSS geographies, 438 shared organizations, ten
+  authorities, 397 dated GSS geographies, 438 shared organisations, ten
   regulator/redress sector maps and seven active metadata-only source receipts
 - Deterministic local generation: Markdown bundle plus 9,757-concept sharded large
   projection, 879 typed source assertions, 15,810 relationships, record locator,
@@ -50,7 +50,14 @@
   visible search-to-source journeys cover national, devolved, local, health,
   legal and private-dependency cases
 - CI: scaffolded but disabled; pull requests do not run remote checks
-- Remote: public GitHub repository after explicit owner authorization on
+- Publication method: `okf.publication.json` maps source, semantic, runtime,
+  documentation, application, release, deployment and browser planes. Local
+  policy and lockstep checks retain exact-byte manual promotion, owner
+  authorisation and no routine hosted CI. Pages packaging is bounded to 15
+  minutes, deployment to 10 minutes and both workflows share one
+  non-cancelling queue. The missing served exact-head identity remains an
+  explicit blocker to unattended post-deploy browser receipts.
+- Remote: public GitHub repository after explicit owner authorisation on
   2026-08-09; complete source and history are visible
 - Main protection: server-enforced pull requests with zero required approvals;
   administrators included, conversation resolution required, force-pushes and
@@ -87,7 +94,7 @@
 - Explorer compatibility: universal per-record narrative and typed-source
   access merged in OKF Explorer PR #72 after complete protected-branch checks;
   the bundle retains seven reconciled colour facets and governed static search
-- Population contract: 293 families map exactly once to 48 normalized enclosing
+- Population contract: 293 families map exactly once to 48 normalised enclosing
   processes in eight review packs; population completion and release grade are
   separate gates
 - Publication readiness: the full corpus remains a non-release-grade,

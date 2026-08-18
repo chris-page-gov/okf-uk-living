@@ -13,6 +13,19 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ### Added
 
+- Repository-specific OKF publication-method v1 contract, lifecycle guide,
+  local policy checker and documentation-plus-changelog lockstep gate. The
+  contract maps governed sources to semantic, runtime, documentation,
+  application, release, deployment and browser planes while retaining the
+  deliberate local-only evaluation policy, owner-authorised manual deployment
+  and exact-byte promotion boundary. Both Pages workflows now share a named,
+  non-cancelling publication queue and bound packaging to 15 minutes and
+  deployment to 10 minutes. No frozen-base, corpus, semantic or assurance byte
+  is regenerated; only the affected browser handoffs, additive documentation
+  projections and overlay manifest move in lockstep. The lack of a served
+  exact-head identity is recorded as a blocker to an honest unattended browser
+  receipt rather than being hidden behind a weaker check.
+
 - Governed static-document publication through validated frontmatter,
   deterministic safe HTML, an automatically generated document index and a
   source-to-output SHA-256 manifest. A changed-path dependency gate permits a

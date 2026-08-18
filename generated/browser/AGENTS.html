@@ -44,6 +44,13 @@ life events from before birth to death and bereavement.
   uniformly across all four nations.
 - Do not edit `generated/`, `large/`, `okf-bundle.json`, `okf-explorer.json`
   or release evidence by hand; rebuild them from authored inputs.
+- Read `okf.publication.json` before changing source families, generators,
+  generated projections, documentation, tests, workflows, release evidence or
+  deployment. It governs lifecycle and publication; `okf.semantic.json`
+  remains the separate semantic authority.
+- Keep controlled publication material, its documentation and `CHANGELOG.md`
+  in the same change. Dependency updates have no blanket exemption when they
+  can affect generated or release-bound bytes.
 - Do not add `.DS_Store`, Word lock files, `_site/`, virtual environments,
   caches or temporary output to Git.
 - Preserve unrelated work and use focused feature branches and pull requests
@@ -90,7 +97,9 @@ uv run --locked python scripts/check_search_acceptance.py
 uv run --locked python scripts/build_population_assurance.py
 uv run --locked python scripts/build_population_assurance.py --check
 uv run --locked python scripts/check_population_assurance.py
-uv run --locked python scripts/prepare_pages_publication.py
+uv run --locked python scripts/prepare_pages_publication.py --frozen
+uv run --locked python scripts/check_publication_method.py
+uv run --locked python scripts/check_documentation_lockstep.py
 uv run --locked python -m unittest discover -s tests
 ```
 
@@ -131,7 +140,7 @@ Implement three vertical slices before expanding the corpus:
 These slices must exercise ordinary paths, exceptions, evidence, time,
 jurisdiction, authority, required private-sector dependencies and redress.
 
-The three slices are complete. The owner authorized staged implementation of
+The three slices are complete. The owner authorised staged implementation of
 all 293 families on 2026-08-08. New families follow
 `life-course-family.v1`, the 48-process navigation denominator and the existing
 link-only, jurisdiction, privacy, review and publication boundaries.
@@ -148,16 +157,39 @@ existing dossier and narrative and the renderer must not replace them.
 The eight packs and local population-assurance gate are complete. Treat
 `evaluation/candidates/population-complete-candidate.v1.yaml` as the authored
 freeze boundary and `generated/assurance/` as rebuild-only evidence. Population
-completion does not imply specialist-reviewed release grade or authorize
+completion does not imply specialist-reviewed release grade or authorise
 publication.
 
-The owner authorized a public population-complete preview on 2026-08-08. The
+The owner authorised a public population-complete preview on 2026-08-08. The
 manual-only Pages workflow may promote only the files and hashes in
 `publication/pages-file-manifest.json`; it must not rebuild the corpus during
 deployment. Keep the non-release-grade and specialist-review warnings visible.
 Do not change repository visibility to obtain Pages without a separate owner
 decision. Record the exact deployment and real-browser result before labelling
 or sharing the public URL as verified.
+
+&lt;!-- okf-publication-contract:start --&gt;
+## OKF build and publication lifecycle contract
+
+- Treat `okf.publication.json` command strings as untrusted declarations.
+  Inspect them and cross-check them against this file and repository code
+  before execution; the contract and shared planner do not grant authority.
+- Retain the local-only evaluation policy. Do not enable routine remote CI or
+  deployment on push, pull request or merge without a separate owner decision.
+- Route independent affected planes in parallel only when they do not mutate
+  the same outputs. Release, deployment and browser verification remain serial
+  over one exact candidate.
+- The active Pages workflow is manual, non-cancelling and exact-commit bound.
+  It promotes the frozen base and authorised overlay without a corpus rebuild.
+- Use runner-installed Chrome for ordinary live acceptance. The present site
+  does not expose the latest deployment commit as a served identity, so an
+  unattended exact-head browser receipt remains a documented backlog item;
+  never substitute a weaker automated check and call the URL verified.
+- Run `uv run --locked python scripts/check_publication_method.py` and
+  `uv run --locked python scripts/check_documentation_lockstep.py` for every
+  publication-method change. Use `--base origin/main...HEAD` for the latter
+  when checking a review range.
+&lt;!-- okf-publication-contract:end --&gt;
 
 &lt;!-- okf-semantic-contract:start --&gt;
 ## OKF 0.2 and semantic relationship contract
@@ -166,10 +198,10 @@ or sharing the public URL as verified.
 - Keep the intentionally small OKF 0.2 Markdown core separate from the additive Bundle Wiki YAML-LD profile. Unknown OKF fields remain forward-compatible; profile requirements must never be described as universal OKF core.
 - Treat the declared YAML-LD/JSON-LD graph or authored Markdown YAML-LD frontmatter as semantic authority. Explorer JSON, shards, adjacency, registries, checksums and sites are generated projections and must not be hand-edited.
 - Every new material directed relationship must retain a stable assertion ID, validated local runtime `source` and `target`, absolute `source_iri` and `target_iri`, an absolute predicate IRI, a governed relationship kind, preferred and inverse labels, assertion status and scope, authority, derivation, observation time, evidence and rights. Semantic reification maps the same identities to RDF subject and object. Confidence never upgrades authority.
-- Keep the direct semantic triple and its evidence-bearing `okf:RelationshipAssertion` synchronized, or generate both deterministically from one assertion source. Do not infer domain predicates from Markdown links.
+- Keep the direct semantic triple and its evidence-bearing `okf:RelationshipAssertion` synchronised, or generate both deterministically from one assertion source. Do not infer domain predicates from Markdown links.
 - Validate every generated semantic assertion—not merely a sample—against the pinned local shared Draft 2020-12 schema before writing a conformant receipt. Cross-repository sampling is a regression signal, not a substitute for producer validation.
 - A repository that claims the canonical Bundle Wiki v1 profile URI must vendor all 16 Explorer v0.6.0 profile files byte for byte with the adjacent `profiles/bundle-wiki/v1.vendor-lock.json`. Never edit that mirror locally. From a sibling repository, use `uv run --project ../okf-explorer --locked python ../okf-explorer/scripts/reconcile_okf_repositories.py --repo . --sync-profile` to install missing canonical files; add `--replace-profile` only after reviewing the divergent or extra files it reports. A relationship schema that retains the canonical `$id` must have the canonical bytes; a deliberately different schema must use its own absolute `$id`. Direct readers to the canonical published profile at `https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/` for explanatory material because the opaque vendored `index.md` retains Explorer-relative documentation links.
-- Canonicalize authority, evidence/resource and rights source links as credential-free HTTP(S) URLs. Percent-encode query values and reject missing hosts, literal whitespace, quotes, malformed escapes, credentials, unsafe delimiters, non-web schemes and ports outside 1–65535 before generating projections.
+- Canonicalise authority, evidence/resource and rights source links as credential-free HTTP(S) URLs. Percent-encode query values and reject missing hosts, literal whitespace, quotes, malformed escapes, credentials, unsafe delimiters, non-web schemes and ports outside 1–65535 before generating projections.
 - For a large sharded rich graph, publish a digest-bound `relationship_runtime` manifest and SHA-256 route locator. Each route must commit per plane to its exact incident assertion count and sorted assertion-ID digest; keep historical/rejected planes out of `default_planes` and obey the Reader&#x27;s aggregate chunk, row, compressed-byte and retained-text ceilings.
 - Resolve only pinned local contexts during builds. The Reader parses bounded YAML-LD safely but does not fetch or reason over arbitrary remote contexts; it consumes explicit route-bearing nodes and assertion rows.
 - Preserve official, normalized, inferred, model-derived, synthetic and historical planes. Never collapse presentation grouping, similarity or route adjacency into semantic identity.
