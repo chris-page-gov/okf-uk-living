@@ -189,3 +189,11 @@ or sharing the public URL as verified.
 - Preserve official, normalized, inferred, model-derived, synthetic and historical planes. Never collapse presentation grouping, similarity or route adjacency into semantic identity.
 - Run any declared `tooling.setup` commands before the build/check commands when the repository environment is absent. Then run `uv run --project ../okf-explorer --locked python ../okf-explorer/scripts/reconcile_okf_repositories.py --repo .` after semantic changes when the sibling Explorer checkout is available, followed by every local command in `okf.semantic.json` and this repository's existing validation/release guidance.
 <!-- okf-semantic-contract:end -->
+
+<!-- okf-standards:start -->
+## OKF standards references
+
+Read [the central standards and bundle catalogue reference](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md)
+before changing specification links or an OKF version declaration. Resolve the
+implemented version through the shared register and preserve historical pins.
+<!-- okf-standards:end -->
