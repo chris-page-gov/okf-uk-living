@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — standards references
+
+- Link the central current and historical OKF standards register and public bundle catalogue.
+
+
 All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ## [Unreleased]

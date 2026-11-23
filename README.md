@@ -232,3 +232,7 @@ This project is an educational and navigational knowledge product. It does not
 replace authoritative government services and must not make personalised
 eligibility, legal or medical decisions. Every implemented service route must
 retain its official source, jurisdiction, observation time and limitations.
+
+## OKF standards and bundle discovery
+
+The [central standards register](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md) records current and historical OKF specifications, version-specific pins and the public bundle catalogue. Use the [machine-readable register](https://raw.githubusercontent.com/chris-page-gov/okf-explorer/main/registry/okf-standards.json) to resolve the version implemented by this repository.
