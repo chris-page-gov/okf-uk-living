@@ -79,6 +79,7 @@ class ExploreOkfPublicationTests(unittest.TestCase):
             ],
             "total_bytes": len(self.new_index) + len(self.asset),
         }
+        self.add_core03_fixture()
         self.manifest_path = self.root / "publication/explore-okf-file-manifest.json"
         self.write_overlay_manifest()
 
@@ -118,6 +119,84 @@ class ExploreOkfPublicationTests(unittest.TestCase):
             json.dumps(self.overlay if overlay is None else overlay),
             encoding="utf-8",
         )
+
+    def add_core03_fixture(self) -> None:
+        authorization_source = (
+            "evaluation/publication/core-0.3-preview-authorization-2026-11-28.md"
+        )
+        authorization_target = "core-0.3-preview/authorization.md"
+        descriptor_source = "okf-explorer.json"
+        descriptor_target = "okf-explorer-core-0.3.json"
+        closure_source = "core-0.3-preview/closure.json"
+        closure_target = "core-0.3-preview/closure.json"
+        index_source = "core-0.3-preview/index.html"
+        index_target = "core-0.3-preview/index.html"
+        authorization = b"Owner-authorised test preview.\n"
+        descriptor = json.dumps({
+            "okf_version": "0.3",
+            "status": "owner-authorised-public-review-preview",
+            "source": {"publication_authorized": True},
+            "entrypoints": {"data_manifest": "large/data/manifest.json"},
+        }, sort_keys=True).encode()
+        semantic = b"fixture semantic candidate\n"
+        (self.root / authorization_source).parent.mkdir(parents=True)
+        (self.root / authorization_source).write_bytes(authorization)
+        (self.root / descriptor_source).write_bytes(descriptor)
+        (self.root / "generated/semantic").mkdir(parents=True)
+        semantic_source = "generated/semantic/test.json"
+        semantic_target = "core-0.3-preview/generated/semantic/test.json"
+        (self.root / semantic_source).write_bytes(semantic)
+
+        mapped = [
+            self.entry(authorization_source, authorization_target, authorization),
+            self.entry(descriptor_source, descriptor_target, descriptor),
+            self.entry(semantic_source, semantic_target, semantic),
+        ]
+        candidate_assets = [
+            {"path": authorization_target, "sha256": digest(authorization)},
+            {"path": semantic_target, "sha256": digest(semantic)},
+        ]
+        closure = {
+            "schema": "okf-uk-living-core-0.3-preview-closure.v1",
+            "status": "owner-authorised-public-review-preview",
+            "release_grade": False,
+            "okf_core": {"version": "0.3", "status": "migration"},
+            "profile": {
+                "uri": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/",
+                "status": "experimental implementation profile",
+                "conformance_claim": False,
+                "source_commit": "171efeeb8525691ab6d89f4ddfac2146374e862c",
+                "files": {
+                    "profiles/bundle-wiki/v2/index.md": "c4a3f30009c73320ff87703e54d9b8d38ef640e6e30342422619236eaaf90a9d",
+                    "profiles/bundle-wiki/v2/repository-contract.schema.json": "168688fc8e90eff592ed3d6e38671391a9797d4308379ca9129b406e41c1d428",
+                },
+            },
+            "authorization": {"path": authorization_source, "sha256": digest(authorization)},
+            "candidate": {
+                "core_descriptor": {"path": descriptor_target, "sha256": digest(descriptor)},
+                "assets": candidate_assets,
+            },
+            "shared_frozen_base": {"sha256": self.base_manifest_sha256, "large_data_assets": []},
+        }
+        closure_bytes = (json.dumps(closure, indent=2, sort_keys=True) + "\n").encode()
+        (self.root / closure_source).parent.mkdir(parents=True)
+        (self.root / closure_source).write_bytes(closure_bytes)
+        index = b"Core 0.3 review preview fixture\n"
+        (self.root / index_source).write_bytes(index)
+        mapped.extend([
+            self.entry(closure_source, closure_target, closure_bytes),
+            self.entry(index_source, index_target, index),
+        ])
+        self.overlay["files"].extend(mapped)
+        self.overlay["file_count"] = len(self.overlay["files"])
+        self.overlay["total_bytes"] += sum(item["bytes"] for item in mapped)
+        self.overlay["core_0_3_preview"] = {
+            "state": "owner-authorised-review-preview",
+            "route": "core-0.3-preview/",
+            "authorization_record": authorization_source,
+            "release_grade": False,
+            "closure_manifest": {"path": closure_target, "sha256": digest(closure_bytes)},
+        }
 
     def validate(self, overlay: dict[str, object] | None = None) -> list[str]:
         return publication.validate_overlay(
@@ -338,7 +417,16 @@ class ExploreOkfPublicationTests(unittest.TestCase):
 
         self.assertEqual(0, result, stderr)
         self.assertEqual(
-            {"explore/asset.json", "index.html", "kept.txt"},
+            {
+                "explore/asset.json",
+                "index.html",
+                "kept.txt",
+                "okf-explorer-core-0.3.json",
+                "core-0.3-preview/authorization.md",
+                "core-0.3-preview/closure.json",
+                "core-0.3-preview/generated/semantic/test.json",
+                "core-0.3-preview/index.html",
+            },
             publication.published_content_targets(self.root / "_site"),
         )
 

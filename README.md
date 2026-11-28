@@ -1,6 +1,6 @@
 # A Life in the UK
 
-A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
+A citizen-centred Open Knowledge Format (OKF v0.3) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 
@@ -14,6 +14,13 @@ every local variation. None of the 293 families has named specialist
 acceptance; specialist review is not required for 2 and remains required for
 291. This is independent exploratory research, not an official service,
 released data product or source of personalised advice.
+
+An owner-authorised Core 0.3 migration preview is prepared as a separate,
+additive manual-publication route. It retains `migration` status and the
+experimental-profile, specialist-review and source-freshness limits. The
+existing Core 0.2 descriptor and its frozen publication remain unchanged;
+the new route is not described as verified until its exact deployment and
+browser journey pass.
 
 The unchanged corpus exposes 24 life-course domains, 48 process groupings,
 authored narratives, typed official links and governed journey graphs. The

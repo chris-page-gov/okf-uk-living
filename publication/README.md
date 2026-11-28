@@ -38,6 +38,16 @@ release grade or make a URL verified.
 The preview is not release-grade. Its descriptor and landing page retain the
 291 specialist-review warnings and direct readers to current official sources.
 
+The owner separately authorised the additive
+[`/core-0.3-preview/`](../core-0.3-preview/) route. It uses the candidate Core
+0.3 descriptor and generated semantic/browser assets with a closure manifest
+that pins each candidate file and the original frozen base manifest. Its
+large-data URLs reuse only the unchanged, hash-pinned Core 0.2 publication.
+The preview keeps the producer's migration status and does not claim full
+Bundle Wiki v2 acceptance, specialist review, current source observation or
+release grade. It does not replace the existing Core 0.2 descriptor or any of
+the 1,814 frozen targets.
+
 Repository-authored review documents use the additive
 `okf-site-document-publication.v1` contract. A document is nominated in its
 frontmatter, rendered as safe static HTML and indexed automatically. The

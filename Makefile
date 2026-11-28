@@ -24,7 +24,9 @@ check:
 	uv run --locked python scripts/build_browser_handoff.py --check
 	uv run --locked python scripts/build_okf_bundle.py --check
 	uv run --locked python scripts/check_okf.py
+	uv run --locked python scripts/check_okf_v03.py
 	uv run --locked python scripts/check_contracts.py
+	uv run --locked python scripts/check_semantic_contract.py
 	uv run --locked python scripts/check_sources.py
 	uv run --locked python scripts/check_inventory.py
 	uv run --locked python scripts/check_service_denominator.py
@@ -69,6 +71,7 @@ check-browser-handoff:
 
 check-contracts:
 	uv run --locked python scripts/check_contracts.py
+	uv run --locked python scripts/check_semantic_contract.py
 
 check-sources:
 	uv run --locked python scripts/check_sources.py

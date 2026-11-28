@@ -7,6 +7,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 
 | ID | Delivery item | State | Evidence or next gate |
 |---|---|---|---|
+| CORE-03 | Migrate active producer and generated descriptors to pinned Core 0.3 | Public review preview prepared; formal acceptance remains open | Root and generated descriptors declare 0.3; the contract references the canonical Explorer v2 profile, which remains experimental. The local Reader v0.9.2 graph and source-link journeys pass at desktop and phone widths. Full profile acceptance, external source re-observation, specialist review and release assurance remain open. The public route is a separate additive preview; the original Core 0.2 base stays frozen |
 | BOOT-001 | Reviewed local initialization | Complete | Initialization commit `5572d0c`; deterministic local bundle and tests |
 | OPS-001 | Standardize local execution on locked `uv` commands | Complete | Merged in PR #1; `make validate` is the local assurance entrypoint |
 | GOV-001 | Establish planning, tracking and lockstep documentation | Complete | Merged in PR #1 with mandatory publication-status reporting |

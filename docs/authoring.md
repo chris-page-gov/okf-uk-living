@@ -2,7 +2,7 @@
 
 ## Concept records
 
-The bundle root is `index.md` and declares `okf_version: "0.2"`. Section
+The bundle root is `index.md` and declares `okf_version: "0.3"`, with title, description and licence metadata. Section
 `index.md` files have no frontmatter. Every other concept uses:
 
 ```yaml
@@ -138,6 +138,20 @@ Confidence, similarity and display grouping never upgrade an assertion's
 authority.
 
 The build uses pinned contexts and emits deterministic YAML-LD and JSON-LD.
+
+### Core 0.3 migration status
+
+The isolated migration candidate declares the approved Core 0.3 specification
+pin in `okf.semantic.json` and the canonically published Bundle Wiki v2
+profile, which is currently marked experimental. Run
+`uv run --locked python scripts/check_okf_v03.py` for the producer's bounded
+Markdown structural check and `uv run --locked python
+scripts/check_semantic_contract.py` for the v2 contract and historical baseline. This check does not certify source accuracy, full
+profile conformance, Explorer support, browser journeys or publication. The
+independent Core 0.2 source and projection fingerprints remain in
+`evaluation/compatibility/okf-core-v0.2-baseline.v1.json`; the approved v1
+profile and existing Explorer consumer fixture are unchanged.
+
 The browser may parse an explicit route-bearing YAML-LD graph, but it does not
 fetch arbitrary remote contexts or perform OWL inference. Fix authored inputs
 or the generator when semantic checks fail; do not edit `generated/semantic/`,

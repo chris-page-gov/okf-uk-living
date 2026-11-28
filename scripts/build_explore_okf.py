@@ -17,6 +17,7 @@ from typing import Any
 
 from build_large_corpus import GENERATED_AT, SNAPSHOT
 from build_okf_bundle import ROOT
+from core03_preview import build_core03_preview_outputs
 from explore_okf_projection import (
     JOURNEY_PROJECTION_SCHEMA_PATH,
     JOURNEY_PROJECTION_SCHEMA_PUBLIC_PATH,
@@ -775,7 +776,9 @@ def build_descriptor_and_manifest(
 
 
 def overlay_manifest(
-    outputs: dict[Path, str | bytes], document_public_paths: list[Path]
+    outputs: dict[Path, str | bytes],
+    document_public_paths: list[Path],
+    core03_public_paths: list[tuple[Path, Path]],
 ) -> str:
     ai_public_paths = sorted(
         path
@@ -793,6 +796,7 @@ def overlay_manifest(
         (MANIFEST_PATH, MANIFEST_PATH, None),
         *((path, path, None) for path in ai_public_paths),
         *((public_path, public_path, None) for public_path in document_public_paths),
+        *((source, target, None) for source, target in core03_public_paths),
         (DOCUMENT_MANIFEST_PATH, DOCUMENT_MANIFEST_PATH, None),
     ]
     files = []
@@ -808,6 +812,13 @@ def overlay_manifest(
         if replaces_sha256 is not None:
             item["replaces_sha256"] = replaces_sha256
         files.append(item)
+    core03_closure_path = Path("core-0.3-preview/closure.json")
+    core03_closure = outputs[core03_closure_path]
+    core03_closure_bytes = (
+        core03_closure
+        if isinstance(core03_closure, bytes)
+        else core03_closure.encode("utf-8")
+    )
     value = {
         "schema": "life-course-pages-additive-publication-manifest.v2",
         "publication_state": "owner-authorised",
@@ -835,6 +846,19 @@ def overlay_manifest(
             "evaluation/publication/"
             "documentation-overlay-authorization-2026-08-17.md"
         ),
+        "core_0_3_preview": {
+            "state": "owner-authorised-review-preview",
+            "route": "core-0.3-preview/",
+            "authorization_record": (
+                "evaluation/publication/"
+                "core-0.3-preview-authorization-2026-11-28.md"
+            ),
+            "closure_manifest": {
+                "path": core03_closure_path.as_posix(),
+                "sha256": sha256_bytes(core03_closure_bytes),
+            },
+            "release_grade": False,
+        },
         "deployment_automatic": False,
         "file_count": len(files),
         "total_bytes": sum(item["bytes"] for item in files),
@@ -967,8 +991,10 @@ def build_outputs() -> dict[Path, str | bytes]:
         **ai_family_pages,
         **learning_documents,
     }
+    core03_outputs, core03_public_paths = build_core03_preview_outputs()
+    outputs.update(core03_outputs)
     outputs[OVERLAY_MANIFEST_PATH] = overlay_manifest(
-        outputs, list(document_publications.values())
+        outputs, list(document_publications.values()), core03_public_paths
     )
     return outputs
 

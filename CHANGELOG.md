@@ -9,6 +9,18 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
 
 ## [Unreleased]
 
+### Changed
+
+- Prepare the active OKF producer for Core 0.3 at the approved pinned
+  specification. Root and generated bundle descriptors declare 0.3; the small
+  and large generators share that version. Core structural validation covers
+  the local Markdown tree. The semantic contract references the canonical
+  Explorer Bundle Wiki v2 profile, which remains marked experimental; the
+  canonical v1 schemas and vendor lock are retained as historical compatibility
+  evidence. Historical Core 0.2 source and projection fingerprints remain
+  separate. The migration remains non-release-grade with profile-level and
+  specialist acceptance outstanding.
+
 ### Fixed
 
 - Static review-document footers now link to the existing browser-rendered
@@ -17,6 +29,10 @@ All notable changes to this project are recorded here. Dates use ISO 8601.
   extensionless file responses, without changing corpus or semantic bytes.
 
 ### Added
+
+- Added bounded Core 0.3 structural validation and regression coverage for
+  root metadata, duplicate frontmatter keys, file-relative paths and current
+  verification events.
 
 - Repository-specific OKF publication-method v1 contract, lifecycle guide,
   local policy checker and documentation-plus-changelog lockstep gate. The

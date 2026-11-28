@@ -34,6 +34,14 @@ MANIFEST_SOURCES = {
     "publication/explore-okf-file-manifest.json",
     "publication/pages-file-manifest.json",
 }
+CORE03_PREFIX = "core-0.3-preview/"
+CORE03_ALLOWED_SOURCE_TARGETS = {
+    ("okf-explorer.json", "okf-explorer-core-0.3.json"),
+    (
+        "evaluation/publication/core-0.3-preview-authorization-2026-11-28.md",
+        "core-0.3-preview/authorization.md",
+    )
+}
 SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
 
 
@@ -43,6 +51,169 @@ def sha256_path(path: Path) -> str:
 
 def is_sha256(value: object) -> bool:
     return isinstance(value, str) and SHA256_PATTERN.fullmatch(value) is not None
+
+
+def is_allowed_core03_mapping(source: str, target: str) -> bool:
+    if (source, target) in CORE03_ALLOWED_SOURCE_TARGETS:
+        return True
+    return (
+        source.startswith(("generated/semantic/", "generated/browser/"))
+        and target == CORE03_PREFIX + source
+    )
+
+
+def validate_core03_closure(
+    overlay: dict[str, Any],
+    files: list[object],
+    base_by_target: dict[str, dict[str, Any]],
+) -> list[str]:
+    errors: list[str] = []
+    record_path = (
+        "evaluation/publication/core-0.3-preview-authorization-2026-11-28.md"
+    )
+    route = "core-0.3-preview/"
+    closure_target = "core-0.3-preview/closure.json"
+    index_target = "core-0.3-preview/index.html"
+    descriptor_target = "okf-explorer-core-0.3.json"
+    declaration = overlay.get("core_0_3_preview")
+    if not isinstance(declaration, dict):
+        return ["Core 0.3 preview publication declaration is missing"]
+    if declaration.get("state") != "owner-authorised-review-preview":
+        errors.append("Core 0.3 preview is not marked as owner-authorised review")
+    if declaration.get("route") != route:
+        errors.append("Core 0.3 preview route is unexpected")
+    if declaration.get("authorization_record") != record_path:
+        errors.append("Core 0.3 preview authorisation record is unexpected")
+    if declaration.get("release_grade") is not False:
+        errors.append("Core 0.3 preview must not be release grade")
+    closure_ref = declaration.get("closure_manifest")
+    if not isinstance(closure_ref, dict):
+        return errors + ["Core 0.3 preview closure reference is malformed"]
+    if closure_ref.get("path") != closure_target:
+        errors.append("Core 0.3 preview closure path is unexpected")
+    if not is_sha256(closure_ref.get("sha256")):
+        errors.append("Core 0.3 preview closure SHA-256 is malformed")
+
+    overlay_by_target = {
+        item.get("target"): item
+        for item in files
+        if isinstance(item, dict) and isinstance(item.get("target"), str)
+    }
+    closure_entry = overlay_by_target.get(closure_target)
+    if not isinstance(closure_entry, dict):
+        return errors + ["Core 0.3 preview closure file is missing from the overlay"]
+    if closure_entry.get("sha256") != closure_ref.get("sha256"):
+        errors.append("Core 0.3 preview closure SHA-256 differs from its overlay entry")
+    try:
+        closure_bytes = (ROOT / safe_relative_path(closure_entry.get("source"), "Core 0.3 closure source")).read_bytes()
+        closure = json.loads(closure_bytes)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return errors + ["Core 0.3 preview closure cannot be read as JSON"]
+    if sha256_path(ROOT / safe_relative_path(closure_entry.get("source"), "Core 0.3 closure source")) != closure_ref.get("sha256"):
+        errors.append("Core 0.3 preview closure bytes differ from the declared digest")
+    if closure.get("schema") != "okf-uk-living-core-0.3-preview-closure.v1":
+        errors.append("Core 0.3 preview closure schema is unsupported")
+    if closure.get("status") != "owner-authorised-public-review-preview" or closure.get("release_grade") is not False:
+        errors.append("Core 0.3 preview closure has an unsafe publication status")
+    core = closure.get("okf_core", {})
+    if not isinstance(core, dict) or core.get("version") != "0.3" or core.get("status") != "migration":
+        errors.append("Core 0.3 preview closure must retain migration status")
+
+    profile = closure.get("profile", {})
+    expected_profile_hashes = {
+        "profiles/bundle-wiki/v2/index.md": "c4a3f30009c73320ff87703e54d9b8d38ef640e6e30342422619236eaaf90a9d",
+        "profiles/bundle-wiki/v2/repository-contract.schema.json": "168688fc8e90eff592ed3d6e38671391a9797d4308379ca9129b406e41c1d428",
+    }
+    if (
+        not isinstance(profile, dict)
+        or profile.get("uri") != "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/"
+        or profile.get("status") != "experimental implementation profile"
+        or profile.get("conformance_claim") is not False
+        or profile.get("source_commit") != "171efeeb8525691ab6d89f4ddfac2146374e862c"
+        or profile.get("files") != expected_profile_hashes
+    ):
+        errors.append("Core 0.3 preview profile identity or experimental status is unexpected")
+
+    candidate = closure.get("candidate", {})
+    if not isinstance(candidate, dict):
+        candidate = {}
+    descriptor = candidate.get("core_descriptor", {})
+    expected_assets: dict[str, str] = {}
+    if isinstance(descriptor, dict) and descriptor.get("path") == descriptor_target:
+        expected_assets[descriptor_target] = str(descriptor.get("sha256", ""))
+        descriptor_entry = overlay_by_target.get(descriptor_target)
+        if not isinstance(descriptor_entry, dict) or descriptor_entry.get("sha256") != descriptor.get("sha256"):
+            errors.append("Core 0.3 Reader descriptor is not bound by the overlay")
+        else:
+            try:
+                descriptor_path = ROOT / safe_relative_path(
+                    descriptor_entry.get("source"), "Core 0.3 descriptor source"
+                )
+                descriptor_value = json.loads(descriptor_path.read_text(encoding="utf-8"))
+                if (
+                    descriptor_value.get("okf_version") != "0.3"
+                    or descriptor_value.get("status") != "owner-authorised-public-review-preview"
+                    or descriptor_value.get("source", {}).get("publication_authorized") is not True
+                ):
+                    errors.append("Core 0.3 Reader descriptor does not carry its authorised preview status")
+                entrypoints = descriptor_value.get("entrypoints", {})
+                for path_value in entrypoints.values() if isinstance(entrypoints, dict) else []:
+                    if isinstance(path_value, dict):
+                        path_value = path_value.get("path")
+                    if isinstance(path_value, str) and not path_value.startswith("https://"):
+                        safe_relative_path(path_value, "Core 0.3 descriptor resource")
+            except (OSError, ValueError, json.JSONDecodeError, AttributeError):
+                errors.append("Core 0.3 Reader descriptor is invalid JSON")
+    else:
+        errors.append("Core 0.3 Reader descriptor path is unexpected")
+    assets = candidate.get("assets")
+    if not isinstance(assets, list) or not assets:
+        errors.append("Core 0.3 candidate asset list is missing")
+        assets = []
+    for item in assets:
+        if not isinstance(item, dict):
+            errors.append("Core 0.3 candidate asset entry is malformed")
+            continue
+        target = item.get("path")
+        digest = item.get("sha256")
+        if not isinstance(target, str) or not target.startswith(route) or not is_sha256(digest):
+            errors.append("Core 0.3 candidate asset path or digest is malformed")
+            continue
+        if target in expected_assets:
+            errors.append(f"Core 0.3 candidate asset is duplicated: {target}")
+        expected_assets[target] = digest
+        overlay_item = overlay_by_target.get(target)
+        if not isinstance(overlay_item, dict) or overlay_item.get("sha256") != digest:
+            errors.append(f"Core 0.3 candidate asset is not bound by the overlay: {target}")
+    expected_assets[closure_target] = str(closure_ref.get("sha256", ""))
+    if index_target not in overlay_by_target:
+        errors.append("Core 0.3 preview index page is missing from the overlay")
+    else:
+        expected_assets[index_target] = str(overlay_by_target[index_target].get("sha256", ""))
+    actual_core_targets = {
+        target for target in overlay_by_target
+        if target.startswith(route) or target == descriptor_target
+    }
+    if actual_core_targets != set(expected_assets):
+        errors.append("Core 0.3 preview overlay targets differ from its closure")
+
+    shared = closure.get("shared_frozen_base", {})
+    if not isinstance(shared, dict) or shared.get("sha256") != EXPECTED_PAGES_MANIFEST_SHA256:
+        errors.append("Core 0.3 preview does not bind the frozen base manifest")
+    else:
+        declared = shared.get("large_data_assets")
+        expected_shared = {
+            path: {"bytes": item.get("bytes"), "sha256": item.get("sha256")}
+            for path, item in base_by_target.items()
+            if path.startswith("large/data/")
+        }
+        observed_shared = {
+            item.get("path"): {"bytes": item.get("bytes"), "sha256": item.get("sha256")}
+            for item in declared if isinstance(item, dict)
+        } if isinstance(declared, list) else {}
+        if observed_shared != expected_shared:
+            errors.append("Core 0.3 preview shared data differs from the frozen base manifest")
+    return errors
 
 
 def safe_relative_path(value: object, label: str) -> Path:
@@ -210,7 +381,9 @@ def validate_overlay(overlay: dict[str, Any], base: dict[str, Any]) -> list[str]
                     "Explore OKF index.html does not bind the frozen target SHA-256"
                 )
         else:
-            if source != target:
+            if source != target and not is_allowed_core03_mapping(
+                source_name, target_name
+            ):
                 errors.append(
                     "Explore OKF additive source and target differ: "
                     f"{source_name} -> {target_name}"
@@ -253,6 +426,7 @@ def validate_overlay(overlay: dict[str, Any], base: dict[str, Any]) -> list[str]
         or overlay.get("total_bytes") != observed_total
     ):
         errors.append("Explore OKF overlay total byte count is inconsistent")
+    errors.extend(validate_core03_closure(overlay, files, base_by_target))
     return errors
 
 

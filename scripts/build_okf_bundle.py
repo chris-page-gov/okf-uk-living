@@ -16,6 +16,8 @@ from urllib.parse import unquote
 
 import yaml
 
+from okf_v03 import OKF_VERSION
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "okf.config.json"
@@ -92,12 +94,12 @@ def validate_document(path_id: str, metadata: dict[str, Any], body: str) -> list
     errors: list[str] = []
     path = Path(path_id)
     if path.name == "index.md":
-        allowed = {"okf_version"} if path_id == "index.md" else set()
+        allowed = set(metadata) if path_id == "index.md" else set()
         unexpected = sorted(set(metadata) - allowed)
         if unexpected:
             errors.append(f"{path_id}: reserved index has unsupported frontmatter: {', '.join(unexpected)}")
-        if path_id == "index.md" and metadata.get("okf_version") != "0.2":
-            errors.append(f'{path_id}: bundle root must declare okf_version: "0.2"')
+        if path_id == "index.md" and metadata.get("okf_version") != OKF_VERSION:
+            errors.append(f'{path_id}: bundle root must declare okf_version: "0.3"')
     elif path.name == "log.md":
         if metadata:
             errors.append(f"{path_id}: reserved log must not have frontmatter")
@@ -169,6 +171,7 @@ def relationship_id(source_id: str, target_id: str, kind: str) -> str:
 
 def build_bundle() -> tuple[dict[str, Any], list[str]]:
     config = load_config()
+    root_metadata, _ = parse_document(ROOT / "index.md")
     paths = markdown_paths(config)
     known_ids = {path.relative_to(ROOT).as_posix() for path in paths}
     nodes: dict[str, dict[str, Any]] = {}
@@ -275,14 +278,17 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
     bundle = {
         "schema": "okf-explorer-bundle.v0",
         "kind": "okf-bundle",
-        "okf_version": "0.2",
+        "okf_version": OKF_VERSION,
         "generated_by": "scripts/build_okf_bundle.py",
         "generated_at": generated_at,
         "meta": {
-            "title": config["siteTitle"],
             "default_corpus": corpus_config["id"],
             "corpus_order": [corpus_config["id"]],
-            "core_conformance": "OKF v0.2",
+            "core_conformance": "OKF v0.3",
+            "title": root_metadata.get("title", config["siteTitle"]),
+            "description": root_metadata.get("description", ""),
+            **root_metadata,
+            "license": root_metadata.get("license", "MIT"),
             "status": "research-and-implementation-scaffold",
             "license": "MIT",
             "license_record": "generated/browser/LICENSE_DECISIONS.html",

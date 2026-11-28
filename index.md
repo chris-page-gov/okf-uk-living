@@ -1,10 +1,13 @@
 ---
-okf_version: "0.2"
+okf_version: "0.3"
+title: A Life in the UK
+description: A citizen-centred guide to public services, rights and life events.
+license: MIT
 ---
 
 # A Life in the UK
 
-An **Open Knowledge Format (OKF v0.2)** bundle explaining how people interact
+An **Open Knowledge Format (OKF v0.3)** bundle explaining how people interact
 with public services, rights, responsibilities and institutions throughout
 life in the United Kingdom.
 

@@ -206,8 +206,8 @@ def validate_large_projection() -> list[str]:
             "validation report must bind exhaustive semantic and runtime "
             "assertion schema validation"
         )
-    if semantic.get("okf_version") != "0.2" or semantic.get("@type") != "okf:Bundle":
-        errors.append("semantic graph must identify itself as an OKF 0.2 bundle")
+    if semantic.get("okf_version") != "0.3" or semantic.get("@type") != "okf:Bundle":
+        errors.append("semantic graph must identify itself as an OKF 0.3 bundle")
     if len(semantic_nodes) != len(rows) or len(semantic_assertions) != len(relationships):
         errors.append("semantic entities and assertions must reconcile runtime node and relationship counts")
     for edge in relationships:
