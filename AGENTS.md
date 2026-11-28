@@ -174,10 +174,10 @@ or sharing the public URL as verified.
 <!-- okf-publication-contract:end -->
 
 <!-- okf-semantic-contract:start -->
-## OKF 0.2 and semantic relationship contract
+## OKF Core 0.3 and semantic relationship contract
 
 - Read `okf.semantic.json` before changing Markdown, ontology, semantic, relationship, bundle, or Reader-facing files. It records this repository's authored inputs, generated outputs, exact build/check commands, delivery mode, and current migration limitations.
-- Keep the intentionally small OKF 0.2 Markdown core separate from the additive Bundle Wiki YAML-LD profile. Unknown OKF fields remain forward-compatible; profile requirements must never be described as universal OKF core.
+- Keep OKF Core 0.3 Markdown syntax separate from the additive Bundle Wiki YAML-LD profile. Unknown OKF fields remain forward-compatible; profile requirements must never be described as universal OKF core.
 - Treat the declared YAML-LD/JSON-LD graph or authored Markdown YAML-LD frontmatter as semantic authority. Explorer JSON, shards, adjacency, registries, checksums and sites are generated projections and must not be hand-edited.
 - Every new material directed relationship must retain a stable assertion ID, validated local runtime `source` and `target`, absolute `source_iri` and `target_iri`, an absolute predicate IRI, a governed relationship kind, preferred and inverse labels, assertion status and scope, authority, derivation, observation time, evidence and rights. Semantic reification maps the same identities to RDF subject and object. Confidence never upgrades authority.
 - Keep the direct semantic triple and its evidence-bearing `okf:RelationshipAssertion` synchronised, or generate both deterministically from one assertion source. Do not infer domain predicates from Markdown links.
@@ -188,6 +188,7 @@ or sharing the public URL as verified.
 - Resolve only pinned local contexts during builds. The Reader parses bounded YAML-LD safely but does not fetch or reason over arbitrary remote contexts; it consumes explicit route-bearing nodes and assertion rows.
 - Preserve official, normalized, inferred, model-derived, synthetic and historical planes. Never collapse presentation grouping, similarity or route adjacency into semantic identity.
 - Run any declared `tooling.setup` commands before the build/check commands when the repository environment is absent. Then run `uv run --project ../okf-explorer --locked python ../okf-explorer/scripts/reconcile_okf_repositories.py --repo .` after semantic changes when the sibling Explorer checkout is available, followed by every local command in `okf.semantic.json` and this repository's existing validation/release guidance.
+- `scripts/okf_v03.py` implements the bounded local Core 0.3 structural check; run `scripts/check_okf_v03.py` after authored changes. It does not establish source accuracy, Bundle Wiki v2 profile conformance, Explorer support or release evidence. Keep the Core 0.2 baseline and v1 profile as historical compatibility evidence.
 <!-- okf-semantic-contract:end -->
 
 <!-- okf-standards:start -->

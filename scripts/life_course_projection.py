@@ -667,7 +667,7 @@ def semantic_graph(rows: list[dict[str, Any]], relationships: list[dict[str, Any
         },
         "@id": f"{PUBLIC_BASE}semantic/life-course-corpus",
         "@type": "okf:Bundle",
-        "okf_version": "0.2",
+        "okf_version": "0.3",
         "title": "A Life in the UK semantic graph",
         "@graph": graph,
     }

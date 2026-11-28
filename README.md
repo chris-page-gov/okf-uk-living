@@ -1,6 +1,6 @@
 # A Life in the UK
 
-A citizen-centred Open Knowledge Format (OKF v0.2) bundle about public
+A citizen-centred Open Knowledge Format (OKF v0.3) bundle about public
 services, rights, responsibilities and life events across the United Kingdom,
 from before birth to death and bereavement.
 

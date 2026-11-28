@@ -86,11 +86,18 @@ th { background: var(--teal-pale); }
 </ul>
 <p>All notable changes to this project are recorded here. Dates use ISO 8601.</p>
 <h2 id="unreleased">[Unreleased]</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+  <li>Prepare the active OKF producer for Core 0.3 at the approved pinned specification. Root and generated bundle descriptors declare 0.3; the small and large generators share that version. Core structural validation covers the local Markdown tree. The semantic contract uses the experimental Bundle Wiki v2 profile while retaining the canonical v1 schemas and vendor lock. Historical Core 0.2 source and projection fingerprints remain separate. Profile, Reader, browser, source-accuracy and publication acceptance remain pending; no remote or public artefact is changed.</li>
+</ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
   <li>Static review-document footers now link to the existing browser-rendered licence and attribution notice instead of the extensionless repository <code>LICENSE</code> path. This keeps the MIT boundary visible in browsers that block extensionless file responses, without changing corpus or semantic bytes.</li>
 </ul>
 <h3 id="added">Added</h3>
+<ul>
+  <li>Added bounded Core 0.3 structural validation and regression coverage for root metadata, duplicate frontmatter keys, file-relative paths and current verification events.</li>
+</ul>
 <ul>
   <li>Repository-specific OKF publication-method v1 contract, lifecycle guide, local policy checker and documentation-plus-changelog lockstep gate. The contract maps governed sources to semantic, runtime, documentation, application, release, deployment and browser planes while retaining the deliberate local-only evaluation policy, owner-authorised manual deployment and exact-byte promotion boundary. Both Pages workflows now share a named, non-cancelling publication queue and bound packaging to 15 minutes and deployment to 10 minutes. No frozen-base, corpus, semantic or assurance byte is regenerated; only the affected browser handoffs, additive documentation projections and overlay manifest move in lockstep. The lack of a served exact-head identity is recorded as a blocker to an honest unattended browser receipt rather than being hidden behind a weaker check.</li>
 </ul>
@@ -221,7 +228,7 @@ th { background: var(--teal-pale); }
   <li>Owner-approved <code>okf-explorer-large-corpus.v1</code> local projection with 293 searchable planning records, seven reconciled colour facets and filter postings, zero acquired source content and publication disabled.</li>
   <li>Visible-browser evidence closing <code>REV-001</code> through <code>REV-004</code> and validating large-corpus search and colour-filter journeys in OKF Explorer 0.5.7.</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 <ul>
   <li>Repository visibility changed from private to public after explicit owner authorisation, exposing the complete source and history and unblocking Pages.</li>
   <li><code>PAGES-001</code>, <code>VERIFY-001</code> and the verified preview handoff are complete; the preview remains non-release-grade and the Explorer UI findings remain open.</li>

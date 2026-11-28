@@ -7,6 +7,7 @@ work it tracks; [ROADMAP.md](ROADMAP.md) remains the phase-level view.
 
 | ID | Delivery item | State | Evidence or next gate |
 |---|---|---|---|
+| CORE-03 | Migrate active producer and generated descriptors to pinned Core 0.3 | Local candidate: structural, projection and repository checks pass | Root and small/large descriptors now declare 0.3; v2 semantic contract is experimental; historical 0.2 baseline retained. The local Reader v0.9.2 graph and source-link journeys pass at desktop and phone widths. Experimental profile acceptance, external source re-observation, release assurance and publication remain open |
 | BOOT-001 | Reviewed local initialization | Complete | Initialization commit `5572d0c`; deterministic local bundle and tests |
 | OPS-001 | Standardize local execution on locked `uv` commands | Complete | Merged in PR #1; `make validate` is the local assurance entrypoint |
 | GOV-001 | Establish planning, tracking and lockstep documentation | Complete | Merged in PR #1 with mandatory publication-status reporting |

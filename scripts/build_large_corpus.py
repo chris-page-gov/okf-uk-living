@@ -685,7 +685,7 @@ def build_outputs() -> dict[Path, str]:
     descriptor = {
         "schema": "okf-explorer-large-corpus.v1",
         "kind": "okf-large-corpus",
-        "okf_version": "0.2",
+        "okf_version": "0.3",
         "core_conformance": "OKF Explorer large-corpus life-course projection",
         "title": "A Life in the UK — life-course discovery corpus",
         "description": (

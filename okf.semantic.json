@@ -1,8 +1,8 @@
 {
   "okf_core": {
-    "specification": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
-    "status": "conformant",
-    "version": "0.2"
+    "specification": "https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/SPEC.md",
+    "status": "migration",
+    "version": "0.3"
   },
   "reader": {
     "consumer": "https://chris-page-gov.github.io/okf-explorer/",
@@ -55,18 +55,20 @@
     "role": "large-corpus-producer",
     "root_index": "index.md"
   },
-  "schema": "okf-repository-semantic-contract.v1",
+  "schema": "okf-repository-semantic-contract.v2",
   "semantic_layer": {
     "authoritative_inputs": [
       "source/",
       "ontology/",
       "profiles/",
-      "schemas/"
+      "schemas/",
+      "profiles/bundle-wiki/v2/repository-contract.schema.json"
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
     "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
     "limitations": [
-      "Relationship assertions use absolute semantic IDs and predicates while retaining local Explorer routes; publication remains subject to the repository's existing review and release gates."
+      "Relationship assertions use absolute semantic IDs and predicates while retaining local Explorer routes; publication remains subject to the repository's existing review and release gates.",
+      "This local migration preserves the independent Core 0.2 baseline at evaluation/compatibility/okf-core-v0.2-baseline.v1.json (source commit 4857e7e7829a23081c2d660f5b1bfe52b8ae8942); the Bundle Wiki v2 profile and Reader remain experimental pending their separate acceptance gates."
     ],
     "outputs": [
       {
@@ -166,7 +168,7 @@
         "role": "semantic-validation"
       }
     ],
-    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/",
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/",
     "state": "generated-yaml-ld-graph"
   },
   "tooling": {
@@ -174,6 +176,9 @@
       "uv run --locked python scripts/build_large_corpus.py"
     ],
     "check": [
+      "uv run --locked python scripts/check_okf_v03.py",
+      "uv run --locked python scripts/check_semantic_contract.py",
+      "uv run --locked python scripts/build_okf_bundle.py --check",
       "uv run --locked python scripts/build_large_corpus.py --check",
       "uv run --locked python scripts/check_large_projection.py",
       "uv run --locked python -m unittest discover -s tests"
