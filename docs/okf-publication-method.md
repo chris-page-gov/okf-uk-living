@@ -83,8 +83,9 @@ The active workflow is `.github/workflows/pages-explore-okf.yml`. It requires:
 
 - a full protected-main commit supplied as `publication_commit`;
 - the explicit `EXPLORATORY-NOT-RELEASE-GRADE` acknowledgement;
-- the dated owner decision in
+- the dated owner decisions in
   `evaluation/publication/explore-okf-review-authorization-2026-08-13.md`;
+- for the separate Core 0.3 route, `evaluation/publication/core-0.3-preview-authorization-2026-11-28.md`;
 - the frozen base manifest and authorised additive-overlay manifest to pass;
   and
 - transport of those exact files without corpus acquisition or regeneration.
@@ -92,6 +93,15 @@ The active workflow is `.github/workflows/pages-explore-okf.yml`. It requires:
 The package job is bounded to 15 minutes and deployment to 10 minutes. Those
 limits stop a stuck hosted process; they do not enable hosted validation for
 ordinary repository activity.
+
+The owner has separately authorised `/core-0.3-preview/`. Its sibling
+descriptor selects the candidate's Core 0.3 semantic documents and browser
+handoff while reusing only the `large/data/` paths pinned by the original
+1,814-file Core 0.2 manifest. The deterministic closure manifest records each
+candidate asset and shared-base digest. The producer remains at `migration`;
+the published Bundle Wiki v2 profile is experimental, and this preview does
+not claim full profile acceptance, specialist review, source freshness or
+release grade. The existing Core 0.2 descriptor and routes remain unchanged.
 
 ## Live-browser gate
 

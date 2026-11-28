@@ -48,8 +48,8 @@ def validate_contract() -> list[str]:
         errors.append("historical Core 0.2 baseline schema is missing or changed")
     if baseline.get("captured_from_commit") != EXPECTED_BASELINE_COMMIT or baseline.get("okf_core_version") != "0.2":
         errors.append("historical Core 0.2 baseline must retain its original commit and version")
-    if provenance.get("schema") != "okf-bundle-wiki-v2-local-adoption-provenance.v1" or provenance.get("source_commit") != "16a70b6e2dd62a10e7dc891385a7a8235c72fdb1":
-        errors.append("experimental v2 profile provenance must retain its source commit")
+    if provenance.get("schema") != "okf-bundle-wiki-v2-provenance.v1" or provenance.get("source_commit") != "171efeeb8525691ab6d89f4ddfac2146374e862c":
+        errors.append("Bundle Wiki v2 profile provenance must retain the pinned canonical Explorer source commit")
     for relative, expected in provenance.get("files", {}).items():
         actual = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
         if actual != expected.get("sha256"):
@@ -67,7 +67,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Semantic contract checks passed: pinned Core 0.3 migration, experimental Bundle Wiki v2, historical Core 0.2 baseline")
+    print("Semantic contract checks passed: pinned Core 0.3 migration, canonical experimental Bundle Wiki v2 source, historical Core 0.2 baseline")
     return 0
 
 

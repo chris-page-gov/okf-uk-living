@@ -142,7 +142,8 @@ The build uses pinned contexts and emits deterministic YAML-LD and JSON-LD.
 ### Core 0.3 migration status
 
 The isolated migration candidate declares the approved Core 0.3 specification
-pin in `okf.semantic.json` and the experimental Bundle Wiki v2 profile. Run
+pin in `okf.semantic.json` and the canonically published Bundle Wiki v2
+profile, which is currently marked experimental. Run
 `uv run --locked python scripts/check_okf_v03.py` for the producer's bounded
 Markdown structural check and `uv run --locked python
 scripts/check_semantic_contract.py` for the v2 contract and historical baseline. This check does not certify source accuracy, full

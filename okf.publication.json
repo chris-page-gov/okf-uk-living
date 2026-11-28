@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-08-18",
+  "modified": "2026-11-28",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1087,9 +1087,10 @@
     "mode": "manual",
     "scope": "bounded-demonstrator",
     "authority": {
-      "decision": "Only the owner's dated Explore OKF authorisation permits a manual deployment of the exact protected-main candidate; ordinary repository activity does not publish.",
+      "decision": "Only the owner's dated Explore OKF and Core 0.3 preview authorisations permit manual deployment of their exact protected-main candidates; ordinary repository activity does not publish.",
       "evidence_paths": [
-        "evaluation/publication/explore-okf-review-authorization-2026-08-13.md"
+        "evaluation/publication/explore-okf-review-authorization-2026-08-13.md",
+        "evaluation/publication/core-0.3-preview-authorization-2026-11-28.md"
       ]
     },
     "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
@@ -1101,6 +1102,17 @@
         "public_base_url": "https://chris-page-gov.github.io/okf-uk-living/",
         "exact_commit_required": true,
         "promote_without_rebuild": true
+      },
+      {
+        "id": "core-0.3-preview",
+        "kind": "github-pages-subpath",
+        "workflow_path": ".github/workflows/pages-explore-okf.yml",
+        "public_base_url": "https://chris-page-gov.github.io/okf-uk-living/core-0.3-preview/",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true,
+        "closure_manifest": "core-0.3-preview/closure.json",
+        "base_manifest_sha256": "7ad5714e3462d0e57599f430301b34e916d607ac8afae68a34d9b8567f26832d",
+        "release_grade": false
       }
     ]
   },
@@ -1126,6 +1138,18 @@
           "Open Report a missed rubbish collection and confirm ordinary and exception episodes, provenance and official-source routes.",
           "Confirm the installed-Chrome console has no errors and record the exact protected-main commit and served manifest hashes."
         ]
+      },
+      {
+        "id": "core-0.3-preview-reader",
+        "url": "https://chris-page-gov.github.io/okf-uk-living/core-0.3-preview/",
+        "expected_identity": "The Core 0.3 closure manifest and candidate Reader descriptor match the exact overlay files; shared large-data assets match the frozen Core 0.2 base manifest.",
+        "steps": [
+          "Open the review page and confirm the migration, experimental-profile and specialist-review limitations.",
+          "Verify the closure manifest, candidate descriptor and pinned shared-base identities.",
+          "Open the candidate in OKF Explorer and select Claim Child Benefit in Graph and Resources.",
+          "Check the linked GOV.UK route, 26 nodes, 25 relationships, responsive layout and browser console.",
+          "Confirm the original Core 0.2 descriptor and all frozen base manifest identities remain unchanged."
+        ]
       }
     ],
     "console_policy": "no-errors",
@@ -1135,6 +1159,7 @@
   },
   "limitations": [
     "Local-only validation and manual publication are deliberate trust boundaries; this contract does not enable routine remote CI or deployment on push, pull request or merge.",
+    "The additive Core 0.3 review route retains migration status and does not claim Bundle Wiki v2 profile acceptance, specialist review, source freshness or release grade.",
     "The current static publication manifests bind frozen corpus and overlay bytes but do not expose the latest deployment commit as a served identity. An unattended post-deploy exact-head browser receipt therefore remains a backlog item requiring a separately authorised identity-envelope change; this adoption does not simulate that evidence.",
     "This adoption changes lifecycle controls, documentation and workflow timeouts only; it does not regenerate or alter frozen-base, corpus, semantic or assurance bytes. Only affected browser handoffs, additive documentation projections and their overlay manifest change.",
     "Population completeness remains separate from specialist acceptance and release grade."
