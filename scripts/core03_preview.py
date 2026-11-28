@@ -104,6 +104,13 @@ def _html(closure_sha256: str, descriptor_sha256: str) -> bytes:
         "https%3A%2F%2Fchris-page-gov.github.io%2Fokf-uk-living%2F"
         "okf-explorer-core-0.3.json#overview"
     )
+    journey_url = (
+        "https://chris-page-gov.github.io/okf-explorer/?bundle="
+        "https%3A%2F%2Fchris-page-gov.github.io%2Fokf-uk-living%2F"
+        "okf-explorer-core-0.3.json&amp;view=graph&amp;graph.workspace=1"
+        "&amp;graph.center=dataset%2Fclaim-child-benefit"
+        "#dataset/claim-child-benefit"
+    )
     return f'''<!doctype html>
 <html lang="en-GB">
 <head>
@@ -132,9 +139,9 @@ def _html(closure_sha256: str, descriptor_sha256: str) -> bytes:
   <header>
     <p>Owner-authorised public review preview · OKF Core 0.3 · release grade: no</p>
     <h1>A Life in the UK — Core 0.3 migration preview</h1>
-    <p>This separate route serves the candidate Core 0.3 large-corpus descriptor and its generated semantic documents. The existing Core 0.2 Pages publication and all of its original routes remain pinned and unchanged.</p>
+    <p>This separate route serves the candidate Core 0.3 large-corpus descriptor and its generated semantic documents. The existing Core 0.2 Pages archive and manifest remain frozen. All 1,813 other original routes remain unchanged; the existing <code>index.html</code> is the sole authorised replacement and links here.</p>
     <p class="notice"><strong>Review boundary:</strong> the producer contract remains at <code>migration</code>. The centrally published Bundle Wiki v2 implementation profile is marked experimental. This preview does not claim full profile acceptance, specialist review, current source observation, formal release, or official service guidance.</p>
-    <div class="links"><a class="button" href="{reader_url}">Open the Core 0.3 candidate in OKF Explorer</a><a class="button" href="../okf-explorer-core-0.3.json">Candidate Reader descriptor</a></div>
+    <div class="links"><a class="button" href="{reader_url}">Open the Core 0.3 candidate overview in OKF Explorer</a><a class="button" href="{journey_url}">Open the Child Benefit source-linked Reader journey</a><a class="button" href="../okf-explorer-core-0.3.json">Candidate Reader descriptor</a></div>
   </header>
   <section>
     <h2>Source and profile</h2>
